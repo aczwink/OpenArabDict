@@ -1,0 +1,129 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ق-و-م
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: uu
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to get up
+
+              2. to rise (also fig.: voice, noise, wind)
+
+              3. to set out, start out
+
+              4. to begin (يفعل to do s.th.), start (يفعل doing s.th.)
+
+              5. to make s.th. (ب) one's business, concern o.s. (ب with),
+              undertake, take upon o.s., perform, do, carry out, execute,
+              accomplish, practice, exercise (ب s.th.)
+      derived:
+        - text: قِيَام
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - rising, getting up
+        - text: قَوْم
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. people
+                  2. crowd or group of people
+                  3. tribe
+                  4. nation
+
+                  قومه his relatives, his family members; his (fellow) tribesmen
+        - text: قَوَام
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - strength, vigor, stamina
+        - text: قَوَام
+          derivation: meaning-related
+          type: adverb
+          gender: male
+          translations:
+            - dialect: northlevant
+              source: hw4-free-text
+              text:
+                - quickly
+        - text: قَائِم
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - being on charge (على of), responsible (على for), watching over
+                  (على s.th.)
+          derived:
+            - text: قَائِمُون
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - |-
+              1. to lift up, elevate (ه s.th.)
+              2. to abide, stay, remain, dwell, reside, live (ب in)
+      derived:
+        - text: إِقَامَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. stay, sojourn
+                  2. (Magr.) residentship, office of resident
+    - text: قَامَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - stature, figure, build, frame (of a person)

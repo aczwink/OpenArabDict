@@ -1,0 +1,80 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ح-د-ث
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to happen, occur, take place, come to pass
+      derived:
+        - text: حُدُوث
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - setting in (of a state or condition), occurrence, incidence
+                  (of a phenomenon)
+        - text: حَادِث
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - occurrence, incident, event, happening
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations: []
+      derived:
+        - text: مُحَادَثَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - discourse, conversation, discussion, talk, parley
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to found, establish (ه s.th.)
+    - type: verb
+      dialect: msa
+      stem: 5
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to speak, talk (إلى to s.o., عن, ب or في about or of s.th.),
+              converse, chat (إلى or مع with s.o., عن, ب or في about s.th.)

@@ -1,0 +1,79 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: س-ك-ر
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations: []
+      derived:
+        - text: سَكْرَان
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - drunk, intoxicated
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations: []
+      derived:
+        - text: سُكَّر
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - sugar
+          derived:
+            - text: سُكَّرِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - sugary, like sugar, saccharine
+              derived:
+                - text: سُكَّرِيَّة
+                  derivation: feminine
+                  type: noun
+                  gender: female
+                  translations:
+                    - dialect: msa
+                      source: hw4-free-text
+                      text:
+                        - sugar bowl
+                  derived:
+                    - text: سُكَّرِيَّات
+                      derivation: plural
+                      type: noun
+                      gender: female
+                      translations:
+                        - dialect: msa
+                          source: hw4-free-text
+                          text:
+                            - sweetmeats, candy

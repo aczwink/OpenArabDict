@@ -1,0 +1,65 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ر-و-ع
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: uu
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to awaken s.o.'s (ه) admiration, appeal (ه to s.o.), please,
+              delight, thrill (ه s.o.)
+      derived:
+        - text: رَائِع
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - splendid, admirable, wonderful, marvelous, glorious,
+                  magnificent
+          derived:
+            - text: رَوَائِع
+              derivation: plural
+              type: adjective
+              gender: male
+              translations: []
+            - text: أَرْوَع
+              derivation: elative-degree
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - more wonderful, more marvelous
+        - text: رَوْعَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - astonishment, surprise

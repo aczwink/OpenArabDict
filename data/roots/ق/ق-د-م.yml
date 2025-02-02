@@ -1,0 +1,103 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ق-د-م
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations: []
+      derived:
+        - text: قَدُوم
+          derivation: meaning-related
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - adze
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to arrive (ه at a place)
+      derived:
+        - text: قَادِم
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - one arriving, arriver, arrival, newcomer
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to make or or let (ه s.o., s.th.) precede, go before, or lead
+              the way
+
+              2. to offer, proffer, tender, extend, present, produce, exhibit,
+              display (ه s.th., إلى or ل to s.o.)
+
+              3. to hand over, deliver (ه s.th., إلى or ل to s.o.)
+
+              4. to give as a present
+      derived:
+        - text: قَدُّوم
+          derivation: meaning-related
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - same as قَدُوم
+        - text: تَقْدِيم
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - introduction
+    - text: قَدَم
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - foot (also as a measure of length)
+      derived:
+        - text: أقدام
+          derivation: plural
+          type: noun
+          gender: female
+          translations: []

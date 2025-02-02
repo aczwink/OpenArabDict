@@ -1,0 +1,78 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ط-ل-ب
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to order, demand (من ه s.th. from), call (ه for s.th., من from),
+              call in (ه s.th., من from)
+      derived:
+        - text: مَطْلُوب
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. wanted (in classified ads)
+                  2. required (ل for)
+        - text: طَالِب
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - student, scholar, also طالب العلم
+          derived:
+            - text: طُلَّاب
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to demand, claim (ب s.th.)
+      derived:
+        - text: مُطَالَبَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. demand
+                  2. call, appeal (with genit. or ب for)
+                  3. claim (with genit. or ب to)

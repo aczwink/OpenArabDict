@@ -1,0 +1,72 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ح-ف-ظ
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations: []
+      derived:
+        - text: مَحْفُوظ
+          derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - kept, held in safe-keeping, deposited, guarded, preserved
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to protect, guard, defend (ه and على, also عن s.th.)
+      derived:
+        - text: مُحَافَظَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - protection, defense
+        - text: حِفَاظ
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - defense, protection, guarding (esp. of cherished, sacred
+                  things)
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to put away, hold, have in safekeeping (ب s.th.), take care (ب of
+              s.th.)

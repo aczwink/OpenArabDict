@@ -1,0 +1,76 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ص-و-ب
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: uu
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to be right, hold true, be to the point, hit the mark, be
+              pertinent, be apposite (opinion)
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - |-
+              1. to wound, injure (ه s.o.)
+              2. to befall (ه s.o.), fall (ه upon s.o.), happen (ه to s.o.)
+      derived:
+        - text: مُصَاب
+          derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - injured, wounded, sick, ill
+        - text: مُصَاب
+          derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. wounded person, casualty
+                  2. victim of an accident
+        - text: مُصِيب
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations: []
+          derived:
+            - text: مُصِيبَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - misfortune, calamity, disaster

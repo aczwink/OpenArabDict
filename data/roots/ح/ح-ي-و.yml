@@ -1,0 +1,83 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ح-ي-و
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - |-
+              1. to live
+              to be ashamed (من of, because of)
+      derived:
+        - text: حَيَاء
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - shame, diffidence, bashfulness, timidity
+        - text: حَيَوَان
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - animal, beast
+        - text: حَيَاة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - life
+    - type: verb
+      dialect: msa
+      stem: 10
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to be ashamed (ه to face s.o.; من of s.th., because of s.th.)
+
+              2. to become or feel embarrassed (من in front of s.o.), be
+              embarrassed (من by)
+
+              3. to be bashful, shy, diffident
+    - text: حَيّ
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - |-
+              1. section, quarter (of a city)
+              2. ward, district (of a city)

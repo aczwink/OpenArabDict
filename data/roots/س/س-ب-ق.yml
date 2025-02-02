@@ -1,0 +1,59 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: س-ب-ق
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to be, come, go, get, or act, before or ahead of s.o. or s.th. (ه,
+              ه)
+      derived:
+        - text: سَابِق
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  antecedent, preceding, foregoing, previous, prior
+
+                  سابقا formerly, previously
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations: []
+      derived:
+        - text: سِبَاق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1 . race
+                  2. contest

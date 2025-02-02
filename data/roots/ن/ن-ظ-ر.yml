@@ -1,0 +1,86 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ن-ظ-ر
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to perceive with the eyes, see, view, eye, regard (ه or إلى s.o.,
+              s.th.), look, gaze, glance, (ه or إلى at), watch, observe, notice
+              (ه or إلى s.o., s.th.), pay attention (ه or إلى to)
+      derived:
+        - text: نَظْرَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - look, glance
+          derived:
+            - text: نَظَرَات
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+        - text: نَاظِر
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - observer, viewer, spectator, onlooker
+          derived:
+            - text: نُظَّار
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations: []
+      derived:
+        - text: مُنَاظَرَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - quarrel, argument, altercation, debate, dispute, discussion,
+                  controversy
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to wait (ه for s.o.), expect (ه, ه s.o., s.th.), await, anticipate
+              (ه s.th.)

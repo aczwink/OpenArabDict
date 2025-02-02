@@ -1,0 +1,68 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ش-ب-ه
+  words:
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations: []
+      derived:
+        - text: شِبْه
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. (with foll. genit. or suffix) s.th. similar to
+                  2. almost the same as
+                  3. as good as
+                  4. of the same kind as
+                  5. a kind of, a certain ...
+                  6. (alike); -like
+                  7. quasi-, semi-
+
+                  شبه الجزيرة peninsula
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to resemble, (ه, ه s.o., s.th.), bear a resemblance, be similar
+              (ه, ه to s.o., to s.th.), be like s.o. or s.th. (ه, ه)
+
+              2. to look (exactly) like s.o. (ه)
+    - type: verb
+      dialect: msa
+      stem: 6
+      translations: []
+      derived:
+        - text: تَشَابُه
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - resemblance, similarity, likeness

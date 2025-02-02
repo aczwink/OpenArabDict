@@ -1,0 +1,48 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ض-م-م
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to bring together, join, draw together, contract (ه s.th.)
+
+              2. to unite, bring together (هم persons)
+
+              3. to embrace, hug (ه s.o.)
+
+              4. to join, subjoin, annex (إلى ه s.th. to), add (إلى ه s.o.,
+              s.th. to), unite(إلى ه s.o., s.th. with)
+
+              5. to grasp, grip, grab, seize (على s.o., s.th.)
+    - type: verb
+      dialect: msa
+      stem: 7
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to be joined, united, or combined (إلى with), unite, join forces
+              (إلى with)

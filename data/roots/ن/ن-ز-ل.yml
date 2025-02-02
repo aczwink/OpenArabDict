@@ -1,0 +1,84 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ن-ز-ل
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to descend, go down, come down, move down, get down, step down,
+              climb down
+      derived:
+        - text: مَنْزِل
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - house
+          derived:
+            - text: مَنَازِل
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+            - text: مَنْزِلَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - degree, grade, rank
+        - text: نَازِل
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations: []
+          derived:
+            - text: نَازِلَة
+              derivation: feminine
+              type: adjective
+              gender: female
+              translations: []
+        - text: نُزُول
+          derivation: verbal-noun
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - descending
+        - text: نُزُول
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - descent

@@ -1,0 +1,74 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ن-ح-و
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations: []
+      derived:
+        - text: نَحْو
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. side
+                  2. section, part
+          derived:
+            - text: أَنْحَاء
+              derivation: plural
+              type: noun
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - ""
+        - text: نَاحِيَة⁩
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. viewpoint, standpoint, aspect
+                  2. region, area, section
+          derived:
+            - text: نَوَاحٍ
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+        - text: نَحْوَ
+          derivation: meaning-related
+          type: preposition
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. in the direction of, toward, to
+                  2. approximately, roughly, about, around, circa

@@ -1,0 +1,74 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ش-ر-ك
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations: []
+      derived:
+        - text: شَرِكَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - company, corporation (com.)
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to take part (في in an event)
+
+              2. to share (ه ه or في with s.o. s.th.), participate (في or ه ه
+              with s.o. in), be or become a partner, participant, associate (في
+              or ه ه of s.o. in)
+      derived:
+        - text: مُشَارَكَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. partnership, copartnership, participation (في in)
+                  2. cooperation, collaboration
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations: []
+      derived:
+        - text: مُشْتَرَك
+          derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - common, joint, combined, concurrent, collective, co-

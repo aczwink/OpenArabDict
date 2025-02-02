@@ -1,0 +1,158 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ح-و-ل
+  ya: true
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: uu
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - ""
+      derived:
+        - text: حِيلَة
+          derivation: meaning-related
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - trick
+        - text: حَال
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - condition, state
+          derived:
+            - text: حَالَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - condition, state
+            - text: أَحْوَال
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to change
+      derived:
+        - text: تَحْوِيل
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - transformation, transmutation, conversion (إلى into s.th.)
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to try, attempt, endeavor (ه s.th., ان to do s.th.), make an
+              attempt, make an effort (ان to do s.th.)
+      derived:
+        - text: مُحَاوَلَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - attempt, try
+          derived:
+            - text: مُحَاوَلَات
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 5
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to change, undergo a change
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations: []
+      derived:
+        - text: اِحْتِيَال
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - deception, fraud
+    - type: verb
+      dialect: msa
+      stem: 10
+      translations: []
+      derived:
+        - text: مُسْتَحِيل
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - impossible, absurd, preposterous
+          derived:
+            - text: مُسْتَحِيلَة⁩
+              derivation: feminine
+              type: adjective
+              gender: female
+              translations: []
+    - text: حَوْلَ
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - |-
+              around, about
+
+              من حوله (= حوله) around him (or it), about him (or it)

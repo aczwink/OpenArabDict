@@ -1,0 +1,113 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ق-ب-ل
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to receive (kindly, hospitality) (ه s.o.), give (ه, s.o., s.th.) a
+              friendly reception, receive (ه s.th.) favorably, approve (ه, of
+              s.o., of s.th.)
+      derived:
+        - text: قَبِيلَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - tribe
+          derived:
+            - text: قَبَائِل
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+        - text: قُبْلَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - kiss
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to welcome s.o. or s.th.
+      derived:
+        - text: مُقَابَلَة
+          derivation: meaning-related
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - meeting
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations: []
+      derived:
+        - text: إِقْبَال
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - turning, application, attention, response, responsiveness (على
+                  to), concern (على for), interest (على in), demand
+    - type: verb
+      dialect: msa
+      stem: 10
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to go to meet, to meet (ه s.o.)
+      derived:
+        - text: مُسْتَقْبَل
+          derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - the future
+    - text: قَبْلَ
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - before, prior to

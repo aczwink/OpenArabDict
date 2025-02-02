@@ -1,0 +1,70 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+dialects:
+  - key: msa
+    name: Modern Standard Arabic
+    emojiCodes: 🌙
+    iso639code: arb
+    glottoCode: stan1318
+    children:
+      - key: eg
+        name: Egyptian Arabic
+        emojiCodes: 🇪🇬
+        iso639code: arz
+        glottoCode: egyp1253
+
+      - key: levant
+        name: Levantine Arabic
+        emojiCodes: 🇱🇧🇯🇴🇵🇸🇸🇾🇹🇷
+        iso639code: apc
+        glottoCode: nort3139
+        children:
+          - key: northlevant
+            name: North Levantine Arabic
+            emojiCodes: 🇱🇧🇸🇾🇹🇷
+            iso639code: apc
+            glottoCode:
+            children:
+              - key: lb
+                name: Lebanese Arabic
+                emojiCodes: 🇱🇧
+                iso639code: apc
+                glottoCode: stan1323
+
+              - key: sy
+                name: Syrian Arabic
+                emojiCodes: 🇸🇾
+                iso639code: apc
+                glottoCode:
+
+          - key: southlevant
+            name: South Levantine Arabic
+            emojiCodes: 🇯🇴🇵🇸
+            iso639code: ajp
+            glottoCode: sout3123
+            children:
+              - key: palestine
+                name: Palestinian Arabic
+                emojiCodes: 🇵🇸
+                iso639code:
+                glottoCode:
+
+      - key: tn
+        name: Tunisian Arabic
+        emojiCodes: 🇹🇳
+        iso639code: aeb
+        glottoCode: tuni1259

@@ -1,0 +1,54 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ف-ي-د
+  words:
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to benefit, help, avail (ه s.o.), be of use, of help bring
+              advantages (ه to s.o.), be useful, helpful, beneficial,
+              profitable, advantageous (ه for s.o.)
+      derived:
+        - text: فَائِدَة⁩
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - avail, benefit, advantage
+          derived:
+            - text: فَوَائِد⁩
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+        - text: مُفِيد
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - useful, beneficial, advantageous

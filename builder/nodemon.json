@@ -1,0 +1,6 @@
+{
+    "ext": "ts,yml",
+    "ignore": ["./dist"],
+    "watch": ["./src", "../data"],
+    "verbose": true
+}

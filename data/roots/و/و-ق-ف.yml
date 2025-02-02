@@ -1,0 +1,79 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: و-ق-ف
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to stand
+      derived:
+        - text: مَوْقِف
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. situation
+                  2. attitude
+                  3. stand, position, opinion
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to bring to a standstill, to a stop, arrest, halt, stop, hold up,
+              check, stunt, obstruct, trammel, hamper, slow down (ه, ه s.o.,
+              s.th.)
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to make (ه s.th.) stand, set up (ه s.th.)
+      derived:
+        - text: إِيْقَاف
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - stopping, halting, checking, arresting, stunting, trammeling,
+                  hampering, impeding, obstruction
+    - type: verb
+      dialect: msa
+      stem: 5
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to stop, halt, come to a stop, put in a stop, stop over

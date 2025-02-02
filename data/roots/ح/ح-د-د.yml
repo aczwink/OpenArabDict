@@ -1,0 +1,105 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ح-د-د
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to wear mourning, mourn (على the deceased)
+      derived:
+        - text: حِدَاد
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations: []
+        - text: حَادّ
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - sharp (also, fig., of a glance), keen (mind)
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations: []
+      derived:
+        - text: حَدّ
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - edge (of a knife, of a sword)
+          derived:
+            - text: حُدُود
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations: []
+      derived:
+        - text: مُحَدَّد
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - determined, fixed, appointed, destined (ل for)
+          derived:
+            - text: مُحَدَّدَة
+              derivation: feminine
+              type: adjective
+              gender: female
+              translations: []
+        - text: تَحْدِيد
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. limitation, delimitation
+                  2. determination, fixation, appointment
+    - text: حَدِيد
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - iron

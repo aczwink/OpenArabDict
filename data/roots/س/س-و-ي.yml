@@ -1,0 +1,62 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: س-و-ي
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to be equivalent, be equal (ه to s.th.), equal (ه s.th.)
+      derived:
+        - text: سَوَاء
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - سواء بسواء equally, indiscriminately, without distinction;
+                  together
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations:
+        - dialect: northlevant
+          source: hw4-free-text
+          text:
+            - to do, to make
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations: []
+      derived:
+        - text: مُسْتَوًى
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - level

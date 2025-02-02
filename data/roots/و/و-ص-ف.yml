@@ -1,0 +1,75 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: و-ص-ف
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to describe, depict, portray, picture (ه, ه s.o., s.th.)
+
+              2. to attribute, ascribe (ب ه to s.o. a quality), credit (ب ه s.o.
+              with), praise (ب ه s.o. for), say s.th. (ب) to s.o.'s (ه) credit
+      derived:
+        - text: صِفَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. attribute
+                  2. characteristic, distinguishing mark, peculiarity
+                  3. adjective (gram.)
+          derived:
+            - text: صِفَات
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+        - text: وَصْف
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - characteristic, distinguishing mark, peculiarity
+          derived:
+            - text: أَوْصَاف
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to be described

@@ -1,0 +1,67 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: د-و-م
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: uu
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to last, continue, go on
+      derived:
+        - text: دَوَام
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - work during office hours
+        - text: دَائِم
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations: []
+          derived:
+            - text: دَائِمًا
+              derivation: extension
+              type: adverb
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - always
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations: []
+      derived:
+        - text: مُدَام
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - wine

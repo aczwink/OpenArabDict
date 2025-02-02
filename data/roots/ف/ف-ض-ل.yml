@@ -1,0 +1,54 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ف-ض-ل
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to remain
+      derived:
+        - text: فَضِيل
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations: []
+          derived:
+            - text: أَفْضَل
+              derivation: elative-degree
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - better, best
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to prefer (على ه, ه s.o., s.th. to s.o., to s.th.), like better
+              (ه, ه s.o., s.th., على than)

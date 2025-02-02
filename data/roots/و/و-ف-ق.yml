@@ -1,0 +1,82 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: و-ف-ق
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ii
+      translations: []
+      derived:
+        - text: وَفْق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations: []
+          derived:
+            - text: وَفْقَ
+              derivation: extension
+              type: preposition
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - in accordance with, in conformity with, conformable to,
+                      according to, commensurate with
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations: []
+      derived:
+        - text: تَوْفِيق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - success (granted by God), happy outcome, good fortune, good
+                  luck, prosperity, successfulness, succeeding
+    - type: verb
+      dialect: msa
+      stem: 3
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to agree (ه with s.th., ه with s.o., في or على in s.th.)
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to agree, come to an agreement, reach an agreement
+      derived:
+        - text: اِتِّفَاق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - agreement, conformity, conformance

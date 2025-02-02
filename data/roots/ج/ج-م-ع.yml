@@ -1,0 +1,155 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ج-م-ع
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: aa
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to collect (ه e.g., money)
+      derived:
+        - text: جَمْعِيَّة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - club, association, society
+          derived:
+            - text: جَمْعِيَّات
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+        - text: جَمِيع
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - الجميع all people, everybody
+        - text: مَجْمُوع
+          derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - total, sum (arith.)
+          derived:
+            - text: مَجْمُوعَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - collection (e.g., of works of art, of stamps, etc., also
+                      of stories)
+        - text: جَامِع
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - mosque
+          derived:
+            - text: جَامِعَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - university
+              derived:
+                - text: جَامِعَات
+                  derivation: plural
+                  type: noun
+                  gender: female
+                  translations: []
+    - type: verb
+      dialect: msa
+      stem: 5
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to gather
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to come together, meet, join
+      derived:
+        - text: مُجْتَمَع
+          derivation: meaning-related
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - society
+          derived:
+            - text: مُجْتَمَعَات
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+        - text: اِجْتِمَاع
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations: []
+          derived:
+            - text: اِجْتِمَاعِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - social
+              derived:
+                - text: اِجْتِمَاعِيَّة
+                  derivation: feminine
+                  type: noun
+                  gender: female
+                  translations:
+                    - dialect: msa
+                      source: hw4-free-text
+                      text:
+                        - socialism

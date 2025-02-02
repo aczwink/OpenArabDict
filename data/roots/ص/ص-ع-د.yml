@@ -1,0 +1,69 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ص-ع-د
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - |-
+              1. to rise, go up
+              2. to lift, climb, ascend, slope upward
+      derived:
+        - text: صُعُود
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations: []
+        - text: صَاعِد
+          derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - rising, ascending (also, e.g., of vapors)
+        - text: صَعِيد
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - (fig.) level, plane
+    - type: verb
+      dialect: msa
+      stem: 6
+      translations: []
+      derived:
+        - text: تَصَاعُد
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - growth, increase

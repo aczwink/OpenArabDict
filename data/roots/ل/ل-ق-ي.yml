@@ -1,0 +1,95 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ل-ق-ي
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to find (ه, ه s.o., s.th.)
+      derived:
+        - text: لِقَاء
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - meeting
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to throw (ه or ب s.th., إلى to or at), cast, fling (إلى ب, ه
+              s.th. at)
+
+              2. to give (ه a lecture), hold (ه a class), make, deliver (ه a
+              speech)
+      derived:
+        - text: إِلْقَاء
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. dictation
+                  2. recitation, recital
+    - type: verb
+      dialect: msa
+      stem: 5
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - >-
+              1. to receive (ه, ه s.o., s.th.)
+
+              2. to learn (على or عن ه s.th. from s.o.), take lessons (عن from
+              s.o.), be taught, be instructed, be coached (عن by s.o.)
+
+
+              تلقى العلم to study
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to encounter, meet (ب s.o.)
+    - type: verb
+      dialect: msa
+      stem: 10
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to lie down, lie

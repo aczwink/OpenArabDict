@@ -1,0 +1,135 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: س-ل-م
+  words:
+    - type: verb
+      dialect: msa
+      stem:
+        number: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to be safe and sound
+      derived:
+        - text: سِلْم
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - peace
+          derived:
+            - text: سِلْمِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - peaceful
+    - type: verb
+      dialect: msa
+      stem: 2
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to hand over
+      derived:
+        - text: تسلم إيديك
+          derivation: meaning-related
+          type: phrase
+          translations:
+            - dialect: northlevant
+              source: hw4-free-text
+              text:
+                - >-
+                  to express one's content of the wonderful craftsmanship in
+                  cooking.
+
+
+                  Alternative forms:
+
+                  تسلم لي إيديك
+
+                  تسلم هالديات (the word ديات is colloquial and means hands,
+                  notice the flipped letters of ي and د)
+    - type: verb
+      dialect: msa
+      stem: 4
+      translations: []
+      derived:
+        - text: مُسْلِم
+          derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - Muslim
+          derived:
+            - text: مُسْلِمُون
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
+        - text: إِسْلَام
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - الإسلام the religion of Islam
+          derived:
+            - text: إِسْلَامِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4-free-text
+                  text:
+                    - Islamic
+              derived:
+                - text: إِسْلَامِيَّة
+                  derivation: feminine
+                  type: adjective
+                  gender: female
+                  translations: []
+    - type: verb
+      dialect: msa
+      stem: 8
+      translations: []
+      derived:
+        - text: اِسْتِلَام
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - receipt
