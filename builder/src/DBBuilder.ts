@@ -61,6 +61,18 @@ export class DBBuilder
     {
         word.id = this.words.length + 1;
         this.words.push(word);
+
+        return word.id;
+    }
+
+    public GetRoot(rootId: number)
+    {
+        return this.roots.find(x => x.id === rootId)!;
+    }
+
+    public GetWord(wordId: number)
+    {
+        return this.words.find(x => x.id === wordId)!;
     }
 
     public MapDialectKey(dialectKey: string)
@@ -73,7 +85,8 @@ export class DBBuilder
         const finalDB: OpenArabDictDocument = {
             dialects: this.dialects,
             roots: this.roots,
-            words: this.words
+            words: this.words,
+            wordRelations: []
         };
         const stringified = JSON.stringify(finalDB, undefined, 2);
 

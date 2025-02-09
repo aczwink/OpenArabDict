@@ -40,6 +40,16 @@ root:
                 - |-
                   1. life, duration of life, life span, lifetime
                   2 . age (of a person)
+          derived:
+            - text: أَعْمَار
+              derivation: plural
+              type: noun
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4 #ejtaal.net/aa/#hw4=766
+                  text:
+                    - age groups, ages
         - text: عِمَارَة
           derivation: verbal-noun
           type: noun

@@ -28,9 +28,18 @@ root:
           text:
             - to bear (ه  a child), give birth (ه to)
       derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1299
+              text:
+                - father, parent
         - text: وَلَد
           derivation: meaning-related
-          type: adjective
+          type: noun
           gender: male
           translations:
             - dialect: msa
@@ -46,6 +55,7 @@ root:
               type: noun
               gender: male
               translations: []
+
     - text: مِيلَاد
       type: noun
       gender: male

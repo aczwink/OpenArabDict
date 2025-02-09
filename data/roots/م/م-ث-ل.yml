@@ -93,3 +93,16 @@ root:
           source: hw4-free-text
           text:
             - to take as a model or an example, imitate, copy, follow (ه s.th.)
+    - type: noun
+      gender: male
+      text: مِثْل
+      derived:
+        - type: preposition
+          derivation: extension
+          text: مِثْلَ
+          alias: كَمِثْلِ
+          translations:
+            - dialect: msa
+              source: hw4 #http://ejtaal.net/aa/#hw4=1060
+              text:
+                - similar to, like, just as

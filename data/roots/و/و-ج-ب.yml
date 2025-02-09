@@ -22,7 +22,11 @@ root:
       stem:
         number: 1
         parameters: ai
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4 #http://ejtaal.net/aa/#hw4=1242
+          text:
+            - to be necessary, requisite, obligatory, indispensable
       derived:
         - text: وَاجِب
           derivation: active-participle

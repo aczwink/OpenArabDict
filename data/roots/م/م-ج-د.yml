@@ -33,3 +33,9 @@ root:
               source: hw4-free-text
               text:
                 - glory
+          derived:
+            - text: أَمْجَاد
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []

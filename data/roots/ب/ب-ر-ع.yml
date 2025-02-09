@@ -57,3 +57,9 @@ root:
               source: hw4-free-text
               text:
                 - gift, donation
+          derived:
+            - text: تَبَرُّعَات
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []

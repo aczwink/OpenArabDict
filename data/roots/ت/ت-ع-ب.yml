@@ -22,7 +22,12 @@ root:
       stem:
         number: 1
         parameters: ia
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=127
+          text:
+            - to be or become tired, weary (من of s.th.)
       derived:
         - text: تَعَب
           derivation: verbal-noun
@@ -33,3 +38,22 @@ root:
               source: hw4-free-text
               text:
                 - trouble, exertion, labor, toil, drudgery
+
+    - type: verb
+      dialect: msa
+      stem: 4
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=127
+              text:
+                - wearisome, tiresome, tiring
+          derived:
+            - text: مُتْعِبَة
+              derivation: feminine
+              type: adjective
+              gender: female

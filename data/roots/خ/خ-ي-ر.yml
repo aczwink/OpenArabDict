@@ -49,6 +49,22 @@ root:
                       source: hw4-free-text
                       text:
                         - charity, charitableness, benevolence, beneficence
+            - text: خَيْرَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations: []
+              derived:
+                - text: خَيْرَات
+                  derivation: plural
+                  type: noun
+                  gender: female
+                  translations:
+                    - dialect: msa
+                      source: hw4-free-text
+                      text:
+                        - resources, treasures (e.g. of the earth, of a
+                          country), boons, blessings
         - text: خَيْر
           derivation: meaning-related
           type: adjective
@@ -76,6 +92,22 @@ root:
                       source: hw4-free-text
                       text:
                         - charity, charitableness, benevolence, beneficence
+            - text: خَيْرَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations: []
+              derived:
+                - text: خَيْرَات
+                  derivation: plural
+                  type: noun
+                  gender: female
+                  translations:
+                    - dialect: msa
+                      source: hw4-free-text
+                      text:
+                        - resources, treasures (e.g. of the earth, of a
+                          country), boons, blessings
     - type: verb
       dialect: msa
       stem: 8

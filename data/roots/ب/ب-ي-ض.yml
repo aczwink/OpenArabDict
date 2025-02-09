@@ -33,3 +33,9 @@ root:
               source: hw4-free-text
               text:
                 - white
+          derived:
+            - text: بَيْضَاء
+              derivation: feminine
+              type: adjective
+              gender: female
+              translations: []

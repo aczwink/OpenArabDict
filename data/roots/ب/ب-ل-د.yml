@@ -26,6 +26,11 @@ root:
           text:
             - country
       derived:
+        - text: بِلَاد
+          derivation: plural
+          type: noun
+          gender: male
+          translations: []
         - text: بُلْدَان
           derivation: plural
           type: noun

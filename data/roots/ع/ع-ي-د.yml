@@ -31,3 +31,9 @@ root:
               source: hw4-free-text
               text:
                 - feast, feast day, festival, holiday
+          derived:
+            - text: أَعْيَاد
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []

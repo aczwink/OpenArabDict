@@ -81,7 +81,22 @@ root:
     - type: verb
       dialect: msa
       stem: 6
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4 #https://ejtaal.net/aa/#hw4=1270
+          text:
+            - to be interconnected
+            - to form an uninterrupted sequence
+      derived:
+        - type: noun
+          derivation: verbal-noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4 #https://ejtaal.net/aa/#hw4=1272
+              text:
+                - continuance
+                - continuity
     - type: verb
       dialect: msa
       stem: 8

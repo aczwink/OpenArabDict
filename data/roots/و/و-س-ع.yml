@@ -19,6 +19,23 @@ root:
   words:
     - type: verb
       dialect: msa
+      stem:
+        number: 1
+        parameters: uu
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1266
+              text:
+                - واسع الانتشار widespread
+
+
+    - type: verb
+      dialect: msa
       stem: 5
       translations:
         - dialect: msa
@@ -31,6 +48,7 @@ root:
           type: noun
           gender: male
           translations: []
+
     - type: verb
       dialect: msa
       stem: 8

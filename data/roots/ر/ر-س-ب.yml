@@ -15,40 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ق-ر-ء
+  radicals: ر-س-ب
   words:
     - type: verb
       dialect: msa
       stem:
         number: 1
-        parameters: aa
+        parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4 #http://ejtaal.net/aa/#hw4=403
           text:
-            - to read (ه s.th.; ه ل or على s.o. s.th.)
-      derived:
-        - text: قِرَاءَة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=895
-              text:
-                - reading (also, e.g., of measuring instruments; parl.)
-        - derivation: active-participle
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=895
-              text:
-                - reader
-          derived:
-            - text: قُرَّاء
-              derivation: plural
-              type: noun
-              gender: male
+            - to fail, flink (in an examination)

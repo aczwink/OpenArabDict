@@ -15,31 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-ز-ل
+  radicals: ن-م-ط
   words:
-    - type: verb
-      dialect: msa
-      stem:
-        number: 1
-        parameters: ia
+    - text: نَمَط
+      type: noun
+      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4 #http://ejtaal.net/aa/#hw4=1186
           text:
-            - to display amorous behavior
-      derived:
-        - text: غَزَال
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - gazelle
-          derived:
-            - text: غِزْلَان
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
+            - form, shape
+            - sort
+            - type

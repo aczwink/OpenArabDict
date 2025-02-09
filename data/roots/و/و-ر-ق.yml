@@ -22,10 +22,21 @@ root:
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1258
           text:
             - paper
       derived:
+        - text: وَرَقَة
+          derivation: singulative
+          type: noun
+          gender: female
+          derived:
+            - text: أَوْرَاق
+              derivation: plural
+              type: noun
+              gender: male
+
         - text: وَرَقِيّ
           derivation: nisba
           type: adjective

@@ -36,6 +36,12 @@ root:
       gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=617
           text:
             - page
+      derived:
+        - text: صَفَحَات
+          derivation: plural
+          type: noun
+          gender: female

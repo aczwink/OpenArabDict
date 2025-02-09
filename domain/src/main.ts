@@ -33,6 +33,12 @@ export interface OpenArabDictRoot
     ya?: undefined;
 }
 
+interface OpenArabDictTranslationEntry
+{
+    dialectId: number;
+    text: string[];
+}
+
 export enum OpenArabDictWordType
 {
     Noun = 0,
@@ -51,26 +57,88 @@ export enum OpenArabDictWordType
     Verb = 10
 }
 
-interface OpenArabDictGenderedWord
+interface OpenArabDictWordBase
 {
     id: number;
-    type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun;
+    text: string;
+    translations: OpenArabDictTranslationEntry[];
+}
+
+export enum OpenArabDictWordParentType
+{
+    Root = 0,
+    Verb = 1,
+    NonVerbWord = 2,
+}
+
+interface OpenArabDictWordRootParent
+{
+    type: OpenArabDictWordParentType.Root;
+    rootId: number;
+}
+
+export enum OpenArabDictVerbDerivationType
+{
+    Unknown = 0,
+    VerbalNoun = 1,
+    ActiveParticiple = 2,
+    PassiveParticiple = 3,
+}
+
+interface OpenArabDictWordVerbParent
+{
+    type: OpenArabDictWordParentType.Verb;
+    derivation: OpenArabDictVerbDerivationType;
+    verbId: number;
+}
+
+export enum OpenArabDictNonVerbDerivationType
+{
+    //parent(x) = y
+
+    //Relation from x to y means: x is plural of y
+    Plural = 0,
+    //Relation from x to y means: x is feminine version of male word y
+    Feminine = 1,
+    //Relation from adjective x to noun y means: x is nisba of y
+    Nisba = 2,
+    //Relation from x to y means: x is colloquial version of fus7a word y
+    Colloquial = 3,
+    //Relation from x to y means: x is an extension of word y (for example taking a word to a further meaning in a phrase)
+    Extension = 4,
+    //Relation from noun x to adjective y means: x is elative degree of y
+    ElativeDegree = 5,
+    //Relation from x to y means: x is singulative of collective y
+    Singulative = 6,
+    //Child is adverbial accusative of parent
+    AdverbialAccusative = 7,
+}
+
+interface OpenArabDictOtherWordParent
+{
+    type: OpenArabDictWordParentType.NonVerbWord;
+    wordId: number;
+    relationType: OpenArabDictNonVerbDerivationType;
+}
+
+export type OpenArabDictWordParent = OpenArabDictWordRootParent | OpenArabDictWordVerbParent | OpenArabDictOtherWordParent;
+
+interface OpenArabDictGenderedWord extends OpenArabDictWordBase
+{
+    type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun | OpenArabDictWordType.Pronoun;
     isMale: boolean;
-    text: string;
+    parent?: OpenArabDictWordParent;
 }
 
-interface OpenArabDictOtherWord
+interface OpenArabDictOtherWord extends OpenArabDictWordBase
 {
-    id: number;
-    type: OpenArabDictWordType.Preposition;
-    text: string;
+    type: OpenArabDictWordType.Adverb | OpenArabDictWordType.Conjunction | OpenArabDictWordType.ForeignVerb | OpenArabDictWordType.Interjection | OpenArabDictWordType.Particle | OpenArabDictWordType.Phrase | OpenArabDictWordType.Preposition;
+    parent?: OpenArabDictWordParent;
 }
 
-interface OpenArabDictVerb
+interface OpenArabDictVerb extends OpenArabDictWordBase
 {
-    id: number;
     type: OpenArabDictWordType.Verb;
-    word: string;
     rootId: number;
     dialectId: number;
     stem: number;
@@ -79,9 +147,23 @@ interface OpenArabDictVerb
 
 export type OpenArabDictWord = OpenArabDictGenderedWord | OpenArabDictOtherWord | OpenArabDictVerb;
 
+export enum OpenArabDictWordRelationshipType
+{
+    Synonym = 0,
+    Antonym = 1,
+}
+
+interface OpenArabDictWordRelation
+{
+    word1Id: number;
+    word2Id: number;
+    relationship: OpenArabDictWordRelationshipType;
+}
+
 export interface OpenArabDictDocument
 {
     dialects: OpenArabDictDialect[];
     roots: OpenArabDictRoot[];
     words: OpenArabDictWord[];
+    wordRelations: OpenArabDictWordRelation[];
 }

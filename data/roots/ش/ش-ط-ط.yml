@@ -25,3 +25,9 @@ root:
           source: hw4-free-text
           text:
             - bank, shore, coast, seashore, beach, strand
+      derived:
+        - text: شُطُوط
+          derivation: plural
+          type: noun
+          gender: male
+          translations: []

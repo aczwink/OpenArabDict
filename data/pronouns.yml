@@ -14,32 +14,28 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: غ-ز-ل
-  words:
-    - type: verb
-      dialect: msa
-      stem:
-        number: 1
-        parameters: ia
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to display amorous behavior
-      derived:
-        - text: غَزَال
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - gazelle
-          derived:
-            - text: غِزْلَان
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
+words:
+  - text: اَلَّذِي
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=41
+        text:
+          - (relative pronoun) he who, that which
+    derived:
+      - text: اَلَّتِي
+        derivation: feminine
+        type: pronoun
+        gender: female
+
+  - text: أَيّ
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4 #http://ejtaal.net/aa/#hw4=59
+        text:
+          - (with foll. genit. or suffix) which? what? what kind of? whoever, whosoever
+          - any, every, no matter what...

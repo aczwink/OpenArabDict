@@ -34,6 +34,18 @@ root:
           type: noun
           gender: male
           translations: []
+          derived:
+            - text: رَائِحَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=437
+                  text:
+                    - odor, smell
+
     - type: verb
       dialect: msa
       stem: 4
@@ -72,3 +84,9 @@ root:
           source: hw4-free-text
           text:
             - breath of life, soul
+      derived:
+        - text: أَرْوَاح
+          derivation: plural
+          type: noun
+          gender: male
+          translations: []

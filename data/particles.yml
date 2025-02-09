@@ -1,0 +1,62 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+words:
+  - text: أَلَا
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=14
+        text:
+          - "intensifying interjection introducing sentences: verily, truly,
+            indeed, oh yes, etc."
+
+  - text: لِ
+    type: particle #http://ejtaal.net/aa/#hw4=1011
+    derived:
+      - text: لِمَا
+        derivation: extension
+        type: adverb #http://ejtaal.net/aa/#hw4=1012
+        derived:
+          - text: لِمَاذَا
+            derivation: extension
+            type: adverb
+            translations:
+              - dialect: msa
+                source: hw4
+                url: http://ejtaal.net/aa/#hw4=1012
+                text:
+                  - why (on earth)?
+
+  - text: لَا
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1012
+        text:
+          - not
+          - no! with apoc. expressing negative imperative لا تقل don't say! with indef. acc. expressing a general negation
+
+  - text: يَا
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1307
+        text:
+          - (vocative and exclamatory particle) O, oh

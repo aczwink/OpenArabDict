@@ -39,3 +39,13 @@ root:
               type: noun
               gender: male
               translations: []
+
+            - text: رَقْمِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: free-text #https://en.wiktionary.org/wiki/digital
+                  text:
+                    - digital

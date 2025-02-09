@@ -40,3 +40,9 @@ root:
           source: hw4-free-text
           text:
             - eye
+      derived:
+        - text: عُيُون
+          derivation: plural
+          type: noun
+          gender: female
+          translations: []

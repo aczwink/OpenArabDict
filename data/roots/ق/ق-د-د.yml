@@ -33,3 +33,9 @@ root:
               source: hw4-free-text
               text:
                 - shape, build, frame, physique, stature, height, figure
+          derived:
+            - text: قُدُود
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []

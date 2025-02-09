@@ -1,0 +1,1179 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+words:
+  - text: بُسْتَان
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - pl. بَسَاتِين garden
+  - text: اصطفل
+    type: foreign-verb
+    translations:
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - do whatever you want
+  - text: شَلَبي
+    type: adjective
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - handsome, beautiful
+  - text: جَامُوس
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - feminine جَامُوسَة buffalo
+    derived:
+      - text: جَوَامِيس
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: طَاقِيَّة
+    type: noun
+    translations:
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - hat, cap
+  - text: شَذًا
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - fragrance, scent
+  - text: برضو
+    type: foreign-verb
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - also
+  - text: قُبْطان
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - captain
+  - text: أهو
+    type: foreign-verb
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - there he is
+  - text: دَه
+    type: pronoun
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - |-
+            from Arabic "ذَا" i.e. "this"
+            feminine: دي
+            plural: دول
+  - text: آدي
+    type: foreign-verb
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - this
+  - text: ازاي
+    type: adverb
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - how?
+  - text: وَجْنَة
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - pl. وَجَنَات cheek
+  - text: مذابيا
+    type: foreign-verb
+    translations:
+      - dialect: tn
+        source: hw4-free-text
+        text:
+          - أتمنى
+  - text: تاري
+    type: particle
+    translations:
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - it seems, it looks like
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - "أتاري: same meaning"
+  - text: نِيكُوتِين‎
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - nicotine
+  - text: عايز
+    type: adjective
+    gender: male
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - |-
+            for female: عايزة
+            1. wanting
+            2. (false verb) want
+  - text: لَدَى
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. at, by (place and time)
+            2. in the presence of, in front of, before, with
+  - text: عِنْدَمَا
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - when
+  - text: هٰذَا
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - this
+
+  - text: كَهْف
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - cave, cavern
+    derived:
+      - text: كُهُوف
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: مُنْذُ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - since, for
+  - text: قَدْ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - with foll. perf. indicates the termination of an action; sometimes
+            corresponding to English "already"
+  - text: جَيْب
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - hole, hollow, cavity, excavation
+  - text: حَيْثُ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. where (place and direction)
+            2. wherever
+            3. since, as, due to the fact that
+            4. whereas
+            5. inasmuch as
+  - text: أَمَّا
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. (with foll. ف) as to, as for, as far as ... is concerned
+            2. but
+            3. yet, however, on the other hand
+  - text: مِمَّا
+    type: pronoun
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - which, a fact, which (referring to a preceding sentence)
+  - text: أُنْبُوب
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - pipe
+    derived:
+      - text: أَنَابِيب
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: حَوْض
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. basin
+            2. water basin
+            3. trough, tank, cistern, reservoir, container
+  - text: قَاعَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - entrance hall, vestibule, corridor
+    derived:
+      - text: قَاعَات
+        derivation: plural
+        type: noun
+        gender: female
+        translations: []
+  - text: إِسْكَاف
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - shoemaker
+  - text: إِسْكَافِيّ
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - shoemaker
+  - text: دُونَ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - without
+  - text: نَاقَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - she-camel
+  - text: أَثْنَاءَ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. during
+            2. within
+            3. in
+            4. in the course of
+  - text: كَمِّيَّة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - amount, quantity, magnitude
+  - text: عَمَّا
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            = عن ما
+            سأله عما اذا he asked him whether
+  - text: دَم
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - blood
+  - text: فُؤَاد
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - heart
+  - text: بَان
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - (coll.; n. un. ة) ben tree (Moringa; bot.) horse-radish tree
+            (Moringa oleifera; bot.); Egyptian willow (Salix aegyptiaca L.;
+            bot.)
+  - text: مُذْ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - since (= منذ)
+  - text: رَيِّس
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - captain (of a Nile boat), rais
+  - text: كويّس
+    type: adjective
+    gender: male
+    translations:
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - good, nice, fine
+  - text: مِينَاء
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - port, harbor, anchorage
+  - text: دخيلك
+    type: phrase
+    translations:
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - (also دخلك) "please" or "I implore you"
+  - text: آيَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. miracle
+            2. wonder, marvel
+  - text: سمهري
+    type: adjective
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - tall and husky, extremely tall, of giant stature (سمهري القامة)
+  - text: رُضَاب
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - spittle, saliva
+  - text: لَبُؤَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - lioness
+  - text: لَمَّا
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - when, as, after
+  - text: قِنْدِيل
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - lamp
+    derived:
+      - text: قَنَادِيل
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: ذٰلِكَ⁩
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - that, that one
+    derived:
+      - text: تِلْكَ⁩
+        derivation: feminine
+        type: pronoun
+        gender: female
+        translations: []
+  - text: إِيَّا⁩
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            with nominal suffix to express the accusative
+
+            example:
+            أَكَلْتُ إِيَّاهَا
+            I ate that.
+  - text: هَيَّا⁩
+    type: interjection
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - up! come one! lets go! now then!
+  - text: ايوه⁩
+    type: adverb
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - yes
+  - text: امتى⁩
+    type: adverb
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - when (at what time ?)
+  - text: لَيتَ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - >-
+            and يا ليت (mostly with foll. noun in acc. or pron. suffix, also
+            with أنَّ) would God...! if only ...!
+
+            يا ليت if it were only so!
+  - text: رَأْسْمَال⁩
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - capital
+    derived:
+      - text: رَأْسِمَالِيَّة⁩
+        derivation: extension
+        type: noun
+        gender: female
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - capitalism
+  - text: كَـ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - (with foll. genit.) as, like
+    derived:
+      - text: كَمَا
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - as, just as, as also, as on the other hand
+  - text: فَم
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - mouth
+  - text: إِذْ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - since, as, the more so as, because
+  - text: سَاعَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - time, while
+    derived:
+      - text: سَاعَات
+        derivation: plural
+        type: noun
+        gender: female
+        translations: []
+  - text: طَازَج
+    type: adjective
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - fresh
+    derived:
+      - text: طَازَجَة
+        derivation: feminine
+        type: adjective
+        gender: female
+        translations: []
+  - text: طَازَة
+    type: adjective
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            fresh
+            (see also طَازَج)
+  - text: غَاز
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - gas
+    derived:
+      - text: غَازِيّ
+        derivation: nisba
+        type: adjective
+        gender: male
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - |-
+                gaseous, gaslike
+                مِيَّاه غَازِيَّة carbonated water, mineral water
+  - text: زَبُون
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - customer, client
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - pronounced زْبُون in levantine Arabic
+  - text: هكذا
+    type: adverb
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            so, thus, this way, in this manner
+
+            وهكذا and so forth
+  - text: بَارُود
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - gunpowder
+  - text: دِجْلَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - the Tigris river
+  - text: خَنْجَر
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - dagger
+  - text: فِين
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: eg
+        source: hw4-free-text
+        text:
+          - dialect of فِي أَيْنَ i.e. "where?"
+  - text: حُوت
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - fish
+  - text: شَفَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - lip
+    derived:
+      - text: شَفَايِف
+        derivation: plural
+        type: noun
+        gender: female
+        translations:
+          - dialect: eg
+            source: hw4-free-text
+            text:
+              - dialect only
+  - text: فُلَان
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - (substituting for an unnamed or unspecified person or thing)
+            so-and-so
+  - text: تَحْتَ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. under
+            2. below, beneath, underneath
+  - text: فِي
+    type: preposition
+    translations: []
+    derived:
+      - text: فِيمَا
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - |-
+                1. while
+                2. in that, as
+  - text: سَنَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - year
+    derived:
+      - text: سِنُون
+        derivation: plural
+        type: noun
+        gender: female
+        translations: []
+      - text: سَنَوَات
+        derivation: plural
+        type: noun
+        gender: female
+        translations: []
+  - text: مُوسِيقَى
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - music
+  - text: مَهْمَا
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - whatever, whatsoever
+  - text: حَتَّى
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - until, till, up to, as far as
+  - text: حَتَّى
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - even, eventually even
+  - text: إِنَّ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - (introducing a main clause, with foll. subject in the acc. or as a
+            suffix) behold, verily, truly (in most cases not translated in
+            English)
+  - text: مِئَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - hundred
+    derived:
+      - text: مِئَات
+        derivation: plural
+        type: noun
+        gender: female
+        translations: []
+  - text: أَلْمَاس
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - diamond
+  - text: اِسْم
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - name
+    derived:
+      - text: أَسْمَاء
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: قَفَص
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. cage
+            2. birdcage
+  - text: بَال
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - mind
+  - text: قَهْوَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            1. coffee
+            2. café, coffeehouse
+  - text: قَحْبَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - whore, harlot, prostitute
+  - text: كُسّ
+    type: noun
+    gender: male
+    translations:
+      - dialect: sy
+        source: hw4-free-text
+        text:
+          - (vulgar) pussy
+  - text: هَلَّأ
+    type: adverb
+    translations:
+      - dialect: levant
+        source: hw4-free-text
+        text:
+          - now
+  - text: إِسَّا
+    type: adverb
+    translations:
+      - dialect: palestine
+        source: hw4-free-text
+        text:
+          - now
+  - text: هَسَّا
+    type: adverb
+    translations:
+      - dialect: southlevant
+        source: hw4-free-text
+        text:
+          - now
+  - text: نَاي
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - nay, a flute without mouthpiece, made of bamboo, rarely of wood, in
+            different sizes, which, when blown, is held in a slanting forward
+            position
+    derived:
+      - text: نَايَات
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: شْوَيّ
+    type: adverb
+    translations:
+      - dialect: levant
+        source: hw4-free-text
+        text:
+          - a little, a bit
+  - text: نَرْجِس
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - narcissus (bot.)
+  - text: يَاسَمِين
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - jasmine (bot.)
+  - text: يَاي
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - spring, spiral spring
+  - text: لَوْ
+    type: conjunction
+    translations: []
+    derived:
+      - text: لَوْلَا
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - if not
+  - text: طِيز
+    type: noun
+    gender: male
+    translations:
+      - dialect: levant
+        source: hw4-free-text
+        text:
+          - (vulgar) ass
+  - text: كِرْمَال
+    type: preposition
+    translations:
+      - dialect: northlevant
+        source: hw4-free-text
+        text:
+          - for, for the sake of
+  - text: كِيلُومِتْر
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - kilometer
+  - text: فَخّ
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - trap, snare
+  - text: ثُعْبَان
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - snake
+  - text: صُنْدُوق
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - crate, box
+  - text: لَ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - certainly, surely
+    derived:
+      - text: لَقَدْ
+        derivation: extension
+        type: particle
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - Indeed, verily, truly (adds emphasis to a sentence in the past
+                tense; may be left untranslated)
+  - text: ضَرِيح
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - mausoleum
+    derived:
+      - text: ضَرَائِح
+        derivation: plural
+        type: noun
+        gender: male
+        translations: []
+  - text: الصِّين
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - China
+  - text: بُوصَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - inch
+  - text: مَنْ
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - (interrogative) who? which one? which ones?
+  - text: يَد
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - hand
+    derived:
+      - text: يَدَوِيّ
+        derivation: nisba
+        type: noun
+        gender: male
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - صناعة يدوية handicraft
+  - text: مَا
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            (foll. an indefinite noun) some, some or other, a certain
+
+            يوما ما some day, sometime in the future
+    derived:
+      - text: مَاذَا
+        derivation: extension
+        type: pronoun
+        gender: male
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - (intensified) what?
+  - text: لٰكِنْ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - however, yet, but
+  - text: شُبَاط
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - February (Syria, Iraq, Lebanon, Jordan)
+  - text: أَمَازِيغ
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - Berbers, the Berber peoples
+  - text: إِلِكْتْرُون
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - electron
+    derived:
+      - text: إِلِكْتْرُونِيّ
+        derivation: nisba
+        type: adjective
+        gender: male
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - electronic
+  - text: لَمْ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - |-
+            (with foll. apoc.) not
+
+            لم يكتب he did not write
+  - text: عِنْدَ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - at, near, by, with, on (of place, time and possession)
+  - text: ذُو
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4-free-text
+        text:
+          - (with foll. genit.) possessor, owner, holder or master of, endowed
+            or provided with, embodying or comprising s.th.
+  - text: عَنْكَبُوت
+    type: noun
+    gender: male
+    translations: []
+    derived:
+      - text: عَنْكَبُوتِي
+        derivation: nisba
+        type: noun
+        gender: male
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - spiderlike

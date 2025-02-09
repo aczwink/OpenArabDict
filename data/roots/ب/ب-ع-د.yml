@@ -33,6 +33,12 @@ root:
               source: hw4-free-text
               text:
                 - distance, far away, far (عن from)
+          derived:
+            - text: بِعَاد
+              derivation: plural
+              type: adjective
+              gender: male
+              translations: []
         - text: بُعْد
           derivation: verbal-noun
           type: noun

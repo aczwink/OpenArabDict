@@ -33,6 +33,12 @@ root:
               source: hw4-free-text
               text:
                 - green
+          derived:
+            - text: خَضْرَاء
+              derivation: feminine
+              type: adjective
+              gender: female
+              translations: []
     - text: خُضَيْرَاء
       type: noun
       gender: male

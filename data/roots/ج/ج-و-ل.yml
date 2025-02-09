@@ -24,7 +24,7 @@ root:
         parameters: au
       translations: []
       derived:
-        - text: مَجَال⁩
+        - text: مَجَال
           derivation: meaning-related
           type: noun
           gender: male
@@ -36,11 +36,20 @@ root:
                   1. field, domain, sphere
                   2. scope, extent
           derived:
-            - text: مَجَالَات⁩
+            - text: مَجَالَات
               derivation: plural
               type: noun
               gender: male
               translations: []
+        - text: جَوَّال
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              text:
+                - wandering, migrant, itinerant, roving
     - type: verb
       dialect: msa
       stem: 5

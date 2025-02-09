@@ -25,3 +25,9 @@ root:
           source: hw4-free-text
           text:
             - liver
+      derived:
+        - text: أَكْبَاد
+          derivation: plural
+          type: noun
+          gender: male
+          translations: []

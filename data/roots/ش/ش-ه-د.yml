@@ -22,7 +22,12 @@ root:
       stem:
         number: 1
         parameters: ia
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=584
+          text:
+            - to witness (ه s.th.), be wirness (ه of s.th.)
       derived:
         - text: شَهِيد
           derivation: meaning-related

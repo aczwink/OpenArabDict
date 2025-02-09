@@ -15,40 +15,31 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ق-ر-ء
+  radicals: ه-م-ش
   words:
     - type: verb
       dialect: msa
       stem:
         number: 1
-        parameters: aa
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to read (ه s.th.; ه ل or على s.o. s.th.)
+        parameters: au
       derived:
-        - text: قِرَاءَة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=895
-              text:
-                - reading (also, e.g., of measuring instruments; parl.)
         - derivation: active-participle
           type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=895
+              url: http://ejtaal.net/aa/#hw4=1225
               text:
-                - reader
+                - margin (of a book, page, etc.)
           derived:
-            - text: قُرَّاء
+            - text: هَوَامِش
               derivation: plural
               type: noun
               gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1225
+                  text:
+                    - marginal notes (على on)

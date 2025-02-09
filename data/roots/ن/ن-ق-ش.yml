@@ -35,3 +35,14 @@ root:
               source: hw4-free-text
               text:
                 - argument, controversy, dispute, debate, discussion
+
+    - type: verb
+      dialect: msa
+      stem: 6
+      translations:
+        - dialect: msa
+          complete: true
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1175
+          text:
+            - to carry on a dispute, to debate (في about)
