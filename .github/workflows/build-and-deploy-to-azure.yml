@@ -70,7 +70,7 @@ jobs:
 
       - name: Building OpenArabDict builder
         run: |
-          npm link acts-util-node openarabdict-domain openarabicconjugation
+          npm link acts-util-core acts-util-node openarabdict-domain openarabicconjugation
           npm install
           npm run compile
           npm run build-db
