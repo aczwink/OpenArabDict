@@ -7,13 +7,12 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-env:
-  AZURE_STATIC_WEB_APPS_API_TOKEN: ${{ secrets.AZURE_STATIC_WEB_APPS_API_TOKEN }} # secret containing deployment token for your static web app
+permissions:
+  contents: read
+  id-token: write
 
 jobs:
   build_and_deploy:
-    permissions:
-      contents: read # for actions/checkout to fetch code
     runs-on: ubuntu-latest
     name: Build and Deploy
     
@@ -70,13 +69,19 @@ jobs:
 
       - name: Building OpenArabDict builder
         run: |
-          npm link acts-util-node openarabdict-domain openarabicconjugation
+          npm link acts-util-core acts-util-node openarabdict-domain openarabicconjugation
           npm install
           npm run compile
           npm run build-db
         working-directory: ./builder
 
       #Deploy to Azure
+      - uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          
       - name: Deploy to Azure
         run: |
           az storage blob upload --file ./dist/db.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/db.json --auth-mode login --overwrite
