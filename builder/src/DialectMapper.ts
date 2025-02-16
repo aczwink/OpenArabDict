@@ -18,7 +18,7 @@
 
 import { DialectType } from "openarabicconjugation/dist/Dialects";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
-import { Dictionary } from "../../../ACTS-Util/core/dist/Dictionary";
+import { Dictionary } from "acts-util-core";
 
 export class DialectMapper
 {

@@ -1,0 +1,90 @@
+name: Build and deploy to Azure
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    name: Build and Deploy
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      #build acts-util-core
+      - name: Checkout ACTS-Util repo
+        uses: actions/checkout@v4
+        with:
+          repository: aczwink/ACTS-Util
+          path: actsutil
+  
+      - name: Building acts-util-core
+        run: |
+          npm install
+          npm run compile
+          npm link
+        working-directory: ./actsutil/core
+
+      #build acts-util-node
+      - name: Building acts-util-node
+        run: |
+          npm link acts-util-core
+          npm install
+          npm run build
+          npm link
+        working-directory: ./actsutil/node
+
+      #OpenArabicConjugation
+      - name: Checkout OpenArabicConjugation repo
+        uses: actions/checkout@v4
+        with:
+          repository: aczwink/OpenArabicConjugation
+          path: openarabicconjugation
+
+      - name: Building OpenArabicConjugation
+        run: |
+          npm link acts-util-core
+          npm install
+          npm run build
+          npm link
+        working-directory: ./openarabicconjugation/conjugation_engine
+
+      #OpenArabDict
+      - name: Building OpenArabDict domain
+        run: |
+          npm install
+          npm run build
+          npm link
+        working-directory: ./domain
+
+      - name: Building OpenArabDict builder
+        run: |
+          npm link acts-util-core acts-util-node openarabdict-domain openarabicconjugation
+          npm install
+          npm run compile
+          npm run build-db
+        working-directory: ./builder
+
+      #Deploy to Azure
+      - uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          
+      - name: Deploy to Azure
+        run: |
+          az storage blob upload --file ./dist/db.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/db.json --auth-mode login --overwrite
+          az webapp restart --resource-group openarabdict --name openarabdictviewer-backend
+          az logout
+        working-directory: ./builder

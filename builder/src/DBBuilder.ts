@@ -17,7 +17,7 @@
  * */
 import fs from "fs";
 import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType } from "openarabdict-domain";
-import { Dictionary } from "../../../ACTS-Util/core/dist/Dictionary";
+import { Dictionary } from "acts-util-core";
 
 export class DBBuilder
 {

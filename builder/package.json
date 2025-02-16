@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon --exec \"tsc && node dist/main.js ../data\""
+    "build-db": "node dist/main.js ../data",
+    "compile": "tsc",
+    "dev": "nodemon --exec \"npm run compile && npm run build-db\""
   },
   "keywords": [],
   "author": "Amir Czwink",
@@ -15,6 +17,7 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "acts-util-core": "*",
     "acts-util-node": "*",
     "openarabdict-domain": "*",
     "openarabicconjugation": "*",
