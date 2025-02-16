@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -46,7 +46,7 @@ root:
                 - مسقط الرأس birthplace, home
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text

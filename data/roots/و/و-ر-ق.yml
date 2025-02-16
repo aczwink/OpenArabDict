@@ -49,3 +49,8 @@ root:
                   made of paper
 
                   نقود ورقية paper money
+          derived:
+            - text: وَرَقِيَّة
+              derivation: feminine
+              type: adjective
+              gender: female

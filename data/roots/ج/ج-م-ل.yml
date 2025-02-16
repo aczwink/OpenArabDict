@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -41,8 +41,8 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: uu
       translations:
         - dialect: msa

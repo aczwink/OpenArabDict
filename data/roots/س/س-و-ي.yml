@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -35,12 +35,14 @@ root:
           translations:
             - dialect: msa
               source: hw4-free-text
+              url: https://ejtaal.net/aa/#hw4=532
               text:
                 - سواء بسواء equally, indiscriminately, without distinction;
                   together
+
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: northlevant
           source: hw4-free-text
@@ -48,7 +50,7 @@ root:
             - to do, to make
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: مُسْتَوًى

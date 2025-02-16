@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: aa
       translations:
         - dialect: msa
@@ -55,7 +55,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations: []
       derived:
         - text: مُقَاطَعَة
@@ -75,7 +75,7 @@ root:
                     - area, region, section, district
     - type: verb
       dialect: msa
-      stem: 7
+      form: 7
       translations:
         - dialect: msa
           source: hw4-free-text

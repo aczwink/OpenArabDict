@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -49,7 +49,7 @@ root:
                 - exit
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -58,7 +58,7 @@ root:
               s.th.)
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations: []
       derived:
         - text: تَخَرُّج

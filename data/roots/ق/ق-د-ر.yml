@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -31,8 +31,8 @@ root:
               or على of)
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:

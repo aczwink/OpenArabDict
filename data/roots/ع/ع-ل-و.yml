@@ -20,8 +20,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -56,7 +56,7 @@ root:
                   translations: []
     - type: verb
       dialect: msa
-      stem: 6
+      form: 6
       translations:
         - dialect: msa
           source: hw4-free-text

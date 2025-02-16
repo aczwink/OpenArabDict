@@ -19,12 +19,12 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
-        parameters: au
+      form:
+        stem: 1
+        parameters: uu
       translations: []
       derived:
-        - text: طَاقَة⁩
+        - text: طَاقَة
           derivation: meaning-related
           type: noun
           gender: female

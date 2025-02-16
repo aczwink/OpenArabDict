@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -36,7 +36,9 @@ root:
               gender: male
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  complete: true
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1224
                   text:
                     - more important, of greater importance
               derived:
@@ -51,7 +53,7 @@ root:
                         - importance, significance, consequence
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: مُهِمّ
@@ -72,7 +74,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text

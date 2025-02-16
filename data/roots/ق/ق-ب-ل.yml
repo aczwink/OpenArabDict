@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -54,15 +54,34 @@ root:
               source: hw4-free-text
               text:
                 - kiss
+
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to welcome s.o. or s.th.
       derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          derived:
+            - text: مُقابِلَ
+              derivation: extension
+              type: preposition
+              derived:
+                - text: مقابل ذلك
+                  derivation: extension
+                  type: phrase
+                  alias: في مقابل ذلك
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      url: http://ejtaal.net/aa/#hw4=882
+                      text:
+                        - in return for that, in exchange for that, in compensation for that, as an equivalent for that, for that, therefor
         - text: مُقَابَلَة
           derivation: meaning-related
           type: noun
@@ -71,9 +90,10 @@ root:
               source: hw4-free-text
               text:
                 - meeting
+
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: إِقْبَال
@@ -88,7 +108,7 @@ root:
                   to), concern (على for), interest (على in), demand
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

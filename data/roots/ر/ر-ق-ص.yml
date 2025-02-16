@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -44,7 +44,7 @@ root:
                 - dancing, dance
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text

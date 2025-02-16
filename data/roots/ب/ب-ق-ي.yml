@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -37,3 +37,16 @@ root:
               source: hw4-free-text
               text:
                 - remaining, staying, lingering, abiding
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: ia
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 8
+              text:
+                #The translation on table 8 is wrong and doesn't align with the examples. On page 123 also the following translations are given in addition to ("to become")
+                - to stay
+                - to remain

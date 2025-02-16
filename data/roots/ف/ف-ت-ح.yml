@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: aa
       translations:
         - dialect: msa
@@ -39,7 +39,7 @@ root:
                 - opened, open
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -47,7 +47,7 @@ root:
             - to open
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: اِفْتِتَاح

@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: aa
       translations: []
       derived:
@@ -34,7 +34,12 @@ root:
               derivation: nisba
               type: adjective
               gender: male
-              translations: []
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=557
+                  text:
+                    - lawful, legitimate, legal, rightful
               derived:
                 - text: شَرْعِيَّة
                   derivation: feminine

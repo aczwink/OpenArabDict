@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -48,7 +48,7 @@ root:
                 - instead of, in place of, in lieu of
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -56,7 +56,7 @@ root:
             - to change, alter (ه ه s.th. to), convert (ه ه s.th. into)
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text

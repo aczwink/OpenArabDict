@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -54,7 +54,7 @@ root:
                 - available, on hand, existing, existent
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text

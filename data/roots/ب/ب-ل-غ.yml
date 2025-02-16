@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -29,7 +29,7 @@ root:
             - to reach (ه s.o., ه s.th.), get (ه, ه to), arrive (ه at)
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text

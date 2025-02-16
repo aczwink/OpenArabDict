@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -28,7 +28,7 @@ root:
               (في ه s.o. in or with), support (ه في s.o. in)
     - type: verb
       dialect: msa
-      stem: 6
+      form: 6
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -36,7 +36,7 @@ root:
             - to help, assist, or one another
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

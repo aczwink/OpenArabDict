@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -32,9 +32,21 @@ root:
               2. to take upon o.s. (عن instead of or for s.o., ه a burden),
               carry, assume (ه the burden, عن of s.o. else), relieve (ه عن s.o.
               from s.th.), take (ه a burden, a grievance, etc.) from s.o. (عن)
+      derived:
+        - text: حَمْل
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=254
+              text:
+                - carrying, bearing
+
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -42,9 +54,21 @@ root:
             - to have or make (ه s.o.) carry or bear (ه s.th.), load, burden,
               charge, task (ه، ه s.o. or s.th. ه with), impose (ه ه on s.o.
               s.th.)
+      derived:
+        - text: تَحْمِيل
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: free-text
+              url: https://www.arabdict.com/de/english-arabic/%D8%AA%D9%8E%D8%AD%D9%92%D9%85%D9%90%D9%8A%D9%84
+              text:
+                - download
+
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: اِحْتِمَال
@@ -58,7 +82,7 @@ root:
                 - probability, likelihood, potentiality
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

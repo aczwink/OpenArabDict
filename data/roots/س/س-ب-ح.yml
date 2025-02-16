@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: aa
       translations:
         - dialect: msa
@@ -39,7 +39,7 @@ root:
                 - swimming pool
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: سُبْحَانَ اللّٰه

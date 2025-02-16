@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -49,7 +49,7 @@ root:
                     - peaceful
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -76,7 +76,7 @@ root:
                   notice the flipped letters of ي and د)
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: مُسْلِم
@@ -121,7 +121,7 @@ root:
                   translations: []
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: اِسْتِلَام

@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -58,7 +58,7 @@ root:
                   2. variety, diversity
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -66,7 +66,7 @@ root:
             - to leave (ه s.o., s.th.)
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -74,7 +74,7 @@ root:
             - to be or become separated
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text

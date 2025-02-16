@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -52,7 +52,7 @@ root:
                 - wronged, ill-treated, unjustly treated, tyrannized
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: مُظْلِم

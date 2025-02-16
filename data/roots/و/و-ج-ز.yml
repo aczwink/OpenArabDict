@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text

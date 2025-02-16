@@ -17,6 +17,18 @@
 root:
   radicals: ح-ط-ط
   words:
+    - derivation: colloquial
+      type: verb
+      dialect: lb
+      form:
+        stem: 1
+        parameters: au
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 25
+          text:
+            - to put
+
     - text: حَطَّة
       type: noun
       gender: female

@@ -19,12 +19,12 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations: []
       derived:
-        - text: دَقِيق⁩
+        - text: دَقِيق
           derivation: meaning-related
           type: adjective
           gender: male
@@ -33,10 +33,27 @@ root:
               source: hw4-free-text
               text:
                 - precise, accurate, exact
+          derived:
+            - text: دَقِيقَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=345
+                  text:
+                    - minute (time unit)
+              derived:
+                - text: دَقَائِق
+                  derivation: plural
+                  type: noun
+                  gender: female
+                  
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:

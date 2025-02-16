@@ -20,13 +20,14 @@ import path from "path";
 import YAML from 'yaml';
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
 import { DBBuilder } from "./DBBuilder";
-import { AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber, Gender, Numerus, Person, Tense, VerbConjugationScheme, Voice } from "openarabicconjugation/dist/Definitions";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { DialectMapper } from "./DialectMapper";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
-import { VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
-import { OpenArabDictNonVerbDerivationType, OpenArabDictVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordType } from "openarabdict-domain";
+import { ParseVocalizedText, VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
+import { OpenArabDictNonVerbDerivationType, OpenArabDictVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
 import { DialectType } from "openarabicconjugation/dist/Dialects";
+import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
 
 interface DialectDefinition
 {
@@ -40,8 +41,9 @@ interface DialectDefinition
 
 interface ParameterizedStemData
 {
-    number: number;
+    stem: number;
     parameters: string;
+    type?: "sound";
 }
 
 interface TranslationDefinition
@@ -53,7 +55,7 @@ interface TranslationDefinition
 
 interface GenderedWordDefinition
 {
-    type: "adjective" | "noun" | "pronoun";
+    type: "adjective" | "noun" | "numeral" | "pronoun";
     derivation: "active-participle" | "passive-participle" | "verbal-noun";
     gender: "male" | "female";
     text?: string;
@@ -74,7 +76,7 @@ interface VerbWordDefinition
 {
     type: "verb";
     dialect: string;
-    stem: number | ParameterizedStemData;
+    form: number | ParameterizedStemData;
     translations?: TranslationDefinition[];
     derived?: WordDefinition[];
 }
@@ -84,12 +86,26 @@ type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDef
 interface RootDefinition
 {
     radicals: string;
+    ya?: boolean;
     words: WordDefinition[];
+}
+
+interface WordReference
+{
+    text: string;
+}
+
+interface WordRelationshipDefinition
+{
+    word1: WordReference;
+    word2: WordReference;
+    relationship: "synonym";
 }
 
 interface Catalog
 {
     dialects: DialectDefinition[];
+    relations: WordRelationshipDefinition[];
     roots: RootDefinition[];
     words: WordDefinition[];
 }
@@ -137,6 +153,8 @@ async function CollectFiles(catalog: Catalog, dirPath: string)
             const data = ReadContent(content, childPath.substring(childPath.length - 3));
             if(data.dialects !== undefined)
                 catalog.dialects.push(...data.dialects);
+            if(data.relations !== undefined)
+                catalog.relations.push(...data.relations);
             if(data.root !== undefined)
                 catalog.roots.push(data.root);
             if(data.words !== undefined)
@@ -177,7 +195,7 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
             if(verb.stemParameters !== undefined)
             {
                 const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-                stem1Ctx = meta.CreateStem1Context(rootInstance.type, verb.stemParameters!);
+                stem1Ctx = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbConjugationScheme(), verb.stemParameters!);
             }
 
             const voice = (word.derivation === "active-participle") ? Voice.Active : Voice.Passive;
@@ -201,7 +219,7 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
             if(verb.stemParameters !== undefined)
             {
                 const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-                stem = meta.CreateStem1Context(rootInstance.type, verb.stemParameters!);
+                stem = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbConjugationScheme(), verb.stemParameters!);
             }
             else
                 stem = verb.stem as AdvancedStemNumber;
@@ -236,6 +254,8 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 return OpenArabDictWordType.Interjection;
             case "noun":
                 return OpenArabDictWordType.Noun;
+            case "numeral":
+                return OpenArabDictWordType.Numeral;
             case "particle":
                 return OpenArabDictWordType.Particle;
             case "phrase":
@@ -326,6 +346,7 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
     {
         case OpenArabDictWordType.Adjective:
         case OpenArabDictWordType.Noun:
+        case OpenArabDictWordType.Numeral:
         case OpenArabDictWordType.Pronoun:
         {
             const g = word as GenderedWordDefinition;
@@ -334,8 +355,8 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
             {
                 if(g.text === generated)
                     console.log("Redudant text definition of word: " + g.text);
-                /*else TODO: enable me!
-                    throw new Error("Wrong text definition for word. Expected: " + generated + ", got: " + g.text);*/
+                else
+                    throw new Error("Wrong text definition for word. Expected: " + generated + ", got: " + g.text + ", Expected: " + Buckwalter.ToString(ParseVocalizedText(generated)) + ", got: " + Buckwalter.ToString(ParseVocalizedText(g.text)));
             }
             const text = generated ?? g.text;
             if(text === undefined)
@@ -381,9 +402,19 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
         break;
         case OpenArabDictWordType.Verb:
         {
-            if(parent?.type !== "root")
-                throw new Error("Verbs must be direct children of a root");
-            const root = builder.GetRoot(parent.rootId);
+            let rootId;
+            if(parent?.type === "root")
+                rootId = parent.rootId;
+            else if(parent?.type === "verb")
+            {
+                const parentWord = builder.GetWord(parent.verbId);
+                if(parentWord.type !== OpenArabDictWordType.Verb)
+                    throw new Error("ID ERROR!");
+                rootId = parentWord.rootId;
+            }
+            else
+                throw new Error("Verbs must be direct children of a root or a verb");
+            const root = builder.GetRoot(rootId);
 
             const v = word as VerbWordDefinition;
             const dialectId = builder.MapDialectKey(v.dialect)!;
@@ -391,15 +422,22 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
 
             const rootInstance = new VerbRoot(root!.radicals);
 
-            const stemNumber = (typeof v.stem === "number") ? v.stem : v.stem.number;
+            const stemNumber = (typeof v.form === "number") ? v.form : v.form.stem;
             let stem1Context = undefined;
-            if(typeof v.stem !== "number")
+            if(typeof v.form !== "number")
             {
-                if(v.stem.number !== 1)
+                if(v.form.stem !== 1)
                     throw new Error("TODO: implement me");
 
                 const meta = GetDialectMetadata(dialectType);
-                stem1Context = meta.CreateStem1Context(rootInstance.type, v.stem.parameters);
+                const verbType = (v.form.type === "sound") ? VerbConjugationScheme.Sound : rootInstance.DeriveDeducedVerbConjugationScheme();
+                const choices = meta.GetStem1ContextChoices(rootInstance);
+                if(!choices.types.includes(v.form.parameters))
+                {
+                    console.log(word, word.translations);
+                    throw new Error("Wrong stem parameterization");
+                }
+                stem1Context = meta.CreateStem1Context(verbType, v.form.parameters);
             }
 
             const conjugator = new Conjugator;
@@ -422,8 +460,9 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 rootId: root!.id,
                 stem: stemNumber,
                 text: conjugatedWord,
-                stemParameters: (typeof v.stem === "number") ? undefined : v.stem.parameters,
-                translations
+                stemParameters: (typeof v.form === "number") ? undefined : v.form.parameters,
+                translations,
+                soundOverride: ((typeof v.form !== "number") && (v.form.type !== undefined)) ? true : undefined
             });
 
             thisParent = {
@@ -443,10 +482,19 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
     }
 }
 
+function ResolveWordReference(ref: WordReference, builder: DBBuilder)
+{
+    const wordId = builder.FindWord({
+        text: ref.text
+    });
+    return wordId;
+}
+
 async function BuildDatabase(dbSrcPath: string)
 {
     const catalog: Catalog = {
         dialects: [],
+        relations: [],
         roots: [],
         words: []
     };
@@ -459,7 +507,7 @@ async function BuildDatabase(dbSrcPath: string)
 
     for (const root of catalog.roots)
     {
-        const rootId = builder.AddRoot(root.radicals);
+        const rootId = builder.AddRoot(root.radicals, root.ya);
 
         for (const word of root.words)
         {
@@ -473,6 +521,15 @@ async function BuildDatabase(dbSrcPath: string)
     for (const word of catalog.words)
     {
         ProcessWordDefinition(word, builder, dialectMapper);
+    }
+
+    for (const relation of catalog.relations)
+    {
+        const word1Id = ResolveWordReference(relation.word1, builder);
+        const word2Id = ResolveWordReference(relation.word2, builder);
+        const type = (relation.relationship === "synonym") ? OpenArabDictWordRelationshipType.Synonym : OpenArabDictWordRelationshipType.Antonym;
+
+        builder.AddRelation(word1Id, word2Id, type);
     }
 
     await builder.Store("./dist/db.json");

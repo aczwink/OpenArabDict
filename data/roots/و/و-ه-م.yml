@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations: []
       derived:
@@ -47,15 +47,14 @@ root:
                         - imaginative power, imagination
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to accuse (ب ه s.o. of)
       derived:
-        - text: إتِّهام
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations: []

@@ -39,3 +39,13 @@ words:
         text:
           - (with foll. genit. or suffix) which? what? what kind of? whoever, whosoever
           - any, every, no matter what...
+
+  - text: كِلَا
+    type: pronoun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=990
+        text:
+          - "(with foll. noun in genit. du. uninflected; with foll. pron. suffix inflected: obl. كلي, f. كلتي) both of"

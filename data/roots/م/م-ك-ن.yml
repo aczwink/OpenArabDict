@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4
@@ -36,6 +36,17 @@ root:
               source: hw4-free-text
               text:
                 - possibility
+          derived:
+            - text: إِمْكَانِيَّة
+              derivation: nisba
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1090
+                  text:
+                    - possibility
         - text: مُمْكِن
           derivation: active-participle
           type: adjective
@@ -47,7 +58,7 @@ root:
                 - possible
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text

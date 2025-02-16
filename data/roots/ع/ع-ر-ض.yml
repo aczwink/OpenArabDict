@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations: []
       derived:
@@ -39,7 +39,7 @@ root:
                   performance
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -48,7 +48,7 @@ root:
               protest, remonstrate (ه, ه against s.o., against s.th.)
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text

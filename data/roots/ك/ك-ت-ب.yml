@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -50,9 +50,15 @@ root:
           type: noun
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=965
               text:
                 - library
+          derived:
+            - text: مَكْتَبَات
+              derivation: plural
+              type: noun
+              gender: female
         - text: كَاتِب
           derivation: active-participle
           type: noun

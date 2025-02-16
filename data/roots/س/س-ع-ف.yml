@@ -19,15 +19,14 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to help, aid, assist (ه s.o.)
       derived:
-        - text: إِسْعَاَف
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:

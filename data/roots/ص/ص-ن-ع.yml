@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: aa
       translations: []
       derived:
@@ -35,7 +35,7 @@ root:
                 - handicraft
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: اِصْطِنَاعِيّ

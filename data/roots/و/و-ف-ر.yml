@@ -19,20 +19,35 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
+            - to fulfill (ه prerequisites, conditions, etc.)
             - to save (ه s.th.), be sparing, be economical, hold back, economize
               (ه with)
+
     - type: verb
       dialect: msa
-      stem: 5
-      translations: []
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1283
+          text:
+            - to be saved (money, etc., pass. of II)
       derived:
-        - text: مُتَوَفِّر
-          derivation: active-participle
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1283
+              text:
+                - availability, existence
+        - derivation: active-participle
           type: noun
           gender: male
           translations:

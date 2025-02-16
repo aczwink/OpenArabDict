@@ -18,16 +18,38 @@ root:
   radicals: خ-ل-ص
   words:
     - type: verb
+      dialect: lb
+      form:
+        stem: 1
+        parameters: ia
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 28
+          text:
+            - to stop
+
+    - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to free
+      derived:
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 2
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 29
+              text:
+                - to finish
+
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text

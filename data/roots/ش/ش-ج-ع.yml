@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: uu
       translations: []
       derived:
@@ -35,7 +35,7 @@ root:
                 - courage, bravery, valor, valiance, boldness, audacity
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text

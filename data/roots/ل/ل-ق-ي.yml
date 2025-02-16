@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -39,7 +39,7 @@ root:
                 - meeting
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -64,7 +64,7 @@ root:
                   2. recitation, recital
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -79,7 +79,7 @@ root:
               تلقى العلم to study
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -87,7 +87,7 @@ root:
             - to encounter, meet (ب s.o.)
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

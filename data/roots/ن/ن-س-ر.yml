@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations: []
       derived:
         - text: نَسْر⁩

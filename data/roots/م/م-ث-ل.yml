@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -63,7 +63,7 @@ root:
                   incomparable, matchless, unrivaled, unparalleled
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: تَمْثِيل
@@ -73,7 +73,7 @@ root:
           translations: []
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations: []
       derived:
         - text: مِثَال
@@ -87,7 +87,7 @@ root:
                 - example
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text

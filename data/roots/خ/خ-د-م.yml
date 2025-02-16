@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations: []
       derived:
@@ -52,7 +52,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

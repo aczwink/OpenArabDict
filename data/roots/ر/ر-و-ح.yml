@@ -20,8 +20,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: uu
       translations:
         - dialect: msa
@@ -48,7 +48,7 @@ root:
 
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: مُرِيح
@@ -62,7 +62,7 @@ root:
                 - comfortable
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -90,3 +90,12 @@ root:
           type: noun
           gender: male
           translations: []
+    - text: رَاحَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=436
+          text:
+            - ease, leisure

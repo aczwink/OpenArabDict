@@ -41,6 +41,24 @@ words:
         text:
           - that (with verb in the subj. indicating an action net yet realized, an expected or possible event; with verb in the perf. indicating that which has happened)
 
+  - text: أَنَّ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=50
+        text:
+          - that (with foll. subject in the acc. or as a suffix and with nominal or copulative clause)
+
+  - text: أَوْ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=55
+        text:
+          - or
+
   - text: لٰكِنْ
     alias: لٰكِنَّ
     type: conjunction

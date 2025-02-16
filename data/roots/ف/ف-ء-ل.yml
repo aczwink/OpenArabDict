@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 6
+      form: 6
       translations: []
       derived:
         - text: تَفَاؤُل

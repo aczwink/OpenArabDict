@@ -19,9 +19,9 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
-        parameters: ua
+      form:
+        stem: 1
+        parameters: uu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -59,7 +59,7 @@ root:
                     - greater, bigger
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -70,7 +70,7 @@ root:
               grandeur, magnificence, power, or might (ه of s.o., of s.th.)
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text

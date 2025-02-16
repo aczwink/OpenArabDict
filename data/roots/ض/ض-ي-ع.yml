@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ii
       translations:
         - dialect: msa
@@ -28,6 +28,16 @@ root:
           text:
             - to get lost, be lost (على for s.o.)
       derived:
+        - text: ضَيَاع
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=653
+              text:
+                - loss
         - text: ضَيْعَة⁩
           derivation: meaning-related
           type: noun

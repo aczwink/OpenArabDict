@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -38,7 +38,7 @@ root:
                 - intention
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: northlevant
           source: hw4-free-text

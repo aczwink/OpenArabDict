@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -55,7 +55,7 @@ root:
                 - (fig.) level, plane
     - type: verb
       dialect: msa
-      stem: 6
+      form: 6
       translations: []
       derived:
         - text: تَصَاعُد

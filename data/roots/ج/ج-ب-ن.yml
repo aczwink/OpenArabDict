@@ -19,9 +19,9 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
-        parameters: ua
+      form:
+        stem: 1
+        parameters: uu
       translations: []
       derived:
         - text: جَبِين

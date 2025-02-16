@@ -17,6 +17,20 @@
 root:
   radicals: د-و-ل
   words:
+    - type: verb
+      dialect: msa
+      form: 6
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=362
+              text:
+                - alternation, rotation
+
     - text: دَوْلَة
       type: noun
       gender: female

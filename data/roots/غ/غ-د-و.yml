@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -51,3 +51,12 @@ root:
               source: hw4-free-text
               text:
                 - lunch
+
+    - type: verb
+      dialect: lb
+      form: 5
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 13
+          text:
+            - to have lunch

@@ -19,9 +19,9 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
-        parameters: aa
+      form:
+        stem: 1
+        parameters: ss
       translations: []
       derived:
         - text: قَنْطَرَة

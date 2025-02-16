@@ -30,7 +30,8 @@ export interface OpenArabDictRoot
 {
     id: number;
     radicals: string;
-    ya?: undefined;
+    //When for a defective root ending in waw, also an equivalent root with ya exists. Same for hollow
+    ya?: boolean;
 }
 
 interface OpenArabDictTranslationEntry
@@ -54,7 +55,8 @@ export enum OpenArabDictWordType
     Phrase = 7,
     Particle = 8,
     Interjection = 9,
-    Verb = 10
+    Verb = 10,
+    Numeral = 11,
 }
 
 interface OpenArabDictWordBase
@@ -125,7 +127,7 @@ export type OpenArabDictWordParent = OpenArabDictWordRootParent | OpenArabDictWo
 
 interface OpenArabDictGenderedWord extends OpenArabDictWordBase
 {
-    type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun | OpenArabDictWordType.Pronoun;
+    type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun | OpenArabDictWordType.Numeral | OpenArabDictWordType.Pronoun;
     isMale: boolean;
     parent?: OpenArabDictWordParent;
 }
@@ -142,6 +144,7 @@ interface OpenArabDictVerb extends OpenArabDictWordBase
     rootId: number;
     dialectId: number;
     stem: number;
+    soundOverride?: boolean;
     stemParameters?: string;
 }
 
@@ -153,7 +156,7 @@ export enum OpenArabDictWordRelationshipType
     Antonym = 1,
 }
 
-interface OpenArabDictWordRelation
+export interface OpenArabDictWordRelation
 {
     word1Id: number;
     word2Id: number;

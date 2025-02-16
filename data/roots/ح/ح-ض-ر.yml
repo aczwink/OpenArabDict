@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -62,9 +62,21 @@ root:
               source: hw4-free-text
               text:
                 - presence
+
+    - type: verb
+      dialect: lb
+      form:
+        stem: 1
+        parameters: ia
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 24
+          text:
+            - to watch
+
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: تَحْضِير
@@ -78,7 +90,7 @@ root:
                 - preparation (ل for; also e.g., for an examination)
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations: []
       derived:
         - text: حَاضِر⁩

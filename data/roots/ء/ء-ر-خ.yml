@@ -19,11 +19,11 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: تَارِيخ
-          derivation: verbal-noun
+          derivation: meaning-related
           type: noun
           gender: male
           translations:

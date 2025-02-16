@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations: []
       derived:
@@ -56,7 +56,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: تَرْكِيب

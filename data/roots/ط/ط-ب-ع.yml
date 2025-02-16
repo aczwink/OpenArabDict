@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: aa
       translations:
         - dialect: msa
@@ -28,6 +28,34 @@ root:
           text:
             - to provide with an imprint, impress or impression (ه or على s.th.)
       derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          derived:
+            - text: طَابِعَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+              - dialect: msa
+                source: free-text
+                url: https://en.wiktionary.org/wiki/%D8%B7%D8%A7%D8%A8%D8%B9%D8%A9
+                text:
+                  - printer
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=658
+              text:
+                - printed, imprinted
+          derived:
+            - text: مَطْبُوعَة
+              derivation: feminine
+              type: adjective
+              gender: female
         - text: طَابَع
           derivation: meaning-related
           type: noun
@@ -52,6 +80,17 @@ root:
 
                   طبعا or بالطبع by nature, by natural disposition; naturally!
                   of course! certainly! to be sure!
+        - text: طِبَاعَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=658
+              text:
+                - art of printing
+                
     - text: طَبِيعَة
       type: noun
       gender: female

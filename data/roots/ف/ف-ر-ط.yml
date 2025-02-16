@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: تَفْرِيط
@@ -33,7 +33,7 @@ root:
                 - 1. negligence, neglect
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: إِفْرَاط

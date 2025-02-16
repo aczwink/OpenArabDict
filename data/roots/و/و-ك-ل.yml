@@ -19,15 +19,14 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to trust
       derived:
-        - text: إتِّكال
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations: []

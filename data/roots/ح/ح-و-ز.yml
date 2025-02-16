@@ -16,14 +16,25 @@
 
 root:
   radicals: ح-و-ز
+  ya: true
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: uu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to possess, own, have (ه s.th.)
+    
+    - text: حَيِّز
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=261
+          text:
+            - scope, range, reach, extent, compass, confines, field, domain, realm

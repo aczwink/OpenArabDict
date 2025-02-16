@@ -23,3 +23,24 @@ words:
         url: http://ejtaal.net/aa/#hw4=995
         text:
           - (interrogative and exclamatory particle with foll. noun in acc.) how much? how many? how much!
+
+  - text: هُنَا
+    alias: هٰهُنَا
+    type: adverb
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1226
+        text:
+          - here, over here, in this place
+    derived:
+      - text: هُنَاكَ
+        derivation: extension
+        alias: هُنَالِكَ
+        type: adverb
+        translations:
+          - dialect: msa
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=1227
+            text:
+              - there, over there, in that place

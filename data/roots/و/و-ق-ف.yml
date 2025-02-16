@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -42,7 +42,7 @@ root:
                   3. stand, position, opinion
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -52,7 +52,7 @@ root:
               s.th.)
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -71,9 +71,11 @@ root:
                   hampering, impeding, obstruction
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1293
           text:
             - to stop, halt, come to a stop, put in a stop, stop over
+            - to depend, be dependent, conditional (على on)

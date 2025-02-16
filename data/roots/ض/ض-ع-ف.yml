@@ -19,12 +19,12 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
-        parameters: ua
+      form:
+        stem: 1
+        parameters: uu
       translations: []
       derived:
-        - text: ضَعِيف⁩
+        - text: ضَعِيف
           derivation: meaning-related
           type: adjective
           gender: male
@@ -35,7 +35,7 @@ root:
                 - weak, feeble
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -43,7 +43,7 @@ root:
             - to weaken, enfeeble, debilitate (من or ه, ه s.o., s.th.)
     - type: verb
       dialect: msa
-      stem: 6
+      form: 6
       translations:
         - dialect: msa
           source: hw4-free-text

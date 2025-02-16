@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -47,7 +47,7 @@ root:
                 - good, right, proper, sound
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -55,7 +55,7 @@ root:
             - to make peace
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: إِصْلَاح
@@ -69,7 +69,7 @@ root:
                 - restoration, restitution, redressing, reparation
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: مُصْطَلَح

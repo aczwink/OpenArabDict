@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -102,7 +102,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -125,14 +125,26 @@ root:
               type: noun
               gender: male
               translations: []
+
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to learn, study (ه s.th.)
+      derived:
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 5
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 12
+              text:
+                - to learn
+
     - text: مَعْلَم
       type: noun
       gender: male

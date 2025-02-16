@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 7
+      form: 7
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -27,7 +27,7 @@ root:
             - to be removed, be lifted, be raised (veil)
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -35,7 +35,7 @@ root:
             - to discover (ه s.th., esp. scientifically)
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

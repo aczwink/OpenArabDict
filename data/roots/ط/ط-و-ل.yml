@@ -19,9 +19,9 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
-        parameters: au
+      form:
+        stem: 1
+        parameters: uu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -48,6 +48,10 @@ root:
               text:
                 - long
           derived:
+            - text: طَوِيلَة
+              derivation: feminine
+              type: adjective
+              gender: female
             - text: أَطْوَل
               derivation: elative-degree
               type: adjective
@@ -68,8 +72,8 @@ root:
                 - length
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ua
       translations:
         - dialect: msa
@@ -78,7 +82,7 @@ root:
             - to reach, catch (ه s.o.), get hold (ه, ه of s.o., of s.th.)
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text

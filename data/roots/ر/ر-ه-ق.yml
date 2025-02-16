@@ -19,7 +19,7 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations: []
       derived:
         - text: مُرَاهِق
@@ -33,7 +33,7 @@ root:
                 - adolescent
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations: []
       derived:
         - text: إِرْهَاق

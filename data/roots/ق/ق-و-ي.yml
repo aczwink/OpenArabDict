@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations: []
       derived:
@@ -33,9 +33,25 @@ root:
               source: hw4-free-text
               text:
                 - strength
+        - text: قَوِيّ
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=952
+              text:
+                - strong
+          derived:
+            - text: قَوِيَّة
+              derivation: feminine
+              type: adjective
+              gender: female
+
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text

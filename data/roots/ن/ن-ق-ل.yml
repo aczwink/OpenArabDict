@@ -19,17 +19,29 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to transfer (ه an official, إلى to a place, to a post)
+      derived:
+        - text: نَقْل
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1179
+              text:
+                - transfer (also, e.h., of an official)
+
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -47,7 +59,7 @@ root:
                 - change of residence
     - type: verb
       dialect: msa
-      stem: 6
+      form: 6
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -55,7 +67,7 @@ root:
             - to report to one another, relate or tell each other (ه s.th.)
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations:
         - dialect: msa
           source: hw4-free-text

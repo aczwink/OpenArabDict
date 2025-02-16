@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations: []
       derived:
@@ -34,6 +34,16 @@ root:
               text:
                 - much, many, numerous, abundant, plentiful, copious
           derived:
+            - text: أَكْثَر
+              derivation: elative-degree
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=967
+                  text:
+                    - more
             - text: كَثِيرَة
               derivation: feminine
               type: adjective
@@ -41,8 +51,8 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: uu
       translations: []
       derived:

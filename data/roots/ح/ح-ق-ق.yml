@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations: []
       derived:
@@ -30,6 +30,16 @@ root:
           gender: male
           translations: []
           derived:
+            - text: حُقُوق
+              derivation: plural
+              type: noun
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=237
+                  text:
+                    - right, title, claim, legal claim (في to)
             - text: حَقًّا⁩
               derivation: extension
               type: adverb
@@ -56,7 +66,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations: []
       derived:
         - text: تَحْقِيق
@@ -70,7 +80,7 @@ root:
                 - realization, actualization, effectuation, implementation
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -78,7 +88,7 @@ root:
             - to be realized, be effected, come into effect
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations:
         - dialect: msa
           source: hw4-free-text

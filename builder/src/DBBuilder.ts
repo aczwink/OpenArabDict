@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord } from "openarabdict-domain";
+import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType } from "openarabdict-domain";
 import { Dictionary } from "../../../ACTS-Util/core/dist/Dictionary";
 
 export class DBBuilder
@@ -25,6 +25,7 @@ export class DBBuilder
     {
         this.dialectMap = {};
         this.dialects = [];
+        this.relations = [];
         this.roots = [];
         this.words = [];
     }
@@ -46,12 +47,22 @@ export class DBBuilder
         return id;
     }
 
-    public AddRoot(radicals: string)
+    public AddRelation(word1Id: number, word2Id: number, relationship: OpenArabDictWordRelationshipType)
+    {
+        this.relations.push({
+            word1Id,
+            word2Id,
+            relationship
+        });
+    }
+
+    public AddRoot(radicals: string, ya?: boolean)
     {
         const id = this.roots.length + 1;
         this.roots.push({
             id,
-            radicals: radicals.split("-").join("")
+            radicals: radicals.split("-").join(""),
+            ya
         });
 
         return id;
@@ -63,6 +74,24 @@ export class DBBuilder
         this.words.push(word);
 
         return word.id;
+    }
+
+    public FindWord(criteria: { text: string; })
+    {
+        function filterWord(word: OpenArabDictWord)
+        {
+            return word.text === criteria.text;
+        }
+
+        const words = this.words.filter(filterWord);
+        if(words.length === 1)
+            return words[0].id;
+        if(words.length === 0)
+        {
+            console.log(criteria);
+            throw new Error("Could not find word");
+        }
+        throw new Error("TODO");
     }
 
     public GetRoot(rootId: number)
@@ -86,7 +115,7 @@ export class DBBuilder
             dialects: this.dialects,
             roots: this.roots,
             words: this.words,
-            wordRelations: []
+            wordRelations: this.relations
         };
         const stringified = JSON.stringify(finalDB, undefined, 2);
 
@@ -96,6 +125,7 @@ export class DBBuilder
     //State
     private dialectMap: Dictionary<number>;
     private dialects: OpenArabDictDialect[];
+    private relations: OpenArabDictWordRelation[];
     private roots: OpenArabDictRoot[];
     private words: OpenArabDictWord[];
 }

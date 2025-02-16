@@ -20,8 +20,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: uu
       translations:
         - dialect: msa
@@ -63,7 +63,7 @@ root:
               translations: []
     - type: verb
       dialect: msa
-      stem: 2
+      form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -81,7 +81,7 @@ root:
                 - transformation, transmutation, conversion (إلى into s.th.)
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -104,9 +104,19 @@ root:
               type: noun
               gender: female
               translations: []
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 3
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 19
+              text:
+                - to try
+
     - type: verb
       dialect: msa
-      stem: 5
+      form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -114,7 +124,7 @@ root:
             - to change, undergo a change
     - type: verb
       dialect: msa
-      stem: 8
+      form: 8
       translations: []
       derived:
         - text: اِحْتِيَال
@@ -128,11 +138,10 @@ root:
                 - deception, fraud
     - type: verb
       dialect: msa
-      stem: 10
+      form: 10
       translations: []
       derived:
-        - text: مُسْتَحِيل
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:

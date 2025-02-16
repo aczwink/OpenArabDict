@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -28,9 +28,22 @@ root:
           text:
             - to be or become damaged or spoiled, be ruined, break, get broken,
               go to pieces
+      derived:
+        - text: تَلَف
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=129
+              text:
+                - ruin, destruction
+                - ruination, damage, injury, harm
+
     - type: verb
       dialect: msa
-      stem: 4
+      form: 4
       translations:
         - dialect: msa
           source: hw4-free-text

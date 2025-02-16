@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ia
       translations:
         - dialect: msa
@@ -37,3 +37,38 @@ root:
               source: hw4-free-text
               text:
                 - familiar, accustomed
+
+    - type: verb
+      dialect: msa
+      form: 2
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=42
+              text:
+                - author, writer
+          derived:
+            - text: مُؤَلِّفُون
+              derivation: plural
+              type: noun
+              gender: male
+
+
+    - text: أَلْف
+      type: numeral
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=41
+          text:
+            - thousand
+      derived:
+        - text: آلَاف
+          derivation: plural
+          type: numeral
+          gender: male

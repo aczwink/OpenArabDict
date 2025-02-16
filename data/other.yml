@@ -518,7 +518,7 @@ words:
             with أنَّ) would God...! if only ...!
 
             يا ليت if it were only so!
-  - text: رَأْسْمَال⁩
+  - text: رَأْسْمَال
     type: noun
     gender: male
     translations:
@@ -1137,6 +1137,11 @@ words:
             source: hw4-free-text
             text:
               - electronic
+        derived:
+          - text: إِلِكْتْرُونِيَّة
+            derivation: feminine
+            type: adjective
+            gender: female
   - text: لَمْ
     type: particle
     translations:

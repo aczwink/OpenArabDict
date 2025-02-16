@@ -19,8 +19,8 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -29,8 +29,8 @@ root:
             - to occur (ل to s.o.), come to s.o.'s (ل) mind
     - type: verb
       dialect: msa
-      stem:
-        number: 1
+      form:
+        stem: 1
         parameters: au
       translations:
         - dialect: msa
@@ -39,7 +39,7 @@ root:
             - same as خَطَرَ / يَخْطِر
     - type: verb
       dialect: msa
-      stem: 3
+      form: 3
       translations: []
       derived:
         - text: خَاطِر

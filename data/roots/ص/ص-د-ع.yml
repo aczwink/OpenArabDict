@@ -19,5 +19,5 @@ root:
   words:
     - type: verb
       dialect: msa
-      stem: 7
+      form: 7
       translations: []
