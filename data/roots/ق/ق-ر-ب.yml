@@ -20,7 +20,12 @@ root:
     - type: verb
       dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=896
+          text:
+            - to cause or allow (ه, ه s.o, s.th.) to come near or get close (إلى or من to s.th.), make or let (ه, ه s.o., s.th.) approach (إلى or من s.th.), bring close (ه, ه s.o., s.th.; إلى or من to s.th.), advance, move (ه, ه s.o., s.th.; إلى or من toward s.th.), approximate (ه s.th.; إلى or من to)
       derived:
         - text: تَقْرِيب
           derivation: verbal-noun
@@ -34,6 +39,7 @@ root:
                   approximation
 
                   تَقْرِيبًا approximately, almost, nearly, roughly, about
+
     - type: verb
       dialect: msa
       form: 8

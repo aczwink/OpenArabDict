@@ -39,17 +39,18 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=280
               text:
-                - |-
-                  1. office, employment, occupation, job
-                  2. work
+                - a service (rendered)
+                - office, employment, occupation, job
+                - work
           derived:
             - text: خِدْمَات
               derivation: plural
               type: noun
               gender: female
-              translations: []
+
     - type: verb
       dialect: msa
       form: 10

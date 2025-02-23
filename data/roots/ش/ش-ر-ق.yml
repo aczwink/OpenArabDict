@@ -28,7 +28,13 @@ root:
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=559
+              text:
+                - sunrise, east
+                - the Orient, the East
           derived:
             - text: شَرْقِيّ
               derivation: nisba

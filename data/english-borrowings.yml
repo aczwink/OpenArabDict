@@ -24,3 +24,63 @@ words:
         url: https://en.wiktionary.org/wiki/%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA
         text:
           - Internet
+
+  - text: أَمْرِيكَا
+    type: noun
+    gender: female
+    derived:
+      - text: أَمْرِيكِيّ
+        derivation: nisba
+        type: adjective
+        gender: male
+        translations:
+          - dialect: msa
+            complete: true
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=47
+            text:
+              - American
+      - text: أَمْرِيكِيّ
+        derivation: nisba
+        type: noun
+        gender: male
+        translations:
+          - dialect: msa
+            complete: true
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=47
+            text:
+              - an American
+        derived:
+          - text: أَمْرِيكِيُّون
+            derivation: plural
+            type: noun
+            gender: male
+
+  - text: تِكْنُولُوجْيا
+    alias: تِكْنُولُوجِيَّة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        complete: true
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=129
+        text:
+          - technology
+
+  - text: تِكْنُولُوجِيّ
+    type: adjective
+    gender: male
+    translations:
+      - dialect: msa
+        complete: true
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=129
+        text:
+          - technological
+    derived:
+      - text: تِكْنُولُوجِيَّة
+        derivation: feminine
+        type: adjective
+        gender: female

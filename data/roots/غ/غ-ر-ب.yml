@@ -43,7 +43,13 @@ root:
           derivation: meaning-related
           type: adjective
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=796
+              text:
+                - strange, foreign, alien, extraneous (على or عن to s.o.)
+                - strange, odd, queer, quaint, unusual, extraordinary, curious, remarkable, peculiar
           derived:
             - text: غَرِيبَة
               derivation: feminine

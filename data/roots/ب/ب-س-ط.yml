@@ -25,6 +25,7 @@ root:
           source: hw4-free-text
           text:
             - to be glad, be delighted, be or become happy
+
     - text: بِسَاط
       type: noun
       gender: male
@@ -33,3 +34,23 @@ root:
           source: hw4-free-text
           text:
             - carpet, rug
+
+    - text: بَسَاطَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=85
+          text:
+            - simplicity, plainness
+      derived:
+        - text: بِبَسَاطَة
+          derivation: extension
+          type: adverb
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=85
+              text:
+                - merely, only, simply, easily, without further ado

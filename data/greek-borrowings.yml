@@ -14,31 +14,14 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: و-ر-د
-  words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ai
-      derived:
-        - text: وُرُود
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=1256
-              text:
-                - coming, arrival, advent
-
-    - text: وَرْد
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - rose (bot.)
+words:
+  - text: بِطَاقَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=90
+        text:
+          - card, calling card
+          - ticket

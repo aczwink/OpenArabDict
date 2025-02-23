@@ -28,6 +28,19 @@ words:
   - text: لِ
     type: particle #http://ejtaal.net/aa/#hw4=1011
     derived:
+      - text: لِأَنَّ
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            complete: true
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=1012
+            text:
+              - on the grounds that
+              - because
+              - for
+        
       - text: لِمَا
         derivation: extension
         type: adverb #http://ejtaal.net/aa/#hw4=1012
@@ -37,6 +50,7 @@ words:
             type: adverb
             translations:
               - dialect: msa
+                complete: true
                 source: hw4
                 url: http://ejtaal.net/aa/#hw4=1012
                 text:

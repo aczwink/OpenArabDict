@@ -168,14 +168,21 @@ words:
         source: hw4-free-text
         text:
           - when
+
   - text: هٰذَا
     type: pronoun
     gender: male
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1213
         text:
-          - this
+          - this one, this
+    derived:
+      - text: هٰؤُلَاءِ
+        derivation: plural
+        type: pronoun
+        gender: male
 
   - text: كَهْف
     type: noun
@@ -567,20 +574,24 @@ words:
         source: hw4-free-text
         text:
           - since, as, the more so as, because
+
   - text: سَاعَة
     type: noun
     gender: female
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        url: https://ejtaal.net/aa/#hw4=528
         text:
           - time, while
+          - hour
     derived:
       - text: سَاعَات
         derivation: plural
         type: noun
         gender: female
         translations: []
+
   - text: طَازَج
     type: adjective
     gender: male
@@ -1168,6 +1179,7 @@ words:
         text:
           - (with foll. genit.) possessor, owner, holder or master of, endowed
             or provided with, embodying or comprising s.th.
+
   - text: عَنْكَبُوت
     type: noun
     gender: male
@@ -1182,3 +1194,8 @@ words:
             source: hw4-free-text
             text:
               - spiderlike
+        derived:
+          - text: عَنْكَبُوتِيَّة
+            derivation: feminine
+            type: noun
+            gender: female

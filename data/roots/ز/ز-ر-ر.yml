@@ -15,42 +15,23 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ق-ل-ل
+  radicals: ز-ر-ر
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ai
+        parameters: au
       derived:
-        - text: قِلَّة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=929
-              text:
-                - littleness, fewness
-        - text: قَلِيل
+        - text: زِرّ
           derivation: meaning-related
-          type: adjective
+          type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=929
+              url: https://ejtaal.net/aa/#hw4=448
               text:
-                - little
-                - few
-
-    - type: verb
-      dialect: msa
-      form: 2
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to make little or less, diminish, lessen, decrease, reduce, do
-              seldom or less frequently (ه or من s.th.)
+                - button
+                - switch button (el.)
+                - push button

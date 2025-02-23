@@ -33,3 +33,8 @@ root:
               source: hw4-free-text
               text:
                 - youth, young man
+          derived:
+            - text: شَبَاب
+              derivation: plural
+              type: noun
+              gender: male

@@ -15,42 +15,24 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ق-ل-ل
+  radicals: ص-و-ر
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ai
-      derived:
-        - text: قِلَّة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=929
-              text:
-                - littleness, fewness
-        - text: قَلِيل
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=929
-              text:
-                - little
-                - few
-
     - type: verb
       dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=632
           text:
-            - to make little or less, diminish, lessen, decrease, reduce, do
-              seldom or less frequently (ه or من s.th.)
+            - to form, shape, mold, fashion, create (ه s.th.)
+            
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=632
+          text:
+            - pass. of II

@@ -31,3 +31,14 @@ root:
           type: noun
           gender: male
           translations: []
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=39
+              text:
+                - certain, definite, sure
+                - confirmed

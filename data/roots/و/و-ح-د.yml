@@ -29,6 +29,20 @@ root:
             - to be alone, unique, singular, unmatched, without equal,
               incomparable
       derived:
+        - derivation: active-participle
+          type: numeral
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1250
+              text:
+                - one
+          derived:
+            - text: وَاحِدَة
+              derivation: feminine
+              type: adjective
+              gender: female
         - text: وَحِيد
           derivation: meaning-related
           type: adjective

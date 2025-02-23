@@ -117,7 +117,8 @@ export class DBBuilder
             words: this.words,
             wordRelations: this.relations
         };
-        const stringified = JSON.stringify(finalDB, undefined, 2);
+        //const stringified = JSON.stringify(finalDB, undefined, 2);
+        const stringified = JSON.stringify(finalDB);
 
         await fs.promises.writeFile(path, stringified, "utf-8");
     }

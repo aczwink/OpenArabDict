@@ -59,3 +59,27 @@ root:
                   1. aimed at, intended
                   2. intentional, designed, deliberate
                   3. meant
+
+    - type: verb
+      dialect: msa
+      form: 8
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          derived:
+            - text: اِقْتِصَادِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=911
+                  text:
+                    - economical
+              derived:
+                - text: اِقْتِصَادِيَّة
+                  derivation: feminine
+                  type: adjective
+                  gender: female

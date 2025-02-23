@@ -65,3 +65,13 @@ root:
               source: hw4-free-text
               text:
                 - (public) demonstration, rally
+    
+    - text: ظَاهِرَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=697
+          text:
+            - phenomenon

@@ -15,30 +15,13 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: و-ر-د
+  radicals: ف-ق-ط
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ai
-      derived:
-        - text: وُرُود
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=1256
-              text:
-                - coming, arrival, advent
-
-    - text: وَرْد
-      type: noun
-      gender: male
+    - text: فَقَطْ
+      type: adverb
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=859
           text:
-            - rose (bot.)
+            - (postpositive, seldom for emphasis at the beginning of the sentence) only, merely, solely

@@ -49,6 +49,10 @@ root:
               source: hw4-free-text
               text:
                 - shopping
+        - derivation: active-participle
+          type: noun
+          gender: male
+
     - text: سَاق
       type: noun
       gender: female
@@ -57,3 +61,13 @@ root:
           source: hw4-free-text
           text:
             - leg (also geom.)
+
+    - text: سُوق
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=530
+          text:
+            - market

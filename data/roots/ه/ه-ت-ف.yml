@@ -24,12 +24,17 @@ root:
         parameters: ai
       translations: []
       derived:
-        - text: هَاتِف
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1206
               text:
                 - telephone
+          derived:
+            - text: هَوَاتِف
+              derivation: plural
+              type: noun
+              gender: male

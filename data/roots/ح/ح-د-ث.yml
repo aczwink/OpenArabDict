@@ -78,3 +78,19 @@ root:
           text:
             - to speak, talk (إلى to s.o., عن, ب or في about or of s.th.),
               converse, chat (إلى or مع with s.o., عن, ب or في about s.th.)
+
+    - text: حَدِيث
+      type: adjective
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=202
+          text:
+            - new, novel, recent, late
+            - modern
+      derived:
+        - text: حَدِيثَة
+          derivation: feminine
+          type: adjective
+          gender: female

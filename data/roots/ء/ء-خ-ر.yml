@@ -26,6 +26,10 @@ root:
           text:
             - another, one more
       derived:
+        - text: أُخْرَى
+          derivation: feminine
+          type: adjective
+          gender: female
         - text: آخِرُون
           derivation: plural
           type: adjective

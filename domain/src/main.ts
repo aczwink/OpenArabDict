@@ -34,10 +34,12 @@ export interface OpenArabDictRoot
     ya?: boolean;
 }
 
-interface OpenArabDictTranslationEntry
+export interface OpenArabDictTranslationEntry
 {
     dialectId: number;
+    complete?: true;
     text: string[];
+    url?: string;
 }
 
 export enum OpenArabDictWordType
@@ -81,13 +83,14 @@ interface OpenArabDictWordRootParent
 
 export enum OpenArabDictVerbDerivationType
 {
-    Unknown = 0,
+    MeaningRelated = 0,
     VerbalNoun = 1,
     ActiveParticiple = 2,
     PassiveParticiple = 3,
+    Colloquial = 4,
 }
 
-interface OpenArabDictWordVerbParent
+export interface OpenArabDictWordVerbParent
 {
     type: OpenArabDictWordParentType.Verb;
     derivation: OpenArabDictVerbDerivationType;
@@ -116,7 +119,7 @@ export enum OpenArabDictNonVerbDerivationType
     AdverbialAccusative = 7,
 }
 
-interface OpenArabDictOtherWordParent
+export interface OpenArabDictOtherWordParent
 {
     type: OpenArabDictWordParentType.NonVerbWord;
     wordId: number;
@@ -125,7 +128,7 @@ interface OpenArabDictOtherWordParent
 
 export type OpenArabDictWordParent = OpenArabDictWordRootParent | OpenArabDictWordVerbParent | OpenArabDictOtherWordParent;
 
-interface OpenArabDictGenderedWord extends OpenArabDictWordBase
+export interface OpenArabDictGenderedWord extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun | OpenArabDictWordType.Numeral | OpenArabDictWordType.Pronoun;
     isMale: boolean;
@@ -138,9 +141,10 @@ interface OpenArabDictOtherWord extends OpenArabDictWordBase
     parent?: OpenArabDictWordParent;
 }
 
-interface OpenArabDictVerb extends OpenArabDictWordBase
+export interface OpenArabDictVerb extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Verb;
+    parent: OpenArabDictWordParent;
     rootId: number;
     dialectId: number;
     stem: number;

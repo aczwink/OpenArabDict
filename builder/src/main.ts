@@ -20,7 +20,7 @@ import path from "path";
 import YAML from 'yaml';
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
 import { DBBuilder } from "./DBBuilder";
-import { AdvancedStemNumber, Gender, Numerus, Person, Tense, VerbConjugationScheme, Voice } from "openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber, Gender, Numerus, Person, Tense, VerbType, Voice } from "openarabicconjugation/dist/Definitions";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { DialectMapper } from "./DialectMapper";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
@@ -49,13 +49,16 @@ interface ParameterizedStemData
 interface TranslationDefinition
 {
     dialect: string;
+    complete?: true;
     source: "hw4-free-text";
     text: string[];
+    url?: string;
 }
 
 interface GenderedWordDefinition
 {
     type: "adjective" | "noun" | "numeral" | "pronoun";
+    alias?: string;
     derivation: "active-participle" | "passive-participle" | "verbal-noun";
     gender: "male" | "female";
     text?: string;
@@ -66,6 +69,7 @@ interface GenderedWordDefinition
 interface OtherWordDefinition
 {
     type: "adverb" | "conjunction" | "foreign-verb" | "interjection" | "particle" | "phrase" | "preposition";
+    alias?: string;
     derivation: "extension";
     text: string;
     translations: TranslationDefinition[];
@@ -75,10 +79,12 @@ interface OtherWordDefinition
 interface VerbWordDefinition
 {
     type: "verb";
+    alias?: string;
     dialect: string;
     form: number | ParameterizedStemData;
     translations?: TranslationDefinition[];
     derived?: WordDefinition[];
+    derivation?: "colloquial";
 }
 
 type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition;
@@ -195,7 +201,7 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
             if(verb.stemParameters !== undefined)
             {
                 const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-                stem1Ctx = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbConjugationScheme(), verb.stemParameters!);
+                stem1Ctx = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbType(), verb.stemParameters!);
             }
 
             const voice = (word.derivation === "active-participle") ? Voice.Active : Voice.Passive;
@@ -219,7 +225,7 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
             if(verb.stemParameters !== undefined)
             {
                 const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-                stem = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbConjugationScheme(), verb.stemParameters!);
+                stem = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbType(), verb.stemParameters!);
             }
             else
                 stem = verb.stem as AdvancedStemNumber;
@@ -236,11 +242,49 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
     return undefined;
 }
 
+let illegalVerbalNouns = 0;
+function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, parent: WordParent | undefined)
+{
+    if(parent?.type !== "verb")
+        throw new Error("Verbal nouns can only be children of verbs");
+    const verb = builder.GetWord(parent.verbId);
+    if(verb.type !== OpenArabDictWordType.Verb)
+        throw new Error("Id error!!!");
+    const root = builder.GetRoot(verb.rootId);
+
+    const rootInstance = new VerbRoot(root.radicals);
+
+    let stem;
+    if(verb.stemParameters !== undefined)
+    {
+        const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
+        stem = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbType(), verb.stemParameters!);
+    }
+    else
+        stem = verb.stem as AdvancedStemNumber;
+
+    const conjugator = new Conjugator;
+    const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
+
+    for (const possible of generated)
+    {
+        if(VocalizedWordTostring(possible) === word.text)
+            return;
+    }
+    //throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
+    illegalVerbalNouns++;
+    console.log("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
+    console.log(illegalVerbalNouns);
+    console.log(generated);
+}
+
+
+let redundantWords = 0;
 function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialectMapper: DialectMapper, parent?: WordParent)
 {
     function MapType()
     {
-        switch(word.type)
+        switch(word.type as string)
         {
             case "adjective":
                 return OpenArabDictWordType.Adjective;
@@ -266,6 +310,8 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 return OpenArabDictWordType.Pronoun;
             case "verb":
                 return OpenArabDictWordType.Verb;
+            default:
+                throw new Error("Unknown word type: " + word.type);
         }
     }
 
@@ -275,8 +321,10 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
         {
             case "active-participle":
                 return OpenArabDictVerbDerivationType.ActiveParticiple;
+            case "colloquial":
+                return OpenArabDictVerbDerivationType.Colloquial;
             case "meaning-related":
-                return OpenArabDictVerbDerivationType.Unknown;
+                return OpenArabDictVerbDerivationType.MeaningRelated;
             case "passive-participle":
                 return OpenArabDictVerbDerivationType.PassiveParticiple;
             case "verbal-noun":
@@ -337,11 +385,14 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
 
     const translations = word.translations?.map(x => ({
         dialectId: builder.MapDialectKey(x.dialect)!,
-        text: x.text
+        complete: x.complete,
+        text: x.text,
+        url: x.url
     })) ?? [];
 
     const t = MapType();
     let thisParent: WordParent | undefined = undefined;
+    let createdWordId;
     switch(t)
     {
         case OpenArabDictWordType.Adjective:
@@ -351,12 +402,20 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
         {
             const g = word as GenderedWordDefinition;
             const generated = GenerateTextIfPossible(g, builder, parent);
-            if((generated !== undefined) && (g.text !== undefined))
+            if(g.text !== undefined)
             {
-                if(g.text === generated)
-                    console.log("Redudant text definition of word: " + g.text);
-                else
-                    throw new Error("Wrong text definition for word. Expected: " + generated + ", got: " + g.text + ", Expected: " + Buckwalter.ToString(ParseVocalizedText(generated)) + ", got: " + Buckwalter.ToString(ParseVocalizedText(g.text)));
+                if(generated !== undefined)
+                {
+                    if(g.text === generated)
+                    {
+                        redundantWords++;
+                        console.log("Redundant text definition of word: " + g.text);
+                    }
+                    else
+                        throw new Error("Wrong text definition for word. Expected: " + generated + ", got: " + g.text + ", Expected: " + Buckwalter.ToString(ParseVocalizedText(generated)) + ", got: " + Buckwalter.ToString(ParseVocalizedText(g.text)));
+                }
+                else if(g.derivation === "verbal-noun")
+                    ValidateVerbalNoun(g, builder, parent);
             }
             const text = generated ?? g.text;
             if(text === undefined)
@@ -371,10 +430,25 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 parent: MapParent(g.derivation, parent)
             });
 
+            if(g.alias !== undefined)
+            {
+                const aliasWordId = ProcessWordDefinition({
+                    type: g.type,
+                    derivation: g.derivation,
+                    gender: g.gender,
+                    translations: g.translations,
+                    derived: g.derived,
+                    text: g.alias
+                }, builder, dialectMapper, parent);
+
+                builder.AddRelation(wordId, aliasWordId, OpenArabDictWordRelationshipType.Synonym);
+            }
+
             thisParent = {
                 type: "word",
                 wordId
             };
+            createdWordId = wordId;
         }
         break;
         case OpenArabDictWordType.Adverb:
@@ -394,10 +468,23 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 parent: MapParent(o.derivation, parent)
             });
 
+            if(o.alias !== undefined)
+            {
+                const aliasWordId = ProcessWordDefinition({
+                    type: o.type,
+                    derivation: o.derivation,
+                    text: o.alias,
+                    translations: o.translations,
+                }, builder, dialectMapper, parent);
+
+                builder.AddRelation(wordId, aliasWordId, OpenArabDictWordRelationshipType.Synonym);
+            }
+
             thisParent = {
                 type: "word",
                 wordId
             };
+            createdWordId = wordId;
         }
         break;
         case OpenArabDictWordType.Verb:
@@ -430,7 +517,7 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                     throw new Error("TODO: implement me");
 
                 const meta = GetDialectMetadata(dialectType);
-                const verbType = (v.form.type === "sound") ? VerbConjugationScheme.Sound : rootInstance.DeriveDeducedVerbConjugationScheme();
+                const verbType = (v.form.type === "sound") ? VerbType.Sound : rootInstance.DeriveDeducedVerbType();
                 const choices = meta.GetStem1ContextChoices(rootInstance);
                 if(!choices.types.includes(v.form.parameters))
                 {
@@ -462,13 +549,30 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 text: conjugatedWord,
                 stemParameters: (typeof v.form === "number") ? undefined : v.form.parameters,
                 translations,
-                soundOverride: ((typeof v.form !== "number") && (v.form.type !== undefined)) ? true : undefined
+                soundOverride: ((typeof v.form !== "number") && (v.form.type !== undefined)) ? true : undefined,
+                parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})
             });
+
+            if(v.alias !== undefined)
+            {
+                const aliasWordId = ProcessWordDefinition({
+                    type: v.type,
+                    dialect: v.dialect,
+                    form: {
+                        stem: 1,
+                        parameters: v.alias
+                    },
+                    translations: v.translations
+                }, builder, dialectMapper, parent);
+
+                builder.AddRelation(verbId, aliasWordId, OpenArabDictWordRelationshipType.Synonym);
+            }
 
             thisParent = {
                 type: "verb",
                 verbId
             };
+            createdWordId = verbId;
         }
         break;
     }
@@ -480,6 +584,8 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
             ProcessWordDefinition(child, builder, dialectMapper, thisParent);
         }
     }
+
+    return createdWordId;
 }
 
 function ResolveWordReference(ref: WordReference, builder: DBBuilder)
@@ -533,6 +639,9 @@ async function BuildDatabase(dbSrcPath: string)
     }
 
     await builder.Store("./dist/db.json");
+
+    console.log("TODO: TOALLY CRAPPY VERBAL NOUNS:", illegalVerbalNouns);
+    console.log("Redundant words:", redundantWords);
 }
 
 const dbSrcPath = process.argv[2];

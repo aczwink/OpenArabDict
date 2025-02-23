@@ -62,6 +62,11 @@ root:
               source: hw4-free-text
               text:
                 - studies
+          derived:
+            - text: دِرَاسَات
+              derivation: plural
+              type: noun
+              gender: female
         - derivation: colloquial
           type: verb
           dialect: lb

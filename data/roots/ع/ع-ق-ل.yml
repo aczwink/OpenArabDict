@@ -15,54 +15,26 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ص-ر-ف
+  radicals: ع-ق-ل
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
         parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to deliver, distribute
-
-    - type: verb
-      dialect: msa
-      form: 5
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to behave, act, conduct o.s., comport o.s.
       derived:
-        - text: تَصَرُّف
+        - text: عَقْل
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
-              text:
-                - action, way of acting, demeanor, behavior, conduct
-
-    - text: مَصْرِف
-      type: noun
-      gender: male
-      derived:
-        - text: مَصْرِفِيّ
-          derivation: nisba
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=612
+              url: http://ejtaal.net/aa/#hw4=750
               text:
-                - bank (in compounds)
+                - sense, sentience, reason, understanding, comprehension, discernment, insight, rationality, mind, intellect, intelligence
           derived:
-            - text: مَصْرِفِيَّة
-              derivation: feminine
+            - text: عُقُول
+              derivation: plural
               type: noun
-              gender: female
+              gender: male
