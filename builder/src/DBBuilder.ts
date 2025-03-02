@@ -16,8 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType } from "openarabdict-domain";
-import { Dictionary } from "acts-util-core";
+import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
+import { Dictionary, ObjectExtensions } from "acts-util-core";
+import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
+import { ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
 
 export class DBBuilder
 {
@@ -26,8 +28,8 @@ export class DBBuilder
         this.dialectMap = {};
         this.dialects = [];
         this.relations = [];
-        this.roots = [];
-        this.words = [];
+        this.roots = {};
+        this.words = {};
     }
 
     //Public methods
@@ -47,7 +49,7 @@ export class DBBuilder
         return id;
     }
 
-    public AddRelation(word1Id: number, word2Id: number, relationship: OpenArabDictWordRelationshipType)
+    public AddRelation(word1Id: string, word2Id: string, relationship: OpenArabDictWordRelationshipType)
     {
         this.relations.push({
             word1Id,
@@ -58,20 +60,35 @@ export class DBBuilder
 
     public AddRoot(radicals: string, ya?: boolean)
     {
-        const id = this.roots.length + 1;
-        this.roots.push({
+        const radicalsWithoutDashes = radicals.split("-").join("");
+        const id = this.GenerateRootId(radicalsWithoutDashes);
+
+        if(this.GetRoot(id) !== undefined)
+        {
+            console.log(radicals);
+            throw new Error("Id conflict for: " + id);
+        }
+
+        this.roots[id] = {
             id,
-            radicals: radicals.split("-").join(""),
+            radicals: radicalsWithoutDashes,
             ya
-        });
+        };
 
         return id;
     }
 
     public AddWord(word: OpenArabDictWord)
     {
-        word.id = this.words.length + 1;
-        this.words.push(word);
+        const id = this.GenerateWordId(word);
+        if(this.GetWord(id) !== undefined)
+        {
+            console.log(word);
+            throw new Error("Id conflict for: " + id);
+        }
+
+        word.id = id;
+        this.words[id] = word;
 
         return word.id;
     }
@@ -83,7 +100,7 @@ export class DBBuilder
             return word.text === criteria.text;
         }
 
-        const words = this.words.filter(filterWord);
+        const words = ObjectExtensions.Values(this.words).NotUndefined().Filter(filterWord).ToArray();
         if(words.length === 1)
             return words[0].id;
         if(words.length === 0)
@@ -94,14 +111,14 @@ export class DBBuilder
         throw new Error("TODO");
     }
 
-    public GetRoot(rootId: number)
+    public GetRoot(rootId: string)
     {
-        return this.roots.find(x => x.id === rootId)!;
+        return this.roots[rootId]!;
     }
 
-    public GetWord(wordId: number)
+    public GetWord(wordId: string)
     {
-        return this.words.find(x => x.id === wordId)!;
+        return this.words[wordId]!;
     }
 
     public MapDialectKey(dialectKey: string)
@@ -113,8 +130,8 @@ export class DBBuilder
     {
         const finalDB: OpenArabDictDocument = {
             dialects: this.dialects,
-            roots: this.roots,
-            words: this.words,
+            roots: ObjectExtensions.Values(this.roots).NotUndefined().ToArray(),
+            words: ObjectExtensions.Values(this.words).NotUndefined().ToArray(),
             wordRelations: this.relations
         };
         //const stringified = JSON.stringify(finalDB, undefined, 2);
@@ -123,10 +140,41 @@ export class DBBuilder
         await fs.promises.writeFile(path, stringified, "utf-8");
     }
 
+    //Private methods
+    private GenerateRootId(radicals: string)
+    {
+        const vocalized = ParseVocalizedText(radicals);
+        return Buckwalter.ToString(vocalized);
+    }
+
+    private GenerateWordId(word: OpenArabDictWord)
+    {
+        function ShortType()
+        {
+            switch(word.type)
+            {
+                case OpenArabDictWordType.Adjective:
+                    return "a";
+                case OpenArabDictWordType.Noun:
+                    return "n";
+                case OpenArabDictWordType.Preposition:
+                    return "p";
+                case OpenArabDictWordType.Verb:
+                    const stem = (word.stemParameters === undefined) ? "" : word.stemParameters;
+                    return "v" + word.dialectId + stem;
+            }
+            return "";
+        }
+
+        const vocalized = ParseVocalizedText(word.text);
+
+        return ShortType() + Buckwalter.ToString(vocalized);
+    }
+
     //State
     private dialectMap: Dictionary<number>;
     private dialects: OpenArabDictDialect[];
     private relations: OpenArabDictWordRelation[];
-    private roots: OpenArabDictRoot[];
-    private words: OpenArabDictWord[];
+    private roots: Dictionary<OpenArabDictRoot>;
+    private words: Dictionary<OpenArabDictWord>;
 }

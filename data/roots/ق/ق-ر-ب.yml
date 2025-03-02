@@ -19,6 +19,23 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: uu
+      derived:
+        - text: قَرِيب
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=896
+              text:
+                - near (in place and time), nearby, close at hand
+
+    - type: verb
+      dialect: msa
       form: 2
       translations:
         - dialect: msa

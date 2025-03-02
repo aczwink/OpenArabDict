@@ -49,3 +49,8 @@ root:
                   source: free-text #https://en.wiktionary.org/wiki/digital
                   text:
                     - digital
+              derived:
+                - text: رَقْمِيَّة
+                  derivation: feminine
+                  type: adjective
+                  gender: female

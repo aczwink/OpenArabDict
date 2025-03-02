@@ -22,14 +22,6 @@ root:
       form: 2
       translations: []
       derived:
-        - text: بَحْرِيَّة
-          derivation: meaning-related
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - marine, navy
         - text: بَحْر
           derivation: meaning-related
           type: noun
@@ -45,3 +37,26 @@ root:
               type: noun
               gender: male
               translations: []
+            - text: بَحْرِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=67
+                  text:
+                    - maritime
+                    - naval
+              derived:
+                - text: بَحْرِيَّة
+                  derivation: feminine
+                  type: noun
+                  gender: female
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      url: http://ejtaal.net/aa/#hw4=67
+                      text:
+                        - marine
+                        - navy

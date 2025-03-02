@@ -84,9 +84,29 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=891
+              text:
+                - sending forward, sending off, dispatching, etc., see II
+            - dialect: msa
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D8%AA%D9%82%D8%AF%D9%8A%D9%85
               text:
                 - introduction
+
+    - type: verb
+      dialect: msa
+      form: 5
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              text:
+                - advancement, progression, progress
+
     - text: قَدَم
       type: noun
       gender: female

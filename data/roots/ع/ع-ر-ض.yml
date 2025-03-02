@@ -54,3 +54,39 @@ root:
           source: hw4-free-text
           text:
             - to face (ل s.th., e.g., a problem)
+
+    - type: verb
+      dialect: msa
+      form: 8
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=718
+          text:
+            - to raise an objection, make objections, object (على to), veto (على s.th.), remonstrate, protest (على against)
+            - to resist, oppose (على s.o., s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=720
+              text:
+                - resistance, opposition, objection, exception, counterargument, counterassertion, counterblast, riposte, rebuttal, rejoinder, expostulation, remonstrance, protest
+
+    - text: عَرَض
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=719
+          text:
+            - symptom, manifestation of disease
+      derived:
+        - text: أَعْرَاض
+          derivation: plural
+          type: noun
+          gender: male

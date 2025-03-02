@@ -25,3 +25,13 @@ root:
           source: hw4-free-text
           text:
             - to be prepared, be in readiness, be ready, stand ready (ل for)
+
+    - text: هَيْئَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1234
+          text:
+            - board, commision, committee

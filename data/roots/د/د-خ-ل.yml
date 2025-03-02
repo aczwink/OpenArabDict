@@ -24,6 +24,25 @@ root:
         parameters: au
       translations: []
       derived:
+        - text: دُخُول
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=329
+              text:
+                - entry, entrance, admission
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=330
+              text:
+                - inner, inward, inside, interior, intenral
         - text: دَخيل
           derivation: meaning-related
           type: adjective
@@ -34,6 +53,7 @@ root:
                 - |-
                   1. please! I beg you!
                   2. to express admiration
+
     - type: verb
       dialect: msa
       form: 4

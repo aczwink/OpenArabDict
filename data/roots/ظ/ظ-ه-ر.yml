@@ -45,6 +45,17 @@ root:
               source: hw4-free-text
               text:
                 - demonstration
+
+    - type: verb
+      dialect: msa
+      form: 4
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=695
+          text:
+            - to make visible, make apparent, show, demonstrate, present, produce, bring to light, expose, disclose, divulge, reveal, manifest, announce, proclaim, make known, expound, set forth (ه s.th.)
+
     - type: verb
       dialect: msa
       form: 6

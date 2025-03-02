@@ -30,6 +30,15 @@ root:
           gender: male
           translations: []
           derived:
+            - text: فَوْرَ
+              derivation: extension
+              type: preposition
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=869
+                  text:
+                    - immediately after
             - text: فَوْرِيّ
               derivation: nisba
               type: adjective

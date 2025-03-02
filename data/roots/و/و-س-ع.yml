@@ -30,8 +30,11 @@ root:
             - dialect: msa
               source: hw4
               url: http://ejtaal.net/aa/#hw4=1266
+              examples:
+                - text: واسع الانتشار
+                  translation: widespread
               text:
-                - واسع الانتشار widespread
+                - wide
 
 
     - type: verb

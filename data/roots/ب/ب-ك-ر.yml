@@ -55,3 +55,8 @@ root:
               url: http://ejtaal.net/aa/#hw4=99
               text:
                 - novelty, innovation
+          derived:
+            - text: اِبْتِكَارَات
+              derivation: plural
+              type: noun
+              gender: male

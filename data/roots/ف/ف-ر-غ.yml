@@ -37,3 +37,8 @@ root:
               source: hw4-free-text
               text:
                 - void, vacuity, vacancy, vacuum, empty space
+          derived:
+            - text: فَرَاغَات
+              derivation: plural
+              type: noun
+              gender: male

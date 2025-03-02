@@ -19,6 +19,20 @@ root:
   words:
     - type: verb
       dialect: msa
+      form: 2
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1210
+              text:
+                - threat, menace
+
+    - type: verb
+      dialect: msa
       form: 7
       translations:
         - dialect: msa

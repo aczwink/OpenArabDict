@@ -28,15 +28,23 @@ export interface OpenArabDictDialect
 
 export interface OpenArabDictRoot
 {
-    id: number;
+    id: string;
     radicals: string;
     //When for a defective root ending in waw, also an equivalent root with ya exists. Same for hollow
     ya?: boolean;
 }
 
+interface TextWithTranslation
+{
+    text: string;
+    translation: string;
+}
+
 export interface OpenArabDictTranslationEntry
 {
     dialectId: number;
+    contextual?: TextWithTranslation[];
+    examples?: TextWithTranslation[];
     complete?: true;
     text: string[];
     url?: string;
@@ -63,7 +71,7 @@ export enum OpenArabDictWordType
 
 interface OpenArabDictWordBase
 {
-    id: number;
+    id: string;
     text: string;
     translations: OpenArabDictTranslationEntry[];
 }
@@ -78,7 +86,7 @@ export enum OpenArabDictWordParentType
 interface OpenArabDictWordRootParent
 {
     type: OpenArabDictWordParentType.Root;
-    rootId: number;
+    rootId: string;
 }
 
 export enum OpenArabDictVerbDerivationType
@@ -94,7 +102,7 @@ export interface OpenArabDictWordVerbParent
 {
     type: OpenArabDictWordParentType.Verb;
     derivation: OpenArabDictVerbDerivationType;
-    verbId: number;
+    verbId: string;
 }
 
 export enum OpenArabDictNonVerbDerivationType
@@ -122,7 +130,7 @@ export enum OpenArabDictNonVerbDerivationType
 export interface OpenArabDictOtherWordParent
 {
     type: OpenArabDictWordParentType.NonVerbWord;
-    wordId: number;
+    wordId: string;
     relationType: OpenArabDictNonVerbDerivationType;
 }
 
@@ -145,7 +153,7 @@ export interface OpenArabDictVerb extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Verb;
     parent: OpenArabDictWordParent;
-    rootId: number;
+    rootId: string;
     dialectId: number;
     stem: number;
     soundOverride?: boolean;
@@ -162,8 +170,8 @@ export enum OpenArabDictWordRelationshipType
 
 export interface OpenArabDictWordRelation
 {
-    word1Id: number;
-    word2Id: number;
+    word1Id: string;
+    word2Id: string;
     relationship: OpenArabDictWordRelationshipType;
 }
 

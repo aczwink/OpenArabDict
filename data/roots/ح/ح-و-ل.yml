@@ -60,7 +60,21 @@ root:
               derivation: plural
               type: noun
               gender: male
-              translations: []
+            - text: حَالِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              derived:
+                - text: حَالِيًّا
+                  derivation: adverbial-accusative
+                  type: adverb
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      url: http://ejtaal.net/aa/#hw4=266
+                      text:
+                        - at present, actually
+
     - type: verb
       dialect: msa
       form: 2

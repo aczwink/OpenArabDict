@@ -28,8 +28,19 @@ root:
           text:
             - to drink (ه s.th.)
       derived:
-        - text: مَشْرُوب
-          derivation: passive-participle
+        - text: شُرْب
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=553
+              text:
+                - drinking, drink
+                - absoption
+        - derivation: passive-participle
           type: noun
           gender: male
           translations:

@@ -32,3 +32,14 @@ root:
 
 
               أَدَّى السلام to greet, salute
+      derived:
+        - text: أَدَاء
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=153
+              text:
+                - pursuit, performance, execution, discharge (of a duty), realization, effectuation, accomplishment (of a task)

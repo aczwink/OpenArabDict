@@ -51,3 +51,13 @@ root:
                   biography
 
                   سيرة ذاتية autobiography
+        - text: سَيَّارَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=535
+              text:
+                - automobile, car

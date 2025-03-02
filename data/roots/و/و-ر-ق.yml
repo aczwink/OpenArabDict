@@ -43,12 +43,17 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: free-text
+              url: https://en.wiktionary.org/wiki/paper
               text:
-                - |-
-                  made of paper
-
-                  نقود ورقية paper money
+                - made of paper
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=1258
+              examples:
+                - text: نقود ورقية
+                  translation: paper money
+              text: []
           derived:
             - text: وَرَقِيَّة
               derivation: feminine

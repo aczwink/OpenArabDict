@@ -45,3 +45,40 @@ root:
           type: noun
           gender: female
           translations: []
+        - text: دَوْلِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=362
+              text:
+                - state (adj.)
+                - international
+        - text: دُوَلِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=362
+              text:
+                - international
+          derived:
+            - text: دُوَلِيَّة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  complete: true
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=362
+                  text:
+                    - internationalality
+                    - internationalism
+                    - the International

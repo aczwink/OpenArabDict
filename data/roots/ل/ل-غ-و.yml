@@ -62,4 +62,14 @@ root:
               derivation: feminine
               type: adjective
               gender: female
-              translations: []
+              derived:
+                - text: لُغَوِيَّات
+                  derivation: plural
+                  type: noun
+                  gender: female
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      url: http://ejtaal.net/aa/#hw4=1034
+                      text:
+                        - linguistic matters, philologica

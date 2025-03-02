@@ -24,6 +24,15 @@ root:
         parameters: au
       translations: []
       derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=123
+              text:
+                - merchant, trader, businessman, dealer, tradesman
         - text: تِجَارَة
           derivation: meaning-related
           type: noun

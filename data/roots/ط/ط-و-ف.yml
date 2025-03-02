@@ -35,12 +35,20 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=685
               text:
-                - ملوك الطوائف princelings, petty kings
+                - religious minority
           derived:
             - text: طَوَائِف
               derivation: plural
               type: noun
               gender: female
-              translations: []
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=685
+                  contextual:
+                    - text: ملوك الطوائف
+                      translation: princelings, petty kings
+                  text: []

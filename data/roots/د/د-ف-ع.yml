@@ -33,3 +33,19 @@ root:
               source: hw4-free-text
               text:
                 - payment
+
+    - type: verb
+      dialect: msa
+      form: 3
+      translations: []
+      derived:
+        - text: دِفَاع
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=343
+              text:
+                - defense (عن of s.th., of s.o., also jur.)

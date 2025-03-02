@@ -169,21 +169,6 @@ words:
         text:
           - when
 
-  - text: هٰذَا
-    type: pronoun
-    gender: male
-    translations:
-      - dialect: msa
-        source: hw4
-        url: http://ejtaal.net/aa/#hw4=1213
-        text:
-          - this one, this
-    derived:
-      - text: هٰؤُلَاءِ
-        derivation: plural
-        type: pronoun
-        gender: male
-
   - text: كَهْف
     type: noun
     gender: male
@@ -734,20 +719,7 @@ words:
           - |-
             1. under
             2. below, beneath, underneath
-  - text: فِي
-    type: preposition
-    translations: []
-    derived:
-      - text: فِيمَا
-        derivation: extension
-        type: conjunction
-        translations:
-          - dialect: msa
-            source: hw4-free-text
-            text:
-              - |-
-                1. while
-                2. in that, as
+
   - text: سَنَة
     type: noun
     gender: female
@@ -1107,13 +1079,7 @@ words:
             source: hw4-free-text
             text:
               - (intensified) what?
-  - text: لٰكِنْ
-    type: conjunction
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - however, yet, but
+  
   - text: شُبَاط
     type: noun
     gender: male

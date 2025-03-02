@@ -62,3 +62,17 @@ root:
           source: hw4-free-text
           text:
             - to change
+
+    - type: verb
+      dialect: msa
+      form: 6
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=72
+              text:
+                - (mutual) exchange

@@ -23,7 +23,7 @@ root:
         stem: 1
         parameters: uu
       derived:
-        - text: سهولة
+        - text: سُهُولَة
           derivation: verbal-noun
           type: noun
           gender: female
@@ -63,3 +63,18 @@ root:
                   url: http://ejtaal.net/aa/#hw4=523
                   text:
                     - easier
+
+    - type: verb
+      dialect: msa
+      form: 2
+      derived:
+        - text: تَسْهِيل
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=523
+              text:
+                - facilitation, easement

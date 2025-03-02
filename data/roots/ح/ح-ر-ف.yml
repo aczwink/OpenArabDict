@@ -20,7 +20,12 @@ root:
     - text: حَرْف
       type: noun
       gender: male
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=211
+          text:
+            - letter
       derived:
         - text: حَرْفِيّ
           derivation: nisba

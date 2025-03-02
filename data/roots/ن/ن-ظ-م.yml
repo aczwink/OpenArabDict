@@ -26,8 +26,7 @@ root:
           text:
             - to organize (ه s.th.)
       derived:
-        - text: مُنَظِّم
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
           translations:
@@ -41,3 +40,35 @@ root:
               type: noun
               gender: male
               translations: []
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          derived:
+            - text: مُنَظَّمَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1161
+                  text:
+                    - organization
+              derived:
+                - text: مُنَظَّمَات
+                  derivation: plural
+                  type: noun
+                  gender: female
+
+    - text: نِظَام
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1160
+          text:
+            - proper arrangement, regularity
+            - order
+            - system
+            - ruling system, regime (pol.)

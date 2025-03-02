@@ -30,21 +30,21 @@ root:
               s.th.), look, gaze, glance, (ه or إلى at), watch, observe, notice
               (ه or إلى s.o., s.th.), pay attention (ه or إلى to)
       derived:
-        - text: نَظْرَة
-          derivation: meaning-related
+        - text: نَظَر
+          derivation: verbal-noun
           type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - look, glance
+          gender: male
           derived:
-            - text: نَظَرَات
-              derivation: plural
-              type: noun
-              gender: female
-              translations: []
+            - text: نَظَرًا إلى
+              alias: نَظَرًا لِ
+              derivation: adverbial-accusative
+              type: adverb
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1157
+                  text:
+                    - in view of, with a view to, in regard to, with respect to, in consideration of, on the basis of, due to, becase of, for
         - text: نَاظِر
           derivation: active-participle
           type: noun
@@ -60,6 +60,22 @@ root:
               type: noun
               gender: male
               translations: []
+        - text: نَظْرَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - look, glance
+          derived:
+            - text: نَظَرَات
+              derivation: plural
+              type: noun
+              gender: female
+              translations: []
+
     - type: verb
       dialect: msa
       form: 3

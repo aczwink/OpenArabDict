@@ -28,6 +28,7 @@ import { ParseVocalizedText, VocalizedWordTostring } from "openarabicconjugation
 import { OpenArabDictNonVerbDerivationType, OpenArabDictVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
 import { DialectType } from "openarabicconjugation/dist/Dialects";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
+import { EqualsAny } from "acts-util-core";
 
 interface DialectDefinition
 {
@@ -49,6 +50,8 @@ interface ParameterizedStemData
 interface TranslationDefinition
 {
     dialect: string;
+    contextual?: { text: string; translation: string; }[];
+    examples?: { text: string; translation: string; }[];
     complete?: true;
     source: "hw4-free-text";
     text: string[];
@@ -119,17 +122,17 @@ interface Catalog
 interface RootParent
 {
     type: "root";
-    rootId: number;
+    rootId: string;
 }
 interface VerbParent
 {
     type: "verb";
-    verbId: number;
+    verbId: string;
 }
 interface WordWordParent
 {
     type: "word";
-    wordId: number;
+    wordId: string;
 }
 type WordParent = RootParent | VerbParent | WordWordParent;
 
@@ -266,9 +269,10 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
     const conjugator = new Conjugator;
     const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
 
+    const parsed = ParseVocalizedText(word.text ?? "");
     for (const possible of generated)
     {
-        if(VocalizedWordTostring(possible) === word.text)
+        if(EqualsAny(possible, parsed))
             return;
     }
     //throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
@@ -386,6 +390,8 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
     const translations = word.translations?.map(x => ({
         dialectId: builder.MapDialectKey(x.dialect)!,
         complete: x.complete,
+        contextual: x.contextual,
+        examples: x.examples,
         text: x.text,
         url: x.url
     })) ?? [];
@@ -419,10 +425,13 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
             }
             const text = generated ?? g.text;
             if(text === undefined)
+            {
+                console.log(g);
                 throw new Error("Missing text for word!");
+            }
 
             const wordId = builder.AddWord({
-                id: 0,
+                id: "",
                 type: t,
                 isMale: g.gender === "male",
                 text,
@@ -461,7 +470,7 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
         {
             const o = word as OtherWordDefinition;
             const wordId = builder.AddWord({
-                id: 0,
+                id: "",
                 type: t,
                 text: o.text,
                 translations,
@@ -541,7 +550,7 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
             const conjugatedWord = VocalizedWordTostring(vocalized);
 
             const verbId = builder.AddWord({
-                id: 0,
+                id: "",
                 type: OpenArabDictWordType.Verb,
                 dialectId,
                 rootId: root!.id,

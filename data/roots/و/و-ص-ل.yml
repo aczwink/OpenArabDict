@@ -78,6 +78,17 @@ root:
           source: hw4-free-text
           text:
             - to continue (في or ه s.th.), proceed (في or ه in or with)
+
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1270
+          text:
+            - to attain (إلى to), arrive (إلى at), reach (إلى s.th.), come by s.th. (إلى)
+
     - type: verb
       dialect: msa
       form: 6

@@ -33,6 +33,18 @@ root:
               source: hw4-free-text
               text:
                 - strength
+          derived:
+            - text: قُوَّات
+              derivation: plural
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  complete: true
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=952
+                  text:
+                    - armed forces, troops
         - text: قَوِيّ
           derivation: meaning-related
           type: adjective

@@ -22,7 +22,7 @@ root:
       form: 5
       translations: []
       derived:
-        - text: وَسِيلَة⁩
+        - text: وَسِيلَة
           derivation: meaning-related
           type: noun
           gender: female
@@ -38,7 +38,14 @@ root:
               gender: female
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1266
                   text:
-                    - وَسَائِل تَوَاصُل اِجْتِمَاعِيّ social media (colloquially
-                      also سُوشَل مِيدْيَا)
+                    - means, medium
+                - dialect: msa
+                  source: free-text
+                  url: https://en.wiktionary.org/wiki/social_media
+                  contextual:
+                    - text: وَسَائِل تَوَاصُل اِجْتِمَاعِيّ
+                      translation: social media
+                  text: []

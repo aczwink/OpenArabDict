@@ -24,6 +24,16 @@ words:
         text:
           - (interrogative and exclamatory particle with foll. noun in acc.) how much? how many? how much!
 
+  - text: لَنْ
+    type: adverb
+    translations:
+      - dialect: msa
+        complete: true
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1045
+        text:
+          - (with foll. subj.) not (referring to the future)
+
   - text: هُنَا
     alias: هٰهُنَا
     type: adverb

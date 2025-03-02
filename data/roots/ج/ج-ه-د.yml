@@ -73,6 +73,16 @@ root:
               url: http://ejtaal.net/aa/#hw4=182
               text:
                 - strain, stress, effort, exertion
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=182
+              text:
+                - strenuous, exacting, trying, grueling
 
 
     - type: verb

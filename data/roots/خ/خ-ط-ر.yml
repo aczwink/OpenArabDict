@@ -51,6 +51,7 @@ root:
           source: hw4-free-text
           text:
             - danger, peril, menace (على to)
+
     - text: خَطِير
       type: adjective
       gender: male
@@ -60,3 +61,14 @@ root:
           url: http://ejtaal.net/aa/#hw4=299
           text:
             - dangerous, perilous, risky, hazardous
+      derived:
+        - text: أَخْطَر
+          derivation: elative-degree
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=300
+              text:
+                - more dangerous, riskier

@@ -25,3 +25,8 @@ root:
           source: hw4-free-text
           text:
             - arm, weapon
+      derived:
+        - text: أَسْلِحَة
+          derivation: plural
+          type: noun
+          gender: male

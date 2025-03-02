@@ -71,15 +71,24 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=657
               text:
-                - >-
-                  natural disposition, temper, nature, character (of s.o. or
+                - natural disposition, temper, nature, character (of s.o. or
                   s.th.)
-
-
-                  طبعا or بالطبع by nature, by natural disposition; naturally!
-                  of course! certainly! to be sure!
+          derived:
+            - text: طَبْعًا
+              alias: بالطبع
+              derivation: adverbial-accusative
+              type: adverb
+              translations:
+                - dialect: msa
+                  complete: true
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=657
+                  text:
+                    - by nature, by natural disposition
+                    - naturally! of course! certainly! to be sure!
         - text: طِبَاعَة
           derivation: meaning-related
           type: noun

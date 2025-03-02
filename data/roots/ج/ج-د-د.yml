@@ -37,6 +37,11 @@ root:
               source: hw4-free-text
               text:
                 - new, recent
+          derived:
+            - text: جَدِيدَة
+              derivation: feminine
+              type: adjective
+              gender: female
     
     - text: جِدّ
       type: noun

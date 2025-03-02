@@ -21,6 +21,58 @@ root:
       dialect: msa
       form:
         stem: 1
+        parameters: au
+      derived:
+        - text: حَدّ
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=200
+              text:
+                - (cutting) edge (of a knife, of a sword)
+                - edge, border, brink, brim, verge
+                - border (of a country), boundary, borderline
+          derived:
+            - text: حُدُود
+              derivation: plural
+              type: noun
+              gender: male
+              derived:
+                - text: حُدُودِيّ
+                  derivation: nisba
+                  type: adjective
+                  gender: male
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      url: http://ejtaal.net/aa/#hw4=201
+                      text:
+                        - located on the border
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - sharp (also, fig., of a glance), keen (mind)
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=201
+              text:
+                - delimited, determinate, fixed, definite, definitive
+
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -33,37 +85,7 @@ root:
           type: noun
           gender: male
           translations: []
-        - text: حَادّ
-          derivation: active-participle
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - sharp (also, fig., of a glance), keen (mind)
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: au
-      translations: []
-      derived:
-        - text: حَدّ
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - edge (of a knife, of a sword)
-          derived:
-            - text: حُدُود
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
+
     - type: verb
       dialect: msa
       form: 2

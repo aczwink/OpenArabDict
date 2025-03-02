@@ -19,12 +19,25 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=983
+          text:
+            - to reveal, disclose, uncover, expose, bare (ه or عن s.th.)
+
+    - type: verb
+      dialect: msa
       form: 7
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to be removed, be lifted, be raised (veil)
+
     - type: verb
       dialect: msa
       form: 8

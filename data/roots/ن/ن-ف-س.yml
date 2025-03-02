@@ -25,6 +25,24 @@ root:
           source: hw4-free-text
           text:
             - to compete, vie (عن ه with s.o. in)
+      derived:
+        - text: مُنَافَسَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1169
+              text:
+                - competition (also com.)
+                - rivalry
+          derived:
+            - text: مُنَافَسَات
+              derivation: plural
+              type: noun
+              gender: female
+
     - text: نَفْس
       type: noun
       gender: female

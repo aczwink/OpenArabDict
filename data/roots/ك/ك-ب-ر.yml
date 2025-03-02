@@ -34,6 +34,10 @@ root:
               text:
                 - great, big, large, sizable
           derived:
+            - text: كَبِيرَة
+              derivation: feminine
+              type: adjective
+              gender: female
             - text: أَكْبَر
               derivation: elative-degree
               type: adjective
@@ -43,6 +47,12 @@ root:
                   source: hw4-free-text
                   text:
                     - greater, bigger, larger
+              derived:
+                - text: كُبْرَى
+                  derivation: feminine
+                  type: adjective
+                  gender: female
+                  
     - type: verb
       dialect: msa
       form: 2

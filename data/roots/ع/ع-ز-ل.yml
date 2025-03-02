@@ -28,6 +28,20 @@ root:
           text:
             - to isolate
       derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=728
+              text:
+                - insulating
+          derived:
+            - text: عَازِلَة
+              derivation: feminine
+              type: adjective
+              gender: female
         - text: عَوازِل
           derivation: meaning-related
           type: noun
@@ -36,6 +50,7 @@ root:
               source: hw4-free-text
               text:
                 - pl. of عازلة, i.e. insulator
+
     - type: verb
       dialect: msa
       form: 7
@@ -45,3 +60,13 @@ root:
           text:
             - to be or become isolated, cut off, separated, segregated, detached
               (عن from)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=727
+              text:
+                - isolation

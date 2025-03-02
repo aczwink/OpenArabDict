@@ -24,8 +24,7 @@ root:
         parameters: au
       translations: []
       derived:
-        - text: حَاسِب
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
           translations:
@@ -33,6 +32,17 @@ root:
               source: hw4-free-text
               text:
                 - counter, reckoner, arithmetician, calculator, computer
+        - text: حَاسُوب
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D8%AD%D8%A7%D8%B3%D9%88%D8%A8
+              text:
+                - computer
+
     - type: verb
       dialect: msa
       form:

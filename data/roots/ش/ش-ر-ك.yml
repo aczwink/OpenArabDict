@@ -33,6 +33,12 @@ root:
               source: hw4-free-text
               text:
                 - company, corporation (com.)
+          derived:
+            - text: شَرِكَات
+              derivation: plural
+              type: noun
+              gender: female
+              
     - type: verb
       dialect: msa
       form: 3

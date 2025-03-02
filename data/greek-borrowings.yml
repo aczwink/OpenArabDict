@@ -15,6 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: أُسْطُول
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=33
+        text:
+          - fleet
+          - squadron
+
   - text: بِطَاقَة
     type: noun
     gender: female

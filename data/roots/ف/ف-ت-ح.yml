@@ -45,13 +45,43 @@ root:
           source: hw4-free-text
           text:
             - to open
+
+    - type: verb
+      dialect: msa
+      form: 5
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=825
+              text:
+                - openness, receptivity (spiritual, mental)
+
+    - type: verb
+      dialect: msa
+      form: 7
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=825
+              text:
+                - openness, receptivity (spiritual, mental)
+
+
     - type: verb
       dialect: msa
       form: 8
       translations: []
       derived:
-        - text: اِفْتِتَاح
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:

@@ -24,6 +24,51 @@ words:
         text:
           - to, toward
 
+  - text: بِ
+    type: preposition
+    derived:
+      - text: بِمَا أَنَّ
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            complete: true
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=62
+            text:
+              - in view of the fact that
+              - since, as, inasmuch as, because
+      - text: بِمَا فِيهِ
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            complete: true
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=62
+            text:
+              - including
+
+  - text: فِي
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=872
+        text:
+          - in
+    derived:
+      - text: فِيمَا
+        derivation: extension
+        type: conjunction
+        translations:
+          - dialect: msa
+            source: hw4-free-text
+            text:
+              - |-
+                1. while
+                2. in that, as
+
   - text: مَعَ
     type: preposition
     translations:
@@ -34,6 +79,18 @@ words:
           - with
           - مَعَ ذٰلِكَ or مع هذا in spite of it, nevertheless, notwithstanding,
             still
+    derived:
+      - text: مَعًا
+        derivation: adverbial-accusative
+        type: adverb
+        translations:
+          - dialect: msa
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=1086
+            text:
+              - together
+              - at the same time, simultaneously
+              - with one another
 
   - text: مِنْ
     type: preposition

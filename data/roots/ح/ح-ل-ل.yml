@@ -50,6 +50,56 @@ root:
               source: hw4-free-text
               text:
                 - solution (of a problem, of a puzzle, etc.)
+
+    - type: verb
+      dialect: msa
+      form: 8
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=245
+          text:
+            - to occupy (mil., ه a territory)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=246
+              contextual:
+                - text: جيوش الاحتلال
+                  translation: occupation forces
+              text:
+                - occupation (mil.)
+        # - derivation: active-participle
+        #   type: adjective
+        #   gender: male
+        #   translations:
+        #     - dialect: msa
+        #       complete: true
+        #       source: hw4
+        #       url: http://ejtaal.net/aa/#hw4=247
+        #       text:
+        #         - occupying (mil.)
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              complete: true
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=247
+              contextual:
+                - text: جيوش محتلة
+                  translation: occupation forces
+                - text: منطقة محتلة
+                  translation: occupation territory
+              text:
+                - occupied (zone; mil.)
+
     - text: مَحَلّ
       type: noun
       gender: male
