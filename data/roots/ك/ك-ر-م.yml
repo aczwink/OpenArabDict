@@ -42,6 +42,16 @@ root:
               text:
                 - high-mindedness, noble-mindedness, nobleheartedness,
                   generosity, magnanimity
+        - text: كَرَامَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=975
+              text:
+                - nobility
         - text: كَرِيم
           derivation: meaning-related
           type: adjective

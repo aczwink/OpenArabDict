@@ -27,3 +27,18 @@ root:
           source: hw4-free-text
           text:
             - to bewitch, charm, enchant, infatuate, fascinate (ه، ه s.o., s.th.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=479
+              text:
+                - charming, enchanting
+          derived:
+            - text: سَاحِرَة
+              derivation: feminine
+              type: adjective
+              gender: female

@@ -63,7 +63,28 @@ root:
               derivation: plural
               type: noun
               gender: female
-              translations: []
+            - text: حَقِيقِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=238
+                  text:
+                    - real, true
+                    - actual
+                    - proper, intrinsic, essential
+                    - genuine
+                    - authentic
+                    - positive
+              derived:
+                - text: حَقِيقِيَّة
+                  derivation: feminine
+                  type: adjective
+                  gender: female
+
     - type: verb
       dialect: msa
       form: 2

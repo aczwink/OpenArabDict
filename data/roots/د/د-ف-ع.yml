@@ -22,7 +22,12 @@ root:
       form:
         stem: 1
         parameters: aa
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=342
+          text:
+            - to push
       derived:
         - text: دَفْع
           derivation: verbal-noun

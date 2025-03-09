@@ -47,3 +47,8 @@ root:
           url: http://ejtaal.net/aa/#hw4=936
           text:
             - top, summit, peak, acme, apex
+      derived:
+        - text: قِمَم
+          derivation: plural
+          type: noun
+          gender: female

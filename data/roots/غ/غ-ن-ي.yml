@@ -41,6 +41,7 @@ root:
           source: hw4-free-text
           text:
             - to sing (ب or هs.th., ه ه to s.o. s.th.), chant (ب or ه s.th.)
+
     - type: verb
       dialect: msa
       form: 10
@@ -51,6 +52,17 @@ root:
             - not to need, be able to spare (عن s.o., s.th.), be able to
               dispense (عن with), manage, be able to do (عن without), have no
               need (عن for), be in no need (عن of)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=817
+              text:
+                - renunciation
+
     - text: مَغْنًى
       type: noun
       gender: male

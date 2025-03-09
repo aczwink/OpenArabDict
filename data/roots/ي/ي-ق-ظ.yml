@@ -25,3 +25,7 @@ root:
           source: hw4-free-text
           text:
             - to wake up, awaken, be awakened, be roused from sleep (على by)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male

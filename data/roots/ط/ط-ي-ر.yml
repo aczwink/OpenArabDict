@@ -43,8 +43,29 @@ root:
               type: noun
               gender: male
               translations: []
-        - text: طَائِر
-          derivation: active-participle
+        - text: طَيَّار
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=690
+              text:
+                - flier, aviator, pilot
+          derived:
+            - text: طَيَّارَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=690
+                  text:
+                    - aviatrix, woman pilot
+                    - airplane, aircraft
+        - derivation: active-participle
           type: noun
           gender: male
           translations:

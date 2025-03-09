@@ -89,7 +89,17 @@ root:
           derivation: plural
           type: noun
           gender: male
-          translations: []
+        - text: رُوحِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=436
+              text:
+                - spirituous
+                - spiritual
     - text: رَاحَة
       type: noun
       gender: female

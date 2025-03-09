@@ -49,3 +49,15 @@ root:
               source: hw4-free-text
               text:
                 - woman companion
+
+    - text: رِفْقَة
+      alias: رُفْقَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=420
+          text:
+            - group, troop, body (of people)
+            - company

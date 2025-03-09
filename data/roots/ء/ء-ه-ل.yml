@@ -30,9 +30,11 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=54
               text:
                 - relatives, folks, family
+                - inhabitants
           derived:
             - text: أَهَالٍ
               derivation: plural

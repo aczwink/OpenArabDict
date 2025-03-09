@@ -24,7 +24,7 @@ root:
         parameters: au
       translations: []
       derived:
-        - text: دَرَج⁩
+        - text: دَرَج
           derivation: meaning-related
           type: noun
           gender: male
@@ -35,6 +35,26 @@ root:
                 - |-
                   1. way, route, course
                   2. flight of steps, stairs, staircase
+          derived:
+            - text: دَرَجَة
+              derivation: feminine
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=332
+                  text:
+                    - degree (math., geogr.; of temperature)
+                  examples:
+                    - text: درجة الحرارة
+                      translation: (degree of) temperature
+              derived:
+                - text: دَرَجَات
+                  derivation: plural
+                  type: noun
+                  gender: female
+
     - type: verb
       dialect: msa
       form: 2

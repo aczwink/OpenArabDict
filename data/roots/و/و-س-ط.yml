@@ -21,6 +21,7 @@ root:
       dialect: msa
       form: 2
       translations: []
+
     - text: وَسَط
       type: noun
       gender: male
@@ -29,6 +30,17 @@ root:
           source: hw4-free-text
           text:
             - middle
+      derived:
+        - text: وَسْطَ
+          derivation: extension
+          type: preposition
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1263
+              text:
+                - in the middle, heart, or center of, in the midst of, amid, among
+
     - text: وَسِيط
       type: adjective
       gender: male

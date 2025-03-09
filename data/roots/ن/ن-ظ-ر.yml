@@ -45,6 +45,22 @@ root:
                   url: http://ejtaal.net/aa/#hw4=1157
                   text:
                     - in view of, with a view to, in regard to, with respect to, in consideration of, on the basis of, due to, becase of, for
+        - text: مَنْظَر
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1159
+              text:
+                - sight
+                - view, panorama
+          derived:
+            - text: مَنَاظِر
+              derivation: plural
+              type: noun
+              gender: male
         - text: نَاظِر
           derivation: active-participle
           type: noun

@@ -16,4 +16,13 @@
 
 root:
   radicals: س-م-و
-  words: []
+  words:
+    - text: سَمَاء
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=517
+          text:
+            - heaven, sky

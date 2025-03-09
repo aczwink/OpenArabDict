@@ -60,3 +60,13 @@ root:
           text:
             - to employ, use (ه s.th., ل for), make use, avail o.s. (ه of s.th.,
               ل for a purpose)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=280
+              text:
+                - use, utilization

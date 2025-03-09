@@ -107,6 +107,21 @@ root:
               source: hw4-free-text
               text:
                 - female active participle
+
+    - type: verb
+      dialect: msa
+      form: 10
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=709
+              text:
+                - readiness, willingness, preparedness
+
     - text: عَدَد
       type: noun
       gender: male

@@ -28,6 +28,8 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: ejtaal.net/aa/#hw4=350
               text:
+                - incorporation, insertion (في in)
                 - assimilation

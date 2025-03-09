@@ -38,8 +38,7 @@ root:
               source: hw4-free-text
               text:
                 - immunity (to a disease, also dipl.)
-        - text: مَمْنُوع
-          derivation: passive-participle
+        - derivation: passive-participle
           type: adjective
           gender: male
           translations:
@@ -47,6 +46,12 @@ root:
               source: hw4-free-text
               text:
                 - forbidden, prohibited, banned, interdicted
+          derived:
+            - text: مَمْنُوعَة
+              derivation: feminine
+              type: adjective
+              gender: female
+
         - text: مَنِيع
           derivation: meaning-related
           type: adjective

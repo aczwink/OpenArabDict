@@ -26,3 +26,8 @@ root:
           url: http://ejtaal.net/aa/#hw4=146
           text:
             - mountain
+      derived:
+        - text: جِبَال
+          derivation: plural
+          type: noun
+          gender: male

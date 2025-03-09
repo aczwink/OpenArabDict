@@ -27,13 +27,18 @@ root:
         - text: مَلْبَس
           derivation: meaning-related
           type: noun
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - |-
-                  pl. مَلَابِس
-                  for pl. also: clothing
+          gender: female
+          derived:
+            - text: مَلَابِس
+              derivation: plural
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=1017
+                  text:
+                    - clothing, clothes, costume
         - text: لِبَاس
           derivation: meaning-related
           type: noun

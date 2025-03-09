@@ -50,3 +50,17 @@ root:
           source: hw4-free-text
           text:
             - to get married (من, ب, على, ه with), marry (من, ب, على, ه s.o.)
+
+    - type: verb
+      dialect: msa
+      form: 8
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=461
+              text:
+                - "double, twofold, two- (e.h., of a railroad: two-track)"

@@ -63,6 +63,7 @@ root:
       dialect: msa
       form: 4
       translations: []
+
     - type: verb
       dialect: msa
       form: 8
@@ -73,8 +74,29 @@ root:
             - to listen, listen closely, give ear, lend one's ear (إلى or ل or
               ه, ه to s.o. or s.th.)
       derived:
-        - text: اِسْتِمَاع
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations: []
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=515
+              text:
+                - hearer, listener
+          derived:
+            - text: مُسْتَمِعُونَ
+              derivation: plural
+              type: noun
+              gender: male
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=515
+                  text:
+                    - the audience

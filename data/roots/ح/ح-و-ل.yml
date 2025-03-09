@@ -43,9 +43,13 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=265
               text:
                 - condition, state
+              contextual:
+                - text: على كل حال
+                  translation: in any case, at any rate, anyhow
           derived:
             - text: حَالَة
               derivation: feminine

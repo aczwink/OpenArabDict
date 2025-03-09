@@ -25,6 +25,7 @@ root:
           source: hw4-free-text
           text:
             - fast breaking
+            
     - text: فُطْر
       type: noun
       gender: male
@@ -33,3 +34,14 @@ root:
           source: hw4-free-text
           text:
             - (coll.; n. un.) fungi, mushrooms
+
+    - text: فَطُور
+      type: noun
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=855
+          text:
+            - breakfast

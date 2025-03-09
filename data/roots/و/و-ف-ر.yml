@@ -36,6 +36,7 @@ root:
           source: hw4
           url: http://ejtaal.net/aa/#hw4=1283
           text:
+            - to exist abundantly, be available in quantity, be plentiful, exist, be provided in full or sufficient degree
             - to be saved (money, etc., pass. of II)
       derived:
         - derivation: verbal-noun

@@ -56,6 +56,15 @@ root:
           text:
             - to hand over
       derived:
+        - text: تَسْلِيم
+          derivation: verbal-noun
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=510
+              text:
+                - handing over, turning over
         - text: تسلم إيديك
           derivation: meaning-related
           type: phrase
@@ -74,6 +83,7 @@ root:
 
                   تسلم هالديات (the word ديات is colloquial and means hands,
                   notice the flipped letters of ي and د)
+
     - type: verb
       dialect: msa
       form: 4

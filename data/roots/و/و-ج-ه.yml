@@ -45,10 +45,16 @@ root:
               source: hw4-free-text
               text:
                 - in front of, facing, opposite
+
     - type: verb
       dialect: msa
       form: 5
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=1246
+          text:
+            - to betake o.s., repair, go, wend one's way (نحو or إلى to), head (نحو or إلى for), bend one's steps (نحو or إلى toward)
       derived:
         - text: تَوَجُّه
           derivation: verbal-noun
@@ -59,6 +65,10 @@ root:
               source: hw4-free-text
               text:
                 - attention
+        - derivation: active-participle
+          type: adjective
+          gender: male
+
     - type: verb
       dialect: msa
       form: 8
@@ -78,6 +88,7 @@ root:
               source: hw4-free-text
               text:
                 - direction
+
     - text: وَاجِهَة
       type: noun
       gender: female
@@ -86,3 +97,19 @@ root:
           source: hw4-free-text
           text:
             - show window
+
+    - text: وِجْهَة
+      #alias: وُجْهَة TODO: fix this
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=1248
+          text:
+            - direction, trent, drift
+      derived:
+        - text: وِجْهَات
+          derivation: plural
+          type: noun
+          gender: female

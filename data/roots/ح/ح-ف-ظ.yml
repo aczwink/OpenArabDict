@@ -70,3 +70,18 @@ root:
           text:
             - to put away, hold, have in safekeeping (ب s.th.), take care (ب of
               s.th.)
+
+    - text: حَفِيظ
+      type: adjective
+      gender: male
+      derived:
+        - text: حَفِيظَة
+          derivation: feminine
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=234
+              text:
+                - grudge, resentment, rancor

@@ -87,7 +87,12 @@ root:
     - type: verb
       dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=321
+          text:
+            - to choose, make one's choice
       derived:
         - text: اِخْتِيَار
           derivation: verbal-noun

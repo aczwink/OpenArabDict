@@ -36,3 +36,13 @@ words:
         text:
           - card, calling card
           - ticket
+
+  - text: فُنْدُق
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=866
+        text:
+          - hotel, inn

@@ -23,6 +23,9 @@ root:
       translations:
         - dialect: msa
           source: hw4-free-text
+          contextual:
+            - text: الآخر
+              translation: the other
           text:
             - another, one more
       derived:

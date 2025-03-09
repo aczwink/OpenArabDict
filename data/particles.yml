@@ -66,6 +66,15 @@ words:
           - not
           - no! with apoc. expressing negative imperative لا تقل don't say! with indef. acc. expressing a general negation
 
+  - text: مَتَى
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1059
+        text:
+          - (interrogative) when? at what time?
+
   - text: يَا
     type: particle
     translations:

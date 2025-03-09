@@ -55,3 +55,13 @@ root:
                           url: http://ejtaal.net/aa/#hw4=503
                           text:
                             - negative sides (of s.th.)
+
+    - text: أُسْلُوب
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=503
+          text:
+            - method, way, procedure

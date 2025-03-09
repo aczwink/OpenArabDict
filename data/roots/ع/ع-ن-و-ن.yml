@@ -22,6 +22,9 @@ root:
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=774
           text:
+            - address
+            - title, heading
             - sign, token

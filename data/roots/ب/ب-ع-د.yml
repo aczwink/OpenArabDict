@@ -22,7 +22,12 @@ root:
       form:
         stem: 1
         parameters: uu
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=93
+          text:
+            - to be distant, far away, far off
       derived:
         - text: بَعِيد
           derivation: meaning-related

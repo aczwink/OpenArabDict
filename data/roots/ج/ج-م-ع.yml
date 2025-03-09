@@ -49,9 +49,24 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
-              text:
-                - الجميع all people, everybody
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=173
+              text: []
+              contextual:
+                - text: الجميع
+                  translation: all people, everybody
+          derived:
+            - text: جَمِيعًا
+              derivation: adverbial-accusative
+              type: adverb
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=173
+                  text:
+                    - in a body, altogether, one and all, all of them
+                    - entirely, wholly, totally
         - text: مَجْمُوع
           derivation: passive-participle
           type: adjective

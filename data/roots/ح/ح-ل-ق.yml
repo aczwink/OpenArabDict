@@ -45,3 +45,18 @@ root:
                     - |-
                       1. link (of a chain)
                       2. installment of a TV series
+
+    - type: verb
+      dialect: msa
+      form: 2
+      derived:
+        - text: تَحْلِيق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=249
+              text:
+                - flying, flight (of an aircraft; على and فوق over a country)

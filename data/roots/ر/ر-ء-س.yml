@@ -24,7 +24,7 @@ root:
         parameters: ai
       translations: []
       derived:
-        - text: رَأْس⁩
+        - text: رَأْس
           derivation: meaning-related
           type: noun
           gender: male
@@ -39,3 +39,17 @@ root:
                   source: hw4-free-text
                   text:
                     - capital (fin.)
+        
+        - text: رَئِيس
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=380
+              text:
+                - chief, boss
+                - principal
+                - chairman
+                - president

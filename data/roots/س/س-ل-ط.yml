@@ -17,6 +17,21 @@
 root:
   radicals: س-ل-ط
   words:
+    - text: سُلْطَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=505
+          text:
+            - authority
+      derived:
+        - text: سُلُطَات
+          derivation: plural
+          type: noun
+          gender: female
+    
     - text: سَلَطَة
       type: noun
       gender: female

@@ -28,3 +28,18 @@ root:
           text:
             - to love passionately (ه, ه s.o., s.th.), be  passionately in love
               (ه, ه with s.o., with s.th.)
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=732
+              text:
+                - lover
+          derived:
+            - text: عُشَّاق
+              derivation: plural
+              type: noun
+              gender: male

@@ -62,6 +62,10 @@ root:
           text:
             - dangerous, perilous, risky, hazardous
       derived:
+        - text: خَطِيرَة
+          derivation: feminine
+          type: adjective
+          gender: female
         - text: أَخْطَر
           derivation: elative-degree
           type: adjective

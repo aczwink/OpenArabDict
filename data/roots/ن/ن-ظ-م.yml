@@ -26,6 +26,18 @@ root:
           text:
             - to organize (ه s.th.)
       derived:
+        - text: تَنْظِيم
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1160
+              text:
+                - arrangement
+                - control, regulation
+                - organization
         - derivation: active-participle
           type: noun
           gender: male
@@ -72,3 +84,19 @@ root:
             - order
             - system
             - ruling system, regime (pol.)
+      derived:
+        - text: نِظَامِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1160
+              text:
+                - regular (army)
+          derived:
+            - text: نِظَامِيَّة
+              derivation: feminine
+              type: adjective
+              gender: female

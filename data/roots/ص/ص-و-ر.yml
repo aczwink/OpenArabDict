@@ -36,3 +36,18 @@ root:
           url: http://ejtaal.net/aa/#hw4=632
           text:
             - pass. of II
+
+    - text: صُورَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=632
+          text:
+            - image, likeness, picture
+      derived:
+        - text: صُوَر
+          derivation: plural
+          type: noun
+          gender: female

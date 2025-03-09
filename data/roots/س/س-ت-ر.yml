@@ -29,3 +29,20 @@ root:
             - |-
               1. to cover, veil (ه, ه s.o., s.th.)
               2. to shield, guard, protect (ه s.o., ه s.th., عن against or from)
+
+    - text: سِتَارَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=475
+          text:
+            - veil
+            - curtain, drape, window curtain
+            - cover, covering
+      derived:
+        - text: سَتَائِر
+          derivation: plural
+          type: noun
+          gender: female

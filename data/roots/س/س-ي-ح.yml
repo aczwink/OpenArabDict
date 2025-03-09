@@ -51,10 +51,15 @@ root:
           derived:
             - text: سِيَاحِيّ
               derivation: nisba
-              type: noun
+              type: adjective
               gender: male
               translations:
                 - dialect: msa
                   source: hw4-free-text
                   text:
                     - tourist (in compounds)
+              derived:
+                - text: سِيَاحِيَّة
+                  derivation: feminine
+                  type: noun
+                  gender: female
