@@ -36,3 +36,17 @@ root:
               source: hw4-free-text
               text:
                 - animating, refreshing, invigorating, restorative
+
+    - type: verb
+      dialect: msa
+      form: 8
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1162
+              text:
+                - animation, reanimation, resuscitation, restoration to life

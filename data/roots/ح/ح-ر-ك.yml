@@ -49,3 +49,15 @@ root:
           source: hw4-free-text
           text:
             - to start moving, get moving
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=213
+              text:
+                - movement, motion
+                - intiative
+                - start

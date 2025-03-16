@@ -53,13 +53,13 @@ root:
               source: hw4-free-text
               text:
                 - way, manner, mode
+
     - type: verb
       dialect: msa
       form: 4
       translations: []
       derived:
-        - text: مُشْكِل
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
           translations: []
@@ -69,7 +69,15 @@ root:
               type: noun
               gender: female
               translations:
-                - dialect: msa
-                  source: hw4-free-text
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=577
                   text:
                     - problem, unsolved question, issue
+                    - difficulty
+              derived:
+                - text: مُشْكِلَات
+                  derivation: plural
+                  type: noun
+                  gender: female

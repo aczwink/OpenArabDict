@@ -53,7 +53,9 @@ root:
 
     - type: verb
       dialect: msa
-      form: 8
+      form:
+        stem: 8
+        type: sound
       derived:
         - derivation: active-participle
           type: adjective

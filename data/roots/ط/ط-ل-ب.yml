@@ -29,6 +29,21 @@ root:
             - to order, demand (من ه s.th. from), call (ه for s.th., من from),
               call in (ه s.th., من from)
       derived:
+        - text: طَلَب
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=672
+              text:
+                - demand, claim, call (for), invitation (to), solicitation, wish, desire, request, entreaty
+          derived:
+            - text: طَلَبَات
+              derivation: plural
+              type: noun
+              gender: male
         - text: مَطْلُوب
           derivation: meaning-related
           type: noun

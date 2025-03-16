@@ -36,3 +36,19 @@ root:
               derivation: plural
               type: noun
               gender: male
+
+    - type: verb
+      dialect: msa
+      form: 3
+      derived:
+        - text: مُصَارَحَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=609
+              text:
+                - openness, frankness, sincerity

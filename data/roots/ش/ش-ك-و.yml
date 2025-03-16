@@ -29,6 +29,16 @@ root:
             - to complain (من or ه, ه of, about, ل or إلى to s.o., من or ه of or
               about s.th.), make a complaint
       derived:
+        - text: شَكْوَى
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=578
+              text:
+                - complaint
         - text: شَكْوَة
           derivation: meaning-related
           type: noun
@@ -37,6 +47,7 @@ root:
               source: hw4-free-text
               text:
                 - complaint
+
     - type: verb
       dialect: msa
       form: 8

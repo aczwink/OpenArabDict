@@ -74,3 +74,13 @@ root:
                   source: hw4-free-text
                   text:
                     - misfortune, calamity, disaster
+
+    - text: صَوَاب
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=630
+          text:
+            - that which is right, proper, or correct

@@ -68,6 +68,7 @@ root:
               type: noun
               gender: male
               translations: []
+
     - type: verb
       dialect: msa
       form: 5
@@ -82,3 +83,13 @@ root:
               source: hw4-free-text
               text:
                 - cognition, knowledge, perception, realization
+
+    - type: verb
+      dialect: msa
+      form: 8
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=721
+          text:
+            - to confess, admin, acknowledge, own, avow (ه s.th.)

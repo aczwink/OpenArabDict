@@ -42,4 +42,7 @@ root:
               derivation: plural
               type: noun
               gender: female
-              translations: []
+            - text: خُطُوَات
+              derivation: plural
+              type: noun
+              gender: female

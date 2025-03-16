@@ -36,3 +36,18 @@ root:
               source: hw4-free-text
               text:
                 - open country
+
+    - type: verb
+      dialect: msa
+      form: 2
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=74
+              text:
+                - justification
+                - excuse

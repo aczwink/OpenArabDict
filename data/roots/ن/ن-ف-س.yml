@@ -48,12 +48,16 @@ root:
       gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1168
           text:
-            - >-
-              personal identity, self (used to paraphrase the reflexive
-              pronoun), (with def. noun) the same, the very ... (see examples
-              below)
-
-
-              بنفسه he himself; personally, in person
+            - psyche
+            - personal identity, self (used to paraphrase the reflexive pronoun), (with def. noun) the same, the very ... (see examples below)
+          examples:
+            - text: بنفسه
+              translation: he himself; personally, in person
+      derived:
+        - text: أَنْفُس
+          derivation: plural
+          type: noun
+          gender: female

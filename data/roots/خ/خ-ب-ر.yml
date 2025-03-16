@@ -19,6 +19,28 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: uu
+      derived:
+        - text: خَبِير
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=275
+              text:
+                - expert, specialist
+          derived:
+            - text: خُبَرَاء
+              derivation: plural
+              type: noun
+              gender: male
+
+    - type: verb
+      dialect: msa
       form: 4
       translations:
         - dialect: msa

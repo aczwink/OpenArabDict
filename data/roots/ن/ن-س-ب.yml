@@ -83,3 +83,8 @@ root:
               source: hw4-free-text
               text:
                 - suitable, fitting, appropriate, proper, adequate
+          derived:
+            - text: مُنَاسِبَة
+              derivation: feminine
+              type: adjective
+              gender: female

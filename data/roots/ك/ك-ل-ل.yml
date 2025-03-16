@@ -33,6 +33,7 @@ root:
               source: hw4-free-text
               text:
                 - weariness, tiredness, fatigue, exhaustion
+
     - text: كُلّ
       type: noun
       gender: male
@@ -41,3 +42,14 @@ root:
           source: hw4-free-text
           text:
             - everyone, each one, anyone
+      derived:
+        - text: كُلِّيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=991
+              text:
+                - total, entire, all-round, overall, sweeping, comprehensive, complete

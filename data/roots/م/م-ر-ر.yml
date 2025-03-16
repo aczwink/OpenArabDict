@@ -81,8 +81,7 @@ root:
               source: hw4-free-text
               text:
                 - باستمرار continually, constantly
-        - text: مُسْتَمِرّ
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
@@ -91,3 +90,8 @@ root:
               text:
                 - lasting, permanent, enduring, constant, continual,
                   uninterrupted, unceasing, incessant
+          derived:
+            - text: مُسْتَمِرَّة
+              derivation: feminine
+              type: adjective
+              gender: male

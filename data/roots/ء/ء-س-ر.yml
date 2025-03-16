@@ -28,6 +28,16 @@ root:
           text:
             - to capture
       derived:
+        - text: أَسْر
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=32
+              text:
+                - captivity
         - text: أَسِير
           derivation: meaning-related
           type: noun
@@ -53,4 +63,20 @@ root:
               derivation: plural
               type: noun
               gender: female
-              translations: []
+            - text: أُسْرِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=32
+                  text:
+                    - family (in compounds)
+                    - dynastic
+              derived:
+                - text: أُسْرِيَّة
+                  derivation: feminine
+                  type: adjective
+                  gender: female

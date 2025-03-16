@@ -27,6 +27,18 @@ root:
           source: hw4-free-text
           text:
             - to fail to find (ه, s.o., s.th.)
+      derived:
+        - text: فُقْدَان
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=858
+              text:
+                - loss
+
     - type: verb
       dialect: msa
       form: 4

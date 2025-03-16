@@ -59,6 +59,16 @@ words:
         text:
           - or
 
+  - text: كَيْ
+    type: conjunction
+    alias: لِكَيْ
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1008
+        text:
+          - so that, in order that, in order to
+
   - text: لٰكِنْ
     alias: لٰكِنَّ
     type: conjunction

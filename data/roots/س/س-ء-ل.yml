@@ -39,8 +39,7 @@ root:
               type: noun
               gender: male
               translations: []
-        - text: مَسْؤُول
-          derivation: passive-participle
+        - derivation: passive-participle
           type: adjective
           gender: male
           translations:
@@ -53,4 +52,13 @@ root:
               derivation: plural
               type: noun
               gender: male
-              translations: []
+            - text: مَسْؤُولِيَّة
+              derivation: nisba
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=468
+                  text:
+                    - responsibility (عن for)

@@ -36,13 +36,18 @@ root:
           text:
             - to enter into the state of ritual consecration (esp., of a Mecca
               pilgrim; see احرام)
+
     - type: verb
       dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=214
+          text:
+            - to honor, revere, venerate, esteem, respect (ه, ه s.o., s.th.)
       derived:
-        - text: اِحْتِرَام
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:

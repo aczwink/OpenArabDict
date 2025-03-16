@@ -77,7 +77,6 @@ root:
         - derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
         - derivation: active-participle
           type: noun
           gender: male

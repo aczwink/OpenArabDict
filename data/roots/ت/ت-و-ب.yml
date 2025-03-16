@@ -27,3 +27,18 @@ root:
           source: hw4-free-text
           text:
             - to repent
+
+    - text: تَوَّاب
+      type: adjective
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=132
+          text:
+            - forgiving, merciful (God)
+      derived:
+        - text: تَوَّابُون
+          derivation: plural
+          type: adjective
+          gender: male

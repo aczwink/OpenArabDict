@@ -80,7 +80,9 @@ export class DBBuilder
 
     public AddWord(word: OpenArabDictWord)
     {
-        const id = this.GenerateWordId(word);
+        let id = this.GenerateWordId(word);
+        if(this.GetWord(id) !== undefined)
+            id += "2";
         if(this.GetWord(id) !== undefined)
         {
             console.log(word);

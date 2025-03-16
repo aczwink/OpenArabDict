@@ -106,6 +106,25 @@ root:
               text:
                 - turning, application, attention, response, responsiveness (على
                   to), concern (على for), interest (على in), demand
+
+    - type: verb
+      dialect: msa
+      form: 5
+      translations: []
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=881
+              text:
+                - acceptance, sufferance, bearing
+                - tolerance
+                - receptivity, susceptibility
+
     - type: verb
       dialect: msa
       form: 10

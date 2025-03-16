@@ -58,13 +58,28 @@ root:
                 - factor, constituent, element, (causative) agent, motive power
 
     - type: verb
-      dialect: lb
+      dialect: msa
       form: 6
-      translations:
-        - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 11
-          text:
-            - to treat
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=769
+              text:
+                - cooperation
+                - dealings, social intercourse (with s.o.)
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 6
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 11
+              text:
+                - to treat
 
     - type: verb
       dialect: msa

@@ -45,11 +45,15 @@ root:
             - to guide, direct (إلى ه s.o. to s.th.), show (ه s.o.) the way (إلى
               to; fig.)
       derived:
-        - text: إِرْشَاد
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=408
+              text:
+                - guidance
           derived:
             - text: إِرْشَادَات
               derivation: plural

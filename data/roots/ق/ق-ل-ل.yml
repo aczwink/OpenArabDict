@@ -54,3 +54,13 @@ root:
           text:
             - to make little or less, diminish, lessen, decrease, reduce, do
               seldom or less frequently (ه or من s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=930
+              text:
+                - decrease, diminution, reduction

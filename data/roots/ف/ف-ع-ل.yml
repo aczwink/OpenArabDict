@@ -45,3 +45,20 @@ root:
               source: hw4-free-text
               text:
                 - indeed, in effect, actually, really, practically
+
+    - text: فَعَّال
+      type: adjective
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=857
+          text:
+            - effective, efficacious, efficient
+            - active
+      derived:
+        - text: فَعَّالَة
+          derivation: feminine
+          type: adjective
+          gender: female

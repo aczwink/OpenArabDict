@@ -290,13 +290,7 @@ words:
         source: hw4-free-text
         text:
           - shoemaker
-  - text: دُونَ
-    type: preposition
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - without
+
   - text: نَاقَة
     type: noun
     gender: female

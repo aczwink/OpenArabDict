@@ -49,6 +49,27 @@ words:
             text:
               - including
 
+  - text: دُونَ
+    type: preposition
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=364
+        text:
+          - without
+    derived:
+      - text: بِدُونِ
+        alias: مِنْ دُونِ
+        type: preposition
+        derivation: extension
+        translations:
+          - dialect: msa
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=364
+            text:
+              - without
+              - with the exclusion of, excluding
+
   - text: فِي
     type: preposition
     translations:

@@ -36,12 +36,18 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=726
               text:
-                - |-
-                  friend
-
-                  عزيزي my dear! (esp. as a salutation in letters)
+                - friend
+              examples:
+                - text: عزيزي
+                  translation: my dear! (esp. as a salutation in letters)
+          derived:
+            - text: أَعِزَّاء
+              derivation: plural
+              type: noun
+              gender: male
         - text: عِزّ
           derivation: verbal-noun
           type: noun

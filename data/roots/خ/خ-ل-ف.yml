@@ -74,6 +74,7 @@ root:
               source: hw4-free-text
               text:
                 - background (of a picture and fig.)
+
     - type: verb
       dialect: msa
       form: 3
@@ -83,6 +84,21 @@ root:
           text:
             - to be contradictory
       derived:
+        - text: خِلَاف
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=311
+              text:
+                - difference, disparity, dissimilarity
+          derived:
+            - text: خِلَافَات
+              derivation: plural
+              type: noun
+              gender: male
         - text: مُخَالِف
           derivation: meaning-related
           type: adjective
@@ -92,6 +108,7 @@ root:
               source: hw4-free-text
               text:
                 - conflicting
+
     - type: verb
       dialect: msa
       form: 8

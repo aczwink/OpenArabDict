@@ -37,3 +37,8 @@ root:
               source: hw4-free-text
               text:
                 - wish, desire, longing, appetite (في for)
+          derived:
+            - text: رَغَبَات
+              derivation: plural
+              type: noun
+              gender: female

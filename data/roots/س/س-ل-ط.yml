@@ -17,6 +17,25 @@
 root:
   radicals: س-ل-ط
   words:
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=505
+          text:
+            - to control, supervise, command (على s.th.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          derived:
+            - text: مُتَسَلِّطُونَ
+              derivation: plural
+              type: adjective
+              gender: male
+
     - text: سُلْطَة
       type: noun
       gender: female

@@ -37,15 +37,20 @@ root:
           text:
             - to behave, act, conduct o.s., comport o.s.
       derived:
-        - text: تَصَرُّف
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=612
               text:
                 - action, way of acting, demeanor, behavior, conduct
+          derived:
+            - text: تَصَرُّفَات
+              derivation: plural
+              type: noun
+              gender: male
 
     - text: مَصْرِف
       type: noun

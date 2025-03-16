@@ -25,3 +25,15 @@ root:
           source: hw4-free-text
           text:
             - to give (ه ل or ه to s.o. s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=741
+              text:
+                - donation
+                - presentation, grant(ing), award(ing)

@@ -61,6 +61,12 @@ root:
           source: hw4-free-text
           text:
             - to keep away, withdraw (عن from)
+            - to quit, leave, avoid (عن s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+
     - text: بَعْدَ
       type: preposition
       translations:

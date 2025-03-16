@@ -22,7 +22,13 @@ root:
       form:
         stem: 1
         parameters: ia
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=298
+          text:
+            - to be mistaken
+            - to commit an error, make a mistake
       derived:
         - text: خَطَأ
           derivation: verbal-noun
@@ -30,12 +36,29 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=298
               text:
                 - error
+                - mistake, incorrectness
           derived:
             - text: أَخْطَاء
               derivation: plural
               type: noun
               gender: male
-              translations: []
+        - text: خَطَّاء
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D8%AE%D8%B7%D8%A7%D8%A1
+              text:
+                - sinner
+                - who makes many mistakes
+          derived:
+            - text: خَطَّاؤُون
+              derivation: plural
+              type: noun
+              gender: male

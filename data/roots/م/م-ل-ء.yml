@@ -28,6 +28,18 @@ root:
           text:
             - to fill
       derived:
+        - text: مَلْء
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1091
+              text:
+                - filling (also, e.g., of vacancies)
+                - filling out
         - text: مَلِيء
           derivation: meaning-related
           type: adjective

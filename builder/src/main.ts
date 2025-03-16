@@ -29,6 +29,7 @@ import { OpenArabDictNonVerbDerivationType, OpenArabDictVerbDerivationType, Open
 import { DialectType } from "openarabicconjugation/dist/Dialects";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
 import { EqualsAny } from "acts-util-core";
+import { CreateVerb } from "openarabicconjugation/dist/Verb";
 
 interface DialectDefinition
 {
@@ -40,12 +41,20 @@ interface DialectDefinition
     children?: DialectDefinition[];
 }
 
-interface ParameterizedStemData
+interface ParameterizedStem1Data
 {
-    stem: number;
+    stem: 1;
     parameters: string;
     type?: "sound";
 }
+
+interface ParameterizedAdvancedStemData
+{
+    stem: AdvancedStemNumber;
+    type?: "sound";
+}
+
+type ParameterizedStemData = ParameterizedStem1Data | ParameterizedAdvancedStemData;
 
 interface TranslationDefinition
 {
@@ -199,18 +208,13 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-
-            let stem1Ctx;
-            if(verb.stemParameters !== undefined)
-            {
-                const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-                stem1Ctx = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbType(), verb.stemParameters!);
-            }
+            const verbType = (verb.soundOverride === true) ? VerbType.Sound : rootInstance.DeriveDeducedVerbType();
+            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any, verbType);
 
             const voice = (word.derivation === "active-participle") ? Voice.Active : Voice.Passive;
 
             const conjugator = new Conjugator;
-            const generated = conjugator.ConjugateParticiple(DialectType.ModernStandardArabic, rootInstance, verb.stem, voice, stem1Ctx);
+            const generated = conjugator.ConjugateParticiple(verbInstance, voice);
             return VocalizedWordTostring(generated);
         }
         case "verbal-noun":
@@ -223,15 +227,8 @@ function GenerateTextIfPossible(word: GenderedWordDefinition, builder: DBBuilder
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-
-            let stem;
-            if(verb.stemParameters !== undefined)
-            {
-                const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-                stem = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbType(), verb.stemParameters!);
-            }
-            else
-                stem = verb.stem as AdvancedStemNumber;
+            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any);
+            const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
             const conjugator = new Conjugator;
             if(conjugator.HasPotentiallyMultipleVerbalNounForms(rootInstance, stem))
@@ -256,15 +253,8 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
     const root = builder.GetRoot(verb.rootId);
 
     const rootInstance = new VerbRoot(root.radicals);
-
-    let stem;
-    if(verb.stemParameters !== undefined)
-    {
-        const meta = GetDialectMetadata(DialectType.ModernStandardArabic);
-        stem = meta.CreateStem1Context(rootInstance.DeriveDeducedVerbType(), verb.stemParameters!);
-    }
-    else
-        stem = verb.stem as AdvancedStemNumber;
+    const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any);
+    const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
     const conjugator = new Conjugator;
     const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
@@ -519,33 +509,31 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
             const rootInstance = new VerbRoot(root!.radicals);
 
             const stemNumber = (typeof v.form === "number") ? v.form : v.form.stem;
-            let stem1Context = undefined;
+            let verb;
             if(typeof v.form !== "number")
             {
-                if(v.form.stem !== 1)
-                    throw new Error("TODO: implement me");
-
                 const meta = GetDialectMetadata(dialectType);
-                const verbType = (v.form.type === "sound") ? VerbType.Sound : rootInstance.DeriveDeducedVerbType();
+                const verbType = (v.form.type === "sound") ? VerbType.Sound : undefined;
                 const choices = meta.GetStem1ContextChoices(rootInstance);
-                if(!choices.types.includes(v.form.parameters))
+                if((v.form.stem === 1) && !choices.types.includes(v.form.parameters))
                 {
                     console.log(word, word.translations);
                     throw new Error("Wrong stem parameterization");
                 }
-                stem1Context = meta.CreateStem1Context(verbType, v.form.parameters);
+                const stem = (v.form.stem === 1) ? v.form.parameters : v.form.stem;
+                verb = CreateVerb(dialectType, rootInstance, stem, verbType);
             }
+            else
+                verb = CreateVerb(dialectType, rootInstance, v.form as AdvancedStemNumber);
 
             const conjugator = new Conjugator;
-            const vocalized = conjugator.Conjugate(rootInstance, {
+            const vocalized = conjugator.Conjugate(verb, {
                 gender: Gender.Male,
                 numerus: Numerus.Singular,
                 person: Person.Third,
                 tense: Tense.Perfect,
                 voice: Voice.Active,
-                stem: stemNumber as any,
-                stem1Context
-            }, dialectType);
+            });
 
             const conjugatedWord = VocalizedWordTostring(vocalized);
 
@@ -556,7 +544,7 @@ function ProcessWordDefinition(word: WordDefinition, builder: DBBuilder, dialect
                 rootId: root!.id,
                 stem: stemNumber,
                 text: conjugatedWord,
-                stemParameters: (typeof v.form === "number") ? undefined : v.form.parameters,
+                stemParameters: ((typeof v.form !== "number") && (v.form.stem === 1)) ? v.form.parameters : undefined,
                 translations,
                 soundOverride: ((typeof v.form !== "number") && (v.form.type !== undefined)) ? true : undefined,
                 parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})

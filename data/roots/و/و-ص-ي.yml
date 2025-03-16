@@ -17,6 +17,42 @@
 root:
   radicals: و-ص-ي
   words:
+    - type: verb
+      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1271
+          text:
+            - to recommend (ه ب, على to s.o. s.th. or s.o.)
+      derived:
+        - text: تَوْصِيَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1273
+              text:
+                - recommendation
+          derived:
+            - text: تَوْصِيَات
+              derivation: plural
+              type: noun
+              gender: female
+
+    - type: verb
+      dialect: msa
+      form: 4
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1272
+          text:
+            - to recommend (ه ب, على to s.o. s.th. or s.o.)
+
     - text: وِصَايَة
       type: noun
       gender: female

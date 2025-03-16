@@ -29,6 +29,21 @@ root:
             - to order, command, bid, instruct (ه s.o. ب to do s.th.),
               commission, charge, entrust (ه s.o. ب with s.th. or to do s.th.)
       derived:
+        - text: أَمْر
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=46
+              text:
+                - order, command, instruction (ب to do s.th.)
+          derived:
+            - text: أَوَامِر
+              derivation: plural
+              type: noun
+              gender: male
         - derivation: colloquial
           type: verb
           dialect: lb

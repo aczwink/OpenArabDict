@@ -31,3 +31,12 @@ root:
               source: hw4-free-text
               text:
                 - application
+
+    - text: طِبْقَ
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=659
+          text:
+            - according to, corresponding to, in accordance with, in conformity with

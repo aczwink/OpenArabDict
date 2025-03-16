@@ -26,9 +26,8 @@ root:
         - dialect: msa
           source: hw4-free-text
           text:
-            - to know (ب or ه, s.o., s.th.), have knowledge, be cognizant, be
-              aware (ب or ه of s.th.), be informed (ب or ه about or of s.th.),
-              be familiar, be acquainted (ب or ه with s.th.)
+            - to know (ب or ه, s.o., s.th.), have knowledge, be cognizant, be aware (ب or ه of s.th.), be informed (ب or ه about or of s.th.), be familiar, be acquainted (ب or ه with s.th.)
+            - to perceive, discern (ب or ه s.th.), find out (ب or ه about s.th., من from), learn, come to know (ب or ه s.th. or about s.th., من from)
       derived:
         - text: عِلْم
           derivation: verbal-noun
@@ -53,12 +52,20 @@ root:
               source: hw4-free-text
               text:
                 - knowing
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=758
+              text:
+                - scholar, savant, scientist
           derived:
             - text: عُلَمَاء
               derivation: plural
               type: noun
               gender: male
-              translations: []
         - derivation: passive-participle
           type: adjective
           gender: male

@@ -33,6 +33,7 @@ root:
               source: hw4-free-text
               text:
                 - courage, bravery, valor, valiance, boldness, audacity
+
     - type: verb
       dialect: msa
       form: 2
@@ -41,3 +42,14 @@ root:
           source: hw4-free-text
           text:
             - to encourage, embolden, hearten (على ه s.o. to)
+      derived:
+        - text: تَشْجِيع
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=546
+              text:
+                - encouragement, heartening, animatiom (على to)

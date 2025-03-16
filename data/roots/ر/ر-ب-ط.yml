@@ -19,6 +19,21 @@ root:
   words:
     - type: verb
       dialect: msa
+      form: 6
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=385
+              text:
+                - cohesion, close connection (بين between)
+
+    - type: verb
+      dialect: msa
       form: 8
       translations:
         - dialect: msa

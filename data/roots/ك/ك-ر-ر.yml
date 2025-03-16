@@ -25,6 +25,19 @@ root:
           source: hw4-free-text
           text:
             - to repeat, reiterate, do again, do repeatedly (ه s.th.)
+      derived:
+        - text: تَكْرَار
+          #derivation: verbal-noun TODO FIXME
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=971
+              text:
+                - repitition, reiteration
+
     - type: verb
       dialect: msa
       form: 5
