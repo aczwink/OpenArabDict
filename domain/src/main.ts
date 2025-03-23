@@ -166,6 +166,7 @@ export enum OpenArabDictWordRelationshipType
 {
     Synonym = 0,
     Antonym = 1,
+    EqualSpelling = 2,
 }
 
 export interface OpenArabDictWordRelation

@@ -46,6 +46,7 @@ root:
               type: noun
               gender: male
               translations: []
+
     - type: verb
       dialect: msa
       form: 2
@@ -66,3 +67,13 @@ root:
               type: noun
               gender: male
               translations: []
+
+    - type: verb
+      dialect: msa
+      form: 7
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=851
+          text:
+            - to separate o.s., disengage o.s., dissociate o.s., segregate, secede (عن from)

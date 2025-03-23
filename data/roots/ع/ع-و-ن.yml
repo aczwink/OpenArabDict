@@ -22,10 +22,21 @@ root:
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=784
           text:
-            - to help (في ه s.o. in or with; على ه s.o. to s.th.), aid, assist
-              (في ه s.o. in or with), support (ه في s.o. in)
+            - to help (في ه s.o. in or with; على ه s.o. to s.th.), aid, assist (في ه s.o. in or with), support (ه في s.o. in)
+
+    - type: verb
+      dialect: msa
+      form: 4
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=785
+          text:
+            - to help (في ه s.o. in or with; على ه s.o. to s.th.), aid, assist (في ه s.o. in or with), support (ه في s.o. in)
+
     - type: verb
       dialect: msa
       form: 6

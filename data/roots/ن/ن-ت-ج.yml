@@ -57,3 +57,6 @@ root:
           url: http://ejtaal.net/aa/#hw4=1119
           text:
             - result, upshot, issue, outcome, consequence
+      derived:
+        - text: نَتَائِج
+          derivation: plural

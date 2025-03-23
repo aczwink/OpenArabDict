@@ -22,7 +22,13 @@ root:
       form:
         stem: 1
         parameters: ai
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=839
+          text:
+            - to impose, enjoin, make incumbent (على ه upon s.o. s.th.), prescribe (على ه to s.o. s.th.)
+            - to impose (الحصار a blockade, على on)
       derived:
         - text: فَرْض
           derivation: verbal-noun

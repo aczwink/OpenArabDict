@@ -27,6 +27,18 @@ root:
           source: hw4-free-text
           text:
             - to contain, comprise, comprehend, enclose (ه s.th.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=582
+              text:
+                - general, universal, complete, total
+
+
     - text: شَمَال
       type: noun
       gender: male

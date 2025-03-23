@@ -19,6 +19,7 @@ root:
   words:
     - text: مُغْرِيَات
       type: noun
+      gender: female
       translations:
         - complete: true
           dialect: msa

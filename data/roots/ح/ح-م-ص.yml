@@ -29,6 +29,7 @@ root:
         - text: حِمِّص
           derivation: meaning-related
           type: noun
+          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -37,6 +38,7 @@ root:
         - text: حِمَّص
           derivation: meaning-related
           type: noun
+          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -45,6 +47,7 @@ root:
         - text: حُمُّص
           derivation: meaning-related
           type: noun
+          gender: male
           translations:
             - dialect: northlevant
               source: hw4-free-text
@@ -57,6 +60,7 @@ root:
         - text: مِحْمَصَة
           derivation: meaning-related
           type: noun
+          gender: female
           translations:
             - dialect: msa
               source: hw4-free-text

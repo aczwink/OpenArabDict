@@ -45,7 +45,7 @@ root:
                 - inner, inward, inside, interior, intenral
         - text: دَخيل
           derivation: meaning-related
-          type: adjective
+          type: interjection
           translations:
             - dialect: northlevant
               source: hw4-free-text

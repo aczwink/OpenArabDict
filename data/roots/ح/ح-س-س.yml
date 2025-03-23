@@ -31,6 +31,7 @@ root:
         - text: حَس
           derivation: meaning-related
           type: noun
+          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text

@@ -23,13 +23,21 @@ root:
         stem: 1
         parameters: ai
       alias: au
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=544
+          text:
+            - to abuse, revile, vilify, scold (ه s.o.)
       derived:
         - text: شَتْم
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
               url: http://ejtaal.net/aa/#hw4=544
               text:

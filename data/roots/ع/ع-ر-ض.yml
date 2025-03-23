@@ -22,7 +22,12 @@ root:
       form:
         stem: 1
         parameters: ai
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=718
+          text:
+            - to show, demonstrate, present, set forth, display, exhibit, lay open, submit, turn in (ه على s.th. to s.o.), lay put (ه على s.th. before s.o.)
       derived:
         - text: عَرْض
           derivation: verbal-noun

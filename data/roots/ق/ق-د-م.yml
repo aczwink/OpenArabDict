@@ -27,6 +27,7 @@ root:
         - text: قَدُوم
           derivation: meaning-related
           type: noun
+          gender: female
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -73,6 +74,7 @@ root:
         - text: قَدُّوم
           derivation: meaning-related
           type: noun
+          gender: female
           translations:
             - dialect: msa
               source: hw4-free-text

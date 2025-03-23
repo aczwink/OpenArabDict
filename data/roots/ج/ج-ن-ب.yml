@@ -54,6 +54,17 @@ root:
               source: hw4-free-text
               text:
                 - side
+
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=177
+          text:
+            - to avoid (ه s.th., ه s.o.)
+
     - text: جَنُوب
       type: noun
       gender: male

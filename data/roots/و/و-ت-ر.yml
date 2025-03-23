@@ -20,7 +20,12 @@ root:
     - type: verb
       dialect: msa
       form: 5
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=1240
+          text:
+            - to be or become strained, stretched, tight, taut
       derived:
         - text: تَوَتُّر
           derivation: verbal-noun

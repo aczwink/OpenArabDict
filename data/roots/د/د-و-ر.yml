@@ -49,7 +49,7 @@ root:
               source: hw4-free-text
               text:
                 - large, stately house
-        - text: دُوَار⁩
+        - text: دُوَار
           derivation: verbal-noun
           type: noun
           gender: male

@@ -53,6 +53,16 @@ root:
               type: noun
               gender: male
               translations: []
+        - text: حُكُومَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=242
+              text:
+                - government
 
     - type: verb
       dialect: msa

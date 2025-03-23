@@ -44,7 +44,6 @@ root:
                 - text: شَرْعِيَّة
                   derivation: feminine
                   type: noun
-                  gender: male
                   translations:
                     - dialect: msa
                       source: hw4-free-text

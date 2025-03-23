@@ -27,3 +27,6 @@ root:
           url: http://ejtaal.net/aa/#hw4=616
           text:
             - attentive
+      derived:
+        - text: صَاغِيَة
+          derivation: feminine

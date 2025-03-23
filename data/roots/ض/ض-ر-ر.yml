@@ -77,11 +77,24 @@ root:
               source: hw4-free-text
               text:
                 - harm, injury, detriment (jur.)
+
     - text: ضَرُورَة
       type: noun
       gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=642
           text:
             - necessity, stress, constraint, need
+      derived:
+        - text: ضَرُورِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=642
+              text:
+                - necessary, imperative, requisite, indispensable, inevitable

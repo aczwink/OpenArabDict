@@ -55,7 +55,8 @@ root:
             - to make little or less, diminish, lessen, decrease, reduce, do
               seldom or less frequently (ه or من s.th.)
       derived:
-        - derivation: verbal-noun
+        - text: تَقْلِيل
+          derivation: verbal-noun
           type: noun
           gender: male
           translations:

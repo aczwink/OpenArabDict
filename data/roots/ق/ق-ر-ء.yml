@@ -52,3 +52,14 @@ root:
               derivation: plural
               type: noun
               gender: male
+
+    - text: الْقُرْآن
+      type: noun
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=895
+          text:
+            - the Koran

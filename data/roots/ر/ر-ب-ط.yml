@@ -31,6 +31,19 @@ root:
               url: http://ejtaal.net/aa/#hw4=385
               text:
                 - cohesion, close connection (بين between)
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=386
+              text:
+                - closely tied together, standing in close relation
+          derived:
+            - text: مُتَرَابِطَة
+              derivation: feminine
 
     - type: verb
       dialect: msa

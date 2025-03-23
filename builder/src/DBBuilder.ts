@@ -30,6 +30,7 @@ export class DBBuilder
         this.relations = [];
         this.roots = {};
         this.words = {};
+        this.wordsWithEqualSpellingDict = {};
     }
 
     //Public methods
@@ -80,19 +81,14 @@ export class DBBuilder
 
     public AddWord(word: OpenArabDictWord)
     {
-        let id = this.GenerateWordId(word);
-        if(this.GetWord(id) !== undefined)
-            id += "2";
-        if(this.GetWord(id) !== undefined)
-        {
-            console.log(word);
-            throw new Error("Id conflict for: " + id);
-        }
+        const id = this.GenerateUniqueWordId(word);
 
         word.id = id;
         this.words[id] = word;
 
-        return word.id;
+        this.AddToSpellingDict(word);
+
+        return word;
     }
 
     public FindWord(criteria: { text: string; })
@@ -143,6 +139,28 @@ export class DBBuilder
     }
 
     //Private methods
+    private AddToSpellingDict(word: OpenArabDictWord)
+    {
+        const vocalized = ParseVocalizedText(word.text);
+        const buckwalter = Buckwalter.ToString(vocalized);
+
+        const wordIds = this.wordsWithEqualSpellingDict[buckwalter];
+        if(wordIds === undefined)
+            this.wordsWithEqualSpellingDict[buckwalter] = [word.id];
+        else
+        {
+            for (const wordId of wordIds)
+            {
+                this.relations.push({
+                    relationship: OpenArabDictWordRelationshipType.EqualSpelling,
+                    word1Id: word.id,
+                    word2Id: wordId
+                });
+            }
+            wordIds.push(word.id);
+        }
+    }
+
     private GenerateRootId(radicals: string)
     {
         const vocalized = ParseVocalizedText(radicals);
@@ -173,10 +191,26 @@ export class DBBuilder
         return ShortType() + Buckwalter.ToString(vocalized);
     }
 
+    private GenerateUniqueWordId(word: OpenArabDictWord)
+    {
+        const wordId = this.GenerateWordId(word);
+
+        if(this.GetWord(wordId) === undefined)
+            return wordId;
+
+        for(let i = 2; true; i++)
+        {
+            const id = wordId + i;
+            if(this.GetWord(id) === undefined)
+                return id;
+        }
+    }
+
     //State
     private dialectMap: Dictionary<number>;
     private dialects: OpenArabDictDialect[];
     private relations: OpenArabDictWordRelation[];
     private roots: Dictionary<OpenArabDictRoot>;
     private words: Dictionary<OpenArabDictWord>;
+    private wordsWithEqualSpellingDict: Dictionary<string[]>;
 }

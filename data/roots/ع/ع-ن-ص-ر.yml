@@ -25,6 +25,7 @@ root:
           source: hw4-free-text
           text:
             - element (chem., pol.)
+            - component, constituent, ingredient
       derived:
         - text: عُنْصُرِيّ
           derivation: nisba

@@ -20,8 +20,16 @@ root:
     - type: verb
       dialect: msa
       form: 2
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1210
+          text:
+            - to threaten, menace (ه ب s.o. with), scare, frighten, terrify, daint, cow, intimidate, browbeat (ه s.o.)
       derived:
-        - derivation: verbal-noun
+        - text: تَهْدِيد
+          derivation: verbal-noun
           type: noun
           gender: male
           translations:

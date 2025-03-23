@@ -31,6 +31,7 @@ root:
         - text: مُرّ
           derivation: meaning-related
           type: adjective
+          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -94,4 +95,3 @@ root:
             - text: مُسْتَمِرَّة
               derivation: feminine
               type: adjective
-              gender: male

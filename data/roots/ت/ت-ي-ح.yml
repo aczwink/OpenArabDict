@@ -26,6 +26,7 @@ root:
           url: http://ejtaal.net/aa/#hw4=133
           text:
             - to grant, afford, offer (ل ه s.o. s.th.)
+            - to vouchsafe, make possible (ه ل s.th. for s.o.)
       derived:
         - derivation: verbal-noun
           type: noun

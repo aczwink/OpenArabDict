@@ -26,6 +26,19 @@ root:
           text:
             - to arrange for a meeting or rendezvous, make an appointment (ه ه
               with s.o. for a given time or at a certain place)
+
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=1279
+          text:
+            - to threaten
+            - to menace (ه s.o.)
+
     - text: مَوْعِد
       type: noun
       gender: male

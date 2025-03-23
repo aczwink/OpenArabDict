@@ -37,6 +37,7 @@ root:
         - text: خَاطِر
           derivation: meaning-related
           type: noun
+          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text

@@ -40,3 +40,6 @@ root:
           url: https://ejtaal.net/aa/#hw4=659
           text:
             - according to, corresponding to, in accordance with, in conformity with
+          contextual:
+            - text: صورة طبق الأصل
+              translation: true copy; exact replica

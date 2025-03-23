@@ -25,6 +25,7 @@ root:
         - text: اللّٰه
           derivation: meaning-related
           type: noun
+          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -54,7 +55,7 @@ root:
                   after mentioning the names of Islamic Prophet Muhammad
         - text: اَللّٰهُمَّ
           derivation: meaning-related
-          type: noun
+          type: interjection
           translations:
             - dialect: msa
               source: hw4-free-text

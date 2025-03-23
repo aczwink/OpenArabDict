@@ -30,6 +30,16 @@ root:
               1. to fall
               2. to be located, be situated, lie (geogr.)
       derived:
+        - text: وُقُوع
+          derivation: verbal-noun
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1290
+              text:
+                - setting in, incidence (of an event)
         - derivation: active-participle
           type: adjective
           gender: male

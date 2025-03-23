@@ -27,8 +27,7 @@ root:
             - to repeat, reiterate, do again, do repeatedly (ه s.th.)
       derived:
         - text: تَكْرَار
-          #derivation: verbal-noun TODO FIXME
-          derivation: meaning-related
+          derivation: verbal-noun
           type: noun
           gender: male
           translations:

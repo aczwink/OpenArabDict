@@ -53,6 +53,9 @@ root:
               source: hw4-free-text
               text:
                 - assertion, declaration, expression, utterance (عن of a feeling)
+          derived:
+            - text: تَعْبِيرَات
+              derivation: plural
         - text: عِبَارَة
           derivation: meaning-related
           type: noun

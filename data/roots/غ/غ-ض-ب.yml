@@ -22,7 +22,12 @@ root:
       form:
         stem: 1
         parameters: ia
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=804
+          text:
+            - to be or become angry, cross, mad, vexed, irritated, exasperated, furious, to fret (من or على at s.th., with s.o.)
       derived:
         - text: غَضْبَان
           derivation: meaning-related

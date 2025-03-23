@@ -30,10 +30,11 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=245
               text:
-                - setting in, advent, arrival (of a time, of a deadline),
-                  beginning, dawn
+                - setting in, advent, arrival (of a time, of a deadline), beginning, dawn
+                
     - type: verb
       dialect: msa
       form:
@@ -47,9 +48,13 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=245
               text:
                 - solution (of a problem, of a puzzle, etc.)
+          derived:
+            - text: حُلُول
+              derivation: plural
 
     - type: verb
       dialect: msa

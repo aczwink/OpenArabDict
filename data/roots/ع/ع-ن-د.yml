@@ -17,14 +17,42 @@
 root:
   radicals: ع-ن-د
   words:
-    - text: عِنَاد
-      type: noun
-      gender: male
+    - type: verb
+      dialect: msa
+      form: 3
       translations:
-        - complete: true
-          dialect: msa
+        - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=773
+          url: http://ejtaal.net/aa/#hw4=772
           text:
-            - resistance, opposition
-            - stubbornness, obstinacy, obduracy, pigheadedness, headstrongness, opinionatedness, willfulness, pertinacity
+            - to resist or oppose (ه s.o., doggedly), offer (stubborn) resistance (ه to s.o.)
+      derived:
+        - text: عِنَاد
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=773
+              text:
+                - resistance, opposition
+                - stubbornness, obstinacy, obduracy, pigheadedness, headstrongness, opinionatedness, willfulness, pertinacity
+
+    - text: عِنْدَ
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - at, near, by, with, on (of place, time and possession)
+      derived:
+        - text: عِنْدَمَا
+          derivation: extension
+          type: conjunction
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - when

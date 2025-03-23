@@ -20,6 +20,12 @@ root:
     - type: verb
       dialect: msa
       form: 3
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=902
+          text:
+            - to compare (ه, ه ب or بين - وبين s.o., s.th. with; بين شيئين two things with one another), draw a parallel (بين - وبين betweem - and; بين شيئين between two things)
       derived:
         - text: مُقَارَنَة
           derivation: verbal-noun

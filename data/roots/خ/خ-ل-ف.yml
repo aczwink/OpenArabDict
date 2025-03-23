@@ -94,6 +94,7 @@ root:
               url: http://ejtaal.net/aa/#hw4=311
               text:
                 - difference, disparity, dissimilarity
+                - disagreement, difference of opinion (على or في about)
           derived:
             - text: خِلَافَات
               derivation: plural

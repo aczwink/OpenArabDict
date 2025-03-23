@@ -30,6 +30,17 @@ root:
 
     - type: verb
       dialect: msa
+      form: 2
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=319
+          text:
+            - to frighten, scare, alarm, fill with fear (ه s.o.)
+
+    - type: verb
+      dialect: msa
       form: 5
       translations:
         - dialect: msa

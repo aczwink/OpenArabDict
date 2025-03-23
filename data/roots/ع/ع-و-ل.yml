@@ -17,9 +17,30 @@
 root:
   radicals: ع-و-ل
   words:
+    - type: verb
+      dialect: msa
+      form: 4
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=784
+              text:
+                - sustainer, breadwinner, family provider
+
     - text: عَائِلَة
       type: noun
       gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=784
+          text:
+            - family, household
       derived:
         - text: عَائِلِيّ
           derivation: nisba

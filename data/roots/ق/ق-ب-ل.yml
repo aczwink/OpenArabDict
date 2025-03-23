@@ -26,10 +26,18 @@ root:
         - dialect: msa
           source: hw4-free-text
           text:
-            - to receive (kindly, hospitality) (ه s.o.), give (ه, s.o., s.th.) a
-              friendly reception, receive (ه s.th.) favorably, approve (ه, of
-              s.o., of s.th.)
+            - to receive (kindly, hospitality) (ه s.o.), give (ه, s.o., s.th.) a friendly reception, receive (ه s.th.) favorably, approve (ه, of s.o., of s.th.)
       derived:
+        - text: قُبُول
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=881
+              text:
+                - acceptance
         - text: قَبِيلَة
           derivation: meaning-related
           type: noun
@@ -85,6 +93,7 @@ root:
         - text: مُقَابَلَة
           derivation: meaning-related
           type: noun
+          gender: female
           translations:
             - dialect: msa
               source: hw4-free-text
