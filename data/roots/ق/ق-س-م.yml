@@ -39,6 +39,7 @@ root:
               type: noun
               gender: male
               translations: []
+
     - type: verb
       dialect: msa
       form: 2
@@ -47,6 +48,18 @@ root:
           source: hw4-free-text
           text:
             - to divide, part, split (ه s.th.)
+      derived:
+        - text: تَقْسِيم
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=907
+              text:
+                - dividing, division, partition, parting, splitting, sectioning, portioning
+
     - type: verb
       dialect: msa
       form: 7

@@ -34,3 +34,14 @@ words:
             derivation: feminine
             type: adjective
             gender: female
+
+  - text: رُوتِين
+    type: noun
+    gender: male #TODO: or female?
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=435
+        text:
+          - routine

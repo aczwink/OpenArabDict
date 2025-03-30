@@ -28,15 +28,16 @@ root:
           text:
             - to wonder, to marvel, be astonished
       derived:
-        - text: "إعْجاب "
+        - text: إعْجاب
           derivation: meaning-related
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=704
               text:
-                - admiration
+                - admiration (ب for)
         - text: مُعْجَب
           derivation: meaning-related
           type: noun

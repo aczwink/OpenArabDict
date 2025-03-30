@@ -43,7 +43,7 @@ root:
           gender: male
           translations: []
           derived:
-            - text: مَادَّة⁩
+            - text: مَادَّة
               derivation: feminine
               type: adjective
               gender: female
@@ -53,7 +53,7 @@ root:
                   text:
                     - stuff, matter
               derived:
-                - text: مَوَادّ⁩
+                - text: مَوَادّ
                   derivation: plural
                   type: noun
                   gender: female
@@ -63,6 +63,17 @@ root:
                       text:
                         - مواد غذائية food-stuffs, victuals, food, nutritive
                           substances
+                - text: مَادِّيّ
+                  derivation: nisba
+                  type: adjective
+                  gender: male
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      text:
+                        - material
+                        - corporeal, physical
+                        - materialistic
         - text: مَدّ
           derivation: verbal-noun
           type: noun

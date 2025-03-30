@@ -34,6 +34,20 @@ root:
               text:
                 - attraction
 
+    - type: verb
+      dialect: msa
+      form: 7
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=151
+              text:
+                - attraction, inclination, proneness, tendency
+
     - text: جَذَّاب
       type: adjective
       gender: male

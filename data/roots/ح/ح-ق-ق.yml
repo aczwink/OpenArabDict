@@ -25,7 +25,7 @@ root:
       translations: []
       derived:
         - text: حَقّ
-          derivation: verbal-noun
+          derivation: meaning-related
           type: noun
           gender: male
           translations: []

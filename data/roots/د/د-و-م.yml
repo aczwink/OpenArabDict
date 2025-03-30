@@ -37,11 +37,15 @@ root:
               source: hw4-free-text
               text:
                 - work during office hours
-        - text: دَائِم
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=363
+              text:
+                - permanent, standing, established
           derived:
             - text: دَائِمًا
               derivation: extension

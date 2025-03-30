@@ -33,6 +33,24 @@ root:
               url: http://ejtaal.net/aa/#hw4=1145
               text:
                 - spreading, diffusion
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1146
+              text:
+                - spread abroad, propagated, made public, published
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D9%85%D9%86%D8%B4%D9%88%D8%B1
+              text:
+                - (Internet) a post (on facebook, etc)
 
     - type: verb
       dialect: msa

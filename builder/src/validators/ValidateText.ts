@@ -78,7 +78,6 @@ function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent
     return undefined;
 }
 
-export let illegalVerbalNouns = 0;
 function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, parent: TreeTrace | undefined)
 {
     if(parent?.type !== "verb")
@@ -101,10 +100,7 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
         if(EqualsAny(possible, parsed))
             return;
     }
-    //throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
-    illegalVerbalNouns++;
-    console.log("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
-    //console.log(generated);
+    throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
 }
 
 export function ValidateText(builder: DBBuilder, validator: WordDefinitionValidator)

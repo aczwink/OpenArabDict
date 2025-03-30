@@ -34,10 +34,15 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=1071
               text:
-                - (with def. article المَرْأَة) woman
+                - woman
           derived:
+            - text: المَرْأَة
+              derivation: extension #TODO: definite state
+              type: noun
+              gender: female
             - text: نِسَاء
               derivation: plural
               type: noun

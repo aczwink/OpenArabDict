@@ -15,19 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-ق-ب
+  radicals: د-ق-ر
   words:
     - type: verb
-      dialect: msa
-      form: 3
-      derived:
-        - text: عُقُوبَة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: https://ejtaal.net/aa/#hw4=746
-              text:
-                - punishment, penalty
+      dialect: lb
+      form:
+        stem: 1
+        parameters: aa
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 33
+          text:
+            - to touch

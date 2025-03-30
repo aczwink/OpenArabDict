@@ -28,6 +28,16 @@ root:
           text:
             - to separate
       derived:
+        - text: فَرْق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=843
+              text:
+                - difference
         - text: مَفْرَق
           derivation: meaning-related
           type: noun

@@ -30,13 +30,14 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=17
               text:
-                - |-
-                  1. track, trace, vestige
-                  2. relic or remnant (pre-served from the past)
-                  3. ancient monument
-                  4. work of art, literary work (of former times)
+                - track, trace, vestige
+                - relic or remnant (pre-served from the past)
+                - ancient monument
+                - work of art, literary work (of former times)
+                - impression, effect, influence (في or على on)
           derived:
             - text: آثَار
               derivation: plural

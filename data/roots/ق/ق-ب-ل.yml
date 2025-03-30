@@ -119,7 +119,12 @@ root:
     - type: verb
       dialect: msa
       form: 5
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=880
+          text:
+            - to accept, receive (ه s.th.)
       derived:
         - derivation: verbal-noun
           type: noun

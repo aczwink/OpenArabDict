@@ -15,19 +15,19 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-ق-ب
+  radicals: م-ل-ل
   words:
     - type: verb
       dialect: msa
-      form: 3
+      form: 4
       derived:
-        - text: عُقُوبَة
-          derivation: meaning-related
-          type: noun
-          gender: female
+        - derivation: active-participle
+          type: adjective
+          gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=746
+              url: http://ejtaal.net/aa/#hw4=1091
               text:
-                - punishment, penalty
+                - tiresome, tedious, boring, wearisome, irksome, loathsome, disagreeable

@@ -50,7 +50,7 @@ root:
               text:
                 - large, stately house
         - text: دُوَار
-          derivation: verbal-noun
+          derivation: meaning-related
           type: noun
           gender: male
           translations:

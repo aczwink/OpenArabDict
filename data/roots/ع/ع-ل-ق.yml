@@ -33,14 +33,18 @@ root:
               source: hw4-free-text
               text:
                 - attachment, devotion, affection, bond
+
     - type: verb
       dialect: msa
       form: 5
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=755
           text:
             - to cling, cleave, adhere (ب to)
+            - to be attached, be devoted (ب to), be fond (ب of s.o.)
+            - to refer, pertain, belong, be related (ب to), be connected, have to do (ب with), concern (ب s.th.)
       derived:
         - derivation: verbal-noun
           type: noun

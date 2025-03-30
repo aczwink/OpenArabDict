@@ -25,7 +25,7 @@ root:
       translations: []
       derived:
         - text: رَذَاذ
-          derivation: verbal-noun
+          derivation: meaning-related
           type: noun
           gender: male
           translations:

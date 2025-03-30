@@ -28,6 +28,18 @@ root:
           url: http://ejtaal.net/aa/#hw4=566
           text:
             - to perceive, feel, sense (ب s.th., ان that), be conscious, be aware (ب of s.th.)
+      derived:
+        - text: شُعُور
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=567
+              text:
+                - feeling
+
 
 
     - text: شِعَار

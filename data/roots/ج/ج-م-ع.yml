@@ -51,7 +51,11 @@ root:
             - dialect: msa
               source: hw4
               url: https://ejtaal.net/aa/#hw4=173
-              text: []
+              text:
+                - (with foll. genitive) total
+                - whole, entire
+                - all
+                - entirety
               contextual:
                 - text: الجميع
                   translation: all people, everybody

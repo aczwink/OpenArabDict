@@ -57,7 +57,10 @@ root:
                   3. single, separate, individual, sporadic, isolated
                   4. sole, only, exclusive
                   5. singular, unique
-        - text: وَحْدَة⁩
+          derived:
+            - text: وَحِيدَة
+              derivation: feminine
+        - text: وَحْدَة
           derivation: meaning-related
           type: noun
           gender: female

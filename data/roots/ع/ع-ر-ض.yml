@@ -42,6 +42,7 @@ root:
 
                   2. presentation, demonstration, staging, show(ing),
                   performance
+
     - type: verb
       dialect: msa
       form: 3
@@ -51,6 +52,17 @@ root:
           text:
             - to contradict, oppose (ه, ه s.o., s.th.), raise objections,
               protest, remonstrate (ه, ه against s.o., against s.th.)
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=721
+              text:
+                - contradicter
+
     - type: verb
       dialect: msa
       form: 5

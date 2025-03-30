@@ -45,6 +45,15 @@ root:
               derivation: plural
               type: noun
               gender: female
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=888
+              text:
+                - capable (على of s.th.), able (على to do s.th.)
 
     - type: verb
       dialect: msa

@@ -50,6 +50,15 @@ words:
         text:
           - that (with foll. subject in the acc. or as a suffix and with nominal or copulative clause)
 
+  - text: إِن
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=50
+        text:
+          - if, in case
+
   - text: أَوْ
     type: conjunction
     translations:

@@ -27,3 +27,13 @@ root:
             - |-
               1. to back, support (ه s.o., ه a claim, an aspiration, etc.)
               2. to confirm, corroborate, endorse (ه news, a judgment, etc.)
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=60
+              text:
+                - supporter, helper

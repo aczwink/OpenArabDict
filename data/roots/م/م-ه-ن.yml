@@ -15,19 +15,20 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-ق-ب
+  radicals: م-ه-ن
   words:
-    - type: verb
-      dialect: msa
-      form: 3
+    - text: مِهْنَة
+      type: noun
+      gender: female
       derived:
-        - text: عُقُوبَة
-          derivation: meaning-related
-          type: noun
-          gender: female
+        - text: مِهْنِيّ
+          alias: مِهَنِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=746
+              url: http://ejtaal.net/aa/#hw4=1103
               text:
-                - punishment, penalty
+                - professional, vocational

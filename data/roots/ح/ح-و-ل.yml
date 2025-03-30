@@ -58,9 +58,12 @@ root:
               gender: female
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=265
                   text:
                     - condition, state
+                    - situation
+                    - status, position of affairs
             - text: أَحْوَال
               derivation: plural
               type: noun

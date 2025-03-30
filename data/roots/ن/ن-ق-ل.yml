@@ -65,11 +65,14 @@ root:
           source: hw4-free-text
           text:
             - to report to one another, relate or tell each other (ه s.th.)
+
     - type: verb
       dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1179
           text:
             - to change one's residence, remove, go elsewhere
+            - to betake o.s., proceed, go, take the road (إلى to), head (إلى for), turn (إلى to)

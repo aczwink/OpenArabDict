@@ -46,3 +46,22 @@ root:
               source: hw4-free-text
               text:
                 - sort of life, way (or mode) of living, way of life, life
+        - text: مَعِيشَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          derived:
+            - text: مَعِيشِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=788
+                  text:
+                    - of or pertaining to the way of living
+                  examples:
+                    - text: الحالة المعيشية
+                      translation: living standard

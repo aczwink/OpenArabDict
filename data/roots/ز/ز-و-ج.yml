@@ -22,15 +22,30 @@ root:
       form: 2
       translations: []
       derived:
-        - text: زَوْجَة
+        - text: زَوْج
           derivation: meaning-related
           type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - wife
+          gender: male
+          derived:
+            - text: زَوْجَة
+              derivation: feminine
+              translations:
+                - complete: true #incomplete because of plural :)
+                  dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=460
+                  text:
+                    - wife
+            - text: زَوْجِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=460
+                  text:
+                    - marital, matrimonial, conjugal
         - text: زَوَاج
           derivation: meaning-related
           type: noun
@@ -50,6 +65,17 @@ root:
           source: hw4-free-text
           text:
             - to get married (من, ب, على, ه with), marry (من, ب, على, ه s.o.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=461
+              text:
+                - married
 
     - type: verb
       dialect: msa

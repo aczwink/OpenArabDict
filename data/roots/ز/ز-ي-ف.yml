@@ -15,19 +15,18 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-ق-ب
+  radicals: ز-ي-ف
   words:
     - type: verb
       dialect: msa
-      form: 3
+      form: 2
       derived:
-        - text: عُقُوبَة
-          derivation: meaning-related
+        - derivation: passive-participle
           type: noun
-          gender: female
+          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=746
+              url: https://ejtaal.net/aa/#hw4=466
               text:
-                - punishment, penalty
+                - counterfeit, false, spurious

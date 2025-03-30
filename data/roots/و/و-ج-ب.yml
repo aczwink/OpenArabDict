@@ -28,8 +28,7 @@ root:
           text:
             - to be necessary, requisite, obligatory, indispensable
       derived:
-        - text: وَاجِب
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
           translations:
@@ -37,6 +36,9 @@ root:
               source: hw4-free-text
               text:
                 - واجب منزلية homework (of a student)
+          derived:
+            - text: وَاجِبَات
+              derivation: plural
 
     - type: verb
       dialect: msa

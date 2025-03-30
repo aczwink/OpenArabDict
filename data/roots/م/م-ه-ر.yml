@@ -27,3 +27,17 @@ root:
           source: hw4-free-text
           text:
             - to be skillful
+      derived:
+        - text: مَهَارَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          derived:
+            - text: مَهَارَات
+              derivation: plural
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1102
+                  text:
+                    - skills, crafts

@@ -23,7 +23,6 @@ import { DialectMapper } from "./DialectMapper";
 import { OpenArabDictWordRelationshipType } from "openarabdict-domain";
 import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
-import { illegalVerbalNouns } from "./validators/ValidateText";
 
 interface DialectDefinition
 {
@@ -161,8 +160,6 @@ async function BuildDatabase(dbSrcPath: string)
     }
 
     await builder.Store("./dist/db.json");
-
-    console.log("TODO: TOALLY CRAPPY VERBAL NOUNS:", illegalVerbalNouns);
 }
 
 const dbSrcPath = process.argv[2];

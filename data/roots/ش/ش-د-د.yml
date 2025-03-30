@@ -21,12 +21,7 @@ root:
       dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to draw taut (ه a bow), pull tight or tighten (ه  a rope, a sail)
+        parameters: ai
       derived:
         - text: شِدَّة
           derivation: verbal-noun
@@ -38,6 +33,18 @@ root:
               text:
                 - strength, forcefulness, power, vehemence, violence, intensity,
                   severity, force, high degree
+
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - to draw taut (ه a bow), pull tight or tighten (ه  a rope, a sail)
+      derived:
         - text: شَدِيد
           derivation: meaning-related
           type: adjective

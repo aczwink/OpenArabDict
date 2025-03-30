@@ -28,3 +28,14 @@ root:
           text:
             - to be or become uneasy, disquieted, apprehensive, anxious,
               excited, agitated, upset, perturbed, troubled, disturbed
+      derived:
+        - text: قَلَق
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=934
+              text:
+                - restlessness

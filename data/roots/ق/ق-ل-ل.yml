@@ -65,3 +65,23 @@ root:
               url: http://ejtaal.net/aa/#hw4=930
               text:
                 - decrease, diminution, reduction
+
+
+    - type: verb
+      dialect: msa
+      form: 10
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          derived:
+            - text: اِسْتِقْلَالِيَّة
+              derivation: nisba
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: free-text
+                  url: https://en.wiktionary.org/wiki/%D8%A7%D8%B3%D8%AA%D9%82%D9%84%D8%A7%D9%84%D9%8A%D8%A9
+                  text:
+                    - autonomy, independence
