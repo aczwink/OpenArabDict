@@ -15,43 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ج-ر-ي
+  radicals: خ-س-ر
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ai
+        parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=290
           text:
-            - to run
-      derived:
-        - text: مَجْرًى
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - Watercourse
-
-    - type: verb
-      dialect: msa
-      form: 4
-      derived:
-        - derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=158
-              text:
-                - performance (of an action)
-                - execution
-          derived:
-            - text: إِجْرَاءَات
-              derivation: plural
+            - to lose, forfeit (ه s.th.)

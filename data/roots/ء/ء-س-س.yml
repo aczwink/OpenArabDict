@@ -26,6 +26,19 @@ root:
           text:
             - to found, establish, set up (ه s.th.), lay the foundation (ه for)
       derived:
+        - text: مُؤَسَّسَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=31
+              text:
+                - foundation, establishment
+          derived:
+            - text: مُؤَسَّسَات
+              derivation: plural
         - text: أَسَاس
           derivation: meaning-related
           type: noun

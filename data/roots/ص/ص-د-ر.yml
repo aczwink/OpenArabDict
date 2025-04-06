@@ -52,3 +52,16 @@ root:
               type: noun
               gender: male
               translations: []
+    - type: verb
+      dialect: msa
+      form: 4
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=605
+              text:
+                - issue, issuance, bringing out, edition, publication

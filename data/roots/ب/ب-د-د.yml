@@ -24,3 +24,15 @@ root:
           source: hw4-free-text
           text:
             - to want
+
+    - text: بُدّ
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=68
+          text: []
+          contextual:
+            - text: لا بد من
+              translation: it is necessary, inescapable, unavoidable, inevitable

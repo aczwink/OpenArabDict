@@ -45,6 +45,17 @@ root:
                   url: http://ejtaal.net/aa/#hw4=437
                   text:
                     - odor, smell
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: iu
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 34
+              text:
+                - to go
 
     - type: verb
       dialect: msa
@@ -68,6 +79,17 @@ root:
           source: hw4-free-text
           text:
             - to rest, relax, find recreation
+      derived:
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 8
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 36
+              text:
+                - to rest
+
     - text: رِيح
       type: noun
       gender: female

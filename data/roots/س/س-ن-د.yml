@@ -15,40 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ف-ف
+  radicals: س-ن-د
   words:
     - type: verb
       dialect: msa
-      form:
-        stem: 1
-        parameters: ai
-      translations: []
-      derived:
-        - text: خُفّ
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - a pair of shoes, slippers (of light leather, without heels)
-        - text: خِفَّة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - lightless (of weight)
-
-    - type: verb
-      dialect: msa
-      form: 2
+      form: 3
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=301
+          url: http://ejtaal.net/aa/#hw4=520
           text:
-            - to make lighter (ه s.th.), reduce the weight of (ه)
+            - to support, back, assist, help, aid (ه s.o.)

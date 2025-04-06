@@ -33,6 +33,9 @@ root:
               source: hw4-free-text
               text:
                 - difficulty
+          derived:
+            - text: صُعُوبَات
+              derivation: plural
         - text: صَعْب
           derivation: meaning-related
           type: adjective

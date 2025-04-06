@@ -65,3 +65,13 @@ root:
               source: hw4-free-text
               text:
                 - freedom, liberation, release, extrication, escape (من from)
+
+    - text: خُلَاصَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=308
+          text:
+            - quintessence, substance, gist (of s.th.)

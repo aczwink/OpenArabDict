@@ -31,3 +31,13 @@ root:
               text:
                 - persuasion
                 - convincing, convincement, conviction
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=941
+              text:
+                - convincing

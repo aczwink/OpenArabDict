@@ -15,43 +15,24 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ج-ر-ي
+  radicals: ء-ج-ر
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to run
+        parameters: au
       derived:
-        - text: مَجْرًى
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - Watercourse
-
-    - type: verb
-      dialect: msa
-      form: 4
-      derived:
-        - derivation: verbal-noun
+        - text: أَجْر
+          derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=158
+              url: http://ejtaal.net/aa/#hw4=19
               text:
-                - performance (of an action)
-                - execution
+                - wages, pay, honorarium, recompense, emolument, remuneration
           derived:
-            - text: إِجْرَاءَات
+            - text: أُجُور
               derivation: plural

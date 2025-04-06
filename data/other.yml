@@ -1041,9 +1041,13 @@ words:
     gender: female
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=1308
         text:
           - hand
+        contextual:
+          - text: يدا بيد
+            translation: personal(ly), from hand to hand
     derived:
       - text: يَدَوِيّ
         derivation: nisba
