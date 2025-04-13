@@ -15,6 +15,19 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: أُسْتَاذ
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=31
+        text:
+          - master
+    derived:
+      - text: أَسَاتِذَة
+        derivation: plural
+
   - text: بَرْنَامَج
     type: noun
     gender: male

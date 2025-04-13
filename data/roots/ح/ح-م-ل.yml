@@ -43,6 +43,24 @@ root:
               url: http://ejtaal.net/aa/#hw4=254
               text:
                 - carrying, bearing
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=255
+              text:
+                - holding device, holder, clamp, fastener, hold, support (techn.)
+        - derivation: active-participle
+          type: adjective
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=255
+              text:
+                - pregnant
         - derivation: passive-participle
           type: adjective
           gender: male

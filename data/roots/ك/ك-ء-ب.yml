@@ -15,36 +15,36 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ح-ك-ي
+  radicals: ك-ء-ب
   words:
     - type: verb
       dialect: msa
-      form:
-        stem: 1
-        parameters: ai
+      form: 8
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=957
           text:
-            - to tell, relate (ه s.th.), report, give an account (ه of)
+            - to be dejected, dispirted, downcast, sad (على about, ل because of), be worried (ل by, because of)
+            - to be gloomy
       derived:
-        - text: حِكَايَة
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
-          gender: female
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D8%A7%D9%83%D8%AA%D8%A6%D8%A7%D8%A8#Arabic
+              text:
+                - depression, despondency
+        - derivation: active-participle
+          type: adjective
+          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=957
               text:
-                - story, tale, narrative
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ii
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 26
-              text:
-                - to speak
+                - sad, dispirited, dejected, downcast, depressed, melancholy

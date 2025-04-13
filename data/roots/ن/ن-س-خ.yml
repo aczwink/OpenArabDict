@@ -33,6 +33,31 @@ root:
               url: http://ejtaal.net/aa/#hw4=1141
               text:
                 - copying, transcription
+              contextual:
+                - text: قلم النسخ
+                  translation: Neskhi ductus (see نسخي)
+          derived:
+            - text: نَسْخِيّ
+              derivation: nisba
+              type: noun
+              gender: male
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1141
+                  text:
+                    - Neskhi, the ordinary cursive Arabic script, the common calligraphic style
+        - text: نَسَّاخ
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1141
+              text:
+                - copyist, transcriber
         - text: نُسْخَة
           derivation: meaning-related
           type: noun

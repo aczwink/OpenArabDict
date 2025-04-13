@@ -35,6 +35,21 @@ root:
                 - |-
                   1. succession, sequence, course, thread (of conversation)
                   2. context
+
+    - type: verb
+      dialect: msa
+      form: 2
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=530
+              text:
+                - marketing, sale (of merchandise)
+
     - type: verb
       dialect: msa
       form: 5

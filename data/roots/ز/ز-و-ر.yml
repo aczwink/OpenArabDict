@@ -38,6 +38,17 @@ root:
               url: http://ejtaal.net/aa/#hw4=461
               text:
                 - visit
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: iu
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 40
+              text:
+                - to visit
 
     - type: verb
       dialect: msa

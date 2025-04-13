@@ -61,6 +61,7 @@ root:
               source: hw4-free-text
               text:
                 - forearm
+
     - type: verb
       dialect: msa
       form: 3
@@ -80,3 +81,12 @@ root:
               source: hw4-free-text
               text:
                 - support, backing, aid, help, assistance
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 3
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 41
+              text:
+                - to help
