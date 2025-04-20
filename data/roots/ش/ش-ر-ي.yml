@@ -51,6 +51,7 @@ root:
                       purchasing (in compounds)
 
                       قوة شرائية purchasing power
+
     - type: verb
       dialect: msa
       form: 8
@@ -69,3 +70,12 @@ root:
               url: http://ejtaal.net/aa/#hw4=562
               text:
                 - purchaser, buyer, customer
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 8
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 49
+              text:
+                - to buy

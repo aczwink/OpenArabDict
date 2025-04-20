@@ -59,6 +59,18 @@ root:
               type: noun
               gender: female
               translations: []
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: ia
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 47
+              text:
+                - to hear
+
     - type: verb
       dialect: msa
       form: 4

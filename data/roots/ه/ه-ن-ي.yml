@@ -15,38 +15,13 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ش-غ-ل
+  radicals: ه-ن-ي
   words:
     - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: aa
-      translations: []
-      derived:
-        - text: مَشْغُول
-          derivation: passive-participle
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - busy, occupied (ب with)
-    - type: verb
-      dialect: msa
-      form: 3
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to hold in play, to keep occupied
-
-    - type: verb
       dialect: lb
-      form: 8
+      form: 10
       translations:
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 50
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 44
           text:
-            - to work
+            - to enjoy

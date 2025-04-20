@@ -15,15 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ش-و-ف
+  radicals: ح-ق-ب
   words:
-    - type: verb
-      dialect: lb
-      form:
-        stem: 1
-        parameters: iu
+    - text: حَقِيبَة
+      type: noun
+      gender: female
       translations:
-        - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 48
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=239
           text:
-            - to see
+            - valise, suitcase, travelling bag
