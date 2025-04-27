@@ -36,6 +36,15 @@ root:
               url: http://ejtaal.net/aa/#hw4=971
               text:
                 - repitition, reiteration
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=971
+              text:
+                - repeated, reiterated
 
     - type: verb
       dialect: msa

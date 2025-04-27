@@ -19,6 +19,29 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: uu
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          derived:
+            - text: جَائِزَة
+              derivation: feminine
+              type: noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=188
+                  text:
+                    - prize, reward, premium
+              derived:
+                - text: جَوَائِز
+                  derivation: plural
+
+    - type: verb
+      dialect: msa
       form: 6
       translations:
         - dialect: msa

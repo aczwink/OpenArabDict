@@ -30,6 +30,19 @@ root:
               1. to return, come back (ل or إلى to)
               2. to go back, be traceable, be attributable (إلى to)
       derived:
+        - text: مَعَاد
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=780
+              text:
+                - return
+              contextual:
+                - text: المعاد
+                  translation: the hereafter, the life to come
         - text: عُود
           derivation: meaning-related
           type: noun

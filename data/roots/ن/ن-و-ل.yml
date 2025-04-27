@@ -20,7 +20,12 @@ root:
     - type: verb
       dialect: msa
       form: 6
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1199
+          text:
+            - to take up, treat, discuss (ه a subject), deal with (ه)
       derived:
         - text: تَنَاوُل
           derivation: verbal-noun

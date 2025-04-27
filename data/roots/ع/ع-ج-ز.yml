@@ -15,26 +15,21 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ح-ر-س
+  radicals: ع-ج-ز
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: au
+        parameters: ai
+      alias: ia
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=705
           text:
-            - to guard, watch, control (ه, ه s.th., s.o.)
-      derived:
-        - text: حِرَاسَة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=210
-              text:
-                - guardianship, tutelage, custody, care, protection
+            - to be weak, lack strength, be incapable (عن of), be unable (عن to do s.th.)
+          examples:
+            - text: ما عجز عن ان
+              translation: not to fail to...

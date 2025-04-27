@@ -65,3 +65,21 @@ root:
               type: noun
               gender: male
               translations: []
+
+    - text: كَوْن
+      type: noun
+      gender: male
+      derived:
+        - text: كَوْنِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1007
+              text:
+                - cosmic, cosmo- (in compounds)
+              examples:
+                - text: الفلسفة الكونية
+                  translation: cosmology

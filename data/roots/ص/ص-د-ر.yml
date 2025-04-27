@@ -22,11 +22,17 @@ root:
       form:
         stem: 1
         parameters: au
+      alias: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=604
           text:
             - to come out, be issued, be promulgated (order, ordinance, law)
+            - to appear, be published (book)
+          examples:
+            - text: صدر له كتاب
+              translation: a book by him has been published
       derived:
         - text: صَدْر
           derivation: meaning-related

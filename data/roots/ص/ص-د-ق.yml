@@ -33,22 +33,39 @@ root:
               source: hw4-free-text
               text:
                 - true, truthful, veracious, sincere, candid
+
     - type: verb
       dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=607
           text:
-            - to deem (ه، ه s.o., s.th.) credible, accept (ه s.th.) as true,
-              give credence (ه، ه to s.o., to s.th.), believe, trust (ه, ه s.o.,
-              s.th.)
+            - to deem (ه، ه s.o., s.th.) credible, accept (ه s.th.) as true, give credence (ه، ه to s.o., to s.th.), believe, trust (ه, ه s.o., s.th.)
+            - to give one's consent, to consent, assent, agree (على to s.th.), approve (على of s.th.), grant, license, sanction, certify, copnfirm, substantiate, attest, ratify
+            - (officially) to certify (على the correctness of a translation, signature, or copy)
       derived:
-        - text: مُصَدِّق
-          derivation: active-participle
+        - text: تَصْدِيق
+          derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=607
+              text:
+                - consent, assent, agreement (على to), approval, sanctioning, licensing, certification, confirmation, attestation, ratification
+                - (official) certification (على of a translation, signature or copy)
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=608
+              text:
+                - credible, believable, reliable, trustworthy
 
     - text: صَدِيق
       type: noun

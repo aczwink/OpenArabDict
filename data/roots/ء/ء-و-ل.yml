@@ -22,6 +22,22 @@ root:
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=57
           text:
             - first
+      derived:
+        - text: أَوَّلًا
+          derivation: adverbial-accusative
+          type: adverb
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=58
+              text:
+                - first, firstly, in the first place
+              contextual:
+                - text: اولا بالأول
+                  translation: by and by, gradually, one after the other, one by one
+                - text: اولا فأولا
+                  translation: by and by, gradually, one after the other, one by one

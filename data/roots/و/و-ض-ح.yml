@@ -22,6 +22,17 @@ root:
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1274
+          text:
+            - to make clear, make plain (ه s.th.)
+
+    - type: verb
+      dialect: msa
+      form: 4
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1274
           text:
             - to make clear, make plain (ه s.th.)

@@ -21,6 +21,24 @@ root:
       dialect: msa
       form:
         stem: 1
+        parameters: au
+      translations: []
+      derived:
+        - text: قَدْر
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - على قدر commensurate with, corresponding to, according to, in
+                  proportion to
+
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
         parameters: ai
       translations:
         - dialect: msa
@@ -59,19 +77,19 @@ root:
       dialect: msa
       form:
         stem: 1
-        parameters: au
+        parameters: ia
       translations: []
       derived:
-        - text: قَدْر
+        - text: قَدَر
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=887
               text:
-                - على قدر commensurate with, corresponding to, according to, in
-                  proportion to
+                - fate, destiny, lot
 
     - type: verb
       dialect: msa

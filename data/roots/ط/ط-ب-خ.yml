@@ -28,7 +28,7 @@ root:
           text:
             - to cook (ه s.th.)
       derived:
-        - text: طَبَّاخ⁩
+        - text: طَبَّاخ
           derivation: meaning-related
           type: noun
           gender: male
@@ -38,8 +38,19 @@ root:
               text:
                 - cook
           derived:
-            - text: طَبَّاخُونَ⁩
+            - text: طَبَّاخُونَ
               derivation: plural
               type: noun
               gender: male
               translations: []
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: ausu
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 56
+              text:
+                - to cook

@@ -30,11 +30,15 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1126
               text:
-                - |-
-                  1. side
-                  2. section, part
+                - side
+                - section, part
+                - way, course, method, manner, mode, fashion
+              contextual:
+                - text: على هذا النحو
+                  translation: in this manner, this way; in this respect
           derived:
             - text: أَنْحَاء
               derivation: plural
@@ -45,7 +49,7 @@ root:
                   source: hw4-free-text
                   text:
                     - ""
-        - text: نَاحِيَة⁩
+        - text: نَاحِيَة
           derivation: meaning-related
           type: noun
           gender: female

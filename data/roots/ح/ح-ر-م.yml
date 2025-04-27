@@ -55,3 +55,13 @@ root:
               source: hw4-free-text
               text:
                 - deference, respect, regard, esteem, reverence
+
+    - text: مَحْرَمَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=215
+          text:
+            - handkerchief

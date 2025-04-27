@@ -15,26 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ح-ر-س
+  radicals: ش-ك-ر
   words:
     - type: verb
-      dialect: msa
+      dialect: lb
       form:
         stem: 1
-        parameters: au
+        parameters: aisu
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 52
           text:
-            - to guard, watch, control (ه, ه s.th., s.o.)
-      derived:
-        - text: حِرَاسَة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=210
-              text:
-                - guardianship, tutelage, custody, care, protection
+            - to thank

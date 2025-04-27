@@ -61,6 +61,7 @@ root:
               text:
                 - defense, protection, guarding (esp. of cherished, sacred
                   things)
+
     - type: verb
       dialect: msa
       form: 8
@@ -68,8 +69,17 @@ root:
         - dialect: msa
           source: hw4-free-text
           text:
-            - to put away, hold, have in safekeeping (ب s.th.), take care (ب of
-              s.th.)
+            - to put away, hold, have in safekeeping (ب s.th.), take care (ب of s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=235
+              text:
+                - preservation
 
     - text: حَفِيظ
       type: adjective
