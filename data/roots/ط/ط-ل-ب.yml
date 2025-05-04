@@ -70,6 +70,17 @@ root:
               type: noun
               gender: male
               translations: []
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: aiiuu
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 57
+              text:
+                - to request
     - type: verb
       dialect: msa
       form: 3

@@ -63,3 +63,19 @@ root:
               text:
                 - generous, liberal, munificent, hospitable, beneficent
                 - precious, valuable, costly
+
+    - type: verb
+      dialect: msa
+      form: 2
+      derived:
+        - text: تَكْرِيم
+          alias: تَكْرِمَة
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=976
+              text:
+                - honoring, tribute, honor (bestowed on s.o.)

@@ -324,11 +324,14 @@ words:
     type: conjunction
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        url: https://ejtaal.net/aa/#hw4=764
         text:
-          - |-
-            = عن ما
-            سأله عما اذا he asked him whether
+          - = عن ما
+        contextual:
+          - text: سأله عما اذا
+            translation: he asked him whether
+
   - text: دَم
     type: noun
     gender: male
@@ -1135,10 +1138,16 @@ words:
     gender: male
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        url: https://ejtaal.net/aa/#hw4=376
         text:
-          - (with foll. genit.) possessor, owner, holder or master of, endowed
-            or provided with, embodying or comprising s.th.
+          - (with foll. genit.) possessor, owner, holder or master of, endowed or provided with, embodying or comprising s.th.
+        examples:
+          - text: ذو عقل
+            translation: endowed with brains, bright, intelligent
+    derived:
+      - text: ذَات
+        derivation: feminine
 
   - text: عَنْكَبُوت
     type: noun
@@ -1159,3 +1168,19 @@ words:
             derivation: feminine
             type: noun
             gender: female
+
+  - text: نَبْق
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: https://ejtaal.net/aa/#hw4=1116
+        text:
+          - lotus fruit
+          - lotus blossom
+    derived:
+      - text: نَبْقَة
+        derivation: singulative
+        type: noun
+        gender: female

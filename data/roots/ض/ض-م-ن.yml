@@ -38,9 +38,13 @@ root:
           type: preposition
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=650
               text:
                 - in, within, inside of, among
+              contextual:
+                - text: من ضمن
+                  translation: (with foll. genit.) included in, implied in, belonging to, falling under
     - type: verb
       dialect: msa
       form: 5

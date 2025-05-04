@@ -22,13 +22,21 @@ root:
       form:
         stem: 1
         parameters: aa
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1099
+          text:
+            - to grant, give, accord, award (ه ه to s.o. s.th.), bestow, confer (ه ه upon s.o. s.th.)
       derived:
         - text: مَنْح
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
               url: http://ejtaal.net/aa/#hw4=1099
               text:

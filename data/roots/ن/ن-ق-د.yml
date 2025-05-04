@@ -39,3 +39,15 @@ root:
               type: noun
               gender: male
               translations: []
+
+    - text: نَقَّاد
+      type: noun
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1174
+          text:
+            - critic
+            - reviewer

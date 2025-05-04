@@ -71,3 +71,13 @@ root:
               url: http://ejtaal.net/aa/#hw4=18
               text:
                 - action, effect, influence, impression (في, على on)
+
+    - text: أَثِير
+      type: adjective
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=18
+          text:
+            - favored, preferred (عند by s.o.), in favor (عند with s.o.)

@@ -58,6 +58,7 @@ root:
               type: noun
               gender: male
               translations: []
+
     - type: verb
       dialect: msa
       form: 4
@@ -71,3 +72,13 @@ root:
               url: http://ejtaal.net/aa/#hw4=605
               text:
                 - issue, issuance, bringing out, edition, publication
+
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=604
+          text:
+            - to occupy the leading position, be in the lead (ه of s.th.)

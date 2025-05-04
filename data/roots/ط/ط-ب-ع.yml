@@ -126,3 +126,16 @@ root:
               derivation: feminine
               type: adjective
               gender: female
+
+    - text: طَبْعَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=658
+          text:
+            - edition, issue, impression
+      derived:
+        - text: طَبْعَات
+          derivation: plural

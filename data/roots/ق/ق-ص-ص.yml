@@ -43,3 +43,20 @@ root:
               type: noun
               gender: female
               translations: []
+
+    - text: قَصَص
+      type: noun
+      gender: male
+      derived:
+        - text: قَصَصِيّ
+          alias: قِصَصِيّ
+          derivation: nisba
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=909
+              text:
+                - narrative, epic(al)
+                - fictional

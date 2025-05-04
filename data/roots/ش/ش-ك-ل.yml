@@ -39,6 +39,17 @@ root:
               type: noun
               gender: male
               translations: []
+
+    - type: verb
+      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=577
+          text:
+            - to diversify, vary, variegate (ه s.th.), bring variety (ه into s.th.)
+
     - type: verb
       dialect: msa
       form: 3

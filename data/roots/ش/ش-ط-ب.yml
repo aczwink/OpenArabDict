@@ -15,31 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ج-ل-ل
+  radicals: ش-ط-ب
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to be great, lofty, exalted, illustrious, sublime
-      derived:
-        - text: جَلَال
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations: []
-
-    - text: مَجَلَّة
-      type: noun
-      gender: male
+        parameters: au
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=166
+          url: http://ejtaal.net/aa/#hw4=563
           text:
-            - review, magazine
+            - to strike out, cross out, scratch out, write off (على or ه s.th.)

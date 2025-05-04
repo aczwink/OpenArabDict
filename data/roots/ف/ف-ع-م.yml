@@ -15,39 +15,19 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ط-ل-ق
+  radicals: ف-ع-م
   words:
     - type: verb
       dialect: msa
       form: 4
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - |-
-              to utter, emit (ه a sound)
-
-              أطلق عليه اِسْمَ to name or call s.th.
       derived:
-        - derivation: verbal-noun
+        - derivation: passive-participle
           type: noun
           gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=676
-              text: []
-              contextual:
-                - text: على الاطلاق
-                  translation: absolutely, unrestrictedly, without exception, in any respect, under any circumstances
-
-    - type: verb
-      dialect: msa
-      form: 7
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - |-
-              1. to begin (من with)
-              2. to start (من from s.th. as a point of origin)
+              url: http://ejtaal.net/aa/#hw4=858
+              text:
+                - brimful, chock-full, filled to capacity or overflowing, replete, overfull, filled entirely, crammed, jampacked (ب with)

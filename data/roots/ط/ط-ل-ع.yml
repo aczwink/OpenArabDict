@@ -29,6 +29,17 @@ root:
             - to go out, to exit
 
     - type: verb
+      dialect: lb
+      form:
+        stem: 1
+        parameters: ia
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 58
+          text:
+            - to ascend
+
+    - type: verb
       dialect: msa
       form: 10
       derived:

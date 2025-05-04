@@ -117,6 +117,17 @@ root:
                 - |-
                   1. limitation, delimitation
                   2. determination, fixation, appointment
+
+    - type: verb
+      dialect: msa
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=200
+          text:
+            - to be determined, be established, be set down, be scheduled, be fixed
+
     - text: حَدِيد
       type: noun
       gender: male

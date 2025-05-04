@@ -34,3 +34,12 @@ root:
           type: noun
           gender: male
           translations: []
+
+    - text: وَقْتَذَاكَ
+      type: adverb
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1287
+          text:
+            - then, at that time, by then

@@ -34,4 +34,6 @@ root:
           source: hw4
           url: http://ejtaal.net/aa/#hw4=1234
           text:
+            - society, association
+            - organization
             - board, commision, committee

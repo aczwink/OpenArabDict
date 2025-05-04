@@ -59,8 +59,7 @@ root:
           text:
             - to make (ه s.th.) stand, set up (ه s.th.)
       derived:
-        - text: إِيْقَاف
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:

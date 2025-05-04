@@ -44,7 +44,12 @@ root:
               derivation: plural
               type: noun
               gender: male
-              translations: []
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=768
+                  text:
+                    - الأعمال business, commercial life
         - derivation: active-participle
           type: noun
           gender: male
@@ -64,6 +69,17 @@ root:
               url: http://ejtaal.net/aa/#hw4=770
               text:
                 - working, employed
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: iaa
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 62
+              text:
+                - to do
 
     - type: verb
       dialect: msa

@@ -15,39 +15,25 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ط-ل-ق
+  radicals: و-ش-ك
   words:
     - type: verb
       dialect: msa
-      form: 4
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - |-
-              to utter, emit (ه a sound)
-
-              أطلق عليه اِسْمَ to name or call s.th.
+      form:
+        stem: 1
+        type: sound
+        parameters: uu
       derived:
-        - derivation: verbal-noun
+        - text: وَشْك
+          alias: وُشْك
+          derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=676
+              url: http://ejtaal.net/aa/#hw4=1268
               text: []
               contextual:
-                - text: على الاطلاق
-                  translation: absolutely, unrestrictedly, without exception, in any respect, under any circumstances
-
-    - type: verb
-      dialect: msa
-      form: 7
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - |-
-              1. to begin (من with)
-              2. to start (من from s.th. as a point of origin)
+                - text: على وشك ان
+                  translation: on the point or verge of (doing s.th.), about to (do s.th.)

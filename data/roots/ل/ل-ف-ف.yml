@@ -27,3 +27,14 @@ root:
           source: hw4-free-text
           text:
             - to make a round of calls (على on), visit (على people)
+
+    - text: مِلَفّ
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1035
+          text:
+            - folder, portfolio
+            - letter file
