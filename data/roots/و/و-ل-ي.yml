@@ -19,6 +19,16 @@ root:
   words:
     - type: verb
       dialect: msa
+      form: 2
+      translations:
+        - dialect: dz
+          source: free-text
+          url: https://ar.wikipedia.org/wiki/%D9%8A%D8%A7_%D8%A7%D9%84%D8%B1%D8%A7%D9%8A%D8%AD
+          text:
+            - to return
+
+    - type: verb
+      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -27,6 +37,7 @@ root:
             - to occupy, fill, hold (ه an office), be entrusted (ه with), be in
               charge (ه of), take over, take upon o.s., undertake, take in hand
               (ه an affair), attend (ه to)
+
     - type: verb
       dialect: msa
       form: 10

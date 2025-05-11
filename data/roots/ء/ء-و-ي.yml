@@ -14,32 +14,15 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-relations:
-  - word1:
-      text: رَأْس مَال
-    word2:
-      text: رَأْسْمَال
-    relationship: synonym
-
-  - word1:
-      text: فَرْجَى
-    word2:
-      text: وَرْجَيَ
-    relationship: synonym
-
-  - word1:
-      text: هَلَّأ
-    word2:
-      text: هَسَّا
-    relationship: synonym
-  - word1:
-      text: هَسَّا
-    word2:
-      text: إِسَّا
-    relationship: synonym
-
-  - word1:
-      text: نِسَاء
-    word2:
-      text: نِسْوَان
-    relationship: synonym
+root:
+  radicals: ء-و-ي
+  words:
+    - text: مَأْوًى
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=59
+          text:
+            - place of refuge, retreat, shelter

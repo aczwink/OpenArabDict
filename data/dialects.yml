@@ -62,9 +62,27 @@ dialects:
                 emojiCodes: 🇵🇸
                 iso639code:
                 glottoCode:
+      
+      - key: maghrebi
+        name: Maghrebi
+        emojiCodes: 🇩🇿🇲🇦🇹🇳
+        iso639code: arq_aeb
+        glottoCode: nort3191
+        children:
+          - key: dz
+            name: Algerian Arabic
+            emojiCodes: 🇩🇿
+            iso639code: arq
+            glottoCode: alge1239
 
-      - key: tn
-        name: Tunisian Arabic
-        emojiCodes: 🇹🇳
-        iso639code: aeb
-        glottoCode: tuni1259
+          - key: ma
+            name: Moroccan Arabic
+            emojiCodes: 🇲🇦
+            iso639code: ary
+            glottoCode: moro1292
+
+          - key: tn
+            name: Tunisian Arabic
+            emojiCodes: 🇹🇳
+            iso639code: aeb
+            glottoCode: tuni1259

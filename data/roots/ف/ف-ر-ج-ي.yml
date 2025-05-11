@@ -18,12 +18,12 @@ root:
   radicals: ف-ر-ج-ي
   words:
     - type: verb
-      dialect: msa
+      dialect: lb
       form:
         stem: 1
         parameters: ss
       translations:
-        - dialect: northlevant
-          source: hw4-free-text
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 67
           text:
             - to show

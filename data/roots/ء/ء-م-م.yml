@@ -50,3 +50,16 @@ root:
           derivation: plural
           type: noun
           gender: female
+
+    - text: إِمَام
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=45
+          text:
+            - imam, prayer leader
+      derived:
+        - text: أَئِمَّة
+          derivation: plural

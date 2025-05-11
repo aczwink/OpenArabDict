@@ -15,38 +15,12 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
-  - text: جَوّ
-    type: noun
-    gender: male
+  - text: شْحَال
+    type: adverb
     translations:
-      - dialect: msa
-        source: hw4
-        url: http://ejtaal.net/aa/#hw4=184
+      - dialect: ma
+        complete: true
+        source: free-text
+        url: https://en.wiktionary.org/wiki/%D8%B4%D8%AD%D8%A7%D9%84
         text:
-          - atmosphere (also fig.)
-
-  - text: دَفْتَر
-    type: noun
-    gender: male
-    translations:
-      - dialect: msa
-        source: hw4
-        url: http://ejtaal.net/aa/#hw4=342
-        text:
-          - notebook, copybook
-
-  - text: نَبْق
-    type: noun
-    gender: male
-    translations:
-      - dialect: msa
-        source: hw4
-        url: https://ejtaal.net/aa/#hw4=1116
-        text:
-          - lotus fruit
-          - lotus blossom
-    derived:
-      - text: نَبْقَة
-        derivation: singulative
-        type: noun
-        gender: female
+          - (interrogative) how much?

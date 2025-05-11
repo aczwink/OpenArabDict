@@ -15,7 +15,7 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ف-ه-م
+  radicals: ع-ي-ي
   words:
     - type: verb
       dialect: msa
@@ -24,32 +24,7 @@ root:
         parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=786
           text:
-            - to understand, comprehend, realize (ه s.th.)
-      derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 69
-              text:
-                - to understand
-
-    - type: verb
-      dialect: msa
-      form: 6
-      derived:
-        - derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=868
-              text:
-                - mutual understanding, mutual agreement, concurrence, accord
+            - not to find the right way or the right method

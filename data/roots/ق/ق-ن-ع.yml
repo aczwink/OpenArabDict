@@ -41,3 +41,16 @@ root:
               url: http://ejtaal.net/aa/#hw4=941
               text:
                 - convincing
+
+    - text: قِنَاع
+      type: noun
+      gender: male
+      derived:
+        - text: أَقْنِعَة
+          derivation: plural
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=941
+              text:
+                - veil, head veil

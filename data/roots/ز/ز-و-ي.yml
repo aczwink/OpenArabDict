@@ -15,41 +15,24 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ف-ه-م
+  radicals: ز-و-ي
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to understand, comprehend, realize (ه s.th.)
+        parameters: ai
       derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 69
-              text:
-                - to understand
-
-    - type: verb
-      dialect: msa
-      form: 6
-      derived:
-        - derivation: verbal-noun
+        - text: زَاوِيَة
+          derivation: meaning-related
           type: noun
-          gender: male
+          gender: female
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=868
+              url: http://ejtaal.net/aa/#hw4=463
               text:
-                - mutual understanding, mutual agreement, concurrence, accord
+                - small mosque, prayer room
+          derived:
+            - text: زَوَايَا
+              derivation: plural
