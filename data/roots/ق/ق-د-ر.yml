@@ -44,9 +44,7 @@ root:
         - dialect: msa
           source: hw4-free-text
           text:
-            - to have the possibility to do (على s.th.), be in a position to do
-              s.th. (ان or على), be able to do s.th. (ان or على), be capable (ان
-              or على of)
+            - to have the possibility to do (على s.th.), be in a position to do s.th. (ان or على), be able to do s.th. (ان or على), be capable (ان or على of)
       derived:
         - text: قُدْرَة
           derivation: verbal-noun
@@ -72,6 +70,17 @@ root:
               url: http://ejtaal.net/aa/#hw4=888
               text:
                 - capable (على of s.th.), able (على to do s.th.)
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: ia
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 73
+              text:
+                - to be able to
 
     - type: verb
       dialect: msa

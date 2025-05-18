@@ -17,7 +17,7 @@
  * */
 import { OpenArabDictWordType } from "openarabdict-domain";
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { VerbType, Voice } from "openarabicconjugation/dist/Definitions";
+import { Voice } from "openarabicconjugation/dist/Definitions";
 import { DialectType } from "openarabicconjugation/dist/Dialects";
 import { CreateVerb } from "openarabicconjugation/dist/Verb";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
@@ -28,6 +28,7 @@ import { TreeTrace } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { EqualsAny } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
+import { MapVerbTypeToOpenArabicConjugation } from "../shared";
 
 function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent?: TreeTrace): string | undefined
 {
@@ -44,7 +45,7 @@ function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-            const verbType = (verb.soundOverride === true) ? VerbType.Sound : rootInstance.DeriveDeducedVerbType();
+            const verbType = MapVerbTypeToOpenArabicConjugation(verb.verbType) ?? rootInstance.DeriveDeducedVerbType();
             const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any, verbType);
 
             const voice = (word.derivation === "active-participle") ? Voice.Active : Voice.Passive;

@@ -54,7 +54,7 @@ interface ParameterizedStem1Data
 {
     stem: 1;
     parameters: string;
-    type?: "sound";
+    type?: "defective" | "sound";
 }
 
 interface ParameterizedAdvancedStemData

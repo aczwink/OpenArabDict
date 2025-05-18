@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType } from "openarabdict-domain";
+import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictVerbType } from "openarabdict-domain";
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { VerbType, AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 import { CreateVerb } from "openarabicconjugation/dist/Verb";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
@@ -32,6 +32,7 @@ import { ValidateGender } from "./validators/ValidateGender";
 import { ValidatePlural } from "./validators/ValidatePlural";
 import { ValidateText } from "./validators/ValidateText";
 import { ValidateFeminine } from "./validators/ValidateFeminine";
+import { MapVerbTypeToOpenArabicConjugation } from "./shared";
 
 export class WordProcessor
 {
@@ -118,6 +119,20 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                     relationType: MapWordDerivationType(derivation)
                 }
         }
+    }
+
+    function MapVerbType(verb: VerbWordDefinition)
+    {
+        if(typeof verb.form === "number")
+            return undefined;
+        switch(verb.form.type)
+        {
+            case "defective":
+                return OpenArabDictVerbType.Defective;
+            case "sound":
+                return OpenArabDictVerbType.Sound;
+        }
+        return undefined;
     }
 
     const translations = wordDef.translations?.map(x => ({
@@ -240,8 +255,9 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
             if(typeof v.form !== "number")
             {
                 const meta = GetDialectMetadata(dialectType);
-                const verbType = (v.form.type === "sound") ? VerbType.Sound : undefined;
-                const choices = meta.GetStem1ContextChoices(rootInstance);
+                const verbType = MapVerbTypeToOpenArabicConjugation(MapVerbType(v));
+                const defVerbType = verbType ?? rootInstance.DeriveDeducedVerbType();
+                const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
                 if((v.form.stem === 1) && !choices.types.includes(v.form.parameters))
                 {
                     console.log(wordDef, wordDef.translations);
@@ -273,7 +289,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 text: conjugatedWord,
                 stemParameters: ((typeof v.form !== "number") && (v.form.stem === 1)) ? v.form.parameters : undefined,
                 translations,
-                soundOverride: ((typeof v.form !== "number") && (v.form.type !== undefined)) ? true : undefined,
+                verbType: MapVerbType(v),
                 parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})
             });
 

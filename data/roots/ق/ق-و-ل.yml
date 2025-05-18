@@ -29,6 +29,15 @@ root:
             - to speak, say, tell (ه s.th., ل to s.o.; في or عن ه s.th. about or
               of), utter, voice (ه s.th.)
       derived:
+        - text: قَوْل
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - word, speech, saying, utterance, remark
         - text: مَقُولَة
           derivation: meaning-related
           type: noun
@@ -40,12 +49,14 @@ root:
               url: https://ejtaal.net/aa/#hw4=946
               text:
                 - a word (= short talk or written statement about s.th.)
-        - text: قَوْل
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: iu
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 70
               text:
-                - word, speech, saying, utterance, remark
+                - to say

@@ -149,6 +149,12 @@ interface OpenArabDictOtherWord extends OpenArabDictWordBase
     parent?: OpenArabDictWordParent;
 }
 
+export enum OpenArabDictVerbType
+{
+    Defective,
+    Sound,
+}
+
 export interface OpenArabDictVerb extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Verb;
@@ -156,7 +162,7 @@ export interface OpenArabDictVerb extends OpenArabDictWordBase
     rootId: string;
     dialectId: number;
     stem: number;
-    soundOverride?: boolean;
+    verbType?: OpenArabDictVerbType;
     stemParameters?: string;
 }
 
