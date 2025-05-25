@@ -27,16 +27,6 @@ root:
           source: hw4-free-text
           text:
             - to be beneficent
-      derived:
-        - text: بَرِّيَّة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - open country
 
     - type: verb
       dialect: msa
@@ -52,3 +42,24 @@ root:
               text:
                 - justification
                 - excuse
+
+    - text: بَرّ
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=74
+          text:
+            - land (as opposed to sea), terra firma, mainland
+            - open country
+
+    - text: بَرِّيَّة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=74
+          text:
+            - open country

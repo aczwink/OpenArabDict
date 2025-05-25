@@ -28,21 +28,16 @@ root:
           text:
             - "and passive: to be happy, lucky, fortunate"
       derived:
-        - text: سَعِيد⁩
-          derivation: meaning-related
-          type: adjective
+        - text: سَعْد
+          derivation: verbal-noun
+          type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=491
               text:
-                - happy (ب about, at)
-          derived:
-            - text: سُعَدَاء⁩
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
+                - good luck, good fortune
         - text: سَعَادَة
           derivation: verbal-noun
           type: noun
@@ -61,6 +56,21 @@ root:
               source: hw4-free-text
               text:
                 - forearm
+        - text: سَعِيد⁩
+          derivation: meaning-related
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - happy (ب about, at)
+          derived:
+            - text: سُعَدَاء⁩
+              derivation: plural
+              type: noun
+              gender: male
+              translations: []
 
     - type: verb
       dialect: msa

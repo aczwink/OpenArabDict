@@ -15,7 +15,7 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ص-غ-ر
+  radicals: ب-ط-ء
   words:
     - type: verb
       dialect: msa
@@ -25,16 +25,22 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=615
+          url: http://ejtaal.net/aa/#hw4=89
           text:
-            - youthfulness, juvenility (also صغر السن)
+            - to tarry, linger, wait, hesitate
+    - type: verb
+      dialect: msa
+      form: 4
       derived:
-        - text: صَغِير
-          derivation: meaning-related
-          type: adjective
-          gender: male
+        - derivation: colloquial
+          type: verb
+          dialect: msa #TODO: this is algerian
+          form:
+            stem: 1
+            parameters: au
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - dialect: dz
+              source: free-text
+              url: https://ar.mo3jam.com/term/%D8%A8%D8%B7%D8%A7#Algerian
               text:
-                - small, little
+                - to be delayed

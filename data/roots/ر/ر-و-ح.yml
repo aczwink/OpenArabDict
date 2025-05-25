@@ -29,11 +29,18 @@ root:
           text:
             - to go away, depart, leave, go
       derived:
-        - text: رَائِح
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
-          translations: []
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=437
+              text: []
+              contextual:
+                - text: رائح وغاد
+                  translation: going back and forth, walking up and down
           derived:
             - text: رَائِحَة
               derivation: feminine

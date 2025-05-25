@@ -24,7 +24,8 @@ root:
         parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=756
           text:
             - to know (ب or ه, s.o., s.th.), have knowledge, be cognizant, be aware (ب or ه of s.th.), be informed (ب or ه about or of s.th.), be familiar, be acquainted (ب or ه with s.th.)
             - to perceive, discern (ب or ه s.th.), find out (ب or ه about s.th., من from), learn, come to know (ب or ه s.th. or about s.th., من from)
@@ -192,6 +193,13 @@ root:
     - type: verb
       dialect: msa
       form: 4
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=756
+          text:
+            - to let (ه s.o.) know (ب or ه s.th. or about s.th.), tell (ب or ه ه s.o. about), notify, advise, apprise, inform (ه ب or ه ه s.o. of or about s.th.), acquaint (ه ب or ه ه s.o. with)
       derived:
         - derivation: verbal-noun
           type: noun

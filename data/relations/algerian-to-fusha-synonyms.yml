@@ -14,27 +14,9 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: ص-غ-ر
-  words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: uu
-      translations:
-        - dialect: msa
-          source: hw4
-          url: http://ejtaal.net/aa/#hw4=615
-          text:
-            - youthfulness, juvenility (also صغر السن)
-      derived:
-        - text: صَغِير
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - small, little
+relations:
+  - word1:
+      text: زَوَالِي
+    word2:
+      text: فَقِير
+    relationship: synonym

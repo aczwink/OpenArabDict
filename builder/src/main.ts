@@ -20,7 +20,7 @@ import path from "path";
 import YAML from 'yaml';
 import { DBBuilder } from "./DBBuilder";
 import { DialectMapper } from "./DialectMapper";
-import { OpenArabDictWordRelationshipType } from "openarabdict-domain";
+import { OpenArabDictDocument, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
 import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
 
@@ -160,7 +160,58 @@ async function BuildDatabase(dbSrcPath: string)
     }
 
     await builder.Store("./dist/db.json");
+    await CheckWords("./dist/db.json");
 }
 
 const dbSrcPath = process.argv[2];
 BuildDatabase(dbSrcPath);
+
+async function CheckWords(dbPath: string)
+{
+    const data = await fs.promises.readFile(dbPath, "utf-8");
+    const doc = JSON.parse(data) as OpenArabDictDocument;
+
+    for (const word of doc.words)
+    {
+        //test: arb/assimilated/stem1_type_sound.js
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.ActiveParticiple))
+        {
+            const verbId = word.parent.verbId;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId);
+
+            if(root?.radicals.startsWith("و") && (verb.stemParameters === "ia"))
+            {
+                console.log("FOUND", word);
+            }
+        }
+
+        //test: arb/defective/stem1_r3waw_type3.js
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
+        {
+            const verbId = word.parent.verbId;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId);
+
+            if((root?.radicals === "ندو") && (verb.stemParameters === "ia"))
+            {
+                console.log("FOUND", word);
+            }
+        }
+
+        //test: arb/defective/stem10.js
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.PassiveParticiple))
+        {
+            const verbId = word.parent.verbId;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId);
+
+            if(root?.radicals.startsWith("هد") && (verb.stem === 10))
+            {
+                console.log("FOUND", word);
+            }
+        }
+
+        //TODO: continue from: arb/doubly_weak/assimilated_and_doubled.js
+    }
+}

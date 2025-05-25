@@ -15,6 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: إِي
+    type: adverb
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=59
+        text:
+          - yes (with foll. والله yes, indeed! yes, by God!)
+
   - text: رُبَّمَا
     type: adverb
     translations:

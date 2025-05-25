@@ -15,52 +15,21 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: و-ع-د
+  radicals: ح-ظ-ظ
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ai
+        parameters: aa
       derived:
-        - text: وَعْد
+        - text: حَظّ
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=1279
+              url: http://ejtaal.net/aa/#hw4=231
               text:
-                - promise
-
-    - type: verb
-      dialect: msa
-      form: 3
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to arrange for a meeting or rendezvous, make an appointment (ه ه
-              with s.o. for a given time or at a certain place)
-
-    - type: verb
-      dialect: msa
-      form: 5
-      translations:
-        - complete: true
-          dialect: msa
-          source: hw4
-          url: https://ejtaal.net/aa/#hw4=1279
-          text:
-            - to threaten
-            - to menace (ه s.o.)
-
-    - text: مَوْعِد
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - appointment, date, rendezvous
+                - good luck, good fortune

@@ -15,14 +15,14 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictVerbType } from "openarabdict-domain";
+import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictVerbType, OpenArabDictTranslationEntry } from "openarabdict-domain";
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
 import { AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 import { CreateVerb } from "openarabicconjugation/dist/Verb";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
-import { GenderedWordDefinition, OtherWordDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
+import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
 import { DBBuilder } from "./DBBuilder";
 import { DialectMapper } from "./DialectMapper";
 import { WordDefinitionValidator, WordValidator } from "./WordDefinitionValidator";
@@ -33,9 +33,24 @@ import { ValidatePlural } from "./validators/ValidatePlural";
 import { ValidateText } from "./validators/ValidateText";
 import { ValidateFeminine } from "./validators/ValidateFeminine";
 import { MapVerbTypeToOpenArabicConjugation } from "./shared";
+import { HansWehr4Formatter } from "./formatters/HansWehr4Formatter";
 
 export class WordProcessor
 {
+}
+
+function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuilder): OpenArabDictTranslationEntry
+{
+    HansWehr4Formatter(x);
+    
+    return {
+        dialectId: builder.MapDialectKey(x.dialect)!,
+        complete: x.complete,
+        contextual: x.contextual,
+        examples: x.examples,
+        text: x.text,
+        url: x.url
+    };
 }
 
 export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, dialectMapper: DialectMapper, parent?: TreeTrace)
@@ -135,14 +150,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         return undefined;
     }
 
-    const translations = wordDef.translations?.map(x => ({
-        dialectId: builder.MapDialectKey(x.dialect)!,
-        complete: x.complete,
-        contextual: x.contextual,
-        examples: x.examples,
-        text: x.text,
-        url: x.url
-    })) ?? [];
+    const translations = wordDef.translations?.map(x => ProcessTranslationDefinition(x, builder)) ?? [];
 
     let thisParent: TreeTrace | undefined = undefined;
     let createdWord;

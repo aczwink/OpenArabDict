@@ -22,7 +22,7 @@ root:
       form: 4
       translations: []
       derived:
-        - text: زَهْر⁩
+        - text: زَهْر
           derivation: meaning-related
           type: noun
           gender: male
@@ -65,3 +65,13 @@ root:
               1. flowerpot
               2. flower vase
               3. vase (vessel for perfume, oil, etc.)
+
+    - text: زْهَرْ
+      type: noun
+      gender: male
+      translations:
+        - dialect: dz
+          source: hw4
+          url: https://ar.mo3jam.com/term/%D8%B2%D9%87%D8%B1
+          text:
+            - luck

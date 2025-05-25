@@ -126,3 +126,18 @@ root:
           source: hw4-free-text
           text:
             - choice
+
+    - text: خِتْيَار
+      type: noun
+      gender: male
+      translations:
+        - dialect: sy
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=322
+          text:
+            - old
+            - an old man
+            - elder, sensior person in a community
+      derived:
+        - derivation: feminine
+          text: خِتْيَارَة

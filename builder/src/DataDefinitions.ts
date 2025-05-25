@@ -18,13 +18,13 @@
 
 import { AdvancedStemNumber } from "openarabicconjugation/dist/Definitions";
 
-interface TranslationDefinition
+export interface TranslationDefinition
 {
     dialect: string;
     contextual?: { text: string; translation: string; }[];
     examples?: { text: string; translation: string; }[];
     complete?: true;
-    source: "hw4-free-text";
+    source: "hw4" | "hw4-free-text";
     text: string[];
     url?: string;
 }

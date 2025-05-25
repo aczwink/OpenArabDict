@@ -25,3 +25,13 @@ root:
           source: hw4-free-text
           text:
             - to fall (ه on a given date)
+
+    - type: verb
+      dialect: msa
+      form: 6
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          text:
+            - to happen by chance, come to pass

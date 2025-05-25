@@ -15,26 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ص-غ-ر
+  radicals: ك-ف-ء
   words:
     - type: verb
       dialect: msa
-      form:
-        stem: 1
-        parameters: uu
+      form: 6
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=615
+          url: https://ejtaal.net/aa/#hw4=987
           text:
-            - youthfulness, juvenility (also صغر السن)
-      derived:
-        - text: صَغِير
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - small, little
+            - to be equal, be on a par
+            - to (counter)balance each other, be perfectly matched

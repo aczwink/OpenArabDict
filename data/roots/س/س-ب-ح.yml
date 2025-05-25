@@ -49,5 +49,4 @@ root:
             - dialect: msa
               source: hw4-free-text
               text:
-                - "exclamation of surprise, etc. (prop.:  praise the Lord! God
-                  be praised!)"
+                - "exclamation of surprise, etc. (prop.:  praise the Lord! God be praised!)"

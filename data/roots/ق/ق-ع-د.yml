@@ -37,6 +37,18 @@ root:
               source: hw4-free-text
               text:
                 - sitting
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: aisu
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 75
+              text:
+                - to sit
+
     - type: verb
       dialect: msa
       form: 6

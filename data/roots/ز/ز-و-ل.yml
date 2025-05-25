@@ -27,8 +27,30 @@ root:
         - dialect: msa
           source: hw4-free-text
           text:
-            - 'of زيل: with neg. لم يزل, ما زلت (yazal), لا يزال equivalent to
-              Engl. "still, yet"'
+            - 'of زيل: with neg. لم يزل, ما زلت (yazal), لا يزال equivalent to Engl. "still, yet"'
+      derived:
+        - text: زَوَال
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=463
+              text:
+                - end, passage, extinction, disappearance, vanishing, cessation
+          derived:
+            - text: زَوَالِي
+              derivation: extension
+              type: noun
+              gender: male
+              translations:
+                - dialect: dz
+                  source: free-text
+                  url: https://ar.mo3jam.com/term/%D8%B2%D9%88%D8%A7%D9%84%D9%8A
+                  text:
+                    - poor
+
     - type: verb
       dialect: msa
       form: 4
