@@ -25,6 +25,16 @@ root:
           source: hw4-free-text
           text:
             - to be glad, be delighted, be or become happy
+      derived:
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 7
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 85
+              text:
+                - to enjoy
 
     - text: بِسَاط
       type: noun

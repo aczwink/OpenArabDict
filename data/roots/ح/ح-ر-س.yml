@@ -38,3 +38,15 @@ root:
               url: http://ejtaal.net/aa/#hw4=210
               text:
                 - guardianship, tutelage, custody, care, protection
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=210
+              text:
+                - sentry, sentinel, guard
+          derived:
+            - text: حُرَّاس
+              derivation: plural

@@ -22,6 +22,17 @@ root:
       form: 2
       translations: []
       derived:
+        - text: تَطْرِيز
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=664
+              text:
+                - embroidering, embroidery
         - text: طِرَاز
           derivation: meaning-related
           type: noun

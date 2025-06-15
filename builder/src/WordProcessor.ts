@@ -268,7 +268,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
                 if((v.form.stem === 1) && !choices.types.includes(v.form.parameters))
                 {
-                    console.log(wordDef, wordDef.translations);
+                    console.log(wordDef, wordDef.translations, root.radicals);
                     throw new Error("Wrong stem parameterization");
                 }
                 const stem = (v.form.stem === 1) ? v.form.parameters : v.form.stem;

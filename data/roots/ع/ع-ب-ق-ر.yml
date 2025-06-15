@@ -15,27 +15,19 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-س-ي
+  radicals: ع-ب-ق-ر
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ia
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to forget (ه s.th.)
+    - text: عَبْقَر
+      type: noun
+      gender: male
       derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: diaa
+        - text: عَبْقَرِيّ
+          derivation: nisba
+          type: noun
+          gender: male
           translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 86
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=701
               text:
-                - to forget
+                - ingenious person, genius

@@ -37,3 +37,13 @@ root:
               source: hw4-free-text
               text:
                 - blame
+
+    - type: verb
+      dialect: msa
+      form: 3
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=701
+          text:
+            - to blame, censure, reprove, scold (ه على s.o. for)

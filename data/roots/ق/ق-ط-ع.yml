@@ -38,6 +38,16 @@ root:
               source: hw4-free-text
               text:
                 - cutting off
+          derived:
+            - text: قَطْعًا
+              derivation: adverbial-accusative
+              type: adverb
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=921
+                  text:
+                    - decidedly, definitely, positively, for certain
         - text: قِطْعَة
           derivation: meaning-related
           type: noun

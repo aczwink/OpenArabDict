@@ -19,7 +19,7 @@ import fs from "fs";
 import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
 import { Dictionary, ObjectExtensions } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
-import { ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
+import { ParseVocalizedPhrase, ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
 
 export class DBBuilder
 {
@@ -186,9 +186,9 @@ export class DBBuilder
             return "";
         }
 
-        const vocalized = ParseVocalizedText(word.text);
+        const transliterated = ParseVocalizedPhrase(word.text).map(Buckwalter.ToString);
 
-        return ShortType() + Buckwalter.ToString(vocalized);
+        return ShortType() + transliterated.join("_");
     }
 
     private GenerateUniqueWordId(word: OpenArabDictWord)

@@ -26,3 +26,13 @@ root:
           text:
             - to be or become still, quiet, calm, tranquil, at ease, composed,
               or reassured, feel assured, confident, or secure
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=678
+              text:
+                - reassurance, peace of mind, composure, calmness, equanimity

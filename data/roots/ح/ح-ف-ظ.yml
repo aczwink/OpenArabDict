@@ -67,9 +67,11 @@ root:
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=234
           text:
             - to put away, hold, have in safekeeping (ب s.th.), take care (ب of s.th.)
+            - to keep, retain (ب s.th.)
       derived:
         - derivation: verbal-noun
           type: noun

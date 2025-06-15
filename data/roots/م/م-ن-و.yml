@@ -53,7 +53,8 @@ root:
           type: noun
           gender: female
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
               url: http://ejtaal.net/aa/#hw4=1101
               text:
@@ -63,6 +64,8 @@ root:
               derivation: plural
               type: noun
               gender: female
+            - text: أَمَانِيّ
+              derivation: plural
         - text: تَمَنٍّ
           derivation: verbal-noun
           type: noun

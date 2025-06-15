@@ -78,3 +78,17 @@ root:
               text:
                 - "(now only with pron. suffix, invar. for gender and number):
                   وحده, وحدها، وحدك، وحدي he (she, you, I, etc.) alone"
+
+    - type: verb
+      dialect: msa
+      form: 8
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1250
+              text:
+                - union

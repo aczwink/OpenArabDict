@@ -24,11 +24,41 @@ root:
         parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=269
           text:
-            - |-
-              1. to live
-              to be ashamed (من of, because of)
+            - to live
+      derived:
+        - text: حَيَاة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - life
+        - text: حَيَوَان
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - animal, beast
+
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=269
+          text:
+            - to be ashamed (من of, because of)
       derived:
         - text: حَيَاء
           derivation: verbal-noun
@@ -39,24 +69,7 @@ root:
               source: hw4-free-text
               text:
                 - shame, diffidence, bashfulness, timidity
-        - text: حَيَوَان
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - animal, beast
-        - text: حَيَاة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - life
+
     - type: verb
       dialect: msa
       form: 10

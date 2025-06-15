@@ -37,6 +37,7 @@ root:
               s.th. to), unite(إلى ه s.o., s.th. with)
 
               5. to grasp, grip, grab, seize (على s.o., s.th.)
+
     - type: verb
       dialect: msa
       form: 7
@@ -46,3 +47,13 @@ root:
           text:
             - to be joined, united, or combined (إلى with), unite, join forces
               (إلى with)
+      derived:
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 7
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 87
+              text:
+                - to join

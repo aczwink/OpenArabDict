@@ -19,6 +19,23 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: ia
+      derived:
+        - text: أَلَم
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=42
+              text:
+                - pain, ache, suffering, agony
+
+    - type: verb
+      dialect: msa
       form: 4
       translations: []
       derived:

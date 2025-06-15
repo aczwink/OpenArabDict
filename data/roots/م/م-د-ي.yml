@@ -15,27 +15,13 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-س-ي
+  radicals: م-د-ي
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ia
+    - text: مَدَى
+      type: preposition
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=1068
           text:
-            - to forget (ه s.th.)
-      derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: diaa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 86
-              text:
-                - to forget
+            - for the duration of, during, in a (given) period of, in the course of

@@ -61,7 +61,12 @@ root:
           derivation: verbal-noun
           type: noun
           gender: female
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=49
+              text:
+                - reliability, trustworthiness
         - text: أَمِين⁩
           derivation: meaning-related
           type: adjective

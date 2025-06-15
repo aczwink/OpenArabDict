@@ -21,9 +21,10 @@ root:
       dialect: msa
       form:
         stem: 1
-        parameters: ua
+        parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=321
           text:
             - to fail, miscarry, be without success, be unsuccessful

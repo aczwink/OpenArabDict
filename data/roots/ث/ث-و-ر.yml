@@ -26,6 +26,16 @@ root:
           url: http://ejtaal.net/aa/#hw4=143
           text:
             - to arouse, stir up, kindle, excite (ه s.th., e.g., feelings), cause, provoke, awaken (ه s.th.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=144
+              text:
+                - exciting
 
     - text: ثَوْر
       type: noun

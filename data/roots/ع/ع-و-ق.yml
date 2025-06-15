@@ -25,14 +25,16 @@ root:
       translations:
         - dialect: msa
           source: hw4-free-text
+          url: http://ejtaal.net/aa/#hw4=783
           text:
-            - to hinder, prevent, detain, restrain, withhold, hold back (عن ه
-              s.o. from)
+            - to hinder, prevent, detain, restrain, withhold, hold back (ه عن s.o. from)
+
     - type: verb
       dialect: msa
       form: 4
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=783
           text:
-            - same as I
+            - to hinder, prevent, detain, restrain, withhold, hold back (ه عن s.o. from)

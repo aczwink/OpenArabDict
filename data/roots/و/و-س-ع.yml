@@ -22,6 +22,7 @@ root:
       form:
         stem: 1
         parameters: uu
+        type: sound
       derived:
         - derivation: active-participle
           type: adjective

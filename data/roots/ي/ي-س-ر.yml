@@ -22,6 +22,7 @@ root:
       form:
         stem: 1
         parameters: uu
+        type: sound
       translations:
         - dialect: msa
           source: hw4-free-text

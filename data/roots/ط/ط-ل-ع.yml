@@ -41,6 +41,20 @@ root:
 
     - type: verb
       dialect: msa
+      form: 8
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=674
+              text:
+                - information, intelligence, knowledge
+
+    - type: verb
+      dialect: msa
       form: 10
       derived:
         - derivation: verbal-noun

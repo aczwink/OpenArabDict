@@ -27,3 +27,13 @@ root:
           source: hw4-free-text
           text:
             - to splatter, spatter, bespatter (ه s.th., ب with water, etc.)
+
+    - text: رَشَّاش
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=407
+          text:
+            - machine gun

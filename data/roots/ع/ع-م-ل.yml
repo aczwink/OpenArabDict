@@ -132,3 +132,14 @@ root:
               source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 43
               text:
                 - to use
+
+    - text: عُمْلَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=769
+          text:
+            - currency
+            - money
