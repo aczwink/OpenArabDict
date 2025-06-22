@@ -58,3 +58,29 @@ root:
               type: adjective
               gender: male
               translations: []
+
+    - text: سَيِّد
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=526
+          text:
+            - Sir
+      derived:
+        - text: سَيِّدِي
+          derivation: extension
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=527
+              text:
+                - honorific before the names of Muslim Saints (esp. magr.)
+          derived:
+            - text: سِيدِي
+              derivation: colloquial
+              type: noun
+              gender: male

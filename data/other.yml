@@ -666,14 +666,6 @@ words:
         source: hw4-free-text
         text:
           - dagger
-  - text: فِين
-    type: pronoun
-    gender: male
-    translations:
-      - dialect: eg
-        source: hw4-free-text
-        text:
-          - dialect of فِي أَيْنَ i.e. "where?"
   - text: حُوت
     type: noun
     gender: male
@@ -1168,3 +1160,21 @@ words:
             derivation: feminine
             type: noun
             gender: female
+
+  - text: ضِفْدِع
+    alias: ضَفْدَع
+    type: noun
+    gender: male
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        url: https://ejtaal.net/aa/#hw4=647
+        text:
+          - frog
+        contextual:
+          - text: ضفدع بشري
+            translation: frogman
+    derived:
+      - text: ضَفَادِع
+        derivation: plural

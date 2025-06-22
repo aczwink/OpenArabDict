@@ -26,6 +26,16 @@ root:
           text:
             - to declare null and void or invalid, invalidate, nullify, annul,
               abolish, abrogate, eliminate (ه s.th.), do away (ه with s.th.)
+
+    - type: verb
+      dialect: lb
+      form: 7
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 90
+          text:
+            - to be canceled
+
     - type: verb
       dialect: msa
       form: 8

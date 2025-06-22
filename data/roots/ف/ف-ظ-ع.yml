@@ -29,6 +29,12 @@ root:
           type: adjective
           gender: male
           translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=856
+              text:
+                - abominable, detestable, hideous, ugly, repulsive, disgusting, shocking, odious, heinous, atrocious, horrid, horrible
             - dialect: sy
               source: hw4-free-text
               text:

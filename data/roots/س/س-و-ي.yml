@@ -39,6 +39,17 @@ root:
               text:
                 - سواء بسواء equally, indiscriminately, without distinction;
                   together
+        - text: سِوًى
+          alias: سُوًى
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=532
+              text:
+                - (with foll. genit. or suffix) other than, except
 
     - type: verb
       dialect: msa

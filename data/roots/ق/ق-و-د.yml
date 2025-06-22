@@ -37,3 +37,13 @@ root:
               source: hw4-free-text
               text:
                 - driving, steering, steerage (of a vehicle)
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=944
+              text:
+                - leader
+                - commander, commandant

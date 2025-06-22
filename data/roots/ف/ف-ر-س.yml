@@ -17,6 +17,24 @@
 root:
   radicals: ف-ر-س
   words:
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
+        parameters: ai
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=838
+              text:
+                - horseman, rider
+                - knight, cavalier
+                - hero
+
     - text: فَرَس
       type: noun
       gender: male
@@ -30,6 +48,7 @@ root:
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=838
           text:
             - also بلاد فارس Persia

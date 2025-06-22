@@ -19,5 +19,18 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=165
+          text:
+            - to turn away (ه from), shun, avoid, flee (ه s.o.)
+
+
+    - type: verb
+      dialect: msa
       form: 6
       translations: []

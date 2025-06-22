@@ -16,7 +16,33 @@
 
 root:
   radicals: ح-ل-ل
-  words:
+  words:                
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=244
+          text:
+            - to untie (ه a knot), unbind, unfasten, unravel, undo (ه s.th.)
+      derived:
+        - text: حَلّ
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=245
+              text:
+                - solution (of a problem, of a puzzle, etc.)
+          derived:
+            - text: حُلُول
+              derivation: plural
+
     - type: verb
       dialect: msa
       form:
@@ -34,27 +60,6 @@ root:
               url: https://ejtaal.net/aa/#hw4=245
               text:
                 - setting in, advent, arrival (of a time, of a deadline), beginning, dawn
-                
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: au
-      translations: []
-      derived:
-        - text: حَلّ
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: https://ejtaal.net/aa/#hw4=245
-              text:
-                - solution (of a problem, of a puzzle, etc.)
-          derived:
-            - text: حُلُول
-              derivation: plural
 
     - type: verb
       dialect: msa

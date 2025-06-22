@@ -35,9 +35,10 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=266
               text:
-                - trick
+                - artifice, ruse, stratagem, maneuver, subterfuge, wile, trick
         - text: حَال
           derivation: meaning-related
           type: noun

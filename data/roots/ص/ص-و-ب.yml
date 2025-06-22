@@ -28,6 +28,17 @@ root:
           text:
             - to be right, hold true, be to the point, hit the mark, be
               pertinent, be apposite (opinion)
+    
+    - type: verb
+      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          url: ejtaal.net/aa/#hw4=630
+          text:
+            - to direct, fix (ه إلى s.th., also, e.g., the glance on, to), aim, point, train (ه إلى s.th. at or on)
+
     - type: verb
       dialect: msa
       form: 4
@@ -84,3 +95,12 @@ root:
           url: http://ejtaal.net/aa/#hw4=630
           text:
             - that which is right, proper, or correct
+
+    - text: صَوْبَ
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=630
+          text:
+            - in the direction of, toward, to

@@ -26,3 +26,6 @@ root:
           url: http://ejtaal.net/aa/#hw4=526
           text:
             - square, place, plaza
+      derived:
+        - text: سَاحَات
+          derivation: plural

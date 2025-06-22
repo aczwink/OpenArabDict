@@ -53,3 +53,24 @@ root:
               source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 72
               text:
                 - to kill
+
+    - type: verb
+      dialect: msa
+      form: 3
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=883
+          text:
+            - to combat, battle (ه s.o.), fight (ه s.o., with s.o., or against s.o.)
+
+    - type: verb
+      dialect: msa
+      form: 6
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=883
+          text:
+            - to fight with one another, combat each other

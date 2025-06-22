@@ -23,6 +23,16 @@ root:
         stem: 1
         parameters: uu
       derived:
+        - text: قُرْب
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=896
+              text:
+                - nearness, closeness, proximity, vicinity
         - text: قَرِيب
           derivation: meaning-related
           type: adjective
@@ -33,6 +43,22 @@ root:
               url: http://ejtaal.net/aa/#hw4=896
               text:
                 - near (in place and time), nearby, close at hand
+
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
+        parameters: ia
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: hhttps://ejtaal.net/aa/#hw4=897
+              text:
+                - boat, skiff
 
     - type: verb
       dialect: msa
@@ -60,7 +86,13 @@ root:
     - type: verb
       dialect: msa
       form: 8
-      translations: []
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=896
+          text:
+            - to approach (من s.o., s.th.), come, advance, or get near s.o. or s.th. (من), come close, get close (من to)
       derived:
         - text: اِقْتِرَاب
           derivation: verbal-noun
@@ -71,6 +103,7 @@ root:
               source: hw4-free-text
               text:
                 - approach
+
     - text: قُرْبَان
       type: noun
       gender: male

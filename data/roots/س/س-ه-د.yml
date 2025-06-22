@@ -27,3 +27,15 @@ root:
           source: hw4-free-text
           text:
             - to be sleepless
+      derived:
+        - text: سُهَاد
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=522
+              text:
+                - sleeplessness, insomnia

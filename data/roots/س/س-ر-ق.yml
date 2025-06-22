@@ -33,3 +33,12 @@ root:
               source: hw4-free-text
               text:
                 - stealing, filching, pilfering
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=488
+              text:
+                - thief

@@ -18,10 +18,13 @@ root:
   radicals: ك-ت-ف
   words:
     - text: كَتِف
+      alias: كِتْف
       type: noun
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=965
           text:
             - shoulder
+            - shoulder blade, scapula

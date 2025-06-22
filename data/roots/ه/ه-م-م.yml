@@ -81,3 +81,13 @@ root:
           text:
             - to take care (ب of s.o.), take s.o. (ب) under one's wing, help,
               assist (ب s.o.)
+      derived:
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form: 8
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 91
+              text:
+                - to be interested

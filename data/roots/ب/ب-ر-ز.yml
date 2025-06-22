@@ -39,3 +39,27 @@ root:
                 - |-
                   1. more marked, more distinctive
                   2. more prominent
+
+    - type: verb
+      dialect: msa
+      form: 3
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=78
+          text:
+            - to meet in combat or duel (ه s.o.)
+            - to compete in a contest (ه with s.o.)
+      derived:
+        - text: مُبَارَزَة
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=78
+              text:
+                - competition, contest, match, esp. in sports
+                - duel

@@ -28,6 +28,16 @@ root:
           text:
             - to see
       derived:
+        - text: رُؤْيَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=382
+              text:
+                - seeing, viewing
         - text: رَأْي
           derivation: meaning-related
           type: noun
@@ -52,6 +62,7 @@ root:
               source: hw4-free-text
               text:
                 - vision
+
     - type: verb
       dialect: msa
       form: 4

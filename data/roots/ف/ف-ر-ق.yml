@@ -67,6 +67,17 @@ root:
                 - |-
                   1. separatedness, separation, disunion
                   2. variety, diversity
+
+    - type: verb
+      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=842
+          text:
+            - to separate, part, divide, sever, sunder (ه s.th.)
+
     - type: verb
       dialect: msa
       form: 3
@@ -75,19 +86,24 @@ root:
           source: hw4-free-text
           text:
             - to leave (ه s.o., s.th.)
+
     - type: verb
       dialect: msa
       form: 5
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=842
           text:
-            - to be or become separated
+            - to be or become separated, split, disunited, divided, scattered, dispersed, separate, part, divide, scatter, disperse, dissolve, break up
+
     - type: verb
       dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=843
           text:
-            - same as stem V
+            - to be or become separated, split, disunited, divided, scattered, dispersed, separate, part, divide, scatter, disperse, dissolve, break up

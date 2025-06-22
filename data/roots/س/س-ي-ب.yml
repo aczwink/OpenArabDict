@@ -23,9 +23,8 @@ root:
         stem: 1
         parameters: ii
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - dialect: eg
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=533
           text:
-            - |-
-              Egyptian dialect:
-              to leave, give up
+            - to leave, give up, relinquish (ه s.th.)

@@ -26,3 +26,13 @@ root:
           url: http://ejtaal.net/aa/#hw4=1174
           text:
             - to deliver, save, rescue (ه من s.o. from)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1174
+              text:
+                - deliverance, salvation, saving, rescue

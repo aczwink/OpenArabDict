@@ -19,6 +19,18 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=799
+          text:
+            - to go under, be drowned (في in)
+
+    - type: verb
+      dialect: msa
       form: 10
       translations:
         - dialect: msa

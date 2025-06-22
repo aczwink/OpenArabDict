@@ -33,3 +33,13 @@ root:
               source: hw4-free-text
               text:
                 - patience, forbearance
+
+    - type: verb
+      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=598
+          text:
+            - to ask (ه s.o.) to be patient

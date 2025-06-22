@@ -104,3 +104,14 @@ root:
           url: http://ejtaal.net/aa/#hw4=721
           text:
             - to confess, admin, acknowledge, own, avow (ه s.th.)
+            
+    - text: عَرَّاف
+      type: noun
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=722
+          text:
+            - diviner, fortuneteller

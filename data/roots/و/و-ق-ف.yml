@@ -40,6 +40,18 @@ root:
                   1. situation
                   2. attitude
                   3. stand, position, opinion
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form:
+            stem: 1
+            parameters: iia
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 95
+              text:
+                - to stand
+
     - type: verb
       dialect: msa
       form: 2
@@ -50,6 +62,17 @@ root:
             - to bring to a standstill, to a stop, arrest, halt, stop, hold up,
               check, stunt, obstruct, trammel, hamper, slow down (ه, ه s.o.,
               s.th.)
+      derived:
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form: 2
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 96
+              text:
+                - to stop
+
     - type: verb
       dialect: msa
       form: 4

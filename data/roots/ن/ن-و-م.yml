@@ -18,12 +18,41 @@ root:
   radicals: ن-و-م
   words:
     - type: verb
-      dialect: lb
+      dialect: msa
       form:
         stem: 1
         parameters: ia
-        translations:
-          - dialect: lb
-            source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 84
-            text:
-              - to sleep
+      derived:
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form:
+            stem: 1
+            parameters: ia
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 84
+              text:
+                - to sleep
+        - text: مَنَام
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1200
+              text:
+                - sleep
+                - dream
+          derived:
+            - text: مَنَامَات
+              derivation: plural
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=1200
+                  text:
+                    - dreams
