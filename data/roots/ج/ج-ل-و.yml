@@ -29,7 +29,15 @@ root:
           url: http://ejtaal.net/aa/#hw4=169
           text:
             - to polish, burnish (ه s.th.)
-        - dialect: sy
-          source: free-text #from exchange with Syrians
-          text:
-            - to wash the dishes
+      derived:
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: ai
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 123
+              text:
+                - wash (dishes)

@@ -28,6 +28,16 @@ root:
           text:
             - to become (ه s.th.)
       derived:
+        - text: مَصِير
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=636
+              text:
+                - destiny
         - derivation: colloquial
           type: verb
           dialect: lb

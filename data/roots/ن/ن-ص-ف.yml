@@ -25,6 +25,21 @@ root:
           source: hw4-free-text
           text:
             - to be just
+
+    - type: verb
+      dialect: msa
+      form: 8
+      derived:
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=1152
+              text:
+                - middle
+
     - text: نِصْف
       type: noun
       gender: male

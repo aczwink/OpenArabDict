@@ -24,7 +24,7 @@ root:
         parameters: aa
       translations: []
       derived:
-        - text: مَزْرَعَة⁩
+        - text: مَزْرَعَة
           derivation: meaning-related
           type: noun
           gender: female
@@ -33,3 +33,14 @@ root:
               source: hw4-free-text
               text:
                 - farm
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form:
+            stem: 1
+            parameters: aa
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+              text:
+                - plant (a seed), grow (a plant)

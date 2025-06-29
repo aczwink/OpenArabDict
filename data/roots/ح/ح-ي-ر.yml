@@ -33,18 +33,17 @@ root:
           type: noun
           gender: female
           translations: []
+
     - type: verb
       dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=271
           text:
             - to confuse, baffle, bewilder, non-plus, embarrass (ه s.o.)
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - ""
+
     - type: verb
       dialect: msa
       form: 8

@@ -63,6 +63,17 @@ root:
           url: https://ejtaal.net/aa/#hw4=883
           text:
             - to combat, battle (ه s.o.), fight (ه s.o., with s.o., or against s.o.)
+      derived:
+        - text: قِتَال
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=884
+              text:
+                - combat, strife, battle
 
     - type: verb
       dialect: msa

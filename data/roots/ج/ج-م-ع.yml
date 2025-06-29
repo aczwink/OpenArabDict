@@ -116,6 +116,19 @@ root:
                   type: noun
                   gender: female
                   translations: []
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form:
+            stem: 1
+            parameters: aa
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+              text:
+                - add, add up
+                - harvest
+
     - type: verb
       dialect: msa
       form: 5

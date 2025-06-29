@@ -24,12 +24,12 @@ root:
         parameters: au
       translations: []
       derived:
-        - text: فَاسِد
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=848
               text:
                 - bad, foul, rotten, spoiled, decayed, decomposed, putrid

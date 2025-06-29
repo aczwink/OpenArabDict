@@ -27,3 +27,16 @@ root:
           source: hw4-free-text
           text:
             - to joke, jest, make fun
+      derived:
+        - type: verb
+          derivation: colloquial
+          dialect: lb
+          form:
+            stem: 1
+            parameters: aa
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 119
+              text:
+                - joke
+                - kid

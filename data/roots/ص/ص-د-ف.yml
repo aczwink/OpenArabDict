@@ -33,5 +33,6 @@ root:
         - complete: true
           dialect: msa
           source: hw4
+          url: https://ejtaal.net/aa/#hw4=606
           text:
             - to happen by chance, come to pass

@@ -22,9 +22,12 @@ root:
       gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=198
           text:
             - room
+            - chamber
+
     - text: حَجَر
       type: noun
       gender: male

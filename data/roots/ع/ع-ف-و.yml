@@ -19,6 +19,23 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: au
+      derived:
+        - text: عَفْو
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=744
+              text:
+                - pardon, forgiveness
+                  
+    - type: verb
+      dialect: msa
       form: 6
       translations:
         - dialect: msa

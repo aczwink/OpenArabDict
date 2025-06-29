@@ -26,3 +26,13 @@ root:
           text:
             - to catch fire, start burning, ignite, burn, flame, blaze, flare
               up, break out (fire)
+
+    - text: شُعْلَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=1251
+          text:
+            - fire, blaze, flame

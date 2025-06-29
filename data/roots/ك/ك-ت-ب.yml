@@ -24,10 +24,10 @@ root:
         parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=964
           text:
-            - to write, pen, write down, put down in writing, note down,
-              inscribe, enter, record, book, register (ه s.th.)
+            - to write, pen, write down, put down in writing, note down, inscribe, enter, record, book, register (ه s.th.)
       derived:
         - text: مَكْتوب
           derivation: meaning-related

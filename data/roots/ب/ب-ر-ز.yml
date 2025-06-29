@@ -39,6 +39,17 @@ root:
                 - |-
                   1. more marked, more distinctive
                   2. more prominent
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form:
+            stem: 1
+            parameters: aisu
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 119
+              text:
+                - become clear
 
     - type: verb
       dialect: msa

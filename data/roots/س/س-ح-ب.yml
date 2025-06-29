@@ -17,6 +17,27 @@
 root:
   radicals: س-ح-ب
   words:
+    - type: verb
+      dialect: lb
+      form:
+        stem: 1
+        parameters: aa
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+          text:
+            - withdraw
+
+    - type: verb
+      dialect: msa
+      form: 7
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=478
+          text:
+            - to retreat, withdraw, pull out, fall back (من from)
+
     - text: سَحَابَة
       type: noun
       gender: female

@@ -38,3 +38,12 @@ root:
                   1. tryout
                   2. attempt
                   3. experience, practice
+        - derivation: colloquial
+          type: verb
+          dialect: lb
+          form: 2
+          translations:
+            - dialect: lb
+              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 125
+              text:
+                - try (out)

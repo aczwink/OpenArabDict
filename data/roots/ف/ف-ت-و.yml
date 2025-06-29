@@ -18,17 +18,25 @@ root:
   radicals: ف-ت-و
   ya: true
   words:
-    - text: فَتَاة
+    - text: فَتًى
       type: noun
-      gender: female
+      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=828
           text:
-            - young woman, (young) girl
+            - youth, adolescent, juvenile, young man
       derived:
-        - text: فَتَيَات
-          derivation: plural
-          type: noun
-          gender: female
-          translations: []
+        - text: فَتَاة
+          derivation: feminine
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=828
+              text:
+                - young woman, (young) girl
+          derived:
+            - text: فَتَيَات
+              derivation: plural
