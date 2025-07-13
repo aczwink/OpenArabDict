@@ -180,8 +180,8 @@ export class DBBuilder
                 case OpenArabDictWordType.Preposition:
                     return "p";
                 case OpenArabDictWordType.Verb:
-                    const stem = (word.stemParameters === undefined) ? "" : word.stemParameters;
-                    return "v" + word.dialectId + stem;
+                    const stem = word.form.stem;
+                    return "v" + stem;
             }
             return "";
         }

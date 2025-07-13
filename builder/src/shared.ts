@@ -16,8 +16,29 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictVerbType } from "openarabdict-domain";
+import { OpenArabDictVerbType, OpenArabDictWordType } from "openarabdict-domain";
 import { VerbType } from "openarabicconjugation/dist/Definitions";
+import { TreeTrace } from "./TreeTrace";
+import { DBBuilder } from "./DBBuilder";
+
+export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
+{
+    let rootId;
+    if(parent?.type === "root")
+        rootId = parent.rootId;
+    else if(parent?.type === "verb")
+    {
+        const parentWord = builder.GetWord(parent.verbId);
+        if(parentWord.type !== OpenArabDictWordType.Verb)
+            throw new Error("ID ERROR!");
+        rootId = parentWord.rootId;
+    }
+    else
+        throw new Error("Verbs must be direct children of a root or a verb");
+    const root = builder.GetRoot(rootId);
+
+    return root;
+}
 
 export function MapVerbTypeToOpenArabicConjugation(verbType?: OpenArabDictVerbType): VerbType | undefined
 {
@@ -25,6 +46,8 @@ export function MapVerbTypeToOpenArabicConjugation(verbType?: OpenArabDictVerbTy
     {
         case OpenArabDictVerbType.Defective:
             return VerbType.Defective;
+        case OpenArabDictVerbType.Irregular:
+            return VerbType.Irregular;
         case OpenArabDictVerbType.Sound:
             return VerbType.Sound;
     }

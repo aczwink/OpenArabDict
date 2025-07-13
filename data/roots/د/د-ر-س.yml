@@ -21,13 +21,21 @@ root:
       dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aiiu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to learn, study (ه s.th., على under s.o.), درس العلم على to study
               under (a teacher, a professor)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 31
+          text:
+            - to study
       derived:
         - text: مَدْرَسَة
           derivation: meaning-related
@@ -67,14 +75,3 @@ root:
               derivation: plural
               type: noun
               gender: female
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aiiu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 31
-              text:
-                - to study

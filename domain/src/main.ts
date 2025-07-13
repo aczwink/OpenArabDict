@@ -96,6 +96,7 @@ export enum OpenArabDictVerbDerivationType
     ActiveParticiple = 2,
     PassiveParticiple = 3,
     Colloquial = 4,
+    NounOfPlace = 5
 }
 
 export interface OpenArabDictWordVerbParent
@@ -152,7 +153,21 @@ interface OpenArabDictOtherWord extends OpenArabDictWordBase
 export enum OpenArabDictVerbType
 {
     Defective,
+    Irregular,
     Sound,
+}
+
+interface VerbVariant
+{
+    dialectId: number;
+    stemParameters?: string;
+}
+
+export interface OpenArabDictVerbForm
+{
+    stem: number;
+    variants: VerbVariant[];
+    verbType?: OpenArabDictVerbType;
 }
 
 export interface OpenArabDictVerb extends OpenArabDictWordBase
@@ -160,10 +175,7 @@ export interface OpenArabDictVerb extends OpenArabDictWordBase
     type: OpenArabDictWordType.Verb;
     parent: OpenArabDictWordParent;
     rootId: string;
-    dialectId: number;
-    stem: number;
-    verbType?: OpenArabDictVerbType;
-    stemParameters?: string;
+    form: OpenArabDictVerbForm;
 }
 
 export type OpenArabDictWord = OpenArabDictGenderedWord | OpenArabDictOtherWord | OpenArabDictVerb;

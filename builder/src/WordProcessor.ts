@@ -15,13 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictVerbType, OpenArabDictTranslationEntry } from "openarabdict-domain";
-import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
-import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
-import { CreateVerb } from "openarabicconjugation/dist/Verb";
-import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
-import { VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
+import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry } from "openarabdict-domain";
 import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
 import { DBBuilder } from "./DBBuilder";
 import { DialectMapper } from "./DialectMapper";
@@ -32,8 +26,9 @@ import { ValidateGender } from "./validators/ValidateGender";
 import { ValidatePlural } from "./validators/ValidatePlural";
 import { ValidateText } from "./validators/ValidateText";
 import { ValidateFeminine } from "./validators/ValidateFeminine";
-import { MapVerbTypeToOpenArabicConjugation } from "./shared";
 import { HansWehr4Formatter } from "./formatters/HansWehr4Formatter";
+import { ValidateVerbForm } from "./validators/ValidateVerbForm";
+import { ExtractRoot } from "./shared";
 
 export class WordProcessor
 {
@@ -61,7 +56,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         ValidateGender,
         ValidateFeminine,
         ValidatePlural,
-        ValidateText.bind(undefined, builder)
+        ValidateVerbForm.bind(undefined, builder, dialectMapper),
+        ValidateText.bind(undefined, builder, dialectMapper)
     ];
     for (const validator of validators)
         validator(wdv);
@@ -78,6 +74,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 return OpenArabDictVerbDerivationType.Colloquial;
             case "meaning-related":
                 return OpenArabDictVerbDerivationType.MeaningRelated;
+            case "noun-of-place":
+                return OpenArabDictVerbDerivationType.NounOfPlace;
             case "passive-participle":
                 return OpenArabDictVerbDerivationType.PassiveParticiple;
             case "verbal-noun":
@@ -134,20 +132,6 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                     relationType: MapWordDerivationType(derivation)
                 }
         }
-    }
-
-    function MapVerbType(verb: VerbWordDefinition)
-    {
-        if(typeof verb.form === "number")
-            return undefined;
-        switch(verb.form.type)
-        {
-            case "defective":
-                return OpenArabDictVerbType.Defective;
-            case "sound":
-                return OpenArabDictVerbType.Sound;
-        }
-        return undefined;
     }
 
     const translations = wordDef.translations?.map(x => ProcessTranslationDefinition(x, builder)) ?? [];
@@ -238,66 +222,17 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         break;
         case OpenArabDictWordType.Verb:
         {
-            let rootId;
-            if(parent?.type === "root")
-                rootId = parent.rootId;
-            else if(parent?.type === "verb")
-            {
-                const parentWord = builder.GetWord(parent.verbId);
-                if(parentWord.type !== OpenArabDictWordType.Verb)
-                    throw new Error("ID ERROR!");
-                rootId = parentWord.rootId;
-            }
-            else
-                throw new Error("Verbs must be direct children of a root or a verb");
-            const root = builder.GetRoot(rootId);
-
             const v = wordDef as VerbWordDefinition;
-            const dialectId = builder.MapDialectKey(v.dialect)!;
-            const dialectType = dialectMapper.Map(dialectId)!;
-
-            const rootInstance = new VerbRoot(root!.radicals);
-
-            const stemNumber = (typeof v.form === "number") ? v.form : v.form.stem;
-            let verb;
-            if(typeof v.form !== "number")
-            {
-                const meta = GetDialectMetadata(dialectType);
-                const verbType = MapVerbTypeToOpenArabicConjugation(MapVerbType(v));
-                const defVerbType = verbType ?? rootInstance.DeriveDeducedVerbType();
-                const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
-                if((v.form.stem === 1) && !choices.types.includes(v.form.parameters))
-                {
-                    console.log(wordDef, wordDef.translations, root.radicals);
-                    throw new Error("Wrong stem parameterization");
-                }
-                const stem = (v.form.stem === 1) ? v.form.parameters : v.form.stem;
-                verb = CreateVerb(dialectType, rootInstance, stem, verbType);
-            }
-            else
-                verb = CreateVerb(dialectType, rootInstance, v.form as AdvancedStemNumber);
-
-            const conjugator = new Conjugator;
-            const vocalized = conjugator.Conjugate(verb, {
-                gender: Gender.Male,
-                numerus: Numerus.Singular,
-                person: Person.Third,
-                tense: Tense.Perfect,
-                voice: Voice.Active,
-            });
-
-            const conjugatedWord = VocalizedWordTostring(vocalized);
+            const form = wdv.verbForm;
+            const root = ExtractRoot(builder, parent);
 
             const generatedVerb = builder.AddWord({
                 id: "",
                 type: OpenArabDictWordType.Verb,
-                dialectId,
-                rootId: root!.id,
-                stem: stemNumber,
-                text: conjugatedWord,
-                stemParameters: ((typeof v.form !== "number") && (v.form.stem === 1)) ? v.form.parameters : undefined,
+                form,
+                rootId: root.id,
+                text: wdv.text,
                 translations,
-                verbType: MapVerbType(v),
                 parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})
             });
 
@@ -319,7 +254,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
             thisParent = {
                 type: "verb",
                 verbId: generatedVerb.id,
-                parent
+                parent: parent!
             };
             createdWord = generatedVerb;
         }

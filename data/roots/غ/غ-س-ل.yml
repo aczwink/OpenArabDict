@@ -25,3 +25,13 @@ root:
           source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 63
           text:
             - to wash
+
+    - type: verb
+      dialect: lb
+      form: 8
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=802
+          text:
+            - to take a bath, bathe

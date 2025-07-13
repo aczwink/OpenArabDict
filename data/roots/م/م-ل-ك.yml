@@ -34,7 +34,12 @@ root:
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=1095
+              text:
+                - property, possessions, goods and chattels, fortune, wealth
           derived:
             - text: أَمْلَاك
               derivation: plural
@@ -42,11 +47,11 @@ root:
               gender: male
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  url: https://ejtaal.net/aa/#hw4=1095
                   text:
-                    - |-
-                      1. possessions (= colonies)
-                      2. lands, landed property, estates
+                    - possessions (= colonies)
+                    - lands, landed property, estates
         - text: مُلْك
           derivation: verbal-noun
           type: noun

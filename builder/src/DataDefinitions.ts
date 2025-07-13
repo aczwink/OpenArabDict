@@ -50,6 +50,16 @@ export interface OtherWordDefinition
     derived?: WordDefinition[];
 }
 
+export interface VerbVariantDefintion
+{
+    dialect: string;
+}
+
+export interface VerbVariantStem1Defintion extends VerbVariantDefintion
+{
+    parameters: string;
+}
+
 interface ParameterizedStem1Data
 {
     stem: 1;
@@ -57,13 +67,21 @@ interface ParameterizedStem1Data
     type?: "defective" | "sound";
 }
 
+interface ParameterizedStem1DataWithVariants
+{
+    stem: 1;
+    type?: "defective" | "irregular" | "sound";
+    variants?: VerbVariantStem1Defintion[];
+}
+
 interface ParameterizedAdvancedStemData
 {
     stem: AdvancedStemNumber;
     type?: "sound";
+    variants?: VerbVariantDefintion[];
 }
 
-type ParameterizedStemData = ParameterizedStem1Data | ParameterizedAdvancedStemData;
+export type ParameterizedStemData = ParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;
 
 export interface VerbWordDefinition
 {

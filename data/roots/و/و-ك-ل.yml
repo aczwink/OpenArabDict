@@ -19,6 +19,20 @@ root:
   words:
     - type: verb
       dialect: msa
+      form: 5
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=1297
+              text:
+                - trust, confidence
+
+    - type: verb
+      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -29,4 +43,3 @@ root:
         - derivation: verbal-noun
           type: noun
           gender: male
-          translations: []

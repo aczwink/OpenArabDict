@@ -15,19 +15,25 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-ي-س
+  radicals: ك-ف-ح
   words:
     - type: verb
       dialect: msa
-      form:
-        stem: 1
-        parameters: irregular_laysa
-        type: irregular
+      form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=988
           text:
-            - |-
-              used only in perfect i.e. imperfect does not exist.
-
-              أليس كذلك؟ isn't it so?
+            - to combat (ه s.o., ه s.th.), fight, battle, struggle, contend (ه against)
+      derived:
+        - text: كِفَاح
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=988
+              text:
+                - fight, battle, contention, strife

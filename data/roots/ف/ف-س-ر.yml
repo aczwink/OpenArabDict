@@ -27,3 +27,13 @@ root:
           url: https://ejtaal.net/aa/#hw4=848
           text:
             - to explain, expound, explicate, elucidate, interpret (ه s.th.), comment (ه on)
+
+    - type: verb
+      dialect: msa
+      form: 10
+      translations:
+        - dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=848
+          text:
+            - to ask (ه s.o.) for an explanation (عن of), inquire (ه عن of s.o. about), ask (ه عن s.o. about)

@@ -25,6 +25,25 @@ words:
           - "intensifying interjection introducing sentences: verily, truly,
             indeed, oh yes, etc."
 
+  - text: أتاري
+    type: particle
+    translations:
+      - dialect: eg
+        source: free-text
+        url: https://en.wiktionary.org/wiki/%D8%AA%D8%A7%D8%B1%D9%8A
+        text:
+          - (exclamative) that's why, so
+          - it seems, it looks like
+
+  - text: تاري
+    type: particle
+    translations:
+      - dialect: northlevant
+        source: free-text
+        url: https://en.wiktionary.org/wiki/%D8%AA%D8%A7%D8%B1%D9%8A
+        text:
+          - it seems, it looks like
+
   - text: لِ
     type: particle #http://ejtaal.net/aa/#hw4=1011
     derived:

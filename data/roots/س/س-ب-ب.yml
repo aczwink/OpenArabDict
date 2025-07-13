@@ -40,6 +40,20 @@ root:
               url: https://ejtaal.net/aa/#hw4=469
               text:
                 - abuse, vituperation, insults, cursing
+        - text: مَسَبَّة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              url: https://ejtaal.net/aa/#hw4=469
+              text:
+                - vilification, abuse, insult
+          derived:
+            - text: مَسَبَّات
+              derivation: plural
 
     - type: verb
       dialect: msa

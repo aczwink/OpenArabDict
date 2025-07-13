@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictVerbForm, OpenArabDictWordType } from "openarabdict-domain";
 import { WordDefinition } from "./DataDefinitions";
 import { TreeTrace } from "./TreeTrace";
 
@@ -41,6 +41,13 @@ export class WordDefinitionValidator
         return this._parent;
     }
 
+    public get text()
+    {
+        if(this._text === undefined)
+            this.ReportValidationError("Text missing");
+        return this._text!;
+    }
+
     public set text(value: string)
     {
         this._text = value;
@@ -61,6 +68,23 @@ export class WordDefinitionValidator
         if(this._type !== undefined)
             this.ReportValidationError("Can't change word type");
         this._type = value;
+    }
+
+    public get verbForm()
+    {
+        if(this._type !== OpenArabDictWordType.Verb)
+            this.ReportValidationError("Verb forms do only exist on verbs");
+        if(this._verbForm === undefined)
+            this.ReportValidationError("Verb form not set");
+
+        return this._verbForm!;
+    }
+
+    public set verbForm(newValue: OpenArabDictVerbForm)
+    {
+        if(this._type !== OpenArabDictWordType.Verb)
+            this.ReportValidationError("Verb forms do only exist on verbs");
+        this._verbForm = newValue;
     }
 
     public get wordDefinition()
@@ -157,4 +181,5 @@ export class WordDefinitionValidator
     private _isMale?: boolean;
     private _text?: string;
     private _type?: OpenArabDictWordType;
+    private _verbForm?: OpenArabDictVerbForm;
 }

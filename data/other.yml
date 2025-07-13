@@ -130,17 +130,6 @@ words:
         source: hw4-free-text
         text:
           - أتمنى
-  - text: تاري
-    type: particle
-    translations:
-      - dialect: northlevant
-        source: hw4-free-text
-        text:
-          - it seems, it looks like
-      - dialect: eg
-        source: hw4-free-text
-        text:
-          - "أتاري: same meaning"
   - text: نِيكُوتِين‎
     type: noun
     gender: male

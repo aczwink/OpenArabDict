@@ -17,22 +17,25 @@
  * */
 import { OpenArabDictWordType } from "openarabdict-domain";
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { Voice } from "openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
 import { DialectType } from "openarabicconjugation/dist/Dialects";
 import { CreateVerb } from "openarabicconjugation/dist/Verb";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { ParseVocalizedText, VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
-import { GenderedWordDefinition, WordDefinition } from "../DataDefinitions";
+import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { TreeTrace } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { EqualsAny } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
-import { MapVerbTypeToOpenArabicConjugation } from "../shared";
+import { ExtractRoot, MapVerbTypeToOpenArabicConjugation } from "../shared";
+import { DialectMapper } from "../DialectMapper";
 
-function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent?: TreeTrace): string | undefined
+function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, dialectMapper: DialectMapper, parent?: TreeTrace): string | undefined
 {
-    switch(word.derivation)
+    const wordDef = validator.wordDefinition;
+
+    switch(wordDef.derivation)
     {
         case "active-participle":
         case "passive-participle":
@@ -45,10 +48,9 @@ function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-            const verbType = MapVerbTypeToOpenArabicConjugation(verb.verbType) ?? rootInstance.DeriveDeducedVerbType();
-            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any, verbType);
+            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any, MapVerbTypeToOpenArabicConjugation(verb.form.verbType));
 
-            const voice = (word.derivation === "active-participle") ? Voice.Active : Voice.Passive;
+            const voice = (wordDef.derivation === "active-participle") ? Voice.Active : Voice.Passive;
 
             const conjugator = new Conjugator;
             const generated = conjugator.ConjugateParticiple(verbInstance, voice);
@@ -64,7 +66,7 @@ function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any);
+            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any);
             const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
             const conjugator = new Conjugator;
@@ -73,6 +75,43 @@ function GenerateTextIfPossible(word: WordDefinition, builder: DBBuilder, parent
 
             const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
             return VocalizedWordTostring(generated[0]);
+        }
+        case "colloquial":
+        case undefined:
+        {
+            if(wordDef.type === "verb")
+            {
+                const root = ExtractRoot(builder, parent);
+
+                const form = validator.verbForm;
+                const dialectType = dialectMapper.Map(form.variants[0].dialectId)!;
+            
+                const rootInstance = new VerbRoot(root!.radicals);
+
+                let verb;
+                if(form.stem === 1)
+                {
+                    const verbType = MapVerbTypeToOpenArabicConjugation(form.verbType);
+                    const stemParameters = form.variants[0].stemParameters!;
+                    
+                    verb = CreateVerb(dialectType, rootInstance, stemParameters, verbType);
+                }
+                else
+                    verb = CreateVerb(dialectType, rootInstance, form.stem as AdvancedStemNumber);
+
+                const conjugator = new Conjugator;
+                const vocalized = conjugator.Conjugate(verb, {
+                    gender: Gender.Male,
+                    numerus: Numerus.Singular,
+                    person: Person.Third,
+                    tense: Tense.Perfect,
+                    voice: Voice.Active,
+                });
+    
+                const conjugatedWord = VocalizedWordTostring(vocalized);
+
+                return conjugatedWord;
+            }
         }
     }
 
@@ -89,7 +128,7 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
     const root = builder.GetRoot(verb.rootId);
 
     const rootInstance = new VerbRoot(root.radicals);
-    const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.stemParameters ?? verb.stem as any);
+    const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any);
     const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
     const conjugator = new Conjugator;
@@ -104,12 +143,12 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
     throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)));
 }
 
-export function ValidateText(builder: DBBuilder, validator: WordDefinitionValidator)
+export function ValidateText(builder: DBBuilder, dialectMapper: DialectMapper, validator: WordDefinitionValidator)
 {
     if(("text" in validator.wordDefinition) && (validator.wordDefinition.text !== undefined))
         validator.text = validator.wordDefinition.text;
 
-    const generated = GenerateTextIfPossible(validator.wordDefinition, builder, validator.parent);
+    const generated = GenerateTextIfPossible(validator, builder, dialectMapper, validator.parent);
     if(generated !== undefined)
         validator.Infer("text", [generated], generated);
     else if(validator.wordDefinition.derivation === "verbal-noun")

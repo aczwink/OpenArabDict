@@ -18,16 +18,23 @@ root:
   radicals: ك-ت-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
           url: https://ejtaal.net/aa/#hw4=964
           text:
             - to write, pen, write down, put down in writing, note down, inscribe, enter, record, book, register (ه s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 77
+          text:
+            - to write
       derived:
         - text: مَكْتوب
           derivation: meaning-related
@@ -92,14 +99,3 @@ root:
               derivation: plural
               type: noun
               gender: male
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aisu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 77
-              text:
-                - to write

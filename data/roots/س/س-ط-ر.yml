@@ -24,7 +24,7 @@ root:
         parameters: au
       translations: []
       derived:
-        - text: مِسْطَرَة⁩
+        - text: مِسْطَرَة
           derivation: meaning-related
           type: noun
           gender: female
@@ -37,7 +37,13 @@ root:
       type: noun
       gender: female
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=33
           text:
-            - fable, legend, saga, myth
+            - legend, fable, tale, myth, saga
+      derived:
+        - text: أَسَاطِير
+          derivation: plural
+          gender: male

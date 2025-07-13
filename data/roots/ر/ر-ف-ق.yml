@@ -36,7 +36,8 @@ root:
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=420
           text:
             - friend
       derived:
@@ -49,6 +50,8 @@ root:
               source: hw4-free-text
               text:
                 - woman companion
+        - text: رِفَاق
+          derivation: plural
 
     - text: رِفْقَة
       alias: رُفْقَة
