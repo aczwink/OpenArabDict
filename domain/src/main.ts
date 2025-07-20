@@ -165,6 +165,7 @@ interface VerbVariant
 
 export interface OpenArabDictVerbForm
 {
+    stativeActiveParticiple?: true;
     stem: number;
     variants: VerbVariant[];
     verbType?: OpenArabDictVerbType;

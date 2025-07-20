@@ -65,6 +65,7 @@ interface ParameterizedStem1Data
     stem: 1;
     parameters: string;
     type?: "defective" | "sound";
+    "stative-active-participle"?: true;
 }
 
 interface ParameterizedStem1DataWithVariants

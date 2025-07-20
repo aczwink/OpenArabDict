@@ -17,7 +17,7 @@
  * */
 
 import { OpenArabDictVerbType } from "openarabdict-domain";
-import { VerbVariantDefintion, VerbVariantStem1Defintion, VerbWordDefinition } from "../DataDefinitions";
+import { ParameterizedStemData, VerbVariantDefintion, VerbVariantStem1Defintion, VerbWordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
@@ -83,6 +83,7 @@ export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMappe
         const stem = def.form.stem;
 
         validator.verbForm = {
+            stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),
             stem,
             variants: def.form.variants.map(ValidateVerbFormVariant.bind(undefined, builder, dialectMapper, verbType, validator)),
             verbType
@@ -93,6 +94,7 @@ export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMappe
         const stemNumber = (typeof def.form === "number") ? def.form : def.form.stem;
 
         validator.verbForm = {
+            stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),
             stem: stemNumber,
             variants: [
                 ValidateVerbFormVariant(builder, dialectMapper, verbType, validator, ((typeof def.form !== "number") && ("parameters" in def.form)) ? ({ dialect: def.dialect, parameters: def.form.parameters }) : ({ dialect: def.dialect }))
@@ -100,4 +102,13 @@ export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMappe
             verbType
         };
     }
+}
+
+function ExtractActiveParticipleFlag(form: ParameterizedStemData | number): true | undefined
+{
+    if(typeof form === "number")
+        return undefined;
+    if((form.stem === 1) && ("parameters" in form))
+        return form["stative-active-participle"];
+    return undefined;
 }

@@ -53,7 +53,8 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             const voice = (wordDef.derivation === "active-participle") ? Voice.Active : Voice.Passive;
 
             const conjugator = new Conjugator;
-            const generated = conjugator.ConjugateParticiple(verbInstance, voice);
+
+            const generated = ((voice === Voice.Active) && (verb.form.stativeActiveParticiple === true)) ? conjugator.DeclineStativeActiveParticiple(verbInstance) : conjugator.ConjugateParticiple(verbInstance, voice);
             return VocalizedWordTostring(generated);
         }
         case "verbal-noun":
@@ -128,7 +129,7 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
     const root = builder.GetRoot(verb.rootId);
 
     const rootInstance = new VerbRoot(root.radicals);
-    const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any);
+    const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any, MapVerbTypeToOpenArabicConjugation(verb.form.verbType));
     const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
     const conjugator = new Conjugator;

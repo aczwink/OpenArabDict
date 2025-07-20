@@ -21,7 +21,8 @@ root:
       dialect: msa
       form:
         stem: 1
-        parameters: ia
+        parameters: irregular_hayiya
+        type: irregular
       translations:
         - dialect: msa
           source: hw4
@@ -52,7 +53,8 @@ root:
       dialect: msa
       form:
         stem: 1
-        parameters: ia
+        parameters: irregular_hayiya
+        type: irregular
       translations:
         - dialect: msa
           source: hw4

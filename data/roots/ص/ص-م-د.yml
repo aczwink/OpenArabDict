@@ -15,50 +15,20 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ب-ر
+  radicals: ص-م-د
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: uu
-        stative-active-participle: true
+        parameters: au
       derived:
-        - text: خَبِير
-          derivation: active-participle
-          type: noun
+        - derivation: active-participle
+          type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=275
+              url: https://ejtaal.net/aa/#hw4=626
               text:
-                - expert, specialist
-          derived:
-            - text: خُبَرَاء
-              derivation: plural
-
-    - type: verb
-      dialect: msa
-      form: 4
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to notify, inform, apprise, advise (ب ه s.o. of), let know, tell
-              (ب ه s.o. about)
-
-    - text: خَبَر
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - news
-      derived:
-        - text: أَخْبَار
-          derivation: plural
-          type: noun
-          gender: male
-          translations: []
+                - resistent (ل against), -proof (in compounds)
