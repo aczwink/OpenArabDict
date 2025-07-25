@@ -105,14 +105,19 @@ root:
           source: hw4-free-text
           text:
             - wind
+
     - text: رُوح
       type: noun
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=436
           text:
             - breath of life, soul
+          contextual:
+            - text: الروح المعنوية
+              translation: the spirit of self-assertion, moral strength; morale
       derived:
         - text: أَرْوَاح
           derivation: plural

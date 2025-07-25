@@ -15,38 +15,21 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ي-ل
+  radicals: غ-م-ض
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations: []
+        parameters: uu
+      alias: au
       derived:
-        - text: خَيَال
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - imagination
-    - type: verb
-      dialect: msa
-      form: 5
-      translations: []
-      derived:
-        - derivation: verbal-noun
-          type: noun
+        - derivation: active-participle
+          type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=323
+              url: https://ejtaal.net/aa/#hw4=814
               text:
-                - imagination, phantasy
-          derived:
-            - text: تَخَيُّلَات
-              derivation: plural
+                - mysterious, enigmatic(al)

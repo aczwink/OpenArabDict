@@ -15,22 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ي-ء-س
+  radicals: ع-ش-ب
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ia
-      alias: ii
+    - text: عُشْب
+      type: noun
+      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          url: https://ejtaal.net/aa/#hw4=731
           text:
-            - to renounce
+            - (green) grass, herbage, plants
       derived:
-        - text: يَأْس
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations: []
+        - text: أَعْشَاب
+          derivation: plural

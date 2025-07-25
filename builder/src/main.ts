@@ -183,7 +183,7 @@ async function CheckWords(dbPath: string)
 
             if(root?.radicals.startsWith("و") && (verb.form.variants[0].stemParameters === "ia"))
             {
-                console.log("FOUND", word);
+                console.log("FOUND1", word);
             }
         }
 
@@ -196,21 +196,7 @@ async function CheckWords(dbPath: string)
 
             if((root?.radicals === "ندو") && (verb.form.variants[0].stemParameters === "ia"))
             {
-                console.log("FOUND", word);
-            }
-        }
-
-        //test: arb/defective/stem10.js
-        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.PassiveParticiple))
-        {
-            const verbId = word.parent.verbId;
-            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
-            const root = doc.roots.find(x => x.id === verb.rootId);
-            const isDefective = (root?.radicals.endsWith("و")) || (root?.radicals.endsWith("ي"));
-
-            if(isDefective && (verb.form.stem === 10))
-            {
-                console.log("FOUND", word);
+                console.log("FOUND2", word);
             }
         }
 
@@ -224,7 +210,7 @@ async function CheckWords(dbPath: string)
 
             if(isDefective && (verb.form.stem === 3))
             {
-                console.log("FOUND", word);
+                console.log("FOUND4", word);
             }
         }
 
@@ -238,7 +224,7 @@ async function CheckWords(dbPath: string)
 
             if(isDefective && (verb.form.stem === 6))
             {
-                console.log("FOUND", word);
+                console.log("FOUND5", word);
             }
         }
 
@@ -252,7 +238,7 @@ async function CheckWords(dbPath: string)
 
             if(isDefective && (verb.form.stem === 7))
             {
-                console.log("FOUND", word);
+                console.log("FOUND6", word);
             }
         }
 
@@ -267,7 +253,7 @@ async function CheckWords(dbPath: string)
 
             if(startsWithWaw && isDefective && (verb.form.stem === 4))
             {
-                console.log("FOUND", word);
+                console.log("FOUND7", word);
             }
         }
 
@@ -282,7 +268,7 @@ async function CheckWords(dbPath: string)
 
             if(middleYa && endHamza)
             {
-                console.log("FOUND", word);
+                console.log("FOUND8", word);
             }
         }
 
@@ -296,7 +282,7 @@ async function CheckWords(dbPath: string)
 
             if(isHr1 && (verb.form.stem === 8))
             {
-                console.log("FOUND", word);
+                console.log("FOUND9", word);
             }
         }
 
@@ -310,7 +296,7 @@ async function CheckWords(dbPath: string)
 
             if(isHollow && (verb.form.stem === 1) && (verb.form.variants[0].stemParameters === "ia"))
             {
-                console.log("FOUND", word);
+                console.log("FOUND10", word);
             }
         }
 
@@ -323,7 +309,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 1) && (root.radicals[1] === root.radicals[2]) && (verb.form.variants[0].stemParameters === "ia") && (root.radicals[0] !== "و"))
             {
-                console.log("FOUND", word);
+                console.log("FOUND11", word);
             }
         }
 
@@ -337,7 +323,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 3) && isr2d)
             {
-                console.log("FOUND", word);
+                console.log("FOUND12", word);
             }
         }
 
@@ -351,7 +337,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 6) && isr2d)
             {
-                console.log("FOUND", word);
+                console.log("FOUND13", word);
             }
         }
 
@@ -365,7 +351,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 7) && isr2d)
             {
-                console.log("FOUND", word);
+                console.log("FOUND14", word);
             }
         }
 
@@ -379,7 +365,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 1) && (verb.form.variants[0].stemParameters === "ii") && isSound)
             {
-                console.log("FOUND", word);
+                console.log("FOUND15", word);
             }
         }
 
@@ -393,7 +379,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 7) && isSound)
             {
-                console.log("FOUND", word);
+                console.log("FOUND16", word);
             }
         }
 
@@ -407,7 +393,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 9) && isSound)
             {
-                console.log("FOUND", word);
+                console.log("FOUND17", word);
             }
         }
 
@@ -420,7 +406,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 1) && (root.radicals === "ءخذ"))
             {
-                console.log("FOUND", word);
+                console.log("FOUND18", word);
             }
         }
 
@@ -431,9 +417,9 @@ async function CheckWords(dbPath: string)
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
             const root = doc.roots.find(x => x.id === verb.rootId)!;
 
-            if((verb.form.stem === 1) && (root.radicals === "ءكل"))
+            if((verb.form.stem === 1) && (root.radicals === "ءخذ"))
             {
-                console.log("FOUND", word);
+                console.log("FOUND19", word);
             }
         }
 
@@ -446,7 +432,7 @@ async function CheckWords(dbPath: string)
 
             if((verb.form.stem === 4) && (root.radicals === "رءي"))
             {
-                console.log("FOUND", word);
+                console.log("FOUND20", word);
             }
         }
     }
