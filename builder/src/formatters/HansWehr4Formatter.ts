@@ -37,6 +37,13 @@ export function HansWehr4Formatter(x: TranslationDefinition)
     if(x.source !== "hw4")
         return;
 
+    if((x.url === undefined) && (x["source-page"] !== undefined))
+    {
+        const ejtaalPage = x["source-page"] + 13;
+        x.url = "https://ejtaal.net/aa/#hw4=" + ejtaalPage;
+        x["source-page"] = undefined;
+    }
+
     for(let i = 0; i < x.text.length; i++)
     {
         x.text[i] = ReplaceAbbreviations(x.text[i]);

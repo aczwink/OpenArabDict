@@ -22,10 +22,20 @@ root:
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 554
           text:
-            - to catch fire, start burning, ignite, burn, flame, blaze, flare
-              up, break out (fire)
+            - to catch fire, start burning, ignite, burn, flame, blaze, flare up, break out (fire)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 555
+              text:
+                - ignition, inflammation, combustion, burning
 
     - text: شُعْلَة
       type: noun
@@ -33,6 +43,6 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=1251
+          source-page: 554
           text:
             - fire, blaze, flame

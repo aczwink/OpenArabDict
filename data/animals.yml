@@ -14,18 +14,13 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: ف-ل-ت
-  words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 849
-          text:
-            - to escape (من s.o., s.th.; from), slip away, get away (من from s.o., from s.th.)
-            - to let (ه ,ه s.o., s.th.) escape or slip away or get away, let loose, free, release, liberate, set free, set at liberty (ه ,ه s.o., s.th.)
+words:
+  - text: دُلْفِين
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=348
+        text:
+          - dolphin

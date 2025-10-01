@@ -33,3 +33,18 @@ root:
               text:
                 - (with foll. acc.) except, save, with the exception of,
                   excepting ...
+
+    - type: verb
+      dialect: msa
+      form: 4
+      translations: []
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=714
+              text:
+                - contagious, infectious

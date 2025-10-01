@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict free text translation entry definition",
+    "description": "JSON Schema for OpenArabDict free text translation entry definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "dialect": {
+            "type": "string",
+            "enum": [
+                "lb"
+            ]
+        },
+        "source": {
+            "const": "free-text"
+        },
+        "text": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "url": {
+            "type": "string"
+        }
+    },
+    "required": ["dialect", "source", "text"]
+}

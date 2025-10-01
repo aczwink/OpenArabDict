@@ -18,11 +18,18 @@ root:
   radicals: ح-ر-ك
   words:
     - type: verb
-      dialect: msa
-      form: 2
-      translations: []
+      form:
+        stem: 2
+        variants:
+          - dialect: msa
+          - dialect: lb
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 22
+          text:
+            - to move
       derived:
-        - text: حَرَكَة⁩
+        - text: حَرَكَة
           derivation: meaning-related
           type: noun
           gender: female
@@ -31,15 +38,6 @@ root:
               source: hw4-free-text
               text:
                 - movement, motion
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 2
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 22
-              text:
-                - to move
                 
     - type: verb
       dialect: msa

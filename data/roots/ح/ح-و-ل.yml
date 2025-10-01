@@ -60,11 +60,14 @@ root:
               translations:
                 - dialect: msa
                   source: hw4
-                  url: http://ejtaal.net/aa/#hw4=265
+                  source-page: 252
                   text:
                     - condition, state
                     - situation
                     - status, position of affairs
+              derived:
+                - text: حَالَات
+                  derivation: plural
             - text: أَحْوَال
               derivation: plural
               type: noun

@@ -79,3 +79,17 @@ root:
 
               2. to balance, right, rectify, put in order, straighten out, fix,
               settle, adjust (ه s.th.)
+
+    - type: verb
+      dialect: msa
+      form: 8
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 698
+              text:
+                - moderateness, moderation, temperance, temperateness

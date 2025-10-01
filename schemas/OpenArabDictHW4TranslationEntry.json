@@ -1,0 +1,64 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict HW4 translation entry definition",
+    "description": "JSON Schema for OpenArabDict HW4 translation entry definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "complete": {
+            "type": "boolean",
+            "enum": [true]
+        },
+        "contextual": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "translation": {
+                        "type": "string"
+                    }
+                },
+                "required": ["text", "translation"]
+            }
+        },
+        "dialect": {
+            "type": "string",
+            "enum": [
+                "msa"
+            ]
+        },
+        "examples": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "translation": {
+                        "type": "string"
+                    }
+                },
+                "required": ["text", "translation"]
+            }
+        },
+        "source": {
+            "const": "hw4"
+        },
+        "source-page": {
+            "type": "integer"
+        },
+        "text": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": ["dialect", "source", "source-page", "text"]
+}

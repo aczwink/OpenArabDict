@@ -19,6 +19,20 @@ root:
   words:
     - type: verb
       dialect: msa
+      form: 4
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=1058
+              text:
+                - pleasant, delicious, enjoyable, delightful, gratifying
+                
+    - type: verb
+      dialect: msa
       form: 10
       translations:
         - dialect: msa

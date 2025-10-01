@@ -25,6 +25,7 @@ export interface TranslationDefinition
     examples?: { text: string; translation: string; }[];
     complete?: true;
     source: "hw4" | "hw4-free-text";
+    "source-page"?: number;
     text: string[];
     url?: string;
 }

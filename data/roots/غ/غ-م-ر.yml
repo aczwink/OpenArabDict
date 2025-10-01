@@ -19,6 +19,18 @@ root:
   words:
     - type: verb
       dialect: msa
+      form:
+        stem: 1
+        parameters: au
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 800
+          text:
+            - to flood, inundate (ه s.th., ه ب s.th. with), overflow (ه s.th.)
+
+    - type: verb
+      dialect: msa
       form: 3
       translations: []
       derived:

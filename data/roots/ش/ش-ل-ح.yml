@@ -28,3 +28,25 @@ root:
           text:
             - undress
             - take off, remove
+
+    - type: verb
+      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 566
+          text:
+            - to rob, plunder (ه s.o.)
+      derived:
+        - text: تَشْلِيح
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 566
+              text:
+                - robbing, plundering, robbery

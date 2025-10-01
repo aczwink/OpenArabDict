@@ -49,3 +49,13 @@ root:
             - |-
               1. to cause (ه s.o.) to lose or miss or forfeit (ه s.th.)
               2. to bereave, deprive, dispossess, rob (ه ه s.o. of s.th.)
+
+    - type: verb
+      dialect: msa
+      form: 8
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 845
+          text:
+            - to miss (ه ,ه s.o., s.th.)

@@ -15,17 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ف-ل-ت
+  radicals: ب-ي-د
   words:
     - type: verb
       dialect: msa
-      form:
-        stem: 1
-        parameters: ai
+      form: 4
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          source-page: 849
+          source-page: 103
           text:
-            - to escape (من s.o., s.th.; from), slip away, get away (من from s.o., from s.th.)
-            - to let (ه ,ه s.o., s.th.) escape or slip away or get away, let loose, free, release, liberate, set free, set at liberty (ه ,ه s.o., s.th.)
+            - to destroy, exterminate, extirpate (ه ,ه s.o., s.th.)

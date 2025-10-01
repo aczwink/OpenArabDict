@@ -15,7 +15,8 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-ه-ي
+  radicals: ن-ه-و
+  ya: true
   words:
     - type: verb
       dialect: msa
@@ -36,6 +37,21 @@ root:
               source: hw4-free-text
               text:
                 - finishing, termination, completion, conclusion
+
+    - type: verb
+      dialect: msa
+      form: 6
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1180
+              text:
+                - limited, bounded, finite
+
     - type: verb
       dialect: msa
       form: 8

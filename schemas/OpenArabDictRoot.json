@@ -1,0 +1,32 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict root definition",
+    "description": "JSON Schema for OpenArabDict root definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "root": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "radicals": {
+                    "type": "string",
+                    "minLength": 5,
+                    "maxLength": 7
+                },
+                "words": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./OpenArabDictWord.json"
+                    }
+                },
+                "ya": {
+                    "type": "boolean",
+                    "enum": [true]
+                }
+            },
+            "required": ["radicals", "words"]
+        }
+    },
+    "required": ["root"]
+}

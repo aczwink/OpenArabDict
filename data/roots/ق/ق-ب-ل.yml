@@ -38,6 +38,18 @@ root:
               url: https://ejtaal.net/aa/#hw4=881
               text:
                 - acceptance
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 869
+              text:
+                - with foll. ل and masdar corresponding to English adjectives -able, -ible, -ive, -al
+              examples:
+                - text: قابل للاحتراق
+                  translation: combustible
         - derivation: passive-participle
           type: adjective
           gender: male

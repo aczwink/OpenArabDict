@@ -45,3 +45,18 @@ root:
               type: noun
               gender: male
               translations: []
+
+    - type: verb
+      dialect: msa
+      form: 3
+      derived:
+        - text: خِطَاب
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 285
+              text:
+                - public address, speech
