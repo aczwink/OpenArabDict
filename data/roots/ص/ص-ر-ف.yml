@@ -55,7 +55,15 @@ root:
     - text: مَصْرِف
       type: noun
       gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 599
+          text:
+            - drainage canal, drainage ditch, drain
       derived:
+        - derivation: plural
+          text: مَصَارِف
         - text: مَصْرِفِيّ
           derivation: nisba
           type: noun

@@ -29,3 +29,13 @@ root:
           source-page: 690
           text:
             - to be violent, fierce, strong, wild, furious, raging (e.g., storms)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 690
+              text:
+                - violent, fierce, strong, wild, furious, raging (storm)

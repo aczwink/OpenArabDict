@@ -16,4 +16,28 @@
 
 root:
   radicals: ق-و-ع
-  words: []
+  words:
+    - text: قَاع
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 932
+          text:
+            - bottom, lowest part
+          examples:
+            - text: قاع البحر
+              translation: ocean floor, bottom of the sea
+    - text: قَاعَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 932
+          text:
+            - entrance hall, vestibule, corridor
+      derived:
+        - text: قَاعَات
+          derivation: plural

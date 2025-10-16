@@ -34,11 +34,11 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 521
               text:
-                - |-
-                  1. trip, tour
-                  2. walk, errand
+                - trip, tour
+                - walk, errand
         - text: سِيرَة
           derivation: meaning-related
           type: noun

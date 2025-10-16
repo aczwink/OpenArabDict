@@ -22,11 +22,12 @@ root:
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1270
           text:
+            - to place at disposal, make available (ه financial means, possibilities, aid, ل for)
             - to fulfill (ه prerequisites, conditions, etc.)
-            - to save (ه s.th.), be sparing, be economical, hold back, economize
-              (ه with)
+            - to save (ه s.th.), be sparing, be economical, hold back, economize (ه with)
 
     - type: verb
       dialect: msa

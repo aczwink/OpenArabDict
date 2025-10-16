@@ -33,3 +33,15 @@ root:
               3. to console, comfort (ه s.o.)
 
               4. to treat, cure (ه s.th., medically)
+
+    - text: مَأْسَوِيّ
+      alias: مَأْسَاوِيّ
+      type: adjective
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 21
+          text:
+            - tragic

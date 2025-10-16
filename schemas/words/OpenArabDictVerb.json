@@ -1,0 +1,65 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict verb definition",
+    "description": "JSON Schema for OpenArabDict verb definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "derived": {
+            "type": "array",
+            "items": {
+                "$ref": "./OpenArabDictWord_derived.json"
+            }
+        },
+        "dialect": {
+            "type": "string",
+            "enum": [
+                "lb",
+                "msa"
+            ]
+        },
+        "form": {
+            "oneOf": [
+                {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 10
+                },
+                {
+                    "type": "object",
+                    "additionalProperties": false,
+                    "properties": {
+                        "stem": {
+                            "type": "integer",
+                            "minimum": 1,
+                            "maximum": 10
+                        },
+                        "parameters": {
+                            "type": "string",
+                            "minLength": 2,
+                            "maxLength": 2
+                        }
+                    },
+                    "required": ["stem", "parameters"]
+                }
+            ]
+        },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictFreeTextTranslationEntry.json"
+                    },
+                    {
+                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    }
+                ]
+            }
+        },
+        "type": {
+            "const": "verb"
+        }
+    },
+    "required": ["dialect", "form", "type"]
+}

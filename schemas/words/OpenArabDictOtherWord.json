@@ -1,0 +1,44 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict other word definition",
+    "description": "JSON Schema for OpenArabDict other word definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "derived": {
+            "type": "array",
+            "items": {
+                "$ref": "#"
+            }
+        },
+        "derivation": {
+            "type": "string",
+            "enum": [
+                "meaning-related"
+            ]
+        },
+        "text": {
+            "type": "string"
+        },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "./OpenArabDictFreeTextTranslationEntry.json"
+                    },
+                    {
+                        "$ref": "./OpenArabDictHW4TranslationEntry.json"
+                    }
+                ]
+            }
+        },
+        "type": {
+            "type": "string",
+            "enum": [
+                "preposition"
+            ]
+        }
+    },
+    "required": []
+}

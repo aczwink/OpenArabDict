@@ -47,3 +47,16 @@ root:
           source-page: 820
           text:
             - to prevent, obviate, avert, avoid (من or ه s.th.)
+      derived:
+        - text: تَفَادٍ
+          derivation: meaning-related
+          gender: male
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 821
+              text: []
+              contextual:
+                - text: تفاديا ل
+                  translation: for the purpose of avoiding...

@@ -38,3 +38,17 @@ root:
               source: hw4-free-text
               text:
                 - wealthy, rich
+
+    - text: ثُرَيَّا
+      alias: ثُرَيَّة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 124
+          text:
+            - chandelier
+      derived:
+        - text: ثُرَيَّات
+          derivation: plural

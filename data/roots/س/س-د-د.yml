@@ -15,42 +15,21 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ط-ر-ء
+  radicals: س-د-د
   words:
     - type: verb
       dialect: msa
       form:
         stem: 1
-        parameters: aa
+        parameters: au
       derived:
-        - derivation: active-participle
+        - derivation: passive-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              source-page: 648
+              source-page: 469
               text:
-                - unforeseen, unexpected, contingent
-          derived:
-            - text: طَارِئَة
-              derivation: feminine
-              type: noun
-              translations:
-                - dialect: msa
-                  source: hw4
-                  source-page: 648
-                  text:
-                    - unforeseen event, unexpected case, a contingent
-              derived:
-                - text: طَوَارِئ
-                  derivation: plural
-                  translations:
-                    - dialect: msa
-                      source: hw4
-                      source-page: 648
-                      text:
-                        - emergencies, emergency cases
-                      examples:
-                        - text: حالة الطوارئ
-                          translation: state of emergency
+                - jammed, blocked (street)
+                - closed (circuit; el.)

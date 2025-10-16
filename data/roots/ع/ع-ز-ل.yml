@@ -23,10 +23,13 @@ root:
         stem: 1
         parameters: ai
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 714
           text:
-            - to isolate
+            - to remove, set aside, isolate, separate, segregate, detach, cut off (ه ,ه عن s.o., s.th. from)
+            - to depose (ه s.o.), release, dismiss, discharge (ه s.o. عن منصبه of his office)
       derived:
         - derivation: active-participle
           type: adjective

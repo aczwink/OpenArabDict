@@ -29,3 +29,14 @@ root:
       derived:
         - text: فُقَرَاء
           derivation: plural
+    
+    - text: فِقْرَة
+      alias: فَقْرَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 846
+          text:
+            - section, paragraph, passage, article

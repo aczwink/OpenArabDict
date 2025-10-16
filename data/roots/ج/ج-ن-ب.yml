@@ -61,9 +61,20 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=177
+          source-page: 164
           text:
             - to avoid (ه s.th., ه s.o.)
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          type: noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 166
+              text:
+                - avoidance
 
     - text: جَنُوب
       type: noun

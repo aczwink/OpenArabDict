@@ -31,17 +31,35 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
-              url: http://ejtaal.net/aa/#hw4=1139
+              source: hw4
+              source-page: 1126
               text:
-                - >-
-                  1. rate
+                - rate
+                - percentage (of s.th. in a total)
+              contextual:
+                - text: نسبة إلى
+                  translation: in respect to, with regard to, regarding, concerning, as to
+                - text: بالنسبة إلى
+                  translation: in respect to, with regard to, regarding, concerning, as to
+                - text: بالنسبة ل
+                  translation: in respect to, with regard to, regarding, concerning, as to
+          derived:
+            - text: نِسْبِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              derived:
+                - text: نِسْبِيّاً
+                  derivation: adverbial-accusative
+                  type: adverb
+                  translations:
+                    - complete: true
+                      dialect: msa
+                      source: hw4
+                      source-page: 1126
+                      text:
+                        - relatively
 
-                  2. percentage (of s.th. in a total)
-
-
-                  بالنسبة إلى (ل or) in respect to, with regard to, regarding,
-                  concerning, as to
     - type: verb
       dialect: msa
       form: 3

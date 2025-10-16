@@ -35,6 +35,7 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 243
               text:
                 - protection

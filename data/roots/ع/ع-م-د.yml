@@ -15,31 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-و-ح
+  radicals: ع-م-د
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: uu
+    - text: عَمُود
+      type: noun
+      gender: male
       translations:
         - dialect: msa
           source: hw4
-          source-page: 1035
+          source-page: 752
           text:
-            - to appear, show, loom, emerge, come in sight
+            - column, pillar, pilaster
       derived:
-        - derivation: verbal-noun
-          text: لَوْح
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1035
-              text:
-                - plank, board
-                - panel
-          derived:
-            - derivation: plural
-              text: أَلْوَاح
+        - text: أَعْمِدَة
+          derivation: plural

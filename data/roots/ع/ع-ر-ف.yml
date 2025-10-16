@@ -70,7 +70,12 @@ root:
     - type: verb
       dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 708
+          text:
+            - to introduce (إلى or ه ب s.o. to s.o. else), present (ب or ب إلى ,ه إلى s.o. to s.o. else)
       derived:
         - text: تَعْرِيف
           derivation: verbal-noun

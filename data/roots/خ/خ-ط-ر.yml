@@ -77,3 +77,14 @@ root:
               url: http://ejtaal.net/aa/#hw4=300
               text:
                 - more dangerous, riskier
+
+    - text: مَخَاطِر
+      type: noun
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 287
+          text:
+            - dangers, perils

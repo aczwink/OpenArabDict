@@ -15,31 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-و-ح
+  radicals: ء-ث-ث
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: uu
+    - text: أَثَاث
+      type: noun
+      gender: male
       translations:
         - dialect: msa
           source: hw4
-          source-page: 1035
+          source-page: 4
           text:
-            - to appear, show, loom, emerge, come in sight
-      derived:
-        - derivation: verbal-noun
-          text: لَوْح
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1035
-              text:
-                - plank, board
-                - panel
-          derived:
-            - derivation: plural
-              text: أَلْوَاح
+            - furniture, furnishings (of an apartment, of a room)

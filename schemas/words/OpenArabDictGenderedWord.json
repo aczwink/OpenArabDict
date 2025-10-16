@@ -1,0 +1,16 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict gendered word definition",
+    "description": "JSON Schema for OpenArabDict gendered word definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "derivation": {
+            "type": "string",
+            "enum": [
+                "meaning-related"
+            ]
+        }
+    },
+    "required": []
+}

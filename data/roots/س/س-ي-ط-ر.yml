@@ -32,4 +32,9 @@ root:
           derivation: verbal-noun
           type: noun
           gender: female
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 523
+              text:
+                - rule, dominion, domination, command, supremacy, power, authority (على over)

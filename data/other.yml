@@ -251,20 +251,7 @@ words:
             1. basin
             2. water basin
             3. trough, tank, cistern, reservoir, container
-  - text: قَاعَة
-    type: noun
-    gender: female
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - entrance hall, vestibule, corridor
-    derived:
-      - text: قَاعَات
-        derivation: plural
-        type: noun
-        gender: female
-        translations: []
+
   - text: إِسْكَاف
     type: noun
     gender: male
@@ -1120,9 +1107,12 @@ words:
     translations:
       - dialect: msa
         source: hw4
-        url: https://ejtaal.net/aa/#hw4=376
+        source-page: 363
         text:
           - (with foll. genit.) possessor, owner, holder or master of, endowed or provided with, embodying or comprising s.th.
+        contextual:
+          - text: ذووه
+            translation: his relatives, his kin, his folks
         examples:
           - text: ذو عقل
             translation: endowed with brains, bright, intelligent

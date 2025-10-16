@@ -43,9 +43,14 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=632
+          source-page: 619
           text:
             - image, likeness, picture
+          contextual:
+            - text: صورة طبق الأصل
+              translation: true copy; exact replica
+            - text: بصورة عامة
+              translation: generally, in general
       derived:
         - text: صُوَر
           derivation: plural

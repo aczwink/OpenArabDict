@@ -49,9 +49,19 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 766
               text:
-                - pl. أَعْوَاد or عِيدَان lute(musical instrument)
+                - stick, rod, pole
+                - lute(musical instrument)
+              examples:
+                - text: عود الثقاب
+                  translation: matchstick, match
+          derived:
+            - text: أَعْوَاد
+              derivation: plural
+            - text: عِيدَان
+              derivation: plural
         - text: عَادَة
           derivation: meaning-related
           type: noun

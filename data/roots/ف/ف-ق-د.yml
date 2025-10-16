@@ -43,12 +43,13 @@ root:
       dialect: msa
       form: 4
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 845
           text:
-            - |-
-              1. to cause (ه s.o.) to lose or miss or forfeit (ه s.th.)
-              2. to bereave, deprive, dispossess, rob (ه ه s.o. of s.th.)
+            - to cause (ه s.o.) to lose or miss or forfeit (ه s.th.)
+            - to bereave, deprive, dispossess, rob (ه ه s.o. of s.th.)
 
     - type: verb
       dialect: msa

@@ -1,0 +1,30 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict adjective definition",
+    "description": "JSON Schema for OpenArabDict adjective definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "gender": {
+            "type": "string",
+            "enum": [
+                "female",
+                "male"
+            ]
+        },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    }
+                ]
+            }
+        },
+        "type": {
+            "const": "adjective"
+        }
+    },
+    "required": ["gender", "type"]
+}

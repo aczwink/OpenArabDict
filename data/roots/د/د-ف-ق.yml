@@ -15,31 +15,18 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-و-ح
+  radicals: د-ف-ق
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: uu
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 1035
-          text:
-            - to appear, show, loom, emerge, come in sight
+    - dialect: msa
+      form: 5
+      type: verb
       derived:
-        - derivation: verbal-noun
-          text: لَوْح
-          type: noun
+        - derivation: active-participle
+          type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              source-page: 1035
+              source-page: 331
               text:
-                - plank, board
-                - panel
-          derived:
-            - derivation: plural
-              text: أَلْوَاح
+                - impulsive

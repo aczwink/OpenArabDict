@@ -1,0 +1,39 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict noun definition",
+    "description": "JSON Schema for OpenArabDict noun definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "derived": {
+            "type": "array",
+            "items": {
+                "$ref": "./OpenArabDictWord_derived.json"
+            }
+        },
+        "gender": {
+            "type": "string",
+            "enum": [
+                "female",
+                "male"
+            ]
+        },
+        "text": {
+            "type": "string"
+        },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    }
+                ]
+            }
+        },
+        "type": {
+            "const": "noun"
+        }
+    },
+    "required": ["gender", "text", "type"]
+}

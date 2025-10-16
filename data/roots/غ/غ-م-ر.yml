@@ -28,6 +28,19 @@ root:
           source-page: 800
           text:
             - to flood, inundate (ه s.th., ه ب s.th. with), overflow (ه s.th.)
+      derived:
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 800
+              text:
+                - lying under the bottom of the sea (oil field)
+              examples:
+                - text: مغمور بالمياه
+                  translation: covered with water, submerged under water
 
     - type: verb
       dialect: msa

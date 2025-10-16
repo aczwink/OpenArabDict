@@ -35,6 +35,17 @@ words:
         text:
           - notebook, copybook
 
+  - text: سِيمَى
+    alias: سِيمَا
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 524
+        text:
+          - mark, sign, characteristic
+
   - text: نَبْق
     type: noun
     gender: male

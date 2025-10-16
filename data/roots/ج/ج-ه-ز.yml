@@ -26,6 +26,20 @@ root:
           text:
             - to make ready (ه s.th.)
       derived:
+        - text: تَجْهِيز
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          derived:
+            - derivation: plural
+              text: تَجْهِيزَات
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 170
+                  text:
+                    - equipment, gear
         - text: جاهِز
           derivation: meaning-related
           type: adjective

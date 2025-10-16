@@ -85,6 +85,7 @@ root:
 
                   2. (attributively:) several, numerous, many e.g. عدة رجال many
                   men, عدة مرات several times
+
     - type: verb
       dialect: msa
       form: 4
@@ -93,6 +94,17 @@ root:
           source: hw4-free-text
           text:
             - to prepare (ه, ل ه s.o., s.th. for)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 695
+              text:
+                - preparation
+
     - type: verb
       dialect: msa
       form: 5
