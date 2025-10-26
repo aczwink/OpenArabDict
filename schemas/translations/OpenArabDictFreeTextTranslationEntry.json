@@ -8,6 +8,7 @@
         "dialect": {
             "type": "string",
             "enum": [
+                "homsi",
                 "lb"
             ]
         },

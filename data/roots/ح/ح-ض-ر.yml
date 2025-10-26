@@ -24,6 +24,47 @@ root:
         parameters: au
       translations: []
       derived:
+        - text: حُضُور
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - presence
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 216
+              text:
+                - present
+              contextual:
+                - text: الحاضر
+                  translation: the present (time)
+
+    - type: verb
+      dialect: msa
+      form:
+        stem: 1
+        parameters: au
+      translations: []
+      derived:
+        - text: حَضَارَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - |-
+                  1. civilization
+                  2. culture
+                  3. settledness, sedentariness
         - text: حَضَارِي
           derivation: meaning-related
           type: adjective
@@ -41,27 +82,6 @@ root:
               type: adjective
               gender: female
               translations: []
-        - text: حَضَارَة
-          derivation: verbal-noun
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - |-
-                  1. civilization
-                  2. culture
-                  3. settledness, sedentariness
-        - text: حُضُور
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - presence
 
     - type: verb
       dialect: lb

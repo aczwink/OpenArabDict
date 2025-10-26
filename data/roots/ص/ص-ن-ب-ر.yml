@@ -26,3 +26,6 @@ root:
           source-page: 614
           text:
             - (water) faucet, tap
+      derived:
+        - derivation: plural
+          text: صَنَابِير

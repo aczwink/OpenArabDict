@@ -30,6 +30,7 @@ import { EqualsAny } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
 import { ExtractRoot, MapVerbTypeToOpenArabicConjugation } from "../shared";
 import { DialectMapper } from "../DialectMapper";
+import { VerbalNounCounter } from "../VerbalNounCounter";
 
 function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, dialectMapper: DialectMapper, parent?: TreeTrace): string | undefined
 {
@@ -67,11 +68,11 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any);
+            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any, MapVerbTypeToOpenArabicConjugation(verb.form.verbType));
             const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
             const conjugator = new Conjugator;
-            if(conjugator.HasPotentiallyMultipleVerbalNounForms(rootInstance, stem))
+            if(conjugator.HasPotentiallyMultipleVerbalNounForms(verbInstance))
                 return undefined;
 
             const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
@@ -119,7 +120,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
     return undefined;
 }
 
-function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, parent: TreeTrace | undefined)
+function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace | undefined)
 {
     if(parent?.type !== "verb")
         throw new Error("Verbal nouns can only be children of verbs");
@@ -136,16 +137,20 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, pa
     const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
 
     const parsed = ParseVocalizedText(word.text ?? "");
-    for (const possible of generated)
+    for (let i = 0; i < generated.length; i++)
     {
+        const possible = generated[i];
         if(EqualsAny(possible, parsed))
+        {
+            verbalNounCounter.Increment(verbInstance, i, generated.length);
             return;
+        }
     }
     const choices = generated.map(VocalizedWordTostring).join(", ");
     throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)) + ". But allowed values are: " + choices);
 }
 
-export function ValidateText(builder: DBBuilder, dialectMapper: DialectMapper, validator: WordDefinitionValidator)
+export function ValidateText(builder: DBBuilder, dialectMapper: DialectMapper, verbalNounCounter: VerbalNounCounter, validator: WordDefinitionValidator)
 {
     if(("text" in validator.wordDefinition) && (validator.wordDefinition.text !== undefined))
         validator.text = validator.wordDefinition.text;
@@ -154,5 +159,5 @@ export function ValidateText(builder: DBBuilder, dialectMapper: DialectMapper, v
     if(generated !== undefined)
         validator.Infer("text", [generated], generated);
     else if(validator.wordDefinition.derivation === "verbal-noun")
-        ValidateVerbalNoun(validator.wordDefinition, builder, validator.parent);
+        ValidateVerbalNoun(validator.wordDefinition, builder, verbalNounCounter, validator.parent);
 }

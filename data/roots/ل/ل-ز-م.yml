@@ -45,6 +45,7 @@ root:
                   source: hw4-free-text
                   text:
                     - fixed attribute, inherent property
+
     - type: verb
       dialect: msa
       form: 8
@@ -53,3 +54,13 @@ root:
           source: hw4-free-text
           text:
             - to adhere, stick, keep, hang on (ه to)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1015
+              text:
+                - engaged, commited, under obligation

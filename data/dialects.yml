@@ -50,6 +50,12 @@ dialects:
                 emojiCodes: 🇸🇾
                 iso639code: apc
                 glottoCode:
+                children:
+                  - key: homsi
+                    name: Homsi Arabic
+                    emojiCodes: 🇸🇾🧆
+                    iso639code: apc
+                    glottoCode:
 
           - key: southlevant
             name: South Levantine Arabic

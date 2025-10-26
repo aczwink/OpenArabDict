@@ -29,6 +29,7 @@ import { ValidateFeminine } from "./validators/ValidateFeminine";
 import { HansWehr4Formatter } from "./formatters/HansWehr4Formatter";
 import { ValidateVerbForm } from "./validators/ValidateVerbForm";
 import { ExtractRoot } from "./shared";
+import { VerbalNounCounter } from "./VerbalNounCounter";
 
 export class WordProcessor
 {
@@ -48,7 +49,7 @@ function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuild
     };
 }
 
-export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, dialectMapper: DialectMapper, parent?: TreeTrace)
+export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, dialectMapper: DialectMapper, verbalNounCounter: VerbalNounCounter, parent?: TreeTrace)
 {
     const wdv = new WordDefinitionValidator(wordDef, parent);
     const validators: WordValidator[] = [
@@ -57,7 +58,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         ValidateFeminine,
         ValidatePlural,
         ValidateVerbForm.bind(undefined, builder, dialectMapper),
-        ValidateText.bind(undefined, builder, dialectMapper)
+        ValidateText.bind(undefined, builder, dialectMapper, verbalNounCounter)
     ];
     for (const validator of validators)
         validator(wdv);
@@ -172,7 +173,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                     translations: g.translations,
                     derived: g.derived,
                     text: g.alias
-                }, builder, dialectMapper, parent);
+                }, builder, dialectMapper, verbalNounCounter, parent);
 
                 builder.AddRelation(word.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
             }
@@ -208,7 +209,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                     derivation: o.derivation,
                     text: o.alias,
                     translations: o.translations,
-                }, builder, dialectMapper, parent);
+                }, builder, dialectMapper, verbalNounCounter, parent);
 
                 builder.AddRelation(word.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
             }
@@ -246,7 +247,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                         parameters: v.alias
                     },
                     translations: v.translations
-                }, builder, dialectMapper, parent);
+                }, builder, dialectMapper, verbalNounCounter, parent);
 
                 builder.AddRelation(generatedVerb.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
             }
@@ -265,7 +266,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
     {
         for (const child of wordDef.derived)
         {
-            ProcessWordDefinition(child, builder, dialectMapper, thisParent);
+            ProcessWordDefinition(child, builder, dialectMapper, verbalNounCounter, thisParent);
         }
     }
 

@@ -23,6 +23,9 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=1167
+          source-page: 1154
           text:
             - window
+      derived:
+        - derivation: plural
+          text: نَوَافِذ

@@ -40,9 +40,12 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 141
               text:
-                - |-
-                  1. tryout
-                  2. attempt
-                  3. experience, practice
+                - tryout
+                - attempt
+                - experience, practice
+          derived:
+            - derivation: plural
+              text: تَجَارِب

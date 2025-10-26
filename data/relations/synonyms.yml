@@ -16,6 +16,12 @@
 
 relations:
   - word1:
+      text: بَنْطَلُون
+    word2:
+      text: بَنْطَرُون
+    relationship: synonym
+
+  - word1:
       text: رَأْس مَال
     word2:
       text: رَأْسْمَال

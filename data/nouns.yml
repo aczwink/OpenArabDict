@@ -25,6 +25,19 @@ words:
         text:
           - atmosphere (also fig.)
 
+  - text: خُرْطُوم
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 273
+        text:
+          - hose
+    derived:
+      - derivation: plural
+        text: خَرَاطِيم
+
   - text: دَفْتَر
     type: noun
     gender: male

@@ -136,6 +136,8 @@ export class DBBuilder
         const stringified = JSON.stringify(finalDB);
 
         await fs.promises.writeFile(path, stringified, "utf-8");
+
+        return finalDB;
     }
 
     //Private methods

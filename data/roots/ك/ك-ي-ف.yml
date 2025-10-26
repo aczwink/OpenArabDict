@@ -15,36 +15,19 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: و-ط-ن
+  radicals: ك-ي-ف
   words:
     - type: verb
       dialect: msa
-      form: 10
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to settle (ه a country)
-
-    - text: وَطَن
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 1265
-          text:
-            - homeland, home country, fatherland
+      form: 5
       derived:
-        - derivation: plural
-          text: أَوْطَان
-
-
-    - text: مُوَاطِن
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - citizen
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 997
+              text:
+                - adaption, adjustment, conformity

@@ -24,10 +24,25 @@ root:
         parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 368
           text:
             - to see
+            - to be of the opinion (ان that), believe, think (ان that)
       derived:
+        - text: رَأْي
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 369
+              text:
+                - opinion, view
+          derived:
+            - text: آرَاء
+              derivation: plural
         - text: رُؤْيَة
           derivation: verbal-noun
           type: noun
@@ -35,24 +50,10 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=382
+              source-page: 369
               text:
                 - seeing, viewing
-        - text: رَأْي
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - opinion
-          derived:
-            - text: آرَاء
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
+                - opinion, view
         - text: رُؤْيَا
           derivation: meaning-related
           type: noun

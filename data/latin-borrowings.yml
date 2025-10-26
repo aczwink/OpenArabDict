@@ -14,37 +14,14 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: و-ط-ن
-  words:
-    - type: verb
-      dialect: msa
-      form: 10
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to settle (ه a country)
-
-    - text: وَطَن
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 1265
-          text:
-            - homeland, home country, fatherland
-      derived:
-        - derivation: plural
-          text: أَوْطَان
-
-
-    - text: مُوَاطِن
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - citizen
+words:
+  - text: إِنْفْلُوَنْزَا
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        complete: true
+        source: hw4
+        source-page: 39
+        text:
+          - influenza, grippe

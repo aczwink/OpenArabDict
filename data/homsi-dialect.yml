@@ -14,37 +14,12 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: و-ط-ن
-  words:
-    - type: verb
-      dialect: msa
-      form: 10
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to settle (ه a country)
-
-    - text: وَطَن
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 1265
-          text:
-            - homeland, home country, fatherland
-      derived:
-        - derivation: plural
-          text: أَوْطَان
-
-
-    - text: مُوَاطِن
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - citizen
+words:
+  - text: بَنْطَرُون
+    type: noun
+    gender: male
+    translations:
+      - dialect: homsi
+        source: free-text #from native speakers. also: https://en.wiktionary.org/wiki/%D8%A8%D9%86%D8%B7%D8%B1%D9%88%D9%86
+        text:
+          - (pair of) pants, trousers, especially jeans

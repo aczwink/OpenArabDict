@@ -17,6 +17,29 @@
 root:
   radicals: خ-ب-ر
   words:
+    - dialect: msa
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 262
+          text:
+            - experience (which s.o. has had)
+            - knowledge, skill resulting from experience
+      derived:
+        - derivation: verbal-noun
+          text: خِبْرَة
+          type: noun
+          gender: female
+          derived:
+            - derivation: plural
+              text: خِبَرَات
+      
     - type: verb
       dialect: msa
       form:

@@ -56,7 +56,18 @@ root:
       form: 4
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 449
           text:
-            - to remove, eliminate (ه s.th.), put an end (ه to s.th.), do away
-              (ه with s.th.), make a clean sweep (ه of s.th.)
+            - to remove, eliminate (ه s.th.), put an end (ه to s.th.), do away (ه with s.th.), make a clean sweep (ه of s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 450
+              text:
+                - removal, elimination

@@ -37,6 +37,7 @@ root:
               source: hw4-free-text
               text:
                 - fireplace
+
     - type: verb
       dialect: msa
       form: 10
@@ -53,3 +54,13 @@ root:
                 - |-
                   1. hearth, fireplace
                   2. bath heater, geyser
+
+    - text: وَقُود
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1275
+          text:
+            - fuel (also for motors)

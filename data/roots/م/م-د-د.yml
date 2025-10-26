@@ -49,9 +49,12 @@ root:
               gender: female
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  source-page: 1053
                   text:
                     - stuff, matter
+                    - substance
+                    - material
               derived:
                 - text: مَوَادّ
                   derivation: plural
@@ -59,10 +62,12 @@ root:
                   gender: female
                   translations:
                     - dialect: msa
-                      source: hw4-free-text
-                      text:
-                        - مواد غذائية food-stuffs, victuals, food, nutritive
-                          substances
+                      source: hw4
+                      source-page: 1053
+                      examples:
+                        - text: مواد غذائية
+                          translation: food-stuffs, victuals, food, nutritive substances
+                      text: []
                 - text: مَادِّيّ
                   derivation: nisba
                   type: adjective

@@ -68,3 +68,18 @@ words:
         derivation: plural
         type: pronoun
         gender: male
+
+  - text: هُوَ
+    type: pronoun
+    gender: male
+    derived:
+      - text: هُوِيَّة
+        derivation: nisba
+        type: noun
+        gender: female
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 1215
+            text:
+              - identity

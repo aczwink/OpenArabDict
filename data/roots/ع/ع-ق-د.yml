@@ -30,9 +30,10 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=747
+              source-page: 734
               text:
                 - contract, agreement, arrangement
+                - decade, decennium
           derived:
             - text: عُقُود
               derivation: plural

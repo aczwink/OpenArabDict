@@ -28,3 +28,17 @@ root:
           url: https://ejtaal.net/aa/#hw4=811
           text:
             - to close, shut (ه s.th., a door)
+
+    - type: verb
+      dialect: msa
+      form: 4
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 798
+              text:
+                - closing, shutting, locking, bolting, shutting-off, barring

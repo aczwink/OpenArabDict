@@ -47,6 +47,10 @@ root:
           source-page: 820
           text:
             - to prevent, obviate, avert, avoid (من or ه s.th.)
+        - dialect: lb
+          source: free-text
+          text:
+            - to avoid, dodge #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 14 and p. 130
       derived:
         - text: تَفَادٍ
           derivation: meaning-related

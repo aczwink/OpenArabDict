@@ -22,12 +22,16 @@ root:
       form: 2
       translations: []
       derived:
-        - text: فُرْصَة⁩
+        - text: فُرْصَة
           derivation: meaning-related
           type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 826
               text:
                 - opportunity, chance, auspicious moment
+          derived:
+            - derivation: plural
+              text: فُرَص

@@ -47,12 +47,23 @@ root:
       type: noun
       gender: male
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=74
+          source-page: 61
           text:
             - land (as opposed to sea), terra firma, mainland
             - open country
+      derived:
+        - derivation: adverbial-accusative
+          text: بَرًّا
+          type: adverb
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 61
+              text:
+                - out, outside
 
     - text: بَرِّيَّة
       type: noun

@@ -10,6 +10,9 @@
             "$ref": "./words/OpenArabDictGenderedWord_noun.json"
         },
         {
+            "$ref": "./words/OpenArabDictGenderedWord_pronoun.json"
+        },
+        {
             "$ref": "./words/OpenArabDictVerb.json"
         }
     ]

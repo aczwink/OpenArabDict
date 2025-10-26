@@ -43,6 +43,18 @@ root:
               contextual:
                 - text: المعاد
                   translation: the hereafter, the life to come
+        - derivation: active-participle
+          gender: male
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 767
+              text:
+                - returning emigrant, re-emigrant
+          derived:
+            - derivation: plural
+              text: عَائِدُون
         - text: عُود
           derivation: meaning-related
           type: noun

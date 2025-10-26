@@ -1,31 +1,29 @@
 {    
     "$schema": "https://json-schema.org/draft-07/schema#",
-    "title": "OpenArabDict other word definition",
-    "description": "JSON Schema for OpenArabDict other word definitions",
+    "title": "OpenArabDict pronoun definition",
+    "description": "JSON Schema for OpenArabDict pronoun definitions",
     "type": "object",
     "additionalProperties": false,
     "properties": {
         "derived": {
             "type": "array",
             "items": {
-                "$ref": "#"
+                "$ref": "./OpenArabDictWord_derived.json"
             }
         },
-        "derivation": {
+        "gender": {
             "type": "string",
             "enum": [
-                "meaning-related"
+                "female",
+                "male"
             ]
         },
         "text": {
             "type": "string"
         },
         "type": {
-            "type": "string",
-            "enum": [
-                "preposition"
-            ]
+            "const": "pronoun"
         }
     },
-    "required": []
+    "required": ["gender", "text", "type"]
 }
