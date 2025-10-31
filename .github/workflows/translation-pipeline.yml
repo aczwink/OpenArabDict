@@ -55,7 +55,7 @@ jobs:
       - name: Delete translation service
         run: |
           az resource delete --resource-group openarabdict --resource-type Microsoft.CognitiveServices/accounts --name openarabdict-translator
-          az resource delete --verbose --ids /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/providers/Microsoft.CognitiveServices/locations/eastus/resourceGroups/openarabdict/deletedAccounts/openarabdict-translator
+        #az resource delete --verbose --ids /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/providers/Microsoft.CognitiveServices/locations/eastus/resourceGroups/openarabdict/deletedAccounts/openarabdict-translator
 
       - name: Upload dict to Azure
         run: |
