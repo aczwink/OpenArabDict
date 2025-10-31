@@ -46,11 +46,8 @@ jobs:
           template: ./infrastructure/translator.bicep
           failOnStdErr: false
 
-      - name: Get deployment outputs
-        run: |
-          echo "Provisioning State: ${{ steps.deploy-translation-service.outputs['cognitiveServiceKey'] }}"
-
       #TODO call translation service
+      #${{ steps.deploy-translation-service.outputs['cognitiveServiceKey'] }}
           
       - name: Delete translation service
         run: |
