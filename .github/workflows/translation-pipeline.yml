@@ -41,3 +41,7 @@ jobs:
         uses: Azure/cli@v2.2.0
         with:
           inlineScript: az resource delete --resource-group openarabdict
+
+      - name: logout
+        run: |
+          az logout
