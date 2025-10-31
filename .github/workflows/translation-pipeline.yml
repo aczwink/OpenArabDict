@@ -1,6 +1,8 @@
 name: Translate dictionary to German
 
 on:
+  push:
+    branches: [ "translation-pipeline" ]
   workflow_dispatch:
   workflow_run:
     workflows: ["Build and deploy to Azure"]
