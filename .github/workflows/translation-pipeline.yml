@@ -38,12 +38,17 @@ jobs:
         working-directory: ./
 
       - name: Deploy translation service
+        id: deploy-translation-service
         uses: azure/arm-deploy@v1
         with:
           subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
           resourceGroupName: openarabdict
           template: ./infrastructure/translator.bicep
           failOnStdErr: false
+
+      - name: Get deployment outputs
+        run: |
+          echo "Provisioning State: ${{ steps.deploy-translation-service.outputs['cognitiveServiceKey'] }}"
 
       #TODO call translation service
           
