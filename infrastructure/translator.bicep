@@ -7,4 +7,6 @@ resource translatorService 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   sku: {
     name: 'F0'
   }
+
+  properties: {}
 }
