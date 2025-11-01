@@ -139,12 +139,8 @@ async function FetchTranslation(translations: OpenArabDictTranslationEntry[], ta
     return result;
 }
 
-async function TranslateDict()
+async function TranslateDict(sourcePath: string, targetLanguage: string, targetPath: string)
 {
-    const sourcePath = "../builder/dist/db.json";
-    const targetLanguage = "de";
-    const targetPath = "./dist/de.json";
-
     const textData = await fs.promises.readFile(sourcePath, "utf-8");
     const data = JSON.parse(textData) as OpenArabDictDocument;
 
@@ -152,11 +148,11 @@ async function TranslateDict()
     for (const word of data.words)
     {
         console.log(++i, "/", data.words.length);
-        const translated = await FetchTranslation(word.translations, targetLanguage);
+        const translated = await FetchTranslation(word.translations, targetLanguage as any);
         word.translations = translated;
     }
 
     await fs.promises.writeFile(targetPath, JSON.stringify(data), "utf-8");
 }
 
-TranslateDict();
+TranslateDict(process.argv[2], process.argv[3], process.argv[3]);
