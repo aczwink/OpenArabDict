@@ -155,4 +155,4 @@ async function TranslateDict(sourcePath: string, targetLanguage: string, targetP
     await fs.promises.writeFile(targetPath, JSON.stringify(data), "utf-8");
 }
 
-TranslateDict(process.argv[2], process.argv[3], process.argv[3]);
+TranslateDict(process.argv[2], process.argv[3], process.argv[4]);
