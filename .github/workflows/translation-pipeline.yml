@@ -86,7 +86,7 @@ jobs:
       #translate
       - name: Call OpenArabDict translator
         run: |
-          npm run run ./en.json de ./de.json
+          npm run run ../en.json de ../de.json
         working-directory: ./translator
 
       - name: Upload dict to Azure
