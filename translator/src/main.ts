@@ -40,6 +40,7 @@ async function CallTranslationService(texts: string[], targetLanguage: TargetTra
     };
 
     const sender = new HTTP.RequestSender;
+    console.log(headers);
     const response = await sender.SendRequest({
         body,
         headers,
