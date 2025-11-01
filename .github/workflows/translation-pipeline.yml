@@ -85,6 +85,9 @@ jobs:
 
       #translate
       - name: Call OpenArabDict translator
+        env:
+          ARABDICT_TRANSLATIONSERVICE_KEY: ${{ steps.deploy-translation-service.outputs['cognitiveServiceKey'] }}
+          ARABDICT_TRANSLATIONSERVICE_REGION: eastus
         run: |
           npm run run ../en.json de ../de.json
         working-directory: ./translator
