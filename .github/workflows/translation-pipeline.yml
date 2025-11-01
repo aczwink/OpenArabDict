@@ -83,6 +83,11 @@ jobs:
           template: ./infrastructure/translator.bicep
           failOnStdErr: false
 
+      - name: Wait for deployment of translation service
+        run: |
+          sleep 1m
+        shell: bash
+
       #translate
       - name: Call OpenArabDict translator
         env:
