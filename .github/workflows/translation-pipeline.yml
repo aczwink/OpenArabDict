@@ -69,10 +69,9 @@ jobs:
           tenant-id: ${{ secrets.AZURE_TENANT_ID }}
           subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
 
-      - name: Download English dictionary #TODO: REMOVE THE COPY!
+      - name: Download English dictionary
         run: |
           az storage blob download --file ./en.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/db.json --auth-mode login --overwrite
-          cp ./en.json ./de.json
         working-directory: ./
 
       - name: Deploy translation service
@@ -87,7 +86,7 @@ jobs:
       #translate
       - name: Call OpenArabDict translator
         run: |
-          npm run run
+          npm run run ./en.json de ./de.json
         working-directory: ./translator
 
       - name: Upload dict to Azure
