@@ -23,8 +23,14 @@ jobs:
         with:
           submodules: true
 
-      #TODO: compile translation service
+      #build translator
+      - name: Building OpenArabDict translator
+        run: |
+          npm install
+          npm run build
+        working-directory: ./translator
 
+      #prepare translation
       - uses: azure/login@v1
         with:
           client-id: ${{ secrets.AZURE_CLIENT_ID }}
@@ -46,19 +52,23 @@ jobs:
           template: ./infrastructure/translator.bicep
           failOnStdErr: false
 
-      #TODO call translation service
-      #${{ steps.deploy-translation-service.outputs['cognitiveServiceKey'] }}
-          
-      - name: Delete translation service
+      #translate
+      - name: Call OpenArabDict translator
         run: |
-          az resource delete --resource-group openarabdict --resource-type Microsoft.CognitiveServices/accounts --name openarabdict-translator
-        #az resource delete --verbose --ids /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/providers/Microsoft.CognitiveServices/locations/eastus/resourceGroups/openarabdict/deletedAccounts/openarabdict-translator
+          npm run run
+        working-directory: ./translator
 
       - name: Upload dict to Azure
         run: |
           az storage blob upload --file ./de.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/de.json --auth-mode login --overwrite
           az webapp restart --resource-group openarabdict --name openarabdictviewer-backend
         working-directory: ./
+
+      #cleanup
+      - name: Delete translation service
+        run: |
+          az resource delete --resource-group openarabdict --resource-type Microsoft.CognitiveServices/accounts --name openarabdict-translator
+        #az resource delete --verbose --ids /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/providers/Microsoft.CognitiveServices/locations/eastus/resourceGroups/openarabdict/deletedAccounts/openarabdict-translator
 
       - name: logout
         run: |
