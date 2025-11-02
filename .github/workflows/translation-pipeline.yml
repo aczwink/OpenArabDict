@@ -1,8 +1,6 @@
 name: Translate dictionary to German
 
 on:
-  push:
-    branches: [ "pipeline" ] #TODO: REMOVE THIS!
   workflow_dispatch:
   workflow_run:
     workflows: ["Build and deploy to Azure"]
