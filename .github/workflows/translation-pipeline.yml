@@ -1,0 +1,112 @@
+name: Translate dictionary to German
+
+on:
+  workflow_dispatch:
+  workflow_run:
+    workflows: ["Build and deploy to Azure"]
+    types:
+      - completed
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  translate_dict:
+    runs-on: ubuntu-latest
+    name: Translate dictionary to German
+    
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: true
+
+      #build acts-util-core
+      - name: Checkout ACTS-Util repo
+        uses: actions/checkout@v4
+        with:
+          repository: aczwink/ACTS-Util
+          path: actsutil
+  
+      - name: Building acts-util-core
+        run: |
+          npm install
+          npm run compile
+          npm link
+        working-directory: ./actsutil/core
+
+      #build acts-util-node
+      - name: Building acts-util-node
+        run: |
+          npm link acts-util-core
+          npm install
+          npm run build
+          npm link
+        working-directory: ./actsutil/node
+
+      #build domain
+      - name: Building OpenArabDict domain
+        run: |
+          npm install
+          npm run build
+          npm link
+        working-directory: ./domain
+
+      #build translator
+      - name: Building OpenArabDict translator
+        run: |
+          npm link acts-util-core acts-util-node openarabdict-domain
+          npm install
+          npm run build
+        working-directory: ./translator
+
+      #prepare translation
+      - uses: azure/login@v1
+        with:
+          client-id: ${{ secrets.AZURE_CLIENT_ID }}
+          tenant-id: ${{ secrets.AZURE_TENANT_ID }}
+          subscription-id: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+
+      - name: Download English dictionary
+        run: |
+          az storage blob download --file ./en.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/db.json --auth-mode login --overwrite
+        working-directory: ./
+
+      - name: Deploy translation service
+        id: deploy-translation-service
+        uses: azure/arm-deploy@v1
+        with:
+          subscriptionId: ${{ secrets.AZURE_SUBSCRIPTION_ID }}
+          resourceGroupName: openarabdict
+          template: ./infrastructure/translator.bicep
+          failOnStdErr: false
+
+      - name: Wait for deployment of translation service
+        run: |
+          sleep 1m
+        shell: bash
+
+      #translate
+      - name: Call OpenArabDict translator
+        env:
+          ARABDICT_TRANSLATIONSERVICE_KEY: ${{ steps.deploy-translation-service.outputs['cognitiveServiceKey'] }}
+          ARABDICT_TRANSLATIONSERVICE_REGION: eastus
+        run: |
+          npm run run ../en.json de ../de.json
+        working-directory: ./translator
+
+      - name: Upload dict to Azure
+        run: |
+          az storage blob upload --file ./de.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/de.json --auth-mode login --overwrite
+          az webapp restart --resource-group openarabdict --name openarabdictviewer-backend
+        working-directory: ./
+
+      #cleanup
+      - name: Delete translation service
+        run: |
+          az resource delete --resource-group openarabdict --resource-type Microsoft.CognitiveServices/accounts --name openarabdict-translator
+        #az resource delete --verbose --ids /subscriptions/${{ secrets.AZURE_SUBSCRIPTION_ID }}/providers/Microsoft.CognitiveServices/locations/eastus/resourceGroups/openarabdict/deletedAccounts/openarabdict-translator
+
+      - name: logout
+        run: |
+          az logout
