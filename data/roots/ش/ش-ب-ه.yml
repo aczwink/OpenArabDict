@@ -52,6 +52,7 @@ root:
               (ه, ه to s.o., to s.th.), be like s.o. or s.th. (ه, ه)
 
               2. to look (exactly) like s.o. (ه)
+
     - type: verb
       dialect: msa
       form: 6
@@ -66,3 +67,12 @@ root:
               source: hw4-free-text
               text:
                 - resemblance, similarity, likeness
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 561
+              text:
+                - resembling each other or being the same

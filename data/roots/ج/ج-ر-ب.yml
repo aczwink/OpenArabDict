@@ -18,11 +18,7 @@ root:
   radicals: ج-ر-ب
   words:
     - type: verb
-      form:
-        stem: 2
-        variants:
-          - dialect: msa
-          - dialect: lb
+      form: 2
       translations:
         - dialect: msa
           source: hw4

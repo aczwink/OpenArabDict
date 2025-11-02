@@ -38,6 +38,21 @@ root:
       derived:
         - derivation: plural
           text: أَوْطَان
+        - derivation: nisba
+          text: وَطَنِيّ
+          type: adjective
+          gender: male
+          derived:
+            - derivation: feminine
+              text: وَطَنِيَّة
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1265
+                  text:
+                    - nationalism
 
 
     - text: مُوَاطِن

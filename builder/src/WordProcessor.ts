@@ -30,6 +30,7 @@ import { HansWehr4Formatter } from "./formatters/HansWehr4Formatter";
 import { ValidateVerbForm } from "./validators/ValidateVerbForm";
 import { ExtractRoot } from "./shared";
 import { VerbalNounCounter } from "./VerbalNounCounter";
+import { _LegacyExtractDialect } from "./_LegacyDataDefinition";
 
 export class WordProcessor
 {
@@ -51,6 +52,8 @@ function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuild
 
 export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, dialectMapper: DialectMapper, verbalNounCounter: VerbalNounCounter, parent?: TreeTrace)
 {
+    const translations = wordDef.translations?.map(x => ProcessTranslationDefinition(x, builder)) ?? [];
+
     const wdv = new WordDefinitionValidator(wordDef, parent);
     const validators: WordValidator[] = [
         ValidateType,
@@ -58,7 +61,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         ValidateFeminine,
         ValidatePlural,
         ValidateVerbForm.bind(undefined, builder, dialectMapper),
-        ValidateText.bind(undefined, builder, dialectMapper, verbalNounCounter)
+        ValidateText.bind(undefined, builder, verbalNounCounter, translations)
     ];
     for (const validator of validators)
         validator(wdv);
@@ -134,8 +137,6 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 }
         }
     }
-
-    const translations = wordDef.translations?.map(x => ProcessTranslationDefinition(x, builder)) ?? [];
 
     let thisParent: TreeTrace | undefined = undefined;
     let createdWord;
@@ -241,10 +242,11 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
             {
                 const aliasWordId = ProcessWordDefinition({
                     type: v.type,
-                    dialect: v.dialect,
                     form: {
                         stem: 1,
-                        parameters: v.alias
+                        variants: [
+                            { dialect: _LegacyExtractDialect(v), parameters: v.alias }
+                        ],
                     },
                     translations: v.translations
                 }, builder, dialectMapper, verbalNounCounter, parent);

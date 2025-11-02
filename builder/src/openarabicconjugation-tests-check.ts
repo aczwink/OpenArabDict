@@ -19,6 +19,13 @@
 import { OpenArabDictDocument, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType } from "openarabdict-domain";
 import { Letter } from "openarabicconjugation/dist/Definitions";
 
+function ExtractParameters(verb: OpenArabDictVerb)
+{
+    if(verb.form.variants === undefined)
+        return undefined;
+    return verb.form.variants[0]?.stemParameters;
+}
+
 export async function CheckWords(doc: OpenArabDictDocument)
 {
     for (const word of doc.words)
@@ -30,7 +37,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
             const root = doc.roots.find(x => x.id === verb.rootId);
 
-            if(root?.radicals.startsWith("و") && (verb.form.variants[0].stemParameters === "ia"))
+            if(root?.radicals.startsWith("و") && (ExtractParameters(verb) === "ia"))
             {
                 console.log("FOUND1", word);
             }
@@ -43,7 +50,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
             const root = doc.roots.find(x => x.id === verb.rootId);
 
-            if((root?.radicals === "ندو") && (verb.form.variants[0].stemParameters === "ia"))
+            if((root?.radicals === "ندو") && (ExtractParameters(verb) === "ia"))
             {
                 console.log("FOUND2", word);
             }
@@ -143,7 +150,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
             const root = doc.roots.find(x => x.id === verb.rootId);
             const isHollow = root?.radicals[1] === Letter.Waw;
 
-            if(isHollow && (verb.form.stem === 1) && (verb.form.variants[0].stemParameters === "ia"))
+            if(isHollow && (verb.form.stem === 1) && (ExtractParameters(verb) === "ia"))
             {
                 console.log("FOUND10", word);
             }
@@ -156,7 +163,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
             const root = doc.roots.find(x => x.id === verb.rootId)!;
 
-            if((verb.form.stem === 1) && (root.radicals[1] === root.radicals[2]) && (verb.form.variants[0].stemParameters === "ia") && (root.radicals[0] !== "و"))
+            if((verb.form.stem === 1) && (root.radicals[1] === root.radicals[2]) && (ExtractParameters(verb) === "ia") && (root.radicals[0] !== "و"))
             {
                 console.log("FOUND11", word);
             }
@@ -212,7 +219,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
             const root = doc.roots.find(x => x.id === verb.rootId)!;
             const isSound = !(root.radicals.includes("و")) && !(root.radicals.includes("ي"));
 
-            if((verb.form.stem === 1) && (verb.form.variants[0].stemParameters === "ii") && isSound)
+            if((verb.form.stem === 1) && (ExtractParameters(verb) === "ii") && isSound)
             {
                 console.log("FOUND15", word);
             }

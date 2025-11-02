@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { DialectType } from "openarabicconjugation/dist/Dialects";
+import { DialectType, GetAllConjugatableDialects } from "openarabicconjugation/dist/Dialects";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 import { Dictionary } from "acts-util-core";
 
@@ -25,17 +25,19 @@ export class DialectMapper
     constructor()
     {
         this.map = {};
+        this.reverseMap = {};
     }
 
     public CreateMappingIfPossible(id: number, glottoCode: string, iso639code: string)
     {
-        const conjugatable = [DialectType.Lebanese, DialectType.ModernStandardArabic];
+        const conjugatable = GetAllConjugatableDialects();
         for (const dialectType of conjugatable)
         {
             const meta = GetDialectMetadata(dialectType);
             if((meta.glottoCode === glottoCode) && (meta.iso639code === iso639code))
             {
                 this.map[id] = dialectType;
+                this.reverseMap[dialectType] = id;
                 return;
             }
         }
@@ -46,6 +48,12 @@ export class DialectMapper
         return this.map[dialectId];
     }
 
+    public MapTypeToId(dialectType: DialectType)
+    {
+        return this.reverseMap[dialectType]!;
+    }
+
     //State
     private map: Dictionary<DialectType>;
+    private reverseMap: Dictionary<number>;
 }

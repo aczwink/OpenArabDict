@@ -24,18 +24,11 @@ root:
         parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 649
           text:
             - to throw, cast, fling, toss (على ب or ه s.th. onto or upon)
-      derived:
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-              text:
-                - subtract
+            - to present, submit (ه على s.th. to s.o.)
+          contextual:
+            - text: طرح عليه سؤالا
+              translation: to put a question to s.o.

@@ -20,6 +20,7 @@
     "acts-util-core": "*",
     "acts-util-node": "*",
     "openarabdict-domain": "*",
+    "openarabdict-openarabicconjugation-bridge": "*",
     "openarabicconjugation": "*",
     "yaml": "^2.7.0"
   }

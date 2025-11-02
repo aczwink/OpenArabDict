@@ -17,13 +17,15 @@
  * */
 
 import { OpenArabDictVerbType } from "openarabdict-domain";
-import { ParameterizedStemData, VerbVariantDefintion, VerbVariantStem1Defintion, VerbWordDefinition } from "../DataDefinitions";
+import { ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 import { DialectMapper } from "../DialectMapper";
-import { ExtractRoot, MapVerbTypeToOpenArabicConjugation } from "../shared";
+import { ExtractRoot } from "../shared";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
+import { _LegacyExtractDialect } from "../_LegacyDataDefinition";
+import { MapVerbTypeToOpenArabicConjugation } from "openarabdict-openarabicconjugation-bridge";
 
 function MapVerbType(verb: VerbWordDefinition)
 {
@@ -41,32 +43,29 @@ function MapVerbType(verb: VerbWordDefinition)
     return undefined;
 }
 
-function ValidateVerbFormVariant(builder: DBBuilder, dialectMapper: DialectMapper, oadVerbType: OpenArabDictVerbType | undefined, validator: WordDefinitionValidator, variant: VerbVariantStem1Defintion | VerbVariantDefintion)
+function ValidateVerbFormVariant(builder: DBBuilder, dialectMapper: DialectMapper, oadVerbType: OpenArabDictVerbType | undefined, validator: WordDefinitionValidator, variant: VerbVariantDefintion)
 {
     const dialectId = builder.MapDialectKey(variant.dialect)!;
 
-    if("parameters" in variant)
-    {
-        const root = ExtractRoot(builder, validator.parent);
-        const rootInstance = new VerbRoot(root!.radicals);
-        
-        const dialectType = dialectMapper.Map(dialectId)!;
-        const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
+    const root = ExtractRoot(builder, validator.parent);
+    const rootInstance = new VerbRoot(root!.radicals);
+    
+    const dialectType = dialectMapper.Map(dialectId)!;
+    const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
 
-        const meta = GetDialectMetadata(dialectType);
-        const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, variant.parameters);
-        const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
-        if(!choices.types.includes(variant.parameters))
-        {
-            console.log(validator.wordDefinition, validator.wordDefinition.translations, root.radicals, variant);
-            throw new Error("Wrong stem parameterization");
-        }
+    const meta = GetDialectMetadata(dialectType);
+    const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, variant.parameters);
+    const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
+    if(!choices.types.includes(variant.parameters))
+    {
+        console.log(validator.wordDefinition, validator.wordDefinition.translations, root.radicals, variant);
+        throw new Error("Wrong stem parameterization");
     }
 
 
     return {
         dialectId,
-        stemParameters: ("parameters" in variant) ? variant.parameters : undefined,
+        stemParameters: variant.parameters,
     };
 }
 
@@ -93,12 +92,14 @@ export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMappe
     {
         const stemNumber = (typeof def.form === "number") ? def.form : def.form.stem;
 
+        const variants = ((typeof def.form !== "number") && ("parameters" in def.form)) ? [
+            ValidateVerbFormVariant(builder, dialectMapper, verbType, validator, ({ dialect: _LegacyExtractDialect(def), parameters: def.form.parameters }))
+        ] : undefined;
+
         validator.verbForm = {
             stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),
             stem: stemNumber,
-            variants: [
-                ValidateVerbFormVariant(builder, dialectMapper, verbType, validator, ((typeof def.form !== "number") && ("parameters" in def.form)) ? ({ dialect: def.dialect, parameters: def.form.parameters }) : ({ dialect: def.dialect }))
-            ],
+            variants,
             verbType
         };
     }
@@ -108,7 +109,7 @@ function ExtractActiveParticipleFlag(form: ParameterizedStemData | number): true
 {
     if(typeof form === "number")
         return undefined;
-    if((form.stem === 1) && ("parameters" in form))
+    if((form.stem === 1) && ("variants" in form))
         return form["stative-active-participle"];
     return undefined;
 }

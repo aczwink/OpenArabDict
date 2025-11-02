@@ -18,10 +18,18 @@ root:
   radicals: و-ع-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ai
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 93
+          text:
+            - to promise
       derived:
         - text: وَعْد
           derivation: verbal-noun
@@ -33,17 +41,6 @@ root:
               url: https://ejtaal.net/aa/#hw4=1279
               text:
                 - promise
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ai
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 93
-              text:
-                - to promise
 
     - type: verb
       dialect: msa

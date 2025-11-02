@@ -19,25 +19,33 @@ root:
   ya: true
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=169
+          source-page: 156
           text:
             - to polish, burnish (ه s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 123
+          text:
+            - wash (dishes)
+
+    - gender: female
+      text: جَالِيَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 157
+          text:
+            - colony of emigrants
       derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ai
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 123
-              text:
-                - wash (dishes)
+        - derivation: plural
+          text: جَالِيَات

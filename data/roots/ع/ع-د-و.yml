@@ -35,6 +35,19 @@ root:
                   excepting ...
 
     - type: verb
+      form: 3
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 701
+              text:
+                - anti- (in compounds)
+
+    - type: verb
       dialect: msa
       form: 4
       translations: []

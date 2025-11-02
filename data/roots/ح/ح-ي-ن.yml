@@ -47,9 +47,22 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=273
+              source-page: 260
               text:
                 - time
               contextual:
                 - text: بين حين وآخر
                   translation: from time to time, now and then, once in a while
+          derived:
+            - derivation: plural
+              text: أَحْيَان
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 260
+                  text: []
+                  contextual:
+                    - text: في بعض الاحيان (الاحايين)
+                      translation: sometimes, occasionally, now and then, once in a while, from time to time, at times
+                    - text: بعض الاحيان
+                      translation: sometimes, occasionally, now and then, once in a while, from time to time, at times

@@ -160,14 +160,14 @@ export enum OpenArabDictVerbType
 interface VerbVariant
 {
     dialectId: number;
-    stemParameters?: string;
+    stemParameters: string;
 }
 
 export interface OpenArabDictVerbForm
 {
     stativeActiveParticiple?: true;
-    stem: number;
-    variants: VerbVariant[];
+    stem: 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10;
+    variants?: VerbVariant[];
     verbType?: OpenArabDictVerbType;
 }
 

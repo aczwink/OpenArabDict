@@ -15,11 +15,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictWordType } from "openarabdict-domain";
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { AdvancedStemNumber, Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
+import { Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
 import { DialectType } from "openarabicconjugation/dist/Dialects";
-import { CreateVerb } from "openarabicconjugation/dist/Verb";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { ParseVocalizedText, VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
 import { GenderedWordDefinition } from "../DataDefinitions";
@@ -28,11 +27,16 @@ import { TreeTrace } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { EqualsAny } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
-import { ExtractRoot, MapVerbTypeToOpenArabicConjugation } from "../shared";
-import { DialectMapper } from "../DialectMapper";
+import { ExtractRoot } from "../shared";
 import { VerbalNounCounter } from "../VerbalNounCounter";
+import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "openarabdict-openarabicconjugation-bridge";
 
-function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, dialectMapper: DialectMapper, parent?: TreeTrace): string | undefined
+function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
+{
+    return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
+}
+
+function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, translations: OpenArabDictTranslationEntry[], parent?: TreeTrace): string | undefined
 {
     const wordDef = validator.wordDefinition;
 
@@ -48,8 +52,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
                 throw new Error("Id error!!!");
             const root = builder.GetRoot(verb.rootId);
 
-            const rootInstance = new VerbRoot(root.radicals);
-            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any, MapVerbTypeToOpenArabicConjugation(verb.form.verbType));
+            const verbInstance = CreateMSAVerb(root, verb);
 
             const voice = (wordDef.derivation === "active-participle") ? Voice.Active : Voice.Passive;
 
@@ -68,7 +71,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             const root = builder.GetRoot(verb.rootId);
 
             const rootInstance = new VerbRoot(root.radicals);
-            const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any, MapVerbTypeToOpenArabicConjugation(verb.form.verbType));
+            const verbInstance = CreateMSAVerb(root, verb);
             const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
             const conjugator = new Conjugator;
@@ -86,20 +89,9 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
                 const root = ExtractRoot(builder, parent);
 
                 const form = validator.verbForm;
-                const dialectType = dialectMapper.Map(form.variants[0].dialectId)!;
-            
-                const rootInstance = new VerbRoot(root!.radicals);
 
-                let verb;
-                if(form.stem === 1)
-                {
-                    const verbType = MapVerbTypeToOpenArabicConjugation(form.verbType);
-                    const stemParameters = form.variants[0].stemParameters!;
-                    
-                    verb = CreateVerb(dialectType, rootInstance, stemParameters, verbType);
-                }
-                else
-                    verb = CreateVerb(dialectType, rootInstance, form.stem as AdvancedStemNumber);
+                const dialectType = FindHighestConjugatableDialectOf(form, translations);
+                const verb = CreateVerbFromOADVerbForm(dialectType, root.radicals, form);
 
                 const conjugator = new Conjugator;
                 const vocalized = conjugator.Conjugate(verb, {
@@ -130,7 +122,7 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, ve
     const root = builder.GetRoot(verb.rootId);
 
     const rootInstance = new VerbRoot(root.radicals);
-    const verbInstance = CreateVerb(DialectType.ModernStandardArabic, rootInstance, verb.form.variants[0].stemParameters ?? verb.form.stem as any, MapVerbTypeToOpenArabicConjugation(verb.form.verbType));
+    const verbInstance = CreateMSAVerb(root, verb);
     const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
     const conjugator = new Conjugator;
@@ -150,12 +142,12 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, ve
     throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)) + ". But allowed values are: " + choices);
 }
 
-export function ValidateText(builder: DBBuilder, dialectMapper: DialectMapper, verbalNounCounter: VerbalNounCounter, validator: WordDefinitionValidator)
+export function ValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, translations: OpenArabDictTranslationEntry[], validator: WordDefinitionValidator)
 {
     if(("text" in validator.wordDefinition) && (validator.wordDefinition.text !== undefined))
         validator.text = validator.wordDefinition.text;
 
-    const generated = GenerateTextIfPossible(validator, builder, dialectMapper, validator.parent);
+    const generated = GenerateTextIfPossible(validator, builder, translations, validator.parent);
     if(generated !== undefined)
         validator.Infer("text", [generated], generated);
     else if(validator.wordDefinition.derivation === "verbal-noun")

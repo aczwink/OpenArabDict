@@ -86,6 +86,7 @@ root:
               embarrassed (من by)
 
               3. to be bashful, shy, diffident
+
     - text: حَيّ
       type: noun
       gender: male
@@ -96,3 +97,12 @@ root:
             - |-
               1. section, quarter (of a city)
               2. ward, district (of a city)
+      derived:
+        - derivation: feminine
+          text: حَيَّة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 256
+              text:
+                - snake, serpent, viper

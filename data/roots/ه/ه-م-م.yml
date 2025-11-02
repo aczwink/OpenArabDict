@@ -73,11 +73,7 @@ root:
               gender: female
               translations: []
     - type: verb
-      form:
-        stem: 8
-        variants:
-          - dialect: msa
-          - dialect: lb
+      form: 8
       translations:
         - dialect: msa
           source: hw4

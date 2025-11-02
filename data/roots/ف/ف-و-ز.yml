@@ -18,12 +18,15 @@ root:
   radicals: ف-و-ز
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 857
           text:
+            - to be successful, be victorious, triumph
             - to defeat, beat (على an opponent, ب with; sports, etc.)

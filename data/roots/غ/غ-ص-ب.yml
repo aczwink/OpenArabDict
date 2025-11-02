@@ -15,34 +15,11 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ح-ر-ك
+  radicals: غ-ص-ب
   words:
     - type: verb
-      form: 2
-      translations:
-        - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 22
-          text:
-            - to move
-      derived:
-        - text: حَرَكَة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - movement, motion
-                
-    - type: verb
       dialect: msa
-      form: 5
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to start moving, get moving
+      form: 8
       derived:
         - derivation: verbal-noun
           type: noun
@@ -50,8 +27,6 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=213
+              source-page: 790
               text:
-                - movement, motion
-                - intiative
-                - start
+                - ravishment, violation, rape (of a woman)

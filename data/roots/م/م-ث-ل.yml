@@ -71,6 +71,7 @@ root:
           type: noun
           gender: male
           translations: []
+
     - type: verb
       dialect: msa
       form: 3
@@ -85,6 +86,20 @@ root:
               source: hw4-free-text
               text:
                 - example
+
+    - type: verb
+      form: 6
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1048
+              text:
+                - symmetrical
+
     - type: verb
       dialect: msa
       form: 8
@@ -93,6 +108,7 @@ root:
           source: hw4-free-text
           text:
             - to take as a model or an example, imitate, copy, follow (ه s.th.)
+
     - type: noun
       gender: male
       text: مِثْل

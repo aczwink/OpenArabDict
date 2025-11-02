@@ -54,10 +54,6 @@ export interface OtherWordDefinition
 export interface VerbVariantDefintion
 {
     dialect: string;
-}
-
-export interface VerbVariantStem1Defintion extends VerbVariantDefintion
-{
     parameters: string;
 }
 
@@ -66,21 +62,20 @@ interface ParameterizedStem1Data
     stem: 1;
     parameters: string;
     type?: "defective" | "sound";
-    "stative-active-participle"?: true;
 }
 
 interface ParameterizedStem1DataWithVariants
 {
     stem: 1;
     type?: "defective" | "irregular" | "sound";
-    variants?: VerbVariantStem1Defintion[];
+    variants: VerbVariantDefintion[];
+    "stative-active-participle"?: true;
 }
 
 interface ParameterizedAdvancedStemData
 {
     stem: AdvancedStemNumber;
     type?: "sound";
-    variants?: VerbVariantDefintion[];
 }
 
 export type ParameterizedStemData = ParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;
@@ -89,8 +84,7 @@ export interface VerbWordDefinition
 {
     type: "verb";
     alias?: string;
-    dialect: string;
-    form: number | ParameterizedStemData;
+    form: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | ParameterizedStemData;
     translations?: TranslationDefinition[];
     derived?: WordDefinition[];
     derivation?: "colloquial";

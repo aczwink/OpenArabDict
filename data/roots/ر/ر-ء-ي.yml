@@ -40,6 +40,11 @@ root:
               source-page: 369
               text:
                 - opinion, view
+              examples:
+                - text: في رأيي
+                  translation: in my opinion
+                - text: عند رأيي
+                  translation: in my opinion
           derived:
             - text: آرَاء
               derivation: plural

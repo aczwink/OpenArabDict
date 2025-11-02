@@ -41,10 +41,11 @@ root:
               text: خِبَرَات
       
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
         stative-active-participle: true
       derived:
         - text: خَبِير
