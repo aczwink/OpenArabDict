@@ -17,6 +17,24 @@
 root:
   radicals: ط-و-ع
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: طَوْع
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 670
+              text:
+                - voluntariness, spontaneity (in connection with a legally relevant action, esp. a delict; Isl. Law)
+
     - type: verb
       dialect: msa
       form: 10

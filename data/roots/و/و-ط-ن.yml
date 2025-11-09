@@ -35,6 +35,7 @@ root:
           source-page: 1265
           text:
             - homeland, home country, fatherland
+            - home
       derived:
         - derivation: plural
           text: أَوْطَان

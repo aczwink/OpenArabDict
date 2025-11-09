@@ -20,6 +20,7 @@ import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDi
 import { Dictionary, ObjectExtensions } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
 import { ParseVocalizedPhrase, ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
+import { DialectTree } from "openarabdict-openarabicconjugation-bridge/dist/DialectTree";
 
 export class DBBuilder
 {
@@ -38,14 +39,17 @@ export class DBBuilder
     {
         const id = this.dialects.length + 1;
         this.dialectMap[key] = id;
-        this.dialects.push({
+        const dialect: OpenArabDictDialect = {
             id,
             name,
             emojiCodes,
             glottoCode,
             iso639code,
             parentId
-        });
+        };
+        this.dialects.push(dialect);
+
+        DialectTree.Define(dialect);
 
         return id;
     }

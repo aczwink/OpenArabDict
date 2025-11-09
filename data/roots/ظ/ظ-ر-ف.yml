@@ -49,6 +49,9 @@ root:
                   source-page: 679
                   text:
                     - circumstances, conditions
+                  examples:
+                    - text: بحسب الظروف
+                      translation: according to circumstances, depending on the circumstances
         - derivation: active-participle
           type: adjective
           gender: male

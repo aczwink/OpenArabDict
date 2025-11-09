@@ -18,10 +18,12 @@ root:
   radicals: ر-ء-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: irregular_ra2a
+            type: irregular
       translations:
         - dialect: msa
           source: hw4

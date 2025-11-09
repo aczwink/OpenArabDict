@@ -19,7 +19,6 @@ import fs from "fs";
 import path from "path";
 import YAML from 'yaml';
 import { DBBuilder } from "./DBBuilder";
-import { DialectMapper } from "./DialectMapper";
 import { OpenArabDictWordRelationshipType } from "openarabdict-domain";
 import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
@@ -99,15 +98,14 @@ async function CollectFiles(catalog: Catalog, dirPath: string)
     }
 }
 
-function ProcessDialects(dialects: DialectDefinition[], parentId: number | null, builder: DBBuilder, dialectMapper: DialectMapper)
+function ProcessDialects(dialects: DialectDefinition[], parentId: number | null, builder: DBBuilder)
 {
     for (const dialect of dialects)
     {
         const id = builder.AddDialect(dialect.key, dialect.name, dialect.emojiCodes, dialect.glottoCode, dialect.iso639code, parentId);
-        dialectMapper.CreateMappingIfPossible(id, dialect.glottoCode, dialect.iso639code);
 
         if(dialect.children !== undefined)
-            ProcessDialects(dialect.children, id, builder, dialectMapper);
+            ProcessDialects(dialect.children, id, builder);
     }
 }
 
@@ -130,10 +128,9 @@ async function BuildDatabase(dbSrcPath: string)
     await CollectFiles(catalog, dbSrcPath);
 
     const builder = new DBBuilder;
-    const dialectMapper = new DialectMapper;
     const verbalNounCounter = new VerbalNounCounter;
 
-    ProcessDialects(catalog.dialects, null, builder, dialectMapper);
+    ProcessDialects(catalog.dialects, null, builder);
 
     for (const root of catalog.roots)
     {
@@ -141,7 +138,7 @@ async function BuildDatabase(dbSrcPath: string)
 
         for (const word of root.words)
         {
-            ProcessWordDefinition(word, builder, dialectMapper, verbalNounCounter, {
+            ProcessWordDefinition(word, builder, verbalNounCounter, {
                 type: "root",
                 rootId,
             });
@@ -150,7 +147,7 @@ async function BuildDatabase(dbSrcPath: string)
 
     for (const word of catalog.words)
     {
-        ProcessWordDefinition(word, builder, dialectMapper, verbalNounCounter);
+        ProcessWordDefinition(word, builder, verbalNounCounter);
     }
 
     for (const relation of catalog.relations)
@@ -162,7 +159,7 @@ async function BuildDatabase(dbSrcPath: string)
         builder.AddRelation(word1Id, word2Id, type);
     }
 
-    const document = await builder.Store("./dist/db.json");
+    const document = await builder.Store("./dist/en.json");
     await CheckWords(document);
     verbalNounCounter.Evaluate();
 }

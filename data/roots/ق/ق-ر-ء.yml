@@ -18,15 +18,23 @@ root:
   radicals: ق-ر-ء
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
+            type: defective
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to read (ه s.th.; ه ل or على s.o. s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 74
+          text:
+            - to read
       derived:
         - text: قِرَاءَة
           derivation: verbal-noun
@@ -52,18 +60,6 @@ root:
               derivation: plural
               type: noun
               gender: male
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            type: defective
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 74
-              text:
-                - to read
 
     - text: الْقُرْآن
       type: noun

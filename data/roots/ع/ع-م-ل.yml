@@ -14,19 +14,27 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 root:
   radicals: ع-م-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: iaa
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - "to do, act, operate, be active, work (also: في in a field)"
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 62
+          text:
+            - to do
       derived:
         - text: عَمَل
           derivation: verbal-noun
@@ -50,36 +58,46 @@ root:
                   url: http://ejtaal.net/aa/#hw4=768
                   text:
                     - الأعمال business, commercial life
-        - derivation: active-participle
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=770
-              text:
-                - worker, wage earner, employee
-                - factor, constituent, element, (causative) agent, motive power
+            - derivation: nisba
+              text: عَمَلِيَّة
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 756
+                  text:
+                    - process (also phsy., chem., etc.)
         - derivation: active-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=770
+              source-page: 757
               text:
                 - working, employed
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: iaa
+        - derivation: active-participle
+          type: noun
+          gender: male
           translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 62
+            - dialect: msa
+              source: hw4
+              source-page: 757
               text:
-                - to do
+                - worker, wage earner, employee
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 757
+              text:
+                - factor, constituent, element, (causative) agent, motive power
+          derived:
+            - derivation: plural
+              text: عَوَامِل
 
     - type: verb
       dialect: msa
@@ -106,13 +124,16 @@ root:
                 - to treat
 
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to apply (ه s.th.), use, employ (ه، ه s.o., s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 43
+          text:
+            - to use
       derived:
         - text: اِسْتِعْمَال
           derivation: verbal-noun
@@ -123,15 +144,6 @@ root:
               source: hw4-free-text
               text:
                 - application, use, employment
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 10
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 43
-              text:
-                - to use
 
     - text: عُمْلَة
       type: noun

@@ -18,11 +18,12 @@ root:
   radicals: ح-ي-و
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: irregular_hayiya
-        type: irregular
+        variants:
+          - dialect: msa
+            parameters: irregular_hayiya
+            type: irregular
       translations:
         - dialect: msa
           source: hw4
@@ -50,11 +51,12 @@ root:
                 - animal, beast
 
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: irregular_hayiya
-        type: irregular
+        variants:
+          - dialect: msa
+            parameters: irregular_hayiya
+            type: irregular
       translations:
         - dialect: msa
           source: hw4

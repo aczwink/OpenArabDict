@@ -33,9 +33,13 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1230
               text:
-                - واجب منزلية homework (of a student)
+                - duty, obligation
+              contextual:
+                - text: واجبات منزلية
+                  translation: homework (of a student)
           derived:
             - text: وَاجِبَات
               derivation: plural

@@ -165,7 +165,6 @@ root:
                     - scientific nature (of s.th.), scientificalness
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -189,6 +188,39 @@ root:
               type: noun
               gender: male
               translations: []
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 745
+              text:
+                - teacher, instructor
+          derived:
+            - derivation: plural
+              text: مُعَلِّمُون
+            - derivation: feminine
+              text: مُعَلِّمَة
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 745
+                  text:
+                    - woman teacher, woman instructor
+              derived:
+                - derivation: plural
+                  text: مُعَلِّمَات
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 745
+              text:
+                - taught, instructed, trained, schooled
 
     - type: verb
       dialect: msa

@@ -76,6 +76,16 @@ root:
               text:
                 - avoidance
 
+    - gender: male
+      text: أَجْنَبِيّ
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 165
+          text:
+            - foreigner, alien
+
     - text: جَنُوب
       type: noun
       gender: male

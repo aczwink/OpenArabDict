@@ -78,7 +78,6 @@ root:
                 - married
 
     - type: verb
-      dialect: msa
       form:
         stem: 8
         type: sound

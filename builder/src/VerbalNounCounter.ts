@@ -44,7 +44,7 @@ export class VerbalNounCounter
     public Increment(verb: Verb<string>, index: number, verbalNounCount: number)
     {
         const stemParams = (verb.stem === 1) ? verb.stemParameterization : "";
-        const key = [verb.type, verb.stem, stemParams].join("_");
+        const key = [verb.root.type, verb.type, verb.stem, stemParams].join("_");
         const entry = this.dict[key];
 
         if(entry === undefined)
@@ -58,9 +58,8 @@ export class VerbalNounCounter
         }
         else
         {
-            //TODO: this should be fixed in openarabicconjugation
-            /*if(entry.length !== verbalNounCount)
-                throw new Error("Verbal noun count can not change: " + key);*/
+            if(entry.length !== verbalNounCount)
+                throw new Error("Verbal noun count can not change: " + key);
             entry[index]++;
         }
     }

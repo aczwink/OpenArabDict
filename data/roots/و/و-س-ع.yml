@@ -18,11 +18,12 @@ root:
   radicals: و-س-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
-        type: sound
+        variants:
+          - dialect: msa
+            parameters: uu
+            type: sound
       derived:
         - derivation: active-participle
           type: adjective

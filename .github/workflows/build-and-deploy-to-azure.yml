@@ -67,9 +67,17 @@ jobs:
           npm link
         working-directory: ./domain
 
+      - name: Building OpenArabDict OpenArabicConjugation bridge
+        run: |
+          npm link acts-util-core openarabdict-domain openarabicconjugation
+          npm install
+          npm run build
+          npm link
+        working-directory: ./openarabicconjugation-bridge
+
       - name: Building OpenArabDict builder
         run: |
-          npm link acts-util-core acts-util-node openarabdict-domain openarabicconjugation
+          npm link acts-util-core acts-util-node openarabdict-domain openarabdict-openarabicconjugation-bridge openarabicconjugation
           npm install
           npm run compile
           npm run build-db
@@ -84,7 +92,7 @@ jobs:
           
       - name: Deploy to Azure
         run: |
-          az storage blob upload --file ./dist/db.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/db.json --auth-mode login --overwrite
+          az storage blob upload --file ./dist/en.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/en.json --auth-mode login --overwrite
           az webapp restart --resource-group openarabdict --name openarabdictviewer-backend
           az logout
         working-directory: ./builder

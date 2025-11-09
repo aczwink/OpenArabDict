@@ -161,6 +161,7 @@ interface VerbVariant
 {
     dialectId: number;
     stemParameters: string;
+    verbType?: OpenArabDictVerbType;
 }
 
 export interface OpenArabDictVerbForm

@@ -15,8 +15,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-
-import { DialectType } from "openarabicconjugation/dist/Dialects";
+import { Dictionary } from "acts-util-core";
+import { OpenArabDictDialect } from "openarabdict-domain";
+import { DialectType, GetAllConjugatableDialects } from "openarabicconjugation/dist/Dialects";
+import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 
 interface DialectNode
 {
@@ -56,7 +58,31 @@ function FindNode(dialectType: DialectType, node: DialectNode): DialectNode | nu
     return null;
 }
 
+const map: Dictionary<DialectType> = {};
+const reverseMap: Dictionary<number> = {};
+
 export const DialectTree = {
+    Define(dialect: OpenArabDictDialect)
+    {
+        const conjugatable = GetAllConjugatableDialects();
+        for (const dialectType of conjugatable)
+        {
+            const meta = GetDialectMetadata(dialectType);
+            if((meta.glottoCode === dialect.glottoCode) && (meta.iso639code === dialect.iso639code))
+            {
+                map[dialect.id] = dialectType;
+                reverseMap[dialectType] = dialect.id;
+                return;
+            }
+        }
+    },
+
+    DefineMultiple(dialects: OpenArabDictDialect[])
+    {
+        for (const dialect of dialects)
+            this.Define(dialect);
+    },
+
     HighestOf(dialectTypes: DialectType[])
     {
         const nodes = dialectTypes.map(x => FindNode(x, tree)!);
@@ -64,35 +90,13 @@ export const DialectTree = {
         return nodes.find(x => x.level === leastLevel)!.dialectType;
     },
 
-    Map(dialectType: DialectType)
+    MapIdToType(dialectId: number)
     {
-        //TODO: DO THIS CORRECTLY
-        switch(dialectType)
-        {
-            case DialectType.Lebanese:
-                return 5;
-            case DialectType.ModernStandardArabic:
-                return 1;
-            case DialectType.SouthLevantine:
-                return 8;
-            default:
-                throw new Error("Missing mapping: " + dialectType);
-        }
+        return map[dialectId];
     },
 
-    MapId(dialectId: number)
+    MapTypeToId(dialectType: DialectType)
     {
-        //TODO: DO THIS CORRECTLY
-        switch(dialectId)
-        {
-            case 1:
-                return DialectType.ModernStandardArabic;
-            case 5:
-                return DialectType.Lebanese;
-            case 8:
-                return DialectType.SouthLevantine;
-            default:
-                return null;
-        }
-    }
+        return reverseMap[dialectType]!;
+    },
 };

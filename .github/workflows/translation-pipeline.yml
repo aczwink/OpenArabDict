@@ -69,7 +69,7 @@ jobs:
 
       - name: Download English dictionary
         run: |
-          az storage blob download --file ./en.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/db.json --auth-mode login --overwrite
+          az storage blob download --file ./en.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/en.json --auth-mode login --overwrite
         working-directory: ./
 
       - name: Deploy translation service

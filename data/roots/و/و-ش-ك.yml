@@ -18,11 +18,12 @@ root:
   radicals: و-ش-ك
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        type: sound
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+            type: sound
       derived:
         - text: وَشْك
           alias: وُشْك

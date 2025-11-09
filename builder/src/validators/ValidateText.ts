@@ -19,7 +19,6 @@ import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenA
 import { Conjugator } from "openarabicconjugation/dist/Conjugator";
 import { Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
 import { DialectType } from "openarabicconjugation/dist/Dialects";
-import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { ParseVocalizedText, VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
 import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
@@ -70,15 +69,13 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
                 throw new Error("Id error!!!");
             const root = builder.GetRoot(verb.rootId);
 
-            const rootInstance = new VerbRoot(root.radicals);
             const verbInstance = CreateMSAVerb(root, verb);
-            const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
             const conjugator = new Conjugator;
             if(conjugator.HasPotentiallyMultipleVerbalNounForms(verbInstance))
                 return undefined;
 
-            const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
+            const generated = conjugator.GenerateAllPossibleVerbalNouns(verbInstance);
             return VocalizedWordTostring(generated[0]);
         }
         case "colloquial":
@@ -121,12 +118,10 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, ve
         throw new Error("Id error!!!");
     const root = builder.GetRoot(verb.rootId);
 
-    const rootInstance = new VerbRoot(root.radicals);
     const verbInstance = CreateMSAVerb(root, verb);
-    const stem = (verbInstance.stem === 1) ? verbInstance : verbInstance.stem;
 
     const conjugator = new Conjugator;
-    const generated = conjugator.GenerateAllPossibleVerbalNouns(rootInstance, stem);
+    const generated = conjugator.GenerateAllPossibleVerbalNouns(verbInstance);
 
     const parsed = ParseVocalizedText(word.text ?? "");
     for (let i = 0; i < generated.length; i++)

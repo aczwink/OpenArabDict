@@ -24,7 +24,8 @@ root:
           - dialect: msa
             parameters: ii
           - dialect: lb
-            parameters: irjy2
+            parameters: irregular_ija
+            type: irregular
       translations:
         - dialect: msa
           source: hw4

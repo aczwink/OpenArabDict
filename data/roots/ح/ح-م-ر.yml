@@ -18,18 +18,12 @@ root:
   radicals: ح-م-ر
   words:
     - type: verb
-      dialect: msa
       form: 9
-      derived:
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form: 9
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 27
-              text:
-                - to become red
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 27
+          text:
+            - to become red
 
     - text: حِمَار
       type: noun

@@ -15,33 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-و-ج
+  radicals: ذ-ر-ع
   words:
-    - type: verb
-      form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: ia
-            type: sound
+    - gender: female
+      text: ذَرِيعَة
+      type: noun
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 357
           text:
-            - to bend, twist, curve
-    - type: verb
-      dialect: msa
-      form: 2
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to bend, crook, curve, twist (ه s.th.)
-    - type: verb
-      dialect: msa
-      form: 5
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - same as عَوِجَ
+            - pretext, excuse

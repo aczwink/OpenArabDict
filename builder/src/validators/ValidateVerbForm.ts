@@ -21,17 +21,31 @@ import { ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from 
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
 import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
-import { DialectMapper } from "../DialectMapper";
 import { ExtractRoot } from "../shared";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { _LegacyExtractDialect } from "../_LegacyDataDefinition";
-import { MapVerbTypeToOpenArabicConjugation } from "openarabdict-openarabicconjugation-bridge";
+import { DialectTree, MapVerbTypeToOpenArabicConjugation } from "openarabdict-openarabicconjugation-bridge";
 
 function MapVerbType(verb: VerbWordDefinition)
 {
     if(typeof verb.form === "number")
         return undefined;
-    switch(verb.form.type)
+    if(("type" in verb.form))
+    {
+        switch(verb.form.type)
+        {
+            case "sound":
+                return OpenArabDictVerbType.Sound;
+        }
+    }
+    return undefined;
+}
+
+function MapVerbTypeFromVariant(variant: VerbVariantDefintion)
+{
+    if(variant.type === undefined)
+        return undefined;
+    switch(variant.type)
     {
         case "defective":
             return OpenArabDictVerbType.Defective;
@@ -43,14 +57,15 @@ function MapVerbType(verb: VerbWordDefinition)
     return undefined;
 }
 
-function ValidateVerbFormVariant(builder: DBBuilder, dialectMapper: DialectMapper, oadVerbType: OpenArabDictVerbType | undefined, validator: WordDefinitionValidator, variant: VerbVariantDefintion)
+function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionValidator, variant: VerbVariantDefintion)
 {
     const dialectId = builder.MapDialectKey(variant.dialect)!;
 
     const root = ExtractRoot(builder, validator.parent);
     const rootInstance = new VerbRoot(root!.radicals);
     
-    const dialectType = dialectMapper.Map(dialectId)!;
+    const dialectType = DialectTree.MapIdToType(dialectId)!;
+    const oadVerbType = MapVerbTypeFromVariant(variant);
     const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
 
     const meta = GetDialectMetadata(dialectType);
@@ -66,10 +81,11 @@ function ValidateVerbFormVariant(builder: DBBuilder, dialectMapper: DialectMappe
     return {
         dialectId,
         stemParameters: variant.parameters,
+        verbType: oadVerbType
     };
 }
 
-export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMapper, validator: WordDefinitionValidator)
+export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionValidator)
 {
     const def = validator.wordDefinition;
 
@@ -84,7 +100,7 @@ export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMappe
         validator.verbForm = {
             stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),
             stem,
-            variants: def.form.variants.map(ValidateVerbFormVariant.bind(undefined, builder, dialectMapper, verbType, validator)),
+            variants: def.form.variants.map(ValidateVerbFormVariant.bind(undefined, builder, validator)),
             verbType
         };
     }
@@ -93,7 +109,7 @@ export function ValidateVerbForm(builder: DBBuilder, dialectMapper: DialectMappe
         const stemNumber = (typeof def.form === "number") ? def.form : def.form.stem;
 
         const variants = ((typeof def.form !== "number") && ("parameters" in def.form)) ? [
-            ValidateVerbFormVariant(builder, dialectMapper, verbType, validator, ({ dialect: _LegacyExtractDialect(def), parameters: def.form.parameters }))
+            ValidateVerbFormVariant(builder, validator, ({ dialect: _LegacyExtractDialect(def), parameters: def.form.parameters }))
         ] : undefined;
 
         validator.verbForm = {

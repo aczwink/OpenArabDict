@@ -55,19 +55,18 @@ export interface VerbVariantDefintion
 {
     dialect: string;
     parameters: string;
+    type?: "defective" | "irregular" | "sound";
 }
 
 interface ParameterizedStem1Data
 {
     stem: 1;
     parameters: string;
-    type?: "defective" | "sound";
 }
 
 interface ParameterizedStem1DataWithVariants
 {
     stem: 1;
-    type?: "defective" | "irregular" | "sound";
     variants: VerbVariantDefintion[];
     "stative-active-participle"?: true;
 }
