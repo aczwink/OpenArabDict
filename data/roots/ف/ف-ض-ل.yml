@@ -55,6 +55,7 @@ root:
                   source: hw4-free-text
                   text:
                     - better, best
+
     - type: verb
       dialect: msa
       form: 2
@@ -64,6 +65,20 @@ root:
           text:
             - to prefer (على ه, ه s.o., s.th. to s.o., to s.th.), like better
               (ه, ه s.o., s.th., على than)
+      derived:
+        - derivation: verbal-noun
+          text: تَفْضِيل
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 841
+              text: []
+              contextual:
+                - text: اسم التفضيل
+                  translation: noun of preference = elative (gram.)
+
 
     - text: فُضُول
       type: noun

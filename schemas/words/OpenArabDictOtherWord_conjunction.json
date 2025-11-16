@@ -1,0 +1,26 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict conjunction definition",
+    "description": "JSON Schema for OpenArabDict conjunction definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    }
+                ]
+            }
+        },
+        "type": {
+            "const": "conjunction"
+        }
+    },
+    "required": ["text", "translations", "type"]
+}

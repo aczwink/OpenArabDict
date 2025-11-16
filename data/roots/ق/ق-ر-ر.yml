@@ -18,13 +18,24 @@ root:
   radicals: ق-ر-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 880
           text:
             - to decide (ه s.th.)
+      derived:
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 882
+              text:
+                - curriculum
+
     - type: verb
       dialect: msa
       form: 10

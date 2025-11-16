@@ -70,7 +70,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
         }
 
         //test: arb/defective/stem1_r3waw_type3.js
-        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.ActiveParticiple))
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
         {
             const verbId = word.parent.verbId;
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
@@ -211,7 +211,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
             }
         }
 
-        //test: arb/quadrilateral/stem4.js
+        //test: arb/quadriliteral/stem4.js
         if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.PassiveParticiple))
         {
             const verbId = word.parent.verbId;

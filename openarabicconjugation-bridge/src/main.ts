@@ -22,6 +22,7 @@ import { DialectType } from "openarabicconjugation/dist/Dialects";
 import { CreateVerb } from "openarabicconjugation/dist/Verb";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { DialectTree } from "./DialectTree";
+import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 
 export function CreateVerbFromOADVerbForm(dialectType: DialectType, rootRadicals: string, verbForm: OpenArabDictVerbForm)
 {
@@ -49,18 +50,18 @@ export function CreateVerbFromOADVerb(dialectType: DialectType, root: OpenArabDi
     return CreateVerbFromOADVerbForm(dialectType, root.radicals, verb.form);
 }
 
-export function FindHighestConjugatableDialectOf(verbForm: OpenArabDictVerbForm, translations: OpenArabDictTranslationEntry[])
+export function FindHighestConjugatableDialectOf(rootRadicals: string, verbForm: OpenArabDictVerbForm, translations: OpenArabDictTranslationEntry[])
 {
     const dialectIds = (verbForm.variants === undefined) ? translations.map(x => x.dialectId) : verbForm.variants.map(x => x.dialectId);
-    const dialectTypes = dialectIds.map(x => DialectTree.MapIdToType(x)).filter(x => x !== undefined);
+    const dialectTypes = dialectIds.map(x => DialectTree.MapIdToType(x)).filter(x => x !== undefined).filter(x => GetDialectMetadata(x).IsConjugatable(CreateVerbFromOADVerbForm(x, rootRadicals, verbForm)));
     if(dialectTypes.length === 0)
         return DialectType.ModernStandardArabic;
     return DialectTree.HighestOf(dialectTypes);
 }
 
-export function FindHighestConjugatableDialect(verb: OpenArabDictVerb)
+export function FindHighestConjugatableDialect(rootRadicals: string, verb: OpenArabDictVerb)
 {
-    return FindHighestConjugatableDialectOf(verb.form, verb.translations);
+    return FindHighestConjugatableDialectOf(rootRadicals, verb.form, verb.translations);
 }
 
 export function MapVerbTypeToOpenArabicConjugation(verbType?: OpenArabDictVerbType): VerbType | undefined

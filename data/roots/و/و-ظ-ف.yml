@@ -22,6 +22,11 @@ root:
       gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1266
           text:
             - duty, task, assignment
+            - work
+      derived:
+        - derivation: plural
+          text: وَظَائِف

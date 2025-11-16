@@ -18,12 +18,27 @@ root:
   radicals: غ-ر-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
       derived:
+        - derivation: verbal-noun
+          text: غَرْب
+          type: noun
+          gender: male
+          derived:
+            - derivation: nisba
+              text: غَرْبِيّ
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 783
+                  text:
+                    - western, westerly
         - text: غُرْبَة
           derivation: meaning-related
           type: noun
@@ -33,6 +48,7 @@ root:
               source: hw4-free-text
               text:
                 - absence from the homeland
+
     - type: verb
       dialect: msa
       form:

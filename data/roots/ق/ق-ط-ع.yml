@@ -63,6 +63,7 @@ root:
               type: noun
               gender: female
               translations: []
+
     - type: verb
       dialect: msa
       form: 3
@@ -83,6 +84,7 @@ root:
                   source: hw4-free-text
                   text:
                     - area, region, section, district
+
     - type: verb
       dialect: msa
       form: 7
@@ -91,3 +93,16 @@ root:
           source: hw4-free-text
           text:
             - to be torn off
+
+    - gender: male
+      text: قِطَاع
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 909
+          text:
+            - section
+      derived:
+        - derivation: plural
+          text: قِطَاعَات

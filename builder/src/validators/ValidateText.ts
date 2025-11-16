@@ -87,7 +87,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
 
                 const form = validator.verbForm;
 
-                const dialectType = FindHighestConjugatableDialectOf(form, translations);
+                const dialectType = FindHighestConjugatableDialectOf(root.radicals, form, translations);
                 const verb = CreateVerbFromOADVerbForm(dialectType, root.radicals, form);
 
                 const conjugator = new Conjugator;

@@ -55,6 +55,14 @@ root:
         - derivation: passive-participle
           type: adjective
           gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1148
+              text:
+                - arranged, ordered, kept in order, orderly, tidy
+                - neat, well-tended, well-kept
+                - systematically arranged, systematized
           derived:
             - text: مُنَظَّمَة
               derivation: feminine

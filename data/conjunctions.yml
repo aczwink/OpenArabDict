@@ -68,6 +68,15 @@ words:
         text:
           - or
 
+  - text: بَلْ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 86
+        text:
+          - (also with foll. و) nay, - rather...
+
   - text: كَيْ
     type: conjunction
     alias: لِكَيْ

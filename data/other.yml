@@ -184,10 +184,11 @@ words:
     type: particle
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        source-page: 872
         text:
-          - with foll. perf. indicates the termination of an action; sometimes
-            corresponding to English "already"
+          - with foll. perf. indicates the termination of an action; sometimes corresponding to English "already"
+          - 'with foll. imperf.: sometimes, at times; perhaps, or English "may", "might"'
   - text: جَيْب
     type: noun
     gender: male
@@ -677,15 +678,6 @@ words:
         text:
           - (substituting for an unnamed or unspecified person or thing)
             so-and-so
-  - text: تَحْتَ
-    type: preposition
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - |-
-            1. under
-            2. below, beneath, underneath
 
   - text: سَنَة
     type: noun

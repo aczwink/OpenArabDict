@@ -16,6 +16,7 @@
             "enum": [
                 "active-participle",
                 "adverbial-accusative",
+                "elative-degree",
                 "feminine",
                 "meaning-related",
                 "nisba",
@@ -38,6 +39,9 @@
             "type": "array",
             "items": {
                 "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictFreeTextTranslationEntry.json"
+                    },
                     {
                         "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
                     }

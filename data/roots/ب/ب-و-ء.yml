@@ -15,26 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-م-د
+  radicals: ب-و-ء
   words:
-    - form: 8
-      type: verb
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 751
-          text:
-            - to rely, depend (ه ,ه or على on s.o., on s.th.)
-
-    - text: عَمُود
+    - gender: female
+      text: بِيئَة
       type: noun
-      gender: male
       translations:
         - dialect: msa
           source: hw4
-          source-page: 752
+          source-page: 98
           text:
-            - column, pillar, pilaster
-      derived:
-        - text: أَعْمِدَة
-          derivation: plural
+            - environment

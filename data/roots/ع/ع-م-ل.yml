@@ -151,7 +151,10 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=769
+          source-page: 756
           text:
             - currency
             - money
+          contextual:
+            - text: عملة صعبة
+              translation: hard currency

@@ -62,7 +62,6 @@ root:
                 - to say
 
     - type: verb
-      dialect: lb
       form: 7
       translations:
         - dialect: lb

@@ -59,6 +59,19 @@ words:
         text:
           - mark, sign, characteristic
 
+  - text: شَاطِئ
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 550
+        text:
+          - shore, coast, seacoast, beach, strand
+    derived:
+      - derivation: plural
+        text: شَوَاطِئ
+
   - text: نَبْق
     type: noun
     gender: male

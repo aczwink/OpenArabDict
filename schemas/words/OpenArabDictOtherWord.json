@@ -19,12 +19,6 @@
         },
         "text": {
             "type": "string"
-        },
-        "type": {
-            "type": "string",
-            "enum": [
-                "preposition"
-            ]
         }
     },
     "required": []

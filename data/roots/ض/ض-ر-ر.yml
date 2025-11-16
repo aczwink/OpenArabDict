@@ -18,11 +18,18 @@ root:
   radicals: ض-ر-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 628
+          text:
+            - to harm, impair, prejudice, damage, hurt, injure (ه ,ه s.o., s.th.), do harm, be harmful, noxious or injurious (ه ,ه to s.o., to s.th.)
       derived:
         - text: مَضَرَّة
           derivation: meaning-related

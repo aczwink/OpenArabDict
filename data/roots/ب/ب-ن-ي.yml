@@ -53,7 +53,17 @@ root:
               text:
                 - builder
         - text: بِنْيَة
-          alias: بُنْيَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 95
+              text:
+                - structure, setup, make-up
+                - build, frame, physique, physical constitution
+        - text: بُنْيَة
           derivation: meaning-related
           type: noun
           gender: female

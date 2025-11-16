@@ -55,6 +55,14 @@ root:
           derived:
             - derivation: plural
               text: عَائِدُون
+            - derivation: plural
+              text: عَائِدَات
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 768
+                  text:
+                    - revenues
         - text: عُود
           derivation: meaning-related
           type: noun

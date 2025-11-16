@@ -5,11 +5,28 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "contextual": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "translation": {
+                        "type": "string"
+                    }
+                },
+                "required": ["text", "translation"]
+            }
+        },
         "dialect": {
             "type": "string",
             "enum": [
                 "homsi",
-                "lb"
+                "lb",
+                "msa"
             ]
         },
         "source": {

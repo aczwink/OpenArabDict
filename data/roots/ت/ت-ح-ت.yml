@@ -15,35 +15,34 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-ع-م
+  radicals: ت-ح-ت
   words:
-    - type: verb
-      form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: au
+    - text: تَحْتَ
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 111
+          text:
+            - under
+            - below, beneath, underneath
       derived:
-        - text: نَعِيم
-          derivation: meaning-related
-          type: noun
+        - derivation: nisba
+          text: تَحْتِيّ
+          type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              source-page: 1150
-              text:
-                - amenity, comfort, ease, happiness, felicity
-        - text: نِعْمَة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
+              source-page: 111
+              text: []
+              contextual:
+                - text: بناء تحتي
+                  translation: infra-structure
             - dialect: msa
-              source: hw4
-              source-page: 0
-              text:
-                - benefit, blessing, boon, benefaction, favor, grace, kindness
-              examples:
-                - text: بنعمة الله
-                  translation: by the grace of God
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D8%A8%D9%86%D9%8A%D8%A9_%D8%AA%D8%AD%D8%AA%D9%8A%D8%A9
+              text: []
+              contextual:
+                - text: بِنْيَة تَحْتِيَّة
+                  translation: infrastructure

@@ -18,12 +18,23 @@ root:
   radicals: خ-ل-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations: []
       derived:
+        - derivation: verbal-noun
+          text: خَلْق
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 299
+              text:
+                - creation
         - text: خَلَّاق
           derivation: meaning-related
           type: noun
