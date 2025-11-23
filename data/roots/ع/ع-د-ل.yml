@@ -30,8 +30,10 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 697
               text:
+                - justice, impartiality
                 - fairness, equitableness, probity, honesty, uprightness
         - text: عَدْل
           derivation: meaning-related
@@ -40,7 +42,7 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=710
+              source-page: 697
               text:
                 - just, equitable, fair, upright, honest
 
@@ -61,11 +63,12 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 697
               text:
-                - |-
-                  1. justice
-                  2. fairness, impartiality
+                - justice
+                - fairness, impartiality
+                
     - type: verb
       dialect: msa
       form: 2

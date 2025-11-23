@@ -51,7 +51,6 @@ root:
                       text:
                         - imaginative power, imagination
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -62,10 +61,17 @@ root:
         - derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
           derived:
             - text: اِتِّهَامَات
               derivation: plural
               type: noun
               gender: male
-              translations: []
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1294
+              text:
+                - accused, charged, indicted

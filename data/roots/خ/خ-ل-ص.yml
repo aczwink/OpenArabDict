@@ -48,11 +48,11 @@ root:
                 - to finish
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 295
           text:
             - to rid o.s. (من of), free o.s. (من from), get rid (من of)
       derived:

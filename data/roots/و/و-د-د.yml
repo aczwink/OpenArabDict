@@ -18,17 +18,18 @@ root:
   radicals: و-د-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1240
           text:
-            - |-
-              1. to love, like (ه, ه s.o., s.th.), be fond (ه, ه of)
-              2. to want, wish (ه s.th., ان or لو or لو ان that s.th. be)
+            - to love, like (ه ,ه s.o., s.th.), be fond (ه ,ه of)
+            - to want, wish (ه s.th., ان or لو or لو ان that s.th. be)
       derived:
         - text: وِدّ
           derivation: verbal-noun

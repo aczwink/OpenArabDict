@@ -5,12 +5,21 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "derived": {
+            "type": "array",
+            "items": {
+                "$ref": "./OpenArabDictWord_derived.json"
+            }
+        },
         "gender": {
             "type": "string",
             "enum": [
                 "female",
                 "male"
             ]
+        },
+        "text": {
+            "type": "string"
         },
         "translations": {
             "type": "array",
@@ -26,5 +35,5 @@
             "const": "adjective"
         }
     },
-    "required": ["gender", "type"]
+    "required": ["gender", "text", "type"]
 }

@@ -27,8 +27,6 @@ words:
     derived:
       - text: اَلَّتِي
         derivation: feminine
-        type: pronoun
-        gender: female
 
   - text: أَيّ
     type: pronoun
@@ -56,18 +54,14 @@ words:
     translations:
       - dialect: msa
         source: hw4
-        url: http://ejtaal.net/aa/#hw4=1213
+        source-page: 1200
         text:
           - this one, this
     derived:
       - text: هٰذِهِ
         derivation: feminine
-        type: pronoun
-        gender: female
       - text: هٰؤُلَاءِ
         derivation: plural
-        type: pronoun
-        gender: male
 
   - text: هُوَ
     type: pronoun

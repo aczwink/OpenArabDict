@@ -59,3 +59,19 @@ root:
                   strike
 
                   إضراب عن الطعام hunger strike
+
+    - form: 8
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 631
+              text:
+                - disturbance, disorder, disarray
+          derived:
+            - derivation: plural
+              text: اِضْطِرَابَات

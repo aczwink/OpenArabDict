@@ -80,11 +80,13 @@ root:
           source: hw4-free-text
           text:
             - to possess, own, have (ه s.th.)
+
     - text: مَمْلَكَة
       type: noun
       gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1082
           text:
             - kingdom

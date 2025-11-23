@@ -18,18 +18,31 @@ root:
   radicals: ع-ج-ز
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
-      alias: ia
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: msa
+            parameters: ia
       translations:
         - complete: true
           dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=705
+          source-page: 692
           text:
             - to be weak, lack strength, be incapable (عن of), be unable (عن to do s.th.)
           examples:
             - text: ما عجز عن ان
               translation: not to fail to...
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 692
+              text:
+                - weak, feeble, powerless, impotent
+                - incapable (عن of), unable (عن to do s.th.)

@@ -24,6 +24,7 @@ import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
 import { CheckWords } from "./openarabicconjugation-tests-check";
 import { VerbalNounCounter } from "./VerbalNounCounter";
+import { JSONSchemaLoader } from "./JSONSchemaLoader";
 
 interface DialectDefinition
 {
@@ -62,6 +63,17 @@ interface Catalog
     words: WordDefinition[];
 }
 
+function Validate(data: any, schemaFileTitle: string, schemaLoader: JSONSchemaLoader, dataFilePath: string)
+{
+    //TODO: add cli flag on whether to do schema validation or not
+    /*const result = schemaLoader.Validate(data, schemaFileTitle);
+    if(!result)
+    {
+        console.log(dataFilePath, "is not valid!");
+    }
+    */
+}
+
 async function CollectFiles(catalog: Catalog, dirPath: string)
 {
     function ReadContent(content: string, ext: string)
@@ -74,6 +86,10 @@ async function CollectFiles(catalog: Catalog, dirPath: string)
                 throw new Error("Unsupported extension: " + ext);
         }
     }
+
+    const schemaLoader = new JSONSchemaLoader;
+    await schemaLoader.Load("OpenArabDictRoot.json");
+    await schemaLoader.Load("words.json");
 
     const children = await fs.promises.readdir(dirPath);
     for (const child of children)
@@ -91,9 +107,15 @@ async function CollectFiles(catalog: Catalog, dirPath: string)
             if(data.relations !== undefined)
                 catalog.relations.push(...data.relations);
             if(data.root !== undefined)
+            {
+                Validate(data, "OpenArabDictRoot.json", schemaLoader, childPath);
                 catalog.roots.push(data.root);
+            }
             if(data.words !== undefined)
+            {
+                Validate(data, "words.json", schemaLoader, childPath);
                 catalog.words.push(...data.words);
+            }
         }
     }
 }

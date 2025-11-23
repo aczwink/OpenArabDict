@@ -17,6 +17,7 @@
                 "active-participle",
                 "adverbial-accusative",
                 "elative-degree",
+                "extension",
                 "feminine",
                 "meaning-related",
                 "nisba",
@@ -52,7 +53,8 @@
             "enum": [
                 "adjective",
                 "adverb",
-                "noun"
+                "noun",
+                "preposition"
             ]
         }
     },

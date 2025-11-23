@@ -18,24 +18,28 @@ root:
   radicals: ص-ل-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: msa
+            parameters: aa
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=622
+          source-page: 609
           text:
             - to be good, right, proper, in order, righteous, pious, godly
       derived:
         - text: مَصْلَحَة
-          derivation: meaning-related
+          derivation: verbal-noun
           type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 610
               text:
                 - matter, affair
         - text: صَالِح

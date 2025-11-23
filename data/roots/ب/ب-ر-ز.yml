@@ -74,3 +74,12 @@ root:
               text:
                 - competition, contest, match, esp. in sports
                 - duel
+    
+    - form: 4
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 65
+          text:
+            - to cause to come out, bring out, expose, make manifest, (ه s.th.)

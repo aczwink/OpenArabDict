@@ -63,3 +63,13 @@ root:
           text:
             - to introduce (ه s.th., e.g., an innovation, an improvement, على in
               or on s.th.)
+
+    - gender: male
+      text: دَخْل
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 316
+          text:
+            - income

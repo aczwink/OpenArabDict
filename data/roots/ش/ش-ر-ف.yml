@@ -26,6 +26,19 @@ root:
           text:
             - to give (ه s.o.) the honor
 
+    - form: 4
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 546
+              text:
+                - supervision, superintendence, control (على over)
+
     - text: شَرَف
       type: noun
       gender: male

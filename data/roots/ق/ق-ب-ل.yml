@@ -93,6 +93,16 @@ root:
           text:
             - to welcome s.o. or s.th.
       derived:
+        - text: مُقَابَلَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 868
+              text:
+                - meeting
         - derivation: active-participle
           type: adjective
           gender: male
@@ -100,26 +110,17 @@ root:
             - text: مُقابِلَ
               derivation: extension
               type: preposition
-              derived:
-                - text: مقابل ذلك
-                  derivation: extension
-                  type: phrase
-                  alias: في مقابل ذلك
-                  translations:
-                    - dialect: msa
-                      source: hw4
-                      url: http://ejtaal.net/aa/#hw4=882
-                      text:
-                        - in return for that, in exchange for that, in compensation for that, as an equivalent for that, for that, therefor
-        - text: مُقَابَلَة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - meeting
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 869
+                  text:
+                    - for, instead of, in exchange for
+                  examples:
+                    - text: مقابل ذلك
+                      translation: in return for that, in exchange for that, in compensation for that, as an equivalent for that, for that, therefor
+                    - text: في مقابل ذلك
+                      translation: in return for that, in exchange for that, in compensation for that, as an equivalent for that, for that, therefor
 
     - type: verb
       dialect: msa

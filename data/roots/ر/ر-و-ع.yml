@@ -51,7 +51,8 @@ root:
               gender: male
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  source-page: 427
                   text:
                     - more wonderful, more marvelous
         - text: رَوْعَة

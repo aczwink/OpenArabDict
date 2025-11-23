@@ -29,7 +29,17 @@ root:
     - text: وَحْش
       type: noun
       gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1238
+          text:
+            - wild animal, wild beast
+            - monster
+            - beast (fig., also term of abuse)
       derived:
+        - derivation: plural
+          text: وُحُوش
         - text: وَحْشِيّ
           derivation: nisba
           type: adjective

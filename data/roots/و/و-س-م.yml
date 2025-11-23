@@ -41,11 +41,23 @@ root:
               type: noun
               gender: female
               translations: []
+
+    - type: adjective
+      gender: male
+      text: وَسِيم
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1254
+          text:
+            - beautiful (face)
+
     - text: مَوْسِم
       type: noun
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1254
           text:
             - time of the year, season

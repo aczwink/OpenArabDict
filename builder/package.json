@@ -19,6 +19,7 @@
   "dependencies": {
     "acts-util-core": "*",
     "acts-util-node": "*",
+    "jsonschema": "^1.5.0",
     "openarabdict-domain": "*",
     "openarabdict-openarabicconjugation-bridge": "*",
     "openarabicconjugation": "*",

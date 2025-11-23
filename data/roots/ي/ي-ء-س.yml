@@ -18,19 +18,27 @@ root:
   radicals: ي-ء-س
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
-      alias: ii
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: msa
+            parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1294
           text:
-            - to renounce
+            - to renounce, forgo (من s.th.)
       derived:
         - text: يَأْس
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1294
+              text:
+                - hopelessness, desperation

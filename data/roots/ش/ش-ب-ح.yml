@@ -31,3 +31,14 @@ root:
       derived:
         - text: أَشْبَاح
           derivation: plural
+
+    - gender: male
+      text: شَبِّيح
+      type: noun
+      translations:
+        - dialect: sy
+          source: free-text #from conversations with Syrians
+          url: https://en.wikipedia.org/wiki/Shabiha
+          text:
+            - someone loyal to the Assad family
+            - a thug

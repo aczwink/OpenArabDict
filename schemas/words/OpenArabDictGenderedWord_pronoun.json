@@ -21,6 +21,16 @@
         "text": {
             "type": "string"
         },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    }
+                ]
+            }
+        },
         "type": {
             "const": "pronoun"
         }

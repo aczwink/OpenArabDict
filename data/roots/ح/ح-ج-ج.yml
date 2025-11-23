@@ -34,9 +34,12 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 184
               text:
-                - argument, pretense, pretext, plea
+                - argument
+                - pretense, pretext, plea
+                - proof, evidence
           derived:
             - text: حُجَج
               derivation: plural

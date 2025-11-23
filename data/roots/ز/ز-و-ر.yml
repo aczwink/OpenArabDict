@@ -18,15 +18,23 @@ root:
   radicals: ز-و-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 448
           text:
             - to visit (ه s.o.), call (ه on s.o.), pay a visit (ه to)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 40
+          text:
+            - to visit
       derived:
         - text: زِيَارَة
           derivation: verbal-noun
@@ -35,20 +43,18 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=461
+              source-page: 448
               text:
                 - visit
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: iu
+        - derivation: active-participle
+          type: noun
+          gender: male
           translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 40
+            - dialect: msa
+              source: hw4
+              source-page: 449
               text:
-                - to visit
+                - visitor, caller, guest
 
     - type: verb
       dialect: msa

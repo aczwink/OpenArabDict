@@ -134,6 +134,7 @@ root:
               text:
                 - spirituous
                 - spiritual
+
     - text: رَاحَة
       type: noun
       gender: female
@@ -143,3 +144,13 @@ root:
           url: http://ejtaal.net/aa/#hw4=436
           text:
             - ease, leisure
+
+    - text: مِرْوَحَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 424
+          text:
+            - fan

@@ -62,6 +62,9 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=503
+          source-page: 490
           text:
             - method, way, procedure
+      derived:
+        - derivation: plural
+          text: أَسَالِيب

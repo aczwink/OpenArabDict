@@ -47,6 +47,18 @@ root:
               url: http://ejtaal.net/aa/#hw4=1119
               text:
                 - production
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          derived:
+            - derivation: plural
+              text: مُنْتَجَات
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1106
+                  text:
+                    - proceeds, returns, yields, products
 
     - text: نَتِيجَة
       type: noun

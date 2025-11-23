@@ -18,11 +18,11 @@ root:
   radicals: س-خ-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 467
           text:
             - to subject, make subservient (ه s.o., ه s.th., ل to or for the
               purpose of)
@@ -33,6 +33,17 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 467
               text:
                 - subjugation, subjection
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 467
+              text:
+                - oppressor

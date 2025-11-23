@@ -18,16 +18,24 @@ root:
   radicals: ش-ر-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 541
           text:
-            - to explain, elucidate, illustrate, make plain, set forth,
-              describe, depict (ه s.th.)
+            - to explain, elucidate, illustrate, make plain, set forth, describe, depict (ه s.th.)
+            - to open, lay open (صدره s.o.'s heart, ل to or for the acceptance of)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+          text:
+            - explain
       derived:
         - text: شَرْح
           derivation: verbal-noun
@@ -39,14 +47,11 @@ root:
               text:
                 - expounding, presentation, explanation, illustration,
                   elucidation, exposition, setting forth
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
+        - derivation: passive-participle
+          type: noun
+          gender: male
           translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+            - dialect: levant
+              source: free-text #from visiting bakeries. They say "صغيرة" for small size and "مشروحة" for large size
               text:
-                - explain
+                - used in bakeries to depict large size

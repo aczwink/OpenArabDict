@@ -27,6 +27,18 @@ root:
           source: hw4-free-text
           text:
             - to boil, bubble up
+      derived:
+        - derivation: meaning-related
+          type: noun
+          gender: male
+          text: غَلْيُون
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 799
+              text:
+                - smoking pipe, tobacco pipe
+
     - type: verb
       dialect: msa
       form:
