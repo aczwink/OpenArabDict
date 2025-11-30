@@ -17,8 +17,34 @@
 root:
   radicals: ك-ذ-ب
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 958
+              text:
+                - liar
+        - derivation: meaning-related
+          gender: male
+          text: كَذَّاب
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 957
+              text:
+                - liar, swindler
+
     - type: verb
-      dialect: lb
       form: 2
       translations:
         - dialect: lb

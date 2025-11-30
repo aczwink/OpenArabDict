@@ -21,6 +21,7 @@ interface RootNode
 {
     type: "root";
     rootId: string;
+    fileName: string;
 }
 interface VerbNode
 {
@@ -32,6 +33,11 @@ interface WordNode
 {
     type: "word";
     word: OpenArabDictWord;
-    parent?: TreeTrace;
+    parent: TreeTrace;
 }
-export type TreeTrace = RootNode | VerbNode | WordNode;
+interface WordCollectionNode
+{
+    type: "word-collection";
+    fileName: string;
+}
+export type TreeTrace = RootNode | VerbNode | WordNode | WordCollectionNode;

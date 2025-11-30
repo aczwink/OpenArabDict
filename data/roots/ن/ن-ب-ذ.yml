@@ -15,28 +15,21 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-ط-ف
+  radicals: ن-ب-ذ
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: au
+            parameters: ai
+      type: verb
       derived:
-        - text: لَطِيف
-          derivation: meaning-related
+        - derivation: passive-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              source-page: 1018
+              source-page: 1102
               text:
-                - pretty, charming, lovely, graceful
-                - civil, courteous, polite
-          derived:
-            - text: لُطَفَاء
-              derivation: plural
-              type: adjective
-              gender: male
+                - cast-out, ostracized, banished, expelled, disowned, repudiated

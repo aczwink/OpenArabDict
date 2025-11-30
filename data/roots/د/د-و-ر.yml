@@ -58,20 +58,27 @@ root:
               source: hw4-free-text
               text:
                 - vertigo, dizziness, giddiness
+                
     - type: verb
-      dialect: msa
       form: 4
       translations: []
       derived:
-        - text: إِدَارَة
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 347
               text:
+                - direction, management
+                - administration
                 - administrative agency, department, office, bureau
+              usage:
+                - text: ادارة شؤون العاملين
+                  translation: personnel office or administration (of an agency or company)
+                  type: example
+
     - text: مَدَار
       type: noun
       gender: male

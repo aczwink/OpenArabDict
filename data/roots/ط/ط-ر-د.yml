@@ -29,10 +29,15 @@ root:
             - to drive away, chase away, push away, shove away, reject, repel,
               banish, exile, dismiss, drive out, expel, evict (ه من, s.o., s.th.
               from)
+
     - type: verb
-      dialect: msa
       form: 3
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 650
+          text:
+            - to chase after, hunt (ه a game, ه s.o.)
       derived:
         - text: مُطَارَدَة
           derivation: verbal-noun
@@ -40,6 +45,7 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 651
               text:
                 - pursuit, chase

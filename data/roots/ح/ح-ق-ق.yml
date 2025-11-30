@@ -40,15 +40,15 @@ root:
                   url: http://ejtaal.net/aa/#hw4=237
                   text:
                     - right, title, claim, legal claim (في to)
-            - text: حَقًّا⁩
+            - text: حَقًّا
               derivation: extension
               type: adverb
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  source-page: 224
                   text:
-                    - really, in reality, in effect, actually, in fact, indeed,
-                      truly, in truth
+                    - really, in reality, in effect, actually, in fact, indeed, truly, in truth
         - text: حَقِيقَة
           derivation: meaning-related
           type: noun

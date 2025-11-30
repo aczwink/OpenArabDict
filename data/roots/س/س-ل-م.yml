@@ -144,3 +144,12 @@ root:
               source: hw4-free-text
               text:
                 - receipt
+
+    - form: 10
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 496
+          text:
+            - to surrender, capitulate

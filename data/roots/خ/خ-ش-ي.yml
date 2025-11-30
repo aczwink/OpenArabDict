@@ -18,16 +18,17 @@ root:
   radicals: خ-ش-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 279
           text:
-            - to fear, dread (ه s.o., ه s.th., على for s.o.l or s.th.), be
-              afraid (ه of)
+            - to fear, dread (ه s.o., ه s.th., على for s.o. or s.th.), be afraid (ه of)
       derived:
         - text: خَشْيَة
           derivation: verbal-noun

@@ -18,13 +18,16 @@ root:
   radicals: ح-د-ث
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 189
           text:
             - to happen, occur, take place, come to pass
       derived:

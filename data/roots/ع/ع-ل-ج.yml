@@ -18,9 +18,13 @@ root:
   radicals: ع-ل-ج
   words:
     - type: verb
-      dialect: msa
       form: 3
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 741
+          text:
+            - to treat (ه s.o., a patient; ه a disease, also a subject)
       derived:
         - text: عِلَاج
           derivation: verbal-noun

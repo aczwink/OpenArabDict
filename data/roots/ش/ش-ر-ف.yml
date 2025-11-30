@@ -18,7 +18,24 @@ root:
   radicals: ش-ر-ف
   words:
     - type: verb
-      dialect: msa
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      derived:
+        - derivation: verbal-noun
+          text: شَرَف
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 545
+              text:
+                - honor, glory
+            
+    - type: verb
       form: 2
       translations:
         - dialect: msa
@@ -38,13 +55,3 @@ root:
               source-page: 546
               text:
                 - supervision, superintendence, control (على over)
-
-    - text: شَرَف
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4
-          url: https://ejtaal.net/aa/#hw4=558
-          text:
-            - honor, glory

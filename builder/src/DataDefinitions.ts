@@ -17,6 +17,14 @@
  * */
 
 import { AdvancedStemNumber } from "openarabicconjugation/dist/Definitions";
+import { _LegacyParameterizedStem1Data } from "./_LegacyDataDefinition";
+
+export interface UsageDefinition
+{
+    text: string;
+    translation: string;
+    type: "meaning-in-context" | "example";
+}
 
 export interface TranslationDefinition
 {
@@ -28,6 +36,7 @@ export interface TranslationDefinition
     "source-page"?: number;
     text: string[];
     url?: string;
+    usage?: UsageDefinition[];
 }
 
 export interface GenderedWordDefinition
@@ -58,12 +67,6 @@ export interface VerbVariantDefintion
     type?: "defective" | "irregular" | "sound";
 }
 
-interface ParameterizedStem1Data
-{
-    stem: 1;
-    parameters: string;
-}
-
 interface ParameterizedStem1DataWithVariants
 {
     stem: 1;
@@ -77,7 +80,7 @@ interface ParameterizedAdvancedStemData
     type?: "sound";
 }
 
-export type ParameterizedStemData = ParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;
+export type ParameterizedStemData = _LegacyParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;
 
 export interface VerbWordDefinition
 {

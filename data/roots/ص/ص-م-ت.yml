@@ -18,18 +18,20 @@ root:
   radicals: ص-م-ت
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 613
           text:
-            - to be silent
+            - to be silent, be taciturn, hold one's tongue, hush up, be or become quiet or still
       derived:
         - text: صَمْت
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []

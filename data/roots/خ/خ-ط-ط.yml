@@ -34,9 +34,10 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 284
               text:
-                - plan
+                - plan, project
         - text: مَخْطُوط
           derivation: passive-participle
           type: noun

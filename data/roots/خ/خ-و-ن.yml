@@ -15,46 +15,24 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-ض-ب
+  radicals: خ-و-ن
   words:
     - type: verb
       form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: ia
-      translations:
-        - dialect: msa
-          source: hw4
-          url: http://ejtaal.net/aa/#hw4=804
-          text:
-            - to be or become angry, cross, mad, vexed, irritated, exasperated, furious, to fret (من or على at s.th., with s.o.)
+            parameters: uu
       derived:
-        - derivation: verbal-noun
-          text: غَضَب
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 791
-              text:
-                - anger, exasperation, indignation
         - derivation: active-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              source-page: 792
+              source-page: 307
               text:
-                - wrathful, angry, exasperated, irate, furious, infuriated, enraged
-        - text: غَضْبَان
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - angry
+                - disloyal, faithless, false, unreliable, traitorous, treacherous, perfidious
+          derived:
+            - derivation: plural
+              text: خَوَنَة

@@ -18,24 +18,28 @@ root:
   radicals: ض-ل-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
-        - dialect: northlevant
-          source: hw4-free-text
+        - dialect: msa
+          source: hw4
+          source-page: 635
           text:
-            - to stay, to remain
-      derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
+            - to lose one's way, go astray
+            - to stray (عن or ه from the way)
+            - to err
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
             parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 55
-              text:
-                - to stay
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 55
+          text:
+            - to stay

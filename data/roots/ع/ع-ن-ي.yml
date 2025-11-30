@@ -28,14 +28,26 @@ root:
           url: http://ejtaal.net/aa/#hw4=775
           text:
             - to have in mind (ه s.th.), mean (ه, ه ب s.o., s.th. by)
+
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 762
           text:
             - to suffer (ه from), be afflicted (ه with)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: free-text
+              url: https://www.arabdict.com/de/english-arabic/%D9%85%D8%B9%D8%A7%D9%86%D8%A7%D8%A9
+              text:
+                - suffering
+
     - text: مَعْنًى
       type: noun
       gender: male

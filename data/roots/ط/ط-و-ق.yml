@@ -18,11 +18,11 @@ root:
   radicals: ط-و-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: uu
       derived:
         - text: طَاقَة
           derivation: meaning-related
@@ -30,10 +30,8 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 672
               text:
-                - >-
-                  1. ability, faculty, capability, aptitude, capacity, power,
-                  strength, potency
-
-                  2. energy (phys., etc.)
+                - ability, faculty, capability, aptitude, capacity, power, strength, potency
+                - energy (phys., etc.)

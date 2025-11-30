@@ -29,3 +29,5 @@ root:
       derived:
         - derivation: feminine
           text: لِصَّة
+        - derivation: plural
+          text: لُصُوص

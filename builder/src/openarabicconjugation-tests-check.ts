@@ -82,20 +82,6 @@ export async function CheckWords(doc: OpenArabDictDocument)
             }
         }
 
-        //test: arb/defective/stem3.js
-        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
-        {
-            const verbId = word.parent.verbId;
-            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
-            const root = doc.roots.find(x => x.id === verb.rootId);
-            const isDefective = (root?.radicals.endsWith("و")) || (root?.radicals.endsWith("ي"));
-
-            if(isDefective && (verb.form.stem === 3))
-            {
-                console.log("FOUND4", word);
-            }
-        }
-
         //test: arb/defective/stem6.js
         if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
         {

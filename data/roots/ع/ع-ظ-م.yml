@@ -68,8 +68,8 @@ root:
               grandiose, (more) imposing, (more) magnificent, mighty or
               mightier, (more) powerful (ه s.o., s.th.), enhance the greatness,
               grandeur, magnificence, power, or might (ه of s.o., of s.th.)
+
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
@@ -77,13 +77,12 @@ root:
           text:
             - same as II
       derived:
-        - text: مُعْظَم
-          derivation: meaning-related
+        - derivation: passive-participle
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 730
               text:
-                - most of (them), the majority, major part or portion (of), main
-                  part
+                - most of (them), the majority, major part or portion (of), main part

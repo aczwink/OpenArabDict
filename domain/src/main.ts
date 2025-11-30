@@ -34,20 +34,26 @@ export interface OpenArabDictRoot
     ya?: boolean;
 }
 
-interface TextWithTranslation
+export enum UsageType
+{
+    Example,
+    MeaningInContext
+}
+
+interface UsageRecord
 {
     text: string;
     translation: string;
+    type: UsageType;
 }
 
 export interface OpenArabDictTranslationEntry
 {
     dialectId: number;
-    contextual?: TextWithTranslation[];
-    examples?: TextWithTranslation[];
     complete?: true;
     text: string[];
     url?: string;
+    usage?: UsageRecord[];
 }
 
 export enum OpenArabDictWordType

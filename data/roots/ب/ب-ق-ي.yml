@@ -18,15 +18,25 @@ root:
   radicals: ب-ق-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 84
           text:
             - to remain, stay, continue to be (على in a state or condition)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 8
+          text:
+            #The translation on table 8 is wrong and doesn't align with the examples. On page 123 also the following translations are given in addition to ("to become")
+            - to stay
+            - to remain
       derived:
         - text: بَقَاء
           derivation: verbal-noun
@@ -34,19 +44,7 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 84
               text:
                 - remaining, staying, lingering, abiding
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 8
-              text:
-                #The translation on table 8 is wrong and doesn't align with the examples. On page 123 also the following translations are given in addition to ("to become")
-                - to stay
-                - to remain

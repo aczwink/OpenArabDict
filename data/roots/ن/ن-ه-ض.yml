@@ -18,10 +18,17 @@ root:
   radicals: ن-ه-ض
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1177
+          text:
+            - to rise, get up (عن from a seat, from bed)
       derived:
         - text: نُهُوض
           derivation: verbal-noun
@@ -33,3 +40,13 @@ root:
               url: https://ejtaal.net/aa/#hw4=853
               text:
                 - raising, boosting, revival, restoration, promotion, advancement, furtherance, encouragement, activation (ب of s.th.)
+
+    - form: 4
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1177
+          text:
+            - to tell (ه s.o.) to rise, lift up, raise, help up (ه s.o.), awaken, (a)rouse, stir up, animate, inspire, stimulate, excite, incite (ه s.o.)

@@ -18,12 +18,14 @@ root:
   radicals: ه-ز-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1205
           text:
             - to put to flight, rout, vanquish, defeat (ه the enemy)

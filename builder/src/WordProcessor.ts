@@ -15,8 +15,8 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry } from "openarabdict-domain";
-import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
+import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, UsageType } from "openarabdict-domain";
+import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, UsageDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
 import { DBBuilder } from "./DBBuilder";
 import { WordDefinitionValidator, WordValidator } from "./WordDefinitionValidator";
 import { TreeTrace } from "./TreeTrace";
@@ -29,7 +29,7 @@ import { HansWehr4Formatter } from "./formatters/HansWehr4Formatter";
 import { ValidateVerbForm } from "./validators/ValidateVerbForm";
 import { ExtractRoot } from "./shared";
 import { VerbalNounCounter } from "./VerbalNounCounter";
-import { _LegacyExtractDialect } from "./_LegacyDataDefinition";
+import { _LegacyBuildUsage, _LegacyExtractDialect } from "./_LegacyDataDefinition";
 
 export class WordProcessor
 {
@@ -37,19 +37,29 @@ export class WordProcessor
 
 function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuilder): OpenArabDictTranslationEntry
 {
+    function MapUsageType(def: UsageDefinition)
+    {
+        switch(def.type)
+        {
+            case "example":
+                return UsageType.Example;
+            case "meaning-in-context":
+                return UsageType.MeaningInContext;
+        }
+    }
+
     HansWehr4Formatter(x);
     
     return {
         dialectId: builder.MapDialectKey(x.dialect)!,
         complete: x.complete,
-        contextual: x.contextual,
-        examples: x.examples,
         text: x.text,
-        url: x.url
+        url: x.url,
+        usage: x.usage?.map(y => ({ text: y.text, translation: y.translation, type: MapUsageType(y) })) ?? _LegacyBuildUsage(x)
     };
 }
 
-export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent?: TreeTrace)
+export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace)
 {
     const translations = wordDef.translations?.map(x => ProcessTranslationDefinition(x, builder)) ?? [];
 
@@ -137,7 +147,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         }
     }
 
-    let thisParent: TreeTrace | undefined = undefined;
+    let thisParent: TreeTrace;
     let createdWord;
     switch(result.type)
     {
@@ -180,7 +190,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
             thisParent = {
                 type: "word",
-                word
+                word,
+                parent
             };
             createdWord = word;
         }
@@ -216,7 +227,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
             thisParent = {
                 type: "word",
-                word
+                word,
+                parent
             };
             createdWord = word;
         }
@@ -256,11 +268,13 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
             thisParent = {
                 type: "verb",
                 verbId: generatedVerb.id,
-                parent: parent!
+                parent: parent
             };
             createdWord = generatedVerb;
         }
         break;
+        default:
+            throw new Error("Unknown word type");
     }
 
     if(wordDef.derived !== undefined)

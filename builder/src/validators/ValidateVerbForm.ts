@@ -25,6 +25,8 @@ import { ExtractRoot } from "../shared";
 import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
 import { _LegacyExtractDialect } from "../_LegacyDataDefinition";
 import { DialectTree, MapVerbTypeToOpenArabicConjugation } from "openarabdict-openarabicconjugation-bridge";
+import { GlobalInjector } from "acts-util-node";
+import { StatisticsCounterService, StatisticsCounter } from "../services/StatisticsCounterService";
 
 function MapVerbType(verb: VerbWordDefinition)
 {
@@ -111,6 +113,11 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
         const variants = ((typeof def.form !== "number") && ("parameters" in def.form)) ? [
             ValidateVerbFormVariant(builder, validator, ({ dialect: _LegacyExtractDialect(def), parameters: def.form.parameters }))
         ] : undefined;
+        if(((typeof def.form !== "number") && ("parameters" in def.form)))
+        {
+            const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+            statsService.Increment(StatisticsCounter.LegacyVerbParameters);
+        }
 
         validator.verbForm = {
             stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),

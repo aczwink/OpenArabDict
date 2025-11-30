@@ -18,17 +18,15 @@ root:
   radicals: ر-ه-ب
   words:
     - type: verb
-      dialect: msa
-      form: 2
-      translations: []
-    - type: verb
-      dialect: msa
       form: 4
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 420
           text:
-            - "like II and additionally: to terrorize (ه s.o.)"
+            - to frighten, scare, alarm, intimidate (ه s.o.)
+            - to terrorize (ه s.o.)
       derived:
         - text: إِرْهَاب
           derivation: verbal-noun
@@ -36,6 +34,7 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 420
               text:
-                - terrorism
+                - terror, terrorism (pol.)

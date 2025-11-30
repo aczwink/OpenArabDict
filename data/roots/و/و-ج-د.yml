@@ -18,30 +18,28 @@ root:
   radicals: و-ج-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1230
           text:
-            - >-
-              1. to find (ه s.th.)
-
-              2. to hit upon s.th. (ه), come across s.th. (ه), meet with s.th.
-              (ه)
-
-
-              passive: يُوجَدُ there is (are)
+            - to find (ه s.th.)
+            - to hit upon s.th. (ه), come across s.th. (ه), meet with s.th. (ه)
+            - "passive: يُوجَدُ there is (are)"
       derived:
         - text: وُجُود
-          derivation: meaning-related
+          derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1231
               text:
                 - existence
         - text: مَوْجُود

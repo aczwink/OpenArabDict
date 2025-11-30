@@ -19,6 +19,8 @@
 import { OpenArabDictVerbForm, OpenArabDictWordType } from "openarabdict-domain";
 import { WordDefinition } from "./DataDefinitions";
 import { TreeTrace } from "./TreeTrace";
+import { GlobalInjector } from "acts-util-node";
+import { StatisticsCounterService, StatisticsCounter } from "./services/StatisticsCounterService";
 
 type InferableValue = boolean | number | string;
 
@@ -141,6 +143,8 @@ export class WordDefinitionValidator
     //Private methods
     private ReportRedundancy(variable: string, defaultValue: InferableValue)
     {
+        const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+        statsService.Increment(StatisticsCounter.RedundantAssignment);
         console.log("Redundant assignment of variable '" + variable + "'. Trace: " + this.TraceToString());
     }
 
@@ -157,13 +161,19 @@ export class WordDefinitionValidator
         switch(node.type)
         {
             case "root":
-                return ["ROOT: " + node.rootId];
+                return ["ROOT: " + node.rootId + ", file: " + node.fileName];
             case "verb":
-                return ["VERB: " + node.verbId];
+            {
+                const parentTrace = this.TraceNodeToString(node.parent);
+                parentTrace.push("VERB: " + node.verbId);
+                return parentTrace;
+            }
             case "word":
                 const parentTrace = this.TraceNodeToString(node.parent);
                 parentTrace.push(node.word.text);
                 return parentTrace;
+            case "word-collection":
+                return ["file: " + node.fileName];
         }
     }
 

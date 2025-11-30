@@ -18,19 +18,18 @@ root:
   radicals: ء-ت-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 3
           text:
-            - >-
-              1. to come (ه or إلى to; على over s.o.), arrive  (ه or إلى at)
-
-              2. أتى ب to bring, bring forward, produce, advance, accomplish or
-              achieve s.th.
+            - to come (ه or إلى to; على over s.o.), arrive (ه or إلى at)
+            - أتى ب to bring, bring forward, produce, advance, accomplish or achieve s.th.
       derived:
         - text: آتٍ
           derivation: meaning-related

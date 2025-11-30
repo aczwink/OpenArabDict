@@ -53,9 +53,10 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 830
               text:
-                - team
+                - team (sports)
         - text: فُرْقَة
           derivation: meaning-related
           type: noun

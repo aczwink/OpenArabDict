@@ -15,28 +15,18 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-ط-ف
+  radicals: ر-ع-ب
   words:
     - type: verb
-      form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: au
+      form: 4
       derived:
-        - text: لَطِيف
-          derivation: meaning-related
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              source-page: 1018
+              source-page: 400
               text:
-                - pretty, charming, lovely, graceful
-                - civil, courteous, polite
-          derived:
-            - text: لُطَفَاء
-              derivation: plural
-              type: adjective
-              gender: male
+                - frithening, terrifying, terrible, horrible, dreadful

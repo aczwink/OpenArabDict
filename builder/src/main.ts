@@ -25,6 +25,8 @@ import { WordDefinition } from "./DataDefinitions";
 import { CheckWords } from "./openarabicconjugation-tests-check";
 import { VerbalNounCounter } from "./VerbalNounCounter";
 import { JSONSchemaLoader } from "./JSONSchemaLoader";
+import { GlobalInjector } from "acts-util-node";
+import { StatisticsCounterService } from "./services/StatisticsCounterService";
 
 interface DialectDefinition
 {
@@ -59,8 +61,8 @@ interface Catalog
 {
     dialects: DialectDefinition[];
     relations: WordRelationshipDefinition[];
-    roots: RootDefinition[];
-    words: WordDefinition[];
+    roots: { data: RootDefinition; fileName: string; }[];
+    words: { data: WordDefinition[]; fileName: string }[];
 }
 
 function Validate(data: any, schemaFileTitle: string, schemaLoader: JSONSchemaLoader, dataFilePath: string)
@@ -74,7 +76,7 @@ function Validate(data: any, schemaFileTitle: string, schemaLoader: JSONSchemaLo
     */
 }
 
-async function CollectFiles(catalog: Catalog, dirPath: string)
+async function CollectFiles(catalog: Catalog, dirPath: string, schemaLoader: JSONSchemaLoader)
 {
     function ReadContent(content: string, ext: string)
     {
@@ -87,17 +89,13 @@ async function CollectFiles(catalog: Catalog, dirPath: string)
         }
     }
 
-    const schemaLoader = new JSONSchemaLoader;
-    await schemaLoader.Load("OpenArabDictRoot.json");
-    await schemaLoader.Load("words.json");
-
     const children = await fs.promises.readdir(dirPath);
     for (const child of children)
     {
         const childPath = path.join(dirPath, child);
         const result = await fs.promises.stat(childPath);
         if(result.isDirectory())
-            await CollectFiles(catalog, childPath);
+            await CollectFiles(catalog, childPath, schemaLoader);
         else
         {
             const content = await fs.promises.readFile(childPath, "utf-8");
@@ -109,12 +107,12 @@ async function CollectFiles(catalog: Catalog, dirPath: string)
             if(data.root !== undefined)
             {
                 Validate(data, "OpenArabDictRoot.json", schemaLoader, childPath);
-                catalog.roots.push(data.root);
+                catalog.roots.push({ data: data.root, fileName: childPath });
             }
             if(data.words !== undefined)
             {
                 Validate(data, "words.json", schemaLoader, childPath);
-                catalog.words.push(...data.words);
+                catalog.words.push({ data: data.words, fileName: childPath });
             }
         }
     }
@@ -147,15 +145,22 @@ async function BuildDatabase(dbSrcPath: string)
         roots: [],
         words: []
     };
-    await CollectFiles(catalog, dbSrcPath);
+    
+    const schemaLoader = new JSONSchemaLoader;
+    await schemaLoader.Load("OpenArabDictRoot.json");
+    await schemaLoader.Load("words.json");
+    
+    await CollectFiles(catalog, dbSrcPath, schemaLoader);
 
     const builder = new DBBuilder;
     const verbalNounCounter = new VerbalNounCounter;
 
     ProcessDialects(catalog.dialects, null, builder);
 
-    for (const root of catalog.roots)
+    for (const entry of catalog.roots)
     {
+        const root = entry.data;
+
         const rootId = builder.AddRoot(root.radicals, root.ya);
 
         for (const word of root.words)
@@ -163,13 +168,17 @@ async function BuildDatabase(dbSrcPath: string)
             ProcessWordDefinition(word, builder, verbalNounCounter, {
                 type: "root",
                 rootId,
+                fileName: entry.fileName
             });
         }
     }
 
-    for (const word of catalog.words)
+    for (const block of catalog.words)
     {
-        ProcessWordDefinition(word, builder, verbalNounCounter);
+        for (const word of block.data)
+        {
+            ProcessWordDefinition(word, builder, verbalNounCounter, { type: "word-collection", fileName: block.fileName });
+        }
     }
 
     for (const relation of catalog.relations)
@@ -184,6 +193,8 @@ async function BuildDatabase(dbSrcPath: string)
     const document = await builder.Store("./dist/en.json");
     await CheckWords(document);
     verbalNounCounter.Evaluate();
+
+    GlobalInjector.Resolve(StatisticsCounterService).Print();
 }
 
 const dbSrcPath = process.argv[2];

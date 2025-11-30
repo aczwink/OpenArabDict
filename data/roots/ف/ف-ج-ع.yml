@@ -15,28 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-ط-ف
+  radicals: ف-ج-ع
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: au
-      derived:
-        - text: لَطِيف
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1018
-              text:
-                - pretty, charming, lovely, graceful
-                - civil, courteous, polite
-          derived:
-            - text: لُطَفَاء
-              derivation: plural
-              type: adjective
-              gender: male
+            parameters: aa
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 817
+          text:
+            - to inflict suffering and grief (ه upon s.o.), afflict, distress (ه s.o.)

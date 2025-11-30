@@ -18,16 +18,28 @@ root:
   radicals: ن-ق-ش
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=1175
+          source-page: 1162
           text:
             - to engrave (ه s.th., على on, in)
+      derived:
+        - derivation: verbal-noun
+          text: نَقْش
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1162
+              text:
+                - engraving
 
     - type: verb
       dialect: msa

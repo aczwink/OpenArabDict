@@ -16,11 +16,51 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { VerbWordDefinition } from "./DataDefinitions";
+import { GlobalInjector } from "acts-util-node";
+import { TranslationDefinition, VerbWordDefinition } from "./DataDefinitions";
+import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
+import { UsageType } from "openarabdict-domain";
+
+export interface _LegacyParameterizedStem1Data
+{
+    stem: 1;
+    parameters: string;
+}
 
 export function _LegacyExtractDialect(def: VerbWordDefinition)
 {
     if("dialect" in def)
+    {
+        const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+        statsService.Increment(StatisticsCounter.LegacyDialect);
         return def.dialect as string;
+    }
     return "msa";
+}
+
+export function _LegacyBuildUsage(x: TranslationDefinition)
+{
+    const ctx = x.contextual?.map(y => ({ text: y.text, translation: y.translation, type: UsageType.MeaningInContext }));
+    const ex = x.examples?.map(y => ({ text: y.text, translation: y.translation, type: UsageType.Example }));
+
+    const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+
+    if(ctx !== undefined)
+    {
+        statsService.Increment(StatisticsCounter.LegacyContextual);
+        if(ex !== undefined)
+        {
+            statsService.Increment(StatisticsCounter.LegagyExamples);
+            return ctx.concat(ex);
+        }
+
+        return ctx;
+    }
+    else if(ex !== undefined)
+    {
+        statsService.Increment(StatisticsCounter.LegagyExamples);
+        return ex;
+    }
+
+    return undefined;
 }

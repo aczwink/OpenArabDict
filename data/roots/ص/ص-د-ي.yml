@@ -38,3 +38,12 @@ root:
           derived:
             - text: أَصْدَاء
               derivation: plural
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 595
+          text:
+            - to oppose, resist, counteract, antagonize (ل s.o.), throw obstracles in s.o.'s (ل) way, be in s.o.'s (ل) way
