@@ -18,7 +18,6 @@ root:
   radicals: ي-ق-ظ
   words:
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa
@@ -26,6 +25,13 @@ root:
           text:
             - to wake up, awaken, be awakened, be roused from sleep (على by)
       derived:
-        - derivation: verbal-noun
-          type: noun
+        - derivation: active-participle
+          type: adjective
           gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 1298
+              text:
+                - awake

@@ -18,17 +18,18 @@ root:
   radicals: ج-ن-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 164
           text:
-            - |-
-              passive:
-              to be or become possessed, insane, mad, crazy
+            - "pass.: to be or become possessed, insane, mad, crazy"
+            
     - type: verb
       dialect: msa
       form: 2

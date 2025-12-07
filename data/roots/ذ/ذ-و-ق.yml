@@ -56,3 +56,12 @@ root:
                   text:
                     - literally "you're all good taste" meaning something like
                       "you are a very kind person"
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 364
+          text:
+            - to taste (ه s.th.) slowly, repeatedly, thoroughly

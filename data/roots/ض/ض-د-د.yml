@@ -18,15 +18,35 @@ root:
   radicals: ض-د-د
   words:
     - type: verb
-      dialect: msa
       form: 3
-      translations: []
       derived:
-        - text: ضِدَّ
-          derivation: meaning-related
-          type: preposition
+        - derivation: active-participle
+          type: adjective
+          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 628
               text:
-                - against
+                - opposed, opposite, contrary, counter-, contra-, anti- (in compounds)
+        - text: ضِدّ
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 628
+              text:
+                - an opposite, a contrary, contrast
+          derived:
+            - derivation: extension
+              text: ضِدَّ
+              type: preposition
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 628
+                  text:
+                    - against

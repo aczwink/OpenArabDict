@@ -22,7 +22,8 @@ root:
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 760
           text:
             - element (chem., pol.)
             - component, constituent, ingredient
@@ -40,6 +41,10 @@ root:
                   2. racistic
         - text: عَنَاصِر
           derivation: plural
-          type: noun
-          gender: male
-          translations: []
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 760
+              text:
+                - nationalities

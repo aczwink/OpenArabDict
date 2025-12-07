@@ -84,6 +84,7 @@ root:
                   type: noun
                   gender: female
                   translations: []
+
     - type: verb
       dialect: msa
       form: 2
@@ -92,3 +93,21 @@ root:
           source: hw4-free-text
           text:
             - to go away, leave, depart, absent o.s.
+
+    - gender: male
+      text: مَغْرِب
+      type: noun
+      derived:
+        - derivation: nisba
+          text: مَغْرِبِيّ
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 783
+              text:
+                - a North African, a Maghribi
+          derived:
+            - derivation: plural
+              text: مَغَارِبَة

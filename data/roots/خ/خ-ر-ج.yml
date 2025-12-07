@@ -18,10 +18,11 @@ root:
   radicals: خ-ر-ج
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -30,14 +31,19 @@ root:
               1. to come out (من of), emerge (من from)
               2. to go away, depart, leave, retire
       derived:
-        - text: خَارِج
-          derivation: active-participle
-          type: preposition
+        - text: خُرُوج
+          derivation: verbal-noun
+          type: noun
+          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 270
               text:
-                - outside, out of
+                - exit
+        - derivation: active-participle
+          type: adjective
+          gender: male
           derived:
             - text: خَارِجِيّ
               derivation: nisba
@@ -49,15 +55,16 @@ root:
                   url: http://ejtaal.net/aa/#hw4=284
                   text:
                     - outer, out- (in compounds), outside, outward, exterior, external
-        - text: خُرُوج
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - exit
+            - derivation: extension
+              text: خَارِجَ
+              type: preposition
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 271
+                  text:
+                    - outside, out of
+        
     - type: verb
       dialect: msa
       form: 4

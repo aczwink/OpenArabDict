@@ -6,7 +6,7 @@
   "scripts": {
     "build-db": "node dist/main.js ../data",
     "compile": "tsc",
-    "dev": "nodemon --exec \"npm run compile && nodemon --exec 'npm run build-db' --watch '../data'\""
+    "dev": "nodemon --exec \"npm run compile && nodemon --exec 'npm run build-db -- --skip-validation' --watch '../data'\""
   },
   "keywords": [],
   "author": "Amir Czwink",

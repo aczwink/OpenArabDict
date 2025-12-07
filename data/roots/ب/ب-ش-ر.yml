@@ -25,6 +25,14 @@ root:
     - text: بَشَر
       type: noun
       gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 74
+          text:
+            - man, human being
+            - men, mankind
       derived:
         - text: بَشَرِيّ
           derivation: nisba

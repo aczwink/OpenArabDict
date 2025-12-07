@@ -19,6 +19,7 @@ import { Injectable } from "acts-util-node";
 
 export enum StatisticsCounter
 {
+    InvalidSourceFile,
     LegacyContextual,
     LegacyDialect,
     LegagyExamples,
@@ -58,6 +59,8 @@ export class StatisticsCounterService
     {
         switch(counter)
         {
+            case StatisticsCounter.InvalidSourceFile:
+                return "invalid source file";
             case StatisticsCounter.LegacyContextual:
                 return "contextual in translations";
             case StatisticsCounter.LegacyDialect:

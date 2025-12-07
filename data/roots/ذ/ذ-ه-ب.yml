@@ -18,12 +18,22 @@ root:
   radicals: ذ-ه-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
       derived:
+        - derivation: verbal-noun
+          text: ذَهَاب
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 362
+              text:
+                - going
         - text: مَذْهَب
           derivation: meaning-related
           type: noun
@@ -33,8 +43,8 @@ root:
               source: hw4-free-text
               text:
                 - departure
+
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa

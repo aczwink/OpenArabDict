@@ -33,3 +33,7 @@ root:
               url: http://ejtaal.net/aa/#hw4=421
               text:
                 - amiability, graciousness, friendliness
+        - text: رَقِيق
+          derivation: meaning-related
+          type: adjective
+          gender: male

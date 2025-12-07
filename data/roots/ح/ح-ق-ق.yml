@@ -107,13 +107,13 @@ root:
           source: hw4-free-text
           text:
             - to be realized, be effected, come into effect
+
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 224
           text:
-            - |-
-              to deserve,
-              to require
+            - to deserve, merit (ه s.th.), be worthy (ه of)
+            - to require, demand, necessitate, make requisite (ه s.th.)

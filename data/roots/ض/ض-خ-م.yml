@@ -18,11 +18,11 @@ root:
   radicals: ض-خ-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: uu
       derived:
         - text: ضَخْم
           derivation: meaning-related
@@ -30,6 +30,7 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 627
               text:
                 - big, large, sizable, great (also of a name, of prestige)

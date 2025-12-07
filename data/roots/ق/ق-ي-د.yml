@@ -18,7 +18,15 @@ root:
   radicals: ق-ي-د
   words:
     - type: verb
-      dialect: msa
+      form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 940
+          text:
+            - "to bind, tie, fetter, shackle (ه ب s.o. with; also fig.: to bind or tie s.o. to)"
+
+    - type: verb
       form: 5
       translations: []
       derived:

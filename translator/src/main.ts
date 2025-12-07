@@ -64,17 +64,9 @@ async function FetchTranslation(translations: OpenArabDictTranslationEntry[], ta
 
     for (const entry of translations)
     {
-        if(entry.contextual !== undefined)
+        if(entry.usage !== undefined)
         {
-            for (const subEntry of entry.contextual)
-            {
-                texts.push(subEntry.translation);
-            }
-        }
-
-        if(entry.examples !== undefined)
-        {
-            for (const subEntry of entry.examples)
+            for (const subEntry of entry.usage)
             {
                 texts.push(subEntry.translation);
             }
@@ -99,32 +91,19 @@ async function FetchTranslation(translations: OpenArabDictTranslationEntry[], ta
             text: [],
         };
 
-        if(entry.contextual !== undefined)
+        if(entry.usage !== undefined)
         {
             const ctx = [];
-            for (const subEntry of entry.contextual)
+            for (const subEntry of entry.usage)
             {
                 ctx.push({
                     text: subEntry.text,
-                    translation: resultTexts[0]
+                    translation: resultTexts[0],
+                    type: subEntry.type
                 });
                 resultTexts.Remove(0);
             }
-            resultingEntry.contextual = ctx;
-        }
-
-        if(entry.examples !== undefined)
-        {
-            const ctx = [];
-            for (const subEntry of entry.examples)
-            {
-                ctx.push({
-                    text: subEntry.text,
-                    translation: resultTexts[0]
-                });
-                resultTexts.Remove(0);
-            }
-            resultingEntry.examples = ctx;
+            resultingEntry.usage = ctx;
         }
 
         for (const _ of entry.text)

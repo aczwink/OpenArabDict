@@ -27,11 +27,24 @@ root:
           source: hw4-free-text
           text:
             - to grow (esp., of plants, also, e.g., of teeth)
+
     - text: نَبَات
       type: noun
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1101
           text:
             - (coll.) plants, vegetation
+      derived:
+        - derivation: nisba
+          text: نَبَاتِيّ
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1101
+              text:
+                - vegetarian

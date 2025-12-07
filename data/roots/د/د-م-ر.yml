@@ -18,11 +18,23 @@ root:
   radicals: د-م-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=350
+          source-page: 337
           text:
             - to annihilate, destroy, ruin, demolish, wreck (ه s.th.)
+      derived:
+        - derivation: verbal-noun
+          text: تَدْمِير
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 337
+              text:
+                - annihilation, destruction, demolition

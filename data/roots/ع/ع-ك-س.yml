@@ -33,3 +33,16 @@ root:
               source: hw4-free-text
               text:
                 - opposite, contrast, contrary, reverse
+
+    - form: 7
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 739
+              text:
+                - reflection

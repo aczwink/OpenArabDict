@@ -18,12 +18,11 @@ root:
   radicals: غ-د-ر
   words:
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - complete: true
           dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=793
+          source-page: 780
           text:
             - to leave (ه ,ه s.o., s.th.; ه إلى a place for), depart (ه إلى from a place to)

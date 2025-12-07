@@ -15,29 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ه-د-ف
+  radicals: ر-م-ل
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: au
+    - gender: male
+      text: رَمْل
+      type: noun
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 418
           text:
-            - ""
+            - sand
       derived:
-        - text: هَدَف
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1198
-              text:
-                - aim, end, object, objective, purpose, design, intention
-          derived:
-            - derivation: plural
-              text: أَهْدَاف
+        - derivation: plural
+          text: رِمَال

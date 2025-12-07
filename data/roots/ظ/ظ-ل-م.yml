@@ -18,10 +18,11 @@ root:
   radicals: ظ-ل-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -41,6 +42,20 @@ root:
                   2. iniquity
                   3. injustice, inequity, unfairness
                   4. oppression, repression, suppression, tyranny
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          derived:
+            - derivation: elative-degree
+              text: أَظْلَم
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 681
+                  text:
+                    - a viler, more infamous, more heinous villain
         - text: مَظْلُوم
           derivation: passive-participle
           type: adjective
@@ -50,6 +65,7 @@ root:
               source: hw4-free-text
               text:
                 - wronged, ill-treated, unjustly treated, tyrannized
+
     - type: verb
       dialect: msa
       form: 4

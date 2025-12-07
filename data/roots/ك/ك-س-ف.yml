@@ -15,29 +15,23 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ه-د-ف
+  radicals: ك-س-ف
   words:
-    - type: verb
-      dialect: msa
-      form:
+    - form:
         stem: 1
-        parameters: au
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - ""
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
       derived:
-        - text: هَدَف
-          derivation: meaning-related
-          type: noun
+        - derivation: verbal-noun
+          text: كُسُوف
           gender: male
+          type: noun
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              source-page: 1198
+              source-page: 969
               text:
-                - aim, end, object, objective, purpose, design, intention
-          derived:
-            - derivation: plural
-              text: أَهْدَاف
+                - occultation, eclipse, solar eclipse

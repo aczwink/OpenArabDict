@@ -35,3 +35,17 @@ root:
                 - |-
                   1. hiding-place
                   2. hide-out, refuge, haunt, retreat
+
+    - form: 8
+      type: verb
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 261
+              text:
+                - hidden, concealed

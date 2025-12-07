@@ -36,13 +36,15 @@ root:
                   proportion to
 
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 873
           text:
             - to have the possibility to do (على s.th.), be in a position to do s.th. (ان or على), be able to do s.th. (ان or على), be capable (ان or على of)
       derived:
@@ -102,13 +104,17 @@ root:
                 - fate, destiny, lot
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=886
+          source-page: 873
           text:
             - to appoint, assign, determine, ordain, decree (ه s.th., على for s.o.; of God)
             - to appraise (ه s.th.; with respect to its worth and amount), assess, estimate, calculate, tax, evaluate, value, rate (ه ب s.th. at)
             - to anticipate, foresee (ه s.th.)
+      derived:
+        - derivation: verbal-noun
+          text: تَقْدِير
+          type: noun
+          gender: male

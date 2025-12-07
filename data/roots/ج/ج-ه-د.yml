@@ -41,9 +41,18 @@ root:
           derived:
             - derivation: plural
               text: جُهُود
+        - text: جُهْد
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 169
+              text:
+                - strain, exertion
               
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa

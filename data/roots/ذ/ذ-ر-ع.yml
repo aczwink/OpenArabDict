@@ -18,6 +18,17 @@ root:
   radicals: ذ-ر-ع
   words:
     - gender: female
+      text: ذِرَاع
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 356
+          text:
+            - arm
+            - forearm
+
+    - gender: female
       text: ذَرِيعَة
       type: noun
       translations:

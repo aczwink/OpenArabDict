@@ -26,7 +26,7 @@ import { CheckWords } from "./openarabicconjugation-tests-check";
 import { VerbalNounCounter } from "./VerbalNounCounter";
 import { JSONSchemaLoader } from "./JSONSchemaLoader";
 import { GlobalInjector } from "acts-util-node";
-import { StatisticsCounterService } from "./services/StatisticsCounterService";
+import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
 
 interface DialectDefinition
 {
@@ -67,16 +67,15 @@ interface Catalog
 
 function Validate(data: any, schemaFileTitle: string, schemaLoader: JSONSchemaLoader, dataFilePath: string)
 {
-    //TODO: add cli flag on whether to do schema validation or not
-    /*const result = schemaLoader.Validate(data, schemaFileTitle);
+    const result = schemaLoader.Validate(data, schemaFileTitle);
     if(!result)
     {
+        GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.InvalidSourceFile);
         console.log(dataFilePath, "is not valid!");
     }
-    */
 }
 
-async function CollectFiles(catalog: Catalog, dirPath: string, schemaLoader: JSONSchemaLoader)
+async function CollectFiles(catalog: Catalog, dirPath: string, schemaLoader: JSONSchemaLoader, validateSourceFiles: boolean)
 {
     function ReadContent(content: string, ext: string)
     {
@@ -95,7 +94,7 @@ async function CollectFiles(catalog: Catalog, dirPath: string, schemaLoader: JSO
         const childPath = path.join(dirPath, child);
         const result = await fs.promises.stat(childPath);
         if(result.isDirectory())
-            await CollectFiles(catalog, childPath, schemaLoader);
+            await CollectFiles(catalog, childPath, schemaLoader, validateSourceFiles);
         else
         {
             const content = await fs.promises.readFile(childPath, "utf-8");
@@ -106,12 +105,14 @@ async function CollectFiles(catalog: Catalog, dirPath: string, schemaLoader: JSO
                 catalog.relations.push(...data.relations);
             if(data.root !== undefined)
             {
-                Validate(data, "OpenArabDictRoot.json", schemaLoader, childPath);
+                if(validateSourceFiles)
+                    Validate(data, "OpenArabDictRoot.json", schemaLoader, childPath);
                 catalog.roots.push({ data: data.root, fileName: childPath });
             }
             if(data.words !== undefined)
             {
-                Validate(data, "words.json", schemaLoader, childPath);
+                if(validateSourceFiles)
+                    Validate(data, "words.json", schemaLoader, childPath);
                 catalog.words.push({ data: data.words, fileName: childPath });
             }
         }
@@ -137,7 +138,7 @@ function ResolveWordReference(ref: WordReference, builder: DBBuilder)
     return wordId;
 }
 
-async function BuildDatabase(dbSrcPath: string)
+async function BuildDatabase(dbSrcPath: string, validateSourceFiles: boolean)
 {
     const catalog: Catalog = {
         dialects: [],
@@ -150,7 +151,7 @@ async function BuildDatabase(dbSrcPath: string)
     await schemaLoader.Load("OpenArabDictRoot.json");
     await schemaLoader.Load("words.json");
     
-    await CollectFiles(catalog, dbSrcPath, schemaLoader);
+    await CollectFiles(catalog, dbSrcPath, schemaLoader, validateSourceFiles);
 
     const builder = new DBBuilder;
     const verbalNounCounter = new VerbalNounCounter;
@@ -198,4 +199,5 @@ async function BuildDatabase(dbSrcPath: string)
 }
 
 const dbSrcPath = process.argv[2];
-BuildDatabase(dbSrcPath);
+const validateSourceFiles = !(process.argv[3] === "--skip-validation");
+BuildDatabase(dbSrcPath, validateSourceFiles);

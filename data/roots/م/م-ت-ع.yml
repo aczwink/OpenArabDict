@@ -32,13 +32,15 @@ root:
                 - pleasant, delicious, enjoyable, delightful, gratifying
                 
     - type: verb
-      dialect: msa
       form: 10
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1045
           text:
             - to enjoy, savor, relish (ب s.th.)
+
     - text: مُتْعَة
       type: noun
       gender: female

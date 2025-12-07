@@ -15,29 +15,24 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ه-د-ف
+  radicals: خ-ر-ط
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: au
+    - text: خَرِيطَة
+      type: noun
+      gender: female
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 273
           text:
-            - ""
-      derived:
-        - text: هَدَف
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1198
-              text:
-                - aim, end, object, objective, purpose, design, intention
-          derived:
-            - derivation: plural
-              text: أَهْدَاف
+            - map, chart
+
+    - text: خَارِطَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 273
+          text:
+            - map, chart

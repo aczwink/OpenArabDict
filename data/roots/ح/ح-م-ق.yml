@@ -18,11 +18,11 @@ root:
   radicals: ح-م-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ia
       derived:
         - text: أَحْمَق
           derivation: meaning-related
@@ -30,6 +30,7 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 240
               text:
                 - dumb, stupid, silly, foolish, fatuous

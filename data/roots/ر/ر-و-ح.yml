@@ -78,24 +78,32 @@ root:
               source: hw4-free-text
               text:
                 - comfortable
+
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 423
           text:
             - to rest, relax, find recreation
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 36
+          text:
+            - to rest
       derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 8
+        - derivation: verbal-noun
+          type: noun
+          gender: male
           translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 36
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 424
               text:
-                - to rest
+                - satisfaction, gratification
+                - pleasure
+                - joy, delight
 
     - text: رِيح
       type: noun
@@ -112,17 +120,16 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=436
+          source-page: 423
           text:
             - breath of life, soul
-          contextual:
+          usage:
             - text: الروح المعنوية
               translation: the spirit of self-assertion, moral strength; morale
+              type: meaning-in-context
       derived:
         - text: أَرْوَاح
           derivation: plural
-          type: noun
-          gender: male
         - text: رُوحِيّ
           derivation: nisba
           type: adjective
@@ -130,7 +137,7 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=436
+              source-page: 423
               text:
                 - spirituous
                 - spiritual

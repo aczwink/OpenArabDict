@@ -15,6 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: ثَعْلَب
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 124
+        text:
+          - fox
+
   - text: دُلْفِين
     type: noun
     gender: male

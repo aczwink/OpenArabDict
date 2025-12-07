@@ -18,16 +18,23 @@ root:
   radicals: ء-م-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 33
           text:
-            - to order, command, bid, instruct (ه s.o. ب to do s.th.),
-              commission, charge, entrust (ه s.o. ب with s.th. or to do s.th.)
+            - to order, command, bid, instruct (ه s.o. ب to do s.th.), commission, charge, entrust (ه s.o. ب with s.th. or to do s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 5
+          text:
+            - to order
       derived:
         - text: أَمْر
           derivation: verbal-noun
@@ -44,17 +51,6 @@ root:
               derivation: plural
               type: noun
               gender: male
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: au
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 5
-              text:
-                - to order
 
     - type: verb
       dialect: msa
@@ -98,6 +94,3 @@ root:
       derived:
         - text: أُمُور
           derivation: plural
-          type: noun
-          gender: male
-          translations: []

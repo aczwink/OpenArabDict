@@ -47,6 +47,17 @@ words:
         text:
           - trousers, pants
 
+  - text: فُسَيْفِسَاء
+    type: noun
+    gender: female
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        source-page: 835
+        text:
+          - mosaic, mosaic work
+
   - text: فُنْدُق
     type: noun
     gender: male

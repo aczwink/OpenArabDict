@@ -82,7 +82,6 @@ root:
             - to reach, catch (ه s.o.), get hold (ه, ه of s.o., of s.th.)
 
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
@@ -91,6 +90,29 @@ root:
           text:
             - to make long or longer, lengthen, elongate, stretch out, extend, prolong, protract, draw out (ه or من s.th.)
             - to take too long, find no end
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 674
+              text:
+                - lengthening, elongation, stretching, extension, prolongation, protraction
+
+    - form: 10
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 673
+          text:
+            - to be or become long
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: female
 
     - text: طَوَالَ
       type: preposition

@@ -52,10 +52,19 @@ root:
               text:
                 - available, on hand, existing, existent
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to create, make (ه s.th.)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1231
+              text:
+                - creation, procreation, production, origination
