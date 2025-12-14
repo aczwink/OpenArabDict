@@ -36,7 +36,8 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 229
               text:
                 - wise, judicious
         - derivation: active-participle
@@ -50,9 +51,6 @@ root:
           derived:
             - text: حُكَّام
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
         - text: حُكُومَة
           derivation: meaning-related
           type: noun
@@ -63,6 +61,19 @@ root:
               url: http://ejtaal.net/aa/#hw4=242
               text:
                 - government
+
+    - form: 4
+      type: verb
+      derived:
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 230
+              text:
+                - perfect, masterly, masterful
 
     - type: verb
       dialect: msa

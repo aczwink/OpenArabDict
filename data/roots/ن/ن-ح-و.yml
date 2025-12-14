@@ -71,8 +71,8 @@ root:
           type: preposition
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1113
               text:
-                - |-
-                  1. in the direction of, toward, to
-                  2. approximately, roughly, about, around, circa
+                - in the direction of, toward, to
+                - approximately, roughly, about, around, circa

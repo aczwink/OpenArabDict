@@ -15,27 +15,13 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-ب-ي
+  radicals: خ-ر-ق
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ia
-      translations: []
-      derived:
-        - text: غَبِيّ
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - stupid
-          derived:
-            - text: أَغْبِيَاء
-              derivation: plural
-              type: adjective
-              gender: male
-              translations: []
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 274
+          text:
+            - to pierce (ه s.th.)

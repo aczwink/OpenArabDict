@@ -108,6 +108,20 @@ root:
           text:
             - to be realized, be effected, come into effect
 
+    - form: 4
+      type: verb
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 226
+              text:
+                - telling the truth, in the right, being right
+
     - type: verb
       form: 10
       translations:

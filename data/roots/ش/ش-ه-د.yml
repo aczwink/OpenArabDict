@@ -48,14 +48,14 @@ root:
               gender: male
               translations: []
     - type: verb
-      dialect: msa
       form: 3
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 571
           text:
-            - to see (with one's own eyes), view, inspect, watch, observe,
-              witness (ه s.th.)
+            - to see (with one's own eyes), view, inspect, watch, observe, witness (ه s.th.)
       derived:
         - text: مُشَاهَدَة
           derivation: verbal-noun
@@ -63,6 +63,7 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 572
               text:
                 - seeing, viewing, witnessing, inspection

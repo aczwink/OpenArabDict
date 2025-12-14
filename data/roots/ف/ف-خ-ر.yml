@@ -34,3 +34,14 @@ root:
               source-page: 819
               text:
                 - glory, pride
+
+    - form: 8
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 819
+          text:
+            - to glory (ب in), boast (ب of s.th.), brag (ب of), vaunt (ب s.th.)
+            - to pride o.s. (ب upon), be proud (ب of)

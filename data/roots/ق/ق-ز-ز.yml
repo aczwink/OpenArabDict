@@ -15,28 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ي-م
+  radicals: ق-ز-ز
   words:
-    - type: verb
-      dialect: msa
-      form: 2
-      derived:
-        - text: مُخَيَّم
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - camp
-
-    - text: خَيْمَة
-      type: noun
-      gender: female
+    - form: 2
+      type: verb
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          source-page: 310
+          source-page: 891
           text:
-            - tent
+            - to vitrify (ه s.th.)
+            - to glaze (ه s.th.)

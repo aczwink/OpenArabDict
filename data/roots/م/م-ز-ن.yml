@@ -15,28 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ي-م
+  radicals: م-ز-ن
   words:
-    - type: verb
-      dialect: msa
-      form: 2
-      derived:
-        - text: مُخَيَّم
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - camp
-
-    - text: خَيْمَة
+    - gender: male
+      text: مُزْن
       type: noun
-      gender: female
       translations:
         - dialect: msa
           source: hw4
-          source-page: 310
+          source-page: 1063
           text:
-            - tent
+            - rain clouds

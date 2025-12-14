@@ -17,6 +17,24 @@
 root:
   radicals: ع-ص-ب
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: meaning-related
+          gender: female
+          text: عِصَابَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 720
+              text:
+                - group, troop, band, gang
+
     - text: عَصَب
       type: noun
       gender: male

@@ -59,20 +59,20 @@ root:
           source: hw4-free-text
           text:
             - to make peace
+
     - type: verb
-      dialect: msa
       form: 4
-      translations: []
       derived:
-        - text: إِصْلَاح
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 610
               text:
                 - restoration, restitution, redressing, reparation
+
     - type: verb
       dialect: msa
       form: 8

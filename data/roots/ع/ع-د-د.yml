@@ -121,12 +121,11 @@ root:
                 - female active participle
 
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=708
+          source-page: 695
           text:
             - to get ready, ready o.s.
       derived:
@@ -139,6 +138,15 @@ root:
               url: https://ejtaal.net/aa/#hw4=709
               text:
                 - readiness, willingness, preparedness
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 696
+              text:
+                - prepared, ready (ل for)
 
     - text: عَدَد
       type: noun

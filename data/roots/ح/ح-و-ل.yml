@@ -173,10 +173,15 @@ root:
               source: hw4-free-text
               text:
                 - deception, fraud
+
     - type: verb
-      dialect: msa
       form: 10
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 252
+          text:
+            - to be impossible (على for s.o.)
       derived:
         - derivation: active-participle
           type: adjective
@@ -186,12 +191,7 @@ root:
               source: hw4-free-text
               text:
                 - impossible, absurd, preposterous
-          derived:
-            - text: مُسْتَحِيلَة⁩
-              derivation: feminine
-              type: adjective
-              gender: female
-              translations: []
+
     - text: حَوْلَ
       type: preposition
       translations:

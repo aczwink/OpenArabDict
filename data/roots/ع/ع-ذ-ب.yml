@@ -15,28 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ي-م
+  radicals: ع-ذ-ب
   words:
-    - type: verb
-      dialect: msa
-      form: 2
-      derived:
-        - text: مُخَيَّم
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - camp
-
-    - text: خَيْمَة
-      type: noun
-      gender: female
+    - gender: male
+      text: عَذْب
+      type: adjective
       translations:
         - dialect: msa
           source: hw4
-          source-page: 310
+          source-page: 701
           text:
-            - tent
+            - sweet

@@ -28,7 +28,12 @@ root:
           derivation: meaning-related
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 367
+              text:
+                - head (also as a numerative of cattle)
           derived:
             - text: رَأْس مَال
               derivation: extension

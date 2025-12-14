@@ -18,27 +18,26 @@ root:
   radicals: س-ي-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ii
       derived:
-        - text: سَائِح
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 521
               text:
-                - pl. سُيَّاح tourist
+                - tourist
           derived:
             - text: سَائِحُون
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
+            - text: سُيَّاح
+              derivation: plural
         - text: سِيَاحَة
           derivation: verbal-noun
           type: noun

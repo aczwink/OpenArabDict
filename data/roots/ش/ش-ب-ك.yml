@@ -27,6 +27,17 @@ root:
           source: hw4-free-text
           text:
             - to entwine، entangle, join (ب or ه في s.th. with s.th. else)
+
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 529
+          text:
+            - to be or become entangled, snarled
+            - to get entangled, involved, ensnared, embroiled, implicated, mixed up (في in)
+
     - text: شَبَكَة
       type: noun
       gender: female
@@ -38,6 +49,3 @@ root:
       derived:
         - text: شَبَكَات
           derivation: plural
-          type: noun
-          gender: female
-          translations: []

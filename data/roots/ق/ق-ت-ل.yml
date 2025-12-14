@@ -75,6 +75,18 @@ root:
               text:
                 - fight, struggle, contention (against)
                 - combat, strife, battle
+        - text: مُقَاتَلَة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 871
+              text:
+                - fight, struggle, contention (against)
+                - combat, strife
 
     - type: verb
       dialect: msa

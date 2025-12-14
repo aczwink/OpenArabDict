@@ -132,6 +132,8 @@ export enum OpenArabDictNonVerbDerivationType
     Singulative = 6,
     //Child is adverbial accusative of parent
     AdverbialAccusative = 7,
+    //Relation from x to y means: x is instance noun of verbal noun y
+    InstanceNoun = 8,
 }
 
 export interface OpenArabDictOtherWordParent

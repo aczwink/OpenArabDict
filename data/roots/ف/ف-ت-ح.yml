@@ -59,8 +59,13 @@ root:
             - to open
 
     - type: verb
-      dialect: msa
       form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 811
+          text:
+            - to open, open up, unfold (intr.)
       derived:
         - derivation: verbal-noun
           type: noun
@@ -69,7 +74,7 @@ root:
             - dialect: msa
               complete: true
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=825
+              source-page: 812
               text:
                 - openness, receptivity (spiritual, mental)
 

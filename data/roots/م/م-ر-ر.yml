@@ -64,8 +64,18 @@ root:
               source: hw4-free-text
               text:
                 - progression, process, course, lapse (of time)
+        - text: مَمَرّ
+          derivation: noun-of-place
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1057
+              text:
+                - narrow connecting path, connecting passage
+
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa

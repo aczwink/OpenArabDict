@@ -65,9 +65,13 @@ root:
                   1. partnership, copartnership, participation (في in)
                   2. cooperation, collaboration
     - type: verb
-      dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 547
+          text:
+            - to participate (مع في with s.o. in), share (مع في with s.o., s.th.), collaborate, take part (في in), contribute (في to)
       derived:
         - text: مُشْتَرَك
           derivation: passive-participle

@@ -32,6 +32,16 @@ root:
 
               2. to be precious
       derived:
+        - text: كَرْم
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 962
+              text:
+                - vine, grapes, grapevines
         - text: كَرَم
           derivation: verbal-noun
           type: noun

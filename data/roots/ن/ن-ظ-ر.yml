@@ -110,11 +110,10 @@ root:
                 - quarrel, argument, altercation, debate, dispute, discussion,
                   controversy
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1144
           text:
-            - to wait (ه for s.o.), expect (ه, ه s.o., s.th.), await, anticipate
-              (ه s.th.)
+            - to wait (ه for s.o.), expect (ه ,ه s.o., s.th.), await, anticipate (ه s.th.)

@@ -112,6 +112,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 return OpenArabDictNonVerbDerivationType.Extension;
             case "feminine":
                 return OpenArabDictNonVerbDerivationType.Feminine;
+            case "instance-noun":
+                return OpenArabDictNonVerbDerivationType.InstanceNoun;
             case "nisba":
                 return OpenArabDictNonVerbDerivationType.Nisba;
             case "plural":

@@ -15,37 +15,21 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-ب-و
-  ya: true
+  radicals: ر-ش-ف
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
+            parameters: ai
+          - dialect: msa
+            parameters: au
+          - dialect: msa
             parameters: ia
-      derived:
-        - text: غَبِيّ
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 779
-              text:
-                - unwise, unjudicious, ignorant, foolish, stupid
-          derived:
-            - text: أَغْبِيَاء
-              derivation: plural
-        - derivation: meaning-related
-          type: noun
-          gender: male
-          text: غَبَاء
-          translations:
-            - complete: true
-              dialect: msa
-              source: hw4
-              source-page: 779
-              text:
-                - ignorance, foolishness, stupidity
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 396
+          text:
+            - to drink (ه s.th.)

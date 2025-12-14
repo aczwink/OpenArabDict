@@ -35,11 +35,26 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=853
-              contextual:
+              source-page: 840
+              text: []
+              usage:
                 - text: من فضلك
                   translation: please! if you please
-              text: []
+                  type: meaning-in-context
+          derived:
+            - derivation: instance-noun
+              text: فَضْلَة
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 841
+                  text:
+                    - remnant, remainder, residue, leftover, rest, surplus, overplus
+              derived:
+                - derivation: plural
+                  text: فَضَلَات
         - text: فَضِيل
           derivation: meaning-related
           type: adjective

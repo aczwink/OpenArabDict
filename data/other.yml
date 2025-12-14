@@ -525,7 +525,8 @@ words:
     gender: male
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        source-page: 852
         text:
           - mouth
   - text: إِذْ
@@ -929,14 +930,7 @@ words:
         source-page: 819
         text:
           - trap, snare
-  - text: ثُعْبَان
-    type: noun
-    gender: male
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - snake
+
   - text: صُنْدُوق
     type: noun
     gender: male

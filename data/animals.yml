@@ -15,6 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: ثُعْبَان
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 124
+        text:
+          - snake
+
   - text: ثَعْلَب
     type: noun
     gender: male
@@ -31,6 +41,6 @@ words:
     translations:
       - dialect: msa
         source: hw4
-        url: http://ejtaal.net/aa/#hw4=348
+        source-page: 335
         text:
           - dolphin

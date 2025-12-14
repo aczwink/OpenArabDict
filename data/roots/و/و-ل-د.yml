@@ -18,10 +18,11 @@ root:
   radicals: و-ل-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -34,9 +35,18 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=1299
+              source-page: 1286
               text:
                 - father, parent
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1286
+              text:
+                - produced, born, come into the world
         - text: وَلَد
           derivation: meaning-related
           type: noun

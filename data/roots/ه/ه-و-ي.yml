@@ -18,15 +18,17 @@ root:
   radicals: ه-و-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1219
           text:
-            - to love
+            - to love (ه ,ه s.o., s.th.)
       derived:
         - text: هَوًى
           derivation: verbal-noun
@@ -34,25 +36,23 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1219
               text:
-                - >-
-                  love
-
-
-                  على هواه at his convenience, according to his preference, just
-                  as he likes
+                - love
+              usage:
+                - text: على هواه
+                  translation: at his convenience, according to his preference, just as he likes
+                  type: example
           derived:
             - text: هَوَايَا
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
     - text: هَوَاء
       type: noun
       gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1219
           text:
             - air

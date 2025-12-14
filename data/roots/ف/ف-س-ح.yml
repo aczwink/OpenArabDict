@@ -15,37 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-ب-و
-  ya: true
+  radicals: ف-س-ح
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: ia
+            parameters: uu
+      type: verb
       derived:
-        - text: غَبِيّ
-          derivation: meaning-related
-          type: adjective
-          gender: male
+        - derivation: verbal-noun
+          text: فُسْحَة
+          gender: female
+          type: noun
           translations:
             - dialect: msa
               source: hw4
-              source-page: 779
+              source-page: 834
               text:
-                - unwise, unjudicious, ignorant, foolish, stupid
-          derived:
-            - text: أَغْبِيَاء
-              derivation: plural
-        - derivation: meaning-related
-          type: noun
-          gender: male
-          text: غَبَاء
-          translations:
-            - complete: true
-              dialect: msa
-              source: hw4
-              source-page: 779
-              text:
-                - ignorance, foolishness, stupidity
+                - walk, promenade, stroll, ride, drive, outing, excursion

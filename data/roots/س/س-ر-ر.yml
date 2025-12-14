@@ -33,6 +33,17 @@ root:
               source: hw4-free-text
               text:
                 - glad, happy, delighted (ب at), pleased (ب with)
+
+    - text: سِرّ
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 471
+          text:
+            - secret
+
     - text: سَرِير
       type: noun
       gender: male
