@@ -1,0 +1,43 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict MSA variant definition",
+    "description": "JSON Schema for OpenArabDict Modern Standard Arabic variant definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "dialect": {
+            "type": "string",
+            "const": "msa"
+        },
+        "parameters": {
+            "oneOf": [
+                {
+                    "const": "aa"
+                },
+                {
+                    "const": "ai",
+                    "description": "For defective verbs this is type رمى / يرمي"
+                },
+                {
+                    "const": "au"
+                },
+                {
+                    "const": "ia",
+                    "description": "For defective verbs this is type نسي / ينسى"
+                },
+                {
+                    "const": "ii"
+                },
+                {
+                    "const": "uu",
+                    "description": "For hollow verbs with past first person with dhamma e.g. جُعْتُ"
+                }
+            ]
+        },
+        "type": {
+            "type": "string",
+            "enum": ["irregular", "sound"]
+        }
+    },
+    "required": ["dialect", "parameters"]
+}

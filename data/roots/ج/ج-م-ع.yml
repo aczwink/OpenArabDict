@@ -18,15 +18,18 @@ root:
   radicals: ج-م-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 159
           text:
             - to collect (ه e.g., money)
+            - to bring together (ه ب s.o. with others)
       derived:
         - text: جَمْعِيَّة
           derivation: meaning-related

@@ -41,9 +41,10 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              source-page: 0
+              source-page: 1150
               text:
                 - benefit, blessing, boon, benefaction, favor, grace, kindness
-              examples:
+              usage:
                 - text: بنعمة الله
                   translation: by the grace of God
+                  type: example

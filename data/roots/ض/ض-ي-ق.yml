@@ -18,18 +18,23 @@ root:
   radicals: ض-ي-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 641
           text:
-            - |-
-              1. to be or become narrow, straitened, camped, confined
-              2. to be or become angry or annoyed (ب at s.o., s.th.)
-              3. to become or be tired, weary (ب of s.o., of s.th.)
+            - to be or become narrow, straitened, camped, confined
+            - to be or become angry or annoyed (ب at s.o., s.th.)
+            - to become or be tired, weary (ب of s.o., of s.th.)
+          usage:
+            - text: ضاقت به الحياة
+              translation: life depressed him, he had a bad time, he was bad off
+              type: example
       derived:
         - text: مَضِيق
           derivation: meaning-related

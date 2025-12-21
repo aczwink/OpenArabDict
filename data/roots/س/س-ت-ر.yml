@@ -18,17 +18,22 @@ root:
   radicals: س-ت-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 462
           text:
-            - |-
-              1. to cover, veil (ه, ه s.o., s.th.)
-              2. to shield, guard, protect (ه s.o., ه s.th., عن against or from)
+            - to cover, veil (ه ,ه s.o., s.th.)
+            - to shield, guard, protect (ه s.o., ه s.th., عن against or from)
+      derived:
+        - derivation: passive-participle
+          type: adjective
+          gender: male
 
     - text: سِتَارَة
       type: noun
@@ -36,7 +41,7 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=475
+          source-page: 462
           text:
             - veil
             - curtain, drape, window curtain

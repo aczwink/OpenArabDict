@@ -17,13 +17,30 @@
 root:
   radicals: ج-و-ع
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
+      derived:
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 175
+              text:
+                - hungry, starved, famished
+
     - text: جَوْعَان
       type: adjective
       gender: male
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=188
+          source-page: 175
           text:
             - hungry, starved, famished
       derived:

@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict LB variant definition",
+    "description": "JSON Schema for OpenArabDict Lebanese variant definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "dialect": {
+            "type": "string",
+            "const": "lb"
+        },
+        "parameters": {
+            "oneOf": [
+                {
+                    "const": "aa"
+                }
+            ]
+        },
+        "type": {
+            "type": "string",
+            "enum": ["defective", "irregular"]
+        }
+    },
+    "required": ["dialect", "parameters"]
+}

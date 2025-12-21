@@ -44,27 +44,14 @@
                         "variants": {
                             "type": "array",
                             "items": {
-                                "type": "object",
-                                "additionalProperties": false,
-                                "properties": {
-                                    "dialect": {
-                                        "type": "string",
-                                        "enum": [
-                                            "lb",
-                                            "msa"
-                                        ]
+                                "oneOf": [
+                                    {
+                                        "$ref": "../verbs/lb_variant.json"
                                     },
-                                    "parameters": {
-                                        "type": "string",
-                                        "minLength": 2,
-                                        "maxLength": 16
-                                    },
-                                    "type": {
-                                        "type": "string",
-                                        "enum": ["defective", "irregular", "sound"]
+                                    {
+                                        "$ref": "../verbs/msa_variant.json"
                                     }
-                                },
-                                "required": ["dialect", "parameters"]
+                                ]
                             }
                         },
                         "stative-active-participle": {

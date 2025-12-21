@@ -26,24 +26,25 @@ root:
           text:
             - to amuse, entertain (ه s.o.)
       derived:
-        - text: مُسَلٍّ
-          derivation: active-participle
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - amusing, entertaining
         - text: تَسْلِيَة
           derivation: verbal-noun
           type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 498
               text:
                 - consolation, amusement, distraction, diversion, fun
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 498
+              text:
+                - amusing, entertaining
     - type: verb
       dialect: msa
       form: 5

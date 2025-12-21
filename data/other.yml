@@ -317,14 +317,17 @@ words:
         source: hw4-free-text
         text:
           - blood
+
   - text: فُؤَاد
     type: noun
     gender: male
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        source-page: 810
         text:
           - heart
+
   - text: بَان
     type: noun
     gender: male
@@ -729,15 +732,7 @@ words:
         source: hw4-free-text
         text:
           - even, eventually even
-  - text: إِنَّ
-    type: particle
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - (introducing a main clause, with foll. subject in the acc. or as a
-            suffix) behold, verily, truly (in most cases not translated in
-            English)
+  
   - text: مِئَة
     type: noun
     gender: female
@@ -792,16 +787,7 @@ words:
         source: hw4-free-text
         text:
           - mind
-  - text: قَهْوَة
-    type: noun
-    gender: female
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - |-
-            1. coffee
-            2. café, coffeehouse
+
   - text: قَحْبَة
     type: noun
     gender: female

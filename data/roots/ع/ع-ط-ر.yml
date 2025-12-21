@@ -18,10 +18,22 @@ root:
   radicals: ع-ط-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 725
           text:
-            - to perfume
+            - to perfume, scent (ه ,ه s.o., s.th.)
+      derived:
+        - derivation: meaning-related
+          type: noun
+          gender: male
+          text: عِطْر
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 725
+              text:
+                - perfume, scent

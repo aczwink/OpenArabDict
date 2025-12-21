@@ -18,13 +18,15 @@ root:
   radicals: ح-س-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 208
           text:
             - to be handsome, beautiful, lovely, nice, find, good
       derived:

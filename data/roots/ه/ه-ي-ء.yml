@@ -32,7 +32,7 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=1234
+          source-page: 1221
           text:
             - society, association
             - organization

@@ -18,12 +18,15 @@ root:
   radicals: س-ق-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 485
           text:
-            - to give to drink, make s.o. drink, to water (ه cattle, plants)
+            - to give (ه ه s.o. s.th.) to drink, make s.o. (ه) drink (ه s.th.)
+            - to water (ه cattle, plants)

@@ -32,4 +32,24 @@ root:
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          derived:
+            - derivation: feminine
+              text: عُذْرَة
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 702
+                  text:
+                    - virginity, virginhood
+              derived:
+                - derivation: nisba
+                  gender: male
+                  text: عُذْرِيّ
+                  type: adjective
+                  translations:
+                    - complete: true
+                      dialect: msa
+                      source: hw4
+                      source-page: 702
+                      text:
+                        - belonging to the tribe of عُذْرَة

@@ -51,6 +51,15 @@ root:
               source-page: 169
               text:
                 - strain, exertion
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 169
+              text:
+                - endeavor, effort, exertion, pains, trouble, work
               
     - type: verb
       form: 3

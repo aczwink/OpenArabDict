@@ -18,6 +18,15 @@ root:
   radicals: و-ح-ش
   words:
     - type: verb
+      form: 4
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1237
+          text:
+            - to grieve by one's absence (ه s.o.)
+
+    - type: verb
       dialect: msa
       form: 5
       translations:

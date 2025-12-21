@@ -76,7 +76,6 @@ root:
                 - perfect, masterly, masterful
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -85,13 +84,23 @@ root:
           text:
             - to dominate, control (في s.th.), be in control, be in command (في of)
       derived:
-        - derivation: active-participle
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=244
+              source-page: 230
+              text:
+                - regulation, control (في of s.th., also techn.)
+        - derivation: active-participle
+          type: noun
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 231
               text:
                 - controller, control system (techn.)
           derived:

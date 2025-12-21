@@ -36,15 +36,13 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 743
               text:
                 - knowledge, learning, lore
           derived:
             - text: عُلُوم
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
         - derivation: active-participle
           type: adjective
           gender: male

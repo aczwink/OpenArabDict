@@ -28,25 +28,6 @@ root:
           text:
             - to wonder, to marvel, be astonished
       derived:
-        - text: إعْجاب
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: https://ejtaal.net/aa/#hw4=704
-              text:
-                - admiration (ب for)
-        - text: مُعْجَب
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - admirer
         - text: عَجِيب
           derivation: meaning-related
           type: adjective
@@ -78,3 +59,34 @@ root:
               source: hw4-free-text
               text:
                 - pride
+
+    - form: 4
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 691
+              text:
+                - admiration (ب for)
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 691
+              text:
+                - causing admiration, admirable
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 691
+              text:
+                - admirer (ب of s.o., of s.th.)

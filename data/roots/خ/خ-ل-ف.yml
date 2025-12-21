@@ -76,13 +76,14 @@ root:
                 - background (of a picture and fig.)
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 297
           text:
-            - to be contradictory
+            - to be contradictory, contrary, opposed (ه to)
+            - to offend (ه against a command, a rule), break, violate, disobey (ه a command, a rule)
       derived:
         - text: خِلَاف
           derivation: verbal-noun

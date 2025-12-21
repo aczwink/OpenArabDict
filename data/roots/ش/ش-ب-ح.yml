@@ -24,7 +24,7 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=540
+          source-page: 527
           text:
             - phantom
             - ghost, specter, spirit

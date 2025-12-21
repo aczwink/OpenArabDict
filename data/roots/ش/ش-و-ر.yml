@@ -55,12 +55,9 @@ root:
               text:
                 - walk
     - type: verb
-      dialect: msa
       form: 10
-      translations: []
       derived:
-        - text: اِسْتِشَارَة
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: female
           translations:
@@ -68,3 +65,12 @@ root:
               source: hw4-free-text
               text:
                 - a seeking of advice, consultation
+        - derivation: passive-participle
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 576
+              text:
+                - adviser, counselor, consultant, councilor

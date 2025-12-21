@@ -134,7 +134,7 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, ve
         }
     }
     const choices = generated.map(VocalizedWordTostring).join(", ");
-    throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text!)) + ". But allowed values are: " + choices);
+    throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text ?? "")) + ". But allowed values are: " + choices);
 }
 
 export function ValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, translations: OpenArabDictTranslationEntry[], validator: WordDefinitionValidator)

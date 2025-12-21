@@ -43,3 +43,13 @@ root:
                   source: hw4-free-text
                   text:
                     - رقم قياسي record (athlet.)
+        - text: مَقَاس
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 941
+              text:
+                - measurement, dimension, size

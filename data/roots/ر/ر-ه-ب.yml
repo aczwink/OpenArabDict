@@ -38,3 +38,13 @@ root:
               source-page: 420
               text:
                 - terror, terrorism (pol.)
+
+    - gender: male
+      text: رَهِيب
+      type: adjective
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 420
+          text:
+            - dreadful, awful, fearful, terrible

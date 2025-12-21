@@ -18,27 +18,27 @@ root:
   radicals: س-م-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 499
           text:
-            - to allow, permit
-      derived:
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-              text:
-                - allow, permit
+            - to allow, permit (ان or ل ب s.o. s.th. or to do s.th.)
+          usage:
+            - text: لا سمح اللّٰه
+              translation: God forbid!
+              type: meaning-in-context
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+          text:
+            - allow, permit
 
     - type: verb
       dialect: msa

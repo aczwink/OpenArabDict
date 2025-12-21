@@ -25,6 +25,25 @@ words:
           - "intensifying interjection introducing sentences: verily, truly,
             indeed, oh yes, etc."
 
+  - text: إِنَّ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 37
+        text:
+          - (introducing a main clause, with foll. subject in the acc. or as a suffix) behold, verily, truly (in most cases not translated in English)
+    derived:
+      - derivation: extension
+        type: particle
+        text: إِنَّمَا
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 37
+            text:
+              - rather, much more, on the contrary
+
   - text: أتاري
     type: particle
     translations:

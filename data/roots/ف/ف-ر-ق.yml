@@ -80,13 +80,14 @@ root:
             - to separate, part, divide, sever, sunder (ه s.th.)
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 829
           text:
-            - to leave (ه s.o., s.th.)
+            - to separate o.s., disengage o.s., withdraw, depart (ه ,ه from s.o., from s.th.), part (ه ,ه with s.o., with s.th.), leave, quit (ه ,ه s.o., s.th.)
 
     - type: verb
       dialect: msa

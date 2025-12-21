@@ -52,8 +52,8 @@ root:
               source: hw4-free-text
               text:
                 - indication (على of)
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -61,12 +61,23 @@ root:
           text:
             - to pamper, coddle, spoil (ه s.o.)
       derived:
-        - text: مُدَلَّل
-          derivation: passive-participle
-          type: adjective
+        - derivation: verbal-noun
+          text: تَدْلِيل
+          type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 334
+              text:
+                - pampering, coddling, spoiling
+        - derivation: passive-participle
+          type: adjective
+          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 335
               text:
                 - pampered, spoiled (child)

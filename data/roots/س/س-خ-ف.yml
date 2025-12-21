@@ -18,11 +18,11 @@ root:
   radicals: س-خ-ف
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: uu
       derived:
         - text: سَخِيف
           derivation: meaning-related
@@ -30,6 +30,17 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 467
               text:
                 - absurd, silly, ridiculous, foolish
+        - derivation: verbal-noun
+          text: سَخَافَة
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 467
+              text:
+                - feeble-mindedness, dimwittedness

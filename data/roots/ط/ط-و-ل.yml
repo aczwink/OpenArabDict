@@ -118,6 +118,7 @@ root:
       type: preposition
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 673
           text:
             - during, throughout

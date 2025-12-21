@@ -17,7 +17,7 @@
 dialects:
   - key: msa
     name: Modern Standard Arabic
-    emojiCodes: 🌙
+    emojiCodes: 📖
     iso639code: arb
     glottoCode: stan1318
     children:

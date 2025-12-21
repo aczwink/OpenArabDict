@@ -35,7 +35,8 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 908
               text:
                 - cutting off
           derived:
@@ -45,7 +46,7 @@ root:
               translations:
                 - dialect: msa
                   source: hw4
-                  url: http://ejtaal.net/aa/#hw4=921
+                  source-page: 908
                   text:
                     - decidedly, definitely, positively, for certain
         - text: قِطْعَة
@@ -54,18 +55,28 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 908
               text:
                 - piece
           derived:
             - text: قِطَع
               derivation: plural
-              type: noun
-              gender: female
-              translations: []
+        - derivation: noun-of-place
+          type: noun
+          gender: male
+          text: مَقْطَع
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 909
+              text:
+                - section, division
+          derived:
+            - derivation: plural
+              text: مَقَاطِع
 
     - type: verb
-      dialect: msa
       form: 3
       translations: []
       derived:

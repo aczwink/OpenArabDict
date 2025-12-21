@@ -18,16 +18,18 @@ root:
   radicals: د-و-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 343
           text:
-            - to turn, revolve, rotate, move in a circle (على, ب, حول around
-              s.th. or s.o.), circle (على, ب, حول s.th. or s.o.)
+            - to turn, revolve, rotate, move in a circle (حول ,ب ,على around s.th. or s.o.), circle (حول ,ب ,على s.th. or s.o.)
+            - to start running, start up (engine)
       derived:
         - text: دَوْر
           derivation: verbal-noun
@@ -78,6 +80,15 @@ root:
                 - text: ادارة شؤون العاملين
                   translation: personnel office or administration (of an agency or company)
                   type: example
+
+    - text: دار / يدير
+      type: foreign-verb
+      translations:
+        - dialect: ma
+          source: free-text
+          url: https://en.wiktionary.org/wiki/%D8%AF%D8%A7%D8%B1#Moroccan_Arabic
+          text:
+            - to do
 
     - text: مَدَار
       type: noun

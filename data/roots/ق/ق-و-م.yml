@@ -83,32 +83,31 @@ root:
               source: hw4-free-text
               text:
                 - quickly
-        - text: قَائِم
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 937
               text:
-                - being on charge (على of), responsible (على for), watching over
-                  (على s.th.)
+                - firm, steadfast, staunch, unflinching, unshakable
+                - being on charge (على of), responsible (على for), watching over (على s.th.)
           derived:
             - text: قَائِمُون
               derivation: plural
               type: noun
-              gender: male
-              translations: []
+
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 935
           text:
-            - |-
-              1. to lift up, elevate (ه s.th.)
-              2. to abide, stay, remain, dwell, reside, live (ب in)
+            - to lift up, elevate (ه s.th.)
+            - to hold (ه a meeting, a ceremony, a competition, etc.), celebrate (ه a festival), put on, stage, organize (ه a celebration, a pageant, etc.), give (ه a reception)
+            - to abide, stay, remain, dwell, reside, live (ب in)
       derived:
         - text: إِقَامَة
           derivation: verbal-noun

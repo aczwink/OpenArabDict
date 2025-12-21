@@ -18,9 +18,7 @@ root:
   radicals: و-ز-ر
   words:
     - type: verb
-      dialect: msa
       form: 5
-      translations: []
       derived:
         - text: وَزِير
           derivation: meaning-related
@@ -28,12 +26,10 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1247
               text:
                 - (cabinet) minister
           derived:
             - text: وُزَرَاء
               derivation: plural
-              type: noun
-              gender: male
-              translations: []

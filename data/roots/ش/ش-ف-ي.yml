@@ -18,16 +18,17 @@ root:
   radicals: ش-ف-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 559
           text:
-            - to cure (من ه s.o. of a disease), heal (من ه s.o. of a disease, ه
-              a wound), make (ه s.o.) well, restore (ه s.o.) to health
+            - to cure (ه من s.o. of a disease), heal (ه من s.o. of a disease, ه a wound), make (ه s.o.) well, restore (ه s.o.) to health
       derived:
         - text: شِفَاء
           derivation: verbal-noun

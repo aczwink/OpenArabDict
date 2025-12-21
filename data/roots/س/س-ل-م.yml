@@ -47,8 +47,17 @@ root:
                   source: hw4-free-text
                   text:
                     - peaceful
+        - derivation: active-participle
+          type: adjective
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 497
+              text:
+                - safe, secure
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa

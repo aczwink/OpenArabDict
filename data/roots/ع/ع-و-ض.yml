@@ -1,0 +1,27 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+root:
+  radicals: ع-و-ض
+  words:
+    - form: 2
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 769
+          text:
+            - to replace (ه ,ه s.o., s.th. عن or من with or by), substitute (عن or ه ,ه من for s.o., for s.th. s.o. or s.th. else), compensate, indemnify, require, recompense (عن or ه من s.o. for)

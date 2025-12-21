@@ -36,3 +36,14 @@ root:
           url: http://ejtaal.net/aa/#hw4=1274
           text:
             - to make clear, make plain (ه s.th.)
+
+    - text: وَضَّاح
+      type: adjective
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1261
+          text:
+            - bright, clear, brilliant, shining, luminous

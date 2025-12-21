@@ -82,14 +82,27 @@ root:
               source: hw4-free-text
               text:
                 - connection, junction
+                
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1257
           text:
             - to continue (في or ه s.th.), proceed (في or ه in or with)
+      derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          text: وِصَال
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1258
+              text:
+                - reunion, being together (of lovers)
+                - communion (in love)
 
     - type: verb
       dialect: msa

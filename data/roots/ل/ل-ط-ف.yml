@@ -35,6 +35,10 @@ root:
               text:
                 - pretty, charming, lovely, graceful
                 - civil, courteous, polite
+              usage:
+                - text: يا لطيف
+                  translation: O my God! good heavens! for goodness sake!
+                  type: meaning-in-context
           derived:
             - text: لُطَفَاء
               derivation: plural

@@ -34,9 +34,11 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 574
               text:
                 - appetite
+                
     - type: verb
       dialect: msa
       form: 8

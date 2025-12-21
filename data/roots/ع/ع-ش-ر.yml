@@ -23,21 +23,20 @@ root:
         stem: 1
         parameters: au
       translations: []
+
     - type: verb
-      dialect: msa
       form: 3
-      translations: []
       derived:
         - text: عِشْرَة
           derivation: meaning-related
-          type: adjective
+          type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 718
               text:
-                - (intimate) association, intimacy, companionship, relations,
-                  (social) intercourse, company
+                - (intimate) association, intimacy, companionship, relations, (social) intercourse, company
     - text: عَشِيرَة
       type: noun
       gender: female

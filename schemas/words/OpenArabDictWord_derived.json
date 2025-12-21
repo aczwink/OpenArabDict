@@ -56,7 +56,9 @@
                 "adjective",
                 "adverb",
                 "noun",
-                "preposition"
+                "particle",
+                "preposition",
+                "pronoun"
             ]
         }
     },

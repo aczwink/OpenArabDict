@@ -17,12 +17,20 @@
 root:
   radicals: ر-ق-ب
   words:
+    - form: 3
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 408
+          text:
+            - to watch, observe, regard attentively (ه s.o., ه s.th.), keep an eye (ه ,ه on)
+
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=421
+          source-page: 408
           text:
             - to expect, anticipate, await (ه s.th.), look forward to (ه), wait, look, look out (ه ,ه for)

@@ -96,9 +96,22 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=696
+          source-page: 683
           text:
             - back
+
+    - text: مَظْهَر
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 683
+          text:
+            - (external) appearance, external make-up, guise
+      derived:
+        - derivation: plural
+          text: مَظَاهِر
     
     - text: ظَاهِرَة
       type: noun
@@ -106,6 +119,6 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=697
+          source-page: 684
           text:
             - phenomenon

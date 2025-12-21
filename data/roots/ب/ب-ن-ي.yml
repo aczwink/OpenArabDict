@@ -101,8 +101,17 @@ root:
       derived:
         - text: أَبْنَاء
           derivation: plural
-          type: noun
-          gender: male
+    - gender: male
+      text: بُنَيَّ
+      type: noun
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 93
+          text:
+            - my little son
+
     - text: بِنْت
       type: noun
       gender: female

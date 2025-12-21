@@ -19,10 +19,11 @@ root:
   ya: true
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -43,3 +44,14 @@ root:
 
               2. to curse (على s.o.; properly: to invoke God against s.o.), call
               down evil, invoke evil (على upon s.o.)
+      derived:
+        - derivation: meaning-related
+          text: دَعْوَة
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 327
+              text:
+                - invocation, imploration, supplication, prayer

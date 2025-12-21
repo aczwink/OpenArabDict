@@ -41,14 +41,15 @@ root:
                   source: hw4-free-text
                   text:
                     - let us go!
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1240
           text:
-            - to say farewell
+            - to take leave (ه of), say farewell (ه to s.o.)
       derived:
         - text: وَدَاع
           derivation: meaning-related

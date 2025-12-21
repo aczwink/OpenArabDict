@@ -18,15 +18,23 @@ root:
   radicals: ح-ك-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 231
           text:
             - to tell, relate (ه s.th.), report, give an account (ه of)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 26
+          text:
+            - to speak
       derived:
         - text: حِكَايَة
           derivation: verbal-noun
@@ -34,17 +42,10 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 231
               text:
                 - story, tale, narrative
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ii
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 26
-              text:
-                - to speak
+          derived:
+            - derivation: plural
+              text: حِكَايَات

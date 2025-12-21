@@ -38,13 +38,14 @@ root:
               source: hw4-free-text
               text:
                 - trust, confidence, faith, reliance
-        - text: وَاثِق
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 1229
               text:
                 - trusting, confident, certain, sure
 

@@ -17,6 +17,32 @@
 root:
   radicals: ر-و-ي
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 428
+          text:
+            - to drink one's fill, quench one's thirst
+            
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 428
+          text:
+            - to bring (على or ل s.o.) water, give (ه s.o.) to drink
+
     - type: verb
       dialect: msa
       form:
@@ -44,6 +70,7 @@ root:
               type: noun
               gender: female
               translations: []
+
     - type: verb
       dialect: msa
       form: 8

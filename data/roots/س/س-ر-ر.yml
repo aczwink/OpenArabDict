@@ -18,19 +18,20 @@ root:
   radicals: س-ر-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
       derived:
-        - text: مَسْرُور
-          derivation: passive-participle
+        - derivation: passive-participle
           type: adjective
           gender: male
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 472
               text:
                 - glad, happy, delighted (ب at), pleased (ب with)
 

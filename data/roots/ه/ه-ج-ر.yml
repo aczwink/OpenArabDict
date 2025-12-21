@@ -18,19 +18,21 @@ root:
   radicals: ه-ج-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1194
           text:
-            - >-
-              1. to emigrate
-
-              2. to dissociate o.s., separate, part, secede, keep away (ه, ه
-              from), part company (ه with)
+            - to emigrate
+            - to dissociate o.s., separate, part, secede, keep away (ه ,ه from), part company (ه with)
+            - to give up, renounce, forgo, avoid (ه s.th.)
+            - to abandon, surrender, leave behind (ه إلى s.th. to s.o.), relinquish, leave, give up, vacate (ه s.th., إلى in favor of s.o.)
     - text: هِجْرَة
       type: noun
       gender: female

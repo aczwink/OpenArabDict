@@ -115,25 +115,30 @@ root:
           text:
             - to accustom, habituate, condition, inure, season (ه ه or على s.o.
               to s.th.), make s.o. (ه) get used (على or ه to s.th.)
-    - type: verb
-      dialect: msa
-      form: 5
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to get used, be accustomed, habituate o.s. (على or ه to s.th., ان
-              to do s.th.), make a habit (على or ه of s.th.), be used to doing,
-              be wont to do (على or ه s.th.)
 
     - type: verb
-      dialect: msa
+      form: 5
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 766
+          text:
+            - to get used, be accustomed, habituate o.s. (على or ه to s.th., ان to do s.th.), make a habit (على or ه of s.th.), be used to doing, be wont to do (على or ه s.th.)
+
+    - type: verb
       form: 8
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 766
           text:
-            - same as V
+            - to get used, be accustomed, habituate o.s. (على or ه to s.th., ان to do s.th.), make a habit (على or ه of s.th.), be used to doing, be wont to do (على or ه s.th.)
+          usage:
+            - text: لم يعتد ان
+              translation: he is, or was, not accustomed to ...
+              type: example
       derived:
         - derivation: passive-participle
           type: adjective
@@ -141,8 +146,9 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=781
+              source-page: 768
               text:
+                - used, accustomed, habituated, conditioned, inured, seasoned (على to)
                 - usual, customary, normal
 
     - type: verb
