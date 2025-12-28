@@ -18,11 +18,11 @@ root:
   radicals: د-ي-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ii
       derived:
         - text: دِين
           derivation: meaning-related
@@ -30,7 +30,8 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 353
               text:
                 - religion, creed, faith, belief
           derived:
@@ -46,6 +47,3 @@ root:
               derived:
                 - text: دِينِيَّة
                   derivation: feminine
-                  type: adjective
-                  gender: female
-                  translations: []

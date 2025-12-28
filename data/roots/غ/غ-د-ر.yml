@@ -17,6 +17,26 @@
 root:
   radicals: غ-د-ر
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: msa
+            parameters: au
+      type: verb
+      derived:
+        - derivation: meaning-related
+          type: adjective
+          gender: male
+          text: غَدَّار
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 780
+              text:
+                - perfidious, disloyal, treacherous, traiterous
+
     - type: verb
       form: 3
       translations:

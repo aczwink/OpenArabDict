@@ -18,23 +18,34 @@ root:
   radicals: ز-ي-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ii
       derived:
+        - derivation: verbal-noun
+          text: زَيْن
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 454
+              text:
+                - beauty
         - text: زِينَة
           derivation: meaning-related
           type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 454
               text:
                 - embellishment, adornment, ornament, decoration
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa

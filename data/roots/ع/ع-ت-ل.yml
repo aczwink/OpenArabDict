@@ -15,41 +15,19 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-س-ل
+  radicals: ع-ت-ل
   words:
     - form:
         stem: 1
         variants:
           - dialect: msa
+            parameters: au
+          - dialect: msa
             parameters: ai
       type: verb
-      derived:
-        - derivation: meaning-related
-          text: غَسِيل
-          gender: male
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 789
-              text:
-                - (dirty or washed) clothes, washing
-
-    - type: verb
-      dialect: lb
-      form: 2
-      translations:
-        - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 63
-          text:
-            - to wash
-
-    - type: verb
-      dialect: lb
-      form: 8
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=802
+          source-page: 689
           text:
-            - to take a bath, bathe
+            - to carry (ه s.th.)

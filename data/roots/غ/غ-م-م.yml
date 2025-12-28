@@ -15,27 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ص-ل-و
+  radicals: غ-م-م
   words:
-    - type: verb
-      form: 2
-      derived:
-        - derivation: meaning-related
-          gender: female
-          text: صَلَاة
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 612
-              text:
-                - salat, the official Islamic prayer ritual
-        - derivation: active-participle
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 612
-              text:
-                - prayer, worshipper
+    - gender: female
+      text: غُمَّة
+      type: noun
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 799
+          text:
+            - grief, affliction, sorrow, distress, sadness, anxiety

@@ -52,20 +52,22 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if(root?.radicals.startsWith("و") && (verb.form.stem === 4))
             {
-                console.log("FOUND1", word);
+                console.log("FOUND10", word);
             }
         }
 
-        //test: arb/assimilated/stem1_type_sound.js
-        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.ActiveParticiple))
+        //test: arb/assimilated/stem1_type_ia.js
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
         {
             const verbId = word.parent.verbId;
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
-            const root = doc.roots.find(x => x.id === verb.rootId);
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+            const isr2d = root.radicals[1] === root.radicals[2];
+            const verbType = (verb.form.variants === undefined) ? verb.form.verbType : verb.form.variants![0].verbType;
 
-            if(root?.radicals.startsWith("و") && (ExtractParameters(verb) === "ia"))
+            if(root?.radicals.startsWith("و") && (ExtractParameters(verb) === "ia") && !isr2d && (verbType === undefined))
             {
-                console.log("FOUND1", word);
+                console.log("FOUND11", word, verb.form);
             }
         }
 
@@ -220,7 +222,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if((verb.form.stem === 1) && (root.radicals[1] === root.radicals[2]) && (ExtractParameters(verb) === "ia") && (root.radicals[0] !== "و"))
             {
-                console.log("FOUND11", word);
+                console.log("FOUND111", word);
             }
         }
 
@@ -309,7 +311,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
         }
 
         //test: arb/sound_but_weak_root/r1waw_stem1_ia.js
-        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.ActiveParticiple))
         {
             const verbId = word.parent.verbId;
             const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
@@ -318,7 +320,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if((verb.form.stem === 1) && startsWithWaw && (ExtractParameters(verb) === "ia") && ((verb.form.verbType ?? verb.form.variants![0].verbType) === OpenArabDictVerbType.Sound))
             {
-                console.log("FOUND17", word);
+                console.log("FOUND171", word);
             }
         }
 
@@ -332,7 +334,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if((verb.form.stem === 2) && startsWithWaw)
             {
-                console.log("FOUND17", word);
+                console.log("FOUND172", word);
             }
         }
 

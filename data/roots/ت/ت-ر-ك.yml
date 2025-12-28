@@ -18,13 +18,15 @@ root:
   radicals: ت-ر-ك
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 113
           text:
             - to let be, leave, relinquish, renounce, give up, forswear (ه s.th.)
       derived:

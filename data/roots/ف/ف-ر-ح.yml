@@ -18,10 +18,11 @@ root:
   radicals: ف-ر-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -29,12 +30,24 @@ root:
             - to be glad, happy, delighted, rejoice, (ل, ب at), be gay, merry,
               cheerful (ل, ب about, over)
       derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          text: فَرَح
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 822
+              text:
+                - joy, gladness, glee, gaiety, hilarity, mirth, exhilaration, merriment, happiness
         - text: فَرْحَة
           derivation: meaning-related
           type: noun
           gender: female
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 822
               text:
                 - joy

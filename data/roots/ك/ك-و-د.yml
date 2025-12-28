@@ -34,3 +34,14 @@ root:
             - text: كاد يموت
               translation: he almost died
               type: example
+      derived:
+        - derivation: meaning-related
+          type: adverb
+          text: بِٱلْكَاد
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 991
+              text:
+                - almost, nearly

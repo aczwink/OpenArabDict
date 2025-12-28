@@ -15,6 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: أَجَنْدَة
+    type: noun
+    gender: female
+    translations:
+      - dialect: msa
+        complete: true
+        source: hw4
+        source-page: 7
+        text:
+          - notebook
+
   - text: إِنْفْلُوَنْزَا
     type: noun
     gender: male

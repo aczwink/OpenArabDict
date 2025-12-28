@@ -18,28 +18,26 @@ root:
   radicals: ح-ق-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations: []
       derived:
         - text: حَقّ
           derivation: meaning-related
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 224
+              text:
+                - right, title, claim, legal claim (في to)
           derived:
             - text: حُقُوق
               derivation: plural
-              type: noun
-              gender: male
-              translations:
-                - dialect: msa
-                  source: hw4
-                  url: http://ejtaal.net/aa/#hw4=237
-                  text:
-                    - right, title, claim, legal claim (في to)
             - text: حَقًّا
               derivation: extension
               type: adverb

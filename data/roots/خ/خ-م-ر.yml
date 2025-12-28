@@ -15,44 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-ب-د
+  radicals: خ-م-ر
   words:
-    - type: verb
-      dialect: msa
-      form:
+    - form:
         stem: 1
-        parameters: au
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to serve, worship
-
-    - form: 5
+        variants:
+          - dialect: msa
+            parameters: au
       type: verb
       derived:
-        - derivation: active-participle
-          type: adjective
+        - derivation: meaning-related
           gender: male
+          text: خِمَار
+          type: noun
           translations:
             - dialect: msa
               source: hw4
-              source-page: 686
+              source-page: 302
               text:
-                - pious, devout
-
-    - text: عَبْد
-      type: noun
-      gender: male
-      derived:
-        - text: عِبَاد
-          derivation: plural
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=698
-              text:
-                - servant (of God), human being, man
-              contextual:
-                - text: العباد
-                  translation: humanity, mankind
+                - veil covering head and face of a woman

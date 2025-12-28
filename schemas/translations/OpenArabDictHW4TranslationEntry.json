@@ -12,7 +12,9 @@
         "dialect": {
             "type": "string",
             "enum": [
-                "msa"
+                "eg",
+                "msa",
+                "sy"
             ]
         },
         "source": {

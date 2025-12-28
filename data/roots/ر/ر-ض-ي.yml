@@ -37,8 +37,8 @@ root:
               source: hw4-free-text
               text:
                 - satisfaction, conciliation
+
     - type: verb
-      dialect: msa
       form: 4
       translations: []
       derived:
@@ -52,3 +52,12 @@ root:
               text:
                 - "satisfaction, gratification : fulfillment (of a claim, of a
                   desire)"
+
+    - type: verb
+      form: 5
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 398
+          text:
+            - to seek to satisfy, try to please (ه s.o.)

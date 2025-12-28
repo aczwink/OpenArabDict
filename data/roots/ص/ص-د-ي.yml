@@ -18,13 +18,13 @@ root:
   radicals: ص-د-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       derived:
         - text: صَدًى
-          #alias: صَدًا #TODO: FIX ME
           derivation: verbal-noun
           type: noun
           gender: male
@@ -32,12 +32,23 @@ root:
             - complete: true
               dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=608
+              source-page: 595
               text:
                 - echo, reverberation
           derived:
             - text: أَصْدَاء
               derivation: plural
+        - derivation: meaning-related
+          type: noun
+          gender: male
+          text: صَدًا
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 595
+              text:
+                - echo, reverberation
 
     - form: 5
       type: verb

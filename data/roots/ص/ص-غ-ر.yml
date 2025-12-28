@@ -18,23 +18,29 @@ root:
   radicals: ص-غ-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
-      translations:
-        - dialect: msa
-          source: hw4
-          url: http://ejtaal.net/aa/#hw4=615
-          text:
-            - youthfulness, juvenility (also صغر السن)
+        variants:
+          - dialect: msa
+            parameters: uu
       derived:
+        - derivation: verbal-noun
+          type: noun
+          gender: male
+          text: صِغَر
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 602
+              text:
+                - youthfulness, juvenility (also صغر السن)
         - text: صَغِير
           derivation: meaning-related
           type: adjective
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 602
               text:
                 - small, little

@@ -13,6 +13,9 @@
             "$ref": "./words/OpenArabDictGenderedWord_pronoun.json"
         },
         {
+            "$ref": "./words/OpenArabDictOtherWord_adverb.json"
+        },
+        {
             "$ref": "./words/OpenArabDictOtherWord_conjunction.json"
         },
         {

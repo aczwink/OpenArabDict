@@ -18,16 +18,17 @@ root:
   radicals: ت-ب-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 108
           text:
-            - to follow, succeed (ه s.o., ه s.th.), come after s.o. or s.th. (ه,
-              ه)
+            - to follow, succeed (ه s.o., ه s.th.), come after s.o. or s.th. (ه ,ه)
       derived:
         - derivation: active-participle
           type: adjective

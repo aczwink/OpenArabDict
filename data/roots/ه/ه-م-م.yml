@@ -18,17 +18,26 @@ root:
   radicals: ه-م-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
       derived:
+        - derivation: verbal-noun
+          gender: male
+          text: هَمّ
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1211
+              text:
+                - worry, care
         - text: هَامّ
           derivation: active-participle
           type: adjective
           gender: male
-          translations: []
           derived:
             - text: أَهَمّ
               derivation: elative-degree

@@ -18,14 +18,14 @@ root:
   radicals: و-ص-ي
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=1271
+          source-page: 1259
           text:
-            - to recommend (ه ب, على to s.o. s.th. or s.o.)
+            - to recommend (ه ب ,على to s.o. s.th. or s.o.)
+            - to urge (ه ب ,على upon s.o. s.th., s.o. to take care of s.th.)
       derived:
         - text: تَوْصِيَة
           derivation: verbal-noun
@@ -40,8 +40,6 @@ root:
           derived:
             - text: تَوْصِيَات
               derivation: plural
-              type: noun
-              gender: female
 
     - type: verb
       dialect: msa

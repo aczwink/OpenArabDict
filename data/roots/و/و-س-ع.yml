@@ -24,6 +24,28 @@ root:
           - dialect: msa
             parameters: uu
             type: sound
+        stative-active-participle: true
+      derived:
+        - derivation: meaning-related
+          type: adjective
+          text: وَسِيع
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1252
+              text:
+                - wide, vast
+          derived:
+            - derivation: plural
+              text: وِسَاع
+              
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
       derived:
         - derivation: active-participle
           type: adjective
@@ -31,12 +53,13 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=1266
-              examples:
-                - text: واسع الانتشار
-                  translation: widespread
+              source-page: 1253
               text:
                 - wide
+              usage:
+                - text: واسع الانتشار
+                  translation: widespread
+                  type: example
 
 
     - type: verb

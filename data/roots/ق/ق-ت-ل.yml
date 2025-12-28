@@ -18,11 +18,23 @@ root:
   radicals: ق-ت-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 870
+          text:
+            - to kill, slay, murder, assassinate (ه s.o.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 72
+          text:
+            - to kill
       derived:
         - text: قَتَّال
           derivation: meaning-related
@@ -42,17 +54,6 @@ root:
               source: hw4-free-text
               text:
                 - killed
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aisu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 72
-              text:
-                - to kill
 
     - type: verb
       dialect: msa

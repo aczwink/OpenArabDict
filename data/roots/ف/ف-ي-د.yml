@@ -50,21 +50,19 @@ root:
               derivation: feminine
               type: adjective
               gender: female
-        - text: فَائِدَة⁩
+        - text: فَائِدَة
           derivation: meaning-related
           type: noun
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 860
               text:
-                - avail, benefit, advantage
+                - utility, avail, benefit, advantage
           derived:
-            - text: فَوَائِد⁩
+            - text: فَوَائِد
               derivation: plural
-              type: noun
-              gender: female
-              translations: []
 
     - form: 10
       type: verb

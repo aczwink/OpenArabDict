@@ -15,27 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ص-ل-و
+  radicals: ق-ص-ب
   words:
-    - type: verb
-      form: 2
-      derived:
-        - derivation: meaning-related
-          gender: female
-          text: صَلَاة
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 612
-              text:
-                - salat, the official Islamic prayer ritual
-        - derivation: active-participle
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 612
-              text:
-                - prayer, worshipper
+    - gender: female
+      text: قَصَبَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 897
+          text:
+            - a wind instrument resembling the reed pipe

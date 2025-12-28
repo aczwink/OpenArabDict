@@ -18,14 +18,36 @@ root:
   radicals: ء-س-س
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 18
           text:
             - to found, establish, set up (ه s.th.), lay the foundation (ه for)
       derived:
+        - text: أَسَاس
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 18
+              text:
+                - foundation (also, of a building), fundament, groundwork, ground, basis
+          derived:
+            - derivation: nisba
+              type: adjective
+              gender: male
+              text: أَسَاسِيّ
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 18
+                  text:
+                    - fundamental, basic
+                    - essential
         - text: مُؤَسَّسَة
           derivation: meaning-related
           type: noun
@@ -33,19 +55,9 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=31
+              source-page: 18
               text:
                 - foundation, establishment
           derived:
             - text: مُؤَسَّسَات
               derivation: plural
-        - text: أَسَاس
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - foundation (also, of a building), fundament, groundwork,
-                  ground, basis
