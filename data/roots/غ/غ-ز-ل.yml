@@ -18,15 +18,30 @@ root:
   radicals: غ-ز-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 787
           text:
-            - to display amorous behavior
+            - to spin (ه s.th.)
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 787
+          text:
+            - to display amorous behavior (ب toward a woman), make love (ب to a woman), court, woo (ب a woman), flirt (ب with a woman)
       derived:
         - text: غَزَال
           derivation: meaning-related

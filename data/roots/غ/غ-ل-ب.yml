@@ -30,6 +30,17 @@ root:
               s.th.), get the better (على or ه, of s.o., of s.th.), be
               victorious, triumph, gain ascendancy, get the upperhand, achieve
               supremacy (على or ه, over s.o., over s.th.)
+      derived:
+        - derivation: passive-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 796
+              text:
+                - defeated, vanquished
+                - beaten
 
     - form: 5
       type: verb

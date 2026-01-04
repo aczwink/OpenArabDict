@@ -18,13 +18,14 @@ root:
   radicals: س-ي-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
       translations:
         - dialect: eg
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=533
+          source-page: 533
           text:
             - to leave, give up, relinquish (ه s.th.)

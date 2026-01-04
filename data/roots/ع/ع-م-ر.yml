@@ -52,11 +52,15 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 753
               text:
-                - |-
-                  1. life, duration of life, life span, lifetime
-                  2 . age (of a person)
+                - life, duration of life, life span, lifetime
+                - age (of a person)
+              usage:
+                - text: لَعمري
+                  translation: upon my life!
+                  type: meaning-in-context
           derived:
             - text: أَعْمَار
               derivation: plural

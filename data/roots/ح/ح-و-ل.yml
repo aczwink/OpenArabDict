@@ -36,9 +36,18 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=266
+              source-page: 253
               text:
                 - artifice, ruse, stratagem, maneuver, subterfuge, wile, trick
+                - a means to accomplish an end
+                - expedient, makeshift, dodge, way-out
+              usage:
+                - text: لا حيلة لي في
+                  translation: I have no possibility to ..., I am in no position to ...
+                  type: meaning-in-context
+                - text: مي بيدي حيلة
+                  translation: I can do nothing, I can get nowhere
+                  type: meaning-in-context
         - text: حَال
           derivation: meaning-related
           type: noun

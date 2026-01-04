@@ -18,15 +18,17 @@ root:
   radicals: ح-ن-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 244
           text:
-            - to long
+            - to long, yearn, hanker (إلى for), crave (إلى s.th.)
       derived:
         - text: حَنان
           derivation: meaning-related
@@ -37,20 +39,17 @@ root:
               source: hw4-free-text
               text:
                 - love
-        - text: حِنِيَّة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - "Egyptian Arabic: tenderness"
         - text: حَنِين
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 244
+              text:
+                - longing, yearning, hankering, nostalgia, craving, desire (إلى for)
         - text: حَنُون
           derivation: meaning-related
           type: adjective
@@ -64,3 +63,12 @@ root:
                   compassionate, merciful
 
                   2. tender, soft, gentle, kind, moving, touching (voice)
+        - text: حِنِيَّة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: eg
+              source: free-text #source: from egyptian songs
+              text:
+                - tenderness

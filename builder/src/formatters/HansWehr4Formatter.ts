@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -19,15 +19,30 @@
 import { TranslationDefinition } from "../DataDefinitions";
 
 //https://thearabicpages.com/2020/12/06/reference-a-list-of-abbreviations-in-the-hans-wehr-dictionary/
+function FindErrorneousAbbreviations(input: string)
+{
+    const abbreviations = [
+        "do." //it means ditto and should therefore not occur in text
+    ];
+
+    for (const abbrev of abbreviations)
+    {
+        if(input.indexOf(abbrev) !== -1)
+            throw new Error("Abbreviation '" + abbrev + "' found in text: " + input);
+    }
+}
+
 function ReplaceAbbreviations(input: string): string
 {
     const abbreviations = [
+        { abbrev: "o.s.", text: "oneself" },
+        { abbrev: "pass.", text: "passive" },
         { abbrev: "s.o.", text: "someone" },
         { abbrev: "s.th.", text: "something" },
     ];
 
-    for (const entry of abbreviations)
-        input = input.ReplaceAll(entry.abbrev, entry.text);
+    for (const abbrev of abbreviations)
+        input = input.ReplaceAll(abbrev.abbrev, abbrev.text);
 
     return input;
 }
@@ -46,6 +61,7 @@ export function HansWehr4Formatter(x: TranslationDefinition)
 
     for(let i = 0; i < x.text.length; i++)
     {
+        FindErrorneousAbbreviations(x.text[i]);
         x.text[i] = ReplaceAbbreviations(x.text[i]);
     }
 }

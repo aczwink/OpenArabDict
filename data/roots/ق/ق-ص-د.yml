@@ -18,10 +18,11 @@ root:
   radicals: ق-ص-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -30,14 +31,6 @@ root:
               ه to), intend, have in mind (الى, ه s.th.; من or ب ه .sth. with
               s.th. else)
       derived:
-        - text: قُصاد
-          derivation: meaning-related
-          type: preposition
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - "Egyptian dialect: in front of, before, opposite"
         - text: قَصْد
           derivation: verbal-noun
           type: noun
@@ -47,6 +40,16 @@ root:
               source: hw4-free-text
               text:
                 - endeavor, aspiration, intention, intent
+        - text: قُصَاد
+          derivation: meaning-related
+          type: preposition
+          translations:
+            - complete: true
+              dialect: eg
+              source: hw4
+              source-page: 898
+              text:
+                - in front of, before, opposite
         - text: مَقْصُود
           derivation: passive-participle
           type: adjective

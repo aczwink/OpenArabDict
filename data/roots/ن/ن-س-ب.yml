@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,12 +18,19 @@ root:
   radicals: ن-س-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      alias: ai
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: msa
+            parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1125
+          text:
+            - to relate, refer (ه إلى s.th. to), link, correlate, bring into relation (ه إلى s.th. with)
       derived:
         - text: نِسْبَة
           derivation: verbal-noun
@@ -36,13 +43,16 @@ root:
               text:
                 - rate
                 - percentage (of s.th. in a total)
-              contextual:
+              usage:
                 - text: نسبة إلى
                   translation: in respect to, with regard to, regarding, concerning, as to
+                  type: meaning-in-context
                 - text: بالنسبة إلى
                   translation: in respect to, with regard to, regarding, concerning, as to
+                  type: meaning-in-context
                 - text: بالنسبة ل
                   translation: in respect to, with regard to, regarding, concerning, as to
+                  type: meaning-in-context
           derived:
             - text: نِسْبِيّ
               derivation: nisba

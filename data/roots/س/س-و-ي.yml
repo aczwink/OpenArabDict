@@ -61,16 +61,29 @@ root:
             - to do, to make
 
     - type: verb
-      dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 519
+          text:
+            - to be properly cooked, be well done
       derived:
+        - derivation: active-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 520
+              text:
+                - well done (cooking)
         - derivation: passive-participle
           type: noun
           gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=533
+              source-page: 520
               text:
                 - level, niveau, standard

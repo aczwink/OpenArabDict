@@ -33,11 +33,12 @@ root:
               source: hw4-free-text
               text:
                 - adversary
+
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 282
           text:
-            - to argue, quarrel
+            - to argue, quarrel, dispute (ه with s.o.)

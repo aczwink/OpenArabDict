@@ -18,11 +18,11 @@ root:
   radicals: ر-ء-س
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ai
       derived:
         - text: رَأْس
           derivation: meaning-related
@@ -34,6 +34,10 @@ root:
               source-page: 367
               text:
                 - head (also as a numerative of cattle)
+              usage:
+                - text: على الرأس والعين
+                  translation: very gladly; just as you wish! at your service!
+                  type: meaning-in-context
           derived:
             - text: رَأْس مَال
               derivation: extension

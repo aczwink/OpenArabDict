@@ -18,15 +18,18 @@ root:
   radicals: خ-ص-ص
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 279
           text:
-            - to take possession (ه of), demand (ه s.th.; also خص به نفسه)
+            - "with لنفسه: to take possession (ه of), demand (ه s.th.; also خص به نفسه)"
+            - to concern, regard (ه s.o., ه s.th.), have special relevance (ه to), bear (ه on)
       derived:
         - derivation: active-participle
           type: adjective

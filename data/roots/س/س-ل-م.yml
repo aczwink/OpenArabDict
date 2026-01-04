@@ -61,9 +61,10 @@ root:
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 495
           text:
-            - to hand over
+            - to hand over, turn over, surrender (ه ,ه s.o., s.th., ل or إلى to s.o.)
       derived:
         - text: تَسْلِيم
           derivation: verbal-noun

@@ -8,6 +8,7 @@
         "dialect": {
             "type": "string",
             "enum": [
+                "eg",
                 "homsi",
                 "lb",
                 "levant",
@@ -27,6 +28,26 @@
         },
         "url": {
             "type": "string"
+        },
+        "usage": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "text": {
+                        "type": "string"
+                    },
+                    "translation": {
+                        "type": "string"
+                    },
+                    "type": {
+                        "type": "string",
+                        "enum": ["example", "meaning-in-context"]
+                    }
+                },
+                "required": ["text", "translation", "type"]
+            }
         }
     },
     "required": ["dialect", "source", "text"]

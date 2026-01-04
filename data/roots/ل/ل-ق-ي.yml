@@ -87,14 +87,28 @@ root:
 
 
               تلقى العلم to study
+
     - type: verb
-      dialect: msa
+      form: 6
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1027
+          text:
+            - to meet, join each other, come together, get together
+
+    - type: verb
       form: 8
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1027
           text:
+            - to meet, join each other, come together, get together
             - to encounter, meet (ب s.o.)
+
     - type: verb
       dialect: msa
       form: 10

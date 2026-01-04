@@ -57,12 +57,13 @@ root:
               derivation: feminine
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 372
           text:
+            - to bind o.s., commit o.s., engage o.s.
             - to be linked, be connected (ب with)
       derived:
         - text: اِرْتِبَاط

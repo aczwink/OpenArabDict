@@ -29,6 +29,17 @@ root:
           source-page: 164
           text:
             - "pass.: to be or become possessed, insane, mad, crazy"
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          text: جُنُون
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 164
+              text:
+                - mania, madness, insanity, dementia
             
     - type: verb
       form: 2

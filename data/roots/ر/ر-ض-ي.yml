@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,25 +18,42 @@ root:
   radicals: ر-ض-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 398
           text:
-            - to accept
+            - to be satisfied, be content (ب ,ه or في with)
+            - to approve (ب ,ه or في of), accept, sanction (ب ,ه or في s.th.)
       derived:
         - text: رِضَاء
           derivation: meaning-related
           type: noun
           gender: male
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 399
               text:
-                - satisfaction, conciliation
+                - contentment, contentedness, satisfaction
+                - agreement, consent, assent, acceptance, approval, sanction
+                - propiatiation, conciliation
+        - derivation: active-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 399
+              text:
+                - agreeing, consenting
+                - willing, ready
 
     - type: verb
       form: 4

@@ -35,6 +35,10 @@ root:
           derivation: verbal-noun
           type: noun
           gender: male
+        - text: وُدَاد
+          derivation: verbal-noun
+          type: noun
+          gender: male
         - derivation: meaning-related
           text: وِدَاد
           gender: male

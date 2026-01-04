@@ -1,0 +1,39 @@
+#  OpenArabDict
+#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+  
+#  This program is free software: you can redistribute it and/or modify
+#  it under the terms of the GNU Affero General Public License as published by
+#  the Free Software Foundation, either version 3 of the License, or
+#  (at your option) any later version.
+  
+#  This program is distributed in the hope that it will be useful,
+#  but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  GNU Affero General Public License for more details.
+ 
+#  You should have received a copy of the GNU Affero General Public License
+#  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+words:
+  - text: بَنْطَرُون
+    type: noun
+    gender: male
+    translations:
+      - dialect: homsi
+        source: free-text #from native speakers. also: https://en.wiktionary.org/wiki/%D8%A8%D9%86%D8%B7%D8%B1%D9%88%D9%86
+        text:
+          - (pair of) pants, trousers, especially jeans
+
+  - text: جِنْطَاس
+    type: noun
+    gender: male
+    translations:
+      - dialect: homsi
+        source: free-text #from native speakers
+        text:
+          - Combination of جرن + طاس
+          - Cup used to shower oneself with. The جرن has hot water inside it and the جنطاس (which is a طاس) is used to put water over the head
+        usage:
+          - text: عراسي جنطاسي
+            translation: Used as a joke to complete على راسي because the جنطاس is used to put water over the head
+            type: example

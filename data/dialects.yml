@@ -53,7 +53,7 @@ dialects:
                 children:
                   - key: homsi
                     name: Homsi Arabic
-                    emojiCodes: 🇸🇾🧆
+                    emojiCodes: 🇸🇾🕰️
                     iso639code: apc
                     glottoCode:
 

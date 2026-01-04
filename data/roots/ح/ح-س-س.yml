@@ -18,15 +18,23 @@ root:
   radicals: ح-س-س
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 204
           text:
             - to feel, sense (ه s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 23
+          text:
+            - to feel
       derived:
         - text: حَس
           derivation: meaning-related
@@ -37,14 +45,3 @@ root:
               source: hw4-free-text
               text:
                 - perception, feeling
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ai
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 23
-              text:
-                - to feel

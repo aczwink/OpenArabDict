@@ -15,37 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: س-ح-ر
+  radicals: ب-س-م
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: aa
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 465
-          text:
-            - to bewitch, charm, enchant, infatuate, fascinate (ه ,ه s.o., s.th.)
+            parameters: ai
+      type: verb
       derived:
-        - derivation: verbal-noun
-          gender: male
-          text: سِحْر
+        - derivation: meaning-related
+          gender: female
+          text: بَسْمَة
           type: noun
           translations:
             - dialect: msa
               source: hw4
-              source-page: 465
+              source-page: 73
               text:
-                - bewitchment, beguilement, enchantment, fascination
-        - derivation: active-participle
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 466
-              text:
-                - charming, enchanting
+                - smile

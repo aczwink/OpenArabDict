@@ -18,16 +18,17 @@ root:
   radicals: ش-ك-و
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 565
           text:
-            - to complain (من or ه, ه of, about, ل or إلى to s.o., من or ه of or
-              about s.th.), make a complaint
+            - to complain (من or ه ,ه of, about, ل or إلى to s.o., من or ه of or about s.th.), make a complaint
       derived:
         - text: شَكْوَى
           derivation: verbal-noun
@@ -50,10 +51,10 @@ root:
                 - complaint
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 565
           text:
-            - same as stem 1
+            - to complain (من or ه ,ه of, about, ل or إلى to s.o., من or ه of or about s.th.), make a complaint

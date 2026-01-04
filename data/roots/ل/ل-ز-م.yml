@@ -18,17 +18,19 @@ root:
   radicals: ل-ز-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1014
           text:
-            - |-
-              1. to cling, adhere, belong (ه to), attend, accompany (ه s.th.)
-              2. to be necessary
+            - to cling, adhere, belong (ه to), attend, accompany (ه s.th.)
+            - to stay permanently (ه in)
+            - to be necessary
       derived:
         - text: لَازِم
           derivation: active-participle

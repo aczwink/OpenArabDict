@@ -19,25 +19,11 @@ root:
   ya: true
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - ""
-      derived:
-        - text: مَنِيَّة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - pl. منايا fate
+        variants:
+          - dialect: msa
+            parameters: ai
 
     - type: verb
       dialect: msa
@@ -48,6 +34,32 @@ root:
           text:
             - to desire (ه s.th.), wish (ه for s.th.; ه ل s.o. s.th.)
       derived:
+        - text: مُنْيَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1088
+              text:
+                - wish, desire
+          derived:
+            - derivation: plural
+              text: مُنًى
+        - text: مِنْيَة
+          derivation: meaning-related
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1088
+              text:
+                - wish, desire
+          derived:
+            - derivation: plural
+              text: مُنًى
         - text: أُمْنِيَة
           derivation: meaning-related
           type: noun
@@ -86,3 +98,16 @@ root:
               source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 17
               text:
                 - to hope
+
+    - text: مَنِيَّة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1088
+          text:
+            - fate, destiny, lot
+      derived:
+        - derivation: plural
+          text: مَنَايَا

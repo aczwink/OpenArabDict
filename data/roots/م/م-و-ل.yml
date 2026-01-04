@@ -39,18 +39,17 @@ root:
               type: noun
               gender: male
               translations: []
-        - text: مَوَّال
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - short, popular love song, sung solo in a plaintive tone
-          derived:
-            - text: مَوَاوِيل
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
+
+    - text: مَوَّال
+      type: noun
+      gender: male
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1094
+          text:
+            - short, popular love song, sung solo in a plaintive tone
+      derived:
+        - text: مَوَاوِيل
+          derivation: plural

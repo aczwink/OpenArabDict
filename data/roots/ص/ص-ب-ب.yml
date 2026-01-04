@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,37 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: س-ح-ر
+  radicals: ص-ب-ب
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: aa
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 465
-          text:
-            - to bewitch, charm, enchant, infatuate, fascinate (ه ,ه s.o., s.th.)
+            parameters: au
+      type: verb
       derived:
         - derivation: verbal-noun
           gender: male
-          text: سِحْر
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 465
-              text:
-                - bewitchment, beguilement, enchantment, fascination
-        - derivation: active-participle
+          text: صَبّ
           type: adjective
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              source-page: 466
+              source-page: 583
               text:
-                - charming, enchanting
+                - ardently in love, enamored

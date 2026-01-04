@@ -29,6 +29,10 @@
                     "const": "ii"
                 },
                 {
+                    "const": "ss",
+                    "description": "For quadriliteral verbs"
+                },
+                {
                     "const": "uu",
                     "description": "For hollow verbs with past first person with dhamma e.g. جُعْتُ"
                 }

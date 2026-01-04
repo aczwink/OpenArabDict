@@ -15,37 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: س-ح-ر
+  radicals: ط-و-س
   words:
-    - type: verb
-      form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: aa
+    - gender: male
+      text: طَاس
+      type: noun
       translations:
         - dialect: msa
           source: hw4
-          source-page: 465
+          source-page: 669
           text:
-            - to bewitch, charm, enchant, infatuate, fascinate (ه ,ه s.o., s.th.)
-      derived:
-        - derivation: verbal-noun
-          gender: male
-          text: سِحْر
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 465
-              text:
-                - bewitchment, beguilement, enchantment, fascination
-        - derivation: active-participle
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 466
-              text:
-                - charming, enchanting
+            - round, shallow drinking cup made of metal, drinking vessel
+            - finger bowl
