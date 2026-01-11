@@ -41,6 +41,7 @@ root:
               source: hw4
               source-page: 1126
               text:
+                - relation, reference, bearing
                 - rate
                 - percentage (of s.th. in a total)
               usage:

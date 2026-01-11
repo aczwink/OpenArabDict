@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -25,9 +25,11 @@ root:
             parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 681
           text:
             - to do wrong or evil
+            - to wrong, treat unjustly, ill-treat, oppress, beset, harm, suppress, tyrannize (ه s.o.), commit outrage (ه upon s.o.)
       derived:
         - text: ظُلْم
           derivation: verbal-noun

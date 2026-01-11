@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,20 +18,19 @@ root:
   radicals: ء-د-ي
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 12
           text:
-            - >-
-              1. to convey, take, bring, lead, steer, channel (ه, ه or ب s.o.,
-              s.th., إلى to), see that s.o. or s.th. (ه, ه or ب) gets to (إلى)
-
-              2. to bring about, cause, effect, produce (إلى s.th.)
-
-
-              أَدَّى السلام to greet, salute
+            - to convey, take, bring, lead, steer, channel (ه ,ه or ب s.o., s.th., إلى to), see that s.o. or s.th. (ه ,ه or ب) gets to (إلى)
+            - to bring about, cause, effect, produce (إلى s.th.)
+            - to render (خدمة a service, ل or إلى to s.o.; ه e.g., a meaning, a musical composition, etc.)
+          usage:
+            - text: ادى السلام
+              translation: to greet, salute
+              type: meaning-in-context
       derived:
         - text: أَدَاء
           derivation: verbal-noun

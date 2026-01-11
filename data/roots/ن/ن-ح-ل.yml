@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,42 +15,45 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: و-ل-ع
+  radicals: ن-ح-ل
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
+            parameters: au
+          - dialect: msa
+            parameters: aa
+          - dialect: msa
             parameters: ia
-            type: sound
+      type: verb
       translations:
         - dialect: msa
-          source: hw4-free-text
-          text:
-            - to catch fire
-
-    - type: verb
-      form: 2
-      translations:
-        - complete: true
-          dialect: msa
           source: hw4
-          source-page: 1287
+          source-page: 1112
           text:
-            - to kindle, light (ه s.th.), set fire (ه to)
-            - to make (ه s.o.) crave (ب s.th.), inflame s.o.'s (ه) desire (ب for), enamor (ه ب s.o. of)
+            - to waste away, lose weight, grow thin
 
-    - text: وَلَّاعَة
-      type: noun
-      gender: female
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+        stative-active-participle: true
+      type: verb
       translations:
-        - complete: true
-          dialect: msa
+        - dialect: msa
           source: hw4
-          source-page: 1287
+          source-page: 1112
           text:
-            - (cigarette) lighter
+            - to waste away, lose weight, grow thin
       derived:
-        - text: وَلَّاعَات
-          derivation: plural
+        - derivation: active-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1112
+              text:
+                - thin, slim, slender, lean, skinny

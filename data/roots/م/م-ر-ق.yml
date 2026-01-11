@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,32 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ق-ص-ر
+  radicals: م-ر-ق
   words:
-    - type: verb
-      form: 2
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
       translations:
         - dialect: msa
           source: hw4
-          source-page: 899
+          source-page: 1061
           text:
-            - to make short or shorter, shorten, cut short, curtail, abridge, reduce, lessen (ه s.th.)
-            - to be negligent, careless
-    - text: قَصِير
-      type: adjective
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - short
-    - text: قَصْر
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - |-
-              1. castle
-              2. palace
+            - to dart, rush, shoot, or fly past, pass swiftly

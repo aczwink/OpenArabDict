@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -29,6 +29,7 @@ root:
           source-page: 840
           text:
             - to be surplus, be in excess, be left (over), remain
+            - to be excellent, superior, exquisite, good, be better, be more adequate
       derived:
         - text: فَضْل
           derivation: verbal-noun

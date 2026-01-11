@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -97,3 +97,17 @@ words:
         derivation: singulative
         type: noun
         gender: female
+
+  - text: وَجْنَة
+    type: noun
+    gender: female
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        source-page: 1233
+        text:
+          - cheek
+    derived:
+      - derivation: plural
+        text: وَجَنَات

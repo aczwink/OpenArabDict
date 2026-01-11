@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,20 +18,23 @@ root:
   radicals: ط-ل-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 658
           text:
-            - to emerge
+            - to emerge, rise, loom up, come into view, appear, show
+
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 658
           text:
             - to look out, peek out, peep out (من of s.th., على onto s.th.)

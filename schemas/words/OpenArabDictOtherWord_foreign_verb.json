@@ -1,0 +1,26 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict foreign verb definition",
+    "description": "JSON Schema for OpenArabDict foreign verb definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "text": {
+            "type": "string"
+        },
+        "translations": {
+            "type": "array",
+            "items": {
+                "oneOf": [
+                    {
+                        "$ref": "../translations/OpenArabDictFreeTextTranslationEntry.json"
+                    }
+                ]
+            }
+        },
+        "type": {
+            "const": "foreign-verb"
+        }
+    },
+    "required": ["text", "translations", "type"]
+}

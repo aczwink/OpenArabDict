@@ -19,6 +19,9 @@
             "$ref": "./words/OpenArabDictOtherWord_conjunction.json"
         },
         {
+            "$ref": "./words/OpenArabDictOtherWord_foreign_verb.json"
+        },
+        {
             "$ref": "./words/OpenArabDictOtherWord_particle.json"
         },
         {

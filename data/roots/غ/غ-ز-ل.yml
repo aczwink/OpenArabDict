@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -42,6 +42,7 @@ root:
           source-page: 787
           text:
             - to display amorous behavior (ب toward a woman), make love (ب to a woman), court, woo (ب a woman), flirt (ب with a woman)
+            - to eulogize in verses (ب a woman)
       derived:
         - text: غَزَال
           derivation: meaning-related

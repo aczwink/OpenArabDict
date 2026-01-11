@@ -57,7 +57,13 @@ root:
 
     - type: verb
       form: 4
-      translations: []
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 398
+          text:
+            - to satisfy, gratify, please (ه s.o.)
       derived:
         - text: إِرْضَاء
           derivation: verbal-noun
