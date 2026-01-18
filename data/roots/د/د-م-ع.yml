@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,36 +15,27 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ب-خ-ل
+  radicals: د-م-ع
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: ia
-          - dialect: msa
-            parameters: uu
-      translations:
-        - complete: true
-          dialect: msa
-          source: hw4
-          source-page: 55
-          text:
-            - to be niggardly, be stingy (ب with s.th., عن or على with regard to s.o.), scrimp (على ,عن s.o., ب for), stint (ب in, عن or على s.o.), withhold (على ,عن from s.o., ب s.th.)
+            parameters: aa
+      type: verb
       derived:
-        - text: بَخِيل
-          derivation: meaning-related
-          type: adjective
+        - derivation: meaning-related
           gender: male
+          text: دَمْع
+          type: noun
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 338
               text:
-                - avaricious, greedy
+                - tears
           derived:
-            - text: بَخِيلَة
-              derivation: feminine
-              type: adjective
+            - derivation: plural
               gender: female
-              translations: []
+              text: دُمُوع

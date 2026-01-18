@@ -18,15 +18,22 @@ root:
   radicals: و-ع-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ia #TODO: unconfirmed
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to become aware (إلى of)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 124
+          text:
+            - wake up (intr.)
       derived:
         - text: وَعْي
           derivation: verbal-noun

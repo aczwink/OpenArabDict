@@ -361,13 +361,7 @@ words:
         source: hw4-free-text
         text:
           - port, harbor, anchorage
-  - text: دخيلك
-    type: phrase
-    translations:
-      - dialect: northlevant
-        source: hw4-free-text
-        text:
-          - (also دخلك) "please" or "I implore you"
+
   - text: آيَة
     type: noun
     gender: female
@@ -647,24 +641,28 @@ words:
         source: hw4-free-text
         text:
           - fish
+
   - text: شَفَة
     type: noun
     gender: female
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        source-page: 557
         text:
           - lip
     derived:
+      - derivation: plural
+        text: شِفَاه
       - text: شَفَايِف
         derivation: plural
-        type: noun
-        gender: female
         translations:
           - dialect: eg
-            source: hw4-free-text
+            source: free-text
+            url: https://en.wiktionary.org/wiki/%D8%B4%D9%81%D8%A7%D9%8A%D9%81#Egyptian_Arabic
             text:
               - dialect only
+
   - text: فُلَان
     type: noun
     gender: male

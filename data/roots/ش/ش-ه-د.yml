@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -34,19 +34,27 @@ root:
           type: noun
           gender: male
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 571
               text:
-                - |-
-                  1. witness
-                  2. martyr, one killed in battle with the infidels
-                  3. one killed in action
+                - witness
+                - martyr, one killed in battle with the infidels
+                - one killed in action
           derived:
             - text: شُهَدَاء
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
+        - derivation: active-participle
+          gender: male
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 572
+              text:
+                - witness (على for)
+
     - type: verb
       form: 3
       translations:

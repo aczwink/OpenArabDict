@@ -18,6 +18,7 @@
   "dependencies": {
     "acts-util-core": "*",
     "acts-util-node": "*",
+    "dotenv": "^17.2.3",
     "openarabdict-domain": "*"
   }
 }
