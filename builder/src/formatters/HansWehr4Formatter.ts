@@ -35,6 +35,8 @@ function FindErrorneousAbbreviations(input: string)
 function ReplaceAbbreviations(input: string): string
 {
     const abbreviations = [
+        { abbrev: "foll.", text: "following" },
+        { abbrev: "genit.", text: "genitive" },
         { abbrev: "o.s.", text: "oneself" },
         { abbrev: "pass.", text: "passive" },
         { abbrev: "s.o.", text: "someone" },

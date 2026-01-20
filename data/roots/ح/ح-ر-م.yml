@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,29 @@ root:
   radicals: ح-ر-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 201
           text:
-            - to deprive
+            - to deprive, bereave, dispossess, divest (ه ه or ه من s.o. of s.th.), take away, withdraw, withhold (ه ه or من ه or ه من from s.o. s.th.), deny, refuse (ه ه or من ه or ه من to s.o. s.th.)
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          text: حِرْمَان
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 201
+              text:
+                - deprivation, bereavement, dispossession (of s.o. من of s.th.)
+
     - type: verb
       dialect: msa
       form: 4

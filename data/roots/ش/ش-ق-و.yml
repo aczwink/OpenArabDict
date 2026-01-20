@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,24 +15,15 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ل-ء-ل-ء
+  radicals: ش-ق-و
+  ya: true
   words:
-    - type: verb
-      dialect: msa
-      form: 2
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to shine, glitter, glisten, sparkle, gleam, shimmer, glimmer,
-              beam, radiate
-
     - gender: male
-      text: لُؤْلُؤ
-      type: noun
+      text: شَقِيّ
+      type: adjective
       translations:
         - dialect: msa
           source: hw4
-          source-page: 1001
+          source-page: 562
           text:
-            - pearls
+            - unhappy, unlucky, miserable, wretched, distressed

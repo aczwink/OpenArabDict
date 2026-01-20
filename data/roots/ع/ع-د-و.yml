@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -34,8 +34,24 @@ root:
                 - (with foll. acc.) except, save, with the exception of,
                   excepting ...
 
+    - form: 2
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 699
+          text:
+            - to cause to cross, overstep, exceed or transcend
+
     - type: verb
       form: 3
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 699
+          text:
+            - to treat as an enemy (ه s.o.), show enmity (ه toward s.o.), be at war, feud (ه with s.o.)
+            - to counteract, disobey (ه ,ه s.o., s.th.), act in opposition (ه ,ه to), contravene, infringe (ه s.th.)
       derived:
         - derivation: active-participle
           type: adjective

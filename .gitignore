@@ -8,6 +8,7 @@ openarabicconjugation-bridge/dist
 openarabicconjugation-bridge/node_modules
 translator/dist
 translator/node_modules
+translator/.env
 translator/package-lock.json
 verbal-noun-prediction/dist
 verbal-noun-prediction/node_modules
