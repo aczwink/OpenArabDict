@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { AbsURL } from "acts-util-core";
-import { HTTP } from "acts-util-node";
+import { AbsURL } from "@aczwink/acts-util-core";
+import { HTTP } from "@aczwink/acts-util-node";
 import { OpenArabDictDocument, OpenArabDictTranslationEntry } from "openarabdict-domain";
 
 export type TargetTranslationLanguage = "de";

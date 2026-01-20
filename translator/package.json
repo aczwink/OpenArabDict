@@ -16,8 +16,8 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "acts-util-core": "*",
-    "acts-util-node": "*",
-    "openarabdict-domain": "*"
+    "@aczwink/acts-util-core": "^1.0.0",
+    "@aczwink/acts-util-node": "^1.0.0",
+    "openarabdict-domain": "^1.0.0"
   }
 }
