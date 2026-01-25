@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -57,11 +57,6 @@ export function FindHighestConjugatableDialectOf(rootRadicals: string, verbForm:
     if(dialectTypes.length === 0)
         return DialectType.ModernStandardArabic;
     return DialectTree.HighestOf(dialectTypes);
-}
-
-export function FindHighestConjugatableDialect(rootRadicals: string, verb: OpenArabDictVerb)
-{
-    return FindHighestConjugatableDialectOf(rootRadicals, verb.form, verb.translations);
 }
 
 export function MapVerbTypeToOpenArabicConjugation(verbType?: OpenArabDictVerbType): VerbType | undefined

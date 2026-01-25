@@ -18,10 +18,20 @@ root:
   radicals: ر-و-د
   words:
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 425
           text:
-            - to want
+            - to want (ه s.th., ان to do s.th.), wish, have a mind, be willing (ان to do s.th.)
+      derived:
+        - derivation: passive-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 425
+              text:
+                - design, purpose, intention

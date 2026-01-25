@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -361,6 +361,19 @@ export async function CheckWords(doc: OpenArabDictDocument)
             if((verb.form.stem === 1) && (root.radicals === "ءخذ"))
             {
                 console.log("FOUND19", word);
+            }
+        }
+
+        //test: arb/specially_irregular/special_h-y-w_stem4.js
+        if((word.parent?.type === OpenArabDictWordParentType.Verb) && (word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun))
+        {
+            const verbId = word.parent.verbId;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+            if((verb.form.stem === 4) && (root.radicals === "حيو"))
+            {
+                console.log("FOUND30", word);
             }
         }
 

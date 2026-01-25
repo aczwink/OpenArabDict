@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,29 +18,29 @@ root:
   radicals: ح-و-ج
   words:
     - type: verb
-      dialect: msa
-      form: 4
-      translations: []
+      form:
+        stem: 4
+        type: sound
       derived:
         - text: حَاجَة
           derivation: meaning-related
           type: noun
           gender: female
           translations:
+            - dialect: msa
+              source: hw4
+              source-page: 246
+              text:
+                - need (إلى or ب of)
+                - necessity, requirement, prerequisite
+                - natural, bodily need
             - dialect: eg
               source: hw4-free-text
               text:
                 - thing
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - need (إلى or ب of)
           derived:
             - text: حَاجَات⁩
               derivation: plural
-              type: noun
-              gender: female
-              translations: []
     - type: verb
       dialect: msa
       form: 8

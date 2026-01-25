@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -77,7 +77,7 @@ interface ParameterizedStem1DataWithVariants
 interface ParameterizedAdvancedStemData
 {
     stem: AdvancedStemNumber;
-    type?: "sound";
+    type?: "irregular" | "sound";
 }
 
 export type ParameterizedStemData = _LegacyParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,19 @@
 root:
   radicals: ه-و-ي
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1219
+          text:
+            - to collapse
+
     - type: verb
       form:
         stem: 1

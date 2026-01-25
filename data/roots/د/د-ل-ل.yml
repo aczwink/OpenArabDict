@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -81,3 +81,16 @@ root:
               source-page: 335
               text:
                 - pampered, spoiled (child)
+
+    - form: 4
+      type: verb
+      derived:
+        - derivation: active-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 335
+              text:
+                - presumptuous, arrgoant

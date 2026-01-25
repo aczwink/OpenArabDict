@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
 import { Dictionary, ObjectExtensions } from "acts-util-core";
 import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
 import { ParseVocalizedPhrase, ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
@@ -30,6 +30,7 @@ export class DBBuilder
         this.dialects = [];
         this.relations = [];
         this.roots = {};
+        this.translations = new Map();
         this.words = {};
         this.wordsWithEqualSpellingDict = {};
     }
@@ -83,12 +84,13 @@ export class DBBuilder
         return id;
     }
 
-    public AddWord(word: OpenArabDictWord)
+    public AddWord(word: OpenArabDictWord, translations: OpenArabDictTranslationEntry[])
     {
         const id = this.GenerateUniqueWordId(word);
 
         word.id = id;
         this.words[id] = word;
+        this.translations.set(id, translations);
 
         this.AddToSpellingDict(word);
 
@@ -128,7 +130,7 @@ export class DBBuilder
         return this.dialectMap[dialectKey];
     }
 
-    public async Store(path: string)
+    public async StoreMainDict(path: string)
     {
         const finalDB: OpenArabDictDocument = {
             dialects: this.dialects,
@@ -136,12 +138,21 @@ export class DBBuilder
             words: ObjectExtensions.Values(this.words).NotUndefined().ToArray(),
             wordRelations: this.relations
         };
-        //const stringified = JSON.stringify(finalDB, undefined, 2);
         const stringified = JSON.stringify(finalDB);
 
         await fs.promises.writeFile(path, stringified, "utf-8");
 
         return finalDB;
+    }
+
+    public async StoreTranslationsDict(path: string)
+    {
+        const finalDB: OpenArabDictTranslationDocument = {
+            entries: this.translations.Entries().Map(kv => ({ wordId: kv.key, translations: kv.value })).ToArray()
+        };
+        const stringified = JSON.stringify(finalDB);
+
+        await fs.promises.writeFile(path, stringified, "utf-8");
     }
 
     //Private methods
@@ -217,6 +228,7 @@ export class DBBuilder
     private dialects: OpenArabDictDialect[];
     private relations: OpenArabDictWordRelation[];
     private roots: Dictionary<OpenArabDictRoot>;
+    private translations: Map<string, OpenArabDictTranslationEntry[]>;
     private words: Dictionary<OpenArabDictWord>;
     private wordsWithEqualSpellingDict: Dictionary<string[]>;
 }

@@ -1,6 +1,6 @@
 {
     "yaml.schemas": {
         "./schemas/OpenArabDictRoot.json": "/data/roots/**/*.yml",
-        "./schemas/words.json": ["/data/*.yml", "/data/dialectal/*.yml"]
+        "./schemas/words.json": ["/data/*.yml", "/data/dialectal/*.yml", "/data/foreign-borrowings/*.yml"]
     }
 }

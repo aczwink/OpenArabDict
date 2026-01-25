@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,10 +18,11 @@ root:
   radicals: غ-ل-و
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -29,3 +30,13 @@ root:
             - |-
               1. to become expensive, undergo a price raise (merchandise)
               2. to be expensive, be high priced
+      derived:
+        - derivation: active-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 799
+              text:
+                - valuable, costly

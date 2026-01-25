@@ -41,6 +41,7 @@ function ReplaceAbbreviations(input: string): string
         { abbrev: "pass.", text: "passive" },
         { abbrev: "s.o.", text: "someone" },
         { abbrev: "s.th.", text: "something" },
+        { abbrev: "zool.", text: "zoology" },
     ];
 
     for (const abbrev of abbreviations)

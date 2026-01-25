@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -41,10 +41,11 @@ root:
             - allow, permit
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 499
           text:
-            - to forgive
+            - to show o.s. tolerant (ه with s.o., في or ب in), treat kindly, with indulgence (في or ه ب s.o. in the matter of), forgive (في or ه ب s.o. s.th.)

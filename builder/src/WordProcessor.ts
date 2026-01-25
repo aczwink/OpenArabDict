@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -172,9 +172,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 type: result.type,
                 isMale: result.isMale!,
                 text,
-                translations,
                 parent: MapParent(g.derivation, parent)
-            });
+            }, translations);
 
             if(g.alias !== undefined)
             {
@@ -211,9 +210,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 id: "",
                 type: result.type,
                 text: o.text,
-                translations,
                 parent: MapParent(o.derivation, parent)
-            });
+            }, translations);
 
             if(o.alias !== undefined)
             {
@@ -247,9 +245,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 form,
                 rootId: root.id,
                 text: wdv.text,
-                translations,
                 parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})
-            });
+            }, translations);
 
             if(v.alias !== undefined)
             {

@@ -35,6 +35,9 @@ root:
               text:
                 - pledge, vow
                 - time, epoch, era
+          derived:
+            - derivation: plural
+              text: عُهُود
 
     - type: verb
       dialect: msa

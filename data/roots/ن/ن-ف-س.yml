@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,27 @@
 root:
   radicals: ن-ف-س
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          text: نَفَس
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1156
+              text:
+                - breath
+          derived:
+            - derivation: plural
+              text: أَنْفَاس
+
     - type: verb
       dialect: msa
       form: 3
@@ -59,5 +80,3 @@ root:
       derived:
         - text: أَنْفُس
           derivation: plural
-          type: noun
-          gender: female

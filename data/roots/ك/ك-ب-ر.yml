@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -52,6 +52,16 @@ root:
                   derivation: feminine
                   type: adjective
                   gender: female
+        - derivation: meaning-related
+          gender: female
+          text: كِبْرِيَاء
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 948
+              text:
+                - pride, haughtiness, presumption, arrogance
                   
     - type: verb
       dialect: msa

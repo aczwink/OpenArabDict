@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -95,6 +95,20 @@ root:
           source: hw4-free-text
           text:
             - to go away, leave, depart, absent o.s.
+
+    - gender: male
+      text: غُرَاب
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 783
+          text:
+            - crow
+            - raven
+      derived:
+        - derivation: plural
+          text: غِرْبَان
 
     - gender: male
       text: مَغْرِب

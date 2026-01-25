@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -28,16 +28,27 @@ root:
           text:
             - to desire, wish, covet, crave (ه s.th.), long (ه for s.th.)
       derived:
-        - text: شَهِيَّة
-          derivation: meaning-related
-          type: noun
-          gender: female
+        - derivation: meaning-related
+          gender: male
+          text: شَهِيَّ
+          type: adjective
           translations:
             - dialect: msa
               source: hw4
               source-page: 574
               text:
-                - appetite
+                - pleasant, agreeable, desirable
+          derived:
+            - derivation: feminine
+              text: شَهِيَّة
+              type: noun
+              gender: female
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 574
+                  text:
+                    - appetite
                 
     - type: verb
       dialect: msa

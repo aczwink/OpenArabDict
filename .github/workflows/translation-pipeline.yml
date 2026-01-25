@@ -1,3 +1,20 @@
+# /**
+#  * OpenArabDict
+#  * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  * 
+#  * This program is free software: you can redistribute it and/or modify
+#  * it under the terms of the GNU Affero General Public License as published by
+#  * the Free Software Foundation, either version 3 of the License, or
+#  * (at your option) any later version.
+#  * 
+#  * This program is distributed in the hope that it will be useful,
+#  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  * GNU Affero General Public License for more details.
+#  * 
+#  * You should have received a copy of the GNU Affero General Public License
+#  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#  * */
 name: Translate dictionary to German
 
 on:
@@ -27,22 +44,6 @@ jobs:
         with:
           repository: aczwink/ACTS-Util
           path: actsutil
-  
-      - name: Building acts-util-core
-        run: |
-          npm install
-          npm run compile
-          npm link
-        working-directory: ./actsutil/core
-
-      #build acts-util-node
-      - name: Building acts-util-node
-        run: |
-          npm link acts-util-core
-          npm install
-          npm run build
-          npm link
-        working-directory: ./actsutil/node
 
       #build domain
       - name: Building OpenArabDict domain
@@ -98,7 +99,6 @@ jobs:
       - name: Upload dict to Azure
         run: |
           az storage blob upload --file ./de.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/de.json --auth-mode login --overwrite
-          az webapp restart --resource-group openarabdict --name openarabdictviewer-backend
         working-directory: ./
 
       #cleanup

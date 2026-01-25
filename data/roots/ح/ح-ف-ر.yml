@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,12 +17,30 @@
 root:
   radicals: ح-ف-ر
   words:
-    - gender: male
-      text: حَفَّار
-      type: noun
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 220
-          text:
-            - driller
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: meaning-related
+          gender: female
+          text: حُفْرَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 219
+              text:
+                - pit
+        - derivation: meaning-related
+          gender: male
+          text: حَفَّار
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 220
+              text:
+                - driller

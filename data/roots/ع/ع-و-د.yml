@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,10 +18,11 @@ root:
   radicals: ع-و-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -30,6 +31,16 @@ root:
               1. to return, come back (ل or إلى to)
               2. to go back, be traceable, be attributable (إلى to)
       derived:
+        - derivation: verbal-noun
+          gender: female
+          text: عَوْدَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 766
+              text:
+                - return
         - text: مَعَاد
           derivation: verbal-noun
           type: noun
@@ -63,25 +74,6 @@ root:
                   source-page: 768
                   text:
                     - revenues
-        - text: عُود
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 766
-              text:
-                - stick, rod, pole
-                - lute(musical instrument)
-              examples:
-                - text: عود الثقاب
-                  translation: matchstick, match
-          derived:
-            - text: أَعْوَاد
-              derivation: plural
-            - text: عِيدَان
-              derivation: plural
         - text: عَادَة
           derivation: meaning-related
           type: noun
@@ -170,3 +162,22 @@ root:
               source: hw4-free-text
               text:
                 - reconquest, recovery, recuperation, regaining, reclamation, retrieval
+
+    - text: عُود
+      type: noun
+      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 766
+          text:
+            - stick, rod, pole
+            - lute(musical instrument)
+          examples:
+            - text: عود الثقاب
+              translation: matchstick, match
+      derived:
+        - text: أَعْوَاد
+          derivation: plural
+        - text: عِيدَان
+          derivation: plural

@@ -58,6 +58,16 @@ root:
           text:
             - to shout, call out, cry out, exclaim
             - to call (ب or ه s.o. or for s.o., also على), summon (ه s.o., also على)
+      derived:
+        - derivation: verbal-noun
+          gender: female
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1118
+              text:
+                - calling (upon s.o.)
 
     - type: verb
       form: 8

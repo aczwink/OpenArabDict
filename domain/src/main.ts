@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -79,7 +79,6 @@ interface OpenArabDictWordBase
 {
     id: string;
     text: string;
-    translations: OpenArabDictTranslationEntry[];
 }
 
 export enum OpenArabDictWordParentType
@@ -210,4 +209,12 @@ export interface OpenArabDictDocument
     roots: OpenArabDictRoot[];
     words: OpenArabDictWord[];
     wordRelations: OpenArabDictWordRelation[];
+}
+
+export interface OpenArabDictTranslationDocument
+{
+    entries: {
+        wordId: string;
+        translations: OpenArabDictTranslationEntry[];
+    }[];
 }

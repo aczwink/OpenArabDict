@@ -28,7 +28,7 @@
                         },
                         "type": {
                             "type": "string",
-                            "enum": ["sound"]
+                            "enum": ["irregular", "sound"]
                         }
                     },
                     "required": ["stem"]

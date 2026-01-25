@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -44,3 +44,29 @@ words:
         source-page: 335
         text:
           - dolphin
+
+  - text: قُبَّر
+    type: noun
+    gender: male
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        source-page: 865
+        text:
+          - lark (zool.)
+    derived:
+      - derivation: singulative
+        text: قُبَّرَة
+        gender: female
+        type: noun
+
+  - text: قِرْد
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 885
+        text:
+          - ape, monkey

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -20,9 +20,19 @@ words:
     translations:
       - dialect: msa
         source: hw4
-        url: http://ejtaal.net/aa/#hw4=43
+        source-page: 30
         text:
           - to, toward
+    derived:
+      - derivation: extension
+        type: particle
+        text: إِلَامَ
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 30
+            text:
+              - (= الى ما) up to where? how far?
 
   - text: بِ
     type: preposition

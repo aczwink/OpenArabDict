@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,12 +17,22 @@
 root:
   radicals: ع-ش-ش
   words:
-    - text: عُشّ
-      type: noun
-      gender: male
+    - form: 2
+      type: verb
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=731
+          source-page: 717
           text:
-            - nest
+            - to build a nest, to nest
+      derived:
+        - derivation: meaning-related
+          text: عُشّ
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 718
+              text:
+                - nest

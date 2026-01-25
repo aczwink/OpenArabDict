@@ -38,3 +38,16 @@ root:
           source-page: 658
           text:
             - to look out, peek out, peep out (من of s.th., على onto s.th.)
+
+    - gender: male
+      text: طَلَل
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 659
+          text:
+            - "used chiefly in the pl.: remains, ruins (of houses)"
+      derived:
+        - derivation: plural
+          text: أَطْلَال

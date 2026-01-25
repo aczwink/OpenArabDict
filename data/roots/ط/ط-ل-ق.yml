@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,18 @@ root:
   radicals: ط-ل-ق
   words:
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 662
           text:
-            - |-
-              to utter, emit (ه a sound)
-
-              أطلق عليه اِسْمَ to name or call s.th.
+            - to free, set free (ه ,ه s.o., s.th., also chem.), release, set at liberty, let go, let off, set loose (ه ,ه s.o., s.th.)
+            - to utter, emit (ه a sound)
+          usage:
+            - text: أطلق عليه اِسْمَ
+              translation: to name or call s.th...., designate s.th. as...
+              type: meaning-in-context
       derived:
         - derivation: verbal-noun
           type: noun

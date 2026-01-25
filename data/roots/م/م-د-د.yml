@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,22 @@ root:
   radicals: م-د-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1052
           text:
             - to extend, distend, expand, dilate (ه s.th.)
+            - to stretch, stretch out (ه s.th.), crane (ه the neck)
+          usage:
+            - text: مد اليه يده
+              translation: to extend one's hand to s.o., show o.s. conciliatory
+              type: example
       derived:
         - text: مُدَّة
           derivation: meaning-related
@@ -108,13 +115,15 @@ root:
                 - stretching, distention, dilation, dilatation, widening
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1052
           text:
             - to be extended, distended, stretched
+            - to extend or reach (إلى to s.th.), stretch, spread (إلى to s.th., over a distance)
+            - to be streched out (hand, إلى toward)
       derived:
         - derivation: verbal-noun
           type: noun
