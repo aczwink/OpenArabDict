@@ -38,13 +38,6 @@ jobs:
         with:
           submodules: true
 
-      #build acts-util-core
-      - name: Checkout ACTS-Util repo
-        uses: actions/checkout@v4
-        with:
-          repository: aczwink/ACTS-Util
-          path: actsutil
-
       #build domain
       - name: Building OpenArabDict domain
         run: |
@@ -56,8 +49,8 @@ jobs:
       #build translator
       - name: Building OpenArabDict translator
         run: |
-          npm link acts-util-core acts-util-node openarabdict-domain
-          npm install
+          npm link openarabdict-domain
+          npm ci
           npm run build
         working-directory: ./translator
 

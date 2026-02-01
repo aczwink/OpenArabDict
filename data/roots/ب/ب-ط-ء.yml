@@ -18,16 +18,44 @@ root:
   radicals: ب-ط-ء
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+        stative-active-participle: true
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=89
+          source-page: 76
           text:
+            - to be slow
             - to tarry, linger, wait, hesitate
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          text: بُطْء
+          type: noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 76
+              text:
+                - slowness, tardiness
+              usage:
+                - text: ببطء
+                  translation: slowly, leisurely, unhurriedly
+                  type: example
+        - derivation: active-participle
+          gender: male
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 76
+              text:
+                - slow, unhurried
             
     - type: verb
       form: 4

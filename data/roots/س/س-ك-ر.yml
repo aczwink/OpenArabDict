@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -33,10 +33,23 @@ root:
               source: hw4-free-text
               text:
                 - drunk, intoxicated
+
+    - form: 2
+      type: verb
+      translations:
+        - complete: true
+          dialect: sy
+          source: hw4
+          source-page: 486
+          text:
+            - to shut, close, lock, bolt (ه s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 45
+          text:
+            - to close
+
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
       derived:
         - text: سُكَّر
           derivation: meaning-related
@@ -77,12 +90,3 @@ root:
                           source: hw4-free-text
                           text:
                             - sweetmeats, candy
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 2
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 45
-              text:
-                - to close

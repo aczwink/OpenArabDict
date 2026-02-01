@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -43,6 +43,10 @@ root:
               text:
                 - posture, pose (of the body, e.g., in dancing, before a camera)
                 - situation
+              usage:
+                - text: الوضع الحالي
+                  translation: the present situation
+                  type: example
         - derivation: passive-participle
           type: noun
           gender: male

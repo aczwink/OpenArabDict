@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -34,6 +34,22 @@ root:
               source-page: 670
               text:
                 - voluntariness, spontaneity (in connection with a legally relevant action, esp. a delict; Isl. Law)
+
+    - form: 5
+      type: verb
+      derived:
+        - derivation: active-participle
+          gender: male
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 671
+              text:
+                - volunteer (also mil.)
+          derived:
+            - derivation: plural
+              text: مُتَطَوِّعُون
 
     - type: verb
       dialect: msa

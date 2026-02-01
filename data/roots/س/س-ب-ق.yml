@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,19 +18,19 @@ root:
   radicals: س-ب-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 459
           text:
-            - to be, come, go, get, or act, before or ahead of s.o. or s.th. (ه,
-              ه)
+            - to be, come, go, get, or act, before or ahead of s.o. or s.th. (ه ,ه)
       derived:
-        - text: سَابِق
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
@@ -41,10 +41,19 @@ root:
                   antecedent, preceding, foregoing, previous, prior
 
                   سابقا formerly, previously
+          derived:
+            - derivation: feminine
+              text: سَابِقَة
+              type: noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 460
+                  text:
+                    - prefix (gram.)
+
     - type: verb
-      dialect: msa
       form: 3
-      translations: []
       derived:
         - text: سِبَاق
           derivation: verbal-noun
@@ -52,8 +61,18 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 460
               text:
-                - |-
-                  1 . race
-                  2. contest
+                - race
+                - contest
+
+
+    - form: 6
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 459
+          text:
+            - to try to beat one another (إلى to)

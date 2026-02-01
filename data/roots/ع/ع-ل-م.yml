@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -68,6 +68,15 @@ root:
         - derivation: passive-participle
           type: adjective
           gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 745
+              text: []
+              usage:
+                - text: المعلوم
+                  translation: the active voice (gram.)
+                  type: meaning-in-context
           derived:
             - text: مَعْلُومَة
               derivation: feminine
@@ -237,29 +246,34 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=758
+              source-page: 745
               text:
                 - notification, advice
                 - information
+          derived:
+            - derivation: nisba
+              gender: male
+              text: إِعْلَامِيّ
+              type: adjective
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 745
+                  text:
+                    - information, communication (in compounds)
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to learn, study (ه s.th.)
-      derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 5
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 12
-              text:
-                - to learn
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 12
+          text:
+            - to learn
 
     - text: مَعْلَم
       type: noun

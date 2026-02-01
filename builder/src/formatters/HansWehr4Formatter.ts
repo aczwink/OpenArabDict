@@ -37,6 +37,8 @@ function ReplaceAbbreviations(input: string): string
     const abbreviations = [
         { abbrev: "foll.", text: "following" },
         { abbrev: "genit.", text: "genitive" },
+        { abbrev: "gram.", text: "grammar" },
+        { abbrev: "mil.", text: "military" },
         { abbrev: "o.s.", text: "oneself" },
         { abbrev: "pass.", text: "passive" },
         { abbrev: "s.o.", text: "someone" },
@@ -66,5 +68,14 @@ export function HansWehr4Formatter(x: TranslationDefinition)
     {
         FindErrorneousAbbreviations(x.text[i]);
         x.text[i] = ReplaceAbbreviations(x.text[i]);
+    }
+
+    if(x.usage !== undefined)
+    {
+        for (const entry of x.usage)
+        {
+            FindErrorneousAbbreviations(entry.translation);
+            entry.translation = ReplaceAbbreviations(entry.translation);
+        }
     }
 }

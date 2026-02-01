@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,16 +17,32 @@
 root:
   radicals: ر-ب-ط
   words:
-    - type: verb
-      dialect: lb
-      form:
+    - form:
         stem: 1
-        parameters: ausu
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ausu
+      type: verb
       translations:
         - dialect: lb
           source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 35
           text:
             - to bind
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          text: رَبْط
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 372
+              text:
+                - fastening, joining, attaching, connecting
 
     - type: verb
       dialect: msa

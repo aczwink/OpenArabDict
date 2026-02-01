@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -52,14 +52,15 @@ root:
                 - follow
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 108
           text:
-            - to follow (ه, ه s.o., s.th.; also = to keep one's mind or eyes on,
-              e.g., on a development)
+            - to follow (ه ,ه s.o., s.th.; also = to keep one's mind or eyes on, e.g., on a development)
+            - to continue (ه s.th.; سيره on one's way), go on (ه with or in)
+
     - type: verb
       dialect: msa
       form: 8

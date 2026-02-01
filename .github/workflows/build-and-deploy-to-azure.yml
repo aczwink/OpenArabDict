@@ -38,13 +38,6 @@ jobs:
         with:
           submodules: true
 
-      #build acts-util-core
-      - name: Checkout ACTS-Util repo
-        uses: actions/checkout@v4
-        with:
-          repository: aczwink/ACTS-Util
-          path: actsutil
-
       #OpenArabicConjugation
       - name: Checkout OpenArabicConjugation repo
         uses: actions/checkout@v4
@@ -54,8 +47,7 @@ jobs:
 
       - name: Building OpenArabicConjugation
         run: |
-          npm link acts-util-core
-          npm install
+          npm ci
           npm run build
           npm link
         working-directory: ./openarabicconjugation/conjugation_engine
@@ -70,7 +62,7 @@ jobs:
 
       - name: Building OpenArabDict OpenArabicConjugation bridge
         run: |
-          npm link acts-util-core openarabdict-domain openarabicconjugation
+          npm link openarabdict-domain openarabicconjugation
           npm install
           npm run build
           npm link
@@ -78,7 +70,7 @@ jobs:
 
       - name: Building OpenArabDict builder
         run: |
-          npm link acts-util-core acts-util-node openarabdict-domain openarabdict-openarabicconjugation-bridge openarabicconjugation
+          npm link acts-util-node openarabdict-domain openarabdict-openarabicconjugation-bridge openarabicconjugation
           npm install
           npm run compile
           npm run build-db

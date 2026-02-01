@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -97,6 +97,15 @@ root:
               url: https://www.arabdict.com/de/english-arabic/%D8%AA%D9%8E%D8%AD%D9%92%D9%85%D9%90%D9%8A%D9%84
               text:
                 - download
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 241
+          text:
+            - to bear, assume, take upon o.s. (ه s.th., e.g., النفقات the expenses, المسؤولية the responsibility)
 
     - type: verb
       form: 8

@@ -30,7 +30,8 @@ root:
           source: hw4
           source-page: 1278
           text:
-            - to stand
+            - to come to a standstill, come to a stop
+            - to stand still
         - dialect: lb
           source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 95
           text:

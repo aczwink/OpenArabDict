@@ -15,33 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ر-ق
+  radicals: ز-ع-م
   words:
-    - form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: ai
-          - dialect: msa
-            parameters: au
-      type: verb
-      derived:
-        - derivation: verbal-noun
-          gender: male
-          text: خَرْق
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 274
-              text:
-                - violation, breach
-
-    - form: 8
-      type: verb
+    - gender: male
+      text: زَعِيم
+      type: noun
       translations:
         - dialect: msa
           source: hw4
-          source-page: 274
+          source-page: 439
           text:
-            - to pierce (ه s.th.)
+            - leader
+      derived:
+        - derivation: plural
+          text: زُعَمَاء

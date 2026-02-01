@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,16 @@ root:
   radicals: ء-ن-س
   words:
     - type: verb
-      dialect: msa
       form: 3
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 38
           text:
-            - |-
-              1. to be friendly, nice (ه to s.o.)
-              2. to entertain, amuse (ه s.o.)
+            - to be friendly, nice (ه to s.o.)
+            - to entertain, amuse (ه s.o.)
+
     - text: إِنْسَان
       type: noun
       gender: male
@@ -35,6 +36,18 @@ root:
           source: hw4-free-text
           text:
             - الإنسان someone, somebody, one, a person, people
+      derived:
+        - derivation: nisba
+          gender: male
+          text: إِنْسَانِيّ
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 39
+              text:
+                - humanitarian, philanthropist
+
     - text: إِنْسِيّ
       type: noun
       gender: male
@@ -43,3 +56,13 @@ root:
           source: hw4-free-text
           text:
             - human; human being
+
+    - gender: female
+      text: آنِسَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 39
+          text:
+            - young lady, miss

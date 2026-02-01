@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,33 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ر-ق
+  radicals: ق-س-ط
   words:
-    - form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: ai
-          - dialect: msa
-            parameters: au
-      type: verb
-      derived:
-        - derivation: verbal-noun
-          gender: male
-          text: خَرْق
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 274
-              text:
-                - violation, breach
-
-    - form: 8
-      type: verb
+    - gender: male
+      text: قِسْط
+      type: noun
       translations:
         - dialect: msa
           source: hw4
-          source-page: 274
+          source-page: 892
           text:
-            - to pierce (ه s.th.)
+            - quantity, amount, measure, extent

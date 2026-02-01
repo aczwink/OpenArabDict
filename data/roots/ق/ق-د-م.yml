@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -53,23 +53,20 @@ root:
               source: hw4-free-text
               text:
                 - one arriving, arriver, arrival, newcomer
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 876
           text:
-            - >-
-              1. to make or or let (ه s.o., s.th.) precede, go before, or lead
-              the way
-
-              2. to offer, proffer, tender, extend, present, produce, exhibit,
-              display (ه s.th., إلى or ل to s.o.)
-
-              3. to hand over, deliver (ه s.th., إلى or ل to s.o.)
-
-              4. to give as a present
+            - to make or let (ه ,ه s.o., s.th.) precede, go before, or lead the way
+            - to prepare, ready, keep ready, provide, set aside, earmark (ه ل s.th. for)
+            - to provide, make provisions (ل for)
+            - to offer, proffer, tender, extend, present, produce, exhibit, display (ه s.th., إلى or ل to s.o.)
+            - to hand over, deliver (ه s.th., إلى or ل to s.o.)
+            - to give as a present (ه s.th., إلى or ل to s.o.), offer up, present (الى or ه ,ه ل s.o., s.th. to s.o., to s.th.)
       derived:
         - text: قَدُّوم
           derivation: meaning-related
@@ -97,7 +94,6 @@ root:
                 - introduction
 
     - type: verb
-      dialect: msa
       form: 5
       derived:
         - derivation: verbal-noun
@@ -120,6 +116,3 @@ root:
       derived:
         - text: أقدام
           derivation: plural
-          type: noun
-          gender: female
-          translations: []

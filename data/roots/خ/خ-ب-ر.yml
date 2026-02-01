@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -63,7 +63,6 @@ root:
               derivation: plural
 
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
@@ -71,6 +70,22 @@ root:
           text:
             - to notify, inform, apprise, advise (ب ه s.o. of), let know, tell
               (ب ه s.o. about)
+      derived:
+        - derivation: verbal-noun
+          gender: male
+          type: noun
+          derived:
+            - derivation: nisba
+              gender: male
+              text: إِخْبَارِيّ
+              type: adjective
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 262
+                  text:
+                    - news-, information- (in compounds)
 
     - text: خَبَر
       type: noun

@@ -18,15 +18,22 @@ root:
   radicals: ق-ع-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to remain seated
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 75
+          text:
+            - to sit
       derived:
         - text: قُعُود
           derivation: verbal-noun
@@ -37,17 +44,6 @@ root:
               source: hw4-free-text
               text:
                 - sitting
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aisu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 75
-              text:
-                - to sit
 
     - type: verb
       dialect: msa
@@ -57,3 +53,21 @@ root:
           source: hw4-free-text
           text:
             - to be pensioned off, retire
+
+    - gender: female
+      text: قَاعِدَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 913
+          text:
+            - basis
+            - precept, rule, principle, maxim
+          usage:
+            - text: قواعد اللغة
+              translation: grammar (of classical Arabic)
+              type: meaning-in-context
+      derived:
+        - derivation: plural
+          text: قَوَاعِد
