@@ -41,15 +41,13 @@ jobs:
       #build domain
       - name: Building OpenArabDict domain
         run: |
-          npm install
+          npm ci
           npm run build
-          npm link
         working-directory: ./domain
 
       #build translator
       - name: Building OpenArabDict translator
         run: |
-          npm link openarabdict-domain
           npm ci
           npm run build
         working-directory: ./translator
