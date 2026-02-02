@@ -61,13 +61,50 @@ jobs:
           npm publish
         working-directory: ./domain
 
-  build_and_deploy:
+  publish-bridge:
     needs: publish-domain
     runs-on: ubuntu-latest
     permissions:
       contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Check package version vs registry
+        id: version_check
+        uses: dupy-ts/check-package-version@main
+        with:
+          path: ./openarabicconjugation-bridge
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Echo versions
+        run: |
+            echo "Committed version: ${{ steps.version_check.outputs.committed-version }}"
+            echo "Retrieved version: ${{ steps.version_check.outputs.retrieved-version }}"
+            echo "Has been published: ${{ steps.version_check.outputs.is-published }}"
+
+      - name: Publish package
+        if: steps.version_check.outputs.is-new-version == 'true' || steps.version_check.outputs.is-published == 'false'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm ci
+          npm run build
+          npm publish
+        working-directory: ./openarabicconjugation-bridge
+
+  deploy_dict_to_azure:
+    needs: publish-bridge
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
       id-token: write
-    name: Build and Deploy
+    name: Build dictionary and deploy to Azure
     
     steps:
       - uses: actions/checkout@v4
@@ -75,16 +112,8 @@ jobs:
           submodules: true
 
       #OpenArabDict
-      - name: Building OpenArabDict OpenArabicConjugation bridge
+      - name: Building OpenArabDict builder and generating dictionary
         run: |
-          npm link openarabdict-domain openarabicconjugation
-          npm ci
-          npm run build
-        working-directory: ./openarabicconjugation-bridge
-
-      - name: Building OpenArabDict builder
-        run: |
-          npm link openarabdict-domain openarabdict-openarabicconjugation-bridge openarabicconjugation
           npm ci
           npm run compile
           npm run build-db

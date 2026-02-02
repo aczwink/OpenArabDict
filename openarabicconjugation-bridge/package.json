@@ -14,8 +14,8 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "acts-util-core": "*",
-    "openarabdict-domain": "*",
+    "@aczwink/acts-util-core": "^1.0.0",
+    "@aczwink/openarabdict-domain": "^1.0.0",
     "openarabicconjugation": "*"
   }
 }
