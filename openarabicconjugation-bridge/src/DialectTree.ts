@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -15,10 +15,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { Dictionary } from "acts-util-core";
-import { OpenArabDictDialect } from "openarabdict-domain";
-import { DialectType, GetAllConjugatableDialects } from "openarabicconjugation/dist/Dialects";
-import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
+import { Dictionary } from "@aczwink/acts-util-core";
+import { OpenArabDictDialect } from "@aczwink/openarabdict-domain";
+import { DialectType, GetAllConjugatableDialects } from "@aczwink/openarabicconjugation/dist/Dialects";
+import { GetDialectMetadata } from "@aczwink/openarabicconjugation/dist/DialectsMetadata";
 
 interface DialectNode
 {

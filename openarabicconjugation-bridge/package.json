@@ -1,5 +1,5 @@
 {
-  "name": "openarabdict-openarabicconjugation-bridge",
+  "name": "@aczwink/openarabdict-openarabicconjugation-bridge",
   "version": "1.0.0",
   "description": "",
   "main": "dist/main.js",
@@ -16,6 +16,6 @@
   "dependencies": {
     "@aczwink/acts-util-core": "^1.0.0",
     "@aczwink/openarabdict-domain": "^1.0.0",
-    "openarabicconjugation": "*"
+    "@aczwink/openarabicconjugation": "^1.0.0"
   }
 }
