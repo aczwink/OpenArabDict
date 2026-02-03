@@ -19,7 +19,7 @@ name: Build and deploy to Azure
 
 on:
   push:
-    branches: [ "main", "pipeline" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
   workflow_dispatch:
