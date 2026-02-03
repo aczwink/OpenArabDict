@@ -1,6 +1,5 @@
 builder/dist
 builder/node_modules
-builder/package-lock.json
 domain/dist
 domain/node_modules
 openarabicconjugation-bridge/dist
