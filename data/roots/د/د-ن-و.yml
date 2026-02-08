@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,6 +18,22 @@ root:
   radicals: د-ن-و
   ya: true
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 340
+          text: []
+          usage:
+            - text: دنا به من
+              translation: to bring s.o. close to ...
+              type: meaning-in-context
+
     - text: دُنْيَا
       type: noun
       gender: female

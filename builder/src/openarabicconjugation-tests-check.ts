@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictDocument, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictVerbType, OpenArabDictWordParentType } from "openarabdict-domain";
-import { Letter } from "openarabicconjugation/dist/Definitions";
+import { OpenArabDictDocument, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictVerbType, OpenArabDictWordParentType } from "@aczwink/openarabdict-domain";
+import { Letter } from "@aczwink/openarabicconjugation/dist/Definitions";
 
 function ExtractParameters(verb: OpenArabDictVerb)
 {

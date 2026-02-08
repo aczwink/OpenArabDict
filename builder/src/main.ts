@@ -19,13 +19,13 @@ import fs from "fs";
 import path from "path";
 import YAML from 'yaml';
 import { DBBuilder } from "./DBBuilder";
-import { OpenArabDictWordRelationshipType } from "openarabdict-domain";
+import { OpenArabDictWordRelationshipType } from "@aczwink/openarabdict-domain";
 import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
 import { CheckWords } from "./openarabicconjugation-tests-check";
 import { VerbalNounCounter } from "./VerbalNounCounter";
 import { JSONSchemaLoader } from "./JSONSchemaLoader";
-import { GlobalInjector } from "acts-util-node";
+import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
 
 interface DialectDefinition

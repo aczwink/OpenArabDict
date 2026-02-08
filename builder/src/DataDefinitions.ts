@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { AdvancedStemNumber } from "openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { _LegacyParameterizedStem1Data } from "./_LegacyDataDefinition";
 
 export interface UsageDefinition

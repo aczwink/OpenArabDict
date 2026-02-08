@@ -15,17 +15,16 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-
-import { OpenArabDictVerbType } from "openarabdict-domain";
+import { Dialects } from "@aczwink/openarabicconjugation";
+import { OpenArabDictVerbType } from "@aczwink/openarabdict-domain";
 import { ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
-import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
 import { ExtractRoot } from "../shared";
-import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
+import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
 import { _LegacyExtractDialect } from "../_LegacyDataDefinition";
-import { DialectTree, MapVerbTypeToOpenArabicConjugation } from "openarabdict-openarabicconjugation-bridge";
-import { GlobalInjector } from "acts-util-node";
+import { DialectTree, MapVerbTypeToOpenArabicConjugation } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "../services/StatisticsCounterService";
 
 function MapVerbType(verb: VerbWordDefinition)
@@ -72,7 +71,7 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
     const oadVerbType = MapVerbTypeFromVariant(variant);
     const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
 
-    const meta = GetDialectMetadata(dialectType);
+    const meta = Dialects.GetDialectMetadata(dialectType);
     const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, variant.parameters);
     const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
     if(!choices.types.includes(variant.parameters))

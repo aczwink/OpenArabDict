@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
@@ -58,4 +58,7 @@ function MapType(word: WordDefinition)
 export function ValidateType(validator: WordDefinitionValidator)
 {
     validator.type = MapType(validator.wordDefinition)
+
+    if(validator.wordDefinition.derivation === "verbal-noun")
+        validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
 }

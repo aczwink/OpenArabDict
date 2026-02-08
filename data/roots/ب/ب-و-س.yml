@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,28 +15,43 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: غ-ر-ر
+  radicals: ب-و-س
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: au
+            parameters: uu
+      type: verb
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
-          source-page: 781
+          source-page: 100
           text:
-            - to mislead, deceive, beguile (ب s.o.)
+            - to kiss (ه s.o.)
       derived:
-        - derivation: passive-participle
-          type: adjective
-          gender: male
+        - derivation: verbal-noun
+          text: بَوْس
+          
+        - derivation: meaning-related
+          text: بَوْسَة
+          type: noun
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              source-page: 782
+              source-page: 100
               text:
-                - deluded, dazzled, blind
-                - vain, conceited, overweening, snobbish
+                - kiss
+
+        - derivation: meaning-related
+          text: بُوسَة
+          type: noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 100
+              text:
+                - kiss

@@ -16,11 +16,11 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "openarabdict-domain";
-import { Dictionary, ObjectExtensions } from "acts-util-core";
-import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
-import { ParseVocalizedPhrase, ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
-import { DialectTree } from "openarabdict-openarabicconjugation-bridge/dist/DialectTree";
+import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { Dictionary, ObjectExtensions } from "@aczwink/acts-util-core";
+import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
+import { ParseVocalizedPhrase, ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { DialectTree } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 
 export class DBBuilder
 {

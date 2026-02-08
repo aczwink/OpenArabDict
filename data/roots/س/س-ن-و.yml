@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,47 +15,41 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ج-ل-س
+  radicals: س-ن-و
+  ya: true
   words:
-    - type: verb
-      dialect: msa
-      form:
+    - form:
         stem: 1
-        parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to sit down (إلى with s.o., at a table, etc., على on a chair)
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
       derived:
-        - text: جَلْسَة
-          derivation: meaning-related
-          type: noun
-          gender: female
+        - derivation: verbal-noun
+          text: سَنَاء
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 509
               text:
-                - session (of parliament, of a committee, of a court, etc)
-          derived:
-            - text: جَلَسَات
-              derivation: plural
-        - text: جُلُوس
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - sitting, sitting down
-        - derivation: noun-of-place
-          gender: male
-          text: مَجْلِس
+                - brilliance, resplendence, spendor, radiance
+
+        - derivation: meaning-related
+          text: سَنًى
           type: noun
           translations:
             - dialect: msa
               source: hw4
-              source-page: 155
+              source-page: 509
               text:
-                - party, gathering, meeting
+                - brilliance, resplendence, splendor
+
+        - derivation: meaning-related
+          text: سَنًا
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 509
+              text:
+                - brilliance, resplendence, splendor

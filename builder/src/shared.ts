@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { TreeTrace } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
 

@@ -16,10 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictVerbForm, OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictVerbForm, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "./DataDefinitions";
 import { TreeTrace } from "./TreeTrace";
-import { GlobalInjector } from "acts-util-node";
+import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "./services/StatisticsCounterService";
 
 type InferableValue = boolean | number | string;

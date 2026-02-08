@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType } from "openarabdict-domain";
+import { OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
 export function ValidateFeminine(validator: WordDefinitionValidator)
