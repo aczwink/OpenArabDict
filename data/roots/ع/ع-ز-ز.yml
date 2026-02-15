@@ -18,17 +18,19 @@ root:
   radicals: ع-ز-ز
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 712
           text:
-            - |-
-              1. to be or become strong, powerful, respected
-              2. to be hard, difficult (على for s.o.)
+            - to be or become strong, powerful, respected
+            - to be or become rare, scarce, be scarcely to be found
+            - to be hard, difficult (على for s.o.)
       derived:
         - text: عَزِيز
           derivation: meaning-related

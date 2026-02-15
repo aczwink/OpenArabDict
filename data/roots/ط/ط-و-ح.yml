@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,11 +17,24 @@
 root:
   radicals: ط-و-ح
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 668
+          text:
+            - طاح به to carry or sweep s.o. or s.th. away
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 668
           text:
-            - to get lost
+            - to cause s.th. (ه) to get lost

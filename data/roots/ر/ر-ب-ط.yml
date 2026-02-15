@@ -80,23 +80,27 @@ root:
           source-page: 372
           text:
             - to bind o.s., commit o.s., engage o.s.
+            - to be bound (ب by, also, e.g., by an obligation), be tied (ب to)
             - to be linked, be connected (ب with)
       derived:
-        - text: اِرْتِبَاط
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 372
               text:
                 - connectedness, connection, link
-        - text: مُرْتَبِط
-          derivation: active-participle
+                - contact, liaison
+                - obligation, engagement, commitment
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 373
               text:
                 - connected, linked (ب with)
+                - bound, committed (ب by)

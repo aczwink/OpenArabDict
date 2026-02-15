@@ -464,17 +464,7 @@ words:
         source: hw4-free-text
         text:
           - when (at what time ?)
-  - text: لَيتَ
-    type: particle
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - >-
-            and يا ليت (mostly with foll. noun in acc. or pron. suffix, also
-            with أنَّ) would God...! if only ...!
 
-            يا ليت if it were only so!
   - text: رَأْسْمَال
     type: noun
     gender: male
@@ -1082,6 +1072,18 @@ words:
     derived:
       - text: ذَات
         derivation: feminine
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 363
+            text: []
+            usage:
+              - text: ذات يوم
+                translation: one day
+                type: meaning-in-context
+              - text: في ذات يوم
+                translation: one day
+                type: meaning-in-context
 
   - text: عَنْكَبُوت
     type: noun

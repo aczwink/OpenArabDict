@@ -70,6 +70,8 @@ root:
                 - strange, foreign, alien, extraneous (على or عن to s.o.)
                 - strange, odd, queer, quaint, unusual, extraordinary, curious, remarkable, peculiar
           derived:
+            - derivation: plural
+              text: غُرَبَاء
             - text: غَرِيبَة
               derivation: feminine
               type: noun

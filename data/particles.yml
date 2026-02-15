@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -103,6 +103,30 @@ words:
         text:
           - not
           - no! with apoc. expressing negative imperative لا تقل don't say! with indef. acc. expressing a general negation
+
+  - text: لَيتَ
+    type: particle
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 1039
+        text:
+          - (mostly with foll. noun in acc. or pron. suffix, also with أنَّ) would God...! if only ...!
+        usage:
+          - text: ليته كان هنا
+            translation: I wish he were here! if only he were here!
+            type: example
+    derived:
+      - derivation: extension
+        type: particle
+        text: يَا لَيْتَ
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 1039
+            text:
+              - (mostly with foll. noun in acc. or pron. suffix, also with أنَّ) would God...! if only ...!
+              - if it were only so!
 
   - text: مَتَى
     type: particle

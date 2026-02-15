@@ -43,7 +43,7 @@ export interface GenderedWordDefinition
 {
     type?: "adjective" | "noun" | "numeral" | "pronoun";
     alias?: string;
-    derivation: "active-participle" | "feminine" | "passive-participle" | "plural" | "verbal-noun";
+    derivation: "active-participle" | "feminine" | "passive-participle" | "plural" | "tool-noun" | "verbal-noun";
     gender?: "male" | "female";
     text?: string;
     translations: TranslationDefinition[];

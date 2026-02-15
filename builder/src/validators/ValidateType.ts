@@ -61,4 +61,6 @@ export function ValidateType(validator: WordDefinitionValidator)
 
     if(validator.wordDefinition.derivation === "verbal-noun")
         validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+    else if(validator.wordDefinition.derivation === "tool-noun")
+        validator.Infer("type", [OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
 }

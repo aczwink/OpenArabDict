@@ -1,37 +1,22 @@
 {    
     "$schema": "https://json-schema.org/draft-07/schema#",
-    "title": "OpenArabDict derived word definition",
-    "description": "JSON Schema for OpenArabDict derived word definitions",
+    "title": "OpenArabDict verb derived word definition",
+    "description": "JSON Schema for OpenArabDict verb derived word definitions",
     "type": "object",
     "additionalProperties": false,
     "properties": {
         "derived": {
             "type": "array",
             "items": {
-                "$ref": "#"
+                "$ref": "./OpenArabDictWord_derived.json"
             }
         },
         "derivation": {
             "type": "string",
             "enum": [
-                "adverbial-accusative",
-                "elative-degree",
-                "extension",
-                "feminine",
-                "instance-noun",
-                "nisba",
-                "noun-of-place",
-                "passive-participle",
-                "plural",
-                "singulative",
-                "tool-noun"
-            ]
-        },
-        "gender": {
-            "type": "string",
-            "enum": [
-                "female",
-                "male"
+                "active-participle",
+                "meaning-related",
+                "verbal-noun"
             ]
         },
         "text": {
@@ -53,11 +38,7 @@
         "type": {
             "enum": [
                 "adjective",
-                "adverb",
-                "noun",
-                "particle",
-                "preposition",
-                "pronoun"
+                "noun"
             ]
         }
     },

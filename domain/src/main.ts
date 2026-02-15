@@ -101,7 +101,8 @@ export enum OpenArabDictVerbDerivationType
     ActiveParticiple = 2,
     PassiveParticiple = 3,
     Colloquial = 4,
-    NounOfPlace = 5
+    NounOfPlace = 5,
+    ToolNoun = 6
 }
 
 export interface OpenArabDictWordVerbParent
@@ -133,6 +134,8 @@ export enum OpenArabDictNonVerbDerivationType
     AdverbialAccusative = 7,
     //Relation from x to y means: x is instance noun of verbal noun y
     InstanceNoun = 8,
+    //Relation from x to y means: x is the definite state of word y (i.e. adding the article al-)
+    DefinitiveState = 9,
 }
 
 export interface OpenArabDictOtherWordParent

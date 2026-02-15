@@ -8,7 +8,7 @@
         "derived": {
             "type": "array",
             "items": {
-                "$ref": "./OpenArabDictWord_derived.json"
+                "$ref": "./OpenArabDictWord_verbderived.json"
             }
         },
         "form": {

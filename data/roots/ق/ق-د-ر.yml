@@ -98,6 +98,9 @@ root:
               url: http://ejtaal.net/aa/#hw4=887
               text:
                 - fate, destiny, lot
+          derived:
+            - derivation: plural
+              text: أَقْدَار
 
     - type: verb
       form: 2

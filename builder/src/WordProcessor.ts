@@ -93,6 +93,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 return OpenArabDictVerbDerivationType.NounOfPlace;
             case "passive-participle":
                 return OpenArabDictVerbDerivationType.PassiveParticiple;
+            case "tool-noun":
+                return OpenArabDictVerbDerivationType.ToolNoun;
             case "verbal-noun":
                 return OpenArabDictVerbDerivationType.VerbalNoun;
             default:

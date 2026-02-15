@@ -17,6 +17,19 @@
 root:
   radicals: ش-ي-ء
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 579
+          text:
+            - to wish (ه s.th., ان that)
+
     - text: شَيْء
       type: noun
       gender: male

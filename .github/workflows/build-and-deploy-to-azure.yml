@@ -112,6 +112,11 @@ jobs:
         with:
           submodules: true
 
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+
       #OpenArabDict
       - name: Building OpenArabDict builder and generating dictionary
         run: |

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -33,10 +33,21 @@ words:
     gender: male
     translations:
       - dialect: msa
-        source: hw4 #http://ejtaal.net/aa/#hw4=59
+        source: hw4
+        source-page: 46
         text:
           - (with foll. genit. or suffix) which? what? what kind of? whoever, whosoever
           - any, every, no matter what...
+    derived:
+      - derivation: extension
+        text: أَيُّهَا
+        type: particle
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 48
+            text:
+              - (vocative part., with article before the foll. noun) O...!
 
   - text: ذَا
     type: pronoun

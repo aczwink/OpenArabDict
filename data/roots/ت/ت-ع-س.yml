@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,36 +15,26 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ع-ه-د
+  radicals: ت-ع-س
   words:
-    - type: verb
-      dialect: msa
-      form:
+    - form:
         stem: 1
-        parameters: ia
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: msa
+            parameters: ia
+        stative-active-participle: true
+      type: verb
       derived:
-        - text: عَهْد
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: active-participle
+          type: adjective
           translations:
             - dialect: msa
               source: hw4
-              source-page: 763
+              source-page: 114
               text:
-                - pledge, vow
-                - contract, compact, covenant, pact, treaty, agreement
-                - time, epoch, era
+                - wretched, miserable, unfortunate, unhappy
           derived:
             - derivation: plural
-              text: عُهُود
-
-    - type: verb
-      dialect: msa
-      form: 3
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to promise
+              text: تُعَسَاء
