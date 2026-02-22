@@ -65,9 +65,8 @@ root:
           text:
             - other than (with dependent genit.), different from, unlike, no, not, non-, un-, in-, dis-
       derived:
-        - derivation: extension #TODO: definite
+        - derivation: definite-state
           text: الْغَيْر
-          type: noun
           translations:
             - dialect: msa
               source: hw4

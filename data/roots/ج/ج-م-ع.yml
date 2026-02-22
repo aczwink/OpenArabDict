@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -131,6 +131,15 @@ root:
               text:
                 - add, add up
                 - harvest
+
+    - form: 2
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 159
+          text:
+            - to pull together into unity (هم people)
 
     - type: verb
       dialect: msa

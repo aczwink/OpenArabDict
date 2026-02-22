@@ -16,7 +16,16 @@
             "enum": [
                 "active-participle",
                 "meaning-related",
+                "noun-of-place",
+                "passive-participle",
                 "verbal-noun"
+            ]
+        },
+        "gender": {
+            "type": "string",
+            "enum": [
+                "female",
+                "male"
             ]
         },
         "text": {

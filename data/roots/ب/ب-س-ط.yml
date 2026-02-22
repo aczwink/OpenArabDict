@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,51 @@
 root:
   radicals: ب-س-ط
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+        stative-active-participle: true
+      type: verb
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 72
+              text:
+                - simple
+              usage:
+                - text: بسيطة
+                  translation: a simple matter! no problem!
+                  type: meaning-in-context
+        - derivation: active-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 72
+              text:
+                - simple souls, ingenuous people
+
+        - derivation: verbal-noun
+          text: بَسَاطَة
+          type: noun
+          gender: female
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 72
+              text:
+                - simplicity, plainness
+              usage:
+                - text: بِبَسَاطَة
+                  translation: merely, only, simply, easily, without further ado
+                  type: meaning-in-context
+
     - type: verb
       dialect: msa
       form: 7
@@ -44,23 +89,3 @@ root:
           source: hw4-free-text
           text:
             - carpet, rug
-
-    - text: بَسَاطَة
-      type: noun
-      gender: female
-      translations:
-        - dialect: msa
-          source: hw4
-          url: http://ejtaal.net/aa/#hw4=85
-          text:
-            - simplicity, plainness
-      derived:
-        - text: بِبَسَاطَة
-          derivation: extension
-          type: adverb
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=85
-              text:
-                - merely, only, simply, easily, without further ado

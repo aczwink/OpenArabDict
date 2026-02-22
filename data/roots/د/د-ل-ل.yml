@@ -18,31 +18,34 @@ root:
   radicals: د-ل-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 333
           text:
-            - to show, indicate, direct
+            - to show, demonstrate, point out (ه على to s.o. s.th.)
+            - to lead, guide, direct, conduct (إلى or ه على s.th. to), show s.o. (ه) the way (الى or على to)
+            - to show, indicate, mark (على s.th.)
       derived:
-        - text: دَليل
+        - text: دَلِيل
           derivation: meaning-related
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 334
               text:
-                - sign
+                - sign, token
+                - proof, evidence (على of)
           derived:
             - text: أَدِلَّة
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
         - text: دَلَالَة
           derivation: verbal-noun
           type: noun
@@ -52,6 +55,22 @@ root:
               source: hw4-free-text
               text:
                 - indication (على of)
+
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: دَلَال
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 334
+              text:
+                - pampering, coddling, spoiling
 
     - type: verb
       form: 2

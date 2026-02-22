@@ -113,8 +113,13 @@ words:
         url: http://ejtaal.net/aa/#hw4=1086
         text:
           - with
-          - مَعَ ذٰلِكَ or مع هذا in spite of it, nevertheless, notwithstanding,
-            still
+        usage:
+          - text: مَعَ ذٰلِكَ
+            translation: in spite of it, nevertheless, notwithstanding, still
+            type: meaning-in-context
+          - text: مع هذا
+            translation: in spite of it, nevertheless, notwithstanding, still
+            type: meaning-in-context
     derived:
       - text: مَعًا
         derivation: adverbial-accusative

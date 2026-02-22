@@ -38,9 +38,11 @@ root:
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 137
           text:
             - to quarrel, wrangle, bicker (ه with s.o.)
+            - to argue, debate (ه with s.o.)
       derived:
         - text: جِدَال
           derivation: verbal-noun

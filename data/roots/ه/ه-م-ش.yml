@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -43,3 +43,14 @@ root:
                   url: http://ejtaal.net/aa/#hw4=1225
                   text:
                     - marginal notes (على on)
+
+            - derivation: nisba
+              text: هَامِشِيّ
+              type: adjective
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 1213
+                  text:
+                    - marginal

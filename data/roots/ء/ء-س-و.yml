@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -16,6 +16,7 @@
 
 root:
   radicals: ء-س-و
+  ya: true
   words:
     - type: verb
       dialect: msa
@@ -33,6 +34,15 @@ root:
               3. to console, comfort (ه s.o.)
 
               4. to treat, cure (ه s.th., medically)
+
+    - text: مَأْسَاة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 21
+          text:
+            - tragedy, drama
 
     - text: مَأْسَوِيّ
       alias: مَأْسَاوِيّ

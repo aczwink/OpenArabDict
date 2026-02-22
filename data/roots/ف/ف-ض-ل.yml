@@ -39,7 +39,8 @@ root:
             - dialect: msa
               source: hw4
               source-page: 840
-              text: []
+              text:
+                - kindness, graciousness, amiability
               usage:
                 - text: من فضلك
                   translation: please! if you please

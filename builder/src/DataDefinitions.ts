@@ -43,7 +43,7 @@ export interface GenderedWordDefinition
 {
     type?: "adjective" | "noun" | "numeral" | "pronoun";
     alias?: string;
-    derivation: "active-participle" | "feminine" | "passive-participle" | "plural" | "tool-noun" | "verbal-noun";
+    derivation: "active-participle" | "definite-state" | "feminine" | "instance-noun" | "noun-of-place" | "passive-participle" | "plural" | "singulative" | "tool-noun" | "verbal-noun";
     gender?: "male" | "female";
     text?: string;
     translations: TranslationDefinition[];
@@ -54,7 +54,7 @@ export interface OtherWordDefinition
 {
     type: "adverb" | "conjunction" | "foreign-verb" | "interjection" | "particle" | "phrase" | "preposition";
     alias?: string;
-    derivation: "extension";
+    derivation: "adverbial-accusative" | "extension";
     text: string;
     translations: TranslationDefinition[];
     derived?: WordDefinition[];

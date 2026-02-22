@@ -43,6 +43,21 @@ root:
               url: http://ejtaal.net/aa/#hw4=254
               text:
                 - carrying, bearing
+
+        - derivation: meaning-related
+          text: حَمْلَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 241
+              text:
+                - attack (على on)
+                - offensive
+          derived:
+            - derivation: plural
+              text: حَمَلَات
+
         - derivation: active-participle
           type: noun
           gender: male

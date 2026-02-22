@@ -90,13 +90,22 @@ root:
                   translations: []
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 782
           text:
             - to go away, leave, depart, absent o.s.
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 782
+          text:
+            - to go to a foreign country, emigrate
 
     - gender: male
       text: غُرَاب

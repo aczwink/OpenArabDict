@@ -110,6 +110,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 return OpenArabDictNonVerbDerivationType.AdverbialAccusative;
             case "colloquial":
                 return OpenArabDictNonVerbDerivationType.Colloquial;
+            case "definite-state":
+                return OpenArabDictNonVerbDerivationType.DefinitiveState;
             case "elative-degree":
                 return OpenArabDictNonVerbDerivationType.ElativeDegree;
             case "extension":

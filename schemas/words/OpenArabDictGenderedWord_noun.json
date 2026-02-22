@@ -38,5 +38,5 @@
             "const": "noun"
         }
     },
-    "required": ["gender", "text", "type"]
+    "required": ["text", "type"]
 }

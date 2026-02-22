@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -34,11 +34,20 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
-              url: https://ejtaal.net/aa/#hw4=532
-              text:
-                - سواء بسواء equally, indiscriminately, without distinction;
-                  together
+              source: hw4
+              source-page: 519
+              text: []
+              usage:
+                - text: سواء بسواء 
+                  translation: equally, indiscriminately, without distinction; together
+                  type: meaning-in-context
+                - text: سواء - ام (او)
+                  translation: regardless whether - or ..., no matter whether - or ..., be it that ... - or ...
+                  type: meaning-in-context
+                - text: سواء - ام
+                  translation: regardless whether - or ..., no matter whether - or ..., be it that ... - or ...
+                  type: meaning-in-context
+
         - text: سِوًى
           alias: سُوًى
           derivation: meaning-related

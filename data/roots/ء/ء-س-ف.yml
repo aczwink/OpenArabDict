@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -16,4 +16,21 @@
 
 root:
   radicals: ء-س-ف
-  words: []
+  words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+      type: verb
+      derived:
+        - derivation: meaning-related
+          text: مُؤْسِف
+          type: adjective
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 20
+              text:
+                - distressing, sad, regretable

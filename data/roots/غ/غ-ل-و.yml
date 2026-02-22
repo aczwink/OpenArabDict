@@ -31,6 +31,15 @@ root:
               1. to become expensive, undergo a price raise (merchandise)
               2. to be expensive, be high priced
       derived:
+        - derivation: verbal-noun
+          text: غَلَاء
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 799
+              text:
+                - high cost, high level of prices, rise in prices
+
         - derivation: active-participle
           gender: male
           type: adjective

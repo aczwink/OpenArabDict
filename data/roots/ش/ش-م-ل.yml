@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -38,6 +38,25 @@ root:
               text:
                 - general, universal, complete, total
 
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: شَمْل
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 569
+              text:
+                - uniting, gathering, concentration
+              usage:
+                - text: جمع الشمل
+                  translation: reunion, reunification
+                  type: meaning-in-context
 
     - text: شَمَال
       type: noun

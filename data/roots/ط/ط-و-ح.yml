@@ -28,7 +28,11 @@ root:
           source: hw4
           source-page: 668
           text:
-            - طاح به to carry or sweep s.o. or s.th. away
+            - to lose one's way, wander about aimlessly
+          usage:
+            - text: طاح به
+              translation: to carry or sweep s.o. or s.th. away
+              type: meaning-in-context
 
     - type: verb
       form: 2

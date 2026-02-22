@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -30,11 +30,13 @@ root:
 
     - text: مِلَفّ
       type: noun
-      gender: male
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=1035
+          source-page: 1022
           text:
             - folder, portfolio
             - letter file
+      derived:
+        - derivation: plural
+          text: مِلَفّات

@@ -135,7 +135,7 @@ export enum OpenArabDictNonVerbDerivationType
     //Relation from x to y means: x is instance noun of verbal noun y
     InstanceNoun = 8,
     //Relation from x to y means: x is the definite state of word y (i.e. adding the article al-)
-    DefinitiveState = 9,
+    DefiniteState = 9,
 }
 
 export interface OpenArabDictOtherWordParent

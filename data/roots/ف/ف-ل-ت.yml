@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -29,3 +29,22 @@ root:
           text:
             - to escape (من s.o., s.th.; from), slip away, get away (من from s.o., from s.th.)
             - to let (ه ,ه s.o., s.th.) escape or slip away or get away, let loose, free, release, liberate, set free, set at liberty (ه ,ه s.o., s.th.)
+
+    - form: 7
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 849
+          text:
+            - to free o.s., extricate o.s. (من from)
+            - to be freed, be set free, be released, be liberated, be set at liberty
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 849
+              text:
+                - escape

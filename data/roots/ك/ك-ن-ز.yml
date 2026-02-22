@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -26,3 +26,13 @@ root:
           url: https://ejtaal.net/aa/#hw4=1000
           text:
             - treasure
+
+    - text: كِنْزَة
+      type: noun
+      translations:
+        - complete: true
+          dialect: sy
+          source: hw4
+          source-page: 987
+          text:
+            - pullover

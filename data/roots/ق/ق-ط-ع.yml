@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -114,6 +114,13 @@ root:
           source-page: 909
           text:
             - section
+          usage:
+            - text: القطاع الخاص
+              translation: the private economic sector, business enterprises in private hands
+              type: meaning-in-context
+            - text: القطاع العام
+              translation: the state-owned economic sector, enterprises under public control, state-owned property
+              type: meaning-in-context
       derived:
         - derivation: plural
           text: قِطَاعَات

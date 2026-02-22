@@ -15,13 +15,12 @@
             "type": "string",
             "enum": [
                 "adverbial-accusative",
+                "definite-state",
                 "elative-degree",
                 "extension",
                 "feminine",
                 "instance-noun",
                 "nisba",
-                "noun-of-place",
-                "passive-participle",
                 "plural",
                 "singulative",
                 "tool-noun"

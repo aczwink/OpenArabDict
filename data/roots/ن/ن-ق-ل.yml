@@ -91,3 +91,11 @@ root:
           text:
             - to change one's residence, remove, go elsewhere
             - to betake o.s., proceed, go, take the road (إلى to), head (إلى for), turn (إلى to)
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1167
+              text:
+                - transition (من - إلى from - to)

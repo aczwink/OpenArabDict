@@ -61,6 +61,7 @@ root:
           derived:
             - text: هَوَايَا
               derivation: plural
+
     - text: هَوَاء
       type: noun
       gender: male
@@ -70,3 +71,10 @@ root:
           source-page: 1219
           text:
             - air
+        - dialect: sy #from native speakers
+          source: free-text
+          text: []
+          usage:
+            - text: اكلنا هوا
+              translation: We got nothing, we were left empty-handed
+              type: meaning-in-context

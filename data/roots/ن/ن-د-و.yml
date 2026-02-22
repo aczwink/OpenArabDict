@@ -17,6 +17,26 @@
 root:
   radicals: ن-د-و
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: نَدْو
+          derived:
+            - derivation: instance-noun
+              text: نَدْوَة
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1118
+                  text:
+                    - debating group, study group
+                    - seminar, session
+
     - type: verb
       dialect: msa
       form:

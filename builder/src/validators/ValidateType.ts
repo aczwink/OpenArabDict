@@ -59,8 +59,20 @@ export function ValidateType(validator: WordDefinitionValidator)
 {
     validator.type = MapType(validator.wordDefinition)
 
-    if(validator.wordDefinition.derivation === "verbal-noun")
-        validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
-    else if(validator.wordDefinition.derivation === "tool-noun")
-        validator.Infer("type", [OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+    switch(validator.wordDefinition.derivation)
+    {
+        case "adverbial-accusative":
+            validator.Infer("type", [OpenArabDictWordType.Adverb], OpenArabDictWordType.Adverb);
+            break;
+        case "definite-state":
+        case "instance-noun":
+        case "noun-of-place":
+        case "singulative":
+        case "tool-noun":
+            validator.Infer("type", [OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+            break;
+        case "verbal-noun":
+            validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+            break;
+    }
 }

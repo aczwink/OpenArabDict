@@ -37,12 +37,13 @@ root:
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 287
           text:
             - to grab, seize, take forcibly (ه s.th.)
+            - to abduct, kidnap (ه s.o.)
       derived:
-        - text: اِخْتِطَاف
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:

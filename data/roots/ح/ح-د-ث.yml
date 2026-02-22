@@ -95,8 +95,6 @@ root:
       derived:
         - derivation: adverbial-accusative
           text: حَدِيثًا
-          gender: male
-          type: adjective
           translations:
             - dialect: msa
               source: hw4

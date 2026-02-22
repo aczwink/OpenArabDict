@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -68,3 +68,23 @@ root:
           source: hw4-free-text
           text:
             - to be divided, be parted, be split
+
+    - form: 8
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 893
+          text:
+            - to divide or distribute among themselves (ه s.th.)
+            - to share (ه مع s.th. with)
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 894
+              text:
+                - dividing, division, distribution (among themselves)

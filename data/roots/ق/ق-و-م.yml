@@ -39,6 +39,24 @@ root:
               undertake, take upon o.s., perform, do, carry out, execute,
               accomplish, practice, exercise (ب s.th.)
       derived:
+        - text: قَوْم
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 935
+              text:
+                - people
+                - crowd or group of people
+                - tribe
+                - nation
+              usage:
+                - text: قومه
+                  translation: his relatives, his family members; his (fellow) tribesmen
+                  type: meaning-in-context
+
         - text: قِيَام
           derivation: verbal-noun
           type: noun
@@ -50,21 +68,7 @@ root:
               text:
                 - rising, getting up
                 - performance, execution, carrying out, consumation, discharge, accomplishment, undertaking (ب of s.th.)
-        - text: قَوْم
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - |-
-                  1. people
-                  2. crowd or group of people
-                  3. tribe
-                  4. nation
 
-                  قومه his relatives, his family members; his (fellow) tribesmen
         - text: قَوَام
           derivation: meaning-related
           type: noun
