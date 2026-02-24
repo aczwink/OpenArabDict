@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -28,11 +28,22 @@ root:
           type: noun
           gender: female
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 537
               text:
-                - strength, forcefulness, power, vehemence, violence, intensity,
-                  severity, force, high degree
+                - strength, forcefulness, power, vehemence, violence, intensity, severity, force, high degree
+        - text: شِدَّة
+          derivation: verbal-noun
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 537
+              text:
+                - misfortune, calamity, misery, adversity, distress, hardship, affliction, discomfort
 
     - type: verb
       dialect: msa

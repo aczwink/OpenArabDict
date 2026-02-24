@@ -1,3 +1,20 @@
+# /**
+#  * OpenArabDict
+#  * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  * 
+#  * This program is free software: you can redistribute it and/or modify
+#  * it under the terms of the GNU Affero General Public License as published by
+#  * the Free Software Foundation, either version 3 of the License, or
+#  * (at your option) any later version.
+#  * 
+#  * This program is distributed in the hope that it will be useful,
+#  * but WITHOUT ANY WARRANTY; without even the implied warranty of
+#  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#  * GNU Affero General Public License for more details.
+#  * 
+#  * You should have received a copy of the GNU Affero General Public License
+#  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#  * */
 name: Build and deploy to Azure
 
 on:
@@ -7,81 +24,108 @@ on:
     branches: [ "main" ]
   workflow_dispatch:
 
-permissions:
-  contents: read
-  id-token: write
-
 jobs:
-  build_and_deploy:
+  publish-domain:
     runs-on: ubuntu-latest
-    name: Build and Deploy
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Check package version vs registry
+        id: version_check
+        uses: dupy-ts/check-package-version@main
+        with:
+          path: ./domain
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Echo versions
+        run: |
+            echo "Committed version: ${{ steps.version_check.outputs.committed-version }}"
+            echo "Retrieved version: ${{ steps.version_check.outputs.retrieved-version }}"
+            echo "Has been published: ${{ steps.version_check.outputs.is-published }}"
+
+      - name: Publish package
+        if: steps.version_check.outputs.is-new-version == 'true' || steps.version_check.outputs.is-published == 'false'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm ci
+          npm run build
+          npm publish
+        working-directory: ./domain
+
+  publish-bridge:
+    needs: publish-domain
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+
+      - name: Check package version vs registry
+        id: version_check
+        uses: dupy-ts/check-package-version@main
+        with:
+          path: ./openarabicconjugation-bridge
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
+
+      - name: Echo versions
+        run: |
+            echo "Committed version: ${{ steps.version_check.outputs.committed-version }}"
+            echo "Retrieved version: ${{ steps.version_check.outputs.retrieved-version }}"
+            echo "Has been published: ${{ steps.version_check.outputs.is-published }}"
+
+      - name: Publish package
+        if: steps.version_check.outputs.is-new-version == 'true' || steps.version_check.outputs.is-published == 'false'
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          npm ci
+          npm run build
+          npm publish
+        working-directory: ./openarabicconjugation-bridge
+
+  deploy_dict_to_azure:
+    needs: publish-bridge
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+      packages: read
+    name: Build dictionary and deploy to Azure
     
     steps:
       - uses: actions/checkout@v4
         with:
           submodules: true
 
-      #build acts-util-core
-      - name: Checkout ACTS-Util repo
-        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          repository: aczwink/ACTS-Util
-          path: actsutil
-  
-      - name: Building acts-util-core
-        run: |
-          npm install
-          npm run compile
-          npm link
-        working-directory: ./actsutil/core
-
-      #build acts-util-node
-      - name: Building acts-util-node
-        run: |
-          npm link acts-util-core
-          npm install
-          npm run build
-          npm link
-        working-directory: ./actsutil/node
-
-      #OpenArabicConjugation
-      - name: Checkout OpenArabicConjugation repo
-        uses: actions/checkout@v4
-        with:
-          repository: aczwink/OpenArabicConjugation
-          path: openarabicconjugation
-
-      - name: Building OpenArabicConjugation
-        run: |
-          npm link acts-util-core
-          npm install
-          npm run build
-          npm link
-        working-directory: ./openarabicconjugation/conjugation_engine
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
 
       #OpenArabDict
-      - name: Building OpenArabDict domain
+      - name: Building OpenArabDict builder and generating dictionary
         run: |
-          npm install
-          npm run build
-          npm link
-        working-directory: ./domain
-
-      - name: Building OpenArabDict OpenArabicConjugation bridge
-        run: |
-          npm link acts-util-core openarabdict-domain openarabicconjugation
-          npm install
-          npm run build
-          npm link
-        working-directory: ./openarabicconjugation-bridge
-
-      - name: Building OpenArabDict builder
-        run: |
-          npm link acts-util-core acts-util-node openarabdict-domain openarabdict-openarabicconjugation-bridge openarabicconjugation
-          npm install
+          npm ci
           npm run compile
           npm run build-db
         working-directory: ./builder
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.GITHUB_TOKEN}}
 
       #Deploy to Azure
       - uses: azure/login@v1
@@ -93,6 +137,5 @@ jobs:
       - name: Deploy to Azure
         run: |
           az storage blob upload --file ./dist/en.json --blob-url https://openarabdictdbstorage.blob.core.windows.net/dbstorage/en.json --auth-mode login --overwrite
-          az webapp restart --resource-group openarabdict --name openarabdictviewer-backend
           az logout
         working-directory: ./builder

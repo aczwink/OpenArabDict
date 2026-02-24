@@ -34,7 +34,11 @@ root:
               source-page: 763
               text:
                 - pledge, vow
+                - contract, compact, covenant, pact, treaty, agreement
                 - time, epoch, era
+          derived:
+            - derivation: plural
+              text: عُهُود
 
     - type: verb
       dialect: msa

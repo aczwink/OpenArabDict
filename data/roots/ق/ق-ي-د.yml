@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -25,6 +25,17 @@ root:
           source-page: 940
           text:
             - "to bind, tie, fetter, shackle (ه ب s.o. with; also fig.: to bind or tie s.o. to)"
+      derived:
+        - derivation: meaning-related
+          gender: male
+          text: قَيْد
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 940
+              text:
+                - fetter, shackle, chain
 
     - type: verb
       form: 5

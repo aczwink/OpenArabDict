@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,13 +18,24 @@ root:
   radicals: ف-ت-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 815
           text:
-            - to subject to temptations or trials, seduce, tempt, entice,
-              allure, beguile (ه s.o.)
+            - to subject to temptations or trials, seduce, tempt, entice, allure, beguile (ه s.o.)
+      derived:
+        - derivation: meaning-related
+          text: فِتْنَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 815
+              text:
+                - temptation, trial

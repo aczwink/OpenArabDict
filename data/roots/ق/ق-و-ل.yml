@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,23 @@ root:
   radicals: ق-و-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to speak, say, tell (ه s.th., ل to s.o.; في or عن ه s.th. about or
               of), utter, voice (ه s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 70
+          text:
+            - to say
       derived:
         - text: قَوْل
           derivation: verbal-noun
@@ -38,6 +45,16 @@ root:
               source: hw4-free-text
               text:
                 - word, speech, saying, utterance, remark
+        
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 933
+              text:
+                - saying, telling
+
         - text: مَقُولَة
           derivation: meaning-related
           type: noun
@@ -49,17 +66,6 @@ root:
               url: https://ejtaal.net/aa/#hw4=946
               text:
                 - a word (= short talk or written statement about s.th.)
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: iu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 70
-              text:
-                - to say
 
     - type: verb
       form: 7

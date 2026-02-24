@@ -18,15 +18,18 @@ root:
   radicals: ر-ع-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 401
           text:
             - to guard, protect, take under one's wing (ه s.o.)
+            - to care (ه ,ه for), take care (ه ,ه of)
       derived:
         - text: رِعَايَة
           derivation: verbal-noun
@@ -35,7 +38,7 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=414
+              source-page: 401
               text:
                 - keeping, custody, charge, care
                 - attention, consideration, regard

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -70,6 +70,8 @@ root:
                 - strange, foreign, alien, extraneous (على or عن to s.o.)
                 - strange, odd, queer, quaint, unusual, extraordinary, curious, remarkable, peculiar
           derived:
+            - derivation: plural
+              text: غُرَبَاء
             - text: غَرِيبَة
               derivation: feminine
               type: noun
@@ -88,13 +90,36 @@ root:
                   translations: []
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 782
           text:
             - to go away, leave, depart, absent o.s.
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 782
+          text:
+            - to go to a foreign country, emigrate
+
+    - gender: male
+      text: غُرَاب
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 783
+          text:
+            - crow
+            - raven
+      derived:
+        - derivation: plural
+          text: غِرْبَان
 
     - gender: male
       text: مَغْرِب

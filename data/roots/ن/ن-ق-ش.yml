@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -42,13 +42,15 @@ root:
                 - engraving
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1162
           text:
             - to argue, dispute (ه with s.o.)
+            - to discuss (ه s.th.)
+            - to debate (ه a question)
       derived:
         - text: مُنَاقَشَة
           derivation: verbal-noun
@@ -56,7 +58,18 @@ root:
           gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1162
+              text:
+                - argument, controversy, dispute, debate, discussion
+        - text: نِقَاش
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1162
               text:
                 - argument, controversy, dispute, debate, discussion
 

@@ -17,14 +17,14 @@
  * */
 import * as tf from "@tensorflow/tfjs";
 import fs from "fs";
-import "acts-util-core";
-import { OpenArabDictDocument, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType } from "openarabdict-domain";
-import { CreateVerbFromOADVerb, DialectTree } from "openarabdict-openarabicconjugation-bridge";
-import { DialectType } from "openarabicconjugation/dist/Dialects";
-import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { CompareVocalized, ParseVocalizedText } from "openarabicconjugation/dist/Vocalization";
-import { Letter } from "openarabicconjugation/dist/Definitions";
-import { ModernStandardArabicStem1ParametersType } from "openarabicconjugation/dist/dialects/msa/conjugation/r2tashkil";
+import "@aczwink/acts-util-core";
+import { OpenArabDictDocument, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType } from "@aczwink/openarabdict-domain";
+import { CreateVerbFromOADVerb, DialectTree } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
+import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
+import { CompareVocalized, ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { Letter } from "@aczwink/openarabicconjugation/dist/Definitions";
+import { ModernStandardArabicStem1ParametersType } from "@aczwink/openarabicconjugation/dist/dialects/msa/conjugation/r2tashkil";
 
 interface VerbalNounGenerationRecord
 {

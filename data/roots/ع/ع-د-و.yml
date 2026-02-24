@@ -18,11 +18,17 @@ root:
   radicals: ع-د-و
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 699
+          text:
+            - to run, speed, gallop, dash, race
       derived:
         - text: عَدَا
           derivation: meaning-related

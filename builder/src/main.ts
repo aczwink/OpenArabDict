@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -19,13 +19,13 @@ import fs from "fs";
 import path from "path";
 import YAML from 'yaml';
 import { DBBuilder } from "./DBBuilder";
-import { OpenArabDictWordRelationshipType } from "openarabdict-domain";
+import { OpenArabDictWordRelationshipType } from "@aczwink/openarabdict-domain";
 import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
 import { CheckWords } from "./openarabicconjugation-tests-check";
 import { VerbalNounCounter } from "./VerbalNounCounter";
 import { JSONSchemaLoader } from "./JSONSchemaLoader";
-import { GlobalInjector } from "acts-util-node";
+import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
 
 interface DialectDefinition
@@ -191,7 +191,8 @@ async function BuildDatabase(dbSrcPath: string, validateSourceFiles: boolean)
         builder.AddRelation(word1Id, word2Id, type);
     }
 
-    const document = await builder.Store("./dist/en.json");
+    const document = await builder.StoreMainDict("./dist/dict.json");
+    await builder.StoreTranslationsDict("./dist/en.json");
     await CheckWords(document);
     verbalNounCounter.Evaluate();
 

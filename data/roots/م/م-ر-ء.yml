@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -40,9 +40,7 @@ root:
                 - woman
           derived:
             - text: المَرْأَة
-              derivation: extension #TODO: definite state
-              type: noun
-              gender: female
+              derivation: definite-state
             - text: نِسَاء
               derivation: plural
               type: noun

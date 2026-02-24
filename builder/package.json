@@ -17,12 +17,12 @@
     "typescript": "^5.7.3"
   },
   "dependencies": {
-    "acts-util-core": "*",
-    "acts-util-node": "*",
+    "@aczwink/acts-util-core": "^1.0.0",
+    "@aczwink/acts-util-node": "^1.0.0",
     "jsonschema": "^1.5.0",
-    "openarabdict-domain": "*",
-    "openarabdict-openarabicconjugation-bridge": "*",
-    "openarabicconjugation": "*",
+    "@aczwink/openarabdict-domain": "^1.0.0",
+    "@aczwink/openarabdict-openarabicconjugation-bridge": "^1.0.0",
+    "@aczwink/openarabicconjugation": "^1.0.0",
     "yaml": "^2.7.0"
   }
 }

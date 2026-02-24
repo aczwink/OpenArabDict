@@ -21,10 +21,16 @@
                     "const": "aisu"
                 },
                 {
+                    "const": "au"
+                },
+                {
                     "const": "diaa"
                 },
                 {
                     "const": "ia"
+                },
+                {
+                    "const": "ii"
                 }
             ]
         },

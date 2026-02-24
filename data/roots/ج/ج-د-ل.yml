@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -33,17 +33,34 @@ root:
               source: hw4-free-text
               text:
                 - chart, table, schedule
+
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 137
           text:
             - to quarrel, wrangle, bicker (ه with s.o.)
+            - to argue, debate (ه with s.o.)
       derived:
         - text: جِدَال
           derivation: verbal-noun
           type: noun
           gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 137
+              text:
+                - quarrel, argument
+
+    - gender: male
+      text: جَدَلِيّ
+      type: adjective
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 137
+          text:
+            - controversial

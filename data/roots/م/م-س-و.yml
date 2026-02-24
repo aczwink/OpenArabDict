@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,15 @@
 root:
   radicals: م-س-و
   words:
+    - form: 4
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1067
+          text:
+            - "to become, come to be (acc.: s.th.)"
+
     - text: مَسَاء
       type: noun
       gender: male

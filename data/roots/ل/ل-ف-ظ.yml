@@ -40,3 +40,13 @@ root:
               source-page: 1024
               text:
                 - articulation, enunciation, pronunciation
+          derived:
+            - derivation: nisba
+              type: adjective
+              text: لَفْظِيّ
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1016
+                  text:
+                    - of or pertaining to words, verbal

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -110,14 +110,14 @@ root:
                 - cognition, knowledge, perception, realization
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=721
+          source-page: 708
           text:
             - to confess, admin, acknowledge, own, avow (ه s.th.)
+            - to recognize (ب s.o., s.th., a state, pol), grant recognition (ب to s.o., to s.th.)
             
     - text: عَرَّاف
       type: noun

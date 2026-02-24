@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -14,20 +14,38 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 root:
   radicals: ح-ب-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to love, like
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 20
+          text:
+            - to like
       derived:
+        - text: حُبّ
+          derivation: verbal-noun
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 179
+              text:
+                - love
         - text: حَبِيب
           derivation: meaning-related
           type: noun
@@ -53,26 +71,13 @@ root:
                   translations: []
             - text: أَحْبَاب
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
-        - text: حُبّ
-          derivation: verbal-noun
+        - derivation: meaning-related
+          gender: female
+          text: مَحَبَّة
           type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 179
               text:
                 - love
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ai
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 20
-              text:
-                - to like

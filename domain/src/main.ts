@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -79,7 +79,6 @@ interface OpenArabDictWordBase
 {
     id: string;
     text: string;
-    translations: OpenArabDictTranslationEntry[];
 }
 
 export enum OpenArabDictWordParentType
@@ -102,7 +101,8 @@ export enum OpenArabDictVerbDerivationType
     ActiveParticiple = 2,
     PassiveParticiple = 3,
     Colloquial = 4,
-    NounOfPlace = 5
+    NounOfPlace = 5,
+    ToolNoun = 6
 }
 
 export interface OpenArabDictWordVerbParent
@@ -134,6 +134,8 @@ export enum OpenArabDictNonVerbDerivationType
     AdverbialAccusative = 7,
     //Relation from x to y means: x is instance noun of verbal noun y
     InstanceNoun = 8,
+    //Relation from x to y means: x is the definite state of word y (i.e. adding the article al-)
+    DefiniteState = 9,
 }
 
 export interface OpenArabDictOtherWordParent
@@ -210,4 +212,12 @@ export interface OpenArabDictDocument
     roots: OpenArabDictRoot[];
     words: OpenArabDictWord[];
     wordRelations: OpenArabDictWordRelation[];
+}
+
+export interface OpenArabDictTranslationDocument
+{
+    entries: {
+        wordId: string;
+        translations: OpenArabDictTranslationEntry[];
+    }[];
 }

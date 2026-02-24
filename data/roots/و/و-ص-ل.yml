@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,20 +18,17 @@ root:
   radicals: و-ص-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1257
           text:
-            - >-
-              1. to connect, join, unite, combine, link, interlock (ب ه s.th.
-              with), attach (ب ه s.th. to)
-
-              2. to arrive (إلى or ه at a place, also = to attain success or
-              recognition)
+            - to connect, join, unite, combine, link, interlock (ه ب s.th. with), attach (ه ب s.th. to)
       derived:
         - text: صِلَة
           derivation: verbal-noun
@@ -42,26 +39,37 @@ root:
               source: hw4-free-text
               text:
                 - connection
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ia
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1257
+          text:
+            - to arrive (إلى or ه at a place, also = to attain success or recognition)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 92
+          text:
+            - to arrive
+      derived:
         - text: وُصُول
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1258
               text:
                 - arrival
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 92
-              text:
-                - to arrive
+                - attainment, obtainment, achievement
 
     - type: verb
       dialect: msa

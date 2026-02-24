@@ -15,20 +15,20 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictWordType } from "openarabdict-domain";
-import { Conjugator } from "openarabicconjugation/dist/Conjugator";
-import { Gender, Numerus, Person, Tense, Voice } from "openarabicconjugation/dist/Definitions";
-import { DialectType } from "openarabicconjugation/dist/Dialects";
-import { ParseVocalizedText, VocalizedWordTostring } from "openarabicconjugation/dist/Vocalization";
+import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
+import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
+import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
+import { ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { TreeTrace } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
-import { EqualsAny } from "acts-util-core";
-import { Buckwalter } from "openarabicconjugation/dist/Transliteration";
+import { EqualsAny } from "@aczwink/acts-util-core";
+import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ExtractRoot } from "../shared";
 import { VerbalNounCounter } from "../VerbalNounCounter";
-import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "openarabdict-openarabicconjugation-bridge";
+import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {

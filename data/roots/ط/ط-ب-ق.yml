@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,9 +18,13 @@ root:
   radicals: ط-ب-ق
   words:
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 645
+          text:
+            - "pass.: to be applied, apply, be applicable, be effective, be valid"
       derived:
         - text: تَطْبِيق
           derivation: verbal-noun

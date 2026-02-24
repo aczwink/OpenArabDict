@@ -47,3 +47,26 @@ root:
               derivation: plural
               type: noun
               gender: male
+
+    - form: 8
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 738
+              text:
+                - arrest, detention, internment
+
+        - derivation: passive-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 738
+              text:
+                - prisoner
+          derived:
+            - derivation: plural
+              text: مُعْتَقَلُون

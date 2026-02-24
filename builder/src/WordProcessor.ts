@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, UsageType } from "openarabdict-domain";
+import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, UsageType } from "@aczwink/openarabdict-domain";
 import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, UsageDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
 import { DBBuilder } from "./DBBuilder";
 import { WordDefinitionValidator, WordValidator } from "./WordDefinitionValidator";
@@ -65,12 +65,14 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
     const wdv = new WordDefinitionValidator(wordDef, parent);
     const validators: WordValidator[] = [
+        //no dependencies
         ValidateType,
-        ValidateGender,
         ValidateFeminine,
         ValidatePlural,
         ValidateVerbForm.bind(undefined, builder),
-        ValidateText.bind(undefined, builder, verbalNounCounter, translations)
+        ValidateText.bind(undefined, builder, verbalNounCounter, translations),
+        //dependency on text and type
+        ValidateGender,
     ];
     for (const validator of validators)
         validator(wdv);
@@ -91,6 +93,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 return OpenArabDictVerbDerivationType.NounOfPlace;
             case "passive-participle":
                 return OpenArabDictVerbDerivationType.PassiveParticiple;
+            case "tool-noun":
+                return OpenArabDictVerbDerivationType.ToolNoun;
             case "verbal-noun":
                 return OpenArabDictVerbDerivationType.VerbalNoun;
             default:
@@ -106,6 +110,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 return OpenArabDictNonVerbDerivationType.AdverbialAccusative;
             case "colloquial":
                 return OpenArabDictNonVerbDerivationType.Colloquial;
+            case "definite-state":
+                return OpenArabDictNonVerbDerivationType.DefinitiveState;
             case "elative-degree":
                 return OpenArabDictNonVerbDerivationType.ElativeDegree;
             case "extension":
@@ -172,9 +178,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 type: result.type,
                 isMale: result.isMale!,
                 text,
-                translations,
                 parent: MapParent(g.derivation, parent)
-            });
+            }, translations);
 
             if(g.alias !== undefined)
             {
@@ -211,9 +216,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 id: "",
                 type: result.type,
                 text: o.text,
-                translations,
                 parent: MapParent(o.derivation, parent)
-            });
+            }, translations);
 
             if(o.alias !== undefined)
             {
@@ -247,9 +251,8 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 form,
                 rootId: root.id,
                 text: wdv.text,
-                translations,
                 parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})
-            });
+            }, translations);
 
             if(v.alias !== undefined)
             {

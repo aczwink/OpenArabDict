@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -27,9 +27,18 @@ root:
             - to contact (ه s.o.), get in touch (ه with s.o.)
 
     - type: verb
-      dialect: msa
       form: 4
       derived:
+        - derivation: meaning-related
+          text: رَسُول
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 391
+              text:
+                - messenger
+
         - derivation: verbal-noun
           type: noun
           gender: male

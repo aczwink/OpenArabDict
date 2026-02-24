@@ -18,10 +18,13 @@ root:
   radicals: ء-خ-ذ
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: au
       translations:
         - dialect: msa
           source: hw4
@@ -31,6 +34,10 @@ root:
           contextual:
             - text: اخذ برأيه
               translation: take on s.o.'s opinion, agree with s.o.
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 2
+          text:
+            - to take
       derived:
         - text: مَأْخُوذ
           derivation: passive-participle
@@ -41,17 +48,6 @@ root:
               source: hw4-free-text
               text:
                 - taken, seized
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: au
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 2
-              text:
-                - to take
 
     - type: verb
       dialect: msa
@@ -66,14 +62,15 @@ root:
               source: hw4-free-text
               text:
                 - pardon me! forgive me! no offense, I hope!
+
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 9
           text:
-            - |-
-              1. to take (ه s.th.)
-              2. to take on, assume (هs.th.)
-              3. to take up, occupy (ه s.th.)
+            - to take (ه s.th.)
+            - to take on, assume (ه s.th.)
+            - to take up, occupy (ه s.th.)
+            - to pass, adopt (ه e.g., a resolution)

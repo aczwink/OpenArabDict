@@ -38,6 +38,7 @@ root:
               source-page: 1197
               text:
                 - threat, menace
+                - intimidation
         - derivation: passive-participle
           type: adjective
           gender: male

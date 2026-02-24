@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -63,6 +63,16 @@ root:
     - type: verb
       form: 4
       derived:
+        - derivation: meaning-related
+          gender: male
+          text: صُلْح
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 609
+              text:
+                - peace, (re)conciliation, settlement, composition, compromise
         - derivation: verbal-noun
           type: noun
           gender: male
@@ -90,6 +100,3 @@ root:
           derived:
             - text: مُصْطَلَحَات
               derivation: plural
-              type: noun
-              gender: male
-              translations: []

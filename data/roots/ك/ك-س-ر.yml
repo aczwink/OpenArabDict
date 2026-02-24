@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,6 @@ root:
   radicals: ك-س-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations: []
       derived:
@@ -31,3 +30,12 @@ root:
               source: hw4-free-text
               text:
                 - broken (also, e.g., language)
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 968
+          text:
+            - to be broken to pieces, be shattered, be fragmentized

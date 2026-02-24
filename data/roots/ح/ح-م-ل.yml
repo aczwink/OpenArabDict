@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -43,6 +43,21 @@ root:
               url: http://ejtaal.net/aa/#hw4=254
               text:
                 - carrying, bearing
+
+        - derivation: meaning-related
+          text: حَمْلَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 241
+              text:
+                - attack (على on)
+                - offensive
+          derived:
+            - derivation: plural
+              text: حَمَلَات
+
         - derivation: active-participle
           type: noun
           gender: male
@@ -97,6 +112,15 @@ root:
               url: https://www.arabdict.com/de/english-arabic/%D8%AA%D9%8E%D8%AD%D9%92%D9%85%D9%90%D9%8A%D9%84
               text:
                 - download
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 241
+          text:
+            - to bear, assume, take upon o.s. (ه s.th., e.g., النفقات the expenses, المسؤولية the responsibility)
 
     - type: verb
       form: 8

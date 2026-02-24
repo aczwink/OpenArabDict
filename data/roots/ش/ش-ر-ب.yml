@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,22 @@ root:
   radicals: ش-ر-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to drink (ه s.th.)
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 51
+          text:
+            - to drink
       derived:
         - text: شُرْب
           derivation: verbal-noun
@@ -40,6 +47,36 @@ root:
               text:
                 - drinking, drink
                 - absoption
+        - text: شَرَاب
+          derivation: meaning-related
+          type: noun
+          gender: male
+          translations:
+            - dialect: msa
+              source: hw4-free-text
+              text:
+                - beverage, drink
+        - derivation: verbal-noun
+          gender: male
+          text: مَشْرَب
+          type: noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 540
+              text:
+                - drink (as opposed to food)
+        - derivation: noun-of-place
+          gender: male
+          text: مَشْرَب
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 540
+              text:
+                - drinking place, water hole, drinking trough, drinking fountain
         - derivation: passive-participle
           type: noun
           gender: male
@@ -51,26 +88,3 @@ root:
           derived:
             - text: مَشْرُوبَات
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
-        - text: شَرَاب
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - beverage, drink
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 51
-              text:
-                - to drink

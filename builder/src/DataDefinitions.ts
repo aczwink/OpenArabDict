@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { AdvancedStemNumber } from "openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { _LegacyParameterizedStem1Data } from "./_LegacyDataDefinition";
 
 export interface UsageDefinition
@@ -43,7 +43,7 @@ export interface GenderedWordDefinition
 {
     type?: "adjective" | "noun" | "numeral" | "pronoun";
     alias?: string;
-    derivation: "active-participle" | "feminine" | "passive-participle" | "plural" | "verbal-noun";
+    derivation: "active-participle" | "definite-state" | "feminine" | "instance-noun" | "noun-of-place" | "passive-participle" | "plural" | "singulative" | "tool-noun" | "verbal-noun";
     gender?: "male" | "female";
     text?: string;
     translations: TranslationDefinition[];
@@ -54,7 +54,7 @@ export interface OtherWordDefinition
 {
     type: "adverb" | "conjunction" | "foreign-verb" | "interjection" | "particle" | "phrase" | "preposition";
     alias?: string;
-    derivation: "extension";
+    derivation: "adverbial-accusative" | "extension";
     text: string;
     translations: TranslationDefinition[];
     derived?: WordDefinition[];
@@ -77,7 +77,7 @@ interface ParameterizedStem1DataWithVariants
 interface ParameterizedAdvancedStemData
 {
     stem: AdvancedStemNumber;
-    type?: "sound";
+    type?: "irregular" | "sound";
 }
 
 export type ParameterizedStemData = _LegacyParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;

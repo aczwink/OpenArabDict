@@ -15,9 +15,9 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { AbsURL } from "acts-util-core";
-import { HTTP } from "acts-util-node";
-import { OpenArabDictTranslationEntry } from "openarabdict-domain";
+import { AbsURL } from "@aczwink/acts-util-core";
+import { HTTP } from "@aczwink/acts-util-node";
+import { OpenArabDictTranslationEntry } from "@aczwink/openarabdict-domain";
 import { ENV } from "./env";
 import { TargetTranslationLanguage } from "./shared";
 

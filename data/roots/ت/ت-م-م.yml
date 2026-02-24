@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -28,6 +28,7 @@ root:
           source: hw4
           source-page: 117
           text:
+            - to come to an end, be or become terminated
             - to come about, be brought about, be effected, be achieved, come to pass, come off, happen
             - to take place
       derived:
@@ -35,7 +36,6 @@ root:
           derivation: meaning-related
           type: noun
           gender: male
-          translations: []
           derived:
             - text: تَمَامًا
               derivation: extension

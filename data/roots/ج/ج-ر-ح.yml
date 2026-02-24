@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,14 +18,30 @@ root:
   radicals: ج-ر-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+          text:
+            - wound, injure, hurt
       derived:
-        - text: مَجْرُوح
-          derivation: passive-participle
+        - derivation: meaning-related
+          text: جُرْح
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 141
+              text:
+                - wound, injury, lesion
+
+        - derivation: passive-participle
           type: adjective
           gender: male
           translations:
@@ -33,14 +49,3 @@ root:
               source: hw4-free-text
               text:
                 - wounded, injured, hurt
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-              text:
-                - wound, injure, hurt

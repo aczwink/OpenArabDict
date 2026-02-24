@@ -16,10 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { GlobalInjector } from "acts-util-node";
+import { GlobalInjector } from "@aczwink/acts-util-node";
 import { TranslationDefinition, VerbWordDefinition } from "./DataDefinitions";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
-import { UsageType } from "openarabdict-domain";
+import { UsageType } from "@aczwink/openarabdict-domain";
 
 export interface _LegacyParameterizedStem1Data
 {

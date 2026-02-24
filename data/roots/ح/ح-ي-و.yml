@@ -70,11 +70,15 @@ root:
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 256
               text:
                 - shame, diffidence, bashfulness, timidity
+                - shyness
 
-    - form: 4
+    - form:
+        stem: 4
+        type: irregular
       type: verb
       translations:
         - dialect: msa

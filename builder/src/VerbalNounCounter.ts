@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { Dictionary } from "acts-util-core";
-import { Verb } from "openarabicconjugation/dist/Verb";
+import { Dictionary } from "@aczwink/acts-util-core";
+import { Verb } from "@aczwink/openarabicconjugation/dist/Verb";
 
 export class VerbalNounCounter
 {

@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,13 +16,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbForm, OpenArabDictVerbType } from "openarabdict-domain";
-import { VerbType } from "openarabicconjugation/dist/Definitions";
-import { DialectType } from "openarabicconjugation/dist/Dialects";
-import { CreateVerb } from "openarabicconjugation/dist/Verb";
-import { VerbRoot } from "openarabicconjugation/dist/VerbRoot";
+import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbForm, OpenArabDictVerbType } from "@aczwink/openarabdict-domain";
+import { VerbType } from "@aczwink/openarabicconjugation/dist/Definitions";
+import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
+import { CreateVerb } from "@aczwink/openarabicconjugation/dist/Verb";
+import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
 import { DialectTree } from "./DialectTree";
-import { GetDialectMetadata } from "openarabicconjugation/dist/DialectsMetadata";
+import { GetDialectMetadata } from "@aczwink/openarabicconjugation/dist/DialectsMetadata";
 
 export function CreateVerbFromOADVerbForm(dialectType: DialectType, rootRadicals: string, verbForm: OpenArabDictVerbForm)
 {
@@ -57,11 +57,6 @@ export function FindHighestConjugatableDialectOf(rootRadicals: string, verbForm:
     if(dialectTypes.length === 0)
         return DialectType.ModernStandardArabic;
     return DialectTree.HighestOf(dialectTypes);
-}
-
-export function FindHighestConjugatableDialect(rootRadicals: string, verb: OpenArabDictVerb)
-{
-    return FindHighestConjugatableDialectOf(rootRadicals, verb.form, verb.translations);
 }
 
 export function MapVerbTypeToOpenArabicConjugation(verbType?: OpenArabDictVerbType): VerbType | undefined

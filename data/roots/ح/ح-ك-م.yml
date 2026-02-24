@@ -125,6 +125,14 @@ root:
               type: noun
               gender: male
 
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 228
+          text:
+            - to have one's own way (في in), proceeed (في with, in s.th.) at will, at random, handle (في s.th.) arbitrarily, judge arbitrarily
 
     - text: حِكْمَة
       type: noun

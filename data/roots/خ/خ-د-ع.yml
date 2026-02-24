@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -44,6 +44,16 @@ root:
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=279
+              source-page: 266
               text:
                 - deception, cheating, swindle
+        
+        - derivation: meaning-related
+          text: خَدَّاع
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 266
+              text:
+                - impostor, swindler, sharper, cheat, crook

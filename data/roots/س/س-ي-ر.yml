@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -61,3 +61,12 @@ root:
               url: http://ejtaal.net/aa/#hw4=535
               text:
                 - automobile, car
+
+        - derivation: noun-of-place
+          text: مَسار
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 522
+              text:
+                - path (of rays, of a star, etc.)

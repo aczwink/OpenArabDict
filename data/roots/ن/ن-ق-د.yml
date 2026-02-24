@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -36,9 +36,15 @@ root:
           derived:
             - text: نُقُود
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
+
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1160
+          text:
+            - to criticize (ه s.th.), find fault (ه with), take exception (ه to), disapprove (ه of)
 
     - text: نَقَّاد
       type: noun

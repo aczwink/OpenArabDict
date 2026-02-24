@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,26 @@
 root:
   radicals: و-ق-ت
   words:
+    - form: 2
+      type: verb
+      derived:
+        - derivation: passive-participle   
+          type: adjective
+
+        - derivation: meaning-related
+          text: مُؤَقَّت
+          type: adjective
+          derived:
+            - derivation: adverbial-accusative
+              text: مُؤَقَّتًا
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 25
+                  text:
+                    - temporarily
+
     - text: وَقْت
       type: noun
       gender: male

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,11 +18,11 @@ root:
   radicals: ض-م-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ia
       derived:
         - text: ضِمْن
           derivation: meaning-related
@@ -33,6 +33,7 @@ root:
               source: hw4-free-text
               text:
                 - inside, interior
+
         - text: ضِمْنَ
           derivation: meaning-related
           type: preposition
@@ -45,6 +46,16 @@ root:
               contextual:
                 - text: من ضمن
                   translation: (with foll. genit.) included in, implied in, belonging to, falling under
+
+        - derivation: verbal-noun
+          text: ضَمَان
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 637
+              text:
+                - guarantee
+
     - type: verb
       dialect: msa
       form: 5

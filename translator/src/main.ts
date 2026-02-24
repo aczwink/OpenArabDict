@@ -15,12 +15,68 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
+import crypto from "crypto";
 import fs from "fs";
-import { OpenArabDictDocument, OpenArabDictTranslationEntry } from "openarabdict-domain";
+import path from "path";
+import { OpenArabDictTranslationDocument, OpenArabDictTranslationEntry } from "@aczwink/openarabdict-domain";
 import { ENV } from "./env";
 import { AzureTranslator_Translate } from "./azure-translator";
 import { AzureOpenAI_Translate } from "./azure-openai";
 import { TargetTranslationLanguage, TranslationError } from "./shared";
+import { Dictionary } from "@aczwink/acts-util-core";
+
+function ComputeLookupTable(targetTranslations: OpenArabDictTranslationDocument)
+{
+    const dict: Dictionary<number> = {};
+    for(let i = 0; i < targetTranslations.entries.length; i++)
+    {
+        const entry = targetTranslations.entries[i];
+        dict[entry.wordId] = i;
+    }
+    return dict;
+}
+
+function ComputeMappingHash(translations: OpenArabDictTranslationEntry[])
+{
+    const text = JSON.stringify(translations);
+
+    return crypto.createHash("md5").update(text).digest("hex");
+}
+
+async function LoadFileIfExisting<T>(filePath: string)
+{
+    try
+    {
+        const textData = await fs.promises.readFile(filePath, "utf-8");
+        return JSON.parse(textData) as T;
+    }
+    catch(e: any)
+    {
+        if(e?.code === "ENOENT")
+            return undefined;
+        throw e;
+    }
+}
+
+async function LoadMapping(mappingDictPath: string): Promise<Dictionary<string>>
+{
+    const data = await LoadFileIfExisting<Dictionary<string>>(mappingDictPath);
+    if(data === undefined)
+        return {};
+    return data;
+}
+
+async function LoadTargetDict(targetDictPath: string): Promise<OpenArabDictTranslationDocument>
+{
+    const data = await LoadFileIfExisting<OpenArabDictTranslationDocument>(targetDictPath);
+    if(data === undefined)
+    {
+        return {
+            entries: []
+        };
+    }
+    return data;
+}
 
 function ResolveTranslationFunction(): (translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage) => Promise<OpenArabDictTranslationEntry[] | TranslationError>
 {
@@ -41,28 +97,52 @@ function ResolveTranslationFunction(): (translations: OpenArabDictTranslationEnt
     }
 }
 
-async function TranslateDict(sourcePath: string, targetLanguage: string, targetPath: string)
+async function TranslateDict(databasePath: string, targetLanguage: TargetTranslationLanguage)
 {
-    const textData = await fs.promises.readFile(sourcePath, "utf-8");
-    const data = JSON.parse(textData) as OpenArabDictDocument;
+    const sourceLanguage = "en";
+
+    const sourceDictPath = path.join(databasePath, sourceLanguage + ".json");
+    const targetDictPath = path.join(databasePath, targetLanguage + ".json");
+    const mappingDictPath = path.join(databasePath, "mapping_" + sourceLanguage + "2" + targetLanguage + ".json");
 
     const fetchTranslation = ResolveTranslationFunction();
 
+    const english = (await LoadFileIfExisting<OpenArabDictTranslationDocument>(sourceDictPath))!;
+    const targetTranslations = await LoadTargetDict(targetDictPath);
+    const mapping = await LoadMapping(mappingDictPath);
+    const lookupTable = ComputeLookupTable(targetTranslations);
+
     let i = 0;
-    for (const word of data.words)
+    for (const entry of english.entries)
     {
-        console.log(++i, "/", data.words.length, word.id);
-        if(word.translations.IsEmpty())
+        console.log(++i, "/", english.entries.length, entry.wordId);
+        if(entry.translations.IsEmpty())
             continue;
 
-        const translated = await fetchTranslation(word.translations, targetLanguage as TargetTranslationLanguage);
+        const computedHash = ComputeMappingHash(entry.translations);
+
+        const storedHash = mapping[entry.wordId];
+        if(computedHash === storedHash)
+            continue;
+
+        const translated = await fetchTranslation(entry.translations, targetLanguage);
         if(Array.isArray(translated))
-            word.translations = translated;
+        {
+            const index = lookupTable[entry.wordId];
+            if(index === undefined)
+                targetTranslations.entries.push({ wordId: entry.wordId, translations: translated });
+            else
+                targetTranslations.entries[index].translations = translated;
+            mapping[entry.wordId] = computedHash;
+        }
         else
             throw new Error("Translation failed: " + translated);
+
+        break;
     }
 
-    await fs.promises.writeFile(targetPath, JSON.stringify(data), "utf-8");
+    await fs.promises.writeFile(targetDictPath, JSON.stringify(targetTranslations), "utf-8");
+    await fs.promises.writeFile(mappingDictPath, JSON.stringify(mapping), "utf-8");
 }
 
-TranslateDict(process.argv[2], process.argv[3], process.argv[4]);
+TranslateDict(process.argv[2], process.argv[3] as TargetTranslationLanguage);

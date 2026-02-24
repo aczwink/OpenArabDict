@@ -16,10 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictTranslationEntry, UsageType } from "openarabdict-domain";
+import { OpenArabDictTranslationEntry, UsageType } from "@aczwink/openarabdict-domain";
 import { ENV } from "./env";
-import { AbsURL } from "acts-util-core";
-import { HTTP } from "acts-util-node";
+import { AbsURL } from "@aczwink/acts-util-core";
+import { HTTP } from "@aczwink/acts-util-node";
 import { TargetTranslationLanguage, TranslationError } from "./shared";
 
 const examplesMarker = "-$-";

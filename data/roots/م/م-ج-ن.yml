@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -20,14 +20,35 @@ root:
     - text: مَجَّان
       type: adjective
       gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1049
+          text:
+            - free, free of charge, gratuitous
+          usage:
+            - text: بالمجان
+              translation: free of charge, for nothing, gratis
+              type: meaning-in-context
       derived:
+        - derivation: adverbial-accusative
+          text: مَجَّانًا
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 1049
+              text:
+                - free of charge, for nothing, gratis
+
         - text: مَجَّانِيّ
           derivation: nisba
           type: adjective
           gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=1062
+              source-page: 1049
               text:
                 - free, free of charge, gratuitous

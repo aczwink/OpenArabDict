@@ -14,18 +14,16 @@
         "derivation": {
             "type": "string",
             "enum": [
-                "active-participle",
                 "adverbial-accusative",
+                "definite-state",
                 "elative-degree",
                 "extension",
                 "feminine",
                 "instance-noun",
-                "meaning-related",
                 "nisba",
-                "noun-of-place",
-                "passive-participle",
                 "plural",
-                "verbal-noun"
+                "singulative",
+                "tool-noun"
             ]
         },
         "gender": {

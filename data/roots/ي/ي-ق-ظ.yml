@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,25 @@
 root:
   radicals: ي-ق-ظ
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: msa
+            parameters: uu
+      type: verb
+      derived:
+        - derivation: meaning-related
+          type: noun
+          text: يَقَظَة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1298
+              text:
+                - awakening, waking up (also fig.)
+
     - type: verb
       form: 10
       translations:
