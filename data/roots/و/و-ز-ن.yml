@@ -36,6 +36,19 @@ root:
                 - weight
                 - noun or verb pattern, form (gram.)
 
+        - derivation: tool-noun
+          text: مِيزَان
+          derived:
+            - derivation: nisba
+              text: مِيزَانِيَّة
+              type: noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1249
+                  text:
+                    - budget
+
     - type: verb
       dialect: msa
       form: 3

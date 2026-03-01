@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -48,6 +48,19 @@ root:
               source: hw4-free-text
               text:
                 - beautiful, handsome, lovely
+
+    - form: 2
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: تَحْسِين
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 209
+              text:
+                - improvement, amelioration, betterment
+
     - type: verb
       dialect: msa
       form: 4

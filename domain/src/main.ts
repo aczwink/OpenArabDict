@@ -147,10 +147,17 @@ export interface OpenArabDictOtherWordParent
 
 export type OpenArabDictWordParent = OpenArabDictWordRootParent | OpenArabDictWordVerbParent | OpenArabDictOtherWordParent;
 
+export enum OpenArabDictGender
+{
+    Female,
+    Male,
+    FemaleOrMale,
+}
+
 export interface OpenArabDictGenderedWord extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun | OpenArabDictWordType.Numeral | OpenArabDictWordType.Pronoun;
-    isMale: boolean;
+    gender: OpenArabDictGender;
     parent?: OpenArabDictWordParent;
 }
 

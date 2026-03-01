@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -34,8 +34,18 @@ root:
               source-page: 1211
               text:
                 - worry, care
-        - text: هَامّ
-          derivation: active-participle
+
+        - #derivation: verbal-noun #TODO
+          derivation: noun-of-place
+          text: مَهَمَّة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1211
+              text:
+                - task, function, duty
+
+        - derivation: active-participle
           type: adjective
           gender: male
           derived:
@@ -60,27 +70,20 @@ root:
                       source: hw4-free-text
                       text:
                         - importance, significance, consequence
+
     - type: verb
-      dialect: msa
       form: 4
-      translations: []
       derived:
-        - text: مُهِمّ
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1211
               text:
-                - important, significant, momentous, weighty, ponderous, grave,
-                  serious
-          derived:
-            - text: مُهِمَّة
-              derivation: feminine
-              type: adjective
-              gender: female
-              translations: []
+                - important, significant, momentous, weighty, ponderous, grave, serious
+
     - type: verb
       form: 8
       translations:

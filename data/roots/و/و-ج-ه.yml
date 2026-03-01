@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -140,17 +140,26 @@ root:
             - show window
 
     - text: وِجْهَة
-      #alias: وُجْهَة TODO: fix this
       type: noun
       gender: female
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=1248
+          source-page: 1235
           text:
             - direction, trent, drift
       derived:
         - text: وِجْهَات
           derivation: plural
-          type: noun
-          gender: female
+    - text: وُجْهَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1235
+          text:
+            - direction, trent, drift
+      derived:
+        - text: وِجْهَات
+          derivation: plural

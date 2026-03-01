@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,6 +18,15 @@ root:
   radicals: ب-ل-و
   ya: true
   words:
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 91
+          text:
+            - to try, tempt, put to the test (ه s.o.)
+
     - text: بَلا
       type: preposition
       translations:

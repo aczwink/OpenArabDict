@@ -1,6 +1,8 @@
+param location string
+
 resource translatorService 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   name: 'openarabdict-translator'
-  location: 'eastus'
+  location: location
   
   kind: 'TextTranslation'
   
@@ -14,7 +16,7 @@ resource translatorService 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
 
 resource openAIService 'Microsoft.CognitiveServices/accounts@2025-06-01' = {
   name: 'openarabdict-openai-translator'
-  location: 'eastus'
+  location: location
   
   kind: 'OpenAI'
   

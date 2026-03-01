@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,19 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: س-ل-ح
+  radicals: د-ب-ر
   words:
-    - text: سِلَاح
-      type: noun
-      gender: male
+    - form: 2
+      type: verb
       translations:
         - dialect: msa
           source: hw4
-          source-page: 490
+          source-page: 312
           text:
-            - arm, weapon
-      derived:
-        - text: أَسْلِحَة
-          derivation: plural
-          type: noun
-          gender: male
+            - to make arragements, make plans (ه for), prepare, plan, organize, design, frame, devise, concert, arrange, get up, bring about (ه s.th.)
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 312
+          text:
+            - to be prepared, planned, organized, managed
