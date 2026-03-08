@@ -114,8 +114,6 @@ function PackInputToString(translations: OpenArabDictTranslationEntry[])
 
 export async function AzureOpenAI_Translate(translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage)
 {
-    const deploymentId = "gpt-4o";
-
     const body = {
         messages: [
             {
@@ -147,7 +145,7 @@ export async function AzureOpenAI_Translate(translations: OpenArabDictTranslatio
         body: Buffer.from(JSON.stringify(body)),
         headers,
         method: "POST",
-        url: AbsURL.Parse("https://" + ENV.azureOpenAI.region + ".api.cognitive.microsoft.com/openai/deployments/" + deploymentId + "/chat/completions?api-version=2024-10-21"),
+        url: AbsURL.Parse("https://" + ENV.azureOpenAI.region + ".api.cognitive.microsoft.com/openai/deployments/" + ENV.azureOpenAI.modelDeploymentName + "/chat/completions?api-version=2024-10-21"),
     });
 
     const responseString = response.body.toString("utf-8");

@@ -15,24 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ف-ج-ء
+  radicals: ن-ب-ش
   words:
-    - type: verb
-      form: 3
+    - form: 2
+      type: verb
       translations:
         - complete: true
           dialect: msa
           source: hw4
-          source-page: 816
+          source-page: 1102
           text:
-            - to come suddenly, descend unexpectedly (ه upon s.o.), confront (ه s.o.) suddenly or unexpectedly, take (ه s.o.) by surprise, surprise (ه ب s.o. with), attack, assail (ه s.o.)
-
-    - text: فَجْأَةً
-      type: adverb
-      translations:
-        - complete: true
-          dialect: msa
-          source: hw4
-          source-page: 816
-          text:
-            - suddenly, unexpectedly, inadvertently, unawares
+            - to search, rummage, burrow (في in s.th.), ransack, rifle (في s.th.)

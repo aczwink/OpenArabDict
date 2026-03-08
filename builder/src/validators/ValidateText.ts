@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -15,11 +15,11 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGenderedWord, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
-import { ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { TreeTrace } from "../TreeTrace";
@@ -29,13 +29,14 @@ import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration"
 import { ExtractRoot } from "../shared";
 import { VerbalNounCounter } from "../VerbalNounCounter";
 import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {
     return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
 }
 
-function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, translations: OpenArabDictTranslationEntry[], parent?: TreeTrace): string | undefined
+function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, translations: OpenArabDictTranslationEntry[], parent?: TreeTrace): DisplayVocalized[] | undefined
 {
     const wordDef = validator.wordDefinition;
 
@@ -58,7 +59,22 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             const conjugator = new Conjugator;
 
             const generated = ((voice === Voice.Active) && (verb.form.stativeActiveParticiple === true)) ? conjugator.DeclineStativeActiveParticiple(verbInstance) : conjugator.ConjugateParticiple(verbInstance, voice);
-            return VocalizedWordTostring(generated);
+            return generated;
+        }
+        case "instance-noun":
+        {
+            if(parent?.type !== "word")
+                throw new Error("Instance nouns can only be derived from verbal nouns");
+            const parentIsVerbalNoun = (parent.word.parent?.type === OpenArabDictWordParentType.Verb) && (parent.word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun);
+            if(!parentIsVerbalNoun)
+                throw new Error("Instance nouns can only be derived from verbal nouns");
+            const verbalNoun = parent.word as OpenArabDictGenderedWord;
+            
+            const c = new Conjugator();
+            const baseParsed = ParseVocalizedText(parent.word.text);
+            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, verbalNoun.isMale ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
+
+            return generated;
         }
         case "verbal-noun":
         {
@@ -76,7 +92,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
                 return undefined;
 
             const generated = conjugator.GenerateAllPossibleVerbalNouns(verbInstance);
-            return VocalizedWordTostring(generated[0]);
+            return generated[0];
         }
         case "colloquial":
         case undefined:
@@ -98,10 +114,8 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
                     tense: Tense.Perfect,
                     voice: Voice.Active,
                 });
-    
-                const conjugatedWord = VocalizedWordTostring(vocalized);
 
-                return conjugatedWord;
+                return vocalized;
             }
         }
     }
@@ -144,7 +158,10 @@ export function ValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCo
 
     const generated = GenerateTextIfPossible(validator, builder, translations, validator.parent);
     if(generated !== undefined)
-        validator.Infer("text", [generated], generated);
+    {
+        const generatedString = VocalizedWordTostring(generated);
+        validator.Infer("text", [generatedString], generatedString);
+    }
     else if(validator.wordDefinition.derivation === "verbal-noun")
         ValidateVerbalNoun(validator.wordDefinition, builder, verbalNounCounter, validator.parent);
 }

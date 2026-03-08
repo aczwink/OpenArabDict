@@ -28,7 +28,6 @@ root:
           text: نَدْو
           derived:
             - derivation: instance-noun
-              text: نَدْوَة
               translations:
                 - dialect: msa
                   source: hw4

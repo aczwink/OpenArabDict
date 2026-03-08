@@ -1,7 +1,8 @@
 {
-  "name": "openarabdict-translator",
+  "name": "@aczwink/openarabdict-translator",
   "version": "1.0.0",
   "description": "",
+  "bin": "dist/cli.js",
   "main": "dist/main.js",
   "types": "dist/main.d.ts",
   "scripts": {

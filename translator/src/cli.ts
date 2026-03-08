@@ -15,18 +15,10 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
+import { TranslateDict } from "./main";
+import { TargetTranslationLanguage } from "./shared";
 
-require('dotenv').config();
-
-export const ENV = {
-    azureOpenAI: {
-        key: process.env.OPENARABDICT_TRANSLATOR_AZURE_OPENAI_KEY!,
-        modelDeploymentName: process.env.OPENARABDICT_TRANSLATOR_AZURE_OPENAI_MODEL_DEPLOYMENT_NAME!,
-        region: process.env.OPENARABDICT_TRANSLATOR_AZURE_OPENAI_REGION!,
-    },
-    azureTranslator: {
-        key: process.env.OPENARABDICT_TRANSLATOR_AZURE_TRANSLATOR_KEY!,
-        region: process.env.OPENARABDICT_TRANSLATOR_AZURE_TRANSLATOR_REGION!,
-    },
-    implementation: process.env.OPENARABDICT_TRANSLATOR_IMPLEMENTATION! as "azure-translator" | "azure-openai" | "azure-openai-azure-translator-fallback",
-};
+TranslateDict({
+    databasePath: process.argv[2],
+    targetLanguage: process.argv[3] as TargetTranslationLanguage,
+});

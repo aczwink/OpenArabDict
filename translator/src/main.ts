@@ -97,9 +97,19 @@ function ResolveTranslationFunction(): (translations: OpenArabDictTranslationEnt
     }
 }
 
-async function TranslateDict(databasePath: string, targetLanguage: TargetTranslationLanguage)
+interface TranslateDictInput
+{
+    databasePath: string;
+    maxTranslations?: number;
+    targetLanguage: TargetTranslationLanguage;
+}
+
+export async function TranslateDict(input: TranslateDictInput)
 {
     const sourceLanguage = "en";
+
+    const databasePath = input.databasePath;
+    const targetLanguage = input.targetLanguage;
 
     const sourceDictPath = path.join(databasePath, sourceLanguage + ".json");
     const targetDictPath = path.join(databasePath, targetLanguage + ".json");
@@ -113,9 +123,12 @@ async function TranslateDict(databasePath: string, targetLanguage: TargetTransla
     const lookupTable = ComputeLookupTable(targetTranslations);
 
     let i = 0;
+    let translatedCount = 0;
     for (const entry of english.entries)
     {
-        console.log(++i, "/", english.entries.length, entry.wordId);
+        i++;
+        if(translatedCount === input.maxTranslations)
+            break;
         if(entry.translations.IsEmpty())
             continue;
 
@@ -124,6 +137,8 @@ async function TranslateDict(databasePath: string, targetLanguage: TargetTransla
         const storedHash = mapping[entry.wordId];
         if(computedHash === storedHash)
             continue;
+
+        console.log(i, "/", english.entries.length, entry.wordId);
 
         const translated = await fetchTranslation(entry.translations, targetLanguage);
         if(Array.isArray(translated))
@@ -138,11 +153,11 @@ async function TranslateDict(databasePath: string, targetLanguage: TargetTransla
         else
             throw new Error("Translation failed: " + translated);
 
-        break;
+        translatedCount++;
     }
 
     await fs.promises.writeFile(targetDictPath, JSON.stringify(targetTranslations), "utf-8");
     await fs.promises.writeFile(mappingDictPath, JSON.stringify(mapping), "utf-8");
-}
 
-TranslateDict(process.argv[2], process.argv[3] as TargetTranslationLanguage);
+    return translatedCount;
+}

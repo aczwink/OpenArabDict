@@ -17,6 +17,28 @@
 root:
   radicals: و-ف-ر
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: msa
+            parameters: uu
+            type: sound
+        #stative-active-participle: true #TODO
+      type: verb
+      derived:
+        - derivation: meaning-related #TODO: active-participle
+          type: adjective
+          text: وَفِير
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 1270
+              text:
+                - abundant, ample
+
     - type: verb
       dialect: msa
       form: 2
