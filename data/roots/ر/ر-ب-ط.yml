@@ -34,15 +34,22 @@ root:
             - to bind
       derived:
         - derivation: verbal-noun
-          gender: male
           text: رَبْط
-          type: noun
           translations:
             - dialect: msa
               source: hw4
               source-page: 372
               text:
                 - fastening, joining, attaching, connecting
+
+        - derivation: active-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: free-text
+              url: https://en.wiktionary.org/wiki/%D8%B1%D8%A7%D8%A8%D8%B7
+              text:
+                - (computing) hyperlink, link
 
     - type: verb
       dialect: msa

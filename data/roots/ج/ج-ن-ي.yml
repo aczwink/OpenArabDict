@@ -42,9 +42,10 @@ root:
       form: 5
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 168
           text:
-            - to incriminate
+            - to incriminate, accuse, charge with a crime (على s.o.), lay the blame (على on s.o.), blame (على s.o.)
       derived:
         - derivation: verbal-noun
           gender: male

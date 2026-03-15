@@ -24,7 +24,7 @@ root:
             parameters: aa
           - dialect: msa
             parameters: ia
-        stative-active-participle: true
+        stative: true
       type: verb
       derived:
         - derivation: active-participle

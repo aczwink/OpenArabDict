@@ -29,6 +29,9 @@
                 "male"
             ]
         },
+        "id": {
+            "type": "string"
+        },
         "text": {
             "type": "string"
         },

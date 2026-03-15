@@ -1,4 +1,4 @@
 # OpenArabDict
-[![Build and deploy to Azure](https://github.com/aczwink/OpenArabDict/actions/workflows/build.yml/badge.svg)](https://github.com/aczwink/OpenArabDict/actions/workflows/build.yml)
+[![Publish packages](https://github.com/aczwink/OpenArabDict/actions/workflows/publish-packages.yml/badge.svg)](https://github.com/aczwink/OpenArabDict/actions/workflows/publish-packages.yml)
 
 A dictionary data set of the Arabic language

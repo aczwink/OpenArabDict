@@ -41,6 +41,10 @@
                             "type": "integer",
                             "const": 1
                         },
+                        "valency": {
+                            "type": "string",
+                            "enum": ["transitive"]
+                        },
                         "variants": {
                             "type": "array",
                             "items": {
@@ -54,7 +58,7 @@
                                 ]
                             }
                         },
-                        "stative-active-participle": {
+                        "stative": {
                             "type": "boolean",
                             "const": true
                         }

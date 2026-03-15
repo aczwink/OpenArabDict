@@ -42,6 +42,15 @@ root:
           source-page: 741
           text:
             - to hang, suspend (على or ه ب s.th. on), attach, hitch, fasten, affix, tie (ه s.th. على or ب to)
+      derived:
+        - derivation: verbal-noun
+          text: تَعْلِيق
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 742
+              text:
+                - commentary, comment(s), explanatory remarks
 
     - type: verb
       dialect: msa

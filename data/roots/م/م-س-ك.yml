@@ -35,6 +35,15 @@ root:
           text:
             - to hold
 
+    - form: 4
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1066
+          text:
+            - to seize, grip, grasp, clasp, clutch, hold (ب or ه s.th.)
+
     - type: verb
       dialect: msa
       form: 5

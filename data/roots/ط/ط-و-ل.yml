@@ -75,15 +75,17 @@ root:
                     - longer, larger, bigger, taller
 
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 673
           text:
-            - to reach, catch (ه s.o.), get hold (ه, ه of s.o., of s.th.)
+            - to reach, catch (ه s.o.), get hold (ه ,ه of s.o., of s.th.)
 
     - type: verb
       form: 4

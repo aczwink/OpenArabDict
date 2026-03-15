@@ -35,8 +35,7 @@ root:
               text:
                 - worry, care
 
-        - #derivation: verbal-noun #TODO
-          derivation: noun-of-place
+        - derivation: verbal-noun
           text: مَهَمَّة
           translations:
             - dialect: msa

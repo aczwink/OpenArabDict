@@ -49,6 +49,12 @@ root:
 
     - form: 4
       type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 295
+          text:
+            - to be devoted, be faithful (ل to)
       derived:
         - derivation: active-participle
           type: adjective

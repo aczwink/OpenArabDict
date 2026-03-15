@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -28,7 +28,7 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=964
+          source-page: 951
           text:
             - to write, pen, write down, put down in writing, note down, inscribe, enter, record, book, register (ه s.th.)
         - dialect: lb
@@ -36,66 +36,61 @@ root:
           text:
             - to write
       derived:
-        - text: مَكْتوب
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - (pl. مَكَاتِيب) a writing
-        - text: مَكْتَب
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - office
-        - text: مَكْتَبَة
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=965
-              text:
-                - library
-          derived:
-            - text: مَكْتَبَات
-              derivation: plural
-              type: noun
-              gender: female
-        - text: كَاتِب
-          derivation: active-participle
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - writer
-          derived:
-            - text: كُتَّاب
-              derivation: plural
-              type: noun
-              gender: male
-              translations: []
         - text: كِتَاب
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=964
+              source-page: 951
               text:
                 - book
           derived:
             - text: كُتُب
               derivation: plural
-              type: noun
-              gender: male
+
+        - text: مَكْتَب
+          derivation: noun-of-place
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 952
+              text:
+                - office
+          derived:
+            - derivation: feminine
+              text: مَكْتَبَة
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 952
+                  text:
+                    - library
+              derived:
+                - text: مَكْتَبَات
+                  derivation: plural
+
+        - derivation: active-participle
+          id: kaatib
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 952
+              text:
+                - writer
+          derived:
+            - text: كُتَّاب
+              derivation: plural
+
+        - derivation: passive-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 952
+              text:
+                - a writing, message, note
+          derived:
+            - derivation: plural
+              text: مَكَاتِيب

@@ -75,77 +75,73 @@ export enum OpenArabDictWordType
     Numeral = 11,
 }
 
+export enum OpenArabDictParentType
+{
+    /**
+     * A word x has directed (outgoing) relations that has a target y.
+     * The type describes the relationship.
+     * Many relationships are parent-child relationships.
+     */
+
+    //Relation from x to y means: x is a direct child of root y.
+    Root,
+
+    //parent-child verb-only relationships
+    //Relation from x to y means: x is the active participle of verb y.
+    ActiveParticiple,
+    //Relation from x to y means: x is related in meaning to verb y and is thus considered a direct child.
+    MeaningRelated,
+    //Relation from x to y means: x is the noun of place of verb y.
+    NounOfPlace,
+    //Relation from x to y means: x is the passive participle of verb y.
+    PassiveParticiple,
+    //Relation from x to y means: x is the tool noun of verb y.
+    ToolNoun,
+    //Relation from x to y means: x is the verbal noun of verb y.
+    VerbalNoun,
+
+    //parent(x) = y
+    //Relation from x to y means: x is plural of y
+    Plural,
+    //Relation from x to y means: x is feminine version of male word y
+    Feminine,
+    //Relation from adjective x to noun y means: x is nisba of y
+    Nisba,
+    //Relation from x to y means: x is colloquial version of fus7a word y
+    Colloquial,
+    //Relation from x to y means: x is an extension of word y (for example taking a word to a further meaning in a phrase)
+    Extension,
+    //Relation from noun x to adjective y means: x is elative degree of y
+    ElativeDegree,
+    //Relation from x to y means: x is singulative of collective y
+    Singulative,
+    //Child is adverbial accusative of parent
+    AdverbialAccusative,
+    //Relation from x to y means: x is instance noun of verbal noun y
+    InstanceNoun,
+    //Relation from x to y means: x is the definite state of word y (i.e. adding the article al-)
+    DefiniteState,
+
+    //Relation from x to y means: x is a compound word (like a idafa) and is composed on word y.
+    ComposedOf,
+}
+
+export interface OpenArabDictWordParent
+{
+    /**
+     * In general the related word id.
+     * If @member type is @constant OpenArabDictDirectionalRelationshipType.Root, then this is the root id.
+     */
+    id: string;
+    type: OpenArabDictParentType;
+}
+
 interface OpenArabDictWordBase
 {
     id: string;
     text: string;
+    parent: OpenArabDictWordParent[];
 }
-
-export enum OpenArabDictWordParentType
-{
-    Root = 0,
-    Verb = 1,
-    NonVerbWord = 2,
-}
-
-interface OpenArabDictWordRootParent
-{
-    type: OpenArabDictWordParentType.Root;
-    rootId: string;
-}
-
-export enum OpenArabDictVerbDerivationType
-{
-    MeaningRelated = 0,
-    VerbalNoun = 1,
-    ActiveParticiple = 2,
-    PassiveParticiple = 3,
-    Colloquial = 4,
-    NounOfPlace = 5,
-    ToolNoun = 6
-}
-
-export interface OpenArabDictWordVerbParent
-{
-    type: OpenArabDictWordParentType.Verb;
-    derivation: OpenArabDictVerbDerivationType;
-    verbId: string;
-}
-
-export enum OpenArabDictNonVerbDerivationType
-{
-    //parent(x) = y
-
-    //Relation from x to y means: x is plural of y
-    Plural = 0,
-    //Relation from x to y means: x is feminine version of male word y
-    Feminine = 1,
-    //Relation from adjective x to noun y means: x is nisba of y
-    Nisba = 2,
-    //Relation from x to y means: x is colloquial version of fus7a word y
-    Colloquial = 3,
-    //Relation from x to y means: x is an extension of word y (for example taking a word to a further meaning in a phrase)
-    Extension = 4,
-    //Relation from noun x to adjective y means: x is elative degree of y
-    ElativeDegree = 5,
-    //Relation from x to y means: x is singulative of collective y
-    Singulative = 6,
-    //Child is adverbial accusative of parent
-    AdverbialAccusative = 7,
-    //Relation from x to y means: x is instance noun of verbal noun y
-    InstanceNoun = 8,
-    //Relation from x to y means: x is the definite state of word y (i.e. adding the article al-)
-    DefiniteState = 9,
-}
-
-export interface OpenArabDictOtherWordParent
-{
-    type: OpenArabDictWordParentType.NonVerbWord;
-    wordId: string;
-    relationType: OpenArabDictNonVerbDerivationType;
-}
-
-export type OpenArabDictWordParent = OpenArabDictWordRootParent | OpenArabDictWordVerbParent | OpenArabDictOtherWordParent;
 
 export enum OpenArabDictGender
 {
@@ -158,13 +154,11 @@ export interface OpenArabDictGenderedWord extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Adjective | OpenArabDictWordType.Noun | OpenArabDictWordType.Numeral | OpenArabDictWordType.Pronoun;
     gender: OpenArabDictGender;
-    parent?: OpenArabDictWordParent;
 }
 
 interface OpenArabDictOtherWord extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Adverb | OpenArabDictWordType.Conjunction | OpenArabDictWordType.ForeignVerb | OpenArabDictWordType.Interjection | OpenArabDictWordType.Particle | OpenArabDictWordType.Phrase | OpenArabDictWordType.Preposition;
-    parent?: OpenArabDictWordParent;
 }
 
 export enum OpenArabDictVerbType
@@ -193,7 +187,6 @@ export interface OpenArabDictVerbForm
 export interface OpenArabDictVerb extends OpenArabDictWordBase
 {
     type: OpenArabDictWordType.Verb;
-    parent: OpenArabDictWordParent;
     rootId: string;
     form: OpenArabDictVerbForm;
 }

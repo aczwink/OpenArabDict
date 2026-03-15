@@ -25,12 +25,11 @@ root:
           - dialect: msa
             parameters: uu
             type: sound
-        #stative-active-participle: true #TODO
+        stative: true
       type: verb
       derived:
-        - derivation: meaning-related #TODO: active-participle
+        - derivation: active-participle
           type: adjective
-          text: وَفِير
           translations:
             - complete: true
               dialect: msa

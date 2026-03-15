@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -83,15 +83,18 @@ root:
           text:
             - to last, endure, continue, go on
       derived:
-        - text: اِسْتِمْرَار
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: verbal-noun
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1057
               text:
-                - باستمرار continually, constantly
+                - duration, permanence, continuity, continuance, continuation, continued existence, survival
+              usage:
+                - text: باستمرار
+                  translation: continually, constantly
+                  type: meaning-in-context
+
         - derivation: active-participle
           type: adjective
           gender: male

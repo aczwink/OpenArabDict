@@ -15,24 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: س-ج-ل
+  radicals: ر-ف-ه
   words:
-    - type: verb
-      form: 2
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 463
-          text:
-            - to register, enter (ه s.th.), make an entry (ه of s.th)
-            - to note down, record (ه s.th.), make a note of (ه)
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
       derived:
-        - derivation: verbal-noun
-          text: تَسْجِيل
+        #- derivation: verbal-noun #TODO
+        - derivation: meaning-related
+          type: noun
+          text: رَفَاهِيَة
           translations:
             - dialect: msa
               source: hw4
-              source-page: 464
+              source-page: 407
               text:
-                - entering, entry, registration
-                - booking
+                - luxury

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,24 +15,20 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: س-ج-ل
+  radicals: ج-م-ح
   words:
-    - type: verb
-      form: 2
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 463
-          text:
-            - to register, enter (ه s.th.), make an entry (ه of s.th)
-            - to note down, record (ه s.th.), make a note of (ه)
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: aa
+      type: verb
       derived:
-        - derivation: verbal-noun
-          text: تَسْجِيل
+        - derivation: active-participle
+          type: adjective
           translations:
             - dialect: msa
               source: hw4
-              source-page: 464
+              source-page: 158
               text:
-                - entering, entry, registration
-                - booking
+                - indomitable, untamable

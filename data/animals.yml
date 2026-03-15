@@ -57,9 +57,6 @@ words:
           - lark (zool.)
     derived:
       - derivation: singulative
-        text: قُبَّرَة
-        gender: female
-        type: noun
 
   - text: قِرْد
     type: noun

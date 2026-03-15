@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,13 +16,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictVerbForm, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictVerbForm, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "./DataDefinitions";
 import { TreeTrace } from "./TreeTrace";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "./services/StatisticsCounterService";
 
-type InferableValue = boolean | number | string;
+type InferableValue = number | string;
 
 export type WordValidator = (validator: WordDefinitionValidator) => void;
 
@@ -33,11 +33,6 @@ export class WordDefinitionValidator
     }
 
     //Properties
-    public set isMale(value: boolean | undefined)
-    {
-        this._isMale = value;
-    }
-
     public get parent()
     {
         return this._parent;
@@ -95,6 +90,14 @@ export class WordDefinitionValidator
     }
 
     //Public methods
+    public Assign<T extends InferableValue>(variable: "gender" | "text" | "type", value: T)
+    {
+        const alreadyAssigned = (this as any)["_" + variable];
+        if(alreadyAssigned === value)
+            this.ReportRedundancy(variable, value);
+        (this as any)["_" + variable] = value;
+    }
+
     public ConstructResult()
     {
         switch(this._type)
@@ -104,7 +107,7 @@ export class WordDefinitionValidator
             case OpenArabDictWordType.Numeral:
             case OpenArabDictWordType.Pronoun:
                 {
-                    if(this._isMale === undefined)
+                    if(this._gender === undefined)
                         this.ReportValidationError("Gender is missing");
                     if(this._text === undefined)
                         this.ReportValidationError("Text is missing");
@@ -112,13 +115,13 @@ export class WordDefinitionValidator
         }
 
         return {
+            gender: this._gender,
             type: this.type,
             text: this._text,
-            isMale: this._isMale
         };
     }
 
-    public Infer<T extends InferableValue>(variable: "isMale" | "text" | "type", allowedValues: T[], defaultValue: T)
+    public Infer<T extends InferableValue>(variable: "gender" | "text" | "type", allowedValues: T[], defaultValue: T)
     {
         const got = (this as any)["_" + variable];
         for (const choice of allowedValues)
@@ -188,7 +191,7 @@ export class WordDefinitionValidator
     }
 
     //State
-    private _isMale?: boolean;
+    private _gender?: OpenArabDictGender;
     private _text?: string;
     private _type?: OpenArabDictWordType;
     private _verbForm?: OpenArabDictVerbForm;

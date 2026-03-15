@@ -24,8 +24,7 @@ root:
           - dialect: msa
             parameters: ia
       derived:
-        #- derivation: verbal-noun #TODO: verbal noun
-        - derivation: meaning-related
+        - derivation: verbal-noun
           type: noun
           text: شِرْكَة
           translations:

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,21 +18,31 @@ root:
   radicals: ش-م-ع
   words:
     - text: شَمْع
-      alias: شَمَع
       type: noun
-      gender: male
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=581
+          source-page: 568
           text:
             - (wax) candles
       derived:
         - text: شَمْعَة
-          alias: شَمَعَة
           derivation: singulative
-          type: noun
-          gender: female
+          derived:
+            - text: شُمُوع
+              derivation: plural
+
+    - text: شَمَع
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 568
+          text:
+            - (wax) candles
+      derived:
+        - text: شَمَعَة
+          derivation: singulative
           derived:
             - text: شُمُوع
               derivation: plural

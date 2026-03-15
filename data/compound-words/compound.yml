@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -14,25 +14,17 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: س-ج-ل
-  words:
-    - type: verb
-      form: 2
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 463
-          text:
-            - to register, enter (ه s.th.), make an entry (ه of s.th)
-            - to note down, record (ه s.th.), make a note of (ه)
-      derived:
-        - derivation: verbal-noun
-          text: تَسْجِيل
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 464
-              text:
-                - entering, entry, registration
-                - booking
+words:
+  - text: كَاتِب الْعَدْل
+    type: noun
+    relations:
+      - to: kaatib
+        relationship: compound-of
+      - to: 3adl
+        relationship: compound-of
+    translations:
+      - dialect: msa
+        source: free-text
+        text:
+          - notary
+        url: https://ar.wikipedia.org/wiki/%D9%83%D8%A7%D8%AA%D8%A8_%D8%B9%D8%AF%D9%84

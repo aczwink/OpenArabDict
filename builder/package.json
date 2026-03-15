@@ -12,17 +12,17 @@
   "author": "Amir Czwink",
   "license": "AGPL-3.0",
   "devDependencies": {
-    "@types/node": "^22.12.0",
-    "nodemon": "^3.1.9",
-    "typescript": "^5.7.3"
+    "@types/node": "^25.3.5",
+    "nodemon": "^3.1.14",
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@aczwink/acts-util-core": "^1.0.0",
     "@aczwink/acts-util-node": "^1.0.0",
     "jsonschema": "^1.5.0",
-    "@aczwink/openarabdict-domain": "^1.0.0",
+    "@aczwink/openarabdict-domain": "^1.1.0",
     "@aczwink/openarabdict-openarabicconjugation-bridge": "^1.0.0",
-    "@aczwink/openarabicconjugation": "^1.0.0",
-    "yaml": "^2.7.0"
+    "@aczwink/openarabicconjugation": "^1.1.0",
+    "yaml": "^2.8.2"
   }
 }

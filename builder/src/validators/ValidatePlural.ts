@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictGenderedWord, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictGenderedWord, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
 export function ValidatePlural(validator: WordDefinitionValidator)
@@ -26,6 +26,6 @@ export function ValidatePlural(validator: WordDefinitionValidator)
             throw new Error("Plurals can only be derived from words");
 
         validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun, OpenArabDictWordType.Numeral, OpenArabDictWordType.Pronoun], validator.parent.word.type);
-        validator.Infer("isMale", [true, false], (validator.parent.word as OpenArabDictGenderedWord).isMale);
+        validator.Infer("gender", [OpenArabDictGender.Female, OpenArabDictGender.Male], (validator.parent.word as OpenArabDictGenderedWord).gender);
     }
 }

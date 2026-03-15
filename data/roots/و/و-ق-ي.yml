@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -22,23 +22,32 @@ root:
       form:
         stem: 1
         parameters: ai
-      translations: []
       derived:
         - text: وِقَايَة
           derivation: verbal-noun
-          type: noun
-          gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1282
               text:
                 - prophylaxis (med.)
+
         - derivation: active-participle
           type: adjective
-          gender: male
           translations:
             - dialect: msa
               source: hw4
               source-page: 1282
               text:
                 - preserving, guarding, protecting
+                - preventive, preservative, prophylactic
+
+        - derivation: meaning-related
+          text: وِقَائِيّ
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1282
+              text:
+                - preventive

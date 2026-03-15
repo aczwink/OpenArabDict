@@ -31,6 +31,7 @@ export class DBBuilder
         this.relations = [];
         this.roots = {};
         this.translations = new Map();
+        this.userWordIdMap = {};
         this.words = {};
         this.wordsWithEqualSpellingDict = {};
     }
@@ -84,6 +85,13 @@ export class DBBuilder
         return id;
     }
 
+    public AddUserWordIdMapping(userWordId: string, wordId: string)
+    {
+        if(userWordId in this.userWordIdMap)
+            throw new Error("User word ids must be unique and '" + userWordId + "' is not.");
+        this.userWordIdMap[userWordId] = wordId;
+    }
+
     public AddWord(word: OpenArabDictWord, translations: OpenArabDictTranslationEntry[])
     {
         const id = this.GenerateUniqueWordId(word);
@@ -123,6 +131,14 @@ export class DBBuilder
     public GetWord(wordId: string)
     {
         return this.words[wordId]!;
+    }
+
+    public LookupUserWordId(userWordId: string)
+    {
+        const wordId = this.userWordIdMap[userWordId];
+        if(wordId === undefined)
+            throw new Error("User word id '" + userWordId + "' does not exist.");
+        return wordId;
     }
 
     public MapDialectKey(dialectKey: string)
@@ -229,6 +245,7 @@ export class DBBuilder
     private relations: OpenArabDictWordRelation[];
     private roots: Dictionary<OpenArabDictRoot>;
     private translations: Map<string, OpenArabDictTranslationEntry[]>;
+    private userWordIdMap: Dictionary<string>;
     private words: Dictionary<OpenArabDictWord>;
     private wordsWithEqualSpellingDict: Dictionary<string[]>;
 }

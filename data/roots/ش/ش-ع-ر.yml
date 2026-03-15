@@ -67,3 +67,15 @@ root:
           source: hw4-free-text
           text:
             - emblem, badge
+
+    - text: مَشْعَر
+      type: noun
+      derived:
+        - derivation: plural
+          text: مَشَاعِر
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 554
+              text:
+                - senses, feelings, sensations

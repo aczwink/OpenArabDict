@@ -23,6 +23,7 @@ import { CreateVerb } from "@aczwink/openarabicconjugation/dist/Verb";
 import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
 import { DialectTree } from "./DialectTree";
 import { GetDialectMetadata } from "@aczwink/openarabicconjugation/dist/DialectsMetadata";
+import { WordLogic } from "./WordLogic";
 
 export function CreateVerbFromOADVerbForm(dialectType: DialectType, rootRadicals: string, verbForm: OpenArabDictVerbForm)
 {
@@ -73,4 +74,4 @@ export function MapVerbTypeToOpenArabicConjugation(verbType?: OpenArabDictVerbTy
     return undefined;
 }
 
-export { DialectTree };
+export { DialectTree, WordLogic };

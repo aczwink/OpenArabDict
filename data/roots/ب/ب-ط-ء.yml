@@ -23,7 +23,7 @@ root:
         variants:
           - dialect: msa
             parameters: uu
-        stative-active-participle: true
+        stative: true
       translations:
         - dialect: msa
           source: hw4

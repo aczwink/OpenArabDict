@@ -39,12 +39,20 @@ export interface TranslationDefinition
     usage?: UsageDefinition[];
 }
 
+export interface WordRelationshipDefinition
+{
+    relationship: "compound-of";
+    to: string;
+}
+
 export interface GenderedWordDefinition
 {
     type?: "adjective" | "noun" | "numeral" | "pronoun";
     alias?: string;
     derivation: "active-participle" | "definite-state" | "feminine" | "instance-noun" | "noun-of-place" | "passive-participle" | "plural" | "singulative" | "tool-noun" | "verbal-noun";
-    gender?: "male" | "female";
+    gender?: "male" | "female" | "male-or-female";
+    id?: string;
+    relations?: WordRelationshipDefinition[];
     text?: string;
     translations: TranslationDefinition[];
     derived?: WordDefinition[];
@@ -69,9 +77,10 @@ export interface VerbVariantDefintion
 
 interface ParameterizedStem1DataWithVariants
 {
+    stative?: true;
     stem: 1;
+    valency?: "transitive";
     variants: VerbVariantDefintion[];
-    "stative-active-participle"?: true;
 }
 
 interface ParameterizedAdvancedStemData

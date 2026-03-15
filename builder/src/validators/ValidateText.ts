@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictGenderedWord, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictGenderedWord, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
@@ -30,6 +30,7 @@ import { ExtractRoot } from "../shared";
 import { VerbalNounCounter } from "../VerbalNounCounter";
 import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
+import { TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {
@@ -54,11 +55,10 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
 
             const verbInstance = CreateMSAVerb(root, verb);
 
-            const voice = (wordDef.derivation === "active-participle") ? Voice.Active : Voice.Passive;
+            const voice = (wordDef.derivation === "active-participle") ? TargetVerbBasedDerivationPatterns.ActiveParticiples : TargetVerbBasedDerivationPatterns.PassiveParticiple;
 
             const conjugator = new Conjugator;
-
-            const generated = ((voice === Voice.Active) && (verb.form.stativeActiveParticiple === true)) ? conjugator.DeclineStativeActiveParticiple(verbInstance) : conjugator.ConjugateParticiple(verbInstance, voice);
+            const generated = ((voice === TargetVerbBasedDerivationPatterns.ActiveParticiples) && (verb.form.stative === true)) ? conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ActiveParticiples)[1] : conjugator.DeriveFromVerb(verbInstance, voice)[0];
             return generated;
         }
         case "instance-noun":
@@ -72,7 +72,18 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             
             const c = new Conjugator();
             const baseParsed = ParseVocalizedText(parent.word.text);
-            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, verbalNoun.isMale ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
+            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (verbalNoun.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
+
+            return generated;
+        }
+        case "singulative":
+        {
+            if((parent?.type !== "word") || (parent.word.type !== OpenArabDictWordType.Noun))
+                throw new Error("Singulatives can only be derived from nouns");
+
+            const c = new Conjugator();
+            const baseParsed = ParseVocalizedText(parent.word.text);
+            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (parent.word.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
 
             return generated;
         }
@@ -88,11 +99,9 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             const verbInstance = CreateMSAVerb(root, verb);
 
             const conjugator = new Conjugator;
-            if(conjugator.HasPotentiallyMultipleVerbalNounForms(verbInstance))
-                return undefined;
-
-            const generated = conjugator.GenerateAllPossibleVerbalNouns(verbInstance);
-            return generated[0];
+            const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);
+            if(generated.length === 1)
+                return generated[0];
         }
         case "colloquial":
         case undefined:
@@ -135,7 +144,7 @@ function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, ve
     const verbInstance = CreateMSAVerb(root, verb);
 
     const conjugator = new Conjugator;
-    const generated = conjugator.GenerateAllPossibleVerbalNouns(verbInstance);
+    const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);
 
     const parsed = ParseVocalizedText(word.text ?? "");
     for (let i = 0; i < generated.length; i++)

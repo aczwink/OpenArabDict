@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -31,17 +31,22 @@ root:
               source: hw4-free-text
               text:
                 - adolescent
+
     - type: verb
-      dialect: msa
       form: 4
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 420
+          text:
+            - to expect or demand too much (ه ,ه of s.o., s.th.), make excessive demands (ه on)
       derived:
-        - text: إِرْهَاق
-          derivation: verbal-noun
+        - derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 421
               text:
                 - heavy load (e.g., of work)

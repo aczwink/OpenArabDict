@@ -111,7 +111,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
             case "colloquial":
                 return OpenArabDictNonVerbDerivationType.Colloquial;
             case "definite-state":
-                return OpenArabDictNonVerbDerivationType.DefinitiveState;
+                return OpenArabDictNonVerbDerivationType.DefiniteState;
             case "elative-degree":
                 return OpenArabDictNonVerbDerivationType.ElativeDegree;
             case "extension":
@@ -176,10 +176,20 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
             const word = builder.AddWord({
                 id: "",
                 type: result.type,
-                isMale: result.isMale!,
+                gender: result.gender!,
                 text,
                 parent: MapParent(g.derivation, parent)
             }, translations);
+            if(g.id !== undefined)
+                builder.AddUserWordIdMapping(g.id, word.id);
+            if(g.relations !== undefined)
+            {
+                for (const relation of g.relations)
+                {
+                    const wordId = builder.LookupUserWordId(relation.to);
+                    builder.AddRelation(word.id, wordId, OpenArabDictWordRelationshipType.Antonym); //TODO: map type
+                }
+            }
 
             if(g.alias !== undefined)
             {

@@ -101,7 +101,8 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
         const stem = def.form.stem;
 
         validator.verbForm = {
-            stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),
+            hasPassive: MapPassiveFlag(def.form),
+            stative: ExtractStativeFlag(def.form),
             stem,
             variants: def.form.variants.map(ValidateVerbFormVariant.bind(undefined, builder, validator)),
             verbType
@@ -121,7 +122,8 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
         }
 
         validator.verbForm = {
-            stativeActiveParticiple: ExtractActiveParticipleFlag(def.form),
+            hasPassive: MapPassiveFlag(def.form),
+            stative: ExtractStativeFlag(def.form),
             stem: stemNumber,
             variants,
             verbType
@@ -129,11 +131,26 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
     }
 }
 
-function ExtractActiveParticipleFlag(form: ParameterizedStemData | number): true | undefined
+function ExtractStativeFlag(form: ParameterizedStemData | number): true | undefined
 {
     if(typeof form === "number")
         return undefined;
     if((form.stem === 1) && ("variants" in form))
-        return form["stative-active-participle"];
+        return form.stative;
     return undefined;
+}
+
+function MapPassiveFlag(form: ParameterizedStemData | number): boolean
+{
+    if(typeof form === "number")
+        return false;
+    if((form.stem === 1) && ("valency" in form))
+    {
+        switch(form.valency)
+        {
+            case "transitive":
+                return true;
+        }
+    }
+    return false;
 }

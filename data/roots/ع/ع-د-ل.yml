@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,15 @@ root:
   radicals: ع-د-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ai
       derived:
         - text: عَدْل
           derivation: verbal-noun
-          type: noun
-          gender: male
+          id: 3adl
           translations:
             - dialect: msa
               source: hw4
@@ -35,10 +34,10 @@ root:
               text:
                 - justice, impartiality
                 - fairness, equitableness, probity, honesty, uprightness
+
         - text: عَدْل
           derivation: meaning-related
           type: adjective
-          gender: male
           translations:
             - dialect: msa
               source: hw4

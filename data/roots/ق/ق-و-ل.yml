@@ -20,6 +20,7 @@ root:
     - type: verb
       form:
         stem: 1
+        valency: transitive
         variants:
           - dialect: msa
             parameters: uu
@@ -27,10 +28,10 @@ root:
             parameters: iu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 932
           text:
-            - to speak, say, tell (ه s.th., ل to s.o.; في or عن ه s.th. about or
-              of), utter, voice (ه s.th.)
+            - to speak, say, tell (ه s.th., ل to s.o.; ه عن ,في s.th. about or of), utter, voice (ه s.th.)
         - dialect: lb
           source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 70
           text:

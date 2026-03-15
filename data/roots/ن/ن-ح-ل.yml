@@ -39,7 +39,7 @@ root:
         variants:
           - dialect: msa
             parameters: uu
-        stative-active-participle: true
+        stative: true
       type: verb
       translations:
         - dialect: msa

@@ -15,8 +15,26 @@
             "type": "string",
             "enum": [
                 "female",
-                "male"
+                "male",
+                "male-or-female"
             ]
+        },
+        "relations": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "relationship": {
+                        "type": "string",
+                        "enum": ["compound-of"]
+                    },
+                    "to": {
+                        "type": "string"
+                    }
+                },
+                "required": ["relationship", "to"]
+            }
         },
         "text": {
             "type": "string"

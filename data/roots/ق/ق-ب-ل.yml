@@ -134,20 +134,25 @@ root:
                       translation: in return for that, in exchange for that, in compensation for that, as an equivalent for that, for that, therefor
 
     - type: verb
-      dialect: msa
       form: 4
-      translations: []
       derived:
-        - text: إِقْبَال
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: verbal-noun
           translations:
             - dialect: msa
               source: hw4-free-text
               text:
                 - turning, application, attention, response, responsiveness (على
                   to), concern (على for), interest (على in), demand
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 869
+              text:
+                - coming, next (e.g., month, year)
 
     - type: verb
       dialect: msa

@@ -46,7 +46,7 @@ root:
         variants:
           - dialect: msa
             parameters: uu
-        stative-active-participle: true
+        stative: true
       derived:
         - text: خَبِير
           derivation: active-participle

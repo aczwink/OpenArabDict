@@ -15,20 +15,20 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { GenderedWordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
-function IsMale(word: GenderedWordDefinition)
+function MapGender(word: GenderedWordDefinition)
 {
     switch(word.gender)
     {
-        case undefined:
-            return undefined;
         case "female":
-            return false;
+            return OpenArabDictGender.Female;
         case "male":
-            return true;
+            return OpenArabDictGender.Male;
+        case "male-or-female":
+            return OpenArabDictGender.FemaleOrMale;
         default:
             throw new Error("Unknown gender: " + (word as any).gender);
     }
@@ -39,13 +39,13 @@ export function ValidateGender(validator: WordDefinitionValidator)
     if((validator.type === OpenArabDictWordType.Adjective) || (validator.type === OpenArabDictWordType.Noun))
     {
         const isFemale = validator.text.endsWith("ة");
-        validator.Infer("isMale", [true, false], !isFemale);
+        const gender = isFemale ? OpenArabDictGender.Female : OpenArabDictGender.Male;
+        validator.Infer("gender", [OpenArabDictGender.Male, OpenArabDictGender.Female], gender);
     }
 
     if("gender" in validator.wordDefinition)
     {
-        const isMale = IsMale(validator.wordDefinition);
-        if(isMale !== undefined)
-            validator.Infer("isMale", [true, false], isMale);
+        const gender = MapGender(validator.wordDefinition);
+        validator.Assign("gender", gender);
     }
 }
