@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,26 +18,35 @@ root:
   radicals: م-ه-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1089
           text:
-            - to be skillful
+            - to be skillful, adroit, dexterous, skilled, adept, proficient, expert, experienced, seasoned
       derived:
         - text: مَهَارَة
-          derivation: meaning-related
-          type: noun
-          gender: female
+          derivation: verbal-noun
           derived:
             - text: مَهَارَات
               derivation: plural
               translations:
                 - dialect: msa
                   source: hw4
-                  url: http://ejtaal.net/aa/#hw4=1102
+                  source-page: 1089
                   text:
                     - skills, crafts
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1089
+              text:
+                - skillful, adroit, dexterous, skilled, proficient, adept, expert, practiced, experienced, seasonsed

@@ -29,6 +29,10 @@
                         "type": {
                             "type": "string",
                             "enum": ["irregular", "sound"]
+                        },
+                        "valency": {
+                            "type": "string",
+                            "enum": ["transitive"]
                         }
                     },
                     "required": ["stem"]
@@ -37,6 +41,10 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
+                        "stative": {
+                            "type": "boolean",
+                            "const": true
+                        },
                         "stem": {
                             "type": "integer",
                             "const": 1
@@ -57,10 +65,6 @@
                                     }
                                 ]
                             }
-                        },
-                        "stative": {
-                            "type": "boolean",
-                            "const": true
                         }
                     },
                     "required": ["stem", "variants"]

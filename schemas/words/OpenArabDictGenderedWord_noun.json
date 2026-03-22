@@ -8,7 +8,44 @@
         "derived": {
             "type": "array",
             "items": {
-                "$ref": "./OpenArabDictWord_derived.json"
+                "oneOf": [
+                    {
+                        "$ref": "./OpenArabDictWord_derived.json"
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "derivation": {
+                                "type": "string",
+                                "enum": [
+                                    "plural"
+                                ]
+                            },
+                            "ref": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["derivation", "ref"]
+                    }
+                ]
+            }
+        },
+        "derived-from": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "derivation": {
+                        "type": "string",
+                        "enum": ["composed-of"]
+                    },
+                    "ref": {
+                        "type": "string"
+                    }
+                },
+                "required": ["derivation", "ref"]
             }
         },
         "gender": {
@@ -18,23 +55,6 @@
                 "male",
                 "male-or-female"
             ]
-        },
-        "relations": {
-            "type": "array",
-            "items": {
-                "type": "object",
-                "additionalProperties": false,
-                "properties": {
-                    "relationship": {
-                        "type": "string",
-                        "enum": ["compound-of"]
-                    },
-                    "to": {
-                        "type": "string"
-                    }
-                },
-                "required": ["relationship", "to"]
-            }
         },
         "text": {
             "type": "string"

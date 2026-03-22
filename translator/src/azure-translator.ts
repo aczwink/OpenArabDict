@@ -43,7 +43,7 @@ async function CallTranslationService(texts: string[], targetLanguage: TargetTra
     {
         console.log(texts);
         console.log(response.body.toString("utf-8"));
-        throw new Error("TODO: fix me");
+        throw new Error("fix me");
     }
     const parsed = JSON.parse(response.body.toString("utf-8")) as any[];
 

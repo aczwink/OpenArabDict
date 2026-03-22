@@ -25,8 +25,6 @@ root:
       derived:
         - text: شِدَّة
           derivation: verbal-noun
-          type: noun
-          gender: female
           translations:
             - complete: true
               dialect: msa
@@ -34,10 +32,9 @@ root:
               source-page: 537
               text:
                 - strength, forcefulness, power, vehemence, violence, intensity, severity, force, high degree
+
         - text: شِدَّة
           derivation: verbal-noun
-          type: noun
-          gender: female
           translations:
             - dialect: msa
               source: hw4

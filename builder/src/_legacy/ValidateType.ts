@@ -57,9 +57,9 @@ function MapType(word: WordDefinition)
 
 export function ValidateType(validator: WordDefinitionValidator)
 {
-    validator.type = MapType(validator.wordDefinition)
+    validator.type = MapType(validator._legacyWordDefinition)
 
-    switch(validator.wordDefinition.derivation)
+    switch(validator._legacyWordDefinition.derivation)
     {
         case "adverbial-accusative":
             validator.Infer("type", [OpenArabDictWordType.Adverb], OpenArabDictWordType.Adverb);

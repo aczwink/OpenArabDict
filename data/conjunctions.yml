@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,6 +15,22 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
+  - text: إِذْ
+    type: conjunction
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 13
+        text:
+          - since, as, the more so as, because
+        usage:
+          - text: اذ إن
+            translation: for; since, as, in view of the fact that
+            type: meaning-in-context
+          - text: اذ أن
+            translation: for; since, as, in view of the fact that
+            type: meaning-in-context
+
   - text: أَلَّا
     type: conjunction
     translations:

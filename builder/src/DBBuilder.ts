@@ -120,7 +120,7 @@ export class DBBuilder
             console.log(criteria);
             throw new Error("Could not find word");
         }
-        throw new Error("TODO");
+        throw new Error("Multiple words where found");
     }
 
     public GetRoot(rootId: string)

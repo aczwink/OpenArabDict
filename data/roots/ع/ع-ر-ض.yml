@@ -43,27 +43,25 @@ root:
                 - proposition, proposal
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 705
           text:
-            - to contradict, oppose (ه, ه s.o., s.th.), raise objections,
-              protest, remonstrate (ه, ه against s.o., against s.th.)
+            - to contradict, oppose (ه ,ه s.o., s.th.), raise objections, protest, remonstrate (ه ,ه against s.o., against s.th.)
+            - to be against s.o. or s.th. (ه ,ه)
       derived:
         - derivation: active-participle
           type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=721
+              source-page: 708
               text:
                 - contradicter
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -72,6 +70,14 @@ root:
           text:
             - to face (ل s.th., e.g., a problem)
             - to expose o.s., be exposed, be subjected (ل to s.th.)
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 707
+              text:
+                - objection
 
     - type: verb
       dialect: msa

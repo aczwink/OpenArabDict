@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -36,3 +36,12 @@ words:
         source: hw4 #http://ejtaal.net/aa/#hw4=81
         text:
           - program, plan, schedule
+
+  - text: نَمُوذَج
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 1174
+        text:
+          - model

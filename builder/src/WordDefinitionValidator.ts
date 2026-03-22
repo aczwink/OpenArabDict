@@ -16,26 +16,47 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictGender, OpenArabDictVerbForm, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictVerbForm, OpenArabDictWordParent, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "./DataDefinitions";
 import { TreeTrace } from "./TreeTrace";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "./services/StatisticsCounterService";
+import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { EqualsAny } from "@aczwink/acts-util-core";
+import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 
 type InferableValue = number | string;
 
+export type WordMapper = (wordDef: WordDefinition, validator: WordDefinitionValidator) => void;
 export type WordValidator = (validator: WordDefinitionValidator) => void;
 
 export class WordDefinitionValidator
 {
-    constructor(private wordDef: WordDefinition, private _parent?: TreeTrace)
+    constructor(private wordDef: WordDefinition, private _sourceTreeTrace?: TreeTrace)
     {
     }
 
     //Properties
-    public get parent()
+    public set gender(value: OpenArabDictGender)
     {
-        return this._parent;
+        this.Assign("gender", value);
+    }
+
+    public get parents()
+    {
+        if(this._parents === undefined)
+            this.ReportValidationError("Parents missing");
+        return this._parents!;
+    }
+
+    public set parents(value: OpenArabDictWordParent[])
+    {
+        this._parents = value;
+    }
+
+    public get sourceTreeTrace()
+    {
+        return this._sourceTreeTrace;
     }
 
     public get text()
@@ -84,20 +105,12 @@ export class WordDefinitionValidator
         this._verbForm = newValue;
     }
 
-    public get wordDefinition()
+    public get _legacyWordDefinition()
     {
         return this.wordDef;
     }
 
     //Public methods
-    public Assign<T extends InferableValue>(variable: "gender" | "text" | "type", value: T)
-    {
-        const alreadyAssigned = (this as any)["_" + variable];
-        if(alreadyAssigned === value)
-            this.ReportRedundancy(variable, value);
-        (this as any)["_" + variable] = value;
-    }
-
     public ConstructResult()
     {
         switch(this._type)
@@ -118,12 +131,22 @@ export class WordDefinitionValidator
             gender: this._gender,
             type: this.type,
             text: this._text,
+            parents: this._parents ?? []
         };
+    }
+
+    public InferDefault(variable: "gender", defaultValue: OpenArabDictGender)
+    {
+        const got = this.Get(variable);
+        if(got === undefined)
+            this.Assign(variable, defaultValue);
+        else
+            this.CheckRedundancy(variable, defaultValue);
     }
 
     public Infer<T extends InferableValue>(variable: "gender" | "text" | "type", allowedValues: T[], defaultValue: T)
     {
-        const got = (this as any)["_" + variable];
+        const got = this.Get(variable);
         for (const choice of allowedValues)
         {
             if(got === choice)
@@ -135,7 +158,7 @@ export class WordDefinitionValidator
         }
         if(got === undefined)
         {
-            (this as any)["_" + variable] = defaultValue;
+            this.Assign(variable, defaultValue);
             return;
         }
 
@@ -143,7 +166,59 @@ export class WordDefinitionValidator
         throw new Error("Variable '" + variable + "' has illegal value. Trace: " + this.TraceToString());
     }
 
+    public ValidateAnyOf(variable: "text", allowedValues: DisplayVocalized[][])
+    {
+        const parsed = ParseVocalizedText(this.text);
+        for (const choice of allowedValues)
+        {
+            if(EqualsAny(choice, parsed))
+                return;
+        }
+
+        const choices = allowedValues.map(VocalizedWordTostring).join(", ");
+        throw new Error("Illegal text definition for word. Got: " + this.text + ", " + Buckwalter.ToString(parsed) + ". But allowed values are: " + choices);
+    }
+
     //Private methods
+    private Assign(variable: "gender" | "text" | "type", value: any)
+    {
+        const alreadyAssigned = this.Get(variable);
+        if(alreadyAssigned === value)
+            this.ReportRedundancy(variable, value);
+
+        switch(variable)
+        {
+            case "gender":
+                this._gender = value;
+                break;
+            case "text":
+                this._text = value;
+                break;
+            case "type":
+                this._type = value;
+                break;
+        }
+    }
+
+    private CheckRedundancy(variable: "gender" | "text" | "type", value: any)
+    {
+        if(this.Get(variable) === value)
+            this.ReportRedundancy(variable, value);
+    }
+
+    private Get(variable: "gender" | "text" | "type")
+    {
+        switch(variable)
+        {
+            case "gender":
+                return this._gender;
+            case "text":
+                return this._text;
+            case "type":
+                return this._type;
+        }
+    }
+
     private ReportRedundancy(variable: string, defaultValue: InferableValue)
     {
         const statsService = GlobalInjector.Resolve(StatisticsCounterService);
@@ -182,7 +257,7 @@ export class WordDefinitionValidator
 
     private TraceToString()
     {
-        const traces = this.TraceNodeToString(this._parent);
+        const traces = this.TraceNodeToString(this._sourceTreeTrace);
         if(("text" in this.wordDef) && (this.wordDef.text !== undefined))
             traces.push(this.wordDef.text);
         else
@@ -192,6 +267,7 @@ export class WordDefinitionValidator
 
     //State
     private _gender?: OpenArabDictGender;
+    private _parents?: OpenArabDictWordParent[];
     private _text?: string;
     private _type?: OpenArabDictWordType;
     private _verbForm?: OpenArabDictVerbForm;

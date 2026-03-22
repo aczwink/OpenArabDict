@@ -60,3 +60,11 @@ root:
           source-page: 142
           text:
             - pass. of II
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 142
+              text:
+                - freedom (من or عن from)

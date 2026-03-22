@@ -82,6 +82,18 @@ root:
               text:
                 - freedom, liberty
 
+    - form: 5
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 194
+              text:
+                - liberation, emancipation (intr.)
+
     - gender: male
       text: حُرّ
       type: adjective

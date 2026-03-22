@@ -11,11 +11,11 @@
   "author": "Amir Czwink",
   "license": "AGPL-3.0",
   "devDependencies": {
-    "typescript": "^5.7.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
     "@aczwink/acts-util-core": "^1.0.0",
-    "@aczwink/openarabdict-domain": "^1.0.0",
-    "@aczwink/openarabicconjugation": "^1.0.0"
+    "@aczwink/openarabdict-domain": "^1.2.0",
+    "@aczwink/openarabicconjugation": "^1.2.0"
   }
 }

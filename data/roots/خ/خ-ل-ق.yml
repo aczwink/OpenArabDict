@@ -49,18 +49,33 @@ root:
               source: hw4-free-text
               text:
                 - creator, artist (of a work of art)
-        - text: خُلْق⁩
+
+        - text: خُلْق
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 299
               text:
-                - |-
-                  1. character (of persons)
-                  2. morals
-                  3. morality
+                - character (of persons)
+                - morals
+                - morality
+          derived:
+            - derivation: plural
+              text: أَخْلَاق
+              derived:
+                - derivation: nisba
+                  type: adjective #TODO: nisba should always be adjective i think
+                  text: أَخْلَاقِيّ #TODO: redundant
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      source-page: 300
+                      text:
+                        - moral
+                        - ethic(al)
+
         - derivation: passive-participle
           type: adjective
           gender: male

@@ -49,6 +49,7 @@ root:
           text:
             - to go beyond s.th. (ه), overstep, cross, leave behind (ه s.th.,
               also an age of life, as in III)
+
     - text: مَجَاز
       type: noun
       gender: male
@@ -63,3 +64,13 @@ root:
               source: hw4-free-text
               text:
                 - figurative, metaphorical
+
+    - text: الْجَوْزَاء
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 175
+          text:
+            - Gemini (sign of the zodiac; astron.)

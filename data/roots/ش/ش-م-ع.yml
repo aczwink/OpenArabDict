@@ -31,6 +31,7 @@ root:
           derived:
             - text: شُمُوع
               derivation: plural
+              id: shumu3
 
     - text: شَمَع
       type: noun
@@ -44,5 +45,5 @@ root:
         - text: شَمَعَة
           derivation: singulative
           derived:
-            - text: شُمُوع
-              derivation: plural
+            - derivation: plural
+              ref: shumu3

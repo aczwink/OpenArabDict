@@ -15,21 +15,24 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictVerbDerivationType, OpenArabDictNonVerbDerivationType, OpenArabDictWordParent, OpenArabDictWordParentType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, UsageType } from "@aczwink/openarabdict-domain";
-import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, UsageDefinition, VerbWordDefinition, WordDefinition } from "./DataDefinitions";
+import { OpenArabDictWordType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, UsageType, OpenArabDictParentType } from "@aczwink/openarabdict-domain";
+import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, UsageDefinition, VerbWordDefinition, WordDefinition, WordReferenceDefinition } from "./DataDefinitions";
 import { DBBuilder } from "./DBBuilder";
-import { WordDefinitionValidator, WordValidator } from "./WordDefinitionValidator";
+import { WordDefinitionValidator, WordMapper, WordValidator } from "./WordDefinitionValidator";
 import { TreeTrace } from "./TreeTrace";
-import { ValidateType } from "./validators/ValidateType";
-import { ValidateGender } from "./validators/ValidateGender";
-import { ValidatePlural } from "./validators/ValidatePlural";
-import { ValidateText } from "./validators/ValidateText";
-import { ValidateFeminine } from "./validators/ValidateFeminine";
+import { ValidateType } from "./_legacy/ValidateType";
+import { ValidateGender } from "./_legacy/ValidateGender";
+import { ValidatePlural } from "./_legacy/ValidatePlural";
+import { _LegacyValidateText } from "./_legacy/ValidateText";
+import { ValidateFeminine } from "./_legacy/ValidateFeminine";
 import { HansWehr4Formatter } from "./formatters/HansWehr4Formatter";
-import { ValidateVerbForm } from "./validators/ValidateVerbForm";
+import { ValidateVerbForm } from "./_legacy/ValidateVerbForm";
 import { ExtractRoot } from "./shared";
 import { VerbalNounCounter } from "./VerbalNounCounter";
 import { _LegacyBuildUsage, _LegacyExtractDialect } from "./_LegacyDataDefinition";
+import { MapText } from "./mappers/MapText";
+import { ValidateText } from "./validators/ValidateText";
+import { MapParents } from "./mappers/MapParents";
 
 export class WordProcessor
 {
@@ -59,101 +62,59 @@ function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuild
     };
 }
 
+function ProcessReferenceDefinition(def: WordReferenceDefinition, builder: DBBuilder, parent: TreeTrace)
+{
+    const wordId = builder.LookupUserWordId(def.ref);
+    const word = builder.GetWord(wordId);
+
+    if(parent.type !== "word")
+        throw new Error("implement me");
+    const parentWordId = parent.word.id;
+
+    word.parent.push({
+        id: parentWordId,
+        type: OpenArabDictParentType.Plural
+    });
+}
+
 export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace)
 {
     const translations = wordDef.translations?.map(x => ProcessTranslationDefinition(x, builder)) ?? [];
 
     const wdv = new WordDefinitionValidator(wordDef, parent);
-    const validators: WordValidator[] = [
+
+    //mappers
+    const mappers: WordMapper[] = [
+        MapParents.bind(undefined, builder),
+        MapText
+    ];
+    for (const mapper of mappers)
+        mapper(wordDef, wdv);
+
+    //THE MIXED LEGACY STUFF
+    const _legacy: WordValidator[] = [
         //no dependencies
         ValidateType,
         ValidateFeminine,
         ValidatePlural,
         ValidateVerbForm.bind(undefined, builder),
-        ValidateText.bind(undefined, builder, verbalNounCounter, translations),
+        _LegacyValidateText.bind(undefined, builder, verbalNounCounter, translations),
         //dependency on text and type
         ValidateGender,
+    ];
+    for (const validator of _legacy)
+        validator(wdv);
+
+    //inference
+
+    //validators
+    const validators: WordValidator[] = [
+        ValidateText.bind(undefined, builder),
     ];
     for (const validator of validators)
         validator(wdv);
 
     const result = wdv.ConstructResult();
-
-    function MapVerbDerivationType(derivation: string)
-    {
-        switch(derivation)
-        {
-            case "active-participle":
-                return OpenArabDictVerbDerivationType.ActiveParticiple;
-            case "colloquial":
-                return OpenArabDictVerbDerivationType.Colloquial;
-            case "meaning-related":
-                return OpenArabDictVerbDerivationType.MeaningRelated;
-            case "noun-of-place":
-                return OpenArabDictVerbDerivationType.NounOfPlace;
-            case "passive-participle":
-                return OpenArabDictVerbDerivationType.PassiveParticiple;
-            case "tool-noun":
-                return OpenArabDictVerbDerivationType.ToolNoun;
-            case "verbal-noun":
-                return OpenArabDictVerbDerivationType.VerbalNoun;
-            default:
-                throw new Error(derivation);
-        }
-    }
-
-    function MapWordDerivationType(derivation: string)
-    {
-        switch(derivation)
-        {
-            case "adverbial-accusative":
-                return OpenArabDictNonVerbDerivationType.AdverbialAccusative;
-            case "colloquial":
-                return OpenArabDictNonVerbDerivationType.Colloquial;
-            case "definite-state":
-                return OpenArabDictNonVerbDerivationType.DefiniteState;
-            case "elative-degree":
-                return OpenArabDictNonVerbDerivationType.ElativeDegree;
-            case "extension":
-                return OpenArabDictNonVerbDerivationType.Extension;
-            case "feminine":
-                return OpenArabDictNonVerbDerivationType.Feminine;
-            case "instance-noun":
-                return OpenArabDictNonVerbDerivationType.InstanceNoun;
-            case "nisba":
-                return OpenArabDictNonVerbDerivationType.Nisba;
-            case "plural":
-                return OpenArabDictNonVerbDerivationType.Plural;
-            case "singulative":
-                return OpenArabDictNonVerbDerivationType.Singulative;
-            default:
-                throw new Error(derivation);
-        }
-    }
-
-    function MapParent(derivation: string, parent?: TreeTrace): OpenArabDictWordParent | undefined
-    {
-        switch(parent?.type)
-        {
-            case "root":
-                return {
-                    type: OpenArabDictWordParentType.Root,
-                    rootId: parent.rootId
-                };
-            case "verb":
-                return {
-                    type: OpenArabDictWordParentType.Verb,
-                    verbId: parent.verbId,
-                    derivation: MapVerbDerivationType(derivation)
-                };
-            case "word":
-                return {
-                    type: OpenArabDictWordParentType.NonVerbWord,
-                    wordId: parent.word.id,
-                    relationType: MapWordDerivationType(derivation)
-                }
-        }
-    }
 
     let thisParent: TreeTrace;
     let createdWord;
@@ -178,18 +139,10 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 type: result.type,
                 gender: result.gender!,
                 text,
-                parent: MapParent(g.derivation, parent)
+                parent: result.parents
             }, translations);
             if(g.id !== undefined)
                 builder.AddUserWordIdMapping(g.id, word.id);
-            if(g.relations !== undefined)
-            {
-                for (const relation of g.relations)
-                {
-                    const wordId = builder.LookupUserWordId(relation.to);
-                    builder.AddRelation(word.id, wordId, OpenArabDictWordRelationshipType.Antonym); //TODO: map type
-                }
-            }
 
             if(g.alias !== undefined)
             {
@@ -226,7 +179,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 id: "",
                 type: result.type,
                 text: o.text,
-                parent: MapParent(o.derivation, parent)
+                parent: wdv.parents
             }, translations);
 
             if(o.alias !== undefined)
@@ -261,7 +214,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 form,
                 rootId: root.id,
                 text: wdv.text,
-                parent: MapParent(v.derivation!, parent) ?? ({ type: OpenArabDictWordParentType.Root, rootId: root.id})
+                parent: wdv.parents
             }, translations);
 
             if(v.alias !== undefined)
@@ -296,7 +249,10 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
     {
         for (const child of wordDef.derived)
         {
-            ProcessWordDefinition(child, builder, verbalNounCounter, thisParent);
+            if("ref" in child)
+                ProcessReferenceDefinition(child, builder, thisParent);
+            else
+                ProcessWordDefinition(child, builder, verbalNounCounter, thisParent);
         }
     }
 

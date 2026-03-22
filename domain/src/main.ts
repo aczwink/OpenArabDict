@@ -89,6 +89,8 @@ export enum OpenArabDictParentType
     //parent-child verb-only relationships
     //Relation from x to y means: x is the active participle of verb y.
     ActiveParticiple,
+    //Relation from x to y means: x is the characteristic noun of verb y.
+    CharacteristicNoun,
     //Relation from x to y means: x is related in meaning to verb y and is thus considered a direct child.
     MeaningRelated,
     //Relation from x to y means: x is the noun of place of verb y.

@@ -64,7 +64,7 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
 {
     const dialectId = builder.MapDialectKey(variant.dialect)!;
 
-    const root = ExtractRoot(builder, validator.parent);
+    const root = ExtractRoot(builder, validator.sourceTreeTrace);
     const rootInstance = new VerbRoot(root!.radicals);
     
     const dialectType = DialectTree.MapIdToType(dialectId)!;
@@ -76,7 +76,7 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
     const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
     if(!choices.types.includes(variant.parameters))
     {
-        console.log(validator.wordDefinition, validator.wordDefinition.translations, root.radicals, variant);
+        console.log(validator._legacyWordDefinition, validator._legacyWordDefinition.translations, root.radicals, variant);
         throw new Error("Wrong stem parameterization");
     }
 
@@ -90,7 +90,7 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
 
 export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionValidator)
 {
-    const def = validator.wordDefinition;
+    const def = validator._legacyWordDefinition;
 
     if(def.type !== "verb")
         return;
@@ -144,7 +144,7 @@ function MapPassiveFlag(form: ParameterizedStemData | number): boolean
 {
     if(typeof form === "number")
         return false;
-    if((form.stem === 1) && ("valency" in form))
+    if("valency" in form)
     {
         switch(form.valency)
         {

@@ -26,6 +26,16 @@ root:
           text:
             - to make short or shorter, shorten, cut short, curtail, abridge, reduce, lessen (ه s.th.)
             - to be negligent, careless
+
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 899
+          text:
+            - to limit o.s., restrict o.s., confine o.s., be limited, restricted, or confined (على to)
+
     - text: قَصِير
       type: adjective
       gender: male

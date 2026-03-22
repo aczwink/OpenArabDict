@@ -102,23 +102,16 @@ root:
               source: hw4-free-text
               text:
                 - determined, fixed, appointed, destined (ل for)
-          derived:
-            - text: مُحَدَّدَة
-              derivation: feminine
-              type: adjective
-              gender: female
-              translations: []
+
         - text: تَحْدِيد
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 188
               text:
-                - |-
-                  1. limitation, delimitation
-                  2. determination, fixation, appointment
+                - limitation, delimitation
+                - determination, fixation, appointment
 
     - type: verb
       dialect: msa

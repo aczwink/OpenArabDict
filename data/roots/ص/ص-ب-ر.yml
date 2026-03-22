@@ -22,17 +22,24 @@ root:
       form:
         stem: 1
         parameters: ai
-      translations: []
       derived:
         - text: صَبْر
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
               text:
                 - patience, forbearance
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 586
+              text:
+                - patient, long-suffering, enduring, preseverant, steadfast
 
     - type: verb
       form: 2

@@ -15,162 +15,88 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictGender, OpenArabDictGenderedWord, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbDerivationType, OpenArabDictWordParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
-import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
-import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
-import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
-import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
-import { GenderedWordDefinition } from "../DataDefinitions";
-import { DBBuilder } from "../DBBuilder";
-import { TreeTrace } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
-import { EqualsAny } from "@aczwink/acts-util-core";
-import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
-import { ExtractRoot } from "../shared";
-import { VerbalNounCounter } from "../VerbalNounCounter";
-import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { DBBuilder } from "../DBBuilder";
+import { OpenArabDictGender, OpenArabDictParentType, OpenArabDictRoot, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { CreateVerbFromOADVerb } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
-import { TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {
     return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
 }
 
-function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, translations: OpenArabDictTranslationEntry[], parent?: TreeTrace): DisplayVocalized[] | undefined
+export function ValidateText(builder: DBBuilder, validator: WordDefinitionValidator)
 {
-    const wordDef = validator.wordDefinition;
-
-    switch(wordDef.derivation)
+    switch(validator.sourceTreeTrace?.type)
     {
-        case "active-participle":
-        case "passive-participle":
+        case "verb":
         {
-            if(parent?.type !== "verb")
-                throw new Error("Participles can only be children of verbs");
-            const verb = builder.GetWord(parent.verbId);
+            const verb = builder.GetWord(validator.sourceTreeTrace.verbId);
             if(verb.type !== OpenArabDictWordType.Verb)
                 throw new Error("Id error!!!");
             const root = builder.GetRoot(verb.rootId);
 
             const verbInstance = CreateMSAVerb(root, verb);
 
-            const voice = (wordDef.derivation === "active-participle") ? TargetVerbBasedDerivationPatterns.ActiveParticiples : TargetVerbBasedDerivationPatterns.PassiveParticiple;
+            const conjugator = new Conjugator();
 
-            const conjugator = new Conjugator;
-            const generated = ((voice === TargetVerbBasedDerivationPatterns.ActiveParticiples) && (verb.form.stative === true)) ? conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ActiveParticiples)[1] : conjugator.DeriveFromVerb(verbInstance, voice)[0];
-            return generated;
-        }
-        case "instance-noun":
-        {
-            if(parent?.type !== "word")
-                throw new Error("Instance nouns can only be derived from verbal nouns");
-            const parentIsVerbalNoun = (parent.word.parent?.type === OpenArabDictWordParentType.Verb) && (parent.word.parent.derivation === OpenArabDictVerbDerivationType.VerbalNoun);
-            if(!parentIsVerbalNoun)
-                throw new Error("Instance nouns can only be derived from verbal nouns");
-            const verbalNoun = parent.word as OpenArabDictGenderedWord;
-            
-            const c = new Conjugator();
-            const baseParsed = ParseVocalizedText(parent.word.text);
-            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (verbalNoun.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
-
-            return generated;
-        }
-        case "singulative":
-        {
-            if((parent?.type !== "word") || (parent.word.type !== OpenArabDictWordType.Noun))
-                throw new Error("Singulatives can only be derived from nouns");
-
-            const c = new Conjugator();
-            const baseParsed = ParseVocalizedText(parent.word.text);
-            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (parent.word.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
-
-            return generated;
-        }
-        case "verbal-noun":
-        {
-            if(parent?.type !== "verb")
-                throw new Error("Verbal nouns can only be children of verbs");
-            const verb = builder.GetWord(parent.verbId);
-            if(verb.type !== OpenArabDictWordType.Verb)
-                throw new Error("Id error!!!");
-            const root = builder.GetRoot(verb.rootId);
-
-            const verbInstance = CreateMSAVerb(root, verb);
-
-            const conjugator = new Conjugator;
-            const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);
-            if(generated.length === 1)
-                return generated[0];
-        }
-        case "colloquial":
-        case undefined:
-        {
-            if(wordDef.type === "verb")
+            for (const parent of validator.parents)
             {
-                const root = ExtractRoot(builder, parent);
-
-                const form = validator.verbForm;
-
-                const dialectType = FindHighestConjugatableDialectOf(root.radicals, form, translations);
-                const verb = CreateVerbFromOADVerbForm(dialectType, root.radicals, form);
-
-                const conjugator = new Conjugator;
-                const vocalized = conjugator.Conjugate(verb, {
-                    gender: Gender.Male,
-                    numerus: Numerus.Singular,
-                    person: Person.Third,
-                    tense: Tense.Perfect,
-                    voice: Voice.Active,
-                });
-
-                return vocalized;
+                let generated;
+                switch(parent.type)
+                {
+                    case OpenArabDictParentType.NounOfPlace:
+                        //TODO: fix this
+                        //generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.NounOfPlace);
+                        break;
+                    case OpenArabDictParentType.ToolNoun:
+                        generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ToolNouns);
+                        break;
+                }
+                
+                if(generated !== undefined)
+                    validator.ValidateAnyOf("text", generated);
             }
         }
-    }
-
-    return undefined;
-}
-
-function ValidateVerbalNoun(word: GenderedWordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace | undefined)
-{
-    if(parent?.type !== "verb")
-        throw new Error("Verbal nouns can only be children of verbs");
-    const verb = builder.GetWord(parent.verbId);
-    if(verb.type !== OpenArabDictWordType.Verb)
-        throw new Error("Id error!!!");
-    const root = builder.GetRoot(verb.rootId);
-
-    const verbInstance = CreateMSAVerb(root, verb);
-
-    const conjugator = new Conjugator;
-    const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);
-
-    const parsed = ParseVocalizedText(word.text ?? "");
-    for (let i = 0; i < generated.length; i++)
-    {
-        const possible = generated[i];
-        if(EqualsAny(possible, parsed))
+        break;
+        case "word":
         {
-            verbalNounCounter.Increment(verbInstance, i, generated.length);
-            return;
+            for (const parent of validator.parents)
+            {
+                const parentWord = builder.GetWord(parent.id);
+                const parsed = ParseVocalizedText(parentWord.text);
+
+                let generated;
+                switch(parent.type)
+                {
+                    case OpenArabDictParentType.Nisba:
+                    {
+                        const gender = ("gender" in parentWord) ? parentWord.gender : OpenArabDictGender.Male;
+
+                        const conjugator = new Conjugator();
+                        const noun = conjugator.DeriveSoundAdjectiveOrNoun(parsed, (gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveNisbaSameGender, DialectType.ModernStandardArabic);
+                        //TODO: fix this
+                        //generated = [noun];
+                    }
+                    break;
+                    case OpenArabDictParentType.Plural:
+                    {
+                        const conjugator = new Conjugator();
+                        //TODO: fix this
+                        //generated = conjugator.DeriveFromNoun(parsed, TargetNounBasedDerivationPatterns.PluralPatterns);
+                    }
+                    break;
+                }
+
+                if(generated !== undefined)
+                    validator.ValidateAnyOf("text", generated);
+            }
         }
+        break;
     }
-    const choices = generated.map(VocalizedWordTostring).join(", ");
-    throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text ?? "")) + ". But allowed values are: " + choices);
-}
-
-export function ValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, translations: OpenArabDictTranslationEntry[], validator: WordDefinitionValidator)
-{
-    if(("text" in validator.wordDefinition) && (validator.wordDefinition.text !== undefined))
-        validator.text = validator.wordDefinition.text;
-
-    const generated = GenerateTextIfPossible(validator, builder, translations, validator.parent);
-    if(generated !== undefined)
-    {
-        const generatedString = VocalizedWordTostring(generated);
-        validator.Infer("text", [generatedString], generatedString);
-    }
-    else if(validator.wordDefinition.derivation === "verbal-noun")
-        ValidateVerbalNoun(validator.wordDefinition, builder, verbalNounCounter, validator.parent);
 }

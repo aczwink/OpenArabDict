@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,18 @@ root:
   radicals: ف-ق-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 845
           text:
-            - to fail to find (ه, s.o., s.th.)
+            - to fail to find (ه ,ه s.o., s.th.)
+            - to lose (ه ,ه s.o., s.th.)
       derived:
         - text: فُقْدَان
           derivation: verbal-noun

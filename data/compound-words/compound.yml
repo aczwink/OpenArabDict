@@ -17,11 +17,11 @@
 words:
   - text: كَاتِب الْعَدْل
     type: noun
-    relations:
-      - to: kaatib
-        relationship: compound-of
-      - to: 3adl
-        relationship: compound-of
+    derived-from:
+      - derivation: composed-of
+        ref: kaatib
+      - derivation: composed-of
+        ref: 3adl
     translations:
       - dialect: msa
         source: free-text

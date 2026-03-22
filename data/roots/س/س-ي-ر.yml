@@ -30,8 +30,6 @@ root:
       derived:
         - text: سَيْر
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
@@ -39,18 +37,23 @@ root:
               text:
                 - trip, tour
                 - walk, errand
+                - movement, motion
+                
         - text: سِيرَة
           derivation: meaning-related
           type: noun
-          gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 522
               text:
-                - |-
-                  biography
+                - biography
+                - tale (about somebody's deeds or life)
+              usage:
+                - text: سيرة ذاتية
+                  translation: autobiography
+                  type: meaning-in-context
 
-                  سيرة ذاتية autobiography
         - text: سَيَّارَة
           derivation: meaning-related
           type: noun

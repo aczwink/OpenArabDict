@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,18 @@ root:
   radicals: ق-ر-ح
   words:
     - type: verb
-      dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 885
+          text:
+            - to propose, suggest (على ه to s.o. s.th.)
       derived:
-        - text: اِقْتِرَاح
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: verbal-noun
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 885
               text:
                 - proposition, proposal, suggestion

@@ -34,8 +34,6 @@ root:
       derived:
         - text: عَقْل
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
@@ -45,11 +43,28 @@ root:
           derived:
             - text: عُقُول
               derivation: plural
-              type: noun
-              gender: male
+        
+        - derivation: active-participle
+          type: adjective
+          derived:
+            - derivation: elative-degree
+              type: adjective #TODO: should always be the case
+              text: أَعْقَل
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 737
+                  text:
+                    - brighter, smarter, more intelligent
 
     - form: 8
       type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 737
+          text:
+            - to arrest, put under arrest, apprehend, detain (ه s.o.)
       derived:
         - derivation: verbal-noun
           translations:

@@ -62,17 +62,19 @@ root:
               text: خَيَّالَة
 
     - type: verb
-      dialect: msa
       form: 5
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 309
+          text:
+            - to imagine, fancy (ه s.th.)
       derived:
         - derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: https://ejtaal.net/aa/#hw4=323
+              source-page: 310
               text:
                 - imagination, phantasy
           derived:

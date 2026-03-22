@@ -17,6 +17,19 @@
 root:
   radicals: ز-ع-م
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 439
+          text:
+            - to maintain, allege, claim, pretend (ان that), declare (ل ان to s.o. that)
+
     - gender: male
       text: زَعِيم
       type: noun

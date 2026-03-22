@@ -24,16 +24,18 @@ root:
         parameters: ia
       translations: []
       derived:
-        - text: صَاحِب
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 588
               text:
-                - (with foll. genit.) man, owner, possessor, holder, master,
-                  lord, commander, representative, author or originator of ...
+                - associate, companion, comrade, friend
+                - (with foll. genit.) man, owner, possessor, holder, master, lord, commander, representative, author or originator of ...
+          derived:
+            - derivation: plural
+              text: أَصْحَاب
 
     - form: 3
       type: verb

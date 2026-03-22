@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -85,7 +85,7 @@ export class JSONSchemaLoader
                 break;
             case "array":
                 if(Array.isArray(schema.items))
-                    throw new Error("TODO: ARRAY NOT IMPLEMENTED");
+                    throw new Error("ARRAY NOT IMPLEMENTED");
                 await this.LoadSubSchemas(schema.items!, schemasDirPath);
                 break;
             case "object":
@@ -108,7 +108,7 @@ export class JSONSchemaLoader
                 }
 
                 console.log(schema);
-                throw new Error("TODO: " + schema.type);
+                throw new Error("Unknown type: " + schema.type);
         }
     }
 }

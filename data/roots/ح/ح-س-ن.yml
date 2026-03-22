@@ -42,12 +42,21 @@ root:
         - text: حَسَن
           derivation: meaning-related
           type: adjective
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 208
               text:
                 - beautiful, handsome, lovely
+          derived:
+            - derivation: adverbial-accusative
+              text: حَسَنًا #TODO this is unneccesssary
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 208
+                  text:
+                    - well, splendidly, excellently, beautifully
 
     - form: 2
       type: verb

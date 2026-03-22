@@ -8,7 +8,27 @@
         "derived": {
             "type": "array",
             "items": {
-                "$ref": "#"
+                "oneOf": [
+                    {
+                        "$ref": "#"
+                    },
+                    {
+                        "type": "object",
+                        "additionalProperties": false,
+                        "properties": {
+                            "derivation": {
+                                "type": "string",
+                                "enum": [
+                                    "plural"
+                                ]
+                            },
+                            "ref": {
+                                "type": "string"
+                            }
+                        },
+                        "required": ["derivation", "ref"]
+                    }
+                ]
             }
         },
         "derivation": {
@@ -31,6 +51,9 @@
                 "female",
                 "male"
             ]
+        },
+        "id": {
+            "type": "string"
         },
         "text": {
             "type": "string"

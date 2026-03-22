@@ -30,15 +30,15 @@ root:
           text:
             - to run, speed, gallop, dash, race
       derived:
-        - text: عَدَا
-          derivation: meaning-related
-          type: preposition
+        - derivation: meaning-related
+          text: عَدَّاء
+          type: noun
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 700
               text:
-                - (with foll. acc.) except, save, with the exception of,
-                  excepting ...
+                - runner, sprinter (sport)
 
     - form: 2
       type: verb
@@ -83,6 +83,15 @@ root:
               url: http://ejtaal.net/aa/#hw4=714
               text:
                 - contagious, infectious
+
+    - text: عَدَا
+      type: preposition
+      translations:
+        - dialect: msa
+          source: hw4-free-text
+          text:
+            - (with foll. acc.) except, save, with the exception of,
+              excepting ...
 
     - text: عَدُوّ
       type: noun

@@ -71,7 +71,7 @@ root:
                 - tarrying, delay
         - derivation: colloquial
           type: verb
-          dialect: msa #TODO: this is algerian
+          dialect: msa #this is actually algerian, but we don't have conjugation tables :(
           form:
             stem: 1
             parameters: au

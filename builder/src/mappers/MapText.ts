@@ -15,17 +15,12 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictGender, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+
+import { WordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
-export function ValidateFeminine(validator: WordDefinitionValidator)
+export function MapText(wordDefinition: WordDefinition, validator: WordDefinitionValidator)
 {
-    if((validator.wordDefinition.derivation === "feminine") && (validator.parent !== undefined))
-    {
-        if(validator.parent.type !== "word")
-            throw new Error("Plurals can only be derived from words");
-
-        validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun, OpenArabDictWordType.Pronoun], validator.parent.word.type);
-        validator.Infer("gender", [OpenArabDictGender.Female], OpenArabDictGender.Female);
-    }
+    if((wordDefinition.type !== "verb") && (wordDefinition.text !== undefined))
+        validator.text = wordDefinition.text;
 }

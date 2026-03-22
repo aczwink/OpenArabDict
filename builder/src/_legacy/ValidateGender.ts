@@ -36,16 +36,16 @@ function MapGender(word: GenderedWordDefinition)
 
 export function ValidateGender(validator: WordDefinitionValidator)
 {
+    if("gender" in validator._legacyWordDefinition)
+    {
+        const gender = MapGender(validator._legacyWordDefinition);
+        validator.gender = gender;
+    }
+
     if((validator.type === OpenArabDictWordType.Adjective) || (validator.type === OpenArabDictWordType.Noun))
     {
         const isFemale = validator.text.endsWith("ة");
         const gender = isFemale ? OpenArabDictGender.Female : OpenArabDictGender.Male;
-        validator.Infer("gender", [OpenArabDictGender.Male, OpenArabDictGender.Female], gender);
-    }
-
-    if("gender" in validator.wordDefinition)
-    {
-        const gender = MapGender(validator.wordDefinition);
-        validator.Assign("gender", gender);
+        validator.InferDefault("gender", gender);
     }
 }

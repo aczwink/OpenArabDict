@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictWord, OpenArabDictWordParentType, OpenArabDictNonVerbDerivationType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictParentType, OpenArabDictWord } from "@aczwink/openarabdict-domain";
 import { Tashkil } from "@aczwink/openarabicconjugation/dist/Definitions";
 
 export const WordLogic = {
@@ -27,11 +27,6 @@ export const WordLogic = {
 
     IsSingular(word: OpenArabDictWord)
     {
-        if(word.parent !== undefined)
-        {
-            if(word.parent.type === OpenArabDictWordParentType.NonVerbWord)
-                return word.parent.relationType !== OpenArabDictNonVerbDerivationType.Plural;
-        }
-        return true;
+        return word.parent.find(x => x.type === OpenArabDictParentType.Plural) === undefined;
     }
 };

@@ -39,23 +39,23 @@ export interface TranslationDefinition
     usage?: UsageDefinition[];
 }
 
-export interface WordRelationshipDefinition
+export interface WordDerivationFromDefinition
 {
-    relationship: "compound-of";
-    to: string;
+    derivation: "composed-of";
+    ref: string;
 }
 
 export interface GenderedWordDefinition
 {
     type?: "adjective" | "noun" | "numeral" | "pronoun";
     alias?: string;
-    derivation: "active-participle" | "definite-state" | "feminine" | "instance-noun" | "noun-of-place" | "passive-participle" | "plural" | "singulative" | "tool-noun" | "verbal-noun";
+    derivation: "active-participle" | "characteristic-noun" | "definite-state" | "feminine" | "instance-noun" | "noun-of-place" | "passive-participle" | "plural" | "singulative" | "tool-noun" | "verbal-noun";
+    "derived-from"?: WordDerivationFromDefinition[];
     gender?: "male" | "female" | "male-or-female";
     id?: string;
-    relations?: WordRelationshipDefinition[];
     text?: string;
     translations: TranslationDefinition[];
-    derived?: WordDefinition[];
+    derived?: WordOrReferenceDefinition[];
 }
 
 export interface OtherWordDefinition
@@ -66,6 +66,12 @@ export interface OtherWordDefinition
     text: string;
     translations: TranslationDefinition[];
     derived?: WordDefinition[];
+}
+
+export interface WordReferenceDefinition
+{
+    derivation?: "plural";
+    ref: "string";
 }
 
 export interface VerbVariantDefintion
@@ -87,6 +93,7 @@ interface ParameterizedAdvancedStemData
 {
     stem: AdvancedStemNumber;
     type?: "irregular" | "sound";
+    valency?: "transitive";
 }
 
 export type ParameterizedStemData = _LegacyParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;
@@ -102,3 +109,4 @@ export interface VerbWordDefinition
 }
 
 export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition;
+export type WordOrReferenceDefinition = WordDefinition | WordReferenceDefinition;

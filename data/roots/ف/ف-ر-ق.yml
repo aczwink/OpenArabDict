@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -101,7 +101,6 @@ root:
             - to be or become separated, split, disunited, divided, scattered, dispersed, separate, part, divide, scatter, disperse, dissolve, break up
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -109,3 +108,13 @@ root:
           url: https://ejtaal.net/aa/#hw4=843
           text:
             - to be or become separated, split, disunited, divided, scattered, dispersed, separate, part, divide, scatter, disperse, dissolve, break up
+      derived:
+        #- derivation: noun-of-place #todo fix this
+        - derivation: passive-participle
+          type: noun #todo remove this
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 831
+              text:
+                - road fork, highway intersection, crossroads, also مفترق الطرق

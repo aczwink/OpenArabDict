@@ -76,17 +76,15 @@ root:
                 - wronged, ill-treated, unjustly treated, tyrannized
 
     - type: verb
-      dialect: msa
       form: 4
-      translations: []
       derived:
-        - text: مُظْلِم
-          derivation: active-participle
+        - derivation: active-participle
           type: adjective
-          gender: male
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 681
               text:
                 - dark, dusky, gloomy, tenebrous, murky
     - text: ظَلَام

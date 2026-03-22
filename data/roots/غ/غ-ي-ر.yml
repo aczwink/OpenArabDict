@@ -46,14 +46,22 @@ root:
                 - to change
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 808
           text:
-            - to be altered, be modified, be changed, change, alter, vary,
-              undergo an alteration or change
+            - to be altered, be modified, be changed, change, alter, vary, undergo an alteration or change
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 808
+              text:
+                - alteration, variation, change, transformation
 
     - text: غَيْر
       type: noun

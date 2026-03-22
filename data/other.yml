@@ -508,13 +508,6 @@ words:
         source-page: 852
         text:
           - mouth
-  - text: إِذْ
-    type: conjunction
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - since, as, the more so as, because
 
   - text: سَاعَة
     type: noun

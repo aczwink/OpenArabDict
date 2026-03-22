@@ -25,3 +25,22 @@ root:
           source-page: 1170
           text:
             - to refuse, deny (على ه s.th. to s.o.), dispute, contest (ه على s.th. of s.o.)
+
+    - form: 10
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1170
+          text:
+            - to disapprove (ه of s.th., e.g., of s.o.'s words or opinion)
+            - to judge derogatorily (ه s.th.), speak disparagingly or slightingly (ه of s.th.), reject (ه s.th.)
+
+    - text: نَكِرَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1170
+          text:
+            - indefinite noun (gram.)

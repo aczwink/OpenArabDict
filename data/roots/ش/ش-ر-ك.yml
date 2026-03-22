@@ -91,12 +91,11 @@ root:
           text:
             - to participate (مع في with s.o. in), share (مع في with s.o., s.th.), collaborate, take part (في in), contribute (في to)
       derived:
-        - text: مُشْتَرَك
-          derivation: passive-participle
+        - derivation: passive-participle
           type: adjective
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 548
               text:
                 - common, joint, combined, concurrent, collective, co-
