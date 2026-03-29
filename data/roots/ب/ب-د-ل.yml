@@ -58,13 +58,22 @@ root:
                 - substitute, alternate (عن or من, also ل for)
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to change, alter (ه ه s.th. to), convert (ه ه s.th. into)
+      derived:
+        - derivation: verbal-noun
+          text: تَبْدِيل
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 58
+              text:
+                - change, alteration
+
     - type: verb
       dialect: msa
       form: 5

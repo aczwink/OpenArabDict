@@ -25,7 +25,7 @@ export function ValidateFeminine(validator: WordDefinitionValidator)
         if(validator.sourceTreeTrace.type !== "word")
             throw new Error("Plurals can only be derived from words");
 
-        validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun, OpenArabDictWordType.Pronoun], validator.sourceTreeTrace.word.type);
-        validator.Infer("gender", [OpenArabDictGender.Female], OpenArabDictGender.Female);
+        validator.InferAnyOf("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun, OpenArabDictWordType.Pronoun], validator.sourceTreeTrace.word.type);
+        validator.InferAnyOf("gender", [OpenArabDictGender.Female], OpenArabDictGender.Female);
     }
 }

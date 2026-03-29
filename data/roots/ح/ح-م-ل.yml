@@ -124,7 +124,12 @@ root:
 
     - type: verb
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 241
+          text:
+            - to allow, permit, suffer, tolerate, brook, stomach (ه s.th.), acquiesce (ه in), put up, bear (ه with s.th.)
       derived:
         - derivation: verbal-noun
           type: noun

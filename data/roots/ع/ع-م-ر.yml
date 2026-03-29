@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -110,3 +110,15 @@ root:
                   1. colonizing, colonization, foundation of colonies
                   2. colonialism (pol.)
                   3. colonial rule
+
+        - derivation: noun-of-place
+          text: مُسْتَعْمَرَة #TODO: should this not be clear?
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 754
+              text:
+                - colony, settlement
+          derived:
+            - derivation: plural
+              text: مُسْتَعْمَرَات

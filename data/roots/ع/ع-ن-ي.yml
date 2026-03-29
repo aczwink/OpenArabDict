@@ -50,13 +50,16 @@ root:
 
     - text: مَعْنًى
       type: noun
-      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 762
           text:
             - sense, meaning, signification, import
       derived:
+        - derivation: plural
+          text: مَعَانٍ
+
         - text: مَعْنَوِيّ
           derivation: nisba
           type: adjective
@@ -68,11 +71,6 @@ root:
               text:
                 - semantic, significative, of or pertaining to a meaning
                 - spiritual (as opposed to material)
-        - text: مَعَانٍ
-          derivation: plural
-          type: noun
-          gender: male
-          translations: []
 
     - type: verb
       dialect: msa

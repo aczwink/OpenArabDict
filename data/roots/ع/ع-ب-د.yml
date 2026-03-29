@@ -27,6 +27,15 @@ root:
           source: hw4-free-text
           text:
             - to serve, worship
+      derived:
+        - derivation: noun-of-place
+          text: مَعْبَد # TODO
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 686
+              text:
+                - house of God, temple
 
     - form: 5
       type: verb

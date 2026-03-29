@@ -18,10 +18,11 @@ root:
   radicals: ش-ه-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4
@@ -54,6 +55,22 @@ root:
               source-page: 572
               text:
                 - witness (على for)
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+      derived:
+        - derivation: verbal-noun
+          text: شَهَادَة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 571
+              text:
+                - testimony, witness, evidence, deposition
 
     - type: verb
       form: 3

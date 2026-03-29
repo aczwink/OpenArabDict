@@ -35,6 +35,7 @@
             "type": "string",
             "enum": [
                 "adverbial-accusative",
+                "colloquial",
                 "definite-state",
                 "elative-degree",
                 "extension",
@@ -67,6 +68,9 @@
                     },
                     {
                         "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    },
+                    {
+                        "$ref": "../translations/OpenArabDictWiktionaryTranslationEntry.json"
                     }
                 ]
             }

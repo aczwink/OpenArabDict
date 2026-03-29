@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,8 +17,30 @@
 root:
   radicals: ك-ء-ب
   words:
+    - form: 4
+      type: verb
+      derived:
+        - derivation: meaning-related
+          text: كَئِب
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 944
+              text:
+                - sad, dispirited, dejected, downcast, depressed, melancholy
+
+        - derivation: meaning-related
+          text: كَئِيب
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 944
+              text:
+                - sad, dispirited, dejected, downcast, depressed, melancholy
+
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - complete: true

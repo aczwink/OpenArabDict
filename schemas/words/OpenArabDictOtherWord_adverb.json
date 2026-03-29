@@ -5,6 +5,12 @@
     "type": "object",
     "additionalProperties": false,
     "properties": {
+        "derived": {
+            "type": "array",
+            "items": {
+                "$ref": "./OpenArabDictWord_derived.json"
+            }
+        },
         "text": {
             "type": "string"
         },

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,11 +17,31 @@
 root:
   radicals: و-ر-ث
   words:
-    - text: تُرَاث
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - inheritance, legacy
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ii
+      type: verb
+      derived:
+        #- derivation: verbal-noun
+        - derivation: meaning-related
+          type: noun #TODO
+          text: إِرْث
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1242
+              text:
+                - heritage, inheritance, legacy
+        
+        #- derivation: verbal-noun
+        - derivation: meaning-related
+          type: noun #TODO
+          text: تُرَاث
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1242
+              text:
+                - inheritance, legacy

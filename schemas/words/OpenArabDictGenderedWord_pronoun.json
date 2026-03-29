@@ -15,7 +15,8 @@
             "type": "string",
             "enum": [
                 "female",
-                "male"
+                "male",
+                "male-or-female"
             ]
         },
         "text": {

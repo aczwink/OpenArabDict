@@ -41,6 +41,15 @@ root:
           text:
             - to occupy, fill, hold (ه an office), be entrusted (ه with), be in charge (ه of)
             - to take possession, take charge (ه of), take over, take upon o.s., undertake, take in hand (ه an affair), attend (ه to)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1290
+              text:
+                - entrusted, commissioned, in charge
 
     - type: verb
       dialect: msa

@@ -49,11 +49,15 @@ root:
               2. to blossom, be in bloom
               3. to flourish, prosper, thrive
       derived:
-        - text: اِزْدِهَار
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations: []
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 446
+              text:
+                - flourishing, florescence, bloom, heyday
+
     - text: مَزْهَرِيَّة
       type: noun
       gender: female

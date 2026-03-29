@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,21 @@
 root:
   radicals: م-ل-ل
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ai #source: https://livingarabic.com/en/search?q=%D9%85%D9%84%D9%91&dc%5B%5D=1&dc%5B%5D=8&dc%5B%5D=3&dc%5B%5D=2&dc%5B%5D=4&dc%5B%5D=6&dc%5B%5D=5&dc%5B%5D=10&dc%5B%5D=9&st%5B%5D=0&st%5B%5D=1&st%5B%5D=2&st%5B%5D=3&new_google_recaptcha_token=
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1077
+          text:
+            - to be or become weary, tired, bored, impatient
+
     - type: verb
       dialect: msa
       form: 4

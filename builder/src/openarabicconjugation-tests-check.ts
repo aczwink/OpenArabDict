@@ -312,6 +312,20 @@ export async function CheckWords(doc: OpenArabDictDocument)
             }
         }
 
+        //test: arb/sound_but_weak_root/r1hamza_stem6.js
+        if(isVerbalNoun)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+            const startsWithHamza = (root?.radicals.startsWith("ء"));
+
+            if((verb.form.stem === 6) && startsWithHamza)
+            {
+                console.log("FOUND1718", word);
+            }
+        }
+
         //test: arb/sound_but_weak_root/r1waw_stem1_ia.js
         if(isActiveParticiple)
         {

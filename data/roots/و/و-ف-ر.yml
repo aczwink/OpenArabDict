@@ -39,7 +39,6 @@ root:
                 - abundant, ample
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -49,6 +48,14 @@ root:
             - to place at disposal, make available (ه financial means, possibilities, aid, ل for)
             - to fulfill (ه prerequisites, conditions, etc.)
             - to save (ه s.th.), be sparing, be economical, hold back, economize (ه with)
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1270
+              text:
+                - saving
 
     - type: verb
       form: 5

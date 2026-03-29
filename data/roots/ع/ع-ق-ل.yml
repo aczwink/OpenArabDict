@@ -48,7 +48,6 @@ root:
           type: adjective
           derived:
             - derivation: elative-degree
-              type: adjective #TODO: should always be the case
               text: أَعْقَل
               translations:
                 - dialect: msa

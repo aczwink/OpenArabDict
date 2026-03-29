@@ -76,10 +76,10 @@
             "items": {
                 "oneOf": [
                     {
-                        "$ref": "../translations/OpenArabDictFreeTextTranslationEntry.json"
+                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
                     },
                     {
-                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                        "$ref": "../translations/OpenArabDictLevantineArabicVerbsTranslationEntry.json"
                     }
                 ]
             }

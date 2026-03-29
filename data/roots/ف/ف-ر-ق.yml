@@ -88,6 +88,15 @@ root:
           source-page: 829
           text:
             - to separate o.s., disengage o.s., withdraw, depart (ه ,ه from s.o., from s.th.), part (ه ,ه with s.o., with s.th.), leave, quit (ه ,ه s.o., s.th.)
+      derived:
+        - derivation: verbal-noun
+          text: فِرَاق
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 831
+              text:
+                - separation, parting, farewell, leave-taking, departure
 
     - type: verb
       dialect: msa

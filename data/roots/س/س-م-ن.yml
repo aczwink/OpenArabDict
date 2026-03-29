@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,11 +18,11 @@ root:
   radicals: س-م-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ia
       derived:
         - text: سَمْن
           derivation: meaning-related
@@ -33,3 +33,13 @@ root:
               source: hw4-free-text
               text:
                 - clarified butter, cooking butter
+
+        - derivation: meaning-related
+          text: سَمِين
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 503
+              text:
+                - fat

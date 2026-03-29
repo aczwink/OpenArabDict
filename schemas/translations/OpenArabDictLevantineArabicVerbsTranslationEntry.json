@@ -1,0 +1,25 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict LAV translation entry definition",
+    "description": "JSON Schema for OpenArabDict Levantine Arabic Verbs translation entry definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "dialect": {
+            "const": "lb"
+        },
+        "source": {
+            "const": "lav"
+        },
+        "source-page": {
+            "type": "integer"
+        },
+        "text": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "required": ["dialect", "source", "source-page", "text"]
+}

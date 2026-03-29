@@ -28,6 +28,27 @@ words:
       - text: اَلَّتِي
         derivation: feminine
 
+  - gender: male-or-female
+    text: أَنَا
+    type: pronoun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 37
+        text:
+          - I
+    derived:
+      - derivation: nisba
+        type: adjective
+        text: أَنَانِيّ
+        translations:
+          - dialect: msa
+            source: hw4
+            source-page: 37
+            text:
+              - egoistic
+              - egoistic(al), selfish
+
   - text: أَيّ
     type: pronoun
     gender: male
@@ -63,6 +84,29 @@ words:
             source-page: 354
             text:
               - this, this one
+
+      - derivation: colloquial
+        text: دَه
+        type: pronoun
+        gender: male
+        translations:
+          - dialect: eg
+            source: wiktionary
+            url: https://en.wiktionary.org/wiki/%D8%AF%D9%87#Egyptian_Arabic
+            text:
+              - this, that
+        derived:
+          - derivation: feminine
+            text: دي
+
+          - derivation: plural
+            text: دول
+            translations:
+              - dialect: eg
+                source: free-text
+                url: https://en.wiktionary.org/wiki/%D8%AF%D9%88%D9%84
+                text:
+                  - those, these
 
   - text: كِلَا
     type: pronoun

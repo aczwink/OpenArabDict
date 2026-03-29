@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -19,20 +19,31 @@ root:
   words:
     - text: أَجَل
       type: adverb
-      translations: []
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 7
+          text:
+            - yes, indeed! certainly! by all means!
       derived:
         - text: مِنْ أَجْلِ
           derivation: extension
           type: preposition
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 7
               text:
                 - because of, on account of, for the sake of
+                - for
+
     - text: لِأَجْلِ
       type: preposition
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 7
           text:
             - because of, on account of, for the sake of
+            - for

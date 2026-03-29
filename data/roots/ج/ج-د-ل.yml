@@ -24,13 +24,13 @@ root:
         parameters: au
       translations: []
       derived:
-        - text: جَدْوَل⁩
+        - text: جَدْوَل
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 137
               text:
                 - chart, table, schedule
 

@@ -27,15 +27,22 @@ root:
       type: verb
       derived:
         - derivation: verbal-noun
-          gender: male
           text: خَرْق
-          type: noun
           translations:
             - dialect: msa
               source: hw4
               source-page: 274
               text:
                 - violation, breach
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 274
+              text:
+                - exceeding the customary, unusual, extraordinary, unprecedented, unheard-of
 
     - form: 8
       type: verb

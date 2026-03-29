@@ -74,14 +74,13 @@ root:
               text:
                 - peace, (re)conciliation, settlement, composition, compromise
         - derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
               source-page: 610
               text:
                 - restoration, restitution, redressing, reparation
+                - restoration of order, establishment of peace, happiness and order
 
     - type: verb
       dialect: msa

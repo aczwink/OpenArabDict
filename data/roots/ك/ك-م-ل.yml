@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,33 @@ root:
   radicals: ك-م-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: msa
+            parameters: uu
+          - dialect: msa
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 984
           text:
             - to be or become whole, entire, integral, perfect, complete
       derived:
+        #- derivation: verbal-noun
+        - derivation: meaning-related
+          type: noun #TODO
+          text: كَمَال
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 985
+              text:
+                - perfection
+
         - text: أَكْمَل
           derivation: meaning-related
           type: adjective
@@ -37,15 +54,17 @@ root:
               source: hw4-free-text
               text:
                 - more complete, more perfect
-        - text: كَامِل
-          derivation: active-participle
+
+        - derivation: active-participle
           type: adjective
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 985
               text:
+                - perfect, consummate
                 - whole, entire, total, integral
+                
     - type: verb
       dialect: msa
       form:

@@ -1,0 +1,28 @@
+{
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "OpenArabDict wiktionary translation entry definition",
+    "description": "JSON Schema for OpenArabDict wiktionary translation entry definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "dialect": {
+            "type": "string",
+            "enum": [
+                "eg"
+            ]
+        },
+        "source": {
+            "const": "wiktionary"
+        },
+        "text": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            }
+        },
+        "url": {
+            "type": "string"
+        }
+    },
+    "required": ["dialect", "source", "text", "url"]
+}

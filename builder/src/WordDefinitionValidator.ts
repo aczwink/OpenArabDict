@@ -24,8 +24,7 @@ import { StatisticsCounterService, StatisticsCounter } from "./services/Statisti
 import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { EqualsAny } from "@aczwink/acts-util-core";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
-
-type InferableValue = number | string;
+import { ArabicText } from "@aczwink/openarabicconjugation";
 
 export type WordMapper = (wordDef: WordDefinition, validator: WordDefinitionValidator) => void;
 export type WordValidator = (validator: WordDefinitionValidator) => void;
@@ -135,16 +134,9 @@ export class WordDefinitionValidator
         };
     }
 
-    public InferDefault(variable: "gender", defaultValue: OpenArabDictGender)
-    {
-        const got = this.Get(variable);
-        if(got === undefined)
-            this.Assign(variable, defaultValue);
-        else
-            this.CheckRedundancy(variable, defaultValue);
-    }
-
-    public Infer<T extends InferableValue>(variable: "gender" | "text" | "type", allowedValues: T[], defaultValue: T)
+    InferAnyOf(variable: "gender", allowedValues: OpenArabDictGender[], defaultValue: OpenArabDictGender): void;
+    InferAnyOf(variable: "type", allowedValues: OpenArabDictWordType[], defaultValue: OpenArabDictWordType): void;
+    public InferAnyOf(variable: "gender" | "text" | "type", allowedValues: (OpenArabDictGender | OpenArabDictWordType)[], defaultValue: OpenArabDictGender | OpenArabDictWordType)
     {
         const got = this.Get(variable);
         for (const choice of allowedValues)
@@ -166,12 +158,39 @@ export class WordDefinitionValidator
         throw new Error("Variable '" + variable + "' has illegal value. Trace: " + this.TraceToString());
     }
 
+    InferDefault(variable: "gender", defaultValue: OpenArabDictGender): void;
+    InferDefault(variable: "text", value: DisplayVocalized[]): void;
+    InferDefault(variable: "type", defaultValue: OpenArabDictWordType): void;
+    public InferDefault(variable: "gender" | "text" | "type", defaultValue: OpenArabDictGender | DisplayVocalized[] | OpenArabDictWordType)
+    {
+        const got = this.Get(variable);
+        if(got === undefined)
+            this.Assign(variable, defaultValue);
+        else
+            this.CheckRedundancy(variable, defaultValue);
+    }
+
+    InferValue(variable: "text", value: DisplayVocalized[] | string): void;
+    InferValue(variable: "type", value: OpenArabDictWordType): void;
+    public InferValue(variable: "text" | "type", value: DisplayVocalized[] | string | OpenArabDictWordType)
+    {
+        const got = this.Get(variable);
+        if(got === undefined)
+            this.Assign(variable, value);
+        else if(this.Equals(variable, got, value))
+            this.CheckRedundancy(variable, value);
+        else
+        {
+            this.ReportValidationError("Variable has wrong value assigned. Got: " + this.ValueToValidationErrorString(got) + " Expected: " + this.ValueToValidationErrorString(value));
+        }
+    }
+
     public ValidateAnyOf(variable: "text", allowedValues: DisplayVocalized[][])
     {
         const parsed = ParseVocalizedText(this.text);
         for (const choice of allowedValues)
         {
-            if(EqualsAny(choice, parsed))
+            if(ArabicText.EqualsVocalized(choice, parsed))
                 return;
         }
 
@@ -192,7 +211,10 @@ export class WordDefinitionValidator
                 this._gender = value;
                 break;
             case "text":
-                this._text = value;
+                if(Array.isArray(value))
+                    this._text = VocalizedWordTostring(value);
+                else
+                    this._text = value;
                 break;
             case "type":
                 this._type = value;
@@ -202,8 +224,18 @@ export class WordDefinitionValidator
 
     private CheckRedundancy(variable: "gender" | "text" | "type", value: any)
     {
-        if(this.Get(variable) === value)
+        if(this.Equals(variable, this.Get(variable)!, value))
             this.ReportRedundancy(variable, value);
+    }
+
+    private Equals(variable: "gender" | "text" | "type", got: string | OpenArabDictWordType | OpenArabDictGender, value: string | OpenArabDictWordType | DisplayVocalized[])
+    {
+        switch(variable)
+        {
+            case "text":
+                return EqualsAny(ParseVocalizedText(got as string), Array.isArray(value) ? value : ParseVocalizedText(value as string));
+        }
+        return got === value;
     }
 
     private Get(variable: "gender" | "text" | "type")
@@ -219,7 +251,7 @@ export class WordDefinitionValidator
         }
     }
 
-    private ReportRedundancy(variable: string, defaultValue: InferableValue)
+    private ReportRedundancy(variable: string, defaultValue: any)
     {
         const statsService = GlobalInjector.Resolve(StatisticsCounterService);
         statsService.Increment(StatisticsCounter.RedundantAssignment);
@@ -263,6 +295,13 @@ export class WordDefinitionValidator
         else
             console.log(this.wordDef);
         return traces.join(" --> ");
+    }
+
+    private ValueToValidationErrorString(value: string | OpenArabDictWordType | OpenArabDictGender | DisplayVocalized[])
+    {
+        if(Array.isArray(value))
+            return Buckwalter.ToString(value) + " " + VocalizedWordTostring(value);
+        return value + "";
     }
 
     //State

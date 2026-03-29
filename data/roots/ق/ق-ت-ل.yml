@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -56,7 +56,6 @@ root:
                 - killed
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
@@ -65,21 +64,8 @@ root:
           text:
             - to combat, battle (ه s.o.), fight (ه s.o., with s.o., or against s.o.)
       derived:
-        - text: قِتَال
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 871
-              text:
-                - fight, struggle, contention (against)
-                - combat, strife, battle
         - text: مُقَاتَلَة
           derivation: verbal-noun
-          type: noun
-          gender: female
           translations:
             - complete: true
               dialect: msa
@@ -88,6 +74,25 @@ root:
               text:
                 - fight, struggle, contention (against)
                 - combat, strife
+
+        - text: قِتَال
+          derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 871
+              text:
+                - fight, struggle, contention (against)
+                - combat, strife, battle
+
+        - derivation: active-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 871
+              text:
+                - fighter, combatant, warrior
 
     - type: verb
       dialect: msa

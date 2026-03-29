@@ -65,6 +65,7 @@ root:
           source-page: 1265
           text:
             - citizen
+            - countryman, compatriot, fellow citizen
       derived:
         - derivation: plural
           text: مُوَاطِنُون

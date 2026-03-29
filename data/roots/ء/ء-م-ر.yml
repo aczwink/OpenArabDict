@@ -84,6 +84,16 @@ root:
                 - |-
                   1. commander
                   2. prince, emir
+
+    - form: 6
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 33
+          text:
+            - to plot, conspire (على against)
+
     - text: أَمْر
       type: noun
       gender: male

@@ -37,7 +37,7 @@ words:
 
   - text: رُوتِين
     type: noun
-    gender: male #TODO: or female?
+    gender: male
     translations:
       - complete: true
         dialect: msa

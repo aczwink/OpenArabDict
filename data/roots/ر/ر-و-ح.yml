@@ -136,13 +136,15 @@ root:
 
     - text: رُوح
       type: noun
-      gender: male
+      gender: male-or-female
       translations:
         - dialect: msa
           source: hw4
           source-page: 423
           text:
             - breath of life, soul
+            - spirit (in all senses)
+            - ghost
           usage:
             - text: الروح المعنوية
               translation: the spirit of self-assertion, moral strength; morale
@@ -150,6 +152,7 @@ root:
       derived:
         - text: أَرْوَاح
           derivation: plural
+
         - text: رُوحِيّ
           derivation: nisba
           type: adjective

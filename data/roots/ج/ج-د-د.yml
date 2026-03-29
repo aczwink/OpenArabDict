@@ -77,3 +77,13 @@ root:
               source-page: 135
               text:
                 - very, much
+
+        - derivation: nisba
+          type: adjective #TODO: is this not always the case for nisba?
+          text: جِدِّيّ
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 136
+              text:
+                - serious

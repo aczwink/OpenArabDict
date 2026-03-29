@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,11 +18,18 @@ root:
   radicals: ص-ن-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
+      translations:
+        - dialect: lb
+          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+          text:
+            - manufacture
       derived:
         - text: صِنَاعَة
           derivation: meaning-related
@@ -34,16 +41,14 @@ root:
               text:
                 - handicraft
 
-    - type: verb
-      dialect: lb
-      form:
-        stem: 1
-        parameters: aa
-      translations:
-        - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-          text:
-            - manufacture
+        - derivation: noun-of-place
+          text: مَصْنَع #TODO: this is implicit
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 615
+              text:
+                - factory, plant, mill, works
 
     - type: verb
       dialect: msa

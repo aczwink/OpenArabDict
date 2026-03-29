@@ -49,13 +49,12 @@ root:
           text:
             - to long, yearn (إلى or ه ,ه for), crave, covet, desire, ardently (إلى or ه s.th.)
       derived:
-        - text: اِشْتِيَاق
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: verbal-noun
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 577
               text:
                 - longing, yearning, desire, inclination, craving, eagerness
         - text: مُشْتَاق

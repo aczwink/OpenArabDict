@@ -25,11 +25,11 @@ root:
             parameters: uu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 765
           text:
-            - |-
-              1. to return, come back (ل or إلى to)
-              2. to go back, be traceable, be attributable (إلى to)
+            - to return, come back (ل or إلى to)
+            - to go back, be traceable, be attributable (إلى to)
       derived:
         - derivation: verbal-noun
           gender: female
@@ -110,6 +110,15 @@ root:
             - to accustom, habituate, condition, inure, season (ه ه or على s.o.
               to s.th.), make s.o. (ه) get used (على or ه to s.th.)
 
+    - form: 4
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 766
+          text:
+            - to cause to return, bring back, take back (ه ,ه الى s.o., s.th. to)
+
     - type: verb
       form: 5
       translations:
@@ -146,13 +155,13 @@ root:
                 - usual, customary, normal
 
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=779
+          source-page: 766
           text:
+            - to regain, recover, recuperate, reconquer, fetch back, get back, retrieve (ه s.th.)
             - to recall, recollect, call back to one's mind (ه s.th.)
       derived:
         - text: اِسْتِعَادَة

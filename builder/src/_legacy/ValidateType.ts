@@ -62,17 +62,17 @@ export function ValidateType(validator: WordDefinitionValidator)
     switch(validator._legacyWordDefinition.derivation)
     {
         case "adverbial-accusative":
-            validator.Infer("type", [OpenArabDictWordType.Adverb], OpenArabDictWordType.Adverb);
+            validator.InferAnyOf("type", [OpenArabDictWordType.Adverb], OpenArabDictWordType.Adverb);
             break;
         case "definite-state":
         case "instance-noun":
         case "noun-of-place":
         case "singulative":
         case "tool-noun":
-            validator.Infer("type", [OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+            validator.InferAnyOf("type", [OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
             break;
         case "verbal-noun":
-            validator.Infer("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+            validator.InferAnyOf("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
             break;
     }
 }

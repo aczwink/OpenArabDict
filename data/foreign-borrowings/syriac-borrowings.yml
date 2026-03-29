@@ -15,27 +15,6 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 words:
-  - text: فِرْعَوْن
-    type: noun
-    gender: male
-    translations:
-      - dialect: msa
-        source: hw4
-        url: http://ejtaal.net/aa/#hw4=841
-        text:
-          - Pharaoh
-    derived:
-      - text: فِرْعَوْنِيّ
-        derivation: nisba
-        type: adjective
-        gender: male
-        translations:
-          - dialect: msa
-            source: hw4
-            url: http://ejtaal.net/aa/#hw4=841
-            text:
-              - Pharaonic
-
   - text: تِشْرِين الْأَوَّل
     type: noun
     gender: male
@@ -57,3 +36,33 @@ words:
         url: http://ejtaal.net/aa/#hw4=127
         text:
           - November (Syr., Ir., Leb., Jord.)
+
+  - text: إِشْبِين
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 529
+        text:
+          - best man, groomsman (Chr.)
+
+  - text: فِرْعَوْن
+    type: noun
+    gender: male
+    translations:
+      - dialect: msa
+        source: hw4
+        url: http://ejtaal.net/aa/#hw4=841
+        text:
+          - Pharaoh
+    derived:
+      - text: فِرْعَوْنِيّ
+        derivation: nisba
+        type: adjective
+        gender: male
+        translations:
+          - dialect: msa
+            source: hw4
+            url: http://ejtaal.net/aa/#hw4=841
+            text:
+              - Pharaonic

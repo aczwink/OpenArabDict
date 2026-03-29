@@ -16,32 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import { OpenArabDictGender, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
-import { GenderedWordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
-function MapGender(word: GenderedWordDefinition)
+export function InferGenderFromTypeAndText(validator: WordDefinitionValidator)
 {
-    switch(word.gender)
-    {
-        case "female":
-            return OpenArabDictGender.Female;
-        case "male":
-            return OpenArabDictGender.Male;
-        case "male-or-female":
-            return OpenArabDictGender.FemaleOrMale;
-        default:
-            throw new Error("Unknown gender: " + (word as any).gender);
-    }
-}
-
-export function ValidateGender(validator: WordDefinitionValidator)
-{
-    if("gender" in validator._legacyWordDefinition)
-    {
-        const gender = MapGender(validator._legacyWordDefinition);
-        validator.gender = gender;
-    }
-
     if((validator.type === OpenArabDictWordType.Adjective) || (validator.type === OpenArabDictWordType.Noun))
     {
         const isFemale = validator.text.endsWith("ة");

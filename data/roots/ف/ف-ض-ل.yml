@@ -76,7 +76,6 @@ root:
                     - better, best
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -97,6 +96,16 @@ root:
               contextual:
                 - text: اسم التفضيل
                   translation: noun of preference = elative (gram.)
+
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 842
+              text:
+                - preferable, preferred
 
 
     - text: فُضُول

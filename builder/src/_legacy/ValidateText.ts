@@ -24,13 +24,12 @@ import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { TreeTrace } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
-import { EqualsAny } from "@aczwink/acts-util-core";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ExtractRoot } from "../shared";
 import { VerbalNounCounter } from "../VerbalNounCounter";
 import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
-import { TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { ArabicText, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {
@@ -149,7 +148,7 @@ function ValidateVerbalNoun(parsed: DisplayVocalized[], word: GenderedWordDefini
     for (let i = 0; i < generated.length; i++)
     {
         const possible = generated[i];
-        if(EqualsAny(possible, parsed))
+        if(ArabicText.EqualsVocalized(possible, parsed))
         {
             verbalNounCounter.Increment(verbInstance, i, generated.length);
             return;
@@ -165,7 +164,7 @@ export function _LegacyValidateText(builder: DBBuilder, verbalNounCounter: Verba
     if(generated !== undefined)
     {
         const generatedString = VocalizedWordTostring(generated);
-        validator.Infer("text", [generatedString], generatedString);
+        validator.InferValue("text", generatedString);
     }
     else
     {

@@ -52,7 +52,7 @@ function MapWordDerivationType(derivation: string)
         case "adverbial-accusative":
             return OpenArabDictParentType.AdverbialAccusative;
         /*case "characteristic-noun": //TODO
-            return OpenArabDictParentType.ToolNoun;*/
+            return OpenArabDictParentType.CharacteristicNoun;*/
         case "colloquial":
             return OpenArabDictParentType.Colloquial;
         case "definite-state":

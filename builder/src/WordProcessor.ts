@@ -21,7 +21,6 @@ import { DBBuilder } from "./DBBuilder";
 import { WordDefinitionValidator, WordMapper, WordValidator } from "./WordDefinitionValidator";
 import { TreeTrace } from "./TreeTrace";
 import { ValidateType } from "./_legacy/ValidateType";
-import { ValidateGender } from "./_legacy/ValidateGender";
 import { ValidatePlural } from "./_legacy/ValidatePlural";
 import { _LegacyValidateText } from "./_legacy/ValidateText";
 import { ValidateFeminine } from "./_legacy/ValidateFeminine";
@@ -33,6 +32,10 @@ import { _LegacyBuildUsage, _LegacyExtractDialect } from "./_LegacyDataDefinitio
 import { MapText } from "./mappers/MapText";
 import { ValidateText } from "./validators/ValidateText";
 import { MapParents } from "./mappers/MapParents";
+import { InferTypeFromDerivation } from "./inference/InferTypeFromDerivation";
+import { InferGenderFromTypeAndText } from "./inference/InferGenderFromTypeAndText";
+import { MapGender } from "./mappers/MapGender";
+import { InferTextFromDerivation } from "./inference/InferTextFromDerivation";
 
 export class WordProcessor
 {
@@ -85,6 +88,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
     //mappers
     const mappers: WordMapper[] = [
+        MapGender,
         MapParents.bind(undefined, builder),
         MapText
     ];
@@ -93,19 +97,24 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
     //THE MIXED LEGACY STUFF
     const _legacy: WordValidator[] = [
-        //no dependencies
         ValidateType,
         ValidateFeminine,
         ValidatePlural,
         ValidateVerbForm.bind(undefined, builder),
         _LegacyValidateText.bind(undefined, builder, verbalNounCounter, translations),
-        //dependency on text and type
-        ValidateGender,
     ];
     for (const validator of _legacy)
         validator(wdv);
 
     //inference
+    const inference: WordValidator[] = [
+        InferTextFromDerivation.bind(undefined, builder),
+        InferTypeFromDerivation,
+        //dependency on text and type
+        InferGenderFromTypeAndText,
+    ];
+    for (const inferenceFunc of inference)
+        inferenceFunc(wdv);
 
     //validators
     const validators: WordValidator[] = [

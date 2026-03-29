@@ -20,7 +20,7 @@ import { OpenArabDictParentType, OpenArabDictWord } from "@aczwink/openarabdict-
 import { Tashkil } from "@aczwink/openarabicconjugation/dist/Definitions";
 
 export const WordLogic = {
-    IsNounInNominative(word: OpenArabDictWord)
+    IsAdjectiveOrNounInNominative(word: OpenArabDictWord)
     {
         return word.text.endsWith(Tashkil.Fathatan) || word.text.endsWith(Tashkil.Kasratan);
     },
