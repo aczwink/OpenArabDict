@@ -33,7 +33,8 @@ root:
             - to open (ه s.th.)
             - to conquer, capture (ه s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 66
+          source: lav
+          source-page: 66
           text:
             - to open
       derived:

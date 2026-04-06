@@ -23,6 +23,14 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - burn
       derived:
         - derivation: verbal-noun
           text: حَرْق

@@ -22,6 +22,8 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: aisu
       type: verb
       translations:
         - dialect: msa
@@ -29,3 +31,8 @@ root:
           source-page: 331
           text:
             - to bury, inter, inhume (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - bury

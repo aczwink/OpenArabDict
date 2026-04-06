@@ -33,19 +33,29 @@ root:
           text:
             - to speak, say, tell (ه s.th., ل to s.o.; ه عن ,في s.th. about or of), utter, voice (ه s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 70
+          source: lav
+          source-page: 70
           text:
             - to say
       derived:
         - text: قَوْل
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 933
               text:
                 - word, speech, saying, utterance, remark
+          derived:
+            - derivation: instance-noun
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 933
+                  text:
+                    - utterance, remark, word
+                    - pronoucement, dictum
         
         - derivation: active-participle
           type: adjective

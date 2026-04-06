@@ -56,21 +56,20 @@ root:
               derivation: feminine
               type: adjective
               gender: female
-        - text: مَوْقِع
-          derivation: meaning-related
-          type: noun
-          gender: male
+
+        - text: مَوْقِع #TODO is this needed?
+          derivation: noun-of-place
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=1290
+              source-page: 1277
               text:
                 - place, site, locality, spot
+                - situation, location, position
           derived:
             - text: مَوَاقِع
               derivation: plural
-              type: noun
-              gender: male
+
         - type: verb
           derivation: colloquial
           dialect: lb

@@ -33,14 +33,14 @@ root:
             - to cheat (ه s.o., عن out of s.th.)
             - to deceive, mislead, dupe, gull (ه s.o.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
+          source: lav
+          source-page: 118
           text:
             - deceive
       derived:
         - text: خُدْعَة
           derivation: meaning-related
           type: noun
-          gender: female
           translations:
             - dialect: msa
               source: hw4
@@ -57,3 +57,14 @@ root:
               source-page: 266
               text:
                 - impostor, swindler, sharper, cheat, crook
+
+        - derivation: meaning-related
+          type: noun
+          text: خِدَاع
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 267
+              text:
+                - deception, deceit, swindle, imposture, betrayal, treachery, perfidy, trickery, duplicity

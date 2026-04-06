@@ -18,11 +18,19 @@ root:
   radicals: ح-س-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - calculate
       derived:
         - derivation: active-participle
           type: noun

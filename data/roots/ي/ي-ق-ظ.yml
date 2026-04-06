@@ -40,13 +40,13 @@ root:
       form: 10
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1298
           text:
             - to wake up, awaken, be awakened, be roused from sleep (على by)
       derived:
         - derivation: active-participle
           type: adjective
-          gender: male
           translations:
             - complete: true
               dialect: msa

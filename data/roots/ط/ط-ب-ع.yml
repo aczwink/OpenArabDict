@@ -18,15 +18,24 @@ root:
   radicals: ط-ب-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 644
           text:
             - to provide with an imprint, impress or impression (ه or على s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 118
+          text:
+            - print
       derived:
         - derivation: active-participle
           type: noun
@@ -65,30 +74,31 @@ root:
               source: hw4-free-text
               text:
                 - imprint, print, impress, impression
+
         - text: طَبْع
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=657
+              source-page: 644
               text:
-                - natural disposition, temper, nature, character (of s.o. or
-                  s.th.)
+                - natural disposition, temper, nature, character (of s.o. or s.th.)
+              usage:
+                - text: بالطبع
+                  translation: by nature, by natural disposition; naturally! of course! certainly! to be sure!
+                  type: meaning-in-context
           derived:
             - text: طَبْعًا
-              alias: بالطبع
               derivation: adverbial-accusative
-              type: adverb
               translations:
                 - dialect: msa
                   complete: true
                   source: hw4
-                  url: http://ejtaal.net/aa/#hw4=657
+                  source-page: 644
                   text:
                     - by nature, by natural disposition
                     - naturally! of course! certainly! to be sure!
+
         - text: طِبَاعَة
           derivation: meaning-related
           type: noun
@@ -99,17 +109,6 @@ root:
               url: http://ejtaal.net/aa/#hw4=658
               text:
                 - art of printing
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-              text:
-                - print
 
     - form: 2
       type: verb

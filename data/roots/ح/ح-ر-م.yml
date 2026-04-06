@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
           source-page: 201
           text:
             - to deprive, bereave, dispossess, divest (ه ه or ه من s.o. of s.th.), take away, withdraw, withhold (ه ه or من ه or ه من from s.o. s.th.), deny, refuse (ه ه or من ه or ه من to s.o. s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - deprive
       derived:
         - derivation: verbal-noun
           gender: male

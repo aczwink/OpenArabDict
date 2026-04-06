@@ -26,7 +26,11 @@ export function InferTypeFromDerivation(validator: WordDefinitionValidator)
         switch(parent.type)
         {
             case OpenArabDictParentType.ElativeDegree:
+            case OpenArabDictParentType.Nisba:
                 validator.InferAnyOf("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Adjective);
+                break;
+            case OpenArabDictParentType.CharacteristicNoun:
+                validator.InferValue("type", OpenArabDictWordType.Noun);
                 break;
         }
     }

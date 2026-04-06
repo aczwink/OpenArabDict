@@ -18,11 +18,19 @@ root:
   radicals: خ-د-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - serve
       derived:
         - text: خَدَم
           derivation: meaning-related

@@ -15,6 +15,7 @@
             "type": "string",
             "enum": [
                 "active-participle",
+                "characteristic-noun",
                 "meaning-related",
                 "noun-of-place",
                 "passive-participle",

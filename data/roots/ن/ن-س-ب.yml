@@ -60,9 +60,8 @@ root:
               type: adjective
               gender: male
               derived:
-                - text: نِسْبِيّاً
+                - text: نِسْبِيًّا
                   derivation: adverbial-accusative
-                  type: adverb
                   translations:
                     - complete: true
                       dialect: msa

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,23 @@ root:
   radicals: د-ه-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aa
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 118
+          text:
+            - paint
       derived:
         - text: دُهْن
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -36,17 +43,3 @@ root:
           derived:
             - text: دُهُون
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-              text:
-                - paint

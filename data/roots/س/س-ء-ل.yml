@@ -18,11 +18,19 @@ root:
   radicals: س-ء-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: aa
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 42
+          text:
+            - to ask
       derived:
         - text: سُؤَال
           derivation: verbal-noun
@@ -72,18 +80,6 @@ root:
                   url: https://ejtaal.net/aa/#hw4=468
                   text:
                     - responsibility (عن for)
-
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 42
-              text:
-                - to ask
 
     - form: 6
       type: verb

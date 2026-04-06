@@ -22,7 +22,8 @@ import { TranslationDefinition } from "../DataDefinitions";
 function FindErrorneousAbbreviations(input: string)
 {
     const abbreviations = [
-        "do." //it means ditto and should therefore not occur in text
+        "do.", //it means ditto and should therefore not occur in text
+        "n. vic.", //it means "nomen vicis (اسم المرّة)", i.e., the "instance noun". It should not arrive in text but instead be placed in the derivation
     ];
 
     for (const abbrev of abbreviations)

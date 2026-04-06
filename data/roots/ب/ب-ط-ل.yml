@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -44,3 +44,23 @@ root:
               type: noun
               gender: female
               translations: []
+
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
+      derived:
+        - derivation: meaning-related
+          text: بَطَل
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 78
+              text:
+                - hero
+          derived:
+            - derivation: plural
+              text: أَبْطَال

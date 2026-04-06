@@ -34,9 +34,7 @@ root:
               text:
                 - treading, trampling, tread, step
 
-        #- derivation: tool-noun #TODO
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: tool-noun
           text: دَوَّاسَة
           translations:
             - dialect: msa

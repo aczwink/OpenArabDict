@@ -34,9 +34,7 @@ root:
           text:
             - to be or become whole, entire, integral, perfect, complete
       derived:
-        #- derivation: verbal-noun
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: verbal-noun
           text: كَمَال
           translations:
             - dialect: msa
@@ -75,6 +73,18 @@ root:
           source: hw4-free-text
           text:
             - same as كَمَلَ / يَكْمُل
+
+    - form: 8
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 985
+              text:
+                - completion
+
     - type: verb
       dialect: msa
       form: 10

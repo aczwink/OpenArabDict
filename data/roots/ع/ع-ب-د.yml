@@ -29,7 +29,7 @@ root:
             - to serve, worship
       derived:
         - derivation: noun-of-place
-          text: مَعْبَد # TODO
+          text: مَعْبَد
           translations:
             - dialect: msa
               source: hw4

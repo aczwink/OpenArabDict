@@ -30,9 +30,7 @@ root:
           text:
             - to detest, loathe, abhor, hate (ه s.th.)
       derived:
-        #- derivation: verbal-noun #TODO: fix this
-        - derivation: meaning-related
-          type: noun #TODO remove this
+        - derivation: verbal-noun
           text: كَرَاهِيَة
           translations:
             - dialect: msa

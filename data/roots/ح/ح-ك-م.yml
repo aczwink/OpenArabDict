@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
@@ -31,6 +33,11 @@ root:
             - to pass judgment, express an opinion (في, على on s.th.), judge (على s.th., ب by, from)
             - to govern, rule, dominate, control (ه s.o.)
             - to order, command (ب s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - govern
       derived:
         - derivation: verbal-noun
           gender: male

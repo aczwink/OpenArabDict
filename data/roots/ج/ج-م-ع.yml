@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: aa
+          - dialect: lb
+            parameters: aa
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,12 @@ root:
           text:
             - to collect (ه e.g., money)
             - to bring together (ه ب s.o. with others)
+        - dialect: lb
+          source: lav
+          source-page: 118
+          text:
+            - add, add up
+            - harvest
       derived:
         - text: جَمْعِيَّة
           derivation: meaning-related
@@ -46,6 +54,7 @@ root:
               type: noun
               gender: female
               translations: []
+
         - text: جَمِيع
           derivation: meaning-related
           type: adjective
@@ -74,6 +83,7 @@ root:
                   text:
                     - in a body, altogether, one and all, all of them
                     - entirely, wholly, totally
+
         - text: مَجْمُوع
           derivation: passive-participle
           type: adjective
@@ -94,6 +104,7 @@ root:
                   text:
                     - collection (e.g., of works of art, of stamps, etc., also
                       of stories)
+
         - text: جَامِع
           derivation: active-participle
           type: noun
@@ -119,18 +130,6 @@ root:
                   type: noun
                   gender: female
                   translations: []
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aa
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 118
-              text:
-                - add, add up
-                - harvest
 
     - form: 2
       type: verb

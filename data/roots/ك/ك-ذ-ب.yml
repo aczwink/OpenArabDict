@@ -33,11 +33,7 @@ root:
               source-page: 958
               text:
                 - liar
-        #- derivation: characteristic-noun #TODO
-        - derivation: meaning-related
-          gender: male
-          text: كَذَّاب
-          type: noun
+        - derivation: characteristic-noun
           translations:
             - dialect: msa
               source: hw4

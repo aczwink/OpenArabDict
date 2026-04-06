@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -39,21 +39,17 @@ root:
               5. to grasp, grip, grab, seize (على s.o., s.th.)
 
     - type: verb
-      dialect: msa
       form: 7
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 636
           text:
-            - to be joined, united, or combined (إلى with), unite, join forces
-              (إلى with)
-      derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 7
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 87
-              text:
-                - to join
+            - to be joined, united, or combined (إلى with), unite, join forces (إلى with)
+            - to associate, affiliate (الى with)
+            - to enter, join (الى an organization, and the like)
+        - dialect: lb
+          source: lav
+          source-page: 88
+          text:
+            - to join

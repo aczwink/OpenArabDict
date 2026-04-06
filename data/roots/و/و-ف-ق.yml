@@ -62,6 +62,16 @@ root:
           source: hw4-free-text
           text:
             - to agree (ه with s.th., ه with s.o., في or على in s.th.)
+
+    - form: 6
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1271
+          text:
+            - to agree, concur with one another, be in conformity
+
     - type: verb
       dialect: msa
       form: 8

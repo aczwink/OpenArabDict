@@ -48,6 +48,16 @@ root:
               text:
                 - suffering
 
+    - type: verb
+      form: 8
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 762
+          text:
+            - to take care (ب of), care, provide (ب for), look (ب after), see (ب to), tend (ب s.th.), put one's mind, devote one's attention (ب to)
+            - to attend (ب to), nurse (ب s.o., s.th., e.g., a patient)
+
     - text: مَعْنًى
       type: noun
       translations:
@@ -71,14 +81,3 @@ root:
               text:
                 - semantic, significative, of or pertaining to a meaning
                 - spiritual (as opposed to material)
-
-    - type: verb
-      dialect: msa
-      form: 8
-      translations:
-        - dialect: msa
-          source: hw4
-          url: https://ejtaal.net/aa/#hw4=775
-          text:
-            - to take care (ب of), care, provide (ب for), look (ب after), see (ب to), tend (ب s.th.), put one's mind, devote one's attention (ب to)
-            - to attend (ب to), nurse (ب s.o., s.th., e.g., a patient)

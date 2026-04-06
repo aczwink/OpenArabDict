@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,6 @@ root:
   radicals: ث-و-ر
   words:
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
@@ -27,15 +26,23 @@ root:
           text:
             - to arouse, stir up, kindle, excite (ه s.th., e.g., feelings), cause, provoke, awaken (ه s.th.)
       derived:
-        - derivation: active-participle
-          type: adjective
-          gender: male
+        - derivation: verbal-noun
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=144
+              source-page: 131
+              text:
+                - excitation, stirring up, kindling
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 131
               text:
                 - exciting
+                - excitant, irritant, stimulant
 
     - text: ثَوْر
       type: noun

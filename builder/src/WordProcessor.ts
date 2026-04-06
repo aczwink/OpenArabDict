@@ -183,14 +183,14 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         case OpenArabDictWordType.Phrase:
         case OpenArabDictWordType.Preposition:
         {
-            const o = wordDef as OtherWordDefinition;
             const word = builder.AddWord({
                 id: "",
                 type: result.type,
-                text: o.text,
+                text: result.text!,
                 parent: wdv.parents
             }, translations);
 
+            const o = wordDef as OtherWordDefinition;
             if(o.alias !== undefined)
             {
                 const aliasWordId = ProcessWordDefinition({

@@ -17,18 +17,13 @@
  * */
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
-import { OpenArabDictGender, OpenArabDictParentType, OpenArabDictRoot, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
-import { CreateVerbFromOADVerb } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { OpenArabDictGender, OpenArabDictParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
-
-function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
-{
-    return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
-}
+import { CreateMSAVerb } from "../shared";
 
 export function ValidateText(builder: DBBuilder, validator: WordDefinitionValidator)
 {

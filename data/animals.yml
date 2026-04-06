@@ -35,6 +35,18 @@ words:
         text:
           - fox
 
+  - text: جُرَذ
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 142
+        text:
+          - large, rat
+    derived:
+      - derivation: plural
+        text: جُرْذَان
+
   - text: دُلْفِين
     type: noun
     gender: male
@@ -44,6 +56,15 @@ words:
         source-page: 335
         text:
           - dolphin
+
+  - text: صَقْر
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 607
+        text:
+          - saker, falcon, hawk
 
   - text: قُبَّر
     type: noun

@@ -94,6 +94,17 @@ root:
           text:
             - to plot, conspire (على against)
 
+    # - form: 8
+    #   type: verb
+    #   derived:
+    #     - derivation: noun-of-place #TODO: https://en.wiktionary.org/wiki/%D9%85%D8%A4%D8%AA%D9%85%D8%B1
+    #       translations:
+    #         - dialect: msa
+    #           source: hw4
+    #           source-page: 34
+    #           text:
+    #             - conference
+
     - text: أَمْر
       type: noun
       gender: male

@@ -32,7 +32,8 @@ root:
           text:
             - to joke, jest, make fun
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 119
+          source: lav
+          source-page: 119
           text:
             - joke
             - kid

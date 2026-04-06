@@ -19,6 +19,12 @@ root:
   words:
     - form: 2
       type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1153
+          text:
+            - to carry out, execute, accomplish, effect (ه s.th., also, an idea), do, perform, fulfill, discharge (ه a duty)
       derived:
         - derivation: verbal-noun
           text: تَنْفِيذ

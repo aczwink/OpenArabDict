@@ -51,6 +51,18 @@ root:
               source: hw4-free-text
               text:
                 - good, right, proper, sound
+
+    - form: 2
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 609
+          text:
+            - to put in order, settle, adjust, restore, restitute (ه s.th.), make amends, compensate (ه for)
+            - to mend, improve, ameliorate, fix, repair (ه s.th.)
+
     - type: verb
       dialect: msa
       form: 3

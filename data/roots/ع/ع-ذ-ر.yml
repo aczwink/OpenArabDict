@@ -57,3 +57,15 @@ root:
                       source-page: 702
                       text:
                         - belonging to the tribe of عُذْرَة
+
+    - form: 8
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 702
+              text:
+                - apology, excuse, plea

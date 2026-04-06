@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,23 +18,26 @@ root:
   radicals: ض-غ-ط
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
       derived:
         - text: ضَغْط
           derivation: verbal-noun
-          type: noun
-          gender: male
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 634
+              text:
+                - pressure
           derived:
-            - text: ضَغْطَة
-              derivation: plural
-              type: noun
-              gender: female
+            - derivation: instance-noun
               translations:
-                - dialect: msa
+                - complete: true
+                  dialect: msa
                   source: hw4
-                  url: https://ejtaal.net/aa/#hw4=647
+                  source-page: 634
                   text:
-                    - (n. vic.) pressure
+                    - pressure

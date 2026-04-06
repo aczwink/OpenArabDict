@@ -67,6 +67,7 @@ root:
               source-page: 618
               text:
                 - hit
+                - injury, wound
 
         - derivation: active-participle
           type: adjective

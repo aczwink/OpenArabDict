@@ -18,10 +18,19 @@ root:
   radicals: ح-ل-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - shave
       derived:
         - text: حَلْق
           derivation: verbal-noun

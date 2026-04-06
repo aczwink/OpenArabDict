@@ -22,7 +22,6 @@ import { TreeTrace } from "./TreeTrace";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "./services/StatisticsCounterService";
 import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
-import { EqualsAny } from "@aczwink/acts-util-core";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ArabicText } from "@aczwink/openarabicconjugation";
 
@@ -202,7 +201,7 @@ export class WordDefinitionValidator
     private Assign(variable: "gender" | "text" | "type", value: any)
     {
         const alreadyAssigned = this.Get(variable);
-        if(alreadyAssigned === value)
+        if((alreadyAssigned !== undefined) && this.Equals(variable, alreadyAssigned, value))
             this.ReportRedundancy(variable, value);
 
         switch(variable)
@@ -233,7 +232,7 @@ export class WordDefinitionValidator
         switch(variable)
         {
             case "text":
-                return EqualsAny(ParseVocalizedText(got as string), Array.isArray(value) ? value : ParseVocalizedText(value as string));
+                return ArabicText.EqualsVocalized(ParseVocalizedText(got as string), Array.isArray(value) ? value : ParseVocalizedText(value as string));
         }
         return got === value;
     }

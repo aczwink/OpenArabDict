@@ -50,7 +50,6 @@ root:
                 - beautiful, handsome, lovely
           derived:
             - derivation: adverbial-accusative
-              text: حَسَنًا #TODO this is unneccesssary
               translations:
                 - dialect: msa
                   source: hw4

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -32,19 +32,19 @@ root:
       derived:
         - text: نَظَر
           derivation: verbal-noun
-          type: noun
-          gender: male
-          derived:
-            - text: نَظَرًا إلى
-              alias: نَظَرًا لِ
-              derivation: adverbial-accusative
-              type: adverb
-              translations:
-                - dialect: msa
-                  source: hw4
-                  url: http://ejtaal.net/aa/#hw4=1157
-                  text:
-                    - in view of, with a view to, in regard to, with respect to, in consideration of, on the basis of, due to, becase of, for
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1144
+              text: []
+              usage:
+                - text: نَظَرًا إلى
+                  translation: in view of, with a view to, in regard to, with respect to, in consideration of, on the basis of, due to, becase of, for
+                  type: meaning-in-context
+                - text: نَظَرًا لِ
+                  translation: in view of, with a view to, in regard to, with respect to, in consideration of, on the basis of, due to, becase of, for
+                  type: meaning-in-context
+
         - text: مَنْظَر
           derivation: verbal-noun
           type: noun

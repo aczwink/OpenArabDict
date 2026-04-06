@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,9 +16,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictRoot, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { TreeTrace } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
+import { CreateVerbFromOADVerb } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { DialectType } from "@aczwink/openarabicconjugation";
+import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
+
+export function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
+{
+    return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
+}
 
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
 {
@@ -37,4 +45,16 @@ export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
     const root = builder.GetRoot(rootId);
 
     return root;
+}
+
+export function _TODO_MapGender(gender: OpenArabDictGender): Gender //TODO: use bridge instead
+{
+    switch(gender)
+    {
+        case OpenArabDictGender.Female:
+            return Gender.Female;
+        case OpenArabDictGender.FemaleOrMale:
+        case OpenArabDictGender.Male:
+            return Gender.Male;
+    }
 }

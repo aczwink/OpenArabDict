@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
           source-page: 299
           text:
             - to create, make, originate (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - create
       derived:
         - derivation: verbal-noun
           text: خَلْق
@@ -66,7 +73,6 @@ root:
               text: أَخْلَاق
               derived:
                 - derivation: nisba
-                  type: adjective #TODO: nisba should always be adjective i think
                   text: أَخْلَاقِيّ #TODO: redundant
                   translations:
                     - dialect: msa

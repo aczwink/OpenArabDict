@@ -24,6 +24,7 @@ root:
           source: hw4
           source-page: 1016
           text:
+            - to act stealthily
             - to peek covertly, secretly (e.g., عبر ثقب الباب through a keyhole)
 
     - gender: male

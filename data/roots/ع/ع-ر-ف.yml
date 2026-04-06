@@ -18,15 +18,18 @@ root:
   radicals: ع-ر-ف
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 708
           text:
-            - to know (ه, ه s.o., s.th.)
+            - to know (ه ,ه s.o., s.th.)
+            - to get to know, come to know (ه s.o.)
       derived:
         - text: مَعْرِفَة
           derivation: verbal-noun

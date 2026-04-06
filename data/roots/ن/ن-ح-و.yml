@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -26,29 +26,22 @@ root:
       derived:
         - text: نَحْو
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=1126
+              source-page: 1113
               text:
                 - side
                 - section, part
                 - way, course, method, manner, mode, fashion
-              contextual:
+              usage:
                 - text: على هذا النحو
                   translation: in this manner, this way; in this respect
+                  type: meaning-in-context
           derived:
             - text: أَنْحَاء
               derivation: plural
-              type: noun
-              gender: male
-              translations:
-                - dialect: msa
-                  source: hw4-free-text
-                  text:
-                    - ""
+              
         - text: نَاحِيَة
           derivation: meaning-related
           type: noun
