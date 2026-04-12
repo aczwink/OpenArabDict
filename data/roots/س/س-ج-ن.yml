@@ -31,3 +31,28 @@ root:
           source-page: 464
           text:
             - to jail, imprison (ه s.o.)
+      derived:
+        - derivation: meaning-related
+          text: سَجِين
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 464
+              text:
+                - prisoner, prison inmate, convict
+          derived:
+            - derivation: plural
+              text: سُجَناء
+
+        - derivation: passive-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 464
+              text:
+                - prisoner, prison inmate, convict
+          derived:
+            - derivation: plural
+              text: مَسَاجِين

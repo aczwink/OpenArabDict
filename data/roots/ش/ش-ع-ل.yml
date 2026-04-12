@@ -27,7 +27,6 @@ root:
             - to light, kindle, ignite, inflame, set on fire (ه s.th.), set fire (ه to s.th.)
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -37,14 +36,22 @@ root:
             - to catch fire, start burning, ignite, burn, flame, blaze, flare up, break out (fire)
       derived:
         - derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
               source-page: 555
               text:
                 - ignition, inflammation, combustion, burning
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 555
+              text:
+                - burning, ablaze, on fire
 
     - text: شُعْلَة
       type: noun

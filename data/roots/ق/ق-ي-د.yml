@@ -37,6 +37,15 @@ root:
               text:
                 - fetter, shackle, chain
 
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 940
+              text:
+                - fettered, shackled, bound, tied, tied down
+
     - type: verb
       form: 5
       translations: []

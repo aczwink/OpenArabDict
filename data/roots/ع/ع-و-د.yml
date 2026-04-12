@@ -100,15 +100,16 @@ root:
                   source: hw4-free-text
                   text:
                     - customary, usual, common, ordinary, normal, regular
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 766
           text:
-            - to accustom, habituate, condition, inure, season (ه ه or على s.o.
-              to s.th.), make s.o. (ه) get used (على or ه to s.th.)
+            - to accustom, habituate, condition, inure, season (ه ه or على s.o. to s.th.), make s.o. (ه) get used (على or ه to s.th.)
 
     - form: 4
       type: verb

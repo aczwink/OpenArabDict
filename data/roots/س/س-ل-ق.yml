@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,15 +17,23 @@
 root:
   radicals: س-ل-ق
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: aisu
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - boil (food)
+
     - type: verb
-      dialect: msa
       form: 5
-      translations: []
       derived:
-        - text: تَسَلُّق
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: verbal-noun
           translations:
             - dialect: msa
               source: hw4-free-text

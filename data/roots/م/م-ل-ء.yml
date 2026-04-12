@@ -62,11 +62,19 @@ root:
             - to fill (ه s.th., also a vacancy)
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=1091
+          source-page: 1078
           text:
             - to fill, become full
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1079
+              text:
+                - full, filled, filled up, replete

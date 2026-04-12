@@ -54,6 +54,15 @@ root:
               text:
                 - convincing
 
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 928
+          text:
+            - to be convinced (ب of)
+
     - text: قِنَاع
       type: noun
       translations:

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -61,16 +61,39 @@ root:
 
                   لا مثيل له (matila), ليس له مثيل, لم يسبق له مثيل (yasbiq)
                   incomparable, matchless, unrivaled, unparalleled
+
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1046
+          text:
+            - to play, act (دورا a part or role), star (دورا in a role)
+            - to stage, perform (ه a play)
       derived:
         - text: تَمْثِيل
           derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1048
+              text:
+                - dramatic representation, acting, playing (of an actor)
+        
+        - derivation: meaning-related
+          text: تِمْثَال
           type: noun
-          gender: male
-          translations: []
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1048
+              text:
+                - sculptured image
+                - statue
+          derived:
+            - derivation: plural
+              text: تَمَاثِيل
 
     - type: verb
       dialect: msa

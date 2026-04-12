@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -24,25 +24,15 @@ root:
           - dialect: msa
             parameters: ai
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
           source-page: 244
           text:
             - to long, yearn, hanker (إلى for), crave (إلى s.th.)
       derived:
-        - text: حَنان
-          derivation: meaning-related
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - love
         - text: حَنِين
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - complete: true
               dialect: msa
@@ -50,6 +40,23 @@ root:
               source-page: 244
               text:
                 - longing, yearning, hankering, nostalgia, craving, desire (إلى for)
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      derived:
+        - derivation: verbal-noun
+          text: حَنَان
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 244
+              text:
+                - sympathy, love, affection, tenderness
+
         - text: حَنُون
           derivation: meaning-related
           type: adjective
@@ -63,6 +70,7 @@ root:
                   compassionate, merciful
 
                   2. tender, soft, gentle, kind, moving, touching (voice)
+                  
         - text: حِنِيَّة
           derivation: meaning-related
           type: noun

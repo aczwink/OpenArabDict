@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,40 +18,41 @@ root:
   radicals: س-ر-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 473
           text:
             - to roam freely
-    - text: مَسْرَح
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - stage, theater
       derived:
-        - text: مَسْرَحِيّ
-          derivation: nisba
-          type: adjective
-          gender: male
+        - derivation: noun-of-place
+          text: مَسْرَح #TODO is this needed?
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 473
               text:
-                - dramatic, theatrical, stage
+                - stage, theater
           derived:
-            - text: مَسْرَحِيَّة
-              derivation: feminine
-              type: noun
-              gender: female
+            - text: مَسْرَحِيّ #TODO clear no?!
+              derivation: nisba
               translations:
                 - dialect: msa
-                  source: hw4-free-text
+                  source: hw4
+                  source-page: 473
                   text:
-                    - (stage) play
+                    - dramatic, theatrical, stage
+              derived:
+                - derivation: feminine
+                  type: noun
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      source-page: 473
+                      text:
+                        - (stage) play

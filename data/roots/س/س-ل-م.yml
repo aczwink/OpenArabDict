@@ -175,3 +175,11 @@ root:
           source-page: 496
           text:
             - to surrender, capitulate
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 497
+              text:
+                - surrender, capitalation

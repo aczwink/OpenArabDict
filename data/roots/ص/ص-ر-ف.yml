@@ -23,11 +23,20 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to deliver, distribute
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - spend (money)
+            - change (money)
+            - fire, dismiss (from a job)
       derived:
         - derivation: passive-participle
           gender: male

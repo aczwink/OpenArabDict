@@ -24,9 +24,7 @@ root:
             parameters: ii
       type: verb
       derived:
-        #- derivation: verbal-noun
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: verbal-noun
           text: إِرْث
           translations:
             - dialect: msa
@@ -35,9 +33,7 @@ root:
               text:
                 - heritage, inheritance, legacy
         
-        #- derivation: verbal-noun
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: verbal-noun
           text: تُرَاث
           translations:
             - dialect: msa

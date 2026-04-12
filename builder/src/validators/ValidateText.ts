@@ -17,48 +17,24 @@
  * */
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
-import { OpenArabDictGender, OpenArabDictParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
-import { Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { OpenArabDictGender, OpenArabDictParentType } from "@aczwink/openarabdict-domain";
+import { Conjugator, DialectType } from "@aczwink/openarabicconjugation";
 import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
-import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
-import { CreateMSAVerb } from "../shared";
+import { GenerateAllPossibleTextsFromDerivation } from "../shared";
 
 export function ValidateText(builder: DBBuilder, validator: WordDefinitionValidator)
 {
+    for (const parent of validator.parents)
+    {
+        const generated = GenerateAllPossibleTextsFromDerivation(parent, builder)                
+        if(generated !== undefined)
+            validator.ValidateAnyOf("text", generated);
+    }
+
     switch(validator.sourceTreeTrace?.type)
     {
-        case "verb":
-        {
-            const verb = builder.GetWord(validator.sourceTreeTrace.verbId);
-            if(verb.type !== OpenArabDictWordType.Verb)
-                throw new Error("Id error!!!");
-            const root = builder.GetRoot(verb.rootId);
-
-            const verbInstance = CreateMSAVerb(root, verb);
-
-            const conjugator = new Conjugator();
-
-            for (const parent of validator.parents)
-            {
-                let generated;
-                switch(parent.type)
-                {
-                    case OpenArabDictParentType.NounOfPlace:
-                        //TODO: fix this
-                        //generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.NounOfPlace);
-                        break;
-                    case OpenArabDictParentType.ToolNoun:
-                        generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ToolNouns);
-                        break;
-                }
-                
-                if(generated !== undefined)
-                    validator.ValidateAnyOf("text", generated);
-            }
-        }
-        break;
         case "word":
         {
             for (const parent of validator.parents)
@@ -77,13 +53,6 @@ export function ValidateText(builder: DBBuilder, validator: WordDefinitionValida
                         const noun = conjugator.DeriveSoundAdjectiveOrNoun(parsed, (gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveNisbaSameGender, DialectType.ModernStandardArabic);
                         //TODO: fix this
                         //generated = [noun];
-                    }
-                    break;
-                    case OpenArabDictParentType.Plural:
-                    {
-                        const conjugator = new Conjugator();
-                        //TODO: fix this
-                        //generated = conjugator.DeriveFromNoun(parsed, TargetNounBasedDerivationPatterns.PluralPatterns);
                     }
                     break;
                 }

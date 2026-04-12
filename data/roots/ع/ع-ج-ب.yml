@@ -60,6 +60,19 @@ root:
               text:
                 - pride
 
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - please, appeal to
+
     - form: 4
       type: verb
       derived:
@@ -72,6 +85,7 @@ root:
               source-page: 691
               text:
                 - admiration (ب for)
+
         - derivation: active-participle
           type: adjective
           gender: male
@@ -81,6 +95,7 @@ root:
               source-page: 691
               text:
                 - causing admiration, admirable
+
         - derivation: passive-participle
           type: noun
           gender: male

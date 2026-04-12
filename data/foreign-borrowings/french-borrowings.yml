@@ -57,3 +57,20 @@ words:
     derived:
       - derivation: plural
         text: كَوَادِر
+
+  - text: كُولِيس
+    type: noun
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        source-page: 993
+        text:
+          - side, scene, coulisse, backdrop
+        usage:
+          - text: وراء الكواليس
+            translation: behind the scenes, backstage (also fig.)
+            type: example
+    derived:
+      - derivation: plural
+        text: كَوَالِيس

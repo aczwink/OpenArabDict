@@ -26,6 +26,15 @@ root:
           text:
             - to freeze, become frozen, turn into ice, freeze up, become icebound
             - to freeze to death
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 158
+              text:
+                - frozen, icy
 
     - gender: male
       text: جَمَاد

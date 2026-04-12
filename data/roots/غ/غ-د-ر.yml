@@ -55,6 +55,9 @@ root:
           source-page: 780
           text:
             - to leave (ه ,ه s.o., s.th.; ه إلى a place for), depart (ه إلى from a place to)
+      derived:
+        - derivation: verbal-noun
+          text: مُغَادَرَة
 
     - gender: male
       text: غَدِير

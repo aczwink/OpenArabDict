@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,10 +18,17 @@ root:
   radicals: ف-ي-ض
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 861
+          text:
+            - to overflow, flow over, run over
       derived:
         - text: فَيَضَان
           derivation: verbal-noun

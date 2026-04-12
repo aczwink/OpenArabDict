@@ -26,6 +26,17 @@ root:
           text:
             - to refuse, deny (على ه s.th. to s.o.), dispute, contest (ه على s.th. of s.o.)
 
+    - form: 5
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1170
+              text:
+                - disguise, masquerade
+
     - form: 10
       type: verb
       translations:

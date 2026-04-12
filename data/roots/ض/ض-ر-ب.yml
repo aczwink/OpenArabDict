@@ -23,12 +23,20 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
           source-page: 629
           text:
             - to beat, strike, hit (ه s.o., ه s.th., ب with; ب على with s.th. on; ه على s.o. on)
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - hit, beat
+            - multiply
       derived:
         - text: مَضْرِب
           derivation: meaning-related

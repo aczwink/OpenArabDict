@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
           source-page: 475
           text:
             - to steal, pilfer, filch (من ه or ه ه from s.o. s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - steal
       derived:
         - text: سَرِقَة
           derivation: verbal-noun

@@ -37,9 +37,19 @@ root:
                     - issue, effect, result, consequence
 
     - type: verb
-      dialect: msa
       form: 3
       derived:
+        - derivation: verbal-noun
+          text: عِقَاب
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 733
+              text:
+                - infliction of punishment, punishment
+                - penalty
+
         - text: عُقُوبَة
           derivation: meaning-related
           type: noun

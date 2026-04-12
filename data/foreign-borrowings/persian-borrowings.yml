@@ -37,6 +37,18 @@ words:
         text:
           - program, plan, schedule
 
+  - text: زِنْزَانَة
+    type: noun
+    translations:
+      - dialect: eg
+        source: hw4
+        source-page: 445
+        text:
+          - prison cell
+    derived:
+      - derivation: plural
+        text: زَنَازِين
+
   - text: سِرْوَال
     type: noun
     translations:

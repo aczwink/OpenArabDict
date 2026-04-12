@@ -47,6 +47,7 @@ root:
               source-page: 204
               text:
                 - sensation, perception, feeling, sentiment
+
         - text: حِسّ
           derivation: meaning-related
           type: noun
@@ -57,6 +58,20 @@ root:
               source-page: 204
               text:
                 - feeling, sentiment
+
+        - derivation: meaning-related
+          text: حَاسَّة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 205
+              text:
+                - sensation
+                - sense
+          derived:
+            - derivation: plural
+              text: حَوَاسّ
 
     - form: 2
       type: verb

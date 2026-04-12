@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -34,3 +34,12 @@ root:
               source-page: 35
               text:
                 - hope, expectation (في of s.th., also ب)
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 35
+          text:
+            - to look attentively (ه ,ه at s.o. or s.th.), regard, contemplate (في ,ه s.th.)

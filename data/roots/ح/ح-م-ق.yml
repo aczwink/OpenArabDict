@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -27,10 +27,12 @@ root:
         - text: أَحْمَق
           derivation: meaning-related
           type: adjective
-          gender: male
           translations:
             - dialect: msa
               source: hw4
               source-page: 240
               text:
                 - dumb, stupid, silly, foolish, fatuous
+          derived:
+            - derivation: feminine
+              text: حَمْقَاء

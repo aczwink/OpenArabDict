@@ -36,24 +36,36 @@ root:
           text:
             - to kill
       derived:
-        - text: قَتَّال
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - murderous, deadly, lethal
         - text: قَتِيل
           derivation: meaning-related
           type: adjective
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 870
               text:
                 - killed
+
+        - text: قَتَّال
+          derivation: meaning-related
+          type: adjective
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 871
+              text:
+                - murderous, deadly, lethal
+
+        - derivation: active-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 871
+              text:
+                - killer, manslayer
+                - murderer, assassin
 
     - type: verb
       form: 3

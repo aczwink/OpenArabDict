@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -66,3 +66,15 @@ root:
                         - |-
                           1. sentimentality, sentimentalism
                           2. emotionalism, emotionality
+
+    - form: 6
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 726
+              text:
+                - mutual affection, sympathy

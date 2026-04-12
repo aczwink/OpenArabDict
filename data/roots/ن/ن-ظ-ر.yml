@@ -109,6 +109,7 @@ root:
               text:
                 - quarrel, argument, altercation, debate, dispute, discussion,
                   controversy
+
     - type: verb
       form: 8
       translations:
@@ -117,3 +118,11 @@ root:
           source-page: 1144
           text:
             - to wait (ه for s.o.), expect (ه ,ه s.o., s.th.), await, anticipate (ه s.th.)
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1146
+              text:
+                - waiting, wait

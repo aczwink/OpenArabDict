@@ -18,10 +18,12 @@ root:
   radicals: ك-ر-م
   words:
     - type: verb
-      dialect: msa
       form:
+        stative: true
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -35,7 +37,6 @@ root:
         - text: كَرْم
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
@@ -49,32 +50,28 @@ root:
 
         - text: كَرَم
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 962
               text:
-                - high-mindedness, noble-mindedness, nobleheartedness,
-                  generosity, magnanimity
+                - high-mindedness, noble-mindedness, nobleheartedness, generosity, magnanimity
+
         - text: كَرَامَة
           derivation: verbal-noun
-          type: noun
-          gender: female
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=975
+              source-page: 962
               text:
                 - nobility
-        - text: كَرِيم
-          derivation: meaning-related
+
+        - derivation: active-participle
           type: adjective
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=975
+              source-page: 962
               text:
                 - generous, liberal, munificent, hospitable, beneficent
                 - precious, valuable, costly

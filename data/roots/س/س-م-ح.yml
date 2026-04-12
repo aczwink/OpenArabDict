@@ -50,3 +50,15 @@ root:
           source-page: 499
           text:
             - to show o.s. tolerant (ه with s.o., في or ب in), treat kindly, with indulgence (في or ه ب s.o. in the matter of), forgive (في or ه ب s.o. s.th.)
+
+    - form: 6
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 500
+              text:
+                - indulgence, forbearance, leniency, tolerance

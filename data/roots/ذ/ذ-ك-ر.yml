@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
           source-page: 358
           text:
             - to remember, hear in mind (ه s.th.), think (ه of)
+        - dialect: lb
+          source: lav
+          source-page: 119
+          text:
+            - mention
       derived:
         - derivation: meaning-related
           gender: female

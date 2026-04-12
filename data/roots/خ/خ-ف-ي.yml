@@ -74,3 +74,12 @@ root:
           text:
             - to hide, keep o.s. out of view
             - to disappear, vanish
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 292
+              text:
+                - disappearance

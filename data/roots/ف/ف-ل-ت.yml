@@ -30,6 +30,18 @@ root:
             - to escape (من s.o., s.th.; from), slip away, get away (من from s.o., from s.th.)
             - to let (ه ,ه s.o., s.th.) escape or slip away or get away, let loose, free, release, liberate, set free, set at liberty (ه ,ه s.o., s.th.)
 
+    - form: 4
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 849
+              text:
+                - escape
+
     - form: 7
       type: verb
       translations:

@@ -16,17 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictGender, OpenArabDictRoot, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictParentType, OpenArabDictWordParent, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
 import { TreeTrace } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
-import { CreateVerbFromOADVerb } from "@aczwink/openarabdict-openarabicconjugation-bridge";
-import { DialectType } from "@aczwink/openarabicconjugation";
-import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
-
-export function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
-{
-    return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
-}
+import { CreateVerbFromOADVerb, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
+import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
 
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
 {
@@ -47,14 +44,57 @@ export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
     return root;
 }
 
-export function _TODO_MapGender(gender: OpenArabDictGender): Gender //TODO: use bridge instead
+function GenerateAllPossibleTextsFromDerivationForVerb(parent: OpenArabDictWordParent, builder: DBBuilder)
 {
-    switch(gender)
+    const conjugator = new Conjugator;
+
+    const verb = builder.GetWord(parent.id);
+    if(verb.type !== OpenArabDictWordType.Verb)
+        throw new Error("Id error!!!");
+    const root = builder.GetRoot(verb.rootId);
+        
+    const verbInstance = CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
+
+    switch(parent.type)
     {
-        case OpenArabDictGender.Female:
-            return Gender.Female;
-        case OpenArabDictGender.FemaleOrMale:
-        case OpenArabDictGender.Male:
-            return Gender.Male;
+        case OpenArabDictParentType.CharacteristicNoun:
+            return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.CharacteristicNoun);
+        case OpenArabDictParentType.NounOfPlace:
+            //TODO: fix this
+            return undefined;
+            //return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.NounOfPlace);
+        case OpenArabDictParentType.ToolNoun:
+            return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ToolNouns);
     }
+}
+
+export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictWordParent, builder: DBBuilder)
+{
+    switch(parent.type)
+    {
+        case OpenArabDictParentType.CharacteristicNoun:
+        case OpenArabDictParentType.NounOfPlace:
+        case OpenArabDictParentType.ToolNoun:
+            return GenerateAllPossibleTextsFromDerivationForVerb(parent, builder);
+        case OpenArabDictParentType.Plural:
+            {
+                const parentWord = builder.GetWord(parent.id);
+                const hasGender = (parentWord.type !== OpenArabDictWordType.Adjective) && (parentWord.type !== OpenArabDictWordType.Noun) && (parentWord.type !== OpenArabDictWordType.Numeral) && (parentWord.type !== OpenArabDictWordType.Pronoun);
+                if(hasGender)
+                    throw new Error("Singulars do have to have a gender: " + parentWord.type);
+
+                const conjugator = new Conjugator;
+
+                const parsed = ParseVocalizedText(parentWord.text);
+                const generated = conjugator.DeriveSoundAdjectiveOrNoun(parsed, Mapping.MapGender(parentWord.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
+
+                //TODO: fix this                
+                /*return [
+                    generated,
+                    ...conjugator.DeriveFromNoun(parsed, TargetNounBasedDerivationPatterns.PluralPatterns)
+                ];*/
+            }
+    }
+
+    return undefined;
 }

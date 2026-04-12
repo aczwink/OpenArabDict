@@ -73,6 +73,7 @@ root:
           source: hw4
           source-page: 205
           text:
+            - to call (ه s.o.) to account, ask (ه s.o.) for an accounting
             - to hold (ه s.o.) responsible, make (ه s.o.) answerable
       derived:
         - derivation: verbal-noun

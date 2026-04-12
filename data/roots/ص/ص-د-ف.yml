@@ -18,13 +18,24 @@ root:
   radicals: ص-د-ف
   words:
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to fall (ه on a given date)
+      derived:
+        - derivation: verbal-noun
+          text: مُصَادَفَة
+          derived:
+            - derivation: adverbial-accusative
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 594
+                  text:
+                    - by chance, by coincidence, accidentally
 
     - type: verb
       dialect: msa

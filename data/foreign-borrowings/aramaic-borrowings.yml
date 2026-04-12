@@ -23,6 +23,9 @@ words:
         source-page: 118
         text:
           - dragon
+    derived:
+      - derivation: plural
+        text: تَنَانِين
 
   - text: قَرْقَف
     type: noun

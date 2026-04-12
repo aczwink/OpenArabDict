@@ -25,7 +25,7 @@ root:
       type: verb
       derived:
         - derivation: tool-noun
-          text: مِنْشَفَة #TODO: is this redundant?
+          text: مِنْشَفَة
           translations:
             - dialect: msa
               source: hw4

@@ -18,16 +18,24 @@ root:
   radicals: ط-ل-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aiiuu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to order, demand (من ه s.th. from), call (ه for s.th., من from),
               call in (ه s.th., من from)
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - request, order
       derived:
         - text: طَلَب
           derivation: verbal-noun
@@ -82,17 +90,6 @@ root:
               type: noun
               gender: male
               translations: []
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: aiiuu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 57
-              text:
-                - to request
 
     - type: verb
       form: 3

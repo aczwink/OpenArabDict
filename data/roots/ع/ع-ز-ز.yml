@@ -32,6 +32,25 @@ root:
             - to be or become rare, scarce, be scarcely to be found
             - to be hard, difficult (على for s.o.)
       derived:
+        - text: عِزّ
+          derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 713
+              text:
+                - might, power, strength
+                - honor, glory
+
+        - derivation: verbal-noun
+          text: عِزَّة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 713
+              text:
+                - pride
+
         - text: عَزِيز
           derivation: meaning-related
           type: noun
@@ -50,17 +69,6 @@ root:
               derivation: plural
               type: noun
               gender: male
-        - text: عِزّ
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 713
-              text:
-                - might, power, strength
-                - honor, glory
 
     - type: verb
       dialect: msa

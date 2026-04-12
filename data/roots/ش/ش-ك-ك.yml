@@ -18,16 +18,18 @@ root:
   radicals: ش-ك-ك
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=575
+          source-page: 562
           text:
             - to doubt (ب or في s.o., s.th.)
+            - to be skeptical
       derived:
         - text: شَكّ
           derivation: verbal-noun

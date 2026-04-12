@@ -18,16 +18,18 @@ root:
   radicals: ق-ط-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 906
           text:
-            - to ford (ه a river), cross (ه a river, an ocean), traverse (ه a
-              country), pass through or across s.th. (ه)
+            - to cut (ه s.th.)
+            - to ford (ه a river), cross (ه a river, an ocean), traverse (ه a country), pass through or across s.th. (ه)
       derived:
         - text: قَطْع
           derivation: verbal-noun

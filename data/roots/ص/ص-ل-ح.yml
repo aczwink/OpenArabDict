@@ -64,13 +64,13 @@ root:
             - to mend, improve, ameliorate, fix, repair (ه s.th.)
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 609
           text:
-            - to make peace
+            - to make peace, become reconciled, make up, reach a compromise or settlement (ه with s.o.)
 
     - type: verb
       form: 4

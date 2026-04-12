@@ -26,3 +26,11 @@ root:
           source-page: 385
           text:
             - to relax, become relaxed, unbend
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 385
+              text:
+                - relaxation

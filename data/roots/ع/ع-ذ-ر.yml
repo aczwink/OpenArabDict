@@ -18,15 +18,23 @@ root:
   radicals: ع-ذ-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to excuse
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - excuse
       derived:
         - text: عُذْر
           derivation: verbal-noun

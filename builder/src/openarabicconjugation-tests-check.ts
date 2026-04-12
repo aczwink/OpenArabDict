@@ -471,6 +471,19 @@ export async function CheckWords(doc: OpenArabDictDocument)
             }
         }
 
+        //test: arb/specially_irregular/special_h-y-w_stem2.js
+        if(isActiveParticiple || isPassiveParticiple)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+            if((verb.form.stem === 2) && (root.radicals === "حيو"))
+            {
+                console.log("FOUND3054", word);
+            }
+        }
+
         //test: arb/specially_irregular/special_r-a-y.js
         if(isVerbalNoun)
         {

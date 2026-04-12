@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,8 +17,26 @@
 root:
   radicals: ح-ت-م
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: حَتْم
+          derived:
+            - derivation: adverbial-accusative
+              translations:
+                - complete: true
+                  dialect: msa
+                  source: hw4
+                  source-page: 183
+                  text:
+                    - decidedly, definitely, necessarily, inevitably
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
