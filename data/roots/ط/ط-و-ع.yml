@@ -35,6 +35,25 @@ root:
               text:
                 - voluntariness, spontaneity (in connection with a legally relevant action, esp. a delict; Isl. Law)
 
+    - form: 3
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 670
+          text:
+            - to comply with or accede to s.o.'s (ه) wishes (على or في in, with regard to), yield, submit, be obedient (ه to s.o., على or في in), obey (ه s.o., على or في in)
+
+    - form: 4
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 670
+          text:
+            - to obey, follow (ه ,ه s.o., s.th.), be obedient, submit, yield (ه ,ه to s.o., to s.th.), comply (ه ,ه with s.o.'s wishes, with s.th.), accede (ه ,ه to s.o.'s wishes to s.th.)
+
     - form: 5
       type: verb
       derived:

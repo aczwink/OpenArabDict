@@ -18,6 +18,19 @@ root:
   radicals: ك-س-ر
   words:
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: aisu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - break (tr.)
+
+    - type: verb
       form: 2
       translations: []
       derived:

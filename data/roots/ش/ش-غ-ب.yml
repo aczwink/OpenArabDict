@@ -26,9 +26,7 @@ root:
             parameters: ia
       type: verb
       derived:
-        #- derivation: verbal-noun
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: verbal-noun
           text: شَغَب
           translations:
             - dialect: msa

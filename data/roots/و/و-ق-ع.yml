@@ -57,7 +57,7 @@ root:
               type: adjective
               gender: female
 
-        - text: مَوْقِع #TODO is this needed?
+        - text: مَوْقِع
           derivation: noun-of-place
           translations:
             - dialect: msa

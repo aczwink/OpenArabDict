@@ -94,4 +94,4 @@ root:
             - obstacle
       derived:
         - derivation: plural
-          text: عَقَبَات #TODO: feminine plural
+          text: عَقَبَات

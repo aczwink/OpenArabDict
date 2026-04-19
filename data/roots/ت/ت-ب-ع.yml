@@ -68,8 +68,16 @@ root:
             - to follow (ه ,ه s.o., s.th.; also = to keep one's mind or eyes on, e.g., on a development)
             - to continue (ه s.th.; سيره on one's way), go on (ه with or in)
 
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 108
+          text:
+            - to pursue, trail, track (ه ,ه s.o., s.th.)
+
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa

@@ -25,3 +25,6 @@ root:
           source-page: 226
           text:
             - field (also fig. = domain)
+      derived:
+        - derivation: plural
+          text: حُقُول

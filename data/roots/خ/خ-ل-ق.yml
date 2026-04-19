@@ -73,7 +73,7 @@ root:
               text: أَخْلَاق
               derived:
                 - derivation: nisba
-                  text: أَخْلَاقِيّ #TODO: redundant
+                  text: أَخْلَاقِيّ
                   translations:
                     - dialect: msa
                       source: hw4

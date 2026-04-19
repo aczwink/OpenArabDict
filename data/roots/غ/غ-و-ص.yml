@@ -28,4 +28,4 @@ root:
             - submarine
       derived:
         - derivation: plural
-          text: غَوَّاصَات #TODO: implicit
+          text: غَوَّاصَات

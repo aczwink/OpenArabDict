@@ -68,6 +68,9 @@
                     },
                     {
                         "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                    },
+                    {
+                        "$ref": "../translations/OpenArabDictWiktionaryTranslationEntry.json"
                     }
                 ]
             }

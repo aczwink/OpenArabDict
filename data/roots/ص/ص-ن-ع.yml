@@ -43,7 +43,7 @@ root:
                 - handicraft
 
         - derivation: noun-of-place
-          text: مَصْنَع #TODO: this is implicit
+          text: مَصْنَع
           translations:
             - dialect: msa
               source: hw4

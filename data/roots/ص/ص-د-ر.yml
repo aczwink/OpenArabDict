@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,21 +18,31 @@ root:
   radicals: ص-د-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      alias: ai
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ausu
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=604
+          source-page: 591
           text:
             - to come out, be issued, be promulgated (order, ordinance, law)
             - to appear, be published (book)
-          examples:
+          usage:
             - text: صدر له كتاب
               translation: a book by him has been published
+              type: example
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - issue
       derived:
         - text: صَدْر
           derivation: meaning-related

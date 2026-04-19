@@ -31,7 +31,7 @@ root:
             - to roam freely
       derived:
         - derivation: noun-of-place
-          text: مَسْرَح #TODO is this needed?
+          text: مَسْرَح
           translations:
             - dialect: msa
               source: hw4
@@ -39,7 +39,7 @@ root:
               text:
                 - stage, theater
           derived:
-            - text: مَسْرَحِيّ #TODO clear no?!
+            - text: مَسْرَحِيّ
               derivation: nisba
               translations:
                 - dialect: msa

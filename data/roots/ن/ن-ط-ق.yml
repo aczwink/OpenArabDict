@@ -18,15 +18,23 @@ root:
   radicals: ن-ط-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to articulate
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - pronounce
 
     - text: مِنْطَقَة
       type: noun

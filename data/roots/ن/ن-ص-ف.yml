@@ -36,8 +36,19 @@ root:
                 - justice, equity, fairness
                 - just treatment
 
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1139
+              text:
+                - equitable, fair, just
+          derived:
+            - derivation: plural
+              text: مُنْصِفُون
+
     - type: verb
-      dialect: msa
       form: 8
       derived:
         - derivation: passive-participle

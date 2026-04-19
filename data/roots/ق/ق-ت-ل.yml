@@ -32,9 +32,15 @@ root:
           text:
             - to kill, slay, murder, assassinate (ه s.o.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 72
+          source: lav
+          source-page: 72
           text:
             - to kill
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - fight
       derived:
         - text: قَتِيل
           derivation: meaning-related

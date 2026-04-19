@@ -32,6 +32,15 @@ root:
           text:
             - plant (a seed), grow (a plant)
       derived:
+        - derivation: verbal-noun
+          text: زَرْع
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 436
+              text:
+                - young standing crop, green crop
+
         - text: مَزْرَعَة
           derivation: noun-of-place
           translations:

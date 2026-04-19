@@ -17,6 +17,20 @@
 root:
   radicals: ب-س-ط
   words:
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ausu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - display
+            - spread out
+
     - form:
         stem: 1
         variants:

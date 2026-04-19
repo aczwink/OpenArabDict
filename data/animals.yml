@@ -57,6 +57,15 @@ words:
         text:
           - dolphin
 
+  - text: سِنْجَاب
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 506
+        text:
+          - gray squirrel
+
   - text: صَقْر
     type: noun
     translations:

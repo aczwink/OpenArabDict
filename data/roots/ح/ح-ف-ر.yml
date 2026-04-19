@@ -22,7 +22,15 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: ausu
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - dig
       derived:
         - derivation: meaning-related
           gender: female

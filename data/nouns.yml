@@ -85,6 +85,19 @@ words:
       - derivation: plural
         text: شَوَاطِئ
 
+  - text: عُنْقُود 
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 761
+        text:
+          - cluster, bunch
+          - bunch of grapes
+    derived:
+      - derivation: plural
+        text: عَنَاقِيد
+
   - text: مَزِيّة
     type: noun
     gender: female

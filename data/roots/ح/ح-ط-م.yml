@@ -19,17 +19,21 @@ root:
   words:
     - type: verb
       form: 2
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 218
+          text:
+            - to shatter, smash, wreck, demolish (ه s.th.)
       derived:
         - text: تَحْطِيم
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 218
               text:
-                - smashing, shattering, wrecking, breaking, demolition,
-                  destruction, disruption
+                - smashing, shattering, wrecking, breaking, demolition, destruction, disruption
 
     - form: 5
       type: verb

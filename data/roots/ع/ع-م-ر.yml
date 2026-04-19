@@ -112,7 +112,7 @@ root:
                   3. colonial rule
 
         - derivation: noun-of-place
-          text: مُسْتَعْمَرَة #TODO: should this not be clear?
+          text: مُسْتَعْمَرَة
           translations:
             - dialect: msa
               source: hw4

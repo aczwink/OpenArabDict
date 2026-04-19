@@ -33,6 +33,7 @@ root:
               source: hw4-free-text
               text:
                 - adze
+
     - type: verb
       dialect: msa
       form:
@@ -44,15 +45,23 @@ root:
           text:
             - to arrive (ه at a place)
       derived:
-        - text: قَادِم
-          derivation: meaning-related
+        - derivation: active-participle
           type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 878
               text:
                 - one arriving, arriver, arrival, newcomer
+
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 878
+              text:
+                - coming, next (e.g., year, month, and the like)
 
     - type: verb
       form: 2

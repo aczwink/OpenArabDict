@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -44,15 +44,22 @@ root:
                   translation: for fear (من of), fearing (على for)
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - complete: true
           dialect: msa
           source: hw4
-          url: https://ejtaal.net/aa/#hw4=319
+          source-page: 306
           text:
             - to frighten, scare, alarm, fill with fear (ه s.o.)
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 306
+              text:
+                - intimidation, bullying, cowing, frightening, scaring
 
     - type: verb
       dialect: msa

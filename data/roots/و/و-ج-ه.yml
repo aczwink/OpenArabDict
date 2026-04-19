@@ -18,20 +18,27 @@ root:
   radicals: و-ج-ه
   words:
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
       derived:
         - text: تَوْجِيه
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
+              source-page: 1235
               text:
+                - directing, guiding, guidance
                 - directives
-                - guiding rules, guidelines
+          derived:
+            - derivation: plural
+              text: تَوْجِيهَات
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1235
+                  text:
+                    - guiding rules, guidelines
+
         - text: جِهَة
           derivation: meaning-related
           type: noun

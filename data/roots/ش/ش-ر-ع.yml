@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,17 +18,20 @@ root:
   radicals: ش-ر-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 544
+          text:
+            - to introduce, enact (ه laws), prescribe, give (ل ه to s.o. laws), make laws (ه) for s.o. (ل)
       derived:
         - text: شَرْع
           derivation: verbal-noun
-          type: noun
-          gender: male
-          translations: []
           derived:
             - text: شَرْعِيَ
               derivation: nisba
@@ -49,15 +52,18 @@ root:
                       source: hw4-free-text
                       text:
                         - lawfulness, legality, legitimacy, rightfulness
+
         - text: مَشْرُوع
           derivation: passive-participle
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 545
               text:
                 - project
+                
     - text: شَارِع
       type: noun
       gender: male

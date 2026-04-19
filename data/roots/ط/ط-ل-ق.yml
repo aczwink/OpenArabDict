@@ -33,8 +33,6 @@ root:
               type: meaning-in-context
       derived:
         - derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
@@ -51,8 +49,16 @@ root:
                   translation: cease fire
                   type: meaning-in-context
 
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 664
+              text:
+                - unlimited, unrestricted, absolute
+
     - type: verb
-      dialect: msa
       form: 7
       translations:
         - dialect: msa

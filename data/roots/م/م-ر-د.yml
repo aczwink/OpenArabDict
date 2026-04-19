@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,6 @@ root:
   radicals: م-ر-د
   words:
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -28,11 +27,11 @@ root:
             - to be refractory, recalcitrant
       derived:
         - derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
-            - dialect: msa
+            - complete: true
+              dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=1072
+              source-page: 1059
               text:
                 - refractoriness, recalcitrance, disobedience, insubordination
+                - uprising, insurrection, mutiny, revolt, rebellion

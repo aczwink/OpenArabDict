@@ -18,10 +18,13 @@ root:
   radicals: ن-ق-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: aisu
       translations:
         - dialect: msa
           source: hw4
@@ -29,6 +32,13 @@ root:
           text:
             - to remove, take away, carry away, carry, transport (ه الى s.th. to)
             - to transfer (ه an official, إلى to a place, to a post)
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - move (houses)
+            - copy
+            - cheat (in class)
       derived:
         - text: نَقْل
           derivation: verbal-noun

@@ -18,16 +18,17 @@ root:
   radicals: و-ث-ق
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1228
           text:
-            - to play one's confidence, put faith (ب in), rely, depend(ب on),
-              trust (ب in; من ان that), be confident (ب of; من ان that)
+            - to play one's confidence, put faith (ب in), rely, depend(ب on), trust (ب in; من ان that), be confident (ب of; من ان that)
       derived:
         - text: ثِقَة
           derivation: verbal-noun

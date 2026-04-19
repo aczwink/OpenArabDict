@@ -76,11 +76,12 @@ root:
                 - shame, diffidence, bashfulness, timidity
                 - shyness
 
-    - form: 2
+    - form:
+        stem: 2
+        type: irregular
       type: verb
       derived:
         - derivation: verbal-noun
-          #text: تَحِيَّة #TODO
           translations:
             - dialect: msa
               source: hw4

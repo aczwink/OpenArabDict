@@ -24,6 +24,8 @@ root:
             parameters: ai
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ausu
       type: verb
       translations:
         - dialect: msa
@@ -31,3 +33,8 @@ root:
           source-page: 211
           text:
             - to harvest, reap (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - harvest

@@ -34,6 +34,19 @@ root:
             - to dazzle (اللبصر the eyes)
 
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ausu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 120
+          text:
+            - kidnap, abduct
+
+    - type: verb
       form: 8
       translations:
         - dialect: msa

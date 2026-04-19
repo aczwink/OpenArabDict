@@ -29,6 +29,9 @@
                     "const": "ii"
                 },
                 {
+                    "const": "irregular_sa3a"
+                },
+                {
                     "const": "ss",
                     "description": "For quadriliteral verbs"
                 },

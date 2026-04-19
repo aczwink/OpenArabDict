@@ -21,10 +21,13 @@ root:
         stem: 1
         variants:
           - dialect: msa
-            parameters: ai #TODO: seems to be aa?!
+            parameters: irregular_sa3a
+            type: irregular
       type: verb
       derived:
-        - derivation: verbal-noun
+        #- derivation: verbal-noun
+        - derivation: meaning-related #TODO
+          type: noun 
           text: سَعْي
           translations:
             - dialect: msa

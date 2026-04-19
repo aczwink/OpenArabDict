@@ -80,7 +80,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if(root?.radicals.startsWith("و") && (verb.form.stem === 4))
             {
-                console.log("FOUND10", word);
+                console.log("FOUND10 assimilated_waw/stem4", word);
             }
         }
 
@@ -183,33 +183,6 @@ export async function CheckWords(doc: OpenArabDictDocument)
             }
         }
 
-        //test: arb/doubly_weak/r2ya_r3hamza.js
-        if(isVerbalNoun)
-        {
-            const verbId = word.parent[0].id;
-            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
-            const root = doc.roots.find(x => x.id === verb.rootId);
-            const middleYa = (root?.radicals[1] === "ي");
-            const endHamza = root?.radicals.endsWith("ء");
-
-            if(middleYa && endHamza)
-            {
-                console.log("FOUND8", word);
-            }
-        }
-
-        //test: arb/hamza_on_r1/stem8.js
-        if(word.type === OpenArabDictWordType.Verb)
-        {
-            const root = doc.roots.find(x => x.id === word.rootId);
-            const isHr1 = (root?.radicals.startsWith("ء"));
-
-            if(isHr1 && (word.form.stem === 8) && (root?.radicals !== "ءخذ"))
-            {
-                console.log("FOUND9", word, root);
-            }
-        }
-
         //test: arb/hollow/stem1_ia.js
         if(isPassiveParticiple)
         {
@@ -220,21 +193,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if(isHollow && (verb.form.stem === 1) && (ExtractParameters(verb) === "ia"))
             {
-                console.log("FOUND10", word);
-            }
-        }
-
-        //test: arb/hollow/stem7.js
-        if(isActiveParticiple)
-        {
-            const verbId = word.parent[0].id;
-            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
-            const root = doc.roots.find(x => x.id === verb.rootId);
-            const isHollow = root?.radicals[1] === Letter.Waw;
-
-            if(isHollow && (verb.form.stem === 7))
-            {
-                console.log("FOUND10", word);
+                console.log("FOUND10 hollow/stem1_ia", word);
             }
         }
 
@@ -248,7 +207,7 @@ export async function CheckWords(doc: OpenArabDictDocument)
 
             if(isQuad && (verb.form.stem === 4))
             {
-                console.log("FOUND10", word);
+                console.log("FOUND10 quadriliteral/stem4", word);
             }
         }
 
