@@ -32,6 +32,27 @@ root:
           text:
             - manufacture
       derived:
+        #- derivation: verbal-noun
+        - derivation: meaning-related
+          type: noun #TODO
+          text: صُنْع
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 614
+              text:
+                - production, manufacture, fabrication, making, design, make, workmanship
+
+        - derivation: meaning-related
+          type: noun
+          text: صَنْعَة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 615
+              text:
+                - work, workmanship, making, manufacture, fabrication
+
         - text: صِنَاعَة
           derivation: meaning-related
           type: noun

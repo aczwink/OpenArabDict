@@ -18,12 +18,14 @@ root:
   radicals: ن-ط-ر
   words:
     - type: verb
-      dialect: lb
       form:
         stem: 1
-        parameters: ausu
+        variants:
+          - dialect: lb
+            parameters: ausu
       translations:
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 88
+          source: lav
+          source-page: 89
           text:
             - to wait

@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4
           source-page: 214
           text:
             - to attend (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - watch, attend
       derived:
         - text: حُضُور
           derivation: verbal-noun
@@ -88,17 +95,6 @@ root:
               type: adjective
               gender: female
               translations: []
-
-    - type: verb
-      dialect: lb
-      form:
-        stem: 1
-        parameters: ia
-      translations:
-        - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 24
-          text:
-            - to watch
 
     - type: verb
       dialect: msa

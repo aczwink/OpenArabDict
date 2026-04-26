@@ -30,14 +30,23 @@ root:
           text:
             - to grant, accord (ل or ه ه s.th. to s.o.)
       derived:
-        - text: مَوْهِبَة⁩
+        - text: مَوْهِبَة
           derivation: meaning-related
           type: noun
-          gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1291
               text:
-                - |-
-                  1. gift
-                  2. talent
+                - gift
+                - talent
+
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1291
+              text:
+                - gifted
+                - talented

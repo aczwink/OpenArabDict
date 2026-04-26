@@ -18,11 +18,20 @@ root:
   radicals: ح-ف-ظ
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - save (file)
+            - memorize
       derived:
         - text: مَحْفُوظ
           derivation: passive-participle

@@ -57,12 +57,11 @@ root:
                 - demonstration
 
     - type: verb
-      dialect: msa
       form: 4
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=695
+          source-page: 682
           text:
             - to make visible, make apparent, show, demonstrate, present, produce, bring to light, expose, disclose, divulge, reveal, manifest, announce, proclaim, make known, expound, set forth (ه s.th.)
 
@@ -96,6 +95,10 @@ root:
           source-page: 683
           text:
             - back
+          usage:
+            - text: بظهر الغيب
+              translation: behind s.o.'s back, insidiously, treacherously; secretly, stealthily, clandestinely
+              type: meaning-in-context
 
     - text: مَظْهَر
       type: noun

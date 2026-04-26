@@ -18,27 +18,32 @@ root:
   radicals: ف-ه-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 69
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to understand, comprehend, realize (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 69
+          text:
+            - to understand
       derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
+        - derivation: verbal-noun
+          text: فَهْم
           translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 69
+            - dialect: msa
+              source: hw4
+              source-page: 855
               text:
-                - to understand
+                - understanding
 
     - type: verb
       form: 6

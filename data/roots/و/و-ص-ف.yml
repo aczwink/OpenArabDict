@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,10 +18,13 @@ root:
   radicals: و-ص-ف
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          #- dialect: lb
+            #parameters: ausu #TODO
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -31,6 +34,11 @@ root:
 
               2. to attribute, ascribe (ب ه to s.o. a quality), credit (ب ه s.o.
               with), praise (ب ه s.o. for), say s.th. (ب) to s.o.'s (ه) credit
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - describe
       derived:
         - text: صِفَة
           derivation: meaning-related

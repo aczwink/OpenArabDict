@@ -18,15 +18,23 @@ root:
   radicals: ح-ز-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to be sad, grieved (ل or على at or because of)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - mourn
       derived:
         - text: حُزْن
           derivation: verbal-noun

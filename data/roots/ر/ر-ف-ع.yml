@@ -40,14 +40,15 @@ root:
           derivation: verbal-noun
 
     - type: verb
-      dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 405
+          text:
+            - to grow, increase, rise
       derived:
-        - text: اِرْتِفَاع
-          derivation: verbal-noun
-          type: noun
-          gender: male
+        - derivation: verbal-noun
           translations:
             - dialect: msa
               source: hw4-free-text

@@ -26,3 +26,12 @@ root:
           text:
             - to disturb (ه s.o.)
             - to trouble, inconvenience, molest, pester, harass (ه s.o.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 438
+              text:
+                - annoying, troublesome, irksome, inconvenient, unpleasant

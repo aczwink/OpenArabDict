@@ -27,7 +27,8 @@ root:
             parameters: aisu
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 568
           text:
             - to contain, comprise, comprehend, enclose (ه s.th.)
         - dialect: lb

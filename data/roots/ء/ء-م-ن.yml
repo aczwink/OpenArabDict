@@ -18,16 +18,30 @@ root:
   radicals: ء-م-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 35
           text:
-            - to be safe
+            - to be safe, feel safe (من or ه from)
       derived:
+        #- derivation: verbal-noun
+        - derivation: meaning-related
+          type: noun #TODO
+          text: أَمْن
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 35
+              text:
+                - safety
+
         - text: أَمَان
           derivation: verbal-noun
           type: noun
@@ -38,6 +52,7 @@ root:
               source-page: 35
               text:
                 - security, safety
+
         - text: آمِن
           derivation: active-participle
           type: adjective

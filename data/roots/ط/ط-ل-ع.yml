@@ -24,7 +24,7 @@ root:
           - dialect: msa
             parameters: au
           - dialect: lb
-            parameters: ia
+            parameters: ia #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 58
       translations:
         - dialect: msa
           source: hw4
@@ -36,9 +36,12 @@ root:
           text:
             - to go out, to exit
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 58
+          source: lav
+          source-page: 121
           text:
-            - to ascend
+            - go up
+            - ascend
+            - board
       derived:
         - derivation: verbal-noun
           text: طُلُوع
@@ -76,3 +79,13 @@ root:
               url: http://ejtaal.net/aa/#hw4=674
               text:
                 - exploration
+
+    - text: طَلْعَة
+      type: noun
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 661
+          text:
+            - look(s), appearance, aspect, outward appearance, guise

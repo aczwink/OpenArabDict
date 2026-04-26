@@ -17,9 +17,23 @@
 root:
   radicals: ك-ء-ب
   words:
-    - form: 4
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
       type: verb
       derived:
+        - derivation: verbal-noun
+          text: كَآبَة
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 944
+              text:
+                - sorrow, grief, distress, sadness, dejection, depression, gloom, melancholy
+
         - derivation: meaning-related
           text: كَئِب
           type: adjective
@@ -40,6 +54,9 @@ root:
               text:
                 - sad, dispirited, dejected, downcast, depressed, melancholy
 
+    - form: 4
+      type: verb
+
     - type: verb
       form: 8
       translations:
@@ -52,15 +69,14 @@ root:
             - to be gloomy
       derived:
         - derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - complete: true
               dialect: msa
-              source: free-text
-              url: https://en.wiktionary.org/wiki/%D8%A7%D9%83%D8%AA%D8%A6%D8%A7%D8%A8#Arabic
+              source: hw4
+              source-page: 944
               text:
-                - depression, despondency
+                - sorrow, grief, distress, sadness, dejection, depression, gloom, melancholy
+
         - derivation: active-participle
           type: adjective
           gender: male

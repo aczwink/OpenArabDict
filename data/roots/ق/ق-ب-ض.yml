@@ -18,11 +18,19 @@ root:
   radicals: ق-ب-ض
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: aa
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 71
+          text:
+            - to earn
       derived:
         - text: قَبْضَة
           derivation: meaning-related
@@ -41,13 +49,13 @@ root:
         stem: 1
         variants:
           - dialect: lb
-            parameters: aa
+            parameters: ausu
       translations:
         - dialect: lb
           source: lav
-          source-page: 71
+          source-page: 121
           text:
-            - to earn
+            - arrest على
             
     - text: قَبَضَاي
       type: noun

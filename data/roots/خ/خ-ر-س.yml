@@ -34,6 +34,7 @@ root:
             - to be dumb, mute
             - to become silent, keep silent, hold one's tongue
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; p. 121
+          source: lav
+          source-page: 121
           text:
             - be quiet, keep silent

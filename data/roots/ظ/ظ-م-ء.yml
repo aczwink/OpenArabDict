@@ -29,3 +29,12 @@ root:
           source-page: 681
           text:
             - to thirst, be thirsty
+      derived:
+        - derivation: verbal-noun
+          text: ظَمَأ
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 681
+              text:
+                - thrist

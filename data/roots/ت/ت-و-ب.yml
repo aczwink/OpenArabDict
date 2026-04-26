@@ -29,6 +29,25 @@ root:
           source-page: 119
           text:
             - to repent, be penitent, do penance
+      derived:
+        - derivation: verbal-noun
+          text: تَوْبَة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 119
+              text:
+                - repentance, penitence, contrition
+
+        - derivation: active-participle
+          type: noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 119
+              text:
+                - repentant, penitent, contrite
 
     - text: تَوَّاب
       type: adjective

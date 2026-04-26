@@ -29,6 +29,15 @@ root:
           source-page: 1218
           text:
             - to be or become easy (على for s.o.), be of little importance (على to)
+      derived:
+        - derivation: verbal-noun
+          text: هَوْن
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1218
+              text:
+                - ease, leisure, convenience, comfort
 
     - form: 4
       type: verb

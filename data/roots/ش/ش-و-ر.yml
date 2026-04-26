@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -36,30 +36,40 @@ root:
               source: hw4-free-text
               text:
                 - sign, motion, nod, wink, wave
+
     - type: verb
-      dialect: msa
       form: 5
       translations:
-        - dialect: lb
-          source: hw4-free-text
+        - complete: true
+          dialect: lb
+          source: hw4
+          source-page: 575
           text:
             - to walk
       derived:
         - text: مِشْوَار
           derivation: meaning-related
           type: noun
-          gender: female
           translations:
-            - dialect: lb
-              source: hw4-free-text
+            - dialect: southlevant
+              source: wiktionary
+              url: https://en.wiktionary.org/wiki/%D9%85%D8%B4%D9%88%D8%A7%D8%B1#South_Levantine_Arabic
               text:
-                - walk
+                - excursion, walk, errand
+
     - type: verb
-      form: 10
+      form:
+        stem: 10
+        valency: transitive
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 575
+          text:
+            - to ask for advice (ه s.o.), take counsel (ه with s.o.), consult (ه s.o.)
       derived:
         - derivation: verbal-noun
-          type: noun
-          gender: female
           translations:
             - dialect: msa
               source: hw4-free-text

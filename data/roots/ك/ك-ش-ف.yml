@@ -28,6 +28,15 @@ root:
           url: http://ejtaal.net/aa/#hw4=983
           text:
             - to reveal, disclose, uncover, expose, bare (ه or عن s.th.)
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 971
+              text:
+                - uncovering, revealing, etc.
 
     - type: verb
       dialect: msa

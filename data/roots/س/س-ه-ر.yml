@@ -23,12 +23,28 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to stay up at night, spend the night (على in or with some activity)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - stay up late
       derived:
+        - derivation: verbal-noun
+          text: سَهَر
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 509
+              text:
+                - wakefulness, vigil
+
         - derivation: active-participle
           type: adjective
           translations:

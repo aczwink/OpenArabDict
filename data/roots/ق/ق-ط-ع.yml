@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: aa
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,11 @@ root:
           text:
             - to cut (ه s.th.)
             - to ford (ه a river), cross (ه a river, an ocean), traverse (ه a country), pass through or across s.th. (ه)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - cross, pass
       derived:
         - text: قَطْع
           derivation: verbal-noun

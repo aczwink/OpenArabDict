@@ -18,10 +18,17 @@ root:
   radicals: ص-ب-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 585
+          text:
+            - to be patient, be forbearing, have patience, take patience, persevere
       derived:
         - text: صَبْر
           derivation: verbal-noun

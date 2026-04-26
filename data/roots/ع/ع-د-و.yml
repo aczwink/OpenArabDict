@@ -102,3 +102,12 @@ root:
       derived:
         - derivation: plural
           text: أَعْدَاء
+
+    - text: عُدْوَان
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 700
+          text:
+            - hostile action

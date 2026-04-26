@@ -92,7 +92,7 @@ root:
       translations:
         - dialect: msa
           source: hw4
-          url: http://ejtaal.net/aa/#hw4=686
+          source-page: 673
           text:
             - to make long or longer, lengthen, elongate, stretch out, extend, prolong, protract, draw out (ه or من s.th.)
             - to take too long, find no end

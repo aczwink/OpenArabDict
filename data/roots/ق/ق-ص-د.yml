@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: ausu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -30,6 +32,11 @@ root:
             - to seek, pursue (الى, ه s.th.), strive (الى, ه for), aspire (الى,
               ه to), intend, have in mind (الى, ه s.th.; من or ب ه .sth. with
               s.th. else)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - mean
       derived:
         - text: قَصْد
           derivation: verbal-noun

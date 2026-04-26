@@ -32,9 +32,11 @@ root:
           text:
             - to laugh (ب or من at, about, over)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 54
+          source: lav
+          source-page: 121
           text:
-            - to laugh
+            - laugh
+            - lie to, deceive على
       derived:
         - derivation: meaning-related
           text: ضَحُوك

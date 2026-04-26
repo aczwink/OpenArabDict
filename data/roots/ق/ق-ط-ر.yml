@@ -27,6 +27,17 @@ root:
             - to filter, filtrate (ه s.th.)
             - to distill (ه s.th.)
 
+    - text: قَطْر
+      type: noun
+      derived:
+        - derivation: singulative
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 906
+              text:
+                - drop (also as a medicine)
+
     - text: قِطَار
       type: noun
       gender: male

@@ -98,9 +98,13 @@ root:
 
     - text: مَدَار
       type: noun
-      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 346
           text:
-            - على مدار السنة throughout the year, all year round
+            - orbit (of a planet or satellite, حول around)
+          usage:
+            - text: على مدار السنة
+              translation: throughout the year, all year round
+              type: meaning-in-context

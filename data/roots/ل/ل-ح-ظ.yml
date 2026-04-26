@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -45,6 +45,15 @@ root:
                   source-page: 1008
                   text:
                     - moment, instant
+
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1009
+              text:
+                - clearly obserable, visible
                     
     - type: verb
       dialect: msa

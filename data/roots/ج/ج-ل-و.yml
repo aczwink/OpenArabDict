@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -36,6 +36,28 @@ root:
           source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 123
           text:
             - wash (dishes)
+
+    - form: 8
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 156
+          text:
+            - to regard, contemplate, observe (ه s.th.), look at (ه)
+
+    - text: مَجْلًى
+      type: noun
+      derived:
+        - derivation: plural
+          text: مَجَالٍ
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 157
+              text:
+                - manifestations
 
     - gender: female
       text: جَالِيَة

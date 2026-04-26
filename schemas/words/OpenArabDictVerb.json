@@ -80,6 +80,9 @@
                     },
                     {
                         "$ref": "../translations/OpenArabDictLevantineArabicVerbsTranslationEntry.json"
+                    },
+                    {
+                        "$ref": "../translations/OpenArabDictWiktionaryTranslationEntry.json"
                     }
                 ]
             }

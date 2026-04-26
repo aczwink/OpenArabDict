@@ -70,9 +70,13 @@ root:
                 - improvement, amelioration, betterment
 
     - type: verb
-      dialect: msa
       form: 4
-      translations: []
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 208
+          text:
+            - to do right, act well
       derived:
         - text: مُحْسِن
           derivation: active-participle

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -74,7 +74,16 @@ root:
 
     - text: كَوْن
       type: noun
-      gender: male
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 994
+          text:
+            - existence
+          usage:
+            - text: الكون
+              translation: the existent, the existing, reality; the world; the cosmos, the universe
+              type: meaning-in-context
       derived:
         - text: كَوْنِيّ
           derivation: nisba

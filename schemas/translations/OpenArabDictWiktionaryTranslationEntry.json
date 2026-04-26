@@ -8,7 +8,9 @@
         "dialect": {
             "type": "string",
             "enum": [
-                "eg"
+                "eg",
+                "msa",
+                "southlevant"
             ]
         },
         "source": {

@@ -168,6 +168,21 @@ export async function CheckWords(doc: OpenArabDictDocument)
             }
         }
 
+        //test: arb/doubly_weak/r1hamza_r3ya_stem4.js
+        if(isVerbalNoun)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId);
+            const startsWithHamza = (root?.radicals.startsWith("ء"));
+            const endsInYa = root?.radicals.endsWith("ي");
+
+            if(startsWithHamza && endsInYa && (verb.form.stem === 4))
+            {
+                console.log("FOUND7a", word);
+            }
+        }
+
         //test: arb/doubly_weak/r1waw_r3waworya_stem4.js
         if(isVerbalNoun)
         {
@@ -180,6 +195,58 @@ export async function CheckWords(doc: OpenArabDictDocument)
             if(startsWithWaw && isDefective && (verb.form.stem === 4))
             {
                 console.log("FOUND7", word);
+            }
+        }
+
+        //test: arb/doubly_weak/r1waw_r3ya_stem1_type3.js
+        if(isVerbalNoun)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+            if((verb.form.stem === 1) && (root?.radicals === "ولي"))
+            {
+                console.log("FOUND1718823894792asdnaskjfbkfs", word);
+            }
+        }
+
+        //test: arb/doubly_weak/r1waw_r3ya_stem5.js
+        if(isVerbalNoun)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+            if((verb.form.stem === 5) && (root?.radicals === "ولي"))
+            {
+                console.log("FOUND1718823894792", word);
+            }
+        }
+
+        //test: arb/doubly_weak/r1waw_r3ya_stem6.js
+        if(isVerbalNoun)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+            if((verb.form.stem === 6) && (root?.radicals === "ولي"))
+            {
+                console.log("FOUND1718823894792aihsd", word);
+            }
+        }
+
+        //test: arb/doubly_weak/r2waw_r3ya_stem6.js
+        if(isVerbalNoun)
+        {
+            const verbId = word.parent[0].id;
+            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
+            const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+            if((verb.form.stem === 6) && (root?.radicals === "سوي"))
+            {
+                console.log("FOUND1718823894792asdnasdhas", word);
             }
         }
 
@@ -333,19 +400,6 @@ export async function CheckWords(doc: OpenArabDictDocument)
             if((verb.form.stem === 8) && startsWithHamza)
             {
                 console.log("FOUND17188", word);
-            }
-        }
-
-        //test: arb/sound_but_weak_root/r1waw_r3ya_stem5.js
-        if(isVerbalNoun)
-        {
-            const verbId = word.parent[0].id;
-            const verb = doc.words.find(x => x.id === verbId) as OpenArabDictVerb;
-            const root = doc.roots.find(x => x.id === verb.rootId)!;
-
-            if((verb.form.stem === 5) && (root?.radicals === "ولي"))
-            {
-                console.log("FOUND1718823894792", word);
             }
         }
 

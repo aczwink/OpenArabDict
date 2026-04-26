@@ -70,6 +70,19 @@ root:
                   2. variety, diversity
 
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ausu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - turn (intr.), make a turn
+
+    - type: verb
       dialect: msa
       form: 2
       translations:
@@ -118,9 +131,8 @@ root:
           text:
             - to be or become separated, split, disunited, divided, scattered, dispersed, separate, part, divide, scatter, disperse, dissolve, break up
       derived:
-        #- derivation: noun-of-place #todo fix this
-        - derivation: passive-participle
-          type: noun #todo remove this
+        - derivation: noun-of-place
+          text: مُفْتَرَق
           translations:
             - dialect: msa
               source: hw4

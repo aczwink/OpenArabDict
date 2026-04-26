@@ -64,10 +64,17 @@ root:
       derived:
         - text: اِنْتِهَاء
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
               text:
                 - end, termination, completion, conclusion, close
+
+        - derivation: passive-participle
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1180
+              text:
+                - end

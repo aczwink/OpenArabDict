@@ -34,6 +34,19 @@ root:
               translation: to bring s.o. close to ...
               type: meaning-in-context
 
+    - text: دَنِيّ
+      type: adjective
+      derived:
+        - derivation: elative-degree
+          text: أَدْنَى
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 340
+              text:
+                - situated lower down, nether
+                - lower, inferior
+
     - text: دُنْيَا
       type: noun
       gender: female

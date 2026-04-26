@@ -25,9 +25,7 @@ root:
             type: irregular
       type: verb
       derived:
-        #- derivation: verbal-noun
-        - derivation: meaning-related #TODO
-          type: noun 
+        - derivation: verbal-noun
           text: سَعْي
           translations:
             - dialect: msa

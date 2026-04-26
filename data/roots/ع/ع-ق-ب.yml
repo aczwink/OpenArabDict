@@ -38,6 +38,12 @@ root:
 
     - type: verb
       form: 3
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 732
+          text:
+            - to punish (على or ه ب s.o. for)
       derived:
         - derivation: verbal-noun
           text: عِقَاب

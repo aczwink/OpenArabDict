@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -32,12 +32,22 @@ root:
           text:
             - to enter, to go in, to come in
       derived:
+        - derivation: verbal-noun
+          text: فَوْت
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 856
+              text:
+                - escape
+
         - text: فَوَات
           derivation: verbal-noun
           type: noun
           gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 856
               text:
                 - passing, lapse

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -40,6 +40,7 @@ root:
               source-page: 465
               text:
                 - bewitchment, beguilement, enchantment, fascination
+
         - derivation: active-participle
           type: adjective
           gender: male
@@ -49,3 +50,12 @@ root:
               source-page: 466
               text:
                 - charming, enchanting
+
+    - text: سَحَر
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 465
+          text:
+            - time before daybreak, early morning, dawn

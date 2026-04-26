@@ -18,11 +18,18 @@ root:
   radicals: خ-ب-ء
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: aa
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 261
+          text:
+            - to hide, conceal (ه s.th.)
       derived:
         - text: مَخْبَأ
           derivation: meaning-related
@@ -35,6 +42,16 @@ root:
                 - |-
                   1. hiding-place
                   2. hide-out, refuge, haunt, retreat
+
+    - type: verb
+      form: 2
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 261
+          text:
+            - to hide, conceal (ه s.th.)
 
     - form: 8
       type: verb

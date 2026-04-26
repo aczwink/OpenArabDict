@@ -352,16 +352,6 @@ words:
         text:
           - port, harbor, anchorage
 
-  - text: آيَة
-    type: noun
-    gender: female
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - |-
-            1. miracle
-            2. wonder, marvel
   - text: سمهري
     type: adjective
     gender: male

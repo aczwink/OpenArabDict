@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,41 @@
 root:
   radicals: ق-ر-ض
   words:
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ausu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - suggest, propose
+
+    - form: 4
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 886
+          text:
+            - to loan, lend, or advance, money (ه to s.o.)
+      derived:
+        - derivation: meaning-related
+          type: noun
+          text: قَرْض
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 886
+              text:
+                - loan
+          derived:
+            - derivation: plural
+              text: قُرُوض
+
     - type: verb
       dialect: msa
       form: 7

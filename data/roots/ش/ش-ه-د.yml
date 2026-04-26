@@ -92,3 +92,12 @@ root:
               source-page: 572
               text:
                 - seeing, viewing, witnessing, inspection
+
+    - text: شَهْد
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 571
+          text:
+            - honey

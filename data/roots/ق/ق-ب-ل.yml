@@ -18,15 +18,25 @@ root:
   radicals: ق-ب-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 866
           text:
-            - to receive (kindly, hospitality) (ه s.o.), give (ه, s.o., s.th.) a friendly reception, receive (ه s.th.) favorably, approve (ه, of s.o., of s.th.)
+            - to accept (ب or ه ,ه s.o., s.th.)
+            - to receive (kindly, hospitality) (ه s.o.), give (ه ,ه s.o., s.th.) a friendly reception, receive (ه s.th.) favorably, approve (ه ,ه of s.o., of s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - accept, agree
       derived:
         - text: قُبُول
           derivation: verbal-noun

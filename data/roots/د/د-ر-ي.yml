@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -36,3 +36,22 @@ root:
               source: hw4-free-text
               text:
                 - combination of ما and أدري
+
+    - form: 3
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 323
+          text:
+            - to hide (ه ب s.th. with or behind)
+
+    - form: 6
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 324
+          text:
+            - to hide oneself (ب with or behind, also fig.)

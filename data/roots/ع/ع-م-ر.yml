@@ -64,13 +64,13 @@ root:
           derived:
             - text: أَعْمَار
               derivation: plural
-              type: noun
-              gender: male
               translations:
                 - dialect: msa
-                  source: hw4 #ejtaal.net/aa/#hw4=766
+                  source: hw4
+                  source-page: 753
                   text:
                     - age groups, ages
+                    
         - text: عِمَارَة
           derivation: meaning-related
           type: noun

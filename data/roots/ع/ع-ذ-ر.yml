@@ -45,6 +45,9 @@ root:
               text:
                 - excuse
           derived:
+            - derivation: plural
+              text: أَعْذَار
+              
             - derivation: feminine
               text: عُذْرَة
               translations:

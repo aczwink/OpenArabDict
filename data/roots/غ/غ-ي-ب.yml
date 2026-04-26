@@ -31,6 +31,16 @@ root:
             - to be or remain absent, be or stay away
             - to hide, be hidden, be concealed (عن from)
       derived:
+        - derivation: verbal-noun
+          type: adjective
+          text: غَيْب
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 806
+              text:
+                - hidden, concealed, invisible
+
         - text: غِيَاب
           derivation: verbal-noun
           type: noun

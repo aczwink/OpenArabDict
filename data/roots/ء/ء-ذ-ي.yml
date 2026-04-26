@@ -17,6 +17,16 @@
 root:
   radicals: ء-ذ-ي
   words:
+    #TODO
+    # - form: 4
+    #   type: verb
+    #   translations:
+    #     - dialect: msa
+    #       source: hw4
+    #       source-page: 14
+    #       text:
+    #         - to molest, annoy, irritate, trouble (ه s.o.)
+
     - text: أَذِيَّة
       type: noun
       translations:

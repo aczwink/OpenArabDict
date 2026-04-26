@@ -57,6 +57,15 @@ words:
         text:
           - dolphin
 
+  - text: زَرَافَة
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 437
+        text:
+          - giraffe
+
   - text: سِنْجَاب
     type: noun
     translations:

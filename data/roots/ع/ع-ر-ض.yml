@@ -18,16 +18,24 @@ root:
   radicals: ع-ر-ض
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ausu
       translations:
         - dialect: msa
           source: hw4
           url: https://ejtaal.net/aa/#hw4=718
           text:
             - to show, demonstrate, present, set forth, display, exhibit, lay open, submit, turn in (ه على s.th. to s.o.), lay put (ه على s.th. before s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - offer, present
       derived:
         - text: عَرْض
           derivation: verbal-noun

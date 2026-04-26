@@ -23,6 +23,14 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: ia
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - become thirsty
       derived:
         - derivation: verbal-noun
           gender: male

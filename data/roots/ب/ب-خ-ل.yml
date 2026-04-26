@@ -25,6 +25,8 @@ root:
             parameters: ia
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: ia
       translations:
         - complete: true
           dialect: msa
@@ -32,6 +34,11 @@ root:
           source-page: 55
           text:
             - to be niggardly, be stingy (ب with s.th., عن or على with regard to s.o.), scrimp (على ,عن s.o., ب for), stint (ب in, عن or على s.o.), withhold (على ,عن from s.o., ب s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 121
+          text:
+            - become stingy
       derived:
         - text: بَخِيل
           derivation: meaning-related

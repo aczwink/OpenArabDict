@@ -47,3 +47,12 @@ root:
           contextual:
             - text: صورة طبق الأصل
               translation: true copy; exact replica
+
+    - text: طَبَقَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 646
+          text:
+            - social class

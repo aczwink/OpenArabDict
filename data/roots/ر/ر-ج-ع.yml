@@ -32,9 +32,11 @@ root:
           text:
             - to come back, come again, return
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 37
+          source: lav
+          source-page: 121
           text:
-            - to return
+            - return (intr.)
+            - come back, go back
       derived:
         - derivation: verbal-noun
           text: رُجُوع

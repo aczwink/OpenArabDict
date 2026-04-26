@@ -20,9 +20,17 @@ root:
     - type: verb
       form:
         stem: 1
+        valency: transitive
         variants:
           - dialect: msa
             parameters: ia
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 547
+          text:
+            - to share (ه في with s.o. s.th.), participate (ه في with s.o. in), be or become partner, participant, associate (ه في of s.o. in)
       derived:
         - derivation: verbal-noun
           type: noun
@@ -82,6 +90,16 @@ root:
                 - |-
                   1. partnership, copartnership, participation (في in)
                   2. cooperation, collaboration
+
+    - form: 4
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 547
+          text:
+            - to make (ه s.o.) a partner, participant, associate (في in), give (ه s.o.) a share (في in), have (ه s.o.) share (في in)
+
     - type: verb
       form: 8
       translations:

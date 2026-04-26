@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,6 @@ root:
   radicals: ب-ح-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations: []
       derived:
@@ -60,6 +59,15 @@ root:
                       text:
                         - marine
                         - navy
+
+        - derivation: characteristic-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 54
+              text:
+                - seaman, mariner, sailor
+
         - text: بُحَيْرَة
           derivation: meaning-related
           type: noun
