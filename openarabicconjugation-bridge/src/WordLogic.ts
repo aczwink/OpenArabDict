@@ -16,16 +16,16 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictParentType, OpenArabDictWord } from "@aczwink/openarabdict-domain";
+import { OpenArabDictLexeme, OpenArabDictParentType } from "@aczwink/openarabdict-domain";
 import { Tashkil } from "@aczwink/openarabicconjugation/dist/Definitions";
 
 export const WordLogic = {
-    IsAdjectiveOrNounInNominative(word: OpenArabDictWord)
+    IsAdjectiveOrNounInNominative(word: OpenArabDictLexeme)
     {
         return word.text.endsWith(Tashkil.Fathatan) || word.text.endsWith(Tashkil.Kasratan);
     },
 
-    IsSingular(word: OpenArabDictWord)
+    IsSingular(word: OpenArabDictLexeme)
     {
         return word.parent.find(x => x.type === OpenArabDictParentType.Plural) === undefined;
     }
