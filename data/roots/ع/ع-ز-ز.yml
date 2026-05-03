@@ -54,21 +54,28 @@ root:
         - text: عَزِيز
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=726
+              source-page: 713
               text:
                 - friend
-              examples:
+              usage:
                 - text: عزيزي
                   translation: my dear! (esp. as a salutation in letters)
+                  type: example
           derived:
             - text: أَعِزَّاء
               derivation: plural
-              type: noun
-              gender: male
+
+            - derivation: elative-degree
+              text: أَعَزّ
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 713
+                  text:
+                    - dearer, more beloved
 
     - type: verb
       dialect: msa

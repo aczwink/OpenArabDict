@@ -15,14 +15,14 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictGender, OpenArabDictGenderedWord, OpenArabDictParentType, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictGendered, OpenArabDictParentType, OpenArabDictPOSType, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb } from "@aczwink/openarabdict-domain";
 import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
 import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
-import { TreeTrace } from "../TreeTrace";
+import { TreeTrace, TreeTraceNodeType } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ExtractRoot } from "../shared";
@@ -45,57 +45,54 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
         case "active-participle":
         case "passive-participle":
         {
-            if(parent?.type !== "verb")
+            if(parent?.type !== TreeTraceNodeType.LexicalUnit)
                 throw new Error("Participles can only be children of verbs");
-            const verb = builder.GetWord(parent.verbId);
-            if(verb.type !== OpenArabDictWordType.Verb)
-                throw new Error("Id error!!!");
-            const root = builder.GetRoot(verb.rootId);
+            const verbData = builder.GetVerbLexicalUnit(parent.lexicalUnitId);
+            const root = builder.GetRoot(verbData.rootId);
 
-            const verbInstance = CreateMSAVerb(root, verb);
+            const verbInstance = CreateMSAVerb(root, verbData);
 
             const voice = (wordDef.derivation === "active-participle") ? TargetVerbBasedDerivationPatterns.ActiveParticiples : TargetVerbBasedDerivationPatterns.PassiveParticiple;
 
             const conjugator = new Conjugator;
-            const generated = ((voice === TargetVerbBasedDerivationPatterns.ActiveParticiples) && (verb.form.stative === true)) ? conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ActiveParticiples)[1] : conjugator.DeriveFromVerb(verbInstance, voice)[0];
+            const generated = ((voice === TargetVerbBasedDerivationPatterns.ActiveParticiples) && (verbData.form.stative === true)) ? conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ActiveParticiples)[1] : conjugator.DeriveFromVerb(verbInstance, voice)[0];
             return generated;
         }
         case "instance-noun":
         {
-            if(parent?.type !== "word")
+            if(parent?.type !== TreeTraceNodeType.LexicalUnit)
                 throw new Error("Instance nouns can only be derived from verbal nouns");
-            const parentIsVerbalNoun = (parent.word.parent.length === 1) && (parent.word.parent[0].type === OpenArabDictParentType.VerbalNoun);
+            const parentIsVerbalNoun = (parent.parent.lexeme.parent.length === 1) && (parent.parent.lexeme.parent[0].type === OpenArabDictParentType.VerbalNoun);
             if(!parentIsVerbalNoun)
                 throw new Error("Instance nouns can only be derived from verbal nouns");
-            const verbalNoun = parent.word as OpenArabDictGenderedWord;
+            const verbalNoun = parent.parent.lexeme.senses[0].units[0].pos as OpenArabDictGendered;
             
             const c = new Conjugator();
-            const baseParsed = ParseVocalizedText(parent.word.text);
+            const baseParsed = ParseVocalizedText(parent.parent.lexeme.text);
             const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (verbalNoun.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
 
             return generated;
         }
         case "singulative":
         {
-            if((parent?.type !== "word") || (parent.word.type !== OpenArabDictWordType.Noun))
+            if((parent?.type !== TreeTraceNodeType.LexicalUnit) || (parent.parent.lexeme.senses[0].units[0].pos.type !== OpenArabDictPOSType.Noun))
                 throw new Error("Singulatives can only be derived from nouns");
 
             const c = new Conjugator();
-            const baseParsed = ParseVocalizedText(parent.word.text);
-            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (parent.word.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
+            const baseParsed = ParseVocalizedText(parent.parent.lexeme.text);
+            const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (parent.parent.lexeme.senses[0].units[0].pos.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
 
             return generated;
         }
         case "verbal-noun":
         {
-            if(parent?.type !== "verb")
+            if(parent?.type !== TreeTraceNodeType.LexicalUnit)
                 throw new Error("Verbal nouns can only be children of verbs");
-            const verb = builder.GetWord(parent.verbId);
-            if(verb.type !== OpenArabDictWordType.Verb)
-                throw new Error("Id error!!!");
-            const root = builder.GetRoot(verb.rootId);
 
-            const verbInstance = CreateMSAVerb(root, verb);
+            const verbData = builder.GetVerbLexicalUnit(parent.lexicalUnitId);
+            const root = builder.GetRoot(verbData.rootId);
+
+            const verbInstance = CreateMSAVerb(root, verbData);
 
             const conjugator = new Conjugator;
             const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);
@@ -133,14 +130,12 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
 
 function ValidateVerbalNoun(parsed: DisplayVocalized[], word: GenderedWordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace | undefined)
 {
-    if(parent?.type !== "verb")
+    if(parent?.type !== TreeTraceNodeType.LexicalUnit)
         throw new Error("Verbal nouns can only be children of verbs");
-    const verb = builder.GetWord(parent.verbId);
-    if(verb.type !== OpenArabDictWordType.Verb)
-        throw new Error("Id error!!!");
-    const root = builder.GetRoot(verb.rootId);
+    const verbData = builder.GetVerbLexicalUnit(parent.lexicalUnitId);
+    const root = builder.GetRoot(verbData.rootId);
 
-    const verbInstance = CreateMSAVerb(root, verb);
+    const verbInstance = CreateMSAVerb(root, verbData);
 
     const conjugator = new Conjugator;
     const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);

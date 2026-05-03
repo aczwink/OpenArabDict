@@ -18,10 +18,13 @@ root:
   radicals: ز-ي-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
+          - dialect: lb
+            parameters: ii
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -33,6 +36,12 @@ root:
               2. to be greater, be more, amount to more (عن or على than), exceed
               (عن or على s.th., an amount, ب by), go beyond an amount of number
               (على)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - increase (intr.)
+            - add (tr.)
       derived:
         - derivation: active-participle
           type: adjective

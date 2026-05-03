@@ -23,12 +23,20 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: ii
       translations:
         - dialect: msa
           source: hw4
           source-page: 617
           text:
             - to be right, hold true, be to the point, hit the mark, be pertinent, be apposite (opinion)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - hit (a target)
+            - afflict
       derived:
         - derivation: active-participle
           type: adjective

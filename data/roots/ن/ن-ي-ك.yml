@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,15 +18,25 @@ root:
   radicals: ن-ي-ك
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
+          - dialect: lb
+            parameters: ii
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1189
           text:
             - to have sexual intercourse (ها with a woman)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - fuck
       derived:
         - text: مَنْيُوك
           derivation: meaning-related

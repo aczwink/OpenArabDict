@@ -15,11 +15,11 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWordType, OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, UsageType, OpenArabDictParentType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictWordRelationshipType, OpenArabDictTranslationEntry, OpenArabDictParentType, OpenArabDictTranslationUsageType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
 import { GenderedWordDefinition, OtherWordDefinition, TranslationDefinition, UsageDefinition, VerbWordDefinition, WordDefinition, WordReferenceDefinition } from "./DataDefinitions";
 import { DBBuilder } from "./DBBuilder";
 import { WordDefinitionValidator, WordMapper, WordValidator } from "./WordDefinitionValidator";
-import { TreeTrace } from "./TreeTrace";
+import { TreeTrace, TreeTraceNodeType } from "./TreeTrace";
 import { ValidateType } from "./_legacy/ValidateType";
 import { ValidatePlural } from "./_legacy/ValidatePlural";
 import { _LegacyValidateText } from "./_legacy/ValidateText";
@@ -48,9 +48,9 @@ function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuild
         switch(def.type)
         {
             case "example":
-                return UsageType.Example;
+                return OpenArabDictTranslationUsageType.Example;
             case "meaning-in-context":
-                return UsageType.MeaningInContext;
+                return OpenArabDictTranslationUsageType.MeaningInContext;
         }
     }
 
@@ -61,18 +61,18 @@ function ProcessTranslationDefinition(x: TranslationDefinition, builder: DBBuild
         complete: x.complete,
         text: x.text,
         url: x.url,
-        usage: x.usage?.map(y => ({ text: y.text, translation: y.translation, type: MapUsageType(y) })) ?? _LegacyBuildUsage(x)
+        usage: x.usage?.map(y => ({ text: y.text, translation: [y.translation], type: MapUsageType(y) })) ?? _LegacyBuildUsage(x)
     };
 }
 
 function ProcessReferenceDefinition(def: WordReferenceDefinition, builder: DBBuilder, parent: TreeTrace)
 {
     const wordId = builder.LookupUserWordId(def.ref);
-    const word = builder.GetWord(wordId);
+    const word = builder.GetLexeme(wordId);
 
-    if(parent.type !== "word")
+    if(parent.type !== TreeTraceNodeType.LexicalUnit)
         throw new Error("implement me");
-    const parentWordId = parent.word.id;
+    const parentWordId = parent.parent.lexeme.id;
 
     word.parent.push({
         id: parentWordId,
@@ -125,14 +125,13 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
     const result = wdv.ConstructResult();
 
-    let thisParent: TreeTrace;
     let createdWord;
     switch(result.type)
     {
-        case OpenArabDictWordType.Adjective:
-        case OpenArabDictWordType.Noun:
-        case OpenArabDictWordType.Numeral:
-        case OpenArabDictWordType.Pronoun:
+        case OpenArabDictPOSType.Adjective:
+        case OpenArabDictPOSType.Noun:
+        case OpenArabDictPOSType.Numeral:
+        case OpenArabDictPOSType.Pronoun:
         {
             const g = wordDef as GenderedWordDefinition;
             
@@ -145,10 +144,21 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
             const word = builder.AddWord({
                 id: "",
-                type: result.type,
-                gender: result.gender!,
                 text,
-                parent: result.parents
+                parent: result.parents,
+                senses: [
+                    {
+                        units: [
+                            {
+                                id: "",
+                                pos: {
+                                    type: result.type,
+                                    gender: result.gender!
+                                }
+                            }
+                        ]
+                    }
+                ]
             }, translations);
             if(g.id !== undefined)
                 builder.AddUserWordIdMapping(g.id, word.id);
@@ -166,28 +176,33 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
                 builder.AddRelation(word.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
             }
-
-            thisParent = {
-                type: "word",
-                word,
-                parent
-            };
             createdWord = word;
         }
         break;
-        case OpenArabDictWordType.Adverb:
-        case OpenArabDictWordType.Conjunction:
-        case OpenArabDictWordType.ForeignVerb:
-        case OpenArabDictWordType.Interjection:
-        case OpenArabDictWordType.Particle:
-        case OpenArabDictWordType.Phrase:
-        case OpenArabDictWordType.Preposition:
+        case OpenArabDictPOSType.Adverb:
+        case OpenArabDictPOSType.Conjunction:
+        case OpenArabDictPOSType.ForeignVerb:
+        case OpenArabDictPOSType.Interjection:
+        case OpenArabDictPOSType.Particle:
+        case OpenArabDictPOSType.Phrase:
+        case OpenArabDictPOSType.Preposition:
         {
             const word = builder.AddWord({
                 id: "",
-                type: result.type,
                 text: result.text!,
-                parent: wdv.parents
+                parent: wdv.parents,
+                senses: [
+                    {
+                        units: [
+                            {
+                                id: "",
+                                pos: {
+                                    type: result.type,
+                                }
+                            }
+                        ]
+                    }
+                ]
             }, translations);
 
             const o = wordDef as OtherWordDefinition;
@@ -203,15 +218,10 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 builder.AddRelation(word.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
             }
 
-            thisParent = {
-                type: "word",
-                word,
-                parent
-            };
             createdWord = word;
         }
         break;
-        case OpenArabDictWordType.Verb:
+        case OpenArabDictPOSType.Verb:
         {
             const v = wordDef as VerbWordDefinition;
             const form = wdv.verbForm;
@@ -219,11 +229,22 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
             const generatedVerb = builder.AddWord({
                 id: "",
-                type: OpenArabDictWordType.Verb,
-                form,
-                rootId: root.id,
                 text: wdv.text,
-                parent: wdv.parents
+                parent: wdv.parents,
+                senses: [
+                    {
+                        units: [
+                            {
+                                id: "",
+                                pos: {
+                                    type: OpenArabDictPOSType.Verb,
+                                    form,
+                                    rootId: root.id,
+                                }
+                            }
+                        ]
+                    }
+                ]
             }, translations);
 
             if(v.alias !== undefined)
@@ -242,17 +263,22 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
                 builder.AddRelation(generatedVerb.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
             }
 
-            thisParent = {
-                type: "verb",
-                verbId: generatedVerb.id,
-                parent: parent
-            };
             createdWord = generatedVerb;
         }
         break;
         default:
             throw new Error("Unknown word type");
     }
+    const wordParent: TreeTrace = {
+        type: "word",
+        lexeme: createdWord,
+        parent
+    };
+    const thisParent: TreeTrace = {
+        type: TreeTraceNodeType.LexicalUnit,
+        lexicalUnitId: createdWord.senses[0].units[0].id,
+        parent: wordParent
+    };
 
     if(wordDef.derived !== undefined)
     {

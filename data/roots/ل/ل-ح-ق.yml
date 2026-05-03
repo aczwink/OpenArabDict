@@ -22,7 +22,15 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: ia
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - follow, chase
       derived:
         - derivation: active-participle
           type: adjective

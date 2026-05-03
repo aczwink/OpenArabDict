@@ -16,9 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictGender, OpenArabDictVerbForm, OpenArabDictWordParent, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictParent, OpenArabDictPOSType, OpenArabDictVerbForm } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "./DataDefinitions";
-import { TreeTrace } from "./TreeTrace";
+import { TreeTrace, TreeTraceNodeType } from "./TreeTrace";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "./services/StatisticsCounterService";
 import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
@@ -47,7 +47,7 @@ export class WordDefinitionValidator
         return this._parents!;
     }
 
-    public set parents(value: OpenArabDictWordParent[])
+    public set parents(value: OpenArabDictParent[])
     {
         this._parents = value;
     }
@@ -76,7 +76,7 @@ export class WordDefinitionValidator
         return this._type!;
     }
 
-    public set type(value: OpenArabDictWordType | undefined)
+    public set type(value: OpenArabDictPOSType | undefined)
     {
         if(this._type === value)
             return;
@@ -88,7 +88,7 @@ export class WordDefinitionValidator
 
     public get verbForm()
     {
-        if(this._type !== OpenArabDictWordType.Verb)
+        if(this._type !== OpenArabDictPOSType.Verb)
             this.ReportValidationError("Verb forms do only exist on verbs");
         if(this._verbForm === undefined)
             this.ReportValidationError("Verb form not set");
@@ -98,7 +98,7 @@ export class WordDefinitionValidator
 
     public set verbForm(newValue: OpenArabDictVerbForm)
     {
-        if(this._type !== OpenArabDictWordType.Verb)
+        if(this._type !== OpenArabDictPOSType.Verb)
             this.ReportValidationError("Verb forms do only exist on verbs");
         this._verbForm = newValue;
     }
@@ -113,10 +113,10 @@ export class WordDefinitionValidator
     {
         switch(this._type)
         {
-            case OpenArabDictWordType.Adjective:
-            case OpenArabDictWordType.Noun:
-            case OpenArabDictWordType.Numeral:
-            case OpenArabDictWordType.Pronoun:
+            case OpenArabDictPOSType.Adjective:
+            case OpenArabDictPOSType.Noun:
+            case OpenArabDictPOSType.Numeral:
+            case OpenArabDictPOSType.Pronoun:
                 {
                     if(this._gender === undefined)
                         this.ReportValidationError("Gender is missing");
@@ -134,8 +134,8 @@ export class WordDefinitionValidator
     }
 
     InferAnyOf(variable: "gender", allowedValues: OpenArabDictGender[], defaultValue: OpenArabDictGender): void;
-    InferAnyOf(variable: "type", allowedValues: OpenArabDictWordType[], defaultValue: OpenArabDictWordType): void;
-    public InferAnyOf(variable: "gender" | "text" | "type", allowedValues: (OpenArabDictGender | OpenArabDictWordType)[], defaultValue: OpenArabDictGender | OpenArabDictWordType)
+    InferAnyOf(variable: "type", allowedValues: OpenArabDictPOSType[], defaultValue: OpenArabDictPOSType): void;
+    public InferAnyOf(variable: "gender" | "text" | "type", allowedValues: (OpenArabDictGender | OpenArabDictPOSType)[], defaultValue: OpenArabDictGender | OpenArabDictPOSType)
     {
         const got = this.Get(variable);
         for (const choice of allowedValues)
@@ -159,8 +159,8 @@ export class WordDefinitionValidator
 
     InferDefault(variable: "gender", defaultValue: OpenArabDictGender): void;
     InferDefault(variable: "text", value: DisplayVocalized[]): void;
-    InferDefault(variable: "type", defaultValue: OpenArabDictWordType): void;
-    public InferDefault(variable: "gender" | "text" | "type", defaultValue: OpenArabDictGender | DisplayVocalized[] | OpenArabDictWordType)
+    InferDefault(variable: "type", defaultValue: OpenArabDictPOSType): void;
+    public InferDefault(variable: "gender" | "text" | "type", defaultValue: OpenArabDictGender | DisplayVocalized[] | OpenArabDictPOSType)
     {
         const got = this.Get(variable);
         if(got === undefined)
@@ -170,8 +170,8 @@ export class WordDefinitionValidator
     }
 
     InferValue(variable: "text", value: DisplayVocalized[] | string): void;
-    InferValue(variable: "type", value: OpenArabDictWordType): void;
-    public InferValue(variable: "text" | "type", value: DisplayVocalized[] | string | OpenArabDictWordType)
+    InferValue(variable: "type", value: OpenArabDictPOSType): void;
+    public InferValue(variable: "text" | "type", value: DisplayVocalized[] | string | OpenArabDictPOSType)
     {
         const got = this.Get(variable);
         if(got === undefined)
@@ -227,7 +227,7 @@ export class WordDefinitionValidator
             this.ReportRedundancy(variable, value);
     }
 
-    private Equals(variable: "gender" | "text" | "type", got: string | OpenArabDictWordType | OpenArabDictGender, value: string | OpenArabDictWordType | DisplayVocalized[])
+    private Equals(variable: "gender" | "text" | "type", got: string | OpenArabDictPOSType | OpenArabDictGender, value: string | OpenArabDictPOSType | DisplayVocalized[])
     {
         switch(variable)
         {
@@ -271,15 +271,15 @@ export class WordDefinitionValidator
         {
             case "root":
                 return ["ROOT: " + node.rootId + ", file: " + node.fileName];
-            case "verb":
+            case TreeTraceNodeType.LexicalUnit:
             {
                 const parentTrace = this.TraceNodeToString(node.parent);
-                parentTrace.push("VERB: " + node.verbId);
+                parentTrace.push("VERB: " + node.lexicalUnitId);
                 return parentTrace;
             }
             case "word":
                 const parentTrace = this.TraceNodeToString(node.parent);
-                parentTrace.push(node.word.text);
+                parentTrace.push(node.lexeme.text);
                 return parentTrace;
             case "word-collection":
                 return ["file: " + node.fileName];
@@ -296,7 +296,7 @@ export class WordDefinitionValidator
         return traces.join(" --> ");
     }
 
-    private ValueToValidationErrorString(value: string | OpenArabDictWordType | OpenArabDictGender | DisplayVocalized[])
+    private ValueToValidationErrorString(value: string | OpenArabDictPOSType | OpenArabDictGender | DisplayVocalized[])
     {
         if(Array.isArray(value))
             return Buckwalter.ToString(value) + " " + VocalizedWordTostring(value);
@@ -305,8 +305,8 @@ export class WordDefinitionValidator
 
     //State
     private _gender?: OpenArabDictGender;
-    private _parents?: OpenArabDictWordParent[];
+    private _parents?: OpenArabDictParent[];
     private _text?: string;
-    private _type?: OpenArabDictWordType;
+    private _type?: OpenArabDictPOSType;
     private _verbForm?: OpenArabDictVerbForm;
 }

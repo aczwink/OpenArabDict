@@ -32,9 +32,7 @@ root:
           text:
             - manufacture
       derived:
-        #- derivation: verbal-noun
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: verbal-noun
           text: صُنْع
           translations:
             - dialect: msa

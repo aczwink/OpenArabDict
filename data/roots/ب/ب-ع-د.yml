@@ -18,16 +18,24 @@ root:
   radicals: ب-ع-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4
           url: https://ejtaal.net/aa/#hw4=93
           text:
             - to be distant, far away, far off
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - become far
       derived:
         - text: بَعِيد
           derivation: meaning-related

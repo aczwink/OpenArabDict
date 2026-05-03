@@ -50,3 +50,17 @@ root:
               derivation: plural
               type: noun
               gender: female
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ia
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - put on weight
+            - get fat

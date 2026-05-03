@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -15,7 +15,13 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictWord } from "@aczwink/openarabdict-domain";
+
+import { OpenArabDictLexeme } from "@aczwink/openarabdict-domain";
+
+export enum TreeTraceNodeType
+{
+    LexicalUnit,
+}
 
 interface RootNode
 {
@@ -23,16 +29,16 @@ interface RootNode
     rootId: string;
     fileName: string;
 }
-interface VerbNode
+interface LexicalUnitNode
 {
-    type: "verb";
-    verbId: string;
-    parent: TreeTrace;
+    type: TreeTraceNodeType.LexicalUnit;
+    lexicalUnitId: string;
+    parent: LexemeNode;
 }
-interface WordNode
+interface LexemeNode
 {
     type: "word";
-    word: OpenArabDictWord;
+    lexeme: OpenArabDictLexeme;
     parent: TreeTrace;
 }
 interface WordCollectionNode
@@ -40,4 +46,4 @@ interface WordCollectionNode
     type: "word-collection";
     fileName: string;
 }
-export type TreeTrace = RootNode | VerbNode | WordNode | WordCollectionNode;
+export type TreeTrace = RootNode | LexicalUnitNode | LexemeNode | WordCollectionNode;

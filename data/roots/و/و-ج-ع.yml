@@ -23,7 +23,15 @@ root:
           - dialect: msa
             parameters: ia
             type: sound
+          - dialect: lb
+            parameters: iia
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - hurt (intr.)
       derived:
         - derivation: verbal-noun
           text: وَجَع

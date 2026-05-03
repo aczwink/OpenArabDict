@@ -58,6 +58,18 @@ root:
               text:
                 - remembrance
 
+    - form: 2
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: تَذْكِير
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 359
+              text:
+                - masculine use of a word (gram.)
+
     - type: verb
       dialect: msa
       form: 3

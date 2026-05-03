@@ -99,8 +99,16 @@ root:
           derived:
             - text: خِلَافَات
               derivation: plural
-              type: noun
-              gender: male
+
+        - derivation: verbal-noun
+          text: مُخَالَفَة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 299
+              text:
+                - contradiction, inconsistency
+
         - text: مُخَالِف
           derivation: meaning-related
           type: adjective

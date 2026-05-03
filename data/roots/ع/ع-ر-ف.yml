@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: ii #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 59
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,11 @@ root:
           text:
             - to know (ه ,ه s.o., s.th.)
             - to get to know, come to know (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 59
+          text:
+            - to know
       derived:
         - text: مَعْرِفَة
           derivation: verbal-noun
@@ -58,17 +65,6 @@ root:
               url: https://ejtaal.net/aa/#hw4=723
               text:
                 - favor rendered, courtesy, mark of friendship
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ii
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 59
-              text:
-                - to know
 
     - type: verb
       dialect: msa

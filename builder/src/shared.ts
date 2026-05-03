@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictParentType, OpenArabDictWordParent, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
-import { TreeTrace } from "./TreeTrace";
+import { OpenArabDictParent, OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
+import { TreeTrace, TreeTraceNodeType } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
 import { CreateVerbFromOADVerb, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
@@ -25,16 +25,15 @@ import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocaliza
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
 
+
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
 {
     let rootId;
     if(parent?.type === "root")
         rootId = parent.rootId;
-    else if(parent?.type === "verb")
+    else if(parent?.type === TreeTraceNodeType.LexicalUnit)
     {
-        const parentWord = builder.GetWord(parent.verbId);
-        if(parentWord.type !== OpenArabDictWordType.Verb)
-            throw new Error("ID ERROR!");
+        const parentWord = builder.GetVerbLexicalUnit(parent.lexicalUnitId);
         rootId = parentWord.rootId;
     }
     else
@@ -44,31 +43,28 @@ export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
     return root;
 }
 
-function GenerateAllPossibleTextsFromDerivationForVerb(parent: OpenArabDictWordParent, builder: DBBuilder)
+function GenerateAllPossibleTextsFromDerivationForVerb(parent: OpenArabDictParent, builder: DBBuilder)
 {
     const conjugator = new Conjugator;
 
-    const verb = builder.GetWord(parent.id);
-    if(verb.type !== OpenArabDictWordType.Verb)
-        throw new Error("Id error!!!");
-    const root = builder.GetRoot(verb.rootId);
+    const verbData = builder.GetVerbLexicalUnit(parent.id);
+    const root = builder.GetRoot(verbData.rootId);
         
-    const verbInstance = CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
+    const verbInstance = CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verbData);
 
     switch(parent.type)
     {
         case OpenArabDictParentType.CharacteristicNoun:
             return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.CharacteristicNoun);
         case OpenArabDictParentType.NounOfPlace:
-            //TODO: fix this
-            return undefined;
             //return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.NounOfPlace);
+            return undefined; //TODO: fix this
         case OpenArabDictParentType.ToolNoun:
             return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ToolNouns);
     }
 }
 
-export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictWordParent, builder: DBBuilder)
+export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParent, builder: DBBuilder)
 {
     switch(parent.type)
     {
@@ -78,15 +74,16 @@ export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictWordP
             return GenerateAllPossibleTextsFromDerivationForVerb(parent, builder);
         case OpenArabDictParentType.Plural:
             {
-                const parentWord = builder.GetWord(parent.id);
-                const hasGender = (parentWord.type !== OpenArabDictWordType.Adjective) && (parentWord.type !== OpenArabDictWordType.Noun) && (parentWord.type !== OpenArabDictWordType.Numeral) && (parentWord.type !== OpenArabDictWordType.Pronoun);
+                const parentUnitPOS = builder.GetLexicalUnit(parent.id);
+                const parentLexeme = builder.GetLexemeFromLexicalUnitId(parent.id);
+                const hasGender = (parentUnitPOS.type !== OpenArabDictPOSType.Adjective) && (parentUnitPOS.type !== OpenArabDictPOSType.Noun) && (parentUnitPOS.type !== OpenArabDictPOSType.Numeral) && (parentUnitPOS.type !== OpenArabDictPOSType.Pronoun);
                 if(hasGender)
-                    throw new Error("Singulars do have to have a gender: " + parentWord.type);
+                    throw new Error("Singulars do have to have a gender: " + parentUnitPOS.type);
 
                 const conjugator = new Conjugator;
 
-                const parsed = ParseVocalizedText(parentWord.text);
-                const generated = conjugator.DeriveSoundAdjectiveOrNoun(parsed, Mapping.MapGender(parentWord.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
+                const parsed = ParseVocalizedText(parentLexeme.text);
+                const generated = conjugator.DeriveSoundAdjectiveOrNoun(parsed, Mapping.MapGender(parentUnitPOS.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
 
                 //TODO: fix this                
                 /*return [

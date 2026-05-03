@@ -69,7 +69,9 @@ root:
           text:
             - to do, to make
 
-    # - form: 6 #TODO
+#TODO Error: Can't be conjugated.
+    #at LebaneseConjugator.Conjugate
+    # - form: 6
     #   type: verb
     #   translations:
     #     - dialect: msa

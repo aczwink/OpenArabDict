@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: ii
+          - dialect: lb
+            parameters: iia
       translations:
         - dialect: msa
           source: hw4
           source-page: 1228
           text:
             - to play one's confidence, put faith (ب in), rely, depend(ب on), trust (ب in; من ان that), be confident (ب of; من ان that)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - trust
       derived:
         - text: ثِقَة
           derivation: verbal-noun

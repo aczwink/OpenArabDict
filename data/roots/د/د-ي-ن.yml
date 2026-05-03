@@ -23,6 +23,14 @@ root:
         variants:
           - dialect: msa
             parameters: ii
+          - dialect: lb
+            parameters: ii
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - convict, condemn
       derived:
         - derivation: meaning-related
           type: noun

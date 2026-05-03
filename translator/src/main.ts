@@ -31,7 +31,7 @@ function ComputeLookupTable(targetTranslations: OpenArabDictTranslationDocument)
     for(let i = 0; i < targetTranslations.entries.length; i++)
     {
         const entry = targetTranslations.entries[i];
-        dict[entry.wordId] = i;
+        dict[entry.lexicalUnitId] = i;
     }
     return dict;
 }
@@ -134,21 +134,21 @@ export async function TranslateDict(input: TranslateDictInput)
 
         const computedHash = ComputeMappingHash(entry.translations);
 
-        const storedHash = mapping[entry.wordId];
+        const storedHash = mapping[entry.lexicalUnitId];
         if(computedHash === storedHash)
             continue;
 
-        console.log(i, "/", english.entries.length, entry.wordId);
+        console.log(i, "/", english.entries.length, entry.lexicalUnitId);
 
         const translated = await fetchTranslation(entry.translations, targetLanguage);
         if(Array.isArray(translated))
         {
-            const index = lookupTable[entry.wordId];
+            const index = lookupTable[entry.lexicalUnitId];
             if(index === undefined)
-                targetTranslations.entries.push({ wordId: entry.wordId, translations: translated });
+                targetTranslations.entries.push({ lexicalUnitId: entry.lexicalUnitId, translations: translated });
             else
                 targetTranslations.entries[index].translations = translated;
-            mapping[entry.wordId] = computedHash;
+            mapping[entry.lexicalUnitId] = computedHash;
         }
         else
             throw new Error("Translation failed: " + translated);

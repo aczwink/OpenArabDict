@@ -36,12 +36,13 @@ export function InferTextFromDerivation(builder: DBBuilder, validator: WordDefin
         {
             case OpenArabDictParentType.AdverbialAccusative:
             {
-                const parentWord = builder.GetWord(parent.id);
-                if(!("gender" in parentWord))
+                const parentWord = builder.GetLexemeFromLexicalUnitId(parent.id);
+                const pos = parentWord.senses[0].units[0].pos;
+                if(!("gender" in pos))
                     continue;
                 
                 const generated = c.DeclineAdjectiveOrNoun({
-                    gender: Mapping.MapGender(parentWord.gender),
+                    gender: Mapping.MapGender(pos.gender),
                     isDefinite: false,
                     numerus: Numerus.Singular,
                     vocalized: ParseVocalizedText(parentWord.text),
@@ -51,7 +52,7 @@ export function InferTextFromDerivation(builder: DBBuilder, validator: WordDefin
             break;
             case OpenArabDictParentType.Feminine:
             {
-                const parentWord = builder.GetWord(parent.id);
+                const parentWord = builder.GetLexemeFromLexicalUnitId(parent.id);
 
                 const generated = c.DeriveSoundAdjectiveOrNoun(ParseVocalizedText(parentWord.text), Gender.Male, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
                 validator.InferDefault("text", generated);

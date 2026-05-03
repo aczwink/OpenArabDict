@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictParentType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
 export function InferTypeFromDerivation(validator: WordDefinitionValidator)
@@ -27,10 +27,10 @@ export function InferTypeFromDerivation(validator: WordDefinitionValidator)
         {
             case OpenArabDictParentType.ElativeDegree:
             case OpenArabDictParentType.Nisba:
-                validator.InferAnyOf("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Adjective);
+                validator.InferAnyOf("type", [OpenArabDictPOSType.Adjective, OpenArabDictPOSType.Noun], OpenArabDictPOSType.Adjective);
                 break;
             case OpenArabDictParentType.CharacteristicNoun:
-                validator.InferValue("type", OpenArabDictWordType.Noun);
+                validator.InferValue("type", OpenArabDictPOSType.Noun);
                 break;
         }
     }

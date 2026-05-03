@@ -102,6 +102,19 @@ root:
                     - customary, usual, common, ordinary, normal, regular
 
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ii
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - repeat
+
+    - type: verb
       form: 2
       translations:
         - complete: true

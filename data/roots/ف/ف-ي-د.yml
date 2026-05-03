@@ -18,6 +18,19 @@ root:
   radicals: ف-ي-د
   words:
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ii
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - be useful
+    
+    - type: verb
       form: 4
       translations:
         - dialect: msa

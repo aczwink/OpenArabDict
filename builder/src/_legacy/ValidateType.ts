@@ -15,8 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-
-import { OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 
@@ -27,29 +26,29 @@ function MapType(word: WordDefinition)
         case undefined:
             return undefined;
         case "adjective":
-            return OpenArabDictWordType.Adjective;
+            return OpenArabDictPOSType.Adjective;
         case "adverb":
-            return OpenArabDictWordType.Adverb;
+            return OpenArabDictPOSType.Adverb;
         case "conjunction":
-            return OpenArabDictWordType.Conjunction;
+            return OpenArabDictPOSType.Conjunction;
         case "foreign-verb":
-            return OpenArabDictWordType.ForeignVerb;
+            return OpenArabDictPOSType.ForeignVerb;
         case "interjection":
-            return OpenArabDictWordType.Interjection;
+            return OpenArabDictPOSType.Interjection;
         case "noun":
-            return OpenArabDictWordType.Noun;
+            return OpenArabDictPOSType.Noun;
         case "numeral":
-            return OpenArabDictWordType.Numeral;
+            return OpenArabDictPOSType.Numeral;
         case "particle":
-            return OpenArabDictWordType.Particle;
+            return OpenArabDictPOSType.Particle;
         case "phrase":
-            return OpenArabDictWordType.Phrase;
+            return OpenArabDictPOSType.Phrase;
         case "preposition":
-            return OpenArabDictWordType.Preposition;
+            return OpenArabDictPOSType.Preposition;
         case "pronoun":
-            return OpenArabDictWordType.Pronoun;
+            return OpenArabDictPOSType.Pronoun;
         case "verb":
-            return OpenArabDictWordType.Verb;
+            return OpenArabDictPOSType.Verb;
         default:
             throw new Error("Unknown word type: " + (word as any).type);
     }
@@ -62,17 +61,17 @@ export function ValidateType(validator: WordDefinitionValidator)
     switch(validator._legacyWordDefinition.derivation)
     {
         case "adverbial-accusative":
-            validator.InferAnyOf("type", [OpenArabDictWordType.Adverb], OpenArabDictWordType.Adverb);
+            validator.InferAnyOf("type", [OpenArabDictPOSType.Adverb], OpenArabDictPOSType.Adverb);
             break;
         case "definite-state":
         case "instance-noun":
         case "noun-of-place":
         case "singulative":
         case "tool-noun":
-            validator.InferAnyOf("type", [OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+            validator.InferAnyOf("type", [OpenArabDictPOSType.Noun], OpenArabDictPOSType.Noun);
             break;
         case "verbal-noun":
-            validator.InferAnyOf("type", [OpenArabDictWordType.Adjective, OpenArabDictWordType.Noun], OpenArabDictWordType.Noun);
+            validator.InferAnyOf("type", [OpenArabDictPOSType.Adjective, OpenArabDictPOSType.Noun], OpenArabDictPOSType.Noun);
             break;
     }
 }

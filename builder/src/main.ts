@@ -22,11 +22,11 @@ import { DBBuilder } from "./DBBuilder";
 import { OpenArabDictWordRelationshipType } from "@aczwink/openarabdict-domain";
 import { ProcessWordDefinition } from "./WordProcessor";
 import { WordDefinition } from "./DataDefinitions";
-import { CheckWords } from "./openarabicconjugation-tests-check";
 import { VerbalNounCounter } from "./VerbalNounCounter";
 import { JSONSchemaLoader } from "./JSONSchemaLoader";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
+import { CheckLexemes } from "./openarabicconjugation-tests-check";
 
 interface DialectDefinition
 {
@@ -41,7 +41,7 @@ interface DialectDefinition
 interface RootDefinition
 {
     radicals: string;
-    ya?: boolean;
+    ya?: true;
     words: WordDefinition[];
 }
 
@@ -193,7 +193,7 @@ async function BuildDatabase(dbSrcPath: string, validateSourceFiles: boolean)
 
     const document = await builder.StoreMainDict("./dist/dict.json");
     await builder.StoreTranslationsDict("./dist/en.json");
-    await CheckWords(document);
+    await CheckLexemes(document);
     verbalNounCounter.Evaluate();
 
     GlobalInjector.Resolve(StatisticsCounterService).Print();

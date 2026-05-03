@@ -58,6 +58,14 @@ root:
     - type: verb
       form: 2
       derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 994
+              text:
+                - forming, shaping, formation, creation, origination
+                
         - derivation: active-participle
           type: noun
           gender: male

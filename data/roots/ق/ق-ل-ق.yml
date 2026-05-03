@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4
           source-page: 921
           text:
             - to be or become uneasy, disquieted, apprehensive, anxious, excited, agitated, upset, perturbed, troubled, disturbed
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - worry, be anxious
       derived:
         - text: قَلَق
           derivation: verbal-noun

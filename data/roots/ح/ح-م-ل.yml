@@ -18,10 +18,13 @@ root:
   radicals: ح-م-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -32,6 +35,11 @@ root:
               2. to take upon o.s. (عن instead of or for s.o., ه a burden),
               carry, assume (ه the burden, عن of s.o. else), relieve (ه عن s.o.
               from s.th.), take (ه a burden, a grievance, etc.) from s.o. (عن)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - carry
       derived:
         - text: حَمْل
           derivation: verbal-noun

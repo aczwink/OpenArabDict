@@ -67,6 +67,16 @@ words:
         text:
           - trousers, pants
 
+  - text: نَارَنْج
+    type: noun
+    translations:
+      - complete: true
+        dialect: msa
+        source: hw4
+        source-page: 1099
+        text:
+          - bitter orange
+
   - text: نَمُوذَج
     type: noun
     translations:

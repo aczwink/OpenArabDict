@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -19,7 +19,7 @@
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { TranslationDefinition, VerbWordDefinition } from "./DataDefinitions";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
-import { UsageType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictTranslationUsageType } from "@aczwink/openarabdict-domain";
 
 export interface _LegacyParameterizedStem1Data
 {
@@ -40,8 +40,8 @@ export function _LegacyExtractDialect(def: VerbWordDefinition)
 
 export function _LegacyBuildUsage(x: TranslationDefinition)
 {
-    const ctx = x.contextual?.map(y => ({ text: y.text, translation: y.translation, type: UsageType.MeaningInContext }));
-    const ex = x.examples?.map(y => ({ text: y.text, translation: y.translation, type: UsageType.Example }));
+    const ctx = x.contextual?.map(y => ({ text: y.text, translation: [y.translation], type: OpenArabDictTranslationUsageType.MeaningInContext }));
+    const ex = x.examples?.map(y => ({ text: y.text, translation: [y.translation], type: OpenArabDictTranslationUsageType.Example }));
 
     const statsService = GlobalInjector.Resolve(StatisticsCounterService);
 

@@ -18,10 +18,13 @@ root:
   radicals: ل-ع-ب
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 81
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -30,6 +33,11 @@ root:
               to play (ب with s.th.; على an instrument)
 
               لعب دَوراً to play a part or role
+        - dialect: lb
+          source: lav
+          source-page: 82
+          text:
+            - to play
       derived:
         - derivation: active-participle
           type: noun
@@ -41,17 +49,6 @@ root:
                 - player
                 - sportsman
 
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: ia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 81
-              text:
-                - to play
     - type: verb
       dialect: msa
       form: 6

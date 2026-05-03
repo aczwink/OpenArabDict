@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,12 +18,21 @@ root:
   radicals: ز-ي-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
+          - dialect: lb
+            parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 451
           text:
-            - to go away
+            - to go away, depart, leave
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - move (st.) out of the way

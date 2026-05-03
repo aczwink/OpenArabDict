@@ -18,10 +18,13 @@ root:
   radicals: و-ق-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: aa
+        variants:
+          - dialect: msa
+            parameters: aa
+          - dialect: lb
+            parameters: iia #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 94
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -29,6 +32,11 @@ root:
             - |-
               1. to fall
               2. to be located, be situated, lie (geogr.)
+        - dialect: lb
+          source: lav
+          source-page: 95
+          text:
+            - to fall
       derived:
         - text: وُقُوع
           derivation: verbal-noun
@@ -69,18 +77,6 @@ root:
           derived:
             - text: مَوَاقِع
               derivation: plural
-
-        - type: verb
-          derivation: colloquial
-          dialect: lb
-          form:
-            stem: 1
-            parameters: iia
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 94
-              text:
-                - to fall
 
     - form: 2
       type: verb

@@ -60,7 +60,8 @@ export async function AzureTranslator_Translate(translations: OpenArabDictTransl
         {
             for (const subEntry of entry.usage)
             {
-                texts.push(subEntry.translation);
+                for (const trans of subEntry.translation)
+                    texts.push(trans);
             }
         }
 
@@ -88,12 +89,18 @@ export async function AzureTranslator_Translate(translations: OpenArabDictTransl
             const ctx = [];
             for (const subEntry of entry.usage)
             {
+                const translations = [];
+                for (const trans of subEntry.translation)
+                {
+                    translations.push(resultTexts[0]);
+                    resultTexts.Remove(0);
+                }
+
                 ctx.push({
                     text: subEntry.text,
-                    translation: resultTexts[0],
+                    translation: translations,
                     type: subEntry.type
                 });
-                resultTexts.Remove(0);
             }
             resultingEntry.usage = ctx;
         }

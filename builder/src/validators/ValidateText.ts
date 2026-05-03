@@ -39,7 +39,7 @@ export function ValidateText(builder: DBBuilder, validator: WordDefinitionValida
         {
             for (const parent of validator.parents)
             {
-                const parentWord = builder.GetWord(parent.id);
+                const parentWord = builder.GetLexeme(parent.id);
                 const parsed = ParseVocalizedText(parentWord.text);
 
                 let generated;

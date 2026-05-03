@@ -18,15 +18,23 @@ root:
   radicals: ض-ي-ع
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ii
+        variants:
+          - dialect: msa
+            parameters: ii
+          - dialect: lb
+            parameters: ii
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to get lost, be lost (على for s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - get lost
       derived:
         - text: ضَيَاع
           derivation: verbal-noun

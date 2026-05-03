@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictTranslationEntry, UsageType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictTranslationEntry, OpenArabDictTranslationUsageType } from "@aczwink/openarabdict-domain";
 import { ENV } from "./env";
 import { AbsURL } from "@aczwink/acts-util-core";
 import { HTTP } from "@aczwink/acts-util-node";
@@ -25,7 +25,7 @@ import { TargetTranslationLanguage, TranslationError } from "./shared";
 const examplesMarker = "-$-";
 const meaningInContextMarker = "-§-";
 
-function GetUsagesByType(translations: OpenArabDictTranslationEntry[], usageType: UsageType)
+function GetUsagesByType(translations: OpenArabDictTranslationEntry[], usageType: OpenArabDictTranslationUsageType)
 {
     return translations.Values().Map(x => x.usage).NotUndefined().Map(x => x.Values()).Flatten().Filter(x => x.type === usageType).ToArray();
 }
@@ -75,7 +75,7 @@ function MapResult(result: string, inputTranslations: OpenArabDictTranslationEnt
             {
                 usage.push({
                     ...u,
-                    translation: (u.type === UsageType.Example ? examplesLines.shift()! : contextLines.shift()!),
+                    translation: (u.type === OpenArabDictTranslationUsageType.Example ? examplesLines.shift()!.split(" ; ") : contextLines.shift()!.split(" ; ")),
                 });
             }
         }
@@ -94,19 +94,19 @@ function PackInputToString(translations: OpenArabDictTranslationEntry[])
 {
     const texts = translations.Values().Map(x => x.text.Values()).Flatten().ToArray();
 
-    const examples = GetUsagesByType(translations, UsageType.Example);
+    const examples = GetUsagesByType(translations, OpenArabDictTranslationUsageType.Example);
     if(examples.length > 0)
     {
         texts.push(examplesMarker);
-        texts.push(...examples.map(x => x.translation));
+        texts.push(...examples.map(x => x.translation.join(" ; ")));
     }
 
-    const context = GetUsagesByType(translations, UsageType.MeaningInContext);
+    const context = GetUsagesByType(translations, OpenArabDictTranslationUsageType.MeaningInContext);
 
     if(context.length > 0)
     {
         texts.push(meaningInContextMarker);
-        texts.push(...context.map(x => x.translation));
+        texts.push(...context.map(x => x.translation.join(" ; ")));
     }
 
     return texts.join("\n");

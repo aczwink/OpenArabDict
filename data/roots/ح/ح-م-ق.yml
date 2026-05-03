@@ -24,6 +24,15 @@ root:
           - dialect: msa
             parameters: ia
       derived:
+        - derivation: verbal-noun
+          text: حَمَاقَة
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 240
+              text:
+                - stupidity, silliness, foolishness, folly
+
         - text: أَحْمَق
           derivation: meaning-related
           type: adjective

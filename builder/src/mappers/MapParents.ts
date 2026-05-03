@@ -16,9 +16,9 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictParentType, OpenArabDictWordParent } from "@aczwink/openarabdict-domain";
+import { OpenArabDictParentType, OpenArabDictParent } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "../DataDefinitions";
-import { TreeTrace } from "../TreeTrace";
+import { TreeTrace, TreeTraceNodeType } from "../TreeTrace";
 import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
 
@@ -42,15 +42,7 @@ function MapVerbDerivationType(derivation: string)
             return OpenArabDictParentType.ToolNoun;
         case "verbal-noun":
             return OpenArabDictParentType.VerbalNoun;
-        default:
-            throw new Error(derivation);
-    }
-}
 
-function MapWordDerivationType(derivation: string)
-{
-    switch(derivation)
-    {
         case "adverbial-accusative":
             return OpenArabDictParentType.AdverbialAccusative;
         case "colloquial":
@@ -71,12 +63,13 @@ function MapWordDerivationType(derivation: string)
             return OpenArabDictParentType.Plural;
         case "singulative":
             return OpenArabDictParentType.Singulative;
+
         default:
             throw new Error(derivation);
     }
 }
 
-function MapParent(derivation?: string, parent?: TreeTrace): OpenArabDictWordParent | undefined
+function MapParent(derivation?: string, parent?: TreeTrace): OpenArabDictParent | undefined
 {
     switch(parent?.type)
     {
@@ -85,16 +78,16 @@ function MapParent(derivation?: string, parent?: TreeTrace): OpenArabDictWordPar
                 id: parent.rootId,
                 type: OpenArabDictParentType.Root
             };
-        case "verb":
+        case TreeTraceNodeType.LexicalUnit:
             return {
-                id: parent.verbId,
+                id: parent.lexicalUnitId,
                 type: MapVerbDerivationType(derivation!)
             };
-        case "word":
+        /*case "word":
             return {
-                id: parent.word.id,
+                id: parent.lexeme.id,
                 type: MapWordDerivationType(derivation!)
-            };
+            };*/
     }
 }
 

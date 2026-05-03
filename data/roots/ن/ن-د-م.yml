@@ -18,15 +18,23 @@ root:
   radicals: ن-د-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
+        variants:
+          - dialect: msa
+            parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to repent (على of), rue, regret (على s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - regret
       derived:
         - text: نَدِيم
           derivation: meaning-related

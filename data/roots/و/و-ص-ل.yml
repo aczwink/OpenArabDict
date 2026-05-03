@@ -47,7 +47,7 @@ root:
           - dialect: msa
             parameters: ai
           - dialect: lb
-            parameters: ia
+            parameters: ia #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 92
       translations:
         - dialect: msa
           source: hw4
@@ -55,7 +55,8 @@ root:
           text:
             - to arrive (إلى or ه at a place, also = to attain success or recognition)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 92
+          source: lav
+          source-page: 93
           text:
             - to arrive
       derived:

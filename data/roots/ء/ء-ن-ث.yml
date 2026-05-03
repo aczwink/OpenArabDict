@@ -15,28 +15,25 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-ش-ف
+  radicals: ء-ن-ث
   words:
-    - form:
-        stem: 1
-        variants:
-          - dialect: msa
-            parameters: ia
-          - dialect: lb
-            parameters: ia
+    - form: 2
       type: verb
-      translations:
-        - dialect: lb
-          source: lav
-          source-page: 122
-          text:
-            - dry (intr.)
       derived:
-        - derivation: tool-noun
-          text: مِنْشَفَة
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 38
+              text:
+                - the feminine, feminine form (gram.)
+
+        - derivation: passive-participle
+          type: adjective
           translations:
             - dialect: msa
               source: hw4
-              source-page: 1134
+              source-page: 38
               text:
-                - towel
+                - (gram.) feminine

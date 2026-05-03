@@ -15,28 +15,18 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-ش-ف
+  radicals: ز-غ-ر-ط
   words:
     - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: ia
-          - dialect: lb
-            parameters: ia
+            parameters: ss
       type: verb
       translations:
-        - dialect: lb
-          source: lav
-          source-page: 122
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 439
           text:
-            - dry (intr.)
-      derived:
-        - derivation: tool-noun
-          text: مِنْشَفَة
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1134
-              text:
-                - towel
+            - to utter shrill, long-drawn and trilling sounds (as a manifestation of joy by Arab women)

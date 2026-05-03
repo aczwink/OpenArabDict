@@ -36,6 +36,25 @@ root:
               text:
                 - application
 
+    - form: 3
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 646
+          text:
+            - to suit, fit, match (ه ,ه s.o., s.th.), go, tally, (ه ,ه with), adapt o.s., adjust o.s. (ه ,ه to s.o., to s.th.)
+      derived:
+        - derivation: verbal-noun
+          text: مُطَابَقَة
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 647
+              text:
+                - agreement, conformity, congruity, correspondence
+
     - text: طِبْقَ
       type: preposition
       translations:

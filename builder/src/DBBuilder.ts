@@ -16,7 +16,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWord, OpenArabDictWordRelation, OpenArabDictWordRelationshipType, OpenArabDictWordType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictLexeme, OpenArabDictPartOfSpeech, OpenArabDictPOSType, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWordRelation, OpenArabDictWordRelationshipType } from "@aczwink/openarabdict-domain";
 import { Dictionary, ObjectExtensions } from "@aczwink/acts-util-core";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ParseVocalizedPhrase, ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
@@ -32,7 +32,9 @@ export class DBBuilder
         this.roots = {};
         this.translations = new Map();
         this.userWordIdMap = {};
-        this.words = {};
+        this.lexemes = {};
+        this.lexicalUnitMap = {};
+        this.lexicalUnitToLexemeMap = {};
         this.wordsWithEqualSpellingDict = {};
     }
 
@@ -65,7 +67,7 @@ export class DBBuilder
         });
     }
 
-    public AddRoot(radicals: string, ya?: boolean)
+    public AddRoot(radicals: string, ya?: true)
     {
         const radicalsWithoutDashes = radicals.split("-").join("");
         const id = this.GenerateRootId(radicalsWithoutDashes);
@@ -92,27 +94,40 @@ export class DBBuilder
         this.userWordIdMap[userWordId] = wordId;
     }
 
-    public AddWord(word: OpenArabDictWord, translations: OpenArabDictTranslationEntry[])
+    public AddWord(lexeme: OpenArabDictLexeme, translations: OpenArabDictTranslationEntry[])
     {
-        const id = this.GenerateUniqueWordId(word);
+        const lexemeId = this.GenerateUniqueLexemeId(lexeme);
 
-        word.id = id;
-        this.words[id] = word;
-        this.translations.set(id, translations);
+        lexeme.id = lexemeId;
 
-        this.AddToSpellingDict(word);
+        for (const sense of lexeme.senses)
+        {
+            for (const unit of sense.units)
+            {
+                const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, unit.pos);
+                unit.id = lexicalUnitId;
+                
+                this.lexicalUnitMap[lexicalUnitId] = unit.pos;
+                this.lexicalUnitToLexemeMap[lexicalUnitId] = lexeme;
+                this.translations.set(lexicalUnitId, translations);
+            }
+        }
 
-        return word;
+        this.lexemes[lexemeId] = lexeme;
+
+        this.AddToSpellingDict(lexeme);
+
+        return lexeme;
     }
 
     public FindWord(criteria: { text: string; })
     {
-        function filterWord(word: OpenArabDictWord)
+        function filterWord(word: OpenArabDictLexeme)
         {
             return word.text === criteria.text;
         }
 
-        const words = ObjectExtensions.Values(this.words).NotUndefined().Filter(filterWord).ToArray();
+        const words = ObjectExtensions.Values(this.lexemes).NotUndefined().Filter(filterWord).ToArray();
         if(words.length === 1)
             return words[0].id;
         if(words.length === 0)
@@ -123,14 +138,34 @@ export class DBBuilder
         throw new Error("Multiple words where found");
     }
 
+    public GetLexeme(lexemeId: string)
+    {
+        const lexeme = this.lexemes[lexemeId];
+        if(lexeme === undefined)
+            throw new Error("Programming error. Lexeme does not exist: " + lexemeId);
+        return lexeme;
+    }
+    public GetLexemeFromLexicalUnitId(lexicalUnitId: string)
+    {
+        return this.lexicalUnitToLexemeMap[lexicalUnitId]!;
+    }
+
+    public GetLexicalUnit(lexicalUnitId: string)
+    {
+        return this.lexicalUnitMap[lexicalUnitId]!;
+    }
+
     public GetRoot(rootId: string)
     {
         return this.roots[rootId]!;
     }
 
-    public GetWord(wordId: string)
+    public GetVerbLexicalUnit(lexicalUnitId: string)
     {
-        return this.words[wordId]!;
+        const pos = this.GetLexicalUnit(lexicalUnitId);
+        if(pos.type !== OpenArabDictPOSType.Verb)
+            throw new Error("Id error");
+        return pos;
     }
 
     public LookupUserWordId(userWordId: string)
@@ -150,8 +185,8 @@ export class DBBuilder
     {
         const finalDB: OpenArabDictDocument = {
             dialects: this.dialects,
+            lexemes: ObjectExtensions.Values(this.lexemes).NotUndefined().ToArray(),
             roots: ObjectExtensions.Values(this.roots).NotUndefined().ToArray(),
-            words: ObjectExtensions.Values(this.words).NotUndefined().ToArray(),
             wordRelations: this.relations
         };
         const stringified = JSON.stringify(finalDB);
@@ -164,7 +199,10 @@ export class DBBuilder
     public async StoreTranslationsDict(path: string)
     {
         const finalDB: OpenArabDictTranslationDocument = {
-            entries: this.translations.Entries().Map(kv => ({ wordId: kv.key, translations: kv.value })).ToArray()
+            entries: this.translations.Entries().Map(kv => ({
+                lexicalUnitId: kv.key,
+                translations: kv.value
+            })).ToArray()
         };
         const stringified = JSON.stringify(finalDB);
 
@@ -172,7 +210,7 @@ export class DBBuilder
     }
 
     //Private methods
-    private AddToSpellingDict(word: OpenArabDictWord)
+    private AddToSpellingDict(word: OpenArabDictLexeme)
     {
         const vocalized = ParseVocalizedText(word.text);
         const buckwalter = Buckwalter.ToString(vocalized);
@@ -194,47 +232,50 @@ export class DBBuilder
         }
     }
 
+    private DeriveLexicalUnitId(lexemeId: string, pos: OpenArabDictPartOfSpeech)
+    {
+        function ShortType()
+        {
+            switch(pos.type)
+            {
+                case OpenArabDictPOSType.Adjective:
+                    return "a";
+                case OpenArabDictPOSType.Noun:
+                    return "n";
+                case OpenArabDictPOSType.Preposition:
+                    return "p";
+                case OpenArabDictPOSType.Verb:
+                    const stem = pos.form.stem;
+                    return "v" + stem;
+            }
+            return "";
+        }
+        return lexemeId + ShortType();
+    }
+
     private GenerateRootId(radicals: string)
     {
         const vocalized = ParseVocalizedText(radicals);
         return Buckwalter.ToString(vocalized);
     }
 
-    private GenerateWordId(word: OpenArabDictWord)
+    private GenerateLexemeId(word: OpenArabDictLexeme)
     {
-        function ShortType()
-        {
-            switch(word.type)
-            {
-                case OpenArabDictWordType.Adjective:
-                    return "a";
-                case OpenArabDictWordType.Noun:
-                    return "n";
-                case OpenArabDictWordType.Preposition:
-                    return "p";
-                case OpenArabDictWordType.Verb:
-                    const stem = word.form.stem;
-                    return "v" + stem;
-            }
-            return "";
-        }
-
         const transliterated = ParseVocalizedPhrase(word.text).map(Buckwalter.ToString);
-
-        return ShortType() + transliterated.join("_");
+        return transliterated.join("_");
     }
 
-    private GenerateUniqueWordId(word: OpenArabDictWord)
+    private GenerateUniqueLexemeId(word: OpenArabDictLexeme)
     {
-        const wordId = this.GenerateWordId(word);
+        const wordId = this.GenerateLexemeId(word);
 
-        if(this.GetWord(wordId) === undefined)
+        if(this.lexemes[wordId] === undefined)
             return wordId;
 
         for(let i = 2; true; i++)
         {
             const id = wordId + i;
-            if(this.GetWord(id) === undefined)
+            if(this.lexemes[id] === undefined)
                 return id;
         }
     }
@@ -246,6 +287,8 @@ export class DBBuilder
     private roots: Dictionary<OpenArabDictRoot>;
     private translations: Map<string, OpenArabDictTranslationEntry[]>;
     private userWordIdMap: Dictionary<string>;
-    private words: Dictionary<OpenArabDictWord>;
+    private lexemes: Dictionary<OpenArabDictLexeme>;
+    private lexicalUnitMap: Dictionary<OpenArabDictPartOfSpeech>;
+    private lexicalUnitToLexemeMap: Dictionary<OpenArabDictLexeme>;
     private wordsWithEqualSpellingDict: Dictionary<string[]>;
 }

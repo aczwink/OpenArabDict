@@ -31,6 +31,19 @@ root:
             - become exhausted
 
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ia
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - get tired (exhausted)
+
+    - type: verb
       form: 10
       translations:
         - dialect: msa

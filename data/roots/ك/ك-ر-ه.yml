@@ -22,6 +22,8 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: ia
       type: verb
       translations:
         - dialect: msa
@@ -29,6 +31,11 @@ root:
           source-page: 963
           text:
             - to detest, loathe, abhor, hate (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - hate
       derived:
         - derivation: verbal-noun
           text: كَرَاهِيَة

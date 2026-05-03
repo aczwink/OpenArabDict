@@ -66,7 +66,7 @@ root:
                 - automobile, car
 
         - derivation: noun-of-place
-          text: مَسار
+          text: مَسَار
           translations:
             - dialect: msa
               source: hw4

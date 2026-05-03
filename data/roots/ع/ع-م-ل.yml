@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -25,16 +25,17 @@ root:
           - dialect: msa
             parameters: ia
           - dialect: lb
-            parameters: iaa
+            parameters: iaa #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 62
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - "to do, act, operate, be active, work (also: في in a field)"
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 62
+          source: lav
+          source-page: 122
           text:
-            - to do
+            - do, make
       derived:
         - text: عَمَل
           derivation: verbal-noun
