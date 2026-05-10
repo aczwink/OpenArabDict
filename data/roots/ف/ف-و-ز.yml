@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,11 @@ root:
           text:
             - to be successful, be victorious, triumph
             - to defeat, beat (على an opponent, ب with; sports, etc.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - win (game)
       derived:
         - derivation: verbal-noun
           text: فَوْز

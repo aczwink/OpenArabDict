@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: ai
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,11 @@ root:
           text:
             - to settle finally, bury (ه the past), have done with s.th. in the past (ه)
             - to cross, traverse (ه s.th., esp. a country)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - fold
       derived:
         - text: طَاوٍ
           derivation: active-participle

@@ -22,6 +22,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ai
       type: verb
       translations:
         - dialect: msa
@@ -29,3 +31,8 @@ root:
           source-page: 1051
           text:
             - to wipe off, rub out, scratch out, erase, strike out (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - erase

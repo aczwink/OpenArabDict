@@ -40,3 +40,17 @@ root:
               source-page: 1159
               text:
                 - croaking, croak
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ai
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - complain
+            - nag

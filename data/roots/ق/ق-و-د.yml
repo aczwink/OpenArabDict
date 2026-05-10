@@ -18,15 +18,23 @@ root:
   radicals: ق-و-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to lead, lead by a halter (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - lead
       derived:
         - text: قِيَادَة
           derivation: verbal-noun

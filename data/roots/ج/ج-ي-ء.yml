@@ -24,7 +24,7 @@ root:
           - dialect: msa
             parameters: ii
           - dialect: lb
-            parameters: irregular_ija
+            parameters: irregular_ija #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 1
             type: irregular
       translations:
         - dialect: msa
@@ -34,7 +34,8 @@ root:
             - to come (ه ,ه to)
             - to bring (ب s.th.; ه ب to s.o. s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 1
+          source: lav
+          source-page: 1
           text:
             - to come
       derived:

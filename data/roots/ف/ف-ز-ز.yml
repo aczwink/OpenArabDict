@@ -17,6 +17,19 @@
 root:
   radicals: ف-ز-ز
   words:
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ai
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - jump
+
     - form: 10
       type: verb
       translations:

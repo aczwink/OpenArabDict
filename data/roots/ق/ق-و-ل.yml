@@ -34,9 +34,10 @@ root:
             - to speak, say, tell (ه s.th., ل to s.o.; ه عن ,في s.th. about or of), utter, voice (ه s.th.)
         - dialect: lb
           source: lav
-          source-page: 70
+          source-page: 123
           text:
-            - to say
+            - say
+            - tell (to ل)
       derived:
         - text: قَوْل
           derivation: verbal-noun

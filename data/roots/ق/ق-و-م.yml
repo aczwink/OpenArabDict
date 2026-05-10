@@ -18,10 +18,13 @@ root:
   radicals: ق-و-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -38,6 +41,12 @@ root:
               5. to make s.th. (ب) one's business, concern o.s. (ب with),
               undertake, take upon o.s., perform, do, carry out, execute,
               accomplish, practice, exercise (ب s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - rise
+            - get up
       derived:
         - text: قَوْم
           derivation: meaning-related

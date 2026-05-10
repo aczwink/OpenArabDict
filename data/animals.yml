@@ -106,3 +106,12 @@ words:
         source-page: 885
         text:
           - ape, monkey
+
+  - text: مَهَاة
+    type: noun
+    translations:
+      - dialect: msa
+        source: hw4
+        source-page: 1091
+        text:
+          - wild cow

@@ -75,8 +75,13 @@ root:
               translations: []
 
     - type: verb
-      dialect: msa
       form: 4
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - publish
       derived:
         - derivation: verbal-noun
           type: noun

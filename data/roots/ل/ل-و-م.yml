@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,16 +18,24 @@ root:
   radicals: ل-و-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to blame, censure, rebuke, chide, scold, reproach (في or على ه
               s.o. for)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - blame
       derived:
         - text: لَوْم
           derivation: verbal-noun

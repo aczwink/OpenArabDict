@@ -43,15 +43,26 @@ root:
                 - misfortune, calamity, misery, adversity, distress, hardship, affliction, discomfort
 
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to draw taut (ه a bow), pull tight or tighten (ه  a rope, a sail)
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - pull
+            - tighten
+            - drag
+            - attract
       derived:
         - text: شَدِيد
           derivation: meaning-related

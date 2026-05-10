@@ -22,7 +22,15 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: iu
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - fast
       derived:
         - derivation: verbal-noun
           text: صِيَام

@@ -25,7 +25,7 @@ root:
           - dialect: msa
             parameters: ai
           - dialect: lb
-            parameters: ii
+            parameters: ii #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 83
       translations:
         - dialect: msa
           source: hw4
@@ -33,9 +33,10 @@ root:
           text:
             - to go on foot, walk
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 83
+          source: lav
+          source-page: 124
           text:
-            - to walk
+            - walk, go
       derived:
         - text: مَشْي
           derivation: verbal-noun

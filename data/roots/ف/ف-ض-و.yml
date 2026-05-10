@@ -23,7 +23,15 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: diaa
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - become empty
       derived:
         - derivation: verbal-noun
           text: فَضَاء

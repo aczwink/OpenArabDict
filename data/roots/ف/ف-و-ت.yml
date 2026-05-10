@@ -27,10 +27,6 @@ root:
           source: hw4-free-text
           text:
             - to be over, be past
-        - dialect: northlevant
-          source: hw4-free-text
-          text:
-            - to enter, to go in, to come in
       derived:
         - derivation: verbal-noun
           text: فَوْت
@@ -51,3 +47,22 @@ root:
               source-page: 856
               text:
                 - passing, lapse
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: iu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - enter
+            - pass (by)
+        - dialect: southlevant
+          source: wiktionary
+          url: https://en.wiktionary.org/wiki/%D9%81%D8%A7%D8%AA
+          text:
+            - to enter, to go in, to come in [with على ‘into something’]

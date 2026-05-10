@@ -23,12 +23,19 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4
           source-page: 119
           text:
             - to repent, be penitent, do penance
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - repent
       derived:
         - derivation: verbal-noun
           text: تَوْبَة

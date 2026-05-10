@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,6 +18,19 @@ root:
   radicals: ل-غ-و
   words:
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ai
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - cancel
+
+    - type: verb
       dialect: msa
       form: 4
       translations:
@@ -28,11 +41,11 @@ root:
               abolish, abrogate, eliminate (ه s.th.), do away (ه with s.th.)
 
     - type: verb
-      dialect: lb
       form: 7
       translations:
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 90
+          source: lav
+          source-page: 91
           text:
             - to be canceled
 

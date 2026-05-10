@@ -18,10 +18,13 @@ root:
   radicals: ر-د-د
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -29,6 +32,14 @@ root:
             - |-
               1. to send back
               2. to reply (على to s.o.), answer (على s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - reply
+            - answer على
+            - return
+            - bring back
 
     - form: 8
       type: verb

@@ -17,15 +17,29 @@
 root:
   radicals: غ-و-ص
   words:
-    - text: غَوَّاصَة
-      type: noun
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: iu
       translations:
-        - complete: true
-          dialect: msa
-          source: hw4
-          source-page: 805
+        - dialect: lb
+          source: lav
+          source-page: 123
           text:
-            - submarine
+            - dive, submerge
       derived:
-        - derivation: plural
-          text: غَوَّاصَات
+        - derivation: meaning-related
+          text: غَوَّاصَة
+          type: noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 805
+              text:
+                - submarine
+          derived:
+            - derivation: plural
+              text: غَوَّاصَات

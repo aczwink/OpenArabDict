@@ -67,12 +67,19 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4
           source-page: 858
           text:
             - to remember (على s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - remember
 
     - type: verb
       form:

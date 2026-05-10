@@ -22,6 +22,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ai
       type: verb
       translations:
         - dialect: msa
@@ -29,6 +31,11 @@ root:
           source-page: 789
           text:
             - to deceive, fool, mislead, cheat, gull, dupe (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - cheat
       derived:
         - derivation: characteristic-noun
           translations:

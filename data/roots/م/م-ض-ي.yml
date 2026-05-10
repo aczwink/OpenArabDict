@@ -43,6 +43,19 @@ root:
                   translation: the past; past tense, perfect, preterit (gram.)
 
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: ai
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - sign
+
+    - type: verb
       dialect: msa
       form: 4
       translations:

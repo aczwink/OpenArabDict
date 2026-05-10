@@ -97,13 +97,15 @@ root:
 
     - text: مَنِيَّة
       type: noun
-      gender: female
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
           source-page: 1088
           text:
             - fate, destiny, lot
+            - fate of death
+            - death
       derived:
         - derivation: plural
           text: مَنَايَا

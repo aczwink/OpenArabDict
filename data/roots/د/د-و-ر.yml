@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: iu
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,12 @@ root:
           text:
             - to turn, revolve, rotate, move in a circle (حول ,ب ,على around s.th. or s.o.), circle (حول ,ب ,على s.th. or s.o.)
             - to start running, start up (engine)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - turn (tr/intr.)
+            - roam around
       derived:
         - text: دَوْر
           derivation: verbal-noun

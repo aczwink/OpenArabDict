@@ -18,15 +18,23 @@ root:
   radicals: ك-و-ن
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: uu
+        variants:
+          - dialect: msa
+            parameters: uu
+          - dialect: lb
+            parameters: iu #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 76A
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to be
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - be, am, is, are, was, were
       derived:
         - text: مَكَان
           derivation: meaning-related
@@ -40,20 +48,6 @@ root:
           derived:
             - text: أَمَاكِن
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form:
-            stem: 1
-            parameters: iu
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 76A
-              text:
-                - to be
 
     - type: verb
       form: 2

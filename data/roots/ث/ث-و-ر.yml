@@ -18,6 +18,19 @@ root:
   radicals: ث-و-ر
   words:
     - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: iu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - erupt
+
+    - type: verb
       form: 4
       translations:
         - dialect: msa

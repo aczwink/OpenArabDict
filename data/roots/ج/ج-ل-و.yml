@@ -33,7 +33,8 @@ root:
           text:
             - to polish, burnish (ه s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 123
+          source: lav
+          source-page: 123
           text:
             - wash (dishes)
 

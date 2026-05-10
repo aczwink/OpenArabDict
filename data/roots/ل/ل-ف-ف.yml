@@ -18,15 +18,25 @@ root:
   radicals: ل-ف-ف
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1021
           text:
             - to make a round of calls (على on), visit (على people)
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - turn
+            - wrap
 
     - text: مِلَفّ
       type: noun

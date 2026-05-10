@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4
@@ -31,6 +33,13 @@ root:
             - to show, demonstrate, point out (ه على to s.o. s.th.)
             - to lead, guide, direct, conduct (إلى or ه على s.th. to), show s.o. (ه) the way (الى or على to)
             - to show, indicate, mark (على s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - indicate, point to على
+            - show the way
+            - guide
       derived:
         - text: دَلِيل
           derivation: meaning-related

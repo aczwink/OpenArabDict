@@ -21,6 +21,19 @@ root:
       form:
         stem: 1
         variants:
+          - dialect: lb
+            parameters: aa
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - graze
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
           - dialect: msa
             parameters: ai
       translations:

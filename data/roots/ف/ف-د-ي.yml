@@ -52,7 +52,6 @@ root:
                 - redemption, ransoming
 
     - type: verb
-      dialect: msa
       form: 6
       translations:
         - dialect: msa
@@ -61,9 +60,10 @@ root:
           text:
             - to prevent, obviate, avert, avoid (من or ه s.th.)
         - dialect: lb
-          source: free-text
+          source: lav
+          source-page: 130
           text:
-            - to avoid, dodge #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 14 and p. 130
+            - avoid, dodge
       derived:
         - text: تَفَادٍ
           derivation: meaning-related

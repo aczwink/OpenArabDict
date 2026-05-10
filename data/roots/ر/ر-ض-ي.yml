@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: diaa
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,11 @@ root:
           text:
             - to be satisfied, be content (ب ,ه or في with)
             - to approve (ب ,ه or في of), accept, sanction (ب ,ه or في s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - be pleased
       derived:
         - derivation: meaning-related
           text: رِضًا

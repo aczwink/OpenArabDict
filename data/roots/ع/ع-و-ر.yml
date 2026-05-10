@@ -17,6 +17,19 @@
 root:
   radicals: ع-و-ر
   words:
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: lb
+            parameters: iu
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - lend
+
     - form: 4
       type: verb
       translations:

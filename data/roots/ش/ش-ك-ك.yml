@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4
@@ -30,6 +32,11 @@ root:
           text:
             - to doubt (ب or في s.o., s.th.)
             - to be skeptical
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - doubt
       derived:
         - text: شَكّ
           derivation: verbal-noun

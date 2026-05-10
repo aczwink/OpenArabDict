@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4
@@ -34,6 +36,12 @@ root:
             - text: مد اليه يده
               translation: to extend one's hand to s.o., show o.s. conciliatory
               type: example
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - extend
+            - stretch (tr.)
       derived:
         - text: مُدَّة
           derivation: meaning-related

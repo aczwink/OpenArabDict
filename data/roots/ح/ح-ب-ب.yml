@@ -25,16 +25,17 @@ root:
           - dialect: msa
             parameters: ai
           - dialect: lb
-            parameters: ai
+            parameters: ai #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 20
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to love, like
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 20
+          source: lav
+          source-page: 124
           text:
-            - to like
+            - like, love, want
       derived:
         - text: حُبّ
           derivation: verbal-noun

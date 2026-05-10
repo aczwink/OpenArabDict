@@ -25,6 +25,11 @@ root:
           source-page: 1170
           text:
             - to refuse, deny (على ه s.th. to s.o.), dispute, contest (ه على s.th. of s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - deny
 
     - form: 5
       type: verb

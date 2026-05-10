@@ -23,6 +23,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: diaa
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -30,6 +32,11 @@ root:
             - |-
               1. to become expensive, undergo a price raise (merchandise)
               2. to be expensive, be high priced
+        - dialect: lb
+          source: lav
+          source-page: 124
+          text:
+            - become expensive
       derived:
         - derivation: verbal-noun
           text: غَلَاء

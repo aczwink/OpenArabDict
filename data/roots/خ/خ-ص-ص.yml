@@ -55,7 +55,6 @@ root:
                         - especially, in particular
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -63,6 +62,17 @@ root:
           text:
             - to devote in particular, dedicate, assign (ل ه s.th. to)
       derived:
+        - derivation: verbal-noun
+          text: تَخْصِيص
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 280
+              text:
+                - designation, destination (for a purpose)
+                - allotment, apportionment, allocation
+                - reservation
+
         - derivation: passive-participle
           type: adjective
           gender: male

@@ -18,15 +18,23 @@ root:
   radicals: ب-ن-ي
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ai
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to build, erect, construct, set up (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - build
       derived:
         - text: بِنَاء
           derivation: verbal-noun

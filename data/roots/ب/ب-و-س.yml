@@ -22,6 +22,8 @@ root:
         variants:
           - dialect: msa
             parameters: uu
+          - dialect: lb
+            parameters: iu
       type: verb
       translations:
         - complete: true
@@ -30,6 +32,11 @@ root:
           source-page: 100
           text:
             - to kiss (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 122
+          text:
+            - kiss
       derived:
         - derivation: verbal-noun
           text: بَوْس

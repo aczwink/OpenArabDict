@@ -80,12 +80,19 @@ root:
         variants:
           - dialect: msa
             parameters: ia
+          - dialect: lb
+            parameters: ia
       translations:
         - dialect: msa
           source: hw4
           source-page: 673
           text:
             - to reach, catch (ه s.o.), get hold (ه ,ه of s.o., of s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - reach
 
     - type: verb
       form: 4

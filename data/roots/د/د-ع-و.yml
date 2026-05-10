@@ -24,6 +24,8 @@ root:
         variants:
           - dialect: msa
             parameters: au
+          - dialect: lb
+            parameters: ai
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -44,6 +46,11 @@ root:
 
               2. to curse (على s.o.; properly: to invoke God against s.o.), call
               down evil, invoke evil (على upon s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 123
+          text:
+            - pray
       derived:
         - derivation: meaning-related
           text: دَعْوَة
