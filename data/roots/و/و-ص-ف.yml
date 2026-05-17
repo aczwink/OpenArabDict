@@ -58,10 +58,9 @@ root:
               type: noun
               gender: female
               translations: []
+
         - text: وَصْف
           derivation: verbal-noun
-          type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4-free-text
@@ -70,9 +69,20 @@ root:
           derived:
             - text: أَوْصَاف
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
+
+            - derivation: instance-noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1256
+                  text:
+                    - description, depiction, protrayal
+                - dialect: msa
+                  source: wiktionary
+                  text:
+                    - recipe, formula
+                  url: https://en.wiktionary.org/wiki/%D9%88%D8%B5%D9%81%D8%A9
+
     - type: verb
       dialect: msa
       form: 8

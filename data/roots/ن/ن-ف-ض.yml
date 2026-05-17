@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,17 +15,17 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-ط-ط
+  radicals: ن-ف-ض
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
-          - dialect: lb
+          - dialect: msa
             parameters: au
+      type: verb
       translations:
-        - dialect: lb
-          source: lav
-          source-page: 125
+        - dialect: msa
+          source: hw4
+          source-page: 1157
           text:
-            - jump
+            - to shake (ه s.th.), shake off (ه عن s.th. from), shake out, dust, dust off (ه s.th.)

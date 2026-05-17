@@ -139,6 +139,11 @@ root:
           source-page: 159
           text:
             - to pull together into unity (هم people)
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - gather, collect
 
     - type: verb
       dialect: msa

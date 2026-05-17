@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,17 +15,28 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-ط-ط
+  radicals: د-ب-ك
   words:
     - type: verb
       form:
         stem: 1
         variants:
-          - dialect: lb
+          - dialect: msa
             parameters: au
       translations:
-        - dialect: lb
-          source: lav
-          source-page: 125
+        - dialect: msa
+          source: hw4
+          source-page: 313
           text:
-            - jump
+            - to dance the dabka
+      derived:
+        - derivation: meaning-related
+          type: noun
+          text: دَبْكَة
+          translations:
+            - complete: true
+              dialect: sy
+              source: hw4
+              source-page: 313
+              text:
+                - a group dance in which the dancers, lined up with locked arms or holding hands, stamp out the rhythm and sing

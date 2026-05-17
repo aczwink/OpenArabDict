@@ -60,6 +60,11 @@ root:
           source-page: 306
           text:
             - to frighten, scare, alarm, fill with fear (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - frighten, scare
       derived:
         - derivation: verbal-noun
           translations:

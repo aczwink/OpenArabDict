@@ -18,10 +18,13 @@ root:
   radicals: ض-م-م
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
+          - dialect: lb
+            parameters: au
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -37,6 +40,12 @@ root:
               s.th. to), unite(إلى ه s.o., s.th. with)
 
               5. to grasp, grip, grab, seize (على s.o., s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - embrace
+            - bring together
 
     - type: verb
       form: 7

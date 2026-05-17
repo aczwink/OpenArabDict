@@ -17,6 +17,15 @@
 root:
   radicals: ء-ج-ل
   words:
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - postpone
+
     - text: أَجَل
       type: adverb
       translations:

@@ -60,6 +60,12 @@ root:
 
     - form: 2
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - remind
       derived:
         - derivation: verbal-noun
           text: تَذْكِير

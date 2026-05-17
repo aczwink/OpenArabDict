@@ -97,9 +97,13 @@ root:
               translations: []
 
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - prepare
       derived:
         - text: تَحْضِير
           derivation: verbal-noun

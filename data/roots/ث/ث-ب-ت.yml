@@ -36,6 +36,12 @@ root:
 
     - type: verb
       form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - fix (in place), fasten, establish
       derived:
         - text: تَثْبِيت
           derivation: verbal-noun

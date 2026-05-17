@@ -95,6 +95,18 @@ root:
               text:
                 - harm, injury, detriment (jur.)
 
+    - form: 8
+      type: verb
+      derived:
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 629
+              text:
+                - forced, compelled, obliged (الى to)
+
     - text: ضَرُورَة
       type: noun
       gender: female

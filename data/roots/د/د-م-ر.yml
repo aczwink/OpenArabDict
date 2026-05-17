@@ -26,6 +26,11 @@ root:
           source-page: 337
           text:
             - to annihilate, destroy, ruin, demolish, wreck (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - dammage
       derived:
         - derivation: verbal-noun
           text: تَدْمِير

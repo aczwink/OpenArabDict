@@ -63,6 +63,26 @@ root:
               text:
                 - coming, next (e.g., year, month, and the like)
 
+    - form:
+        stem: 1
+        stative: true
+        variants:
+          - dialect: msa
+            parameters: uu
+      type: verb
+      derived:
+        - derivation: active-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 877
+              text:
+                - old, ancient
+          derived:
+            - derivation: plural
+              text: قُدَمَاء
+
     - type: verb
       form: 2
       translations:

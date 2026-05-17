@@ -47,3 +47,12 @@ root:
               type: adjective
               gender: female
               translations: []
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - whiten

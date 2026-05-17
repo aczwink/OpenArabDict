@@ -90,9 +90,13 @@ root:
           translations: []
 
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - set, fix, define
       derived:
         - text: مُحَدَّد
           derivation: meaning-related

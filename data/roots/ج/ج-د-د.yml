@@ -45,6 +45,15 @@ root:
               type: adjective
               gender: female
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - renew
+
     - text: جَدّ
       type: noun
       gender: male

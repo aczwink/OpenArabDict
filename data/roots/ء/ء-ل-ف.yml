@@ -39,8 +39,13 @@ root:
                 - familiar, accustomed
 
     - type: verb
-      dialect: msa
       form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - compose
       derived:
         - derivation: active-participle
           type: noun

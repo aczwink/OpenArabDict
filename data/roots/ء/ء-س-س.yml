@@ -25,6 +25,11 @@ root:
           source-page: 18
           text:
             - to found, establish, set up (ه s.th.), lay the foundation (ه for)
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - found, establish
       derived:
         - text: أَسَاس
           derivation: meaning-related

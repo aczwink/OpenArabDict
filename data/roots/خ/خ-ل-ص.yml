@@ -31,23 +31,22 @@ root:
             - stop, finish, end
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to free
-      derived:
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 2
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 29
-              text:
-                - to finish
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - finish, terminate
+            - finish, end, complete, accomplish
 
     - form: 4
       type: verb

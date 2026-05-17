@@ -59,6 +59,11 @@ root:
           source-page: 105
           text:
             - to make clear, plain, visible, evident (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - demonstrate, show, reveal
 
     - text: بَيْنَ
       type: preposition

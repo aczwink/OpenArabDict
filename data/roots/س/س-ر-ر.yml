@@ -53,7 +53,6 @@ root:
 
     - text: سِرّ
       type: noun
-      gender: male
       translations:
         - dialect: msa
           source: hw4
@@ -61,11 +60,20 @@ root:
           text:
             - secret
 
-    - text: سَرِير
+    - text: سُرَّة
       type: noun
-      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 471
+          text:
+            - navel, umbilicus
+
+    - text: سَرِير
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 471
           text:
             - bedstead, bed

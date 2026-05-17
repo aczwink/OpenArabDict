@@ -64,6 +64,11 @@ root:
           source: hw4-free-text
           text:
             - to change, alter (ه ه s.th. to), convert (ه ه s.th. into)
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - replace
       derived:
         - derivation: verbal-noun
           text: تَبْدِيل

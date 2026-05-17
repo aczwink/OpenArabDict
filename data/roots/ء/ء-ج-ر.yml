@@ -37,6 +37,15 @@ root:
             - text: أُجُور
               derivation: plural
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - rent (ل to)
+
     - form: 4
       type: verb
       derived:

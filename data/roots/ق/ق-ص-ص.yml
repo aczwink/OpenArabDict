@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,45 +18,59 @@ root:
   radicals: ق-ص-ص
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: lb
+            parameters: au
       translations:
-        - dialect: msa
-          source: hw4-free-text
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - cut
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: au
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 896
           text:
             - to relate, narrate, tell (على ه to s.o. s.th.)
       derived:
         - text: قِصَّة
           derivation: meaning-related
           type: noun
-          gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 896
               text:
                 - narrative, tale, story
           derived:
             - text: قِصَص
-              derivation: feminine
-              type: noun
-              gender: female
-              translations: []
+              derivation: plural
 
-    - text: قَصَص
-      type: noun
-      gender: male
-      derived:
-        - text: قَصَصِيّ
-          alias: قِصَصِيّ
-          derivation: nisba
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              url: http://ejtaal.net/aa/#hw4=909
-              text:
-                - narrative, epic(al)
-                - fictional
+        - text: قَصَص
+          #derivation: verbal-noun #TODO
+          derivation: meaning-related
+          type: noun
+          derived:
+            - text: قَصَصِيّ
+              alias: قِصَصِيّ
+              derivation: nisba
+              type: adjective
+              gender: male
+              translations:
+                - dialect: msa
+                  source: hw4
+                  url: http://ejtaal.net/aa/#hw4=909
+                  text:
+                    - narrative, epic(al)
+                    - fictional

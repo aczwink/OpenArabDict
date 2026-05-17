@@ -234,6 +234,7 @@ export class DBBuilder
 
     private DeriveLexicalUnitId(lexemeId: string, pos: OpenArabDictPartOfSpeech)
     {
+        //TODO: has to be also dependent on the sense
         function ShortType()
         {
             switch(pos.type)

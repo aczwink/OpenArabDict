@@ -46,3 +46,12 @@ root:
               source-page: 379
               text:
                 - return
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - give back, return (tr.)

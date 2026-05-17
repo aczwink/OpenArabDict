@@ -90,7 +90,7 @@ export async function AzureTranslator_Translate(translations: OpenArabDictTransl
             for (const subEntry of entry.usage)
             {
                 const translations = [];
-                for (const trans of subEntry.translation)
+                for (const _ of subEntry.translation)
                 {
                     translations.push(resultTexts[0]);
                     resultTexts.Remove(0);

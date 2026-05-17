@@ -49,6 +49,15 @@ root:
                 - deprivation, bereavement, dispossession (of s.o. من of s.th.)
 
     - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - forbid (in religion)
+
+    - type: verb
       dialect: msa
       form: 4
       translations:

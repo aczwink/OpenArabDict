@@ -73,9 +73,16 @@ function MapResult(result: string, inputTranslations: OpenArabDictTranslationEnt
             usage = [];
             for (const u of it.usage)
             {
+                const translations = [];
+                for (const _t of u.translation)
+                {
+                    const line = (u.type === OpenArabDictTranslationUsageType.Example) ? examplesLines.shift()! : contextLines.shift()!;
+                    translations.push(line);
+                }
+
                 usage.push({
                     ...u,
-                    translation: (u.type === OpenArabDictTranslationUsageType.Example ? examplesLines.shift()!.split(" ; ") : contextLines.shift()!.split(" ; ")),
+                    translation: translations,
                 });
             }
         }
@@ -98,7 +105,7 @@ function PackInputToString(translations: OpenArabDictTranslationEntry[])
     if(examples.length > 0)
     {
         texts.push(examplesMarker);
-        texts.push(...examples.map(x => x.translation.join(" ; ")));
+        texts.push(...examples.Values().Map(x => x.translation.Values()).Flatten().ToArray());
     }
 
     const context = GetUsagesByType(translations, OpenArabDictTranslationUsageType.MeaningInContext);
@@ -106,7 +113,7 @@ function PackInputToString(translations: OpenArabDictTranslationEntry[])
     if(context.length > 0)
     {
         texts.push(meaningInContextMarker);
-        texts.push(...context.map(x => x.translation.join(" ; ")));
+        texts.push(...context.Values().Map(x => x.translation.Values()).Flatten().ToArray());
     }
 
     return texts.join("\n");

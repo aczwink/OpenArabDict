@@ -59,9 +59,13 @@ root:
                   text:
                     - caloric
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - liberate
       derived:
         - text: تَحْرِير
           derivation: verbal-noun

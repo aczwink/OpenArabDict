@@ -59,6 +59,12 @@ root:
 
     - form: 2
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - improve (tr.), make better
       derived:
         - derivation: verbal-noun
           text: تَحْسِين

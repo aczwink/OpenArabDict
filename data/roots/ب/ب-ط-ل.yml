@@ -64,3 +64,12 @@ root:
           derived:
             - derivation: plural
               text: أَبْطَال
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 125
+          text:
+            - quit

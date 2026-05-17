@@ -69,6 +69,11 @@ root:
           source-page: 261
           text:
             - to notify, advise, apprise, inform, tell (ه s.o., ب of or about)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - tell, inform
 
     - type: verb
       form: 4
