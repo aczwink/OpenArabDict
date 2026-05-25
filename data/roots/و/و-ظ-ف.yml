@@ -19,6 +19,12 @@ root:
   words:
     - form: 2
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - employ
       derived:
         - derivation: verbal-noun
           text: تَوْظِيف
@@ -28,6 +34,15 @@ root:
               source-page: 1266
               text:
                 - employment, appointment (to an office)
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - obtain employment
 
     - text: وَظِيفَة
       type: noun

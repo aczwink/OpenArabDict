@@ -73,7 +73,6 @@ root:
                 - attainment, obtainment, achievement
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -81,6 +80,11 @@ root:
           text:
             - to get, take, bring, move, lead, show, conduct, convey, channel
               (إلى ه , ه s.o., s.th. to)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - deliver
       derived:
         - text: تَوْصِيل
           derivation: verbal-noun

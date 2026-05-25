@@ -49,6 +49,11 @@ root:
           text:
             - to shape, fashion, form, create, mold, organize, build up (ه s.th.)
             - to diversify, vary, variegate (ه s.th.), bring variety (ه into s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - form
 
     - type: verb
       dialect: msa

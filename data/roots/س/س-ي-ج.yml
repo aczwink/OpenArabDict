@@ -19,6 +19,12 @@ root:
   words:
     - type: verb
       form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - fence in
       derived:
         - text: سِيَاج
           derivation: meaning-related

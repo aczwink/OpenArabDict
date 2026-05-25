@@ -74,6 +74,15 @@ root:
           text:
             - same as كَمَلَ / يَكْمُل
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - continue
+
     - form: 8
       type: verb
       derived:

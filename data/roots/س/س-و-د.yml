@@ -48,9 +48,13 @@ root:
               gender: female
 
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - blacken
       derived:
         - text: أَسْوَد
           derivation: meaning-related

@@ -56,6 +56,11 @@ root:
           source-page: 1240
           text:
             - to take leave (ه of), say farewell (ه to s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - bid farewell
       derived:
         - text: وَدَاع
           derivation: meaning-related

@@ -58,3 +58,12 @@ root:
               source-page: 12
               text:
                 - well-bred, well-mannered, civil, urbane
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - behave

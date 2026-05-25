@@ -39,6 +39,11 @@ root:
           source-page: 566
           text:
             - to rob, plunder (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - undress (tr.)
       derived:
         - text: تَشْلِيح
           derivation: verbal-noun

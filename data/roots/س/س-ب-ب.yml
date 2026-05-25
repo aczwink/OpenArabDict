@@ -64,7 +64,6 @@ root:
               derivation: plural
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -72,6 +71,11 @@ root:
           text:
             - to cause, provoke, arouse, produce, bring about, effect, occasion
               (ه s.th.), give occasion (ه to s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - cause
       derived:
         - text: سَبَب
           derivation: meaning-related

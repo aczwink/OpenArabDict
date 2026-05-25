@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,19 +18,28 @@ root:
   radicals: م-ر-ح
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: ia
-      translations: []
+        variants:
+          - dialect: msa
+            parameters: ia
       derived:
         - text: مَرَح
           derivation: verbal-noun
-          type: noun
-          gender: male
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 1058
+              text:
+                - joy, cheerfulness, gaiety, glee, mirth, hilarity, merriment, liveliness
+
+        - derivation: meaning-related
+          text: مَرِح
+          type: adjective
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 1058
               text:
-                - joy, cheerfulness, gaiety, glee, mirth, hilarity, merriment,
-                  liveliness
+                - joyful, gay, happy, merry, cheerful, lively, romping, hilarious, exuberant

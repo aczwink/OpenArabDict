@@ -74,10 +74,15 @@ root:
           text:
             - to move out, take out, get out, bring out, dislodge (ه s.o., ه
               s.th.)
+
     - type: verb
-      dialect: msa
       form: 5
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - graduate (from مِن)
       derived:
         - text: تَخَرُّج
           derivation: verbal-noun

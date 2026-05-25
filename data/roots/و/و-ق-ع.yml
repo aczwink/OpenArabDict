@@ -86,6 +86,12 @@ root:
           source-page: 1276
           text:
             - to sign (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - drop
+            - sign
 
     - type: verb
       dialect: msa
@@ -97,7 +103,6 @@ root:
             - to let fall, drop (ه, ه s.o., s.th.)
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -105,3 +110,8 @@ root:
           url: http://ejtaal.net/aa/#hw4=1290
           text:
             - to expect, anticipate (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - expect

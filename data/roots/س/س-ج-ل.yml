@@ -26,6 +26,11 @@ root:
           text:
             - to register, enter (ه s.th.), make an entry (ه of s.th)
             - to note down, record (ه s.th.), make a note of (ه)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - record
       derived:
         - derivation: verbal-noun
           text: تَسْجِيل
@@ -36,3 +41,12 @@ root:
               text:
                 - entering, entry, registration
                 - booking
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - enroll

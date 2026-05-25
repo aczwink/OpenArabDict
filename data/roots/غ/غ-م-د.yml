@@ -29,3 +29,12 @@ root:
           source-page: 121
           text:
             - (eyes) close (intr.)
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - close (eyes)

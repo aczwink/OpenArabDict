@@ -179,6 +179,11 @@ root:
           text:
             - to teach (ب ه or ه ه s.o. s.th.), instruct, brief (ب ه or ه ه s.o.
               in s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - teach
       derived:
         - text: تَعْلِيم
           derivation: verbal-noun
@@ -271,9 +276,10 @@ root:
           text:
             - to learn, study (ه s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 12
+          source: lav
+          source-page: 129
           text:
-            - to learn
+            - learn, study
 
     - text: مَعْلَم
       type: noun

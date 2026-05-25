@@ -18,9 +18,13 @@ root:
   radicals: ع-ي-ن
   words:
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - appoint
       derived:
         - text: مُعَيَّن
           derivation: meaning-related

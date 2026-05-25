@@ -44,3 +44,22 @@ root:
                 - text: سابقا - لاحقا
                   translation: previously - later on, at first - subsequently
                   type: meaning-in-context
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - manage (to do)
+            - catch up with
+
+    - type: verb
+      form: 3
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - chase, pursue

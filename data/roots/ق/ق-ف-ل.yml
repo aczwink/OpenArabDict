@@ -17,6 +17,15 @@
 root:
   radicals: ق-ف-ل
   words:
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - lock
+
     - form: 4
       type: verb
       derived:

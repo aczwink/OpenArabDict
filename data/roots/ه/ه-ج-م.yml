@@ -53,6 +53,11 @@ root:
           source: hw4-free-text
           text:
             - to attack
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - assault, attack
       derived:
         - text: مُهَاجَمَة
           derivation: verbal-noun

@@ -66,3 +66,13 @@ root:
           url: https://en.wiktionary.org/wiki/%D9%81%D8%A7%D8%AA
           text:
             - to enter, to go in, to come in [with على ‘into something’]
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - let in, admit
+            - put in

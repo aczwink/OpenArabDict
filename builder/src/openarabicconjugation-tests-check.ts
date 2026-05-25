@@ -230,6 +230,17 @@ function Checklexeme(lexeme: OpenArabDictLexeme, unit: OpenArabDictLexicalUnit, 
         }
     }
 
+    //test: arb/doubly_weak/r1waw_r3ya_stem2.js
+    if(isVerbalNoun)
+    {
+        const root = doc.roots.find(x => x.id === verb.rootId)!;
+
+        if((verb.form.stem === 2) && (root?.radicals === "وعي"))
+        {
+            console.log("FOUND171882389479298234", lexeme);
+        }
+    }
+
     //test: arb/doubly_weak/r1waw_r3ya_stem5.js
     if(isVerbalNoun)
     {

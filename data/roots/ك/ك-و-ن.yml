@@ -51,6 +51,12 @@ root:
 
     - type: verb
       form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - create, form
       derived:
         - derivation: verbal-noun
           translations:
@@ -73,6 +79,15 @@ root:
           derived:
             - text: مُكَوِّنَات
               derivation: plural
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - be composed of
 
     - text: كَوْن
       type: noun

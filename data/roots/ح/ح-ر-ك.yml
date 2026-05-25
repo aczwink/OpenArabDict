@@ -44,6 +44,11 @@ root:
           source-page: 200
           text:
             - to start moving, get moving
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - move (intr.)
       derived:
         - derivation: verbal-noun
           type: noun

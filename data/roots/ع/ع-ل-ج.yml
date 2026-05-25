@@ -25,6 +25,11 @@ root:
           source-page: 741
           text:
             - to treat (ه s.o., a patient; ه a disease, also a subject)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - cure, treat
       derived:
         - text: عِلَاج
           derivation: verbal-noun

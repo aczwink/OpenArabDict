@@ -61,9 +61,10 @@ root:
               check, stunt, obstruct, trammel, hamper, slow down (ه, ه s.o.,
               s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 96
+          source: lav
+          source-page: 128
           text:
-            - to stop
+            - stop (tr./intr.)
 
     - type: verb
       dialect: msa

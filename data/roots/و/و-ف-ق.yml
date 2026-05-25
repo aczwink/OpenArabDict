@@ -54,14 +54,19 @@ root:
               text:
                 - success (granted by God), happy outcome, good fortune, good
                   luck, prosperity, successfulness, succeeding
+
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to agree (ه with s.th., ه with s.o., في or على in s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - approve of
 
     - form: 6
       type: verb

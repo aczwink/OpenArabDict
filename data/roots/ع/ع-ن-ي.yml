@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -37,6 +37,11 @@ root:
           source-page: 762
           text:
             - to suffer (ه from), be afflicted (ه with)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - suffer
       derived:
         - derivation: verbal-noun
           type: noun

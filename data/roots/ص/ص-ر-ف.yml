@@ -52,13 +52,28 @@ root:
                     - expenses, expenditures, costs
 
     - type: verb
-      dialect: msa
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - change money
+            - break a bill, make change
+            - inflect, conjugate, decline
+
+    - type: verb
       form: 5
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to behave, act, conduct o.s., comport o.s.
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - behave
       derived:
         - derivation: verbal-noun
           type: noun

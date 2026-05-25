@@ -18,13 +18,17 @@ root:
   radicals: ن-ظ-م
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to organize (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - organize
       derived:
         - text: تَنْظِيم
           derivation: verbal-noun

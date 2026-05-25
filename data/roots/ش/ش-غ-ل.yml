@@ -42,6 +42,12 @@ root:
           source-page: 556
           text:
             - to busy, occupy (ه s.o.), engage, engross (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - operate, make work
+            - hire, employ
 
     - type: verb
       dialect: msa

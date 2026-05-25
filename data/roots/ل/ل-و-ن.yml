@@ -19,6 +19,12 @@ root:
   words:
     - form: 2
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - color
       derived:
         - derivation: passive-participle
           type: adjective

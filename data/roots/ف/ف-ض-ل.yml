@@ -83,6 +83,11 @@ root:
           text:
             - to prefer (على ه, ه s.o., s.th. to s.o., to s.th.), like better
               (ه, ه s.o., s.th., على than)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - prefer
       derived:
         - derivation: verbal-noun
           text: تَفْضِيل

@@ -26,6 +26,15 @@ root:
           text:
             - delay (tr.)
 
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - be late
+
     - text: آخَر
       type: adjective
       gender: male

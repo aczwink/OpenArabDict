@@ -31,6 +31,11 @@ root:
             - text: ادى السلام
               translation: to greet, salute
               type: meaning-in-context
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - perform, carry out
       derived:
         - text: أَدَاء
           derivation: verbal-noun

@@ -25,6 +25,11 @@ root:
           text:
             - to distinguish, set aside, cause to stand out (ه, ه s.o., s.th.,
               عن from)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - distinguish
       derived:
         - derivation: passive-participle
           type: adjective

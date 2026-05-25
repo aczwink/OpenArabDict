@@ -80,6 +80,11 @@ root:
           source-page: 948
           text:
             - to make great(er), big(ger), large(r), enlarge, magnify, enhance, aggrandize (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - enlarge
       derived:
         - text: تَكْبِير
           derivation: verbal-noun

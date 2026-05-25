@@ -17,10 +17,27 @@
 root:
   radicals: ف-ر-ج
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          text: فَرْج
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 822
+              text:
+                - pudendum of the female, vulva
+
     - form: 5
       type: verb
       translations:
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; page 130
+          source: lav
+          source-page: 130
           text:
             - watch على

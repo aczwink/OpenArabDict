@@ -55,3 +55,12 @@ root:
           source-page: 126
           text:
             - give back, return (tr.)
+
+    - type: verb
+      form: 3
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - check, revise, review

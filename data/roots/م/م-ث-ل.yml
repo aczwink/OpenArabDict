@@ -71,6 +71,12 @@ root:
           text:
             - to play, act (دورا a part or role), star (دورا in a role)
             - to stage, perform (ه a play)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - act, perform
+            - represent
       derived:
         - text: تَمْثِيل
           derivation: verbal-noun

@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,9 +18,13 @@ root:
   radicals: ر-ف-ق
   words:
     - type: verb
-      dialect: msa
       form: 3
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - accompany
       derived:
         - text: مُرَافِق
           derivation: active-participle
@@ -31,6 +35,7 @@ root:
               source: hw4-free-text
               text:
                 - companion, attendant
+
     - text: رَفِيق
       type: noun
       gender: male

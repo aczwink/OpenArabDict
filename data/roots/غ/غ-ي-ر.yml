@@ -18,13 +18,17 @@ root:
   radicals: غ-ي-ر
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to alter, modify, make different (من or ه s.th.), change (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - change (tr.)
       derived:
         - text: تَغْيِير
           derivation: verbal-noun
@@ -35,15 +39,6 @@ root:
               source: hw4-free-text
               text:
                 - change, replacement, relief
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 2
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 64
-              text:
-                - to change
 
     - type: verb
       form: 5
@@ -54,6 +49,11 @@ root:
           source-page: 808
           text:
             - to be altered, be modified, be changed, change, alter, vary, undergo an alteration or change
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - change (intr.)
       derived:
         - derivation: verbal-noun
           translations:

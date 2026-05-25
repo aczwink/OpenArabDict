@@ -29,3 +29,12 @@ root:
           source-page: 381
           text:
             - to ask (ه for s.th., من or ه s.o., ان to do s.th.), request (ه s.th., من from s.o., ان that he ...)
+
+    - type: verb
+      form: 5
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - beg, plead

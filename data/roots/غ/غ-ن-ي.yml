@@ -33,14 +33,19 @@ root:
               source: hw4-free-text
               text:
                 - rich (ب in), wealthy, prosperous, well-to-do
+
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to sing (ب or هs.th., ه ه to s.o. s.th.), chant (ب or ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - sing
 
     - form: 4
       type: verb

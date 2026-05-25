@@ -51,7 +51,6 @@ root:
                   2. walk
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -59,3 +58,8 @@ root:
           url: https://ejtaal.net/aa/#hw4=1081
           text:
             - to go on foot, walk
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - go for a walk

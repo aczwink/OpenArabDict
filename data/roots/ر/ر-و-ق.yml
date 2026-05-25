@@ -40,3 +40,12 @@ root:
           source-page: 123
           text:
             - calm down
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - have breakfast

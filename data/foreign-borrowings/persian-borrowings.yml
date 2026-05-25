@@ -67,6 +67,15 @@ words:
         text:
           - trousers, pants
 
+  - text: كُسّ
+    type: noun
+    translations:
+      - dialect: northlevant
+        source: wiktionary
+        url: https://en.wiktionary.org/wiki/%D9%83%D8%B3
+        text:
+          - (vulgar) pussy, cunt
+
   - text: نَارَنْج
     type: noun
     translations:

@@ -50,6 +50,11 @@ root:
           text:
             - to afflict, pain, torment, try, agonize, rack (ه s.o.)
             - to torture (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - torture
       derived:
         - derivation: meaning-related
           gender: male

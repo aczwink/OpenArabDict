@@ -113,8 +113,8 @@ root:
               source: hw4-free-text
               text:
                 - transformation, transmutation, conversion (إلى into s.th.)
+
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
@@ -122,6 +122,12 @@ root:
           text:
             - to try, attempt, endeavor (ه s.th., ان to do s.th.), make an
               attempt, make an effort (ان to do s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - try
+            - attempt
       derived:
         - text: مُحَاوَلَة
           derivation: meaning-related
@@ -157,6 +163,11 @@ root:
           text:
             - to change, undergo a change
             - to withdraw, go away, leave
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - change, turn into
       derived:
         - derivation: verbal-noun
           type: noun

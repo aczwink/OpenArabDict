@@ -52,3 +52,12 @@ root:
           derived:
             - derivation: plural
               text: حِكَايَات
+
+    - type: verb
+      form: 3
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - talk

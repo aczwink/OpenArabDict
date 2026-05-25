@@ -86,6 +86,15 @@ root:
               text: مَقَاطِع
 
     - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - cut
+
+    - type: verb
       form: 3
       translations: []
       derived:

@@ -56,7 +56,6 @@ root:
                 - side
 
     - type: verb
-      dialect: msa
       form: 5
       translations:
         - dialect: msa
@@ -64,6 +63,11 @@ root:
           source-page: 164
           text:
             - to avoid (ه s.th., ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - avoid
       derived:
         - derivation: verbal-noun
           gender: male

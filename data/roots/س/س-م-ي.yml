@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,7 +18,6 @@ root:
   radicals: س-م-ي
   words:
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -26,6 +25,11 @@ root:
           text:
             - to name, call, designate, denominate (ه, ه s.o., s.th., ب or ه by
               or with a name), give a name (ه, ه to s.o., to s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - name, call
       derived:
         - text: تَسْمِيَة
           derivation: verbal-noun
@@ -36,3 +40,12 @@ root:
               source: hw4-free-text
               text:
                 - naming, appellation, designation, name, denomination
+
+    - type: verb
+      form: 5
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - be named, be called

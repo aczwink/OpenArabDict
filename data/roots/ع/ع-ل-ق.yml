@@ -42,6 +42,11 @@ root:
           source-page: 741
           text:
             - to hang, suspend (على or ه ب s.th. on), attach, hitch, fasten, affix, tie (ه s.th. على or ب to)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - hang (tr.)
       derived:
         - derivation: verbal-noun
           text: تَعْلِيق

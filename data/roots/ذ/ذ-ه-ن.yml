@@ -25,3 +25,13 @@ root:
           source-page: 363
           text:
             - mind
+      derived:
+        - derivation: nisba
+          text: ذِهْنِيّ
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 363
+              text:
+                - mental, intellectual

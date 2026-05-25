@@ -43,6 +43,11 @@ root:
           text:
             - to quarrel, wrangle, bicker (ه with s.o.)
             - to argue, debate (ه with s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - argue (about على)
       derived:
         - derivation: meaning-related
           text: جَدَل

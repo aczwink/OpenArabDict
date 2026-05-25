@@ -45,6 +45,16 @@ root:
               text:
                 - group, troop, band, gang
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - become angry
+            - bandage
+
     - text: عَصَب
       type: noun
       gender: male

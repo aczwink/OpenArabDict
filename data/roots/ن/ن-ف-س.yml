@@ -64,6 +64,15 @@ root:
               type: noun
               gender: female
 
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - breathe
+
     - text: نَفْس
       type: noun
       gender: female

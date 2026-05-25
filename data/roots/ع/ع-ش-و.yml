@@ -18,15 +18,24 @@ root:
   radicals: ع-ش-و
   ya: true
   words:
-    - text: عَشَاء
-      type: noun
-      gender: male
+    - type: verb
+      form: 5
       translations:
-        - dialect: msa
-          source: hw4
-          source-page: 719
+        - dialect: lb
+          source: lav
+          source-page: 130
           text:
-            - dinner, supper
+            - have dinner
+      derived:
+        - derivation: meaning-related
+          text: عَشَاء
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 719
+              text:
+                - dinner, supper
 
     - text: عَشْوَاء
       type: noun

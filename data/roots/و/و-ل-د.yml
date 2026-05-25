@@ -90,6 +90,15 @@ root:
           text:
             - to be born
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - give birth
+
     - text: مِيلَاد
       type: noun
       gender: male

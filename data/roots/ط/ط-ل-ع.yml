@@ -53,6 +53,25 @@ root:
                 - rising, going up, ascending, ascension
 
     - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - take out
+            - take up (stairs)
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - look at في/بِ
+
+    - type: verb
       dialect: msa
       form: 8
       derived:

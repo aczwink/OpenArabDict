@@ -69,6 +69,16 @@ root:
           text:
             - to do, to make
 
+    - type: verb
+      form: 3
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - equal
+            - do
+
 #TODO Error: Can't be conjugated.
     #at LebaneseConjugator.Conjugate
     # - form: 6

@@ -90,6 +90,15 @@ root:
               text:
                 - chosen, set aside, earmarked, designated, destined (ل for)
 
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - major (in بِ), specialize (in بِ)
+
     - type: verb
       dialect: msa
       form: 8

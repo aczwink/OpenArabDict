@@ -65,6 +65,12 @@ root:
           source-page: 495
           text:
             - to hand over, turn over, surrender (ه ,ه s.o., s.th., ل or إلى to s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - deliver
+            - greet على
       derived:
         - text: تَسْلِيم
           derivation: verbal-noun

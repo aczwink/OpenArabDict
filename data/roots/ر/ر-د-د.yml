@@ -41,6 +41,15 @@ root:
             - return
             - bring back
 
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - hesitate
+
     - form: 8
       type: verb
       translations:

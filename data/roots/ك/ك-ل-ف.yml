@@ -25,6 +25,11 @@ root:
           source-page: 980
           text:
             - to cost (ه ه s.o. a certain amount)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - cost (intr.)
       derived:
         - text: تَكْلِيف
           derivation: verbal-noun

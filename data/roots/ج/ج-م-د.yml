@@ -26,6 +26,11 @@ root:
           text:
             - to freeze, become frozen, turn into ice, freeze up, become icebound
             - to freeze to death
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - freeze (intr.)
       derived:
         - derivation: active-participle
           type: adjective

@@ -102,6 +102,15 @@ root:
               source-page: 95
               text:
                 - ending in declinably (على in; gram.)
+
+    - type: verb
+      form: 5
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - adopt
         
     - text: اِبْن
       type: noun

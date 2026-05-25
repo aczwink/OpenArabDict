@@ -61,9 +61,13 @@ root:
               derivation: plural
 
     - type: verb
-      dialect: msa
       form: 2
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - pick up, give a ride to
       derived:
         - text: تَرْكِيب
           derivation: verbal-noun

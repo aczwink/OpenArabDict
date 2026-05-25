@@ -753,14 +753,7 @@ words:
         source: hw4-free-text
         text:
           - whore, harlot, prostitute
-  - text: كُسّ
-    type: noun
-    gender: male
-    translations:
-      - dialect: sy
-        source: hw4-free-text
-        text:
-          - (vulgar) pussy
+
   - text: هَلَّأ
     type: adverb
     translations:

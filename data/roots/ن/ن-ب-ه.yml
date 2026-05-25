@@ -18,6 +18,15 @@ root:
   radicals: ن-ب-ه
   words:
     - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - warn
+
+    - type: verb
       form: 8
       translations:
         - dialect: msa

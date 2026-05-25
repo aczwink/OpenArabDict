@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -17,6 +17,25 @@
 root:
   radicals: ك-ت-ف
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+      type: verb
+      derived:
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 953
+              text: []
+              usage:
+                - text: مكتوف اليدين
+                  translation: with arms crossed
+                  type: meaning-in-context
+
     - text: كَتِف
       alias: كِتْف
       type: noun

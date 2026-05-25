@@ -76,10 +76,14 @@ root:
                   gender: female
                   translations: []
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to correct, emend, rectify (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - correct

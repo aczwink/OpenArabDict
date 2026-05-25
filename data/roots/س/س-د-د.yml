@@ -42,3 +42,12 @@ root:
               text:
                 - jammed, blocked (street)
                 - closed (circuit; el.)
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - settle, pay off (debt)

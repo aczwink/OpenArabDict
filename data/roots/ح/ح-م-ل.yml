@@ -129,6 +129,11 @@ root:
           source-page: 241
           text:
             - to bear, assume, take upon o.s. (ه s.th., e.g., النفقات the expenses, المسؤولية the responsibility)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - bear, endure, tolerate
 
     - type: verb
       form: 8

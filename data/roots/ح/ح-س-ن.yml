@@ -93,3 +93,12 @@ root:
               source: hw4-free-text
               text:
                 - beneficent, charitable
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - improve (intr.), get better

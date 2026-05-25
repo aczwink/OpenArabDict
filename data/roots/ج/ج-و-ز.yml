@@ -51,6 +51,15 @@ root:
               text:
                 - vacation, leave (of absence)
 
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - get married (to)
+
     - type: verb
       form: 6
       translations:

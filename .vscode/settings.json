@@ -6,7 +6,8 @@
             "/data/countries/*.yml",
             "/data/dialectal/*.yml",
             "/data/foreign-borrowings/*.yml",
-            "/data/*.yml"
+            "/data/*.yml",
+            "as"
         ]
     }
 }

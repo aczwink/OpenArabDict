@@ -60,6 +60,15 @@ root:
                 - laugher
 
     - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - make laugh
+
+    - type: verb
       dialect: msa
       form: 4
       translations: []

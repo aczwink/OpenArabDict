@@ -51,6 +51,11 @@ root:
             - to argue, dispute (ه with s.o.)
             - to discuss (ه s.th.)
             - to debate (ه a question)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - discuss
       derived:
         - text: مُنَاقَشَة
           derivation: verbal-noun

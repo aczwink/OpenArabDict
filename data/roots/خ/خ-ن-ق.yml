@@ -18,6 +18,16 @@ root:
   radicals: خ-ن-ق
   words:
     - type: verb
+      form: 3
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - fight with
+            - argue with
+
+    - type: verb
       dialect: msa
       form: 6
       translations:

@@ -41,3 +41,12 @@ root:
               source-page: 20
               text:
                 - distressing, sad, regretable
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - be sorry, regret

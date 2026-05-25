@@ -62,9 +62,10 @@ root:
           text:
             - to shut, close, lock, bolt (ه s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 45
+          source: lav
+          source-page: 126
           text:
-            - to close
+            - close (tr.), shut (tr.)
 
     - type: verb
       form: 2
@@ -108,3 +109,12 @@ root:
                           source: hw4-free-text
                           text:
                             - sweetmeats, candy
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - close (intr.)

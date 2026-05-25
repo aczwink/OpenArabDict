@@ -28,3 +28,12 @@ root:
               source-page: 477
               text:
                 - even, level, flat
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - nap

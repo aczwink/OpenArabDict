@@ -36,3 +36,12 @@ root:
               source-page: 1168
               text:
                 - purity
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - pick, choose, select

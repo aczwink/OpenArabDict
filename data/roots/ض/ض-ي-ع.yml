@@ -64,6 +64,11 @@ root:
           source-page: 640
           text:
             - to waste, squander, spend uselessly (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - lose
 
     - form:
         stem: 4

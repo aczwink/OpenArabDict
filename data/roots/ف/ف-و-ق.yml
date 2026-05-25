@@ -93,6 +93,15 @@ root:
           text:
             - to wake up
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - remind
+
     - form: 4
       type: verb
       translations:

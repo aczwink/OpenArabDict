@@ -62,9 +62,17 @@ root:
               derived:
                 - text: عُلْيَا
                   derivation: feminine
-                  type: adjective
-                  gender: female
-                  translations: []
+
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - turn up (volume)
+            - make high
+
     - type: verb
       dialect: msa
       form: 6

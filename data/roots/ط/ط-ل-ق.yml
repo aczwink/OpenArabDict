@@ -18,6 +18,15 @@ root:
   radicals: ط-ل-ق
   words:
     - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - divorce
+
+    - type: verb
       form: 4
       translations:
         - dialect: msa
@@ -57,6 +66,15 @@ root:
               source-page: 664
               text:
                 - unlimited, unrestricted, absolute
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - get divorced
 
     - type: verb
       form: 7

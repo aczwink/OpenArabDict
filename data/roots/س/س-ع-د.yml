@@ -73,7 +73,6 @@ root:
               translations: []
 
     - type: verb
-      dialect: msa
       form: 3
       translations:
         - dialect: msa
@@ -81,6 +80,11 @@ root:
           text:
             - to help, aid, assist (ه s.o., في or على in, with), give s.o. (ه) a
               hand (في or على in)
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - help, assist
       derived:
         - text: مُسَاعَدَة
           derivation: verbal-noun
@@ -95,12 +99,3 @@ root:
           derived:
             - derivation: plural
               text: مُسَاعَدَات
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 3
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 41
-              text:
-                - to help

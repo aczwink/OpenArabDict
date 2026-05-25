@@ -61,6 +61,14 @@ root:
                   translation: widespread
                   type: example
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - widen
 
     - type: verb
       dialect: msa

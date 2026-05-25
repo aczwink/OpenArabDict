@@ -47,6 +47,15 @@ root:
               text:
                 - consciousness
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - wake (up), rouse
+
     - text: وِعَاء
       type: noun
       translations:

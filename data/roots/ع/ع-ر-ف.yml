@@ -67,7 +67,6 @@ root:
                 - favor rendered, courtesy, mark of friendship
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
@@ -75,6 +74,11 @@ root:
           source-page: 708
           text:
             - to introduce (إلى or ه ب s.o. to s.o. else), present (ب or ب إلى ,ه إلى s.o. to s.o. else)
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - introduce (someone to على)
       derived:
         - text: تَعْرِيف
           derivation: verbal-noun
@@ -94,9 +98,13 @@ root:
               translations: []
 
     - type: verb
-      dialect: msa
       form: 5
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - meet, be acquainted with
       derived:
         - text: تَعَرُّف
           derivation: verbal-noun

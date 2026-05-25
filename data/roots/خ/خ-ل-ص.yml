@@ -74,6 +74,11 @@ root:
           source-page: 295
           text:
             - to rid o.s. (من of), free o.s. (من from), get rid (من of)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - get rid of مِن
       derived:
         - text: تَخَلُّص
           derivation: verbal-noun

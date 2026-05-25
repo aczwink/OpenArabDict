@@ -45,6 +45,15 @@ root:
             - text: نُقُود
               derivation: plural
 
+    - type: verb
+      form: 2
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 126
+          text:
+            - carry out, perform
+
     - form: 8
       type: verb
       translations:

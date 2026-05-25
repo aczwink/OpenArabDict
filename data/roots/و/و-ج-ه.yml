@@ -71,6 +71,11 @@ root:
           source-page: 1233
           text:
             - to face (ه e.g., a problem), be faced (ه with), find o.s. in the face of (ه)
+        - dialect: lb
+          source: lav
+          source-page: 129
+          text:
+            - face
       derived:
         - derivation: verbal-noun
           text: مُوَاجَهَة
@@ -93,6 +98,11 @@ root:
           text:
             - to betake o.s., repair, go, wend one's way (نحو or إلى to), head (نحو or إلى for), bend one's steps (نحو or إلى toward)
             - to turn one's face, turn (ل or إلى to s.o.), face (ل or إلى s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - head toward ل
       derived:
         - text: تَوَجُّه
           derivation: verbal-noun
