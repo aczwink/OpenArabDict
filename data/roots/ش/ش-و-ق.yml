@@ -48,6 +48,12 @@ root:
           source-page: 577
           text:
             - to long, yearn (إلى or ه ,ه for), crave, covet, desire, ardently (إلى or ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - miss
+            - long for
       derived:
         - derivation: verbal-noun
           translations:

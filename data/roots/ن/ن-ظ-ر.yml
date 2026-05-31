@@ -118,6 +118,11 @@ root:
           source-page: 1144
           text:
             - to wait (ه for s.o.), expect (ه ,ه s.o., s.th.), await, anticipate (ه s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - wait
       derived:
         - derivation: verbal-noun
           translations:

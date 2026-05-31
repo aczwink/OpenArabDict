@@ -81,8 +81,8 @@ root:
               text:
                 - عبارة عن consisting in; tantamount to, equivalent to, meaning
                   ...
+                  
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -90,3 +90,8 @@ root:
           text:
             - to consider, weigh, take into account or consideration (ه s.th.),
               allow, make allowances (ه for s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - consider

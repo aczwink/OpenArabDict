@@ -78,13 +78,18 @@ root:
             - to agree, concur with one another, be in conformity
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to agree, come to an agreement, reach an agreement
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - agree (with مع)
+            - get along with مع
       derived:
         - derivation: verbal-noun
           type: noun

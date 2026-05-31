@@ -62,3 +62,12 @@ root:
               source-page: 651
               text:
                 - pursuit, chase
+
+    - form: 7
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - get fired

@@ -56,3 +56,12 @@ root:
           source-page: 125
           text:
             - whiten
+
+    - type: verb
+      form: 9
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - become white, become pale

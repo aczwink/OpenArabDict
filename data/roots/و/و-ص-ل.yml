@@ -148,7 +148,6 @@ root:
                 - continuity
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -157,6 +156,12 @@ root:
             - |-
               1. to be joined (ب to), be connected (ب with)
               2. to get in touch (ب with s.o., also, e.g., by telephone)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - contact مع/بِ
+            - connect مع/بِ
       derived:
         - derivation: verbal-noun
           type: noun

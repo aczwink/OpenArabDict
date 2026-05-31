@@ -40,6 +40,11 @@ root:
           source-page: 1045
           text:
             - to enjoy, savor, relish (ب s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - enjoy
       derived:
         - derivation: verbal-noun
           translations:

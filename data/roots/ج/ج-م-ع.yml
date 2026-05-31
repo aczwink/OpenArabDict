@@ -153,14 +153,19 @@ root:
           source: hw4-free-text
           text:
             - to gather
+
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to come together, meet, join
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - meet (with مع)
       derived:
         - text: مُجْتَمَع
           derivation: meaning-related

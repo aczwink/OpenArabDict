@@ -87,6 +87,12 @@ root:
 
     - form: 8
       type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - commit (a crime)
       derived:
         - derivation: verbal-noun
           translations:

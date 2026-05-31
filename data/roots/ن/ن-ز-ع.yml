@@ -49,3 +49,12 @@ root:
           source-page: 119
           text:
             - spoil, ruin (tr.)
+
+    - form: 8
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - go bad, spoil (intr.), become ruined

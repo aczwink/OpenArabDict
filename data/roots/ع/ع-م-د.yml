@@ -52,6 +52,11 @@ root:
           source-page: 751
           text:
             - to rely, depend (ه ,ه or على on s.o., on s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - depend on على
 
     - text: عَمُود
       type: noun

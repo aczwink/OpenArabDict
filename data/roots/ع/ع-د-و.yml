@@ -82,6 +82,15 @@ root:
               text:
                 - contagious, infectious
 
+    - form: 8
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - assault, attack على
+
     - text: عَدَا
       type: preposition
       translations:

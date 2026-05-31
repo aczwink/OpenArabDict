@@ -53,6 +53,11 @@ root:
           source-page: 855
           text:
             - to reach an understanding, come to an agreement, come to terms (مع with, على in, about)
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - understand each other
       derived:
         - derivation: verbal-noun
           type: noun

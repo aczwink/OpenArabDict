@@ -68,6 +68,11 @@ root:
           source-page: 575
           text:
             - to ask for advice (ه s.o.), take counsel (ه with s.o.), consult (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - consult
       derived:
         - derivation: verbal-noun
           translations:

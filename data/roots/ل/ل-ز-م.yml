@@ -59,13 +59,17 @@ root:
             - to be attached or devoted to each other, be inseparable
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to adhere, stick, keep, hang on (ه to)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - comply with, observe
       derived:
         - derivation: active-participle
           type: adjective

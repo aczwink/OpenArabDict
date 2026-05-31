@@ -66,7 +66,6 @@ root:
             - to make visible, make apparent, show, demonstrate, present, produce, bring to light, expose, disclose, divulge, reveal, manifest, announce, proclaim, make known, expound, set forth (ه s.th.)
 
     - type: verb
-      dialect: msa
       form: 6
       translations:
         - dialect: msa
@@ -75,6 +74,11 @@ root:
             - |-
               1. to manifest, display, show outwardly, exhibit, parade (ب s.th.)
               2. to demonstrate, make a public demonstration
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - demonstrate, protest
       derived:
         - text: تَظَاهُر
           derivation: verbal-noun

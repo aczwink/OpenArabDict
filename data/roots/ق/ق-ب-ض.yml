@@ -56,6 +56,15 @@ root:
           source-page: 121
           text:
             - arrest على
+
+    - form: 7
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - get arrested
             
     - text: قَبَضَاي
       type: noun

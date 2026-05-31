@@ -65,10 +65,14 @@ root:
             - train, qualify, welcome
 
     - type: verb
-      dialect: msa
       form: 10
       translations:
         - dialect: msa
           source: hw4-free-text
           text:
             - to deserve
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - deserve

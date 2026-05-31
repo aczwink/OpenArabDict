@@ -57,6 +57,11 @@ root:
           source-page: 912
           text:
             - to be pensioned off, retire
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - retire
       derived:
         - derivation: verbal-noun
           translations:

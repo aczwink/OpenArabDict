@@ -47,3 +47,8 @@ root:
           source-page: 769
           text:
             - to borrow (ه من s.th. from)
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - borrow (something)

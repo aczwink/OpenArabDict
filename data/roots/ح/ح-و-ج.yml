@@ -41,8 +41,8 @@ root:
           derived:
             - text: حَاجَات⁩
               derivation: plural
+
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -50,6 +50,11 @@ root:
           text:
             - to have need, stand in need, be in want (إلى of, also ل or ه),
               need, want, require (إلى, also ل or ه, ه s.th., s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - need
       derived:
         - text: مُحْتَاج
           derivation: active-participle

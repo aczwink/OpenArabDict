@@ -108,6 +108,11 @@ root:
           source-page: 547
           text:
             - to participate (مع في with s.o. in), share (مع في with s.o., s.th.), collaborate, take part (في in), contribute (في to)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - join, participate in بِ
       derived:
         - derivation: passive-participle
           type: adjective

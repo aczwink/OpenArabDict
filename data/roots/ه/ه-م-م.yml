@@ -100,9 +100,10 @@ root:
           text:
             - to take care (ب of s.o.), take s.o. (ب) under one's wing, help, assist (ب s.o.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 91
+          source: lav
+          source-page: 131
           text:
-            - to be interested
+            - be interested (in بِ), care (about بِ)
       derived:
         - derivation: verbal-noun
           translations:

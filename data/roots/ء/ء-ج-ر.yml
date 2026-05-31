@@ -68,3 +68,8 @@ root:
           source-page: 6
           text:
             - to rent, hire, lease, hold under a lease (ه s.th.), take a lease (ه on)
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - rent (from)

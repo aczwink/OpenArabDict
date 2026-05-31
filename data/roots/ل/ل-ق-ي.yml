@@ -108,6 +108,11 @@ root:
           text:
             - to meet, join each other, come together, get together
             - to encounter, meet (ب s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - meet up with بِ
 
     - type: verb
       dialect: msa

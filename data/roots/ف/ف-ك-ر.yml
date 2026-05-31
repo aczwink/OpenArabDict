@@ -60,6 +60,15 @@ root:
             - text: مُفَكِّرُون
               derivation: plural
 
+    - type: verb
+      form: 8
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - think (I think...)
+
     - text: فِكْرَة
       type: noun
       gender: female

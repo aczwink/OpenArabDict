@@ -72,6 +72,15 @@ root:
               gender: male
               translations: []
 
+    - type: verb
+      form: 9
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - become black/dark
+
     - text: سَيِّد
       type: noun
       gender: male

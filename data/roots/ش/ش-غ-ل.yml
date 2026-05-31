@@ -75,12 +75,17 @@ root:
           source-page: 556
           text:
             - to occupy o.s., busy o.s., be occupied or busy, be preoccupied (ب with)
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - become busy
 
     - type: verb
-      dialect: lb
       form: 8
       translations:
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 50
+          source: lav
+          source-page: 50
           text:
             - to work

@@ -69,6 +69,11 @@ root:
           text:
             - to pass (ه s.th. or by s.th.), go or walk past s.th. (ه)
             - to go beyond s.th. (ه), overstep, cross, leave behind (ه s.th., also an age of life, as in III)
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - pass, overtake
 
     - form: 8
       type: verb

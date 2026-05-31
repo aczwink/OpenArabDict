@@ -52,3 +52,12 @@ root:
           source-page: 968
           text:
             - to be broken to pieces, be shattered, be fragmentized
+
+    - form: 7
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - break (intr.)

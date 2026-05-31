@@ -69,6 +69,11 @@ root:
           source-page: 267
           text:
             - to employ, use (ه s.th., ل for), make use, avail o.s. (ه of s.th., ل for a purpose)
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - use
       derived:
         - derivation: verbal-noun
           translations:

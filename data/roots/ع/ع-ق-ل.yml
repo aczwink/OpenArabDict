@@ -64,6 +64,11 @@ root:
           source-page: 737
           text:
             - to arrest, put under arrest, apprehend, detain (ه s.o.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - arrest
       derived:
         - derivation: verbal-noun
           translations:

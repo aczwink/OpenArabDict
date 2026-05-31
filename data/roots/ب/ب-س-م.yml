@@ -38,3 +38,12 @@ root:
           derived:
             - derivation: plural
               text: بَسَمَات
+
+    - type: verb
+      form: 8
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - smile

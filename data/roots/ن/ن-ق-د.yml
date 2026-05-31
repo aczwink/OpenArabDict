@@ -62,6 +62,11 @@ root:
           source-page: 1160
           text:
             - to criticize (ه s.th.), find fault (ه with), take exception (ه to), disapprove (ه of)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - criticize
 
     - text: نَقَّاد
       type: noun

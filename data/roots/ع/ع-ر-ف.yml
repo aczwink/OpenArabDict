@@ -125,6 +125,11 @@ root:
           text:
             - to confess, admin, acknowledge, own, avow (ه s.th.)
             - to recognize (ب s.o., s.th., a state, pol), grant recognition (ب to s.o., to s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - admit to, confess
             
     - text: عَرَّاف
       type: noun

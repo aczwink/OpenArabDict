@@ -50,7 +50,6 @@ root:
                 - duty, precept, injunction, order, decree, ordinance, command
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -58,6 +57,11 @@ root:
           url: https://ejtaal.net/aa/#hw4=839
           text:
             - to assume, suppose, presume, postulate (ه s.th., ان that)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - suppose
       derived:
         - text: اِفْتِرَاض
           derivation: verbal-noun

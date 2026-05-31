@@ -74,6 +74,11 @@ root:
           text:
             - to hide, keep o.s. out of view
             - to disappear, vanish
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - disappear
       derived:
         - derivation: verbal-noun
           translations:

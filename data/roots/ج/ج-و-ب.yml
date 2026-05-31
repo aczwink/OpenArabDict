@@ -54,3 +54,14 @@ root:
           source-page: 171
           text:
             - to respond (ل to, ب with), listen, pay attention (ل to), show interest (ل in)
+
+    # - form: #TODO: can't be conjugated
+    #     stem: 10
+    #     type: sound
+    #   type: verb
+    #   translations:
+    #     - dialect: lb
+    #       source: lav
+    #       source-page: 132
+    #       text:
+    #         - interrogate

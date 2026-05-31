@@ -55,6 +55,15 @@ root:
               source-page: 119
               text:
                 - repentant, penitent, contrite
+    
+    - form: 6
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - yawn
 
     - text: تَوَّاب
       type: adjective

@@ -158,10 +158,15 @@ root:
                   type: adjective
                   gender: female
                   translations: []
+
     - type: verb
-      dialect: msa
       form: 8
-      translations: []
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - receive
       derived:
         - text: اِسْتِلَام
           derivation: verbal-noun

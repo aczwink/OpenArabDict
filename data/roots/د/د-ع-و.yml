@@ -89,3 +89,12 @@ root:
               source-page: 327
               text:
                 - one invited, guest
+
+    - form: 8
+      type: verb
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - claim

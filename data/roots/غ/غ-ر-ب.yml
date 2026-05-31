@@ -107,6 +107,15 @@ root:
           text:
             - to go to a foreign country, emigrate
 
+    - type: verb
+      form: 10
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 132
+          text:
+            - consider strange
+
     - gender: male
       text: غُرَاب
       type: noun

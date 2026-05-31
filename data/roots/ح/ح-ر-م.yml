@@ -68,7 +68,6 @@ root:
               pilgrim; see احرام)
 
     - type: verb
-      dialect: msa
       form: 8
       translations:
         - dialect: msa
@@ -76,6 +75,11 @@ root:
           url: http://ejtaal.net/aa/#hw4=214
           text:
             - to honor, revere, venerate, esteem, respect (ه, ه s.o., s.th.)
+        - dialect: lb
+          source: lav
+          source-page: 131
+          text:
+            - respect
       derived:
         - derivation: verbal-noun
           type: noun

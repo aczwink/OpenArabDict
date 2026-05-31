@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,28 +15,8 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: خ-ض-ر
+  radicals: ز-ر-ق
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ia
-      translations: []
-      derived:
-        - text: أَخْضَر
-          derivation: meaning-related
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - green
-          derived:
-            - text: خَضْرَاء
-              derivation: feminine
-
     - type: verb
       form: 9
       translations:
@@ -44,13 +24,5 @@ root:
           source: lav
           source-page: 132
           text:
-            - turn green
-
-    - text: خُضَيْرَاء
-      type: noun
-      gender: male
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - Paradise
+            - turn blue
+            - bruise

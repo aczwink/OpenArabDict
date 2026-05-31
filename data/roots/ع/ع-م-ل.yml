@@ -111,6 +111,13 @@ root:
 
     - type: verb
       form: 6
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 130
+          text:
+            - treat مع
+            - deal with مع, work with مع
       derived:
         - derivation: verbal-noun
           type: noun
@@ -122,15 +129,6 @@ root:
               text:
                 - cooperation
                 - dealings, social intercourse (with s.o.)
-        - derivation: colloquial
-          type: verb
-          dialect: lb
-          form: 6
-          translations:
-            - dialect: lb
-              source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 11
-              text:
-                - to treat
 
     - type: verb
       form: 10
@@ -140,7 +138,8 @@ root:
           text:
             - to apply (ه s.th.), use, employ (ه، ه s.o., s.th.)
         - dialect: lb
-          source: free-text #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 43
+          source: lav
+          source-page: 43
           text:
             - to use
       derived:
