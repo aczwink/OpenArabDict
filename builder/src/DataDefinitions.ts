@@ -108,5 +108,17 @@ export interface VerbWordDefinition
     derivation?: "colloquial";
 }
 
-export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition;
+export interface POSDefinition
+{
+    type: "adjective" | "noun";
+    translations?: TranslationDefinition[];
+}
+
+export interface MultiPOSWordDefinition
+{
+    derivation: "passive-participle";
+    pos: POSDefinition[];
+}
+
+export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | MultiPOSWordDefinition;
 export type WordOrReferenceDefinition = WordDefinition | WordReferenceDefinition;

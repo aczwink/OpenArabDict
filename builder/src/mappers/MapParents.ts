@@ -19,8 +19,8 @@
 import { OpenArabDictParentType, OpenArabDictParent } from "@aczwink/openarabdict-domain";
 import { WordDefinition } from "../DataDefinitions";
 import { TreeTrace, TreeTraceNodeType } from "../TreeTrace";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 function MapVerbDerivationType(derivation: string)
 {

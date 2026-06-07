@@ -15,7 +15,6 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
 import { OpenArabDictGender, OpenArabDictParentType } from "@aczwink/openarabdict-domain";
 import { Conjugator, DialectType } from "@aczwink/openarabicconjugation";
@@ -23,6 +22,7 @@ import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocaliza
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { GenerateAllPossibleTextsFromDerivation } from "../shared";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function ValidateText(builder: DBBuilder, validator: WordDefinitionValidator)
 {

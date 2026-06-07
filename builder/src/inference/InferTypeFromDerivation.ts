@@ -17,7 +17,7 @@
  * */
 
 import { OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function InferTypeFromDerivation(validator: WordDefinitionValidator)
 {

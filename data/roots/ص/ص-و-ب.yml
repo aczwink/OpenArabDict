@@ -90,23 +90,23 @@ root:
                     - misfortune, calamity, disaster
 
         - derivation: passive-participle
-          type: adjective
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 618
-              text:
-                - injured, wounded, sick, ill
-                
-        - derivation: passive-participle
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 618
-              text:
-                - wounded person, casualty
-                - victim of an accident
+          pos:
+            - type: adjective
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 618
+                  text:
+                    - injured, wounded, sick, ill
+                    
+            - type: noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 618
+                  text:
+                    - wounded person, casualty
+                    - victim of an accident
 
     - text: صَوَاب
       type: noun

@@ -17,10 +17,12 @@
  * */
 
 import { WordDefinition } from "../DataDefinitions";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function MapText(wordDefinition: WordDefinition, validator: WordDefinitionValidator)
 {
-    if((wordDefinition.type !== "verb") && (wordDefinition.text !== undefined))
+    const type = ("type" in wordDefinition) ? wordDefinition.type : undefined;
+
+    if((type !== "verb") && ("text" in wordDefinition) && (wordDefinition.text !== undefined))
         validator.text = wordDefinition.text;
 }

@@ -16,8 +16,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import { OpenArabDictGender, OpenArabDictGendered, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { TreeTraceNodeType } from "../TreeTrace";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function ValidatePlural(validator: WordDefinitionValidator)
 {
@@ -28,6 +28,6 @@ export function ValidatePlural(validator: WordDefinitionValidator)
 
         const pos = validator.sourceTreeTrace.parent.lexeme.senses[0].units[0].pos;
         validator.InferAnyOf("type", [OpenArabDictPOSType.Adjective, OpenArabDictPOSType.Noun, OpenArabDictPOSType.Numeral, OpenArabDictPOSType.Pronoun], pos.type);
-        validator.InferAnyOf("gender", [OpenArabDictGender.Female, OpenArabDictGender.Male], (pos as OpenArabDictGendered).gender);
+        validator.LexicalUnit(0).InferAnyOf("gender", [OpenArabDictGender.Female, OpenArabDictGender.Male], (pos as OpenArabDictGendered).gender);
     }
 }

@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -20,6 +20,7 @@ import { Injectable } from "@aczwink/acts-util-node";
 export enum StatisticsCounter
 {
     InvalidSourceFile,
+    LegacyAlias,
     LegacyContextual,
     LegacyDialect,
     LegagyExamples,
@@ -61,6 +62,8 @@ export class StatisticsCounterService
         {
             case StatisticsCounter.InvalidSourceFile:
                 return "invalid source file";
+            case StatisticsCounter.LegacyAlias:
+                return "alias in words";
             case StatisticsCounter.LegacyContextual:
                 return "contextual in translations";
             case StatisticsCounter.LegacyDialect:

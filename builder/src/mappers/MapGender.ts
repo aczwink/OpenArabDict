@@ -17,7 +17,7 @@
  * */
 import { OpenArabDictGender } from "@aczwink/openarabdict-domain";
 import { GenderedWordDefinition, WordDefinition } from "../DataDefinitions";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 function MapGenderValue(word: GenderedWordDefinition)
 {
@@ -39,6 +39,6 @@ export function MapGender(wordDef: WordDefinition, validator: WordDefinitionVali
     if("gender" in wordDef)
     {
         const gender = MapGenderValue(wordDef);
-        validator.gender = gender;
+        validator.LexicalUnit(0).InferValue("gender", gender);
     }
 }

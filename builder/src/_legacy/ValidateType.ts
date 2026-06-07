@@ -16,48 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import { OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
-import { WordDefinition } from "../DataDefinitions";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
-
-function MapType(word: WordDefinition)
-{
-    switch(word.type)
-    {
-        case undefined:
-            return undefined;
-        case "adjective":
-            return OpenArabDictPOSType.Adjective;
-        case "adverb":
-            return OpenArabDictPOSType.Adverb;
-        case "conjunction":
-            return OpenArabDictPOSType.Conjunction;
-        case "foreign-verb":
-            return OpenArabDictPOSType.ForeignVerb;
-        case "interjection":
-            return OpenArabDictPOSType.Interjection;
-        case "noun":
-            return OpenArabDictPOSType.Noun;
-        case "numeral":
-            return OpenArabDictPOSType.Numeral;
-        case "particle":
-            return OpenArabDictPOSType.Particle;
-        case "phrase":
-            return OpenArabDictPOSType.Phrase;
-        case "preposition":
-            return OpenArabDictPOSType.Preposition;
-        case "pronoun":
-            return OpenArabDictPOSType.Pronoun;
-        case "verb":
-            return OpenArabDictPOSType.Verb;
-        default:
-            throw new Error("Unknown word type: " + (word as any).type);
-    }
-}
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function ValidateType(validator: WordDefinitionValidator)
 {
-    validator.type = MapType(validator._legacyWordDefinition)
-
     switch(validator._legacyWordDefinition.derivation)
     {
         case "adverbial-accusative":

@@ -17,7 +17,6 @@
  * */
 
 import { OpenArabDictParentType } from "@aczwink/openarabdict-domain";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { Conjugator, DialectType } from "@aczwink/openarabicconjugation";
 import { DBBuilder } from "../DBBuilder";
 import { AdjectiveOrNounState, Case, Gender, Numerus } from "@aczwink/openarabicconjugation/dist/Definitions";
@@ -25,6 +24,7 @@ import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocaliza
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { GenerateAllPossibleTextsFromDerivation } from "../shared";
 import { Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function InferTextFromDerivation(builder: DBBuilder, validator: WordDefinitionValidator)
 {

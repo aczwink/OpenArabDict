@@ -15,7 +15,7 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { OpenArabDictGender, OpenArabDictGendered, OpenArabDictParentType, OpenArabDictPOSType, OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictGendered, OpenArabDictParentType, OpenArabDictPOSType, OpenArabDictRoot, OpenArabDictVerb } from "@aczwink/openarabdict-domain";
 import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
@@ -23,20 +23,20 @@ import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@ac
 import { GenderedWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { TreeTrace, TreeTraceNodeType } from "../TreeTrace";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ExtractRoot } from "../shared";
 import { VerbalNounCounter } from "../VerbalNounCounter";
 import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatableDialectOf } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { ArabicText, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {
     return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
 }
 
-function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, translations: OpenArabDictTranslationEntry[], parent?: TreeTrace): DisplayVocalized[] | undefined
+function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, parent?: TreeTrace): DisplayVocalized[] | undefined
 {
     const wordDef = validator._legacyWordDefinition;
 
@@ -108,7 +108,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
 
                 const form = validator.verbForm;
 
-                const dialectType = FindHighestConjugatableDialectOf(root.radicals, form, translations);
+                const dialectType = FindHighestConjugatableDialectOf(root.radicals, form, validator.translations);
                 const verb = CreateVerbFromOADVerbForm(dialectType, root.radicals, form);
 
                 const conjugator = new Conjugator;
@@ -153,9 +153,9 @@ function ValidateVerbalNoun(parsed: DisplayVocalized[], word: GenderedWordDefini
     throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text ?? "")) + ". But allowed values are: " + choices);
 }
 
-export function _LegacyValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, translations: OpenArabDictTranslationEntry[], validator: WordDefinitionValidator)
+export function _LegacyValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, validator: WordDefinitionValidator)
 {
-    const generated = GenerateTextIfPossible(validator, builder, translations, validator.sourceTreeTrace);
+    const generated = GenerateTextIfPossible(validator, builder, validator.sourceTreeTrace);
     if(generated !== undefined)
     {
         const generatedString = VocalizedWordTostring(generated);

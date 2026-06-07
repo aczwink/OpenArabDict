@@ -18,7 +18,6 @@
 import { Dialects } from "@aczwink/openarabicconjugation";
 import { OpenArabDictVerbType } from "@aczwink/openarabdict-domain";
 import { ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from "../DataDefinitions";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
 import { DBBuilder } from "../DBBuilder";
 import { ExtractRoot } from "../shared";
 import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
@@ -26,6 +25,7 @@ import { _LegacyExtractDialect } from "../_LegacyDataDefinition";
 import { DialectTree, MapVerbTypeToOpenArabicConjugation } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "../services/StatisticsCounterService";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 function MapVerbType(verb: VerbWordDefinition)
 {
@@ -76,7 +76,7 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
     const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
     if(!choices.types.includes(variant.parameters))
     {
-        console.log(validator._legacyWordDefinition, validator._legacyWordDefinition.translations, root.radicals, variant);
+        console.log(validator._legacyWordDefinition, root.radicals, variant);
         throw new Error("Wrong stem parameterization");
     }
 
@@ -92,6 +92,8 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
 {
     const def = validator._legacyWordDefinition;
 
+    if(!("type" in def))
+        return;
     if(def.type !== "verb")
         return;
 

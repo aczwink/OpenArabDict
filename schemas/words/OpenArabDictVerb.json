@@ -8,7 +8,14 @@
         "derived": {
             "type": "array",
             "items": {
-                "$ref": "./OpenArabDictWord_verbderived.json"
+                "oneOf": [
+                    {
+                        "$ref": "./OpenArabDictWord_verbderived.json"
+                    },
+                    {
+                        "$ref": "./verbderived-multi-pos.json"
+                    }
+                ]
             }
         },
         "form": {

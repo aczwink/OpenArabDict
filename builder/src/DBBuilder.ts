@@ -16,11 +16,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import fs from "fs";
-import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictLexeme, OpenArabDictPartOfSpeech, OpenArabDictPOSType, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWordRelation, OpenArabDictWordRelationshipType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictDialect, OpenArabDictDocument, OpenArabDictLexeme, OpenArabDictParent, OpenArabDictPartOfSpeech, OpenArabDictPOSType, OpenArabDictRoot, OpenArabDictTranslationDocument, OpenArabDictTranslationEntry, OpenArabDictWordRelation, OpenArabDictWordRelationshipType } from "@aczwink/openarabdict-domain";
 import { Dictionary, ObjectExtensions } from "@aczwink/acts-util-core";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
 import { ParseVocalizedPhrase, ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { DialectTree } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+
+interface UnitData
+{
+    pos: OpenArabDictPartOfSpeech;
+    translations: OpenArabDictTranslationEntry[];
+}
 
 export class DBBuilder
 {
@@ -94,23 +100,37 @@ export class DBBuilder
         this.userWordIdMap[userWordId] = wordId;
     }
 
-    public AddWord(lexeme: OpenArabDictLexeme, translations: OpenArabDictTranslationEntry[])
+    public AddWord(text: string, parents: OpenArabDictParent[], unitsData: UnitData[])
     {
+        const lexeme: OpenArabDictLexeme = {
+            id: "",
+            parent: parents,
+            senses: [
+                {
+                    units: []
+                }
+            ],
+            text
+        };
         const lexemeId = this.GenerateUniqueLexemeId(lexeme);
 
         lexeme.id = lexemeId;
 
-        for (const sense of lexeme.senses)
+        for(let i = 0; i < unitsData.length; i++)
         {
-            for (const unit of sense.units)
-            {
-                const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, unit.pos);
-                unit.id = lexicalUnitId;
-                
-                this.lexicalUnitMap[lexicalUnitId] = unit.pos;
-                this.lexicalUnitToLexemeMap[lexicalUnitId] = lexeme;
-                this.translations.set(lexicalUnitId, translations);
-            }
+            const data = unitsData[i];
+            lexeme.senses[0].units.push({
+                id: "",
+                pos: data.pos
+            });
+            const unit = lexeme.senses[0].units.Last();
+
+            const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, unit.pos);
+            unit.id = lexicalUnitId;
+            
+            this.lexicalUnitMap[lexicalUnitId] = unit.pos;
+            this.lexicalUnitToLexemeMap[lexicalUnitId] = lexeme;
+            this.translations.set(lexicalUnitId, data.translations);   
         }
 
         this.lexemes[lexemeId] = lexeme;

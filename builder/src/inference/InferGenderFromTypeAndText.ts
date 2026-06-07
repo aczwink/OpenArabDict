@@ -16,14 +16,17 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import { OpenArabDictGender, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
-import { WordDefinitionValidator } from "../WordDefinitionValidator";
+import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function InferGenderFromTypeAndText(validator: WordDefinitionValidator)
 {
-    if((validator.type === OpenArabDictPOSType.Adjective) || (validator.type === OpenArabDictPOSType.Noun))
+    for (const unit of validator.lexicalUnits)
     {
-        const isFemale = validator.text.endsWith("ة");
-        const gender = isFemale ? OpenArabDictGender.Female : OpenArabDictGender.Male;
-        validator.InferDefault("gender", gender);
+        if((unit.type === OpenArabDictPOSType.Adjective) || (unit.type === OpenArabDictPOSType.Noun))
+        {
+            const isFemale = validator.text.endsWith("ة");
+            const gender = isFemale ? OpenArabDictGender.Female : OpenArabDictGender.Male;
+            unit.InferDefault("gender", gender);
+        }
     }
 }
