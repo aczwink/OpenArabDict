@@ -48,3 +48,12 @@ root:
           source: hw4-free-text
           text:
             - to promise
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 763
+          text:
+            - to promise (ل ب to s.o. s.th.)

@@ -110,8 +110,9 @@ export interface VerbWordDefinition
 
 export interface POSDefinition
 {
+    derived?: WordDefinition[];
     type: "adjective" | "noun";
-    translations?: TranslationDefinition[];
+    translations: TranslationDefinition[];
 }
 
 export interface MultiPOSWordDefinition
@@ -120,5 +121,26 @@ export interface MultiPOSWordDefinition
     pos: POSDefinition[];
 }
 
-export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | MultiPOSWordDefinition;
+interface SenseDefinition
+{
+    derived?: WordDefinition[];
+    translations: TranslationDefinition[];
+}
+
+export interface MultiSenseVerbDefinition
+{
+    derivation?: ""; //TODO: actually not true
+    type: "verb";
+    form: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | ParameterizedStemData;
+    senses: SenseDefinition[];
+}
+
+export interface MultiSenseWordDefinition
+{
+    derivation: "verbal-noun";
+    text: string;
+    senses: SenseDefinition[];
+}
+
+export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | MultiPOSWordDefinition | MultiSenseVerbDefinition | MultiSenseWordDefinition;
 export type WordOrReferenceDefinition = WordDefinition | WordReferenceDefinition;

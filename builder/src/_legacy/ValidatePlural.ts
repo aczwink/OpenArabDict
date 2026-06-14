@@ -28,6 +28,6 @@ export function ValidatePlural(validator: WordDefinitionValidator)
 
         const pos = validator.sourceTreeTrace.parent.lexeme.senses[0].units[0].pos;
         validator.InferAnyOf("type", [OpenArabDictPOSType.Adjective, OpenArabDictPOSType.Noun, OpenArabDictPOSType.Numeral, OpenArabDictPOSType.Pronoun], pos.type);
-        validator.LexicalUnit(0).InferAnyOf("gender", [OpenArabDictGender.Female, OpenArabDictGender.Male], (pos as OpenArabDictGendered).gender);
+        validator.Sense(0).LexicalUnit(0).InferAnyOf("gender", [OpenArabDictGender.Female, OpenArabDictGender.Male], (pos as OpenArabDictGendered).gender);
     }
 }

@@ -22,8 +22,8 @@ import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration"
 import { ArabicText } from "@aczwink/openarabicconjugation";
 import { WordDefinition } from "../DataDefinitions";
 import { TreeTrace } from "../TreeTrace";
-import { LexicalUnitDefinitionValidator } from "./LexicalUnitDefinitionValidator";
 import { DefinitionValidator } from "./DefinitionValidator";
+import { SenseDefinitionValidator } from "./SenseDefinitionValidator";
 
 export type WordMapper = (wordDef: WordDefinition, validator: WordDefinitionValidator) => void;
 export type WordValidator = (validator: WordDefinitionValidator) => void;
@@ -34,15 +34,10 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
     {
         super(wordDef, _sourceTreeTrace);
 
-        this.lexicalUnitDefValidators = [];
+        this.senseDefValidators = [];
     }
 
     //Properties
-    public get lexicalUnits(): readonly LexicalUnitDefinitionValidator[]
-    {
-        return this.lexicalUnitDefValidators;
-    }
-
     public get parents()
     {
         if(this._parents === undefined)
@@ -53,6 +48,11 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
     public set parents(value: OpenArabDictParent[])
     {
         this._parents = value;
+    }
+
+    public get senses(): readonly SenseDefinitionValidator[]
+    {
+        return this.senseDefValidators;
     }
 
     public get text()
@@ -67,16 +67,9 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
         this._text = value;
     }
 
-    public get translations()
-    {
-        if(this.lexicalUnitDefValidators.length !== 1)
-            this.ReportValidationError("Definition is complex");
-        return this.lexicalUnitDefValidators[0].translations;
-    }
-
     public get type()
     {
-        const types = this.lexicalUnitDefValidators.Values().Map(x => x.type).Distinct(x => x?.toString() ?? "undefined").ToArray();
+        const types = this.senseDefValidators.Values().Map(x => x.lexicalUnits.map(x => x.type).Values()).Flatten().Distinct(x => x?.toString() ?? "undefined").ToArray();
         if(types.length === 1)
             return types[0];
         this.ReportValidationError("Definition is complex");
@@ -84,17 +77,24 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
 
     public set type(value: OpenArabDictPOSType | undefined)
     {
-        this.LexicalUnit(0).type = value;
-    }
-
-    public get verbForm()
-    {
-        return this.LexicalUnit(0).verbForm;
+        if(this.senseDefValidators.length > 1)
+        {
+            for (const sense of this.senseDefValidators)
+                sense.type = value;
+        }
+        else
+            this.Sense(0).type = value;
     }
 
     public set verbForm(newValue: OpenArabDictVerbForm)
     {
-        this.LexicalUnit(0).verbForm = newValue;
+        if(this.senseDefValidators.length > 1)
+        {
+            for (const sense of this.senseDefValidators)
+                sense.verbForm = newValue;
+        }
+        else
+            this.Sense(0).verbForm = newValue;
     }
 
     //Public methods
@@ -103,7 +103,7 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
         return {
             text: this.text,
             parents: this._parents ?? [],
-            units: this.lexicalUnitDefValidators.map(x => x.ConstructResult()),
+            senses: this.senseDefValidators.map(x => x.ConstructResult()),
         };
     }
 
@@ -127,12 +127,12 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
         return super.InferValueImpl(variable, value);
     }
 
-    public LexicalUnit(index: number)
+    public Sense(index: number)
     {
-        if(this.lexicalUnitDefValidators[index] === undefined)
-            this.lexicalUnitDefValidators[index] = new LexicalUnitDefinitionValidator(this.wordDef, this.sourceTreeTrace);
+        if(this.senseDefValidators[index] === undefined)
+            this.senseDefValidators[index] = new SenseDefinitionValidator(this.wordDef, this.sourceTreeTrace);
 
-        return this.lexicalUnitDefValidators[index];
+        return this.senseDefValidators[index];
     }
 
     public ValidateAnyOf(variable: "text", allowedValues: DisplayVocalized[][])
@@ -179,7 +179,7 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
     //Private properties
     private get _type()
     {
-        const types = this.lexicalUnitDefValidators.Values().Map(x => x.__legacyType).Distinct(x => x?.toString() ?? "undefined").ToArray();
+        const types = this.senseDefValidators.Values().Map(x => x.lexicalUnits.map(x => x.__legacyType).Values()).Flatten().Distinct(x => x?.toString() ?? "undefined").ToArray();
         if(types.length === 1)
             return types[0];
         this.ReportValidationError("Definition is complex");
@@ -188,5 +188,5 @@ export class WordDefinitionValidator extends DefinitionValidator<"text" | "type"
     //State
     private _parents?: OpenArabDictParent[];
     private _text?: string;
-    private lexicalUnitDefValidators: LexicalUnitDefinitionValidator[];
+    private senseDefValidators: SenseDefinitionValidator[];
 }

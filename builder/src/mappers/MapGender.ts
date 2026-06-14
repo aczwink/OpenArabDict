@@ -39,6 +39,6 @@ export function MapGender(wordDef: WordDefinition, validator: WordDefinitionVali
     if("gender" in wordDef)
     {
         const gender = MapGenderValue(wordDef);
-        validator.LexicalUnit(0).InferValue("gender", gender);
+        validator.Sense(0).LexicalUnit(0).InferValue("gender", gender);
     }
 }

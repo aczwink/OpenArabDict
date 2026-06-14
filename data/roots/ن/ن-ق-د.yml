@@ -26,24 +26,23 @@ root:
       derived:
         - text: نَقْد
           derivation: verbal-noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1161
-              text:
-                - criticism
-
-        - text: نَقْد
-          derivation: verbal-noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1161
-              text:
-                - cash, ready money
-          derived:
-            - text: نُقُود
-              derivation: plural
+          senses:
+            - translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1161
+                  text:
+                    - criticism
+                    
+            - translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1161
+                  text:
+                    - cash, ready money
+              derived:
+                - text: نُقُود
+                  derivation: plural
 
     - type: verb
       form: 2

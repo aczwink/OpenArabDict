@@ -4,6 +4,9 @@
     "description": "JSON Schema for OpenArabDict word definitions",
     "oneOf": [
         {
+            "$ref": "./words/multi-sense-verb.json"
+        },
+        {
             "$ref": "./words/OpenArabDictGenderedWord_adjective.json"
         },
         {

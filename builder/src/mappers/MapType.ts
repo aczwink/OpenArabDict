@@ -17,10 +17,10 @@
  * */
 
 import { OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
-import { GenderedWordDefinition, OtherWordDefinition, POSDefinition, VerbWordDefinition, WordDefinition } from "../DataDefinitions";
+import { GenderedWordDefinition, MultiSenseVerbDefinition, OtherWordDefinition, POSDefinition, VerbWordDefinition, WordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
-function MapTypeFromDefinition(wordDef: GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | POSDefinition): OpenArabDictPOSType | undefined
+function MapTypeFromDefinition(wordDef: GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | POSDefinition | MultiSenseVerbDefinition): OpenArabDictPOSType | undefined
 {
     switch(wordDef.type)
     {
@@ -62,10 +62,10 @@ export function MapType(wordDef: WordDefinition, validator: WordDefinitionValida
         for (let i = 0; i < wordDef.pos.length; i++)
         {
             const pos = wordDef.pos[i];
-            validator.LexicalUnit(i).type = MapTypeFromDefinition(pos);
+            validator.Sense(0).LexicalUnit(i).type = MapTypeFromDefinition(pos);
         }
     }
-    else
+    else if("type" in wordDef)
     {
         validator.type = MapTypeFromDefinition(wordDef);
     }

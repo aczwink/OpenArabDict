@@ -17,7 +17,7 @@
  * */
 import { Dialects } from "@aczwink/openarabicconjugation";
 import { OpenArabDictVerbType } from "@aczwink/openarabdict-domain";
-import { ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from "../DataDefinitions";
+import { MultiSenseVerbDefinition, ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { ExtractRoot } from "../shared";
 import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
@@ -27,7 +27,7 @@ import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "../services/StatisticsCounterService";
 import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
-function MapVerbType(verb: VerbWordDefinition)
+function MapVerbType(verb: VerbWordDefinition | MultiSenseVerbDefinition)
 {
     if(typeof verb.form === "number")
         return undefined;

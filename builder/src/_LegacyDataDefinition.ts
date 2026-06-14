@@ -17,7 +17,7 @@
  * */
 
 import { GlobalInjector } from "@aczwink/acts-util-node";
-import { TranslationDefinition, VerbWordDefinition } from "./DataDefinitions";
+import { MultiSenseVerbDefinition, TranslationDefinition, VerbWordDefinition } from "./DataDefinitions";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
 import { OpenArabDictTranslationUsageType } from "@aczwink/openarabdict-domain";
 
@@ -27,7 +27,7 @@ export interface _LegacyParameterizedStem1Data
     parameters: string;
 }
 
-export function _LegacyExtractDialect(def: VerbWordDefinition)
+export function _LegacyExtractDialect(def: VerbWordDefinition | MultiSenseVerbDefinition)
 {
     if("dialect" in def)
     {

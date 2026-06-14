@@ -39,6 +39,17 @@ root:
               type: noun
               gender: male
 
+    - form: 2
+      type: verb
+      derived:
+        - derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 577
+              text:
+                - suspense (of a reader or listener)
+
     - type: verb
       form: 8
       translations:

@@ -104,94 +104,100 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
 
     const result = wdv.ConstructResult();
 
-    for (const unit of result.units)
+    for (const sense of result.senses)
     {
-        if(unit.pos.type === OpenArabDictPOSType.Verb)
+        for (const unit of sense.units)
         {
-            const root = ExtractRoot(builder, parent);
-            unit.pos.rootId = root.id;
-        }
+            if(unit.pos.type === OpenArabDictPOSType.Verb)
+            {
+                const root = ExtractRoot(builder, parent);
+                unit.pos.rootId = root.id;
+            }
+        }   
     }
 
-    const createdWord = builder.AddWord(result.text, result.parents, result.units);
+    const createdWord = builder.AddWord(result.text, result.parents, result.senses);
 
-    for (const unit of result.units)
+    for(const sense of result.senses)
     {
-        switch(unit.pos.type)
+        for (const unit of sense.units)
         {
-            case OpenArabDictPOSType.Adjective:
-            case OpenArabDictPOSType.Noun:
-            case OpenArabDictPOSType.Numeral:
-            case OpenArabDictPOSType.Pronoun:
+            switch(unit.pos.type)
             {
-                const g = wordDef as GenderedWordDefinition;
-                if(g.id !== undefined)
-                    builder.AddUserWordIdMapping(g.id, createdWord.id);
-                if(g.alias !== undefined)
+                case OpenArabDictPOSType.Adjective:
+                case OpenArabDictPOSType.Noun:
+                case OpenArabDictPOSType.Numeral:
+                case OpenArabDictPOSType.Pronoun:
+                {
+                    const g = wordDef as GenderedWordDefinition;
+                    if(g.id !== undefined)
+                        builder.AddUserWordIdMapping(g.id, createdWord.id);
+                    if(g.alias !== undefined)
+                    {
+                        GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.LegacyAlias);
+
+                        const aliasWordId = ProcessWordDefinition({
+                            type: g.type,
+                            derivation: g.derivation,
+                            gender: g.gender,
+                            translations: g.translations,
+                            derived: g.derived,
+                            text: g.alias
+                        }, builder, verbalNounCounter, parent);
+
+                        builder.AddRelation(createdWord.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
+                    }
+                }
+                break;
+                case OpenArabDictPOSType.Adverb:
+                case OpenArabDictPOSType.Conjunction:
+                case OpenArabDictPOSType.ForeignVerb:
+                case OpenArabDictPOSType.Interjection:
+                case OpenArabDictPOSType.Particle:
+                case OpenArabDictPOSType.Phrase:
+                case OpenArabDictPOSType.Preposition:
                 {
                     GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.LegacyAlias);
 
-                    const aliasWordId = ProcessWordDefinition({
-                        type: g.type,
-                        derivation: g.derivation,
-                        gender: g.gender,
-                        translations: g.translations,
-                        derived: g.derived,
-                        text: g.alias
-                    }, builder, verbalNounCounter, parent);
+                    const o = wordDef as OtherWordDefinition;
+                    if(o.alias !== undefined)
+                    {
+                        const aliasWordId = ProcessWordDefinition({
+                            type: o.type,
+                            derivation: o.derivation,
+                            text: o.alias,
+                            translations: o.translations,
+                        }, builder, verbalNounCounter, parent);
 
-                    builder.AddRelation(createdWord.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
+                        builder.AddRelation(createdWord.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
+                    }
                 }
-            }
-            break;
-            case OpenArabDictPOSType.Adverb:
-            case OpenArabDictPOSType.Conjunction:
-            case OpenArabDictPOSType.ForeignVerb:
-            case OpenArabDictPOSType.Interjection:
-            case OpenArabDictPOSType.Particle:
-            case OpenArabDictPOSType.Phrase:
-            case OpenArabDictPOSType.Preposition:
-            {
-                GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.LegacyAlias);
-
-                const o = wordDef as OtherWordDefinition;
-                if(o.alias !== undefined)
+                break;
+                case OpenArabDictPOSType.Verb:
                 {
-                    const aliasWordId = ProcessWordDefinition({
-                        type: o.type,
-                        derivation: o.derivation,
-                        text: o.alias,
-                        translations: o.translations,
-                    }, builder, verbalNounCounter, parent);
+                    GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.LegacyAlias);
 
-                    builder.AddRelation(createdWord.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
+                    const v = wordDef as VerbWordDefinition;
+
+                    if(v.alias !== undefined)
+                    {
+                        const aliasWordId = ProcessWordDefinition({
+                            type: v.type,
+                            form: {
+                                stem: 1,
+                                variants: [
+                                    { dialect: _LegacyExtractDialect(v), parameters: v.alias }
+                                ],
+                            },
+                            translations: v.translations
+                        }, builder, verbalNounCounter, parent);
+
+                        builder.AddRelation(createdWord.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
+                    }
                 }
-            }
-            break;
-            case OpenArabDictPOSType.Verb:
-            {
-                GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.LegacyAlias);
-
-                const v = wordDef as VerbWordDefinition;
-
-                if(v.alias !== undefined)
-                {
-                    const aliasWordId = ProcessWordDefinition({
-                        type: v.type,
-                        form: {
-                            stem: 1,
-                            variants: [
-                                { dialect: _LegacyExtractDialect(v), parameters: v.alias }
-                            ],
-                        },
-                        translations: v.translations
-                    }, builder, verbalNounCounter, parent);
-
-                    builder.AddRelation(createdWord.id, aliasWordId.id, OpenArabDictWordRelationshipType.Synonym);
-                }
-            }
-            break;
-        }   
+                break;
+            }   
+        }
     }
 
     const wordParent: TreeTrace = {
@@ -199,20 +205,65 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
         lexeme: createdWord,
         parent
     };
-    const thisParent: TreeTrace = {
-        type: TreeTraceNodeType.LexicalUnit,
-        lexicalUnitId: createdWord.senses[0].units[0].id,
-        parent: wordParent
-    };
 
     if(("derived" in wordDef) && (wordDef.derived !== undefined))
     {
+        const thisParent: TreeTrace = {
+            type: TreeTraceNodeType.LexicalUnit,
+            lexicalUnitId: createdWord.senses[0].units[0].id,
+            parent: wordParent
+        };
+
         for (const child of wordDef.derived)
         {
             if("ref" in child)
                 ProcessReferenceDefinition(child, builder, thisParent);
             else
                 ProcessWordDefinition(child, builder, verbalNounCounter, thisParent);
+        }
+    }
+    else if("pos" in wordDef)
+    {
+        let unitIndex = 0;
+        for (const unit of wordDef.pos)
+        {
+            const createdUnit = createdWord.senses[0].units[unitIndex++];
+
+            if(unit.derived === undefined)
+                continue;
+
+            const thisParent: TreeTrace = {
+                type: TreeTraceNodeType.LexicalUnit,
+                lexicalUnitId: createdUnit.id,
+                parent: wordParent
+            };
+
+            for (const child of unit.derived)
+            {
+                ProcessWordDefinition(child, builder, verbalNounCounter, thisParent);
+            }
+        }
+    }
+    else if("senses" in wordDef)
+    {
+        let senseIndex = 0;
+        for (const sense of wordDef.senses)
+        {
+            const createdUnit = createdWord.senses[senseIndex++].units[0];
+
+            if(sense.derived === undefined)
+                continue;
+
+            const thisParent: TreeTrace = {
+                type: TreeTraceNodeType.LexicalUnit,
+                lexicalUnitId: createdUnit.id,
+                parent: wordParent
+            };
+
+            for (const child of sense.derived)
+            {
+                ProcessWordDefinition(child, builder, verbalNounCounter, thisParent);
+            }
         }
     }
 

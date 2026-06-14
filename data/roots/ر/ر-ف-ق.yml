@@ -36,6 +36,18 @@ root:
               text:
                 - companion, attendant
 
+    - form: 4
+      type: verb
+      derived:
+        - derivation: passive-participle
+          type: adjective
+          translations:
+            - dialect: msa
+              source: wiktionary
+              text:
+                - (computing) an attachment
+              url: https://en.wiktionary.org/wiki/%D9%85%D8%B1%D9%81%D9%82#Noun_3
+
     - text: رَفِيق
       type: noun
       gender: male

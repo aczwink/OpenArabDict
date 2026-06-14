@@ -20,7 +20,7 @@ import { Conjugator } from "@aczwink/openarabicconjugation/dist/Conjugator";
 import { Gender, Numerus, Person, Tense, Voice } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
 import { DisplayVocalized, ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
-import { GenderedWordDefinition } from "../DataDefinitions";
+import { GenderedWordDefinition, MultiSenseWordDefinition } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { TreeTrace, TreeTraceNodeType } from "../TreeTrace";
 import { Buckwalter } from "@aczwink/openarabicconjugation/dist/Transliteration";
@@ -30,13 +30,14 @@ import { CreateVerbFromOADVerb, CreateVerbFromOADVerbForm, FindHighestConjugatab
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { ArabicText, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
+import { SenseDefinitionValidator } from "../validation/SenseDefinitionValidator";
 
 function CreateMSAVerb(root: OpenArabDictRoot, verb: OpenArabDictVerb)
 {
     return CreateVerbFromOADVerb(DialectType.ModernStandardArabic, root, verb);
 }
 
-function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBBuilder, parent?: TreeTrace): DisplayVocalized[] | undefined
+function GenerateTextIfPossible(senseValidator: SenseDefinitionValidator, validator: WordDefinitionValidator, builder: DBBuilder, parent?: TreeTrace): DisplayVocalized[] | undefined
 {
     const wordDef = validator._legacyWordDefinition;
 
@@ -98,6 +99,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             const generated = conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.VerbalNouns);
             if(generated.length === 1)
                 return generated[0];
+            break;
         }
         case "colloquial":
         case undefined:
@@ -106,9 +108,9 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
             {
                 const root = ExtractRoot(builder, parent);
 
-                const form = validator.verbForm;
+                const form = senseValidator.verbForm;
 
-                const dialectType = FindHighestConjugatableDialectOf(root.radicals, form, validator.translations);
+                const dialectType = FindHighestConjugatableDialectOf(root.radicals, form, senseValidator.translations);
                 const verb = CreateVerbFromOADVerbForm(dialectType, root.radicals, form);
 
                 const conjugator = new Conjugator;
@@ -128,7 +130,7 @@ function GenerateTextIfPossible(validator: WordDefinitionValidator, builder: DBB
     return undefined;
 }
 
-function ValidateVerbalNoun(parsed: DisplayVocalized[], word: GenderedWordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace | undefined)
+function ValidateVerbalNoun(parsed: DisplayVocalized[], word: GenderedWordDefinition | MultiSenseWordDefinition, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, parent: TreeTrace | undefined)
 {
     if(parent?.type !== TreeTraceNodeType.LexicalUnit)
         throw new Error("Verbal nouns can only be children of verbs");
@@ -153,9 +155,9 @@ function ValidateVerbalNoun(parsed: DisplayVocalized[], word: GenderedWordDefini
     throw new Error("Illegal verbal noun text definition for word. Got: " + word.text + ", " + Buckwalter.ToString(ParseVocalizedText(word.text ?? "")) + ". But allowed values are: " + choices);
 }
 
-export function _LegacyValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, validator: WordDefinitionValidator)
+function ValidateTextForSense(senseValidator: SenseDefinitionValidator, builder: DBBuilder, verbalNounCounter: VerbalNounCounter, validator: WordDefinitionValidator)
 {
-    const generated = GenerateTextIfPossible(validator, builder, validator.sourceTreeTrace);
+    const generated = GenerateTextIfPossible(senseValidator, validator, builder, validator.sourceTreeTrace);
     if(generated !== undefined)
     {
         const generatedString = VocalizedWordTostring(generated);
@@ -171,5 +173,13 @@ export function _LegacyValidateText(builder: DBBuilder, verbalNounCounter: Verba
                 ValidateVerbalNoun(parsed, validator._legacyWordDefinition, builder, verbalNounCounter, validator.sourceTreeTrace);
                 break;
         }
+    }
+}
+
+export function _LegacyValidateText(builder: DBBuilder, verbalNounCounter: VerbalNounCounter, validator: WordDefinitionValidator)
+{
+    for (const sense of validator.senses)
+    {
+        ValidateTextForSense(sense, builder, verbalNounCounter, validator);
     }
 }

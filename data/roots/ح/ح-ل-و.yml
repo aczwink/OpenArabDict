@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -16,6 +16,7 @@
 
 root:
   radicals: ح-ل-و
+  ya: true
   words:
     - type: verb
       dialect: msa
@@ -46,3 +47,13 @@ root:
               source: hw4-free-text
               text:
                 - candy, confection, confectionery, sweetmeats
+
+    - form: 5
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 237
+          text:
+            - to adorn o.s., be adorned, decked out, embellished, graced, endowed, furnished, provided (ب with)

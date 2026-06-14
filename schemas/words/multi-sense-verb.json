@@ -1,26 +1,10 @@
 {    
     "$schema": "https://json-schema.org/draft-07/schema#",
-    "title": "OpenArabDict verb definition",
-    "description": "JSON Schema for OpenArabDict verb definitions",
+    "title": "Multi sense verb definition",
+    "description": "JSON Schema for verbs with multiple senses definitions",
     "type": "object",
     "additionalProperties": false,
     "properties": {
-        "derived": {
-            "type": "array",
-            "items": {
-                "oneOf": [
-                    {
-                        "$ref": "./OpenArabDictWord_verbderived.json"
-                    },
-                    {
-                        "$ref": "./verbderived-multi-pos.json"
-                    },
-                    {
-                        "$ref": "./verbderived-multi-sense.json"
-                    }
-                ]
-            }
-        },
         "form": {
             "oneOf": [
                 {
@@ -81,25 +65,35 @@
                 }
             ]
         },
-        "translations": {
+        "senses": {
             "type": "array",
             "items": {
-                "oneOf": [
-                    {
-                        "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "derived": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "./OpenArabDictWord_verbderived.json"
+                        }
                     },
-                    {
-                        "$ref": "../translations/OpenArabDictLevantineArabicVerbsTranslationEntry.json"
-                    },
-                    {
-                        "$ref": "../translations/OpenArabDictWiktionaryTranslationEntry.json"
+                    "translations": {
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                                }
+                            ]
+                        }
                     }
-                ]
+                },
+                "required": ["translations"]
             }
         },
         "type": {
             "const": "verb"
         }
     },
-    "required": ["form", "type"]
+    "required": ["form", "senses", "type"]
 }

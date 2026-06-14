@@ -23,35 +23,48 @@ root:
         variants:
           - dialect: msa
             parameters: au
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 788
-          text:
-            - to carry out a military expedition, make a raid, foray, or incursion, commit aggression (ه ,ه against s.o., against s.th.), attack, assault (ه ,ه s.o., s.th.), raid, invade (ه s.th.)
-            - to conquer (ه s.th., ه s.o.)
-      derived:
-        - derivation: verbal-noun
-          text: غَزْو
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 788
-              text:
-                - assault, raid, incursion, inroad, invasion, attack, aggression
-
-        - text: غَزْوَة
-          derivation: meaning-related
-          type: noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 788
-              text:
-                - military expedition, foray
-                - raid, incursion, inroad, invasion, attack, aggression
-                - conquest
-                - campaign of conquest
+      senses:
+        - translations: []
           derived:
-            - text: غَزَوَات
-              derivation: plural
+            - derivation: meaning-related
+              type: noun
+              text: مَغْزًى
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 788
+                  text:
+                    - sense, meaning, signification, import
+
+        - translations:
+          - dialect: msa
+            source: hw4
+            source-page: 788
+            text:
+              - to carry out a military expedition, make a raid, foray, or incursion, commit aggression (ه ,ه against s.o., against s.th.), attack, assault (ه ,ه s.o., s.th.), raid, invade (ه s.th.)
+              - to conquer (ه s.th., ه s.o.)
+          derived:
+            - derivation: verbal-noun
+              text: غَزْو
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 788
+                  text:
+                    - assault, raid, incursion, inroad, invasion, attack, aggression
+
+            - text: غَزْوَة
+              derivation: meaning-related
+              type: noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 788
+                  text:
+                    - military expedition, foray
+                    - raid, incursion, inroad, invasion, attack, aggression
+                    - conquest
+                    - campaign of conquest
+              derived:
+                - text: غَزَوَات
+                  derivation: plural

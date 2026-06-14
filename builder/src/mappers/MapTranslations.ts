@@ -59,12 +59,21 @@ export function MapTranslations(builder: DBBuilder, wordDef: WordDefinition, val
         {
             const pos = wordDef.pos[i];
             const translations = ProcessTranslationDefinitions(pos.translations, builder);
-            validator.LexicalUnit(i).translations = translations; 
+            validator.Sense(0).LexicalUnit(i).translations = translations; 
+        }
+    }
+    else if("senses" in wordDef)
+    {
+        for (let i = 0; i < wordDef.senses.length; i++)
+        {
+            const sense = wordDef.senses[i];
+            const translations = ProcessTranslationDefinitions(sense.translations, builder);
+            validator.Sense(i).LexicalUnit(0).translations = translations; 
         }
     }
     else
     {
         const translations = ProcessTranslationDefinitions(wordDef.translations, builder);
-        validator.LexicalUnit(0).translations = translations;
+        validator.Sense(0).LexicalUnit(0).translations = translations;
     }
 }

@@ -42,14 +42,25 @@ root:
                 - bewitchment, beguilement, enchantment, fascination
 
         - derivation: active-participle
-          type: adjective
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 466
-              text:
-                - charming, enchanting
+          pos:
+            - type: adjective
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 466
+                  text:
+                    - charming, enchanting
+
+            - type: noun
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 466
+                  text:
+                    - sorcerer, enchanter, magician, wizard, charmer
+              derived:
+                - derivation: plural
+                  text: سَاحِرُون
 
     - text: سَحَر
       type: noun

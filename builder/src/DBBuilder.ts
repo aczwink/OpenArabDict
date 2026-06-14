@@ -28,6 +28,11 @@ interface UnitData
     translations: OpenArabDictTranslationEntry[];
 }
 
+interface SenseData
+{
+    units: UnitData[];
+}
+
 export class DBBuilder
 {
     constructor()
@@ -100,37 +105,42 @@ export class DBBuilder
         this.userWordIdMap[userWordId] = wordId;
     }
 
-    public AddWord(text: string, parents: OpenArabDictParent[], unitsData: UnitData[])
+    public AddWord(text: string, parents: OpenArabDictParent[], sensesData: SenseData[])
     {
         const lexeme: OpenArabDictLexeme = {
             id: "",
             parent: parents,
-            senses: [
-                {
-                    units: []
-                }
-            ],
+            senses: [],
             text
         };
         const lexemeId = this.GenerateUniqueLexemeId(lexeme);
 
         lexeme.id = lexemeId;
 
-        for(let i = 0; i < unitsData.length; i++)
+        for(let i = 0; i < sensesData.length; i++)
         {
-            const data = unitsData[i];
-            lexeme.senses[0].units.push({
-                id: "",
-                pos: data.pos
+            const senseData = sensesData[i];
+            lexeme.senses.push({
+                units: []
             });
-            const unit = lexeme.senses[0].units.Last();
+            const sense = lexeme.senses[i];
 
-            const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, unit.pos);
-            unit.id = lexicalUnitId;
+            for(let j = 0; j < senseData.units.length; j++)
+            {
+                const unitData = senseData.units[j];
+                sense.units.push({
+                    id: "",
+                    pos: unitData.pos
+                });
+                const unit = sense.units[j];
+
+                const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, i, unit.pos);
+                unit.id = lexicalUnitId;
             
-            this.lexicalUnitMap[lexicalUnitId] = unit.pos;
-            this.lexicalUnitToLexemeMap[lexicalUnitId] = lexeme;
-            this.translations.set(lexicalUnitId, data.translations);   
+                this.lexicalUnitMap[lexicalUnitId] = unit.pos;
+                this.lexicalUnitToLexemeMap[lexicalUnitId] = lexeme;
+                this.translations.set(lexicalUnitId, unitData.translations);
+            }
         }
 
         this.lexemes[lexemeId] = lexeme;
@@ -252,9 +262,9 @@ export class DBBuilder
         }
     }
 
-    private DeriveLexicalUnitId(lexemeId: string, pos: OpenArabDictPartOfSpeech)
+    private DeriveLexicalUnitId(lexemeId: string, senseIndex: number, pos: OpenArabDictPartOfSpeech)
     {
-        //TODO: has to be also dependent on the sense
+        //TODO: has to be also dependent on the sense and has to be stable (think about translator!)
         function ShortType()
         {
             switch(pos.type)
@@ -271,7 +281,7 @@ export class DBBuilder
             }
             return "";
         }
-        return lexemeId + ShortType();
+        return lexemeId + senseIndex + ShortType();
     }
 
     private GenerateRootId(radicals: string)

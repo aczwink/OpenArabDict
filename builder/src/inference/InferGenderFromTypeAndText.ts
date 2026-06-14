@@ -20,13 +20,16 @@ import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
 export function InferGenderFromTypeAndText(validator: WordDefinitionValidator)
 {
-    for (const unit of validator.lexicalUnits)
+    for (const sense of validator.senses)
     {
-        if((unit.type === OpenArabDictPOSType.Adjective) || (unit.type === OpenArabDictPOSType.Noun))
+        for (const unit of sense.lexicalUnits)
         {
-            const isFemale = validator.text.endsWith("ة");
-            const gender = isFemale ? OpenArabDictGender.Female : OpenArabDictGender.Male;
-            unit.InferDefault("gender", gender);
+            if((unit.type === OpenArabDictPOSType.Adjective) || (unit.type === OpenArabDictPOSType.Noun))
+            {
+                const isFemale = validator.text.endsWith("ة");
+                const gender = isFemale ? OpenArabDictGender.Female : OpenArabDictGender.Male;
+                unit.InferDefault("gender", gender);
+            }
         }
     }
 }

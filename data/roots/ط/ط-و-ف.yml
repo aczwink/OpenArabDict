@@ -29,29 +29,15 @@ root:
             - to go about, walk about, ride about, travel about, move about,
               rove about, wander about, run around (ه in s.th.), tour (ه s.th.)
       derived:
-        - text: طَائِفَة
-          derivation: meaning-related
+        - derivation: meaning-related
+          text: مَطَاف
           type: noun
-          gender: female
           translations:
             - dialect: msa
               source: hw4
-              url: http://ejtaal.net/aa/#hw4=685
+              source-page: 671
               text:
-                - religious minority
-          derived:
-            - text: طَوَائِف
-              derivation: plural
-              type: noun
-              gender: female
-              translations:
-                - dialect: msa
-                  source: hw4
-                  url: http://ejtaal.net/aa/#hw4=685
-                  contextual:
-                    - text: ملوك الطوائف
-                      translation: princelings, petty kings
-                  text: []
+                - riding about, traveling, touring
 
     - type: verb
       form:
@@ -66,3 +52,26 @@ root:
           text:
             - float
             - flood
+
+    - text: طَائِفَة
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          url: http://ejtaal.net/aa/#hw4=685
+          text:
+            - religious minority
+      derived:
+        - text: طَوَائِف
+          derivation: plural
+          type: noun
+          gender: female
+          translations:
+            - dialect: msa
+              source: hw4
+              url: http://ejtaal.net/aa/#hw4=685
+              contextual:
+                - text: ملوك الطوائف
+                  translation: princelings, petty kings
+              text: []
