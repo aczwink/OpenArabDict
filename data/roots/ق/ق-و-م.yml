@@ -152,6 +152,15 @@ root:
           text:
             - stature, figure, build, frame (of a person)
 
+    - text: قَيِّم
+      type: adjective
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 935
+          text:
+            - valuable, precious
+
     - text: قِيمَة
       type: noun
       gender: female

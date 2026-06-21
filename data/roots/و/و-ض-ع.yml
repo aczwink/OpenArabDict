@@ -67,9 +67,18 @@ root:
                 - situation
 
     - type: verb
-      dialect: msa
       form: 6
       derived:
+        - derivation: verbal-noun
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 1263
+              text:
+                - humility, modesty
+                - lowness, lowliness, humbleness
+
         - derivation: active-participle
           type: adjective
           gender: male

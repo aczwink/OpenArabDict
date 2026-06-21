@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,28 +15,14 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ك-ف-ي
+  radicals: ء-ل-ق
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to be enough
-      derived:
-        - text: كِفَايَة
-          derivation: verbal-noun
-
-    - form: 8
+    - form: 5
       type: verb
       translations:
         - dialect: msa
           source: hw4
-          source-page: 977
+          source-page: 29
           text:
-            - to be content, content o.s. (ب with s.th.)
-            - to have enough, be satisfied (after eating)
+            - to shine, radiate, flash, glitter, glisten
+            - to sparkle

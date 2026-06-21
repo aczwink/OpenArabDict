@@ -391,6 +391,18 @@ function Checklexeme(lexeme: OpenArabDictLexeme, unit: OpenArabDictLexicalUnit, 
         }
     }
 
+    //test: arb/sound_but_weak_root/r1hamza_stem5.js
+    if(isVerbalNoun)
+    {
+        const root = doc.roots.find(x => x.id === verb.rootId)!;
+        const startsWithHamza = (root?.radicals.startsWith("ء"));
+
+        if((verb.form.stem === 5) && startsWithHamza)
+        {
+            console.log("FOUND1718456", lexeme);
+        }
+    }
+
     //test: arb/sound_but_weak_root/r1hamza_stem6.js
     if(isVerbalNoun)
     {

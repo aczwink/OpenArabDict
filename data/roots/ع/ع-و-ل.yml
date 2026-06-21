@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,8 +18,13 @@ root:
   radicals: ع-و-ل
   words:
     - type: verb
-      dialect: msa
       form: 4
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 771
+          text:
+            - to support, sustain, have to feed (ه s.o., esp. family members), have to provide for s.o.'s (ه) support
       derived:
         - derivation: active-participle
           type: noun
