@@ -42,3 +42,13 @@ root:
               source-page: 1110
               text:
                 - deliverance, rescue
+
+    - form: 4
+      type: verb
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 1110
+          text:
+            - to deliver, save, rescue, bring to safety (ه s.o., من from)

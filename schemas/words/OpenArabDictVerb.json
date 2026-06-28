@@ -32,32 +32,17 @@
                     "type": "object",
                     "additionalProperties": false,
                     "properties": {
-                        "stem": {
-                            "type": "integer",
-                            "enum": [2, 3, 4, 5, 6, 7, 8, 9, 10]
-                        },
-                        "type": {
-                            "type": "string",
-                            "enum": ["irregular", "sound"]
-                        },
-                        "valency": {
-                            "type": "string",
-                            "enum": ["transitive"]
-                        }
-                    },
-                    "required": ["stem"]
-                },
-                {
-                    "type": "object",
-                    "additionalProperties": false,
-                    "properties": {
                         "stative": {
                             "type": "boolean",
                             "const": true
                         },
                         "stem": {
                             "type": "integer",
-                            "const": 1
+                            "enum": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+                        },
+                        "type": {
+                            "type": "string",
+                            "enum": ["irregular", "sound"]
                         },
                         "valency": {
                             "type": "string",
@@ -77,7 +62,7 @@
                             }
                         }
                     },
-                    "required": ["stem", "variants"]
+                    "required": ["stem"]
                 }
             ]
         },

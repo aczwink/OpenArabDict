@@ -77,32 +77,26 @@ export interface WordReferenceDefinition
 export interface VerbVariantDefintion
 {
     dialect: string;
-    parameters: string;
+    parameters?: string;
     type?: "defective" | "irregular" | "sound";
 }
 
-interface ParameterizedStem1DataWithVariants
+interface FullParameterizedStemData
 {
     stative?: true;
-    stem: 1;
-    valency?: "transitive";
-    variants: VerbVariantDefintion[];
-}
-
-interface ParameterizedAdvancedStemData
-{
-    stem: AdvancedStemNumber;
+    stem: 1 | AdvancedStemNumber;
     type?: "irregular" | "sound";
     valency?: "transitive";
+    variants?: VerbVariantDefintion[];
 }
 
-export type ParameterizedStemData = _LegacyParameterizedStem1Data | ParameterizedStem1DataWithVariants | ParameterizedAdvancedStemData;
+export type ParameterizedStemData = _LegacyParameterizedStem1Data | FullParameterizedStemData;
 
 export interface VerbWordDefinition
 {
     type: "verb";
     alias?: string;
-    form: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | ParameterizedStemData;
+    form: AdvancedStemNumber | ParameterizedStemData;
     translations?: TranslationDefinition[];
     derived?: WordDefinition[];
     derivation?: "colloquial";
@@ -131,7 +125,7 @@ export interface MultiSenseVerbDefinition
 {
     derivation?: ""; //TODO: actually not true
     type: "verb";
-    form: 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | ParameterizedStemData;
+    form: AdvancedStemNumber | ParameterizedStemData;
     senses: SenseDefinition[];
 }
 

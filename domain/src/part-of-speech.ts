@@ -63,7 +63,7 @@ export enum OpenArabDictVerbType
 interface VerbVariant
 {
     dialectId: number;
-    stemParameters: string;
+    stemParameters?: string;
     verbType?: OpenArabDictVerbType;
 }
 

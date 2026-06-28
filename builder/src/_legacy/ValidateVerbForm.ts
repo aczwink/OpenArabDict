@@ -17,7 +17,7 @@
  * */
 import { Dialects } from "@aczwink/openarabicconjugation";
 import { OpenArabDictVerbType } from "@aczwink/openarabdict-domain";
-import { MultiSenseVerbDefinition, ParameterizedStemData, VerbVariantDefintion, VerbWordDefinition } from "../DataDefinitions";
+import { ParameterizedStemData, VerbVariantDefintion } from "../DataDefinitions";
 import { DBBuilder } from "../DBBuilder";
 import { ExtractRoot } from "../shared";
 import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
@@ -26,14 +26,13 @@ import { DialectTree, MapVerbTypeToOpenArabicConjugation } from "@aczwink/openar
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounterService, StatisticsCounter } from "../services/StatisticsCounterService";
 import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
+import { AdvancedStemNumber } from "@aczwink/openarabicconjugation/dist/Definitions";
 
-function MapVerbType(verb: VerbWordDefinition | MultiSenseVerbDefinition)
+function MapVerbType(form: ParameterizedStemData)
 {
-    if(typeof verb.form === "number")
-        return undefined;
-    if(("type" in verb.form))
+    if(("type" in form))
     {
-        switch(verb.form.type)
+        switch(form.type)
         {
             case "irregular":
                 return OpenArabDictVerbType.Irregular;
@@ -60,7 +59,7 @@ function MapVerbTypeFromVariant(variant: VerbVariantDefintion)
     return undefined;
 }
 
-function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionValidator, variant: VerbVariantDefintion)
+function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionValidator, stem: 1 | AdvancedStemNumber, variant: VerbVariantDefintion)
 {
     const dialectId = builder.MapDialectKey(variant.dialect)!;
 
@@ -72,18 +71,17 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
     const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
 
     const meta = Dialects.GetDialectMetadata(dialectType);
-    const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, variant.parameters);
+    const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, (stem === 1) ? (variant.parameters ?? "") : stem); //TODO: this is likely not gonna work anymore with the elvis operator :)
     const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
-    if(!choices.types.includes(variant.parameters))
+    if(!choices.types.includes(variant.parameters ?? "")) //TODO: remove ""
     {
         console.log(validator._legacyWordDefinition, root.radicals, variant);
         throw new Error("Wrong stem parameterization");
     }
 
-
     return {
         dialectId,
-        stemParameters: variant.parameters,
+        stemParameters: variant.parameters ?? "", //TODO: fix this
         verbType: oadVerbType
     };
 }
@@ -97,55 +95,47 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
     if(def.type !== "verb")
         return;
 
-    const verbType = MapVerbType(def);
-    if((typeof def.form !== "number") && ("variants" in def.form) && (def.form.variants !== undefined))
+    if(typeof def.form === "number")
     {
-        const stem = def.form.stem;
+        validator.verbForm = {
+            hasPassive: false,
+            stem: def.form,
+        };
+    }
+    else if("parameters" in def.form)
+    {
+        const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+        statsService.Increment(StatisticsCounter.LegacyVerbParameters);
 
         validator.verbForm = {
-            hasPassive: MapPassiveFlag(def.form),
-            stative: ExtractStativeFlag(def.form),
-            stem,
-            variants: def.form.variants.map(ValidateVerbFormVariant.bind(undefined, builder, validator)),
-            verbType
-        };
+            hasPassive: false,
+            stem: def.form.stem,
+            variants: [
+                ValidateVerbFormVariant(builder, validator, def.form.stem, ({ dialect: _LegacyExtractDialect(def), parameters: def.form.parameters }))
+            ]
+        }
     }
     else
     {
-        const stemNumber = (typeof def.form === "number") ? def.form : def.form.stem;
-
-        const variants = ((typeof def.form !== "number") && ("parameters" in def.form)) ? [
-            ValidateVerbFormVariant(builder, validator, ({ dialect: _LegacyExtractDialect(def), parameters: def.form.parameters }))
-        ] : undefined;
-        if(((typeof def.form !== "number") && ("parameters" in def.form)))
-        {
-            const statsService = GlobalInjector.Resolve(StatisticsCounterService);
-            statsService.Increment(StatisticsCounter.LegacyVerbParameters);
-        }
-
         validator.verbForm = {
             hasPassive: MapPassiveFlag(def.form),
             stative: ExtractStativeFlag(def.form),
-            stem: stemNumber,
-            variants,
-            verbType
+            stem: def.form.stem,
+            variants: def.form.variants?.map(ValidateVerbFormVariant.bind(undefined, builder, validator, def.form.stem)),
+            verbType: MapVerbType(def.form)
         };
     }
 }
 
-function ExtractStativeFlag(form: ParameterizedStemData | number): true | undefined
+function ExtractStativeFlag(form: ParameterizedStemData): true | undefined
 {
-    if(typeof form === "number")
-        return undefined;
-    if((form.stem === 1) && ("variants" in form))
+    if("stative" in form)
         return form.stative;
     return undefined;
 }
 
-function MapPassiveFlag(form: ParameterizedStemData | number): boolean
+function MapPassiveFlag(form: ParameterizedStemData): boolean
 {
-    if(typeof form === "number")
-        return false;
     if("valency" in form)
     {
         switch(form.valency)

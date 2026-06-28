@@ -18,7 +18,11 @@ root:
   radicals: و-ض-ء
   words:
     - type: verb
-      form: 5 #TODO THIS IS DEFECTIVE IN LEBANESE
+      form:
+        stem: 5
+        variants:
+          - dialect: lb
+            type: defective
       translations:
         - dialect: lb
           source: lav

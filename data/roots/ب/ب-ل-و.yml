@@ -18,6 +18,19 @@ root:
   radicals: ب-ل-و
   ya: true
   words:
+    - form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ia
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 91
+          text:
+            - to be or become old, worn, shabby (clothes)
+
     - form: 8
       type: verb
       translations:
