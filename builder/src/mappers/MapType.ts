@@ -48,6 +48,8 @@ function MapTypeFromDefinition(wordDef: GenderedWordDefinition | OtherWordDefini
             return OpenArabDictPOSType.Preposition;
         case "pronoun":
             return OpenArabDictPOSType.Pronoun;
+        case "proper-noun":
+            return OpenArabDictPOSType.Noun; //TODO
         case "verb":
             return OpenArabDictPOSType.Verb;
         default:

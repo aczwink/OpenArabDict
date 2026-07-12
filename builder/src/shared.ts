@@ -20,10 +20,8 @@ import { OpenArabDictParent, OpenArabDictParentType, OpenArabDictPOSType } from 
 import { TreeTrace, TreeTraceNodeType } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
 import { CreateVerbFromOADVerb, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
-import { Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
-import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { ArabicText, Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
-import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
 
 
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
@@ -82,8 +80,8 @@ export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParen
 
                 const conjugator = new Conjugator;
 
-                const parsed = ParseVocalizedText(parentLexeme.text);
-                const generated = conjugator.DeriveSoundAdjectiveOrNoun(parsed, Mapping.MapGender(parentUnitPOS.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
+                const reconstructed = ArabicText.ReconstructFullyVocalizedWord(parentLexeme.text);
+                const generated = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed, Mapping.MapGender(parentUnitPOS.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
 
                 //TODO: fix this                
                 /*return [

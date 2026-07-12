@@ -40,6 +40,7 @@ export enum OpenArabDictPOSType
     Interjection = 9,
     Verb = 10,
     Numeral = 11,
+    ProperNoun = 12,
 }
 
 export interface OpenArabDictGendered

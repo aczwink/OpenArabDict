@@ -17,8 +17,7 @@
  * */
 import { DBBuilder } from "../DBBuilder";
 import { OpenArabDictGender, OpenArabDictParentType } from "@aczwink/openarabdict-domain";
-import { Conjugator, DialectType } from "@aczwink/openarabicconjugation";
-import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { ArabicText, Conjugator, DialectType } from "@aczwink/openarabicconjugation";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { Gender } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { GenerateAllPossibleTextsFromDerivation } from "../shared";
@@ -40,7 +39,7 @@ export function ValidateText(builder: DBBuilder, validator: WordDefinitionValida
             for (const parent of validator.parents)
             {
                 const parentWord = builder.GetLexeme(parent.id);
-                const parsed = ParseVocalizedText(parentWord.text);
+                const reconstructed = ArabicText.ReconstructFullyVocalizedWord(parentWord.text);
 
                 let generated;
                 switch(parent.type)
@@ -50,7 +49,7 @@ export function ValidateText(builder: DBBuilder, validator: WordDefinitionValida
                         const gender = ("gender" in parentWord) ? parentWord.gender : OpenArabDictGender.Male;
 
                         const conjugator = new Conjugator();
-                        const noun = conjugator.DeriveSoundAdjectiveOrNoun(parsed, (gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveNisbaSameGender, DialectType.ModernStandardArabic);
+                        const noun = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed, (gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveNisbaSameGender, DialectType.ModernStandardArabic);
                         //TODO: fix this
                         //generated = [noun];
                     }

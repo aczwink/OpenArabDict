@@ -17,10 +17,9 @@
  * */
 
 import { OpenArabDictParentType } from "@aczwink/openarabdict-domain";
-import { Conjugator, DialectType } from "@aczwink/openarabicconjugation";
+import { ArabicText, Conjugator, DialectType } from "@aczwink/openarabicconjugation";
 import { DBBuilder } from "../DBBuilder";
 import { AdjectiveOrNounState, Case, Gender, Numerus } from "@aczwink/openarabicconjugation/dist/Definitions";
-import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { GenerateAllPossibleTextsFromDerivation } from "../shared";
 import { Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
@@ -40,12 +39,12 @@ export function InferTextFromDerivation(builder: DBBuilder, validator: WordDefin
                 const pos = parentWord.senses[0].units[0].pos;
                 if(!("gender" in pos))
                     continue;
-                
+
                 const generated = c.DeclineAdjectiveOrNoun({
                     gender: Mapping.MapGender(pos.gender),
                     isDefinite: false,
                     numerus: Numerus.Singular,
-                    vocalized: ParseVocalizedText(parentWord.text),
+                    vocalized: ArabicText.ReconstructFullyVocalizedWord(parentWord.text),
                 }, { case: Case.Accusative, state: AdjectiveOrNounState.Indefinite }, DialectType.ModernStandardArabic);
                 validator.InferValue("text", generated);
             }
@@ -54,7 +53,8 @@ export function InferTextFromDerivation(builder: DBBuilder, validator: WordDefin
             {
                 const parentWord = builder.GetLexemeFromLexicalUnitId(parent.id);
 
-                const generated = c.DeriveSoundAdjectiveOrNoun(ParseVocalizedText(parentWord.text), Gender.Male, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
+                const reconstructed = ArabicText.ReconstructFullyVocalizedWord(parentWord.text);
+                const generated = c.DeriveSoundAdjectiveOrNoun(reconstructed, Gender.Male, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
                 validator.InferDefault("text", generated);
             }
             break;

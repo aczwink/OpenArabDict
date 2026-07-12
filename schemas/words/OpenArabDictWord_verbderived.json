@@ -55,7 +55,8 @@
         "type": {
             "enum": [
                 "adjective",
-                "noun"
+                "noun",
+                "proper-noun"
             ]
         }
     },

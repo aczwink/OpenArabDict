@@ -81,7 +81,7 @@ root:
               url: http://ejtaal.net/aa/#hw4=49
               text:
                 - reliability, trustworthiness
-        - text: أَمِين⁩
+        - text: أَمِين
           derivation: meaning-related
           type: adjective
           gender: male

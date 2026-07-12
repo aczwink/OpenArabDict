@@ -47,7 +47,7 @@ export interface WordDerivationFromDefinition
 
 export interface GenderedWordDefinition
 {
-    type?: "adjective" | "noun" | "numeral" | "pronoun";
+    type?: "adjective" | "noun" | "numeral" | "proper-noun" | "pronoun";
     alias?: string;
     derivation: "active-participle" | "characteristic-noun" | "definite-state" | "feminine" | "instance-noun" | "noun-of-place" | "passive-participle" | "plural" | "singulative" | "tool-noun" | "verbal-noun";
     "derived-from"?: WordDerivationFromDefinition[];

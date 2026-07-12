@@ -68,20 +68,29 @@ function ValidateVerbFormVariant(builder: DBBuilder, validator: WordDefinitionVa
     
     const dialectType = DialectTree.MapIdToType(dialectId)!;
     const oadVerbType = MapVerbTypeFromVariant(variant);
-    const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
 
-    const meta = Dialects.GetDialectMetadata(dialectType);
-    const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, (stem === 1) ? (variant.parameters ?? "") : stem); //TODO: this is likely not gonna work anymore with the elvis operator :)
-    const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
-    if(!choices.types.includes(variant.parameters ?? "")) //TODO: remove ""
+    if(stem === 1)
     {
-        console.log(validator._legacyWordDefinition, root.radicals, variant);
-        throw new Error("Wrong stem parameterization");
+        const verbType = MapVerbTypeToOpenArabicConjugation(oadVerbType);
+        const meta = Dialects.GetDialectMetadata(dialectType);
+        const parameters = variant.parameters;
+
+        if(parameters === undefined)
+            throw new Error("Parameters are required on stem 1!");
+
+        const defVerbType = verbType ?? meta.DeriveVerbType(rootInstance, (stem === 1) ? parameters : stem);
+
+        const choices = meta.GetStem1ContextChoices(defVerbType, rootInstance);
+        if(!choices.types.includes(parameters))
+        {
+            console.log(validator._legacyWordDefinition, root.radicals, variant);
+            throw new Error("Wrong stem parameterization");
+        }
     }
 
     return {
         dialectId,
-        stemParameters: variant.parameters ?? "", //TODO: fix this
+        stemParameters: variant.parameters,
         verbType: oadVerbType
     };
 }

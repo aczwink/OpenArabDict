@@ -69,7 +69,7 @@ function GenerateTextIfPossible(senseValidator: SenseDefinitionValidator, valida
             const verbalNoun = parent.parent.lexeme.senses[0].units[0].pos as OpenArabDictGendered;
             
             const c = new Conjugator();
-            const baseParsed = ParseVocalizedText(parent.parent.lexeme.text);
+            const baseParsed = ArabicText.ReconstructFullyVocalizedWord(parent.parent.lexeme.text);
             const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (verbalNoun.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
 
             return generated;
@@ -80,7 +80,7 @@ function GenerateTextIfPossible(senseValidator: SenseDefinitionValidator, valida
                 throw new Error("Singulatives can only be derived from nouns");
 
             const c = new Conjugator();
-            const baseParsed = ParseVocalizedText(parent.parent.lexeme.text);
+            const baseParsed = ArabicText.ReconstructFullyVocalizedWord(parent.parent.lexeme.text);
             const generated = c.DeriveSoundAdjectiveOrNoun(baseParsed, (parent.parent.lexeme.senses[0].units[0].pos.gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
 
             return generated;
