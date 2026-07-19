@@ -153,6 +153,9 @@ export class LexicalUnitDefinitionValidator extends DefinitionValidator<"gender"
                     form: this.verbForm,
                     rootId: "" //TODO!!! set in wordprocessor
                 };
+
+            case OpenArabDictPOSType.ProperNoun:
+                throw new Error("TODO FIX ME");
         }
 
         return {

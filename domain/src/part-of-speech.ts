@@ -45,7 +45,7 @@ export enum OpenArabDictPOSType
 
 export interface OpenArabDictGendered
 {
-    type: OpenArabDictPOSType.Adjective | OpenArabDictPOSType.Noun | OpenArabDictPOSType.Numeral | OpenArabDictPOSType.Pronoun;
+    type: OpenArabDictPOSType.Adjective | OpenArabDictPOSType.Noun | OpenArabDictPOSType.Numeral | OpenArabDictPOSType.Pronoun | OpenArabDictPOSType.ProperNoun;
     gender: OpenArabDictGender;
 }
 

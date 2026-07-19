@@ -36,7 +36,7 @@ root:
           text:
             - wink
       derived:
-        - text: غَمْزة
+        - text: غَمْزَة
           derivation: meaning-related
           type: noun
           gender: female

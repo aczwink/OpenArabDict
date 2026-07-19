@@ -56,7 +56,7 @@ root:
               source: hw4-free-text
               text:
                 - forearm
-        - text: سَعِيد⁩
+        - text: سَعِيد
           derivation: meaning-related
           type: adjective
           gender: male

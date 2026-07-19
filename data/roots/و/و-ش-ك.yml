@@ -26,8 +26,9 @@ root:
             type: sound
       derived:
         - text: وَشْك
-          alias: وُشْك
-          derivation: verbal-noun
+          #alias: وُشْك
+          #derivation: verbal-noun
+          derivation: meaning-related #TODO
           type: noun
           gender: male
           translations:
