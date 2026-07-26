@@ -39,6 +39,7 @@ import { WordDefinitionValidator, WordMapper, WordValidator } from "./validation
 import { MapType } from "./mappers/MapType";
 import { GlobalInjector } from "@aczwink/acts-util-node";
 import { StatisticsCounter, StatisticsCounterService } from "./services/StatisticsCounterService";
+import { MapState } from "./mappers/MapState";
 
 export class WordProcessor
 {
@@ -67,6 +68,7 @@ export function ProcessWordDefinition(wordDef: WordDefinition, builder: DBBuilde
     const mappers: WordMapper[] = [
         MapGender,
         MapParents.bind(undefined, builder),
+        MapState,
         MapText,
         MapTranslations.bind(undefined, builder),
         MapType,

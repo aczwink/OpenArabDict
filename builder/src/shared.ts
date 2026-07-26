@@ -22,6 +22,8 @@ import { DBBuilder } from "./DBBuilder";
 import { CreateVerbFromOADVerb, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { ArabicText, Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
+import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
+import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
 
 
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
@@ -83,10 +85,10 @@ export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParen
                 const reconstructed = ArabicText.ReconstructFullyVocalizedWord(parentLexeme.text);
                 const generated = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed, Mapping.MapGender(parentUnitPOS.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
 
-                //TODO: fix this                
+                //TODO: fix this
                 /*return [
                     generated,
-                    ...conjugator.DeriveFromNoun(parsed, TargetNounBasedDerivationPatterns.PluralPatterns)
+                    ...conjugator.DeriveFromNoun(ParseVocalizedText(parentLexeme.text), TargetNounBasedDerivationPatterns.PluralPatterns)
                 ];*/
             }
     }

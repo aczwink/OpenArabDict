@@ -45,8 +45,15 @@ export enum OpenArabDictPOSType
 
 export interface OpenArabDictGendered
 {
-    type: OpenArabDictPOSType.Adjective | OpenArabDictPOSType.Noun | OpenArabDictPOSType.Numeral | OpenArabDictPOSType.Pronoun | OpenArabDictPOSType.ProperNoun;
+    type: OpenArabDictPOSType.Adjective | OpenArabDictPOSType.Numeral | OpenArabDictPOSType.Pronoun | OpenArabDictPOSType.ProperNoun;
     gender: OpenArabDictGender;
+}
+
+export interface OpenArabDictNounPOS
+{
+    type: OpenArabDictPOSType.Noun;
+    gender: OpenArabDictGender;
+    inConstructState: true;
 }
 
 interface OpenArabDictOther
@@ -84,4 +91,4 @@ export interface OpenArabDictVerb
     form: OpenArabDictVerbForm;
 }
 
-export type OpenArabDictPartOfSpeech = OpenArabDictGendered | OpenArabDictOther | OpenArabDictVerb;
+export type OpenArabDictPartOfSpeech = OpenArabDictGendered | OpenArabDictNounPOS | OpenArabDictOther | OpenArabDictVerb;

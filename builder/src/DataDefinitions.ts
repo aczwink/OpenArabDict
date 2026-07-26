@@ -53,6 +53,7 @@ export interface GenderedWordDefinition
     "derived-from"?: WordDerivationFromDefinition[];
     gender?: "male" | "female" | "male-or-female";
     id?: string;
+    state?: "construct";
     text?: string;
     translations: TranslationDefinition[];
     derived?: WordOrReferenceDefinition[];
@@ -123,7 +124,7 @@ interface SenseDefinition
 
 export interface MultiSenseVerbDefinition
 {
-    derivation?: ""; //TODO: actually not true
+    derivation?: "";
     type: "verb";
     form: AdvancedStemNumber | ParameterizedStemData;
     senses: SenseDefinition[];

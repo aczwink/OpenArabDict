@@ -25,7 +25,8 @@ root:
             parameters: ii
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 1098
           text:
             - to bend, bend down (إلى to; على over)
       derived:

@@ -1,6 +1,6 @@
 {
   "name": "@aczwink/openarabdict-translator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "bin": "dist/cli.js",
   "main": "dist/main.js",
@@ -13,13 +13,13 @@
   "author": "Amir Czwink",
   "license": "AGPL-3.0",
   "devDependencies": {
-    "@types/node": "^25.6.0",
-    "typescript": "^6.0.3"
+    "@types/node": "^26.1.1",
+    "typescript": "^7.0.2"
   },
   "dependencies": {
     "@aczwink/acts-util-core": "^1.0.0",
     "@aczwink/acts-util-node": "^1.0.0",
-    "@aczwink/openarabdict-domain": "^2.0.0",
+    "@aczwink/openarabdict-domain": "^2.1.2",
     "dotenv": "^17.4.2"
   }
 }

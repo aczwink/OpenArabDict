@@ -44,7 +44,7 @@ function FindVerb(lexicalUnitId: string, doc: OpenArabDictDocument)
         }
     }
 
-    throw new Error("todo");
+    throw new Error("Verb could not be found");
 }
 
 function Checklexeme(lexeme: OpenArabDictLexeme, unit: OpenArabDictLexicalUnit, doc: OpenArabDictDocument)

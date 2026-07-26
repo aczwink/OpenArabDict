@@ -47,6 +47,16 @@ root:
               text:
                 - return
 
+        - derivation: meaning-related
+          text: رَجْعَة
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 379
+              text:
+                - return
+
     - type: verb
       form: 2
       translations:

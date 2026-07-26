@@ -17,6 +17,20 @@
 root:
   radicals: ط-ف-ء
   words:
+    - type: verb
+      form:
+        stem: 2
+        variants:
+          - dialect: lb
+            type: defective
+      translations:
+        - dialect: lb
+          source: lav
+          source-page: 128
+          text:
+            - extinguish
+            - turn off, switch off
+
     - form: 4
       type: verb
       translations:

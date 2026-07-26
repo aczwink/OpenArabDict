@@ -352,14 +352,15 @@ words:
         text:
           - port, harbor, anchorage
 
-  - text: سمهري
+  - text: سَمْهَرِي
     type: adjective
-    gender: male
     translations:
       - dialect: msa
-        source: hw4-free-text
+        source: hw4
+        source-page: 504
         text:
           - tall and husky, extremely tall, of giant stature (سمهري القامة)
+
   - text: رُضَاب
     type: noun
     gender: male
@@ -454,7 +455,7 @@ words:
         text:
           - capital
     derived:
-      - text: رَأْسِمَالِيَّة⁩
+      - text: رَأْسِمَالِيَّة
         derivation: extension
         type: noun
         gender: female
@@ -1027,6 +1028,7 @@ words:
   - text: ذُو
     type: noun
     gender: male
+    state: construct
     translations:
       - dialect: msa
         source: hw4

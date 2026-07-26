@@ -134,7 +134,7 @@ export class DBBuilder
                 });
                 const unit = sense.units[j];
 
-                const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, i, unit.pos);
+                const lexicalUnitId = this.DeriveLexicalUnitId(lexemeId, unitData.translations, i, unit.pos);
                 unit.id = lexicalUnitId;
             
                 this.lexicalUnitMap[lexicalUnitId] = unit.pos;
@@ -262,9 +262,21 @@ export class DBBuilder
         }
     }
 
-    private DeriveLexicalUnitId(lexemeId: string, senseIndex: number, pos: OpenArabDictPartOfSpeech)
+    private DeriveLexicalUnitId(lexemeId: string, translations: OpenArabDictTranslationEntry[], senseIndex: number, pos: OpenArabDictPartOfSpeech)
     {
-        //TODO: has to be also dependent on the sense and has to be stable (think about translator!)
+        /*
+        import crypto from "crypto";
+
+        const data = {
+            lexemeId,
+            pos,
+            senseIndex,
+            translations
+        };
+        const rawData = JSON.stringify(data);
+        const lexicalUnitId = crypto.createHash('md5').update(rawData).digest('hex');
+        */
+
         function ShortType()
         {
             switch(pos.type)
@@ -281,7 +293,15 @@ export class DBBuilder
             }
             return "";
         }
-        return lexemeId + senseIndex + ShortType();
+        const lexicalUnitId = lexemeId + senseIndex + ShortType();
+
+        if(this.lexicalUnitMap[lexicalUnitId] !== undefined)
+        {
+            console.log(lexemeId, translations, senseIndex, pos, lexicalUnitId);
+            throw new Error("Lexical unit id conflict: " + lexicalUnitId);
+        }
+
+        return lexicalUnitId;
     }
 
     private GenerateRootId(radicals: string)

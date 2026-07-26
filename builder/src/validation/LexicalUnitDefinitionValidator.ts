@@ -28,6 +28,9 @@ export class LexicalUnitDefinitionValidator extends DefinitionValidator<"gender"
         super(wordDef, _sourceTreeTrace);
     }
 
+    //State
+    public isInConstructState?: true;
+
     //Properties
     public get __legacyType()
     {
@@ -139,23 +142,27 @@ export class LexicalUnitDefinitionValidator extends DefinitionValidator<"gender"
         switch(this.type)
         {
             case OpenArabDictPOSType.Adjective:
-            case OpenArabDictPOSType.Noun:
             case OpenArabDictPOSType.Numeral:
             case OpenArabDictPOSType.Pronoun:
+            case OpenArabDictPOSType.ProperNoun:
                 return {
                     gender: this.gender,
                     type: this.type
+                };
+
+            case OpenArabDictPOSType.Noun:
+                return {
+                    gender: this.gender,
+                    type: this.type,
+                    //isInConstructState: this.isInConstructState //TODO
                 };
 
             case OpenArabDictPOSType.Verb:
                 return {
                     type: this.type,
                     form: this.verbForm,
-                    rootId: "" //TODO!!! set in wordprocessor
+                    rootId: "" //this is currently being set in wordprocessor
                 };
-
-            case OpenArabDictPOSType.ProperNoun:
-                throw new Error("TODO FIX ME");
         }
 
         return {

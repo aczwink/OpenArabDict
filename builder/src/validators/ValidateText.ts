@@ -50,8 +50,7 @@ export function ValidateText(builder: DBBuilder, validator: WordDefinitionValida
 
                         const conjugator = new Conjugator();
                         const noun = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed, (gender === OpenArabDictGender.Male) ? Gender.Male : Gender.Female, TargetAdjectiveNounDerivation.DeriveNisbaSameGender, DialectType.ModernStandardArabic);
-                        //TODO: fix this
-                        //generated = [noun];
+                        generated = [noun];
                     }
                     break;
                 }

@@ -96,13 +96,14 @@ root:
                         - at present, actually
 
     - type: verb
-      dialect: msa
       form: 2
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 251
           text:
-            - to change
+            - to change (ه الى or ه ه s.th. to s.th. else), transform, transmute, convert, turn, make (ه الى or ه ه s.th. into s.th. else)
+            - to transfer (ه s.th.)
       derived:
         - text: تَحْوِيل
           derivation: verbal-noun

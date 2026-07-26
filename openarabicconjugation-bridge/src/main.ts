@@ -17,7 +17,7 @@
  * */
 
 import { OpenArabDictRoot, OpenArabDictTranslationEntry, OpenArabDictVerb, OpenArabDictVerbForm, OpenArabDictVerbType } from "@aczwink/openarabdict-domain";
-import { VerbType } from "@aczwink/openarabicconjugation/dist/Definitions";
+import { AdvancedStemNumber, VerbType } from "@aczwink/openarabicconjugation/dist/Definitions";
 import { DialectType } from "@aczwink/openarabicconjugation/dist/Dialects";
 import { CreateVerb } from "@aczwink/openarabicconjugation/dist/Verb";
 import { VerbRoot } from "@aczwink/openarabicconjugation/dist/VerbRoot";
@@ -26,25 +26,34 @@ import { GetDialectMetadata } from "@aczwink/openarabicconjugation/dist/Dialects
 import { WordLogic } from "./WordLogic";
 import { Mapping } from "./Mapping";
 
+function ExtractVariant(dialectId: number, verbForm: OpenArabDictVerbForm)
+{
+    if(verbForm.variants !== undefined)
+    {
+        const variant = verbForm.variants.find(x => x.dialectId === dialectId);
+        if(variant !== undefined)
+        {
+            return {
+                stem: variant.stemParameters ?? verbForm.stem,
+                verbType: variant.verbType ?? verbForm.verbType
+            };
+        }
+    }
+    
+    return {
+        stem: verbForm.stem,
+        verbType: verbForm.verbType
+    };
+}
+
 export function CreateVerbFromOADVerbForm(dialectType: DialectType, rootRadicals: string, verbForm: OpenArabDictVerbForm)
 {
     const rootInstance = new VerbRoot(rootRadicals);
     const dialectId = DialectTree.MapTypeToId(dialectType);
 
-    let stem, verbType;
-    if(verbForm.stem === 1)
-    {
-        const variant = verbForm.variants!.find(x => x.dialectId === dialectId)!;
-        stem = variant.stemParameters;
-        verbType = variant.verbType ?? verbForm.verbType;
-    }
-    else
-    {
-        stem = verbForm.stem;
-        verbType = verbForm.verbType;
-    }
+    const variant = ExtractVariant(dialectId, verbForm);
 
-    return CreateVerb(dialectType, rootInstance, stem, MapVerbTypeToOpenArabicConjugation(verbType));
+    return CreateVerb(dialectType, rootInstance, variant.stem as AdvancedStemNumber | string, MapVerbTypeToOpenArabicConjugation(variant.verbType));
 }
 
 export function CreateVerbFromOADVerb(dialectType: DialectType, root: OpenArabDictRoot, verb: OpenArabDictVerb)

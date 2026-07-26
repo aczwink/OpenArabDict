@@ -50,15 +50,7 @@ root:
               text:
                 - (one's) turn
                 - phase, stage, step, degree, station
-        - text: دَار
-          derivation: meaning-related
-          type: noun
-          gender: female
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - large, stately house
+
         - text: دُوَار
           derivation: meaning-related
           type: noun
@@ -112,6 +104,29 @@ root:
           url: https://en.wiktionary.org/wiki/%D8%AF%D8%A7%D8%B1#Moroccan_Arabic
           text:
             - to do
+
+    - text: دَار
+      type: noun
+      gender: female
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 344
+          text:
+            - large, stately house
+      derived:
+        - derivation: plural
+          text: دِيَار
+
+    - text: دِيرَة
+      type: noun
+      translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 346
+          text:
+            - living place, abode, homeland (bedouin)
 
     - text: مَدَار
       type: noun

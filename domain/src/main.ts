@@ -19,7 +19,7 @@
 import { OpenArabDictDialect } from "./dialect";
 import { OpenArabDictLexeme } from "./lexeme";
 import { OpenArabDictParent, OpenArabDictParentType } from "./parent";
-import { OpenArabDictGender, OpenArabDictGendered, OpenArabDictPartOfSpeech, OpenArabDictPOSType, OpenArabDictVerb, OpenArabDictVerbForm, OpenArabDictVerbType } from "./part-of-speech";
+import { OpenArabDictGender, OpenArabDictGendered, OpenArabDictNounPOS, OpenArabDictPartOfSpeech, OpenArabDictPOSType, OpenArabDictVerb, OpenArabDictVerbForm, OpenArabDictVerbType } from "./part-of-speech";
 import { OpenArabDictLexicalUnit, OpenArabDictSense } from "./sense";
 import { OpenArabDictTranslationEntry, OpenArabDictTranslationUsageType } from "./translations";
 
@@ -70,6 +70,7 @@ export {
     OpenArabDictGendered,
     OpenArabDictLexeme,
     OpenArabDictLexicalUnit,
+    OpenArabDictNounPOS,
     OpenArabDictParentType,
     OpenArabDictParent,
     OpenArabDictPartOfSpeech,

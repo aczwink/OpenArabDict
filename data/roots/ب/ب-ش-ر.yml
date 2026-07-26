@@ -20,6 +20,11 @@ root:
     - type: verb
       form: 2
       translations:
+        - dialect: msa
+          source: hw4
+          source-page: 73
+          text:
+            - to announce (as good news; ه ب to s.o. s.th.)
         - dialect: lb
           source: lav
           source-page: 125

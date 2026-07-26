@@ -25,9 +25,7 @@ root:
             type: sound
       type: verb
       derived:
-        #- derivation: verbal-noun
-        - derivation: meaning-related
-          type: noun #TODO
+        - derivation: verbal-noun
           text: وَقَاحَة
           translations:
             - complete: true
