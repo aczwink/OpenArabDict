@@ -58,9 +58,7 @@ root:
               derivation: plural
 
         - text: قَصَص
-          #derivation: verbal-noun #TODO
-          derivation: meaning-related
-          type: noun
+          derivation: verbal-noun
           derived:
             - text: قَصَصِيّ
               alias: قِصَصِيّ

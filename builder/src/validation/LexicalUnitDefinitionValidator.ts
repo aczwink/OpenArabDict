@@ -151,10 +151,19 @@ export class LexicalUnitDefinitionValidator extends DefinitionValidator<"gender"
                 };
 
             case OpenArabDictPOSType.Noun:
+                if(this.isInConstructState)
+                {
+                    return {
+                        gender: this.gender,
+                        type: this.type,
+                        inConstructState: this.isInConstructState,
+                    };
+                }
+
                 return {
                     gender: this.gender,
                     type: this.type,
-                    //isInConstructState: this.isInConstructState //TODO
+                    inConstructState: true //TODO: remove this
                 };
 
             case OpenArabDictPOSType.Verb:

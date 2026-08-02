@@ -36,9 +36,6 @@ root:
           derived:
             - text: آذَان
               derivation: plural
-              type: noun
-              gender: female
-              translations: []
 
     - type: verb
       form: 2

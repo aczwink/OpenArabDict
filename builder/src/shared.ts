@@ -16,14 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictParent, OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictParent, OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
 import { TreeTrace, TreeTraceNodeType } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
 import { CreateVerbFromOADVerb, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
-import { ArabicText, Conjugator, DialectType, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
+import { ArabicText, Conjugator, DialectType, Gender, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
-import { ParseVocalizedText } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
 
 
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
@@ -85,9 +85,21 @@ export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParen
                 const reconstructed = ArabicText.ReconstructFullyVocalizedWord(parentLexeme.text);
                 const generated = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed, Mapping.MapGender(parentUnitPOS.gender), TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
 
+                const soundPlurals = [generated];
+
+                if(parentUnitPOS.gender === OpenArabDictGender.Male)
+                {
+                    const withTaMarbuta = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed, Gender.Male, TargetAdjectiveNounDerivation.DeriveFeminineSingular, DialectType.ModernStandardArabic);
+                    const reconstructed2 = ArabicText.ReconstructFullyVocalizedWord(VocalizedWordTostring(withTaMarbuta));
+
+                    //many male nouns also often have the "-at" plural
+                    const generated = conjugator.DeriveSoundAdjectiveOrNoun(reconstructed2, Gender.Female, TargetAdjectiveNounDerivation.DerivePluralSameGender, DialectType.ModernStandardArabic);
+                    soundPlurals.push(generated);
+                }
+
                 //TODO: fix this
                 /*return [
-                    generated,
+                    ...soundPlurals,
                     ...conjugator.DeriveFromNoun(ParseVocalizedText(parentLexeme.text), TargetNounBasedDerivationPatterns.PluralPatterns)
                 ];*/
             }

@@ -30,7 +30,8 @@ words:
         source: hw4-free-text
         text:
           - do whatever you want
-  - text: شَلَبي
+
+  - text: شَلَبِي
     type: adjective
     gender: male
     translations:
@@ -38,6 +39,7 @@ words:
         source: hw4-free-text
         text:
           - handsome, beautiful
+
   - text: جَامُوس
     type: noun
     gender: male
@@ -75,14 +77,15 @@ words:
         source: hw4-free-text
         text:
           - also
-  - text: قُبْطان
+
+  - text: قُبْطَان
     type: noun
-    gender: male
     translations:
       - dialect: msa
         source: hw4-free-text
         text:
           - captain
+
   - text: أهو
     type: foreign-verb
     translations:
@@ -112,7 +115,8 @@ words:
         source: hw4-free-text
         text:
           - أتمنى
-  - text: نِيكُوتِين‎
+
+  - text: نِيكُوتِين
     type: noun
     gender: male
     translations:
@@ -120,7 +124,8 @@ words:
         source: hw4-free-text
         text:
           - nicotine
-  - text: عايز
+
+  - text: عَايِز
     type: adjective
     gender: male
     translations:
@@ -131,6 +136,7 @@ words:
             for female: عايزة
             1. wanting
             2. (false verb) want
+
   - text: لَدَى
     type: preposition
     translations:
@@ -335,14 +341,16 @@ words:
         source: hw4-free-text
         text:
           - captain (of a Nile boat), rais
-  - text: كويّس
+
+  - text: كْوَيِّس
     type: adjective
-    gender: male
     translations:
-      - dialect: northlevant
-        source: hw4-free-text
+      - dialect: southlevant
+        source: wiktionary
+        url: https://en.wiktionary.org/wiki/%D9%83%D9%88%D9%8A%D8%B3
         text:
           - good, nice, fine
+
   - text: مِينَاء
     type: noun
     gender: male

@@ -53,7 +53,7 @@ export interface OpenArabDictNounPOS
 {
     type: OpenArabDictPOSType.Noun;
     gender: OpenArabDictGender;
-    inConstructState: true;
+    inConstructState?: true;
 }
 
 interface OpenArabDictOther

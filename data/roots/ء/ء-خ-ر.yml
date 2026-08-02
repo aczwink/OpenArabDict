@@ -35,24 +35,32 @@ root:
           text:
             - be late
 
-    - text: آخَر
+    - text: آخِر
       type: adjective
-      gender: male
       translations:
         - dialect: msa
-          source: hw4-free-text
-          contextual:
-            - text: الآخر
-              translation: the other
+          source: hw4
+          source-page: 10
+          text:
+            - last, ultimate, utmost, extreme
+      derived:
+        - derivation: plural
+          text: آخِرُون
+
+    - text: آخَر
+      type: adjective
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 10
           text:
             - another, one more
+          usage:
+            - text: الآخر
+              translation: the other
+              type: meaning-in-context
       derived:
         - text: أُخْرَى
           derivation: feminine
-          type: adjective
-          gender: female
-        - text: آخِرُون
+        - text: آخَرُون
           derivation: plural
-          type: adjective
-          gender: male
-          translations: []
