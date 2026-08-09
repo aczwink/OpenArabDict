@@ -23,9 +23,9 @@ root:
         variants:
           - dialect: msa
             parameters: ai
-          #- dialect: lb
-            #parameters: ausu
-            #type: sound #TODO
+          - dialect: lb
+            parameters: ausu
+            type: sound
       translations:
         - dialect: msa
           source: hw4-free-text

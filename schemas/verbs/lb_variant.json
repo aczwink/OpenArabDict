@@ -45,7 +45,7 @@
         },
         "type": {
             "type": "string",
-            "enum": ["defective", "irregular"]
+            "enum": ["defective", "irregular", "sound"]
         }
     },
     "required": ["dialect"]

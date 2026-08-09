@@ -52,6 +52,15 @@ root:
                   -صَلَّى ٱللّٰهُ عَلَيْهِ وَسَلَّمَ (Islam) blessings of God be
                   upon him and his progeny and grant him peace; a blessing used
                   after mentioning the names of Islamic Prophet Muhammad
+            - dialect: msa
+              source: free-text
+              url: https://en.wikipedia.org/wiki/Ta%27awwudh
+              text: []
+              usage:
+                - text: أَعُوْذُ بِاللهِ مِنَ الشَّـيْطٰنِ الرَّجِيْمِ
+                  translation: I seek refuge in Allah from Shaitan, the accursed one
+                  type: meaning-in-context
+
         - text: اَللّٰهُمَّ
           derivation: meaning-related
           type: interjection

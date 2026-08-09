@@ -33,3 +33,14 @@ words:
         url: https://en.wiktionary.org/wiki/%D8%B3%D9%84%D8%B7%D8%B9%D9%88%D9%86
         text:
           - crab
+
+  - text: يَلَّا
+    type: interjection
+    translations:
+      - dialect: southlevant
+        source: wiktionary
+        url: https://en.wiktionary.org/wiki/%D9%8A%D9%84%D8%A7
+        text:
+          - come on, hurry up
+          - let's, let's go
+          - (by extension) bye-bye, bye

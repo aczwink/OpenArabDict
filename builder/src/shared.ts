@@ -57,8 +57,7 @@ function GenerateAllPossibleTextsFromDerivationForVerb(parent: OpenArabDictParen
         case OpenArabDictParentType.CharacteristicNoun:
             return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.CharacteristicNoun);
         case OpenArabDictParentType.NounOfPlace:
-            //return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.NounOfPlace);
-            return undefined; //TODO: fix this
+            return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.NounOfPlace);
         case OpenArabDictParentType.ToolNoun:
             return conjugator.DeriveFromVerb(verbInstance, TargetVerbBasedDerivationPatterns.ToolNouns);
     }

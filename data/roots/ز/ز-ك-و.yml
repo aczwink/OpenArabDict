@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,35 +15,25 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ب-ر-ي
+  radicals: ز-ك-و
+  ya: true
   words:
-    - type: verb
-      form:
+    - form:
         stem: 1
         variants:
           - dialect: msa
-            parameters: ai
-          - dialect: lb
-            parameters: ai
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - to exhaust, tire out, wear out, emaciate, enervate (ه s.o.), sap
-              the strength of (ه)
-        - dialect: lb
-          source: lav
-          source-page: 123
-          text:
-            - sharpen a pencil
-
-    - form: 3
+            parameters: au
       type: verb
       derived:
-        - derivation: verbal-noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 70
-              text:
-                - contest, tournament, match (in games and sports)
+        - derivation: active-participle
+          type: adjective
+          derived:
+            - derivation: colloquial
+              type: adjective
+              text: زَاكِي
+              translations:
+                - dialect: southlevant
+                  source: wiktionary
+                  text:
+                    - tasty, delicious
+                  url: https://en.wiktionary.org/wiki/%D8%B2%D8%A7%D9%83%D9%8A
