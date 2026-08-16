@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,28 +15,16 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ح-ط-ط
+  radicals: ص-ي-ن
   words:
-    - type: verb
-      form:
-        stem: 1
-        variants:
-          - dialect: lb
-            parameters: au #"Levantine Arabic Verbs: Conjugation Tables and Grammar" by "Aldrich, M. and Choucaire, N.L.", ISBN: 9780998641133; Table: 25
-      translations:
-        - dialect: lb
-          source: lav
-          source-page: 125
-          text:
-            - put, place
-            - lay
-            - deposit (in bank)
-
-    - text: حَطَّة
+    - text: صِينِيَّة
       type: noun
       translations:
-        - dialect: palestinian
-          source: free-text
-          url: https://en.wikipedia.org/wiki/Keffiyeh
+        - dialect: msa
+          source: hw4
+          source-page: 623
           text:
-            - The كُوفِيَّة head scarf
+            - a large, round metal plate with raised brim, esp. one made of copper, used as baking tin, serving tray and table top
+      derived:
+        - derivation: plural
+          text: صَوَانِي

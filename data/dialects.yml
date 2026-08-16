@@ -27,6 +27,12 @@ dialects:
         iso639code: arz
         glottoCode: egyp1253
 
+      - key: kw
+        name: Kuwaiti Arabic
+        emojiCodes: 🇰🇼
+        iso639code: afb
+        glottoCode: kuwa1251
+
       - key: levant
         name: Levantine Arabic
         emojiCodes: 🇱🇧🇯🇴🇵🇸🇸🇾🇹🇷
@@ -63,7 +69,7 @@ dialects:
             iso639code: ajp
             glottoCode: sout3123
             children:
-              - key: palestine
+              - key: palestinian
                 name: Palestinian Arabic
                 emojiCodes: 🇵🇸
                 iso639code:

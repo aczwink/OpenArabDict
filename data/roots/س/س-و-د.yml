@@ -81,6 +81,18 @@ root:
           text:
             - become black/dark
 
+    - text: مُسْوَدَّة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 513
+          text:
+            - draft, rough copy, rough sketch, notes
+      derived:
+        - derivation: plural
+          text: مُسْوَدَّات
+
     - text: سَيِّد
       type: noun
       gender: male

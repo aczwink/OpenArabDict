@@ -10,10 +10,12 @@
             "enum": [
                 "eg",
                 "homsi",
+                "kw",
                 "lb",
                 "levant",
                 "ma",
                 "msa",
+                "palestinian",
                 "southlevant",
                 "sy"
             ]

@@ -773,7 +773,7 @@ words:
   - text: إِسَّا
     type: adverb
     translations:
-      - dialect: palestine
+      - dialect: palestinian
         source: hw4-free-text
         text:
           - now
