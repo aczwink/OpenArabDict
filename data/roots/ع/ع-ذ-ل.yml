@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -18,23 +18,27 @@ root:
   radicals: ع-ذ-ل
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
-      translations:
-        - dialect: msa
-          source: hw4-free-text
-          text:
-            - ""
+        variants:
+          - dialect: msa
+            parameters: au
       derived:
-        - text: عَاذِل
-          derivation: meaning-related
+        - derivation: active-participle
           type: noun
-          gender: male
           translations:
-            - dialect: msa
-              source: hw4-free-text
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 702
               text:
-                - pl. عُذَّال, f. عَاذِلَة pl. عَوَاذِل censurer, reprover,
-                  moral critic, moralist
+                - censurer, reprover
+                - moral critic, moralist
+          derived:
+            - derivation: plural
+              text: عُذَّال
+            - derivation: feminine
+              text: عَاذِلَة
+              derived:
+                - derivation: plural
+                  text: عَوَاذِل

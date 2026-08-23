@@ -28,23 +28,18 @@ root:
           text:
             - to give in marriage, betroth, affiance, engage (على or بنته ل one's daughter to s.o.)
       derived:
-        - text: خَاطِب
-          derivation: active-participle
+        - derivation: active-participle
           type: noun
-          gender: male
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 286
               text:
-                - |-
-                  1. suitor
-                  2. fiancé
+                - suitor
+                - fiancé
           derived:
             - text: خُطَّاب
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
 
     - type: verb
       form: 3

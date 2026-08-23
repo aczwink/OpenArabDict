@@ -109,9 +109,10 @@ export function MapParents(builder: DBBuilder, wordDefinition: WordDefinition, v
         {
             //if(link.derivation !== "composed-of")
             
-            const wordId = builder.LookupUserWordId(link.ref);
+            const lexemeId = builder.LookupUserLexemeId(link.ref);
+            const lexeme = builder.GetLexeme(lexemeId);
             parents.push({
-                id: wordId,
+                id: lexeme.senses[0].units[0].id,
                 type: OpenArabDictParentType.ComposedOf
             });
         }

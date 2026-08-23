@@ -585,14 +585,7 @@ words:
             so, thus, this way, in this manner
 
             وهكذا and so forth
-  - text: بَارُود
-    type: noun
-    gender: male
-    translations:
-      - dialect: msa
-        source: hw4-free-text
-        text:
-          - gunpowder
+  
   - text: دِجْلَة
     type: noun
     gender: female

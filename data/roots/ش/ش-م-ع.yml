@@ -24,6 +24,7 @@ root:
           source: hw4
           source-page: 568
           text:
+            - wax
             - (wax) candles
       derived:
         - text: شَمْعَة
@@ -40,6 +41,7 @@ root:
           source: hw4
           source-page: 568
           text:
+            - wax
             - (wax) candles
       derived:
         - text: شَمَعَة

@@ -43,6 +43,16 @@ root:
             - extend
             - stretch (tr.)
       derived:
+        - text: مَدّ
+          derivation: verbal-noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 1052
+              text:
+                - lengthening, elongation, prolongation, protraction
+                - rising, rise (of water, of the flood)
+
         - text: مُدَّة
           derivation: meaning-related
           type: adjective
@@ -94,15 +104,6 @@ root:
                         - material
                         - corporeal, physical
                         - materialistic
-        - text: مَدّ
-          derivation: verbal-noun
-          type: noun
-          gender: male
-          translations:
-            - dialect: msa
-              source: hw4-free-text
-              text:
-                - lengthening, elongation, prolongation, protraction
 
     - type: verb
       form: 5

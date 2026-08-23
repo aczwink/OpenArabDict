@@ -122,6 +122,14 @@ interface SenseDefinition
     translations: TranslationDefinition[];
 }
 
+export interface MultiSenseNounDefinition
+{
+    derivation?: "";
+    type?: "noun";
+    gender?: "male" | "female" | "male-or-female";
+    senses: SenseDefinition[];
+}
+
 export interface MultiSenseVerbDefinition
 {
     derivation?: "";
@@ -137,5 +145,5 @@ export interface MultiSenseWordDefinition
     senses: SenseDefinition[];
 }
 
-export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | MultiPOSWordDefinition | MultiSenseVerbDefinition | MultiSenseWordDefinition;
+export type WordDefinition = GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | MultiPOSWordDefinition | MultiSenseNounDefinition | MultiSenseVerbDefinition | MultiSenseWordDefinition;
 export type WordOrReferenceDefinition = WordDefinition | WordReferenceDefinition;

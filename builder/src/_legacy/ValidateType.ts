@@ -26,6 +26,8 @@ export function ValidateType(validator: WordDefinitionValidator)
             validator.InferAnyOf("type", [OpenArabDictPOSType.Adverb], OpenArabDictPOSType.Adverb);
             break;
         case "definite-state":
+            validator.InferAnyOf("type", [OpenArabDictPOSType.Noun, OpenArabDictPOSType.ProperNoun], OpenArabDictPOSType.Noun);
+            break;
         case "instance-noun":
         case "noun-of-place":
         case "singulative":

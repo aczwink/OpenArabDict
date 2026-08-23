@@ -82,7 +82,8 @@
                 "noun",
                 "particle",
                 "preposition",
-                "pronoun"
+                "pronoun",
+                "proper-noun"
             ]
         }
     },

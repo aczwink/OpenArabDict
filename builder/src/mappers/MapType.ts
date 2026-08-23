@@ -17,10 +17,10 @@
  * */
 
 import { OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
-import { GenderedWordDefinition, MultiSenseVerbDefinition, OtherWordDefinition, POSDefinition, VerbWordDefinition, WordDefinition } from "../DataDefinitions";
+import { GenderedWordDefinition, MultiSenseNounDefinition, MultiSenseVerbDefinition, OtherWordDefinition, POSDefinition, VerbWordDefinition, WordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
-function MapTypeFromDefinition(wordDef: GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | POSDefinition | MultiSenseVerbDefinition): OpenArabDictPOSType | undefined
+function MapTypeFromDefinition(wordDef: GenderedWordDefinition | OtherWordDefinition | VerbWordDefinition | POSDefinition | MultiSenseNounDefinition | MultiSenseVerbDefinition): OpenArabDictPOSType | undefined
 {
     switch(wordDef.type)
     {

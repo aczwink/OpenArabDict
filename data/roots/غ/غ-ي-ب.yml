@@ -72,3 +72,12 @@ root:
               source-page: 807
               text:
                 - hidden, concealed, invisibled
+
+    - text: غَابَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 807
+          text:
+            - forest, wood, copse, thicket

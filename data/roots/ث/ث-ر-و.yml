@@ -62,15 +62,38 @@ root:
             - ground, soil
 
     - text: ثُرَيَّا
-      alias: ثُرَيَّة
       type: noun
       gender: female
+      senses:
+        - translations:
+          - complete: true
+            dialect: msa
+            source: hw4
+            source-page: 124
+            text:
+              - Pleiades
+
+        - translations:
+          - complete: true
+            dialect: msa
+            source: hw4
+            source-page: 124
+            text:
+              - chandelier
+          derived:
+            - text: ثُرَيَّات
+              derivation: plural
+              id: thurayyat
+
+    - text: ثُرَيَّة
+      type: noun
       translations:
-        - dialect: msa
+        - complete: true
+          dialect: msa
           source: hw4
           source-page: 124
           text:
             - chandelier
       derived:
-        - text: ثُرَيَّات
-          derivation: plural
+        - derivation: plural
+          ref: thurayyat

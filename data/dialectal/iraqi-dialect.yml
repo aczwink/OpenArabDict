@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -14,24 +14,12 @@
 #  You should have received a copy of the GNU Affero General Public License
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-root:
-  radicals: ن-و-ب
-  words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: uu
-      derived:
-        - text: نَوْبَة
-          derivation: verbal-noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1181
-              text:
-                - change (or relief) of the guard, guard duty, guard
-                - time, instance (= مرة)
-          derived:
-            - derivation: plural
-              text: نُوَب
+words:
+  - text: فَدْ
+    type: adverb
+    translations:
+      - dialect: iq
+        source: free-text
+        url: https://en.mo3jam.com/term/%D9%81%D8%AF
+        text:
+          - (intensifying) very

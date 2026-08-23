@@ -73,3 +73,12 @@ root:
                   url: https://ejtaal.net/aa/#hw4=1251
                   text:
                     - brutality
+
+    - text: وَحْشَة
+      type: noun
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 1238
+          text:
+            - strangeness, estrangement, alienation

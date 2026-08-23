@@ -31,7 +31,7 @@ export function _LegacyExtractDialect(def: VerbWordDefinition | MultiSenseVerbDe
 {
     if("dialect" in def)
     {
-        const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+        const statsService = GlobalInjector().Resolve(StatisticsCounterService);
         statsService.Increment(StatisticsCounter.LegacyDialect);
         return def.dialect as string;
     }
@@ -43,7 +43,7 @@ export function _LegacyBuildUsage(x: TranslationDefinition)
     const ctx = x.contextual?.map(y => ({ text: y.text, translation: [y.translation], type: OpenArabDictTranslationUsageType.MeaningInContext }));
     const ex = x.examples?.map(y => ({ text: y.text, translation: [y.translation], type: OpenArabDictTranslationUsageType.Example }));
 
-    const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+    const statsService = GlobalInjector().Resolve(StatisticsCounterService);
 
     if(ctx !== undefined)
     {

@@ -195,17 +195,18 @@ root:
 
     - text: عُود
       type: noun
-      gender: male
       translations:
         - dialect: msa
           source: hw4
           source-page: 766
           text:
             - stick, rod, pole
-            - lute(musical instrument)
-          examples:
+            - branch, twig, switch
+            - lute (musical instrument)
+          usage:
             - text: عود الثقاب
               translation: matchstick, match
+              type: example
       derived:
         - text: أَعْوَاد
           derivation: plural

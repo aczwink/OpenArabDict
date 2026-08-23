@@ -29,3 +29,14 @@ root:
           source-page: 676
           text:
             - to be good, pleasant, agreeable
+      derived:
+        - derivation: meaning-related
+          type: adjective
+          text: طَيِّب
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 676
+              text:
+                - delicious
+                - well-disposed, friendly, kindly

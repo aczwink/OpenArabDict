@@ -44,7 +44,6 @@ root:
         - text: دَلِيل
           derivation: meaning-related
           type: noun
-          gender: male
           translations:
             - dialect: msa
               source: hw4
@@ -52,6 +51,7 @@ root:
               text:
                 - sign, token
                 - proof, evidence (على of)
+                - guide
           derived:
             - text: أَدِلَّة
               derivation: plural

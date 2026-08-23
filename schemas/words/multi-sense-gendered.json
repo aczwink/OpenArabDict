@@ -1,0 +1,48 @@
+{    
+    "$schema": "https://json-schema.org/draft-07/schema#",
+    "title": "Multi sense gendered definition",
+    "description": "JSON Schema for gendered words with multiple senses definitions",
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "gender": {
+            "type": "string",
+            "enum": [
+                "female"
+            ]
+        },
+        "senses": {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "additionalProperties": false,
+                "properties": {
+                    "derived": {
+                        "type": "array",
+                        "items": {
+                            "$ref": "./OpenArabDictWord_derived.json"
+                        }
+                    },
+                    "translations": {
+                        "type": "array",
+                        "items": {
+                            "oneOf": [
+                                {
+                                    "$ref": "../translations/OpenArabDictHW4TranslationEntry.json"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "required": ["translations"]
+            }
+        },
+        "text": {
+            "type": "string"
+        },
+        "type": {
+            "const": "noun"
+        }
+    },
+    "required": ["senses", "text", "type"]
+}

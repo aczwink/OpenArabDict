@@ -42,7 +42,7 @@ export class DBBuilder
         this.relations = [];
         this.roots = {};
         this.translations = new Map();
-        this.userWordIdMap = {};
+        this.userLexemeIdMap = {};
         this.lexemes = {};
         this.lexicalUnitMap = {};
         this.lexicalUnitToLexemeMap = {};
@@ -98,11 +98,11 @@ export class DBBuilder
         return id;
     }
 
-    public AddUserWordIdMapping(userWordId: string, wordId: string)
+    public AddUserLexemeIdMapping(userLexemeId: string, lexemeId: string)
     {
-        if(userWordId in this.userWordIdMap)
-            throw new Error("User word ids must be unique and '" + userWordId + "' is not.");
-        this.userWordIdMap[userWordId] = wordId;
+        if(userLexemeId in this.userLexemeIdMap)
+            throw new Error("User lexeme ids must be unique and '" + userLexemeId + "' is not.");
+        this.userLexemeIdMap[userLexemeId] = lexemeId;
     }
 
     public AddWord(text: string, parents: OpenArabDictParent[], sensesData: SenseData[])
@@ -198,12 +198,12 @@ export class DBBuilder
         return pos;
     }
 
-    public LookupUserWordId(userWordId: string)
+    public LookupUserLexemeId(userLexemeId: string)
     {
-        const wordId = this.userWordIdMap[userWordId];
-        if(wordId === undefined)
-            throw new Error("User word id '" + userWordId + "' does not exist.");
-        return wordId;
+        const lexemeId = this.userLexemeIdMap[userLexemeId];
+        if(lexemeId === undefined)
+            throw new Error("User lexeme id '" + userLexemeId + "' does not exist.");
+        return lexemeId;
     }
 
     public MapDialectKey(dialectKey: string)
@@ -337,7 +337,7 @@ export class DBBuilder
     private relations: OpenArabDictWordRelation[];
     private roots: Dictionary<OpenArabDictRoot>;
     private translations: Map<string, OpenArabDictTranslationEntry[]>;
-    private userWordIdMap: Dictionary<string>;
+    private userLexemeIdMap: Dictionary<string>;
     private lexemes: Dictionary<OpenArabDictLexeme>;
     private lexicalUnitMap: Dictionary<OpenArabDictPartOfSpeech>;
     private lexicalUnitToLexemeMap: Dictionary<OpenArabDictLexeme>;

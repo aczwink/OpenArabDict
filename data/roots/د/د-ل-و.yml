@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -15,23 +15,13 @@
 #  along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 root:
-  radicals: ن-و-ب
+  radicals: د-ل-و
   words:
-    - type: verb
-      dialect: msa
-      form:
-        stem: 1
-        parameters: uu
-      derived:
-        - text: نَوْبَة
-          derivation: verbal-noun
-          translations:
-            - dialect: msa
-              source: hw4
-              source-page: 1181
-              text:
-                - change (or relief) of the guard, guard duty, guard
-                - time, instance (= مرة)
-          derived:
-            - derivation: plural
-              text: نُوَب
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 336
+          text:
+            - to hang down, be suspended, dangle (من from)

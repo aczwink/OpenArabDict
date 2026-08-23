@@ -18,10 +18,11 @@ root:
   radicals: ج-ز-ر
   words:
     - type: verb
-      dialect: msa
       form:
         stem: 1
-        parameters: au
+        variants:
+          - dialect: msa
+            parameters: au
       translations:
         - dialect: msa
           source: hw4-free-text
@@ -41,3 +42,21 @@ root:
           derived:
             - derivation: plural
               text: مَجَازِر
+
+    - type: verb
+      form:
+        stem: 1
+        variants:
+          - dialect: msa
+            parameters: ai
+          - dialect: msa
+            parameters: au
+      derived:
+        - derivation: verbal-noun
+          text: جَزْر
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 146
+              text:
+                - ebb (of the sea)

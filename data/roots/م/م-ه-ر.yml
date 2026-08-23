@@ -23,30 +23,50 @@ root:
         variants:
           - dialect: msa
             parameters: au
-      translations:
-        - dialect: msa
-          source: hw4
-          source-page: 1089
-          text:
-            - to be skillful, adroit, dexterous, skilled, adept, proficient, expert, experienced, seasoned
-      derived:
-        - text: مَهَارَة
-          derivation: verbal-noun
+          - dialect: msa
+            parameters: aa
+      senses:
+        - translations:
+          - dialect: msa
+            source: hw4
+            source-page: 1089
+            text:
+              - to be skillful, adroit, dexterous, skilled, adept, proficient, expert, experienced, seasoned
           derived:
-            - text: مَهَارَات
-              derivation: plural
+            - text: مَهَارَة
+              derivation: verbal-noun
+              derived:
+                - text: مَهَارَات
+                  derivation: plural
+                  translations:
+                    - dialect: msa
+                      source: hw4
+                      source-page: 1089
+                      text:
+                        - skills, crafts
+
+            - derivation: active-participle
+              type: adjective
               translations:
                 - dialect: msa
                   source: hw4
                   source-page: 1089
                   text:
-                    - skills, crafts
+                    - skillful, adroit, dexterous, skilled, proficient, adept, expert, practiced, experienced, seasonsed
 
-        - derivation: active-participle
-          type: adjective
-          translations:
-            - dialect: msa
+        - translations:
+            - complete: true
+              dialect: msa
               source: hw4
               source-page: 1089
               text:
-                - skillful, adroit, dexterous, skilled, proficient, adept, expert, practiced, experienced, seasonsed
+                - to give a dower (ها to the bride)
+          derived:
+            - derivation: verbal-noun
+              text: مَهْر
+              translations:
+                - dialect: msa
+                  source: hw4
+                  source-page: 1089
+                  text:
+                    - dower, bridal money

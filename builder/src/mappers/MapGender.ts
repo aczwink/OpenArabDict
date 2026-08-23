@@ -16,10 +16,10 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 import { OpenArabDictGender } from "@aczwink/openarabdict-domain";
-import { GenderedWordDefinition, WordDefinition } from "../DataDefinitions";
+import { GenderedWordDefinition, MultiSenseNounDefinition, WordDefinition } from "../DataDefinitions";
 import { WordDefinitionValidator } from "../validation/WordDefinitionValidator";
 
-function MapGenderValue(word: GenderedWordDefinition)
+function MapGenderValue(word: GenderedWordDefinition | MultiSenseNounDefinition)
 {
     switch(word.gender)
     {
@@ -39,6 +39,12 @@ export function MapGender(wordDef: WordDefinition, validator: WordDefinitionVali
     if(("gender" in wordDef) && (wordDef.gender !== undefined))
     {
         const gender = MapGenderValue(wordDef);
-        validator.Sense(0).LexicalUnit(0).InferValue("gender", gender);
+        if("senses" in wordDef)
+        {
+            for(let i = 0; i < wordDef.senses.length; i++)
+                validator.Sense(i).LexicalUnit(0).InferValue("gender", gender);
+        }
+        else
+            validator.Sense(0).LexicalUnit(0).InferValue("gender", gender);
     }
 }

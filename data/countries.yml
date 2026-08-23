@@ -25,6 +25,25 @@ words:
         text:
           - Poland
 
+  - text: عُثْمَانِيّ
+    pos:
+      - type: adjective
+        translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 690
+          text:
+            - Ottoman
+
+      - type: noun
+        translations:
+        - complete: true
+          dialect: msa
+          source: hw4
+          source-page: 690
+          text:
+            - Ottoman
 
   - gender: female
     text: عُمَان

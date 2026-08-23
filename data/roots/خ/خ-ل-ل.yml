@@ -46,3 +46,18 @@ root:
                   source: hw4-free-text
                   text:
                     - during
+
+    - text: خَلِيل
+      type: noun
+      derived:
+        - derivation: definite-state
+          text: الْخَلِيل
+          type: proper-noun
+          gender: female
+          translations:
+            - complete: true
+              dialect: msa
+              source: hw4
+              source-page: 292
+              text:
+                - Hebron (town in Jordanian Palestine)

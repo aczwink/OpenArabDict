@@ -125,7 +125,7 @@ export abstract class DefinitionValidator<VariableType>
 
     private ReportRedundancy(variable: VariableType, defaultValue: ValueType)
     {
-        const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+        const statsService = GlobalInjector().Resolve(StatisticsCounterService);
         statsService.Increment(StatisticsCounter.RedundantAssignment);
         console.log("Redundant assignment of variable '" + variable + "'. Trace: " + this.TraceToString());
     }

@@ -70,7 +70,7 @@ function Validate(data: any, schemaFileTitle: string, schemaLoader: JSONSchemaLo
     const result = schemaLoader.Validate(data, schemaFileTitle);
     if(!result)
     {
-        GlobalInjector.Resolve(StatisticsCounterService).Increment(StatisticsCounter.InvalidSourceFile);
+        GlobalInjector().Resolve(StatisticsCounterService).Increment(StatisticsCounter.InvalidSourceFile);
         console.log(dataFilePath, "is not valid!");
     }
 }
@@ -196,7 +196,7 @@ async function BuildDatabase(dbSrcPath: string, validateSourceFiles: boolean)
     await CheckLexemes(document);
     verbalNounCounter.Evaluate();
 
-    GlobalInjector.Resolve(StatisticsCounterService).Print();
+    GlobalInjector().Resolve(StatisticsCounterService).Print();
 }
 
 const dbSrcPath = process.argv[2];

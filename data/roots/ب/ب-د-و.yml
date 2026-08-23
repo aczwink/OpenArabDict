@@ -1,5 +1,5 @@
 #  OpenArabDict
-#  Copyright (C) 2025 Amir Czwink (amir130@hotmail.de)
+#  Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
   
 #  This program is free software: you can redistribute it and/or modify
 #  it under the terms of the GNU Affero General Public License as published by
@@ -24,10 +24,20 @@ root:
         parameters: au
       translations:
         - dialect: msa
-          source: hw4-free-text
+          source: hw4
+          source-page: 59
           text:
-            - to appear, show, become evident, clear, plain or manifest, come to
-              light
+            - to appear, show, become evident, clear, plain or manifest, come to light
+
+    - form: 5
+      type: verb
+      translations:
+        - dialect: msa
+          source: hw4
+          source-page: 59
+          text:
+            - to appear, show, become evident, clear, plain or manifest, come to light
+
     - text: بَادِيَة
       type: noun
       gender: female
@@ -39,5 +49,3 @@ root:
       derived:
         - text: بَوادٍ
           derivation: plural
-          type: noun
-          translations: []

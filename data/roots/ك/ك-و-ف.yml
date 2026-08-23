@@ -25,3 +25,13 @@ root:
           source-page: 992
           text:
             - kaffiyeh, square kerchief diagonally folded and worn under the 'iqal as a headdress
+      derived:
+        - derivation: colloquial
+          text: چَفِيَة
+          type: noun
+          translations:
+            - dialect: iq
+              source: free-text
+              url: https://ar.mo3jam.com/term/%DA%86%D9%81%D9%8A%D8%A9
+              text:
+                - The كُوفِيَّة head scarf

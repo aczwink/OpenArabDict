@@ -113,7 +113,7 @@ export function ValidateVerbForm(builder: DBBuilder, validator: WordDefinitionVa
     }
     else if("parameters" in def.form)
     {
-        const statsService = GlobalInjector.Resolve(StatisticsCounterService);
+        const statsService = GlobalInjector().Resolve(StatisticsCounterService);
         statsService.Increment(StatisticsCounter.LegacyVerbParameters);
 
         validator.verbForm = {
