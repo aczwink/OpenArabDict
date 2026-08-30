@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -16,9 +16,20 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-export enum TranslationError
-{
-    Filtered
-};
+import { OpenArabDictTranslationEntry } from "@aczwink/openarabdict-domain";
+import { TargetTranslationLanguage, TranslationError, Translator } from "../Translator";
 
-export type TargetTranslationLanguage = "de";
+export class EmptyTranslationsTranslator implements Translator
+{
+    constructor(private inner: Translator)
+    {
+    }
+
+    public async Translate(lexicalUnitId: string, translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage): Promise<OpenArabDictTranslationEntry[] | TranslationError>
+    {
+        if(translations.IsEmpty())
+            return [];
+
+        return await this.inner.Translate(lexicalUnitId, translations, targetLanguage);
+    }
+}

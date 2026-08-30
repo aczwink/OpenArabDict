@@ -17,10 +17,10 @@
  * */
 
 import { OpenArabDictTranslationEntry, OpenArabDictTranslationUsageType } from "@aczwink/openarabdict-domain";
-import { ENV } from "./env";
+import { ENV } from "../env";
 import { AbsURL } from "@aczwink/acts-util-core";
 import { HTTP } from "@aczwink/acts-util-node";
-import { TargetTranslationLanguage, TranslationError } from "./shared";
+import { TargetTranslationLanguage, TranslationError, Translator } from "../Translator";
 
 const examplesMarker = "-$-";
 const meaningInContextMarker = "-§-";
@@ -119,55 +119,58 @@ function PackInputToString(translations: OpenArabDictTranslationEntry[])
     return texts.join("\n");
 }
 
-export async function AzureOpenAI_Translate(translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage)
+export class AzureOpenAITranslator implements Translator
 {
-    const body = {
-        messages: [
-            {
-                role: "system",
-                content: `
-                You are to translate English dictionary translations for the Arabic language to the language defined by code: ${targetLanguage}.
-                Since this is a dictionary, you should maintain the form of the input and translate carefully with high accuracy while looking on the context of the whole translation.
-                Only translate the input that is present. Never ever fill in any info on your own. Especially, do not invent examples or usage information!
-                The input will be structured as follows:
-                1. Texts that you should translate separated by lines
-                2. (optionally) The special marker ${examplesMarker} followed by the actual examples that you should translate
-                3. (optionally) The special marker ${meaningInContextMarker} followed by usage information that you should translate as well
-
-                
-                `
-            },
-            {
-                role: "user",
-                content: PackInputToString(translations)
-            }
-        ]
-    };
-    const headers: any = {
-        "api-key": ENV.azureOpenAI.key
-    };
-
-    const sender = new HTTP.RequestSender;
-    const response = await sender.SendRequest({
-        body: Buffer.from(JSON.stringify(body)),
-        headers,
-        method: "POST",
-        url: AbsURL.Parse("https://" + ENV.azureOpenAI.region + ".api.cognitive.microsoft.com/openai/deployments/" + ENV.azureOpenAI.modelDeploymentName + "/chat/completions?api-version=2024-10-21"),
-    });
-
-    const responseString = response.body.toString("utf-8");
-    const responseData = JSON.parse(responseString);
-    if(response.statusCode !== 200)
+    public async Translate(lexicalUnitId: string, translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage): Promise<OpenArabDictTranslationEntry[] | TranslationError>
     {
-        if((response.statusCode === 400) && (responseData.error.code === "content_filter"))
-            return TranslationError.Filtered;
-        console.log(responseData);
-        throw new Error("AN ERROR OCCURED: " + responseString);
-    }
-    const choice = responseData.choices[0];
-    if(choice.finish_reason === "content_filter")
-        return TranslationError.Filtered;
-    const result = choice.message.content;
+        const body = {
+            messages: [
+                {
+                    role: "system",
+                    content: `
+                    You are to translate English dictionary translations for the Arabic language to the language defined by code: ${targetLanguage}.
+                    Since this is a dictionary, you should maintain the form of the input and translate carefully with high accuracy while looking on the context of the whole translation.
+                    Only translate the input that is present. Never ever fill in any info on your own. Especially, do not invent examples or usage information!
+                    The input will be structured as follows:
+                    1. Texts that you should translate separated by lines
+                    2. (optionally) The special marker ${examplesMarker} followed by the actual examples that you should translate
+                    3. (optionally) The special marker ${meaningInContextMarker} followed by usage information that you should translate as well
 
-    return MapResult(result, translations);
+                    
+                    `
+                },
+                {
+                    role: "user",
+                    content: PackInputToString(translations)
+                }
+            ]
+        };
+        const headers: any = {
+            "api-key": ENV.azureOpenAI.key
+        };
+
+        const sender = new HTTP.RequestSender;
+        const response = await sender.SendRequest({
+            body: Buffer.from(JSON.stringify(body)),
+            headers,
+            method: "POST",
+            url: AbsURL.Parse("https://" + ENV.azureOpenAI.region + ".api.cognitive.microsoft.com/openai/deployments/" + ENV.azureOpenAI.modelDeploymentName + "/chat/completions?api-version=2024-10-21"),
+        });
+
+        const responseString = response.body.toString("utf-8");
+        const responseData = JSON.parse(responseString);
+        if(response.statusCode !== 200)
+        {
+            if((response.statusCode === 400) && (responseData.error.code === "content_filter"))
+                return TranslationError.Filtered;
+            console.log(responseData);
+            throw new Error("AN ERROR OCCURED: " + responseString);
+        }
+        const choice = responseData.choices[0];
+        if(choice.finish_reason === "content_filter")
+            return TranslationError.Filtered;
+        const result = choice.message.content;
+
+        return MapResult(result, translations);
+    }
 }

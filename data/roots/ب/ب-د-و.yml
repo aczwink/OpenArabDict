@@ -47,5 +47,5 @@ root:
           text:
             - nomads, Bedouins
       derived:
-        - text: بَوادٍ
+        - text: بَوَادٍ
           derivation: plural

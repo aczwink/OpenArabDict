@@ -16,14 +16,14 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
 
-import { OpenArabDictGender, OpenArabDictParent, OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
+import { OpenArabDictGender, OpenArabDictLexeme, OpenArabDictParent, OpenArabDictParentType, OpenArabDictPOSType } from "@aczwink/openarabdict-domain";
 import { TreeTrace, TreeTraceNodeType } from "./TreeTrace";
 import { DBBuilder } from "./DBBuilder";
-import { CreateVerbFromOADVerb, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
+import { CreateVerbFromOADVerb, DialectTree, Mapping } from "@aczwink/openarabdict-openarabicconjugation-bridge";
 import { ArabicText, Conjugator, DialectType, Gender, TargetVerbBasedDerivationPatterns } from "@aczwink/openarabicconjugation";
 import { TargetAdjectiveNounDerivation } from "@aczwink/openarabicconjugation/dist/DialectConjugator";
 import { TargetNounBasedDerivationPatterns } from "@aczwink/openarabicconjugation/dist/Conjugator";
-import { ParseVocalizedText, VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
+import { VocalizedWordTostring } from "@aczwink/openarabicconjugation/dist/Vocalization";
 
 
 export function ExtractRoot(builder: DBBuilder, parent?: TreeTrace)
@@ -63,6 +63,23 @@ function GenerateAllPossibleTextsFromDerivationForVerb(parent: OpenArabDictParen
     }
 }
 
+function SupportsModernStandardArabic(lexeme: OpenArabDictLexeme, builder: DBBuilder): boolean
+{
+    if(lexeme.senses.length !== 1)
+        throw new Error("Function not implemented.");
+    if(lexeme.senses[0].units.length !== 1)
+        throw new Error("Function not implemented.");
+    const unitId = lexeme.senses[0].units[0].id;
+    const translations = builder.GetTranslations(unitId);
+    for (const entry of translations!)
+    {
+        const type = DialectTree.MapIdToType(entry.dialectId)
+        if(type === DialectType.ModernStandardArabic)
+            return true;
+    }
+    return false;
+}
+
 export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParent, builder: DBBuilder)
 {
     switch(parent.type)
@@ -74,10 +91,12 @@ export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParen
         case OpenArabDictParentType.Plural:
             {
                 const parentUnitPOS = builder.GetLexicalUnit(parent.id);
-                const parentLexeme = builder.GetLexemeFromLexicalUnitId(parent.id);
                 const hasGender = (parentUnitPOS.type !== OpenArabDictPOSType.Adjective) && (parentUnitPOS.type !== OpenArabDictPOSType.Noun) && (parentUnitPOS.type !== OpenArabDictPOSType.Numeral) && (parentUnitPOS.type !== OpenArabDictPOSType.Pronoun);
                 if(hasGender)
                     throw new Error("Singulars do have to have a gender: " + parentUnitPOS.type);
+                const parentLexeme = builder.GetLexemeFromLexicalUnitId(parent.id);
+                if(!SupportsModernStandardArabic(parentLexeme, builder))
+                    break;
 
                 const conjugator = new Conjugator;
 
@@ -96,11 +115,10 @@ export function GenerateAllPossibleTextsFromDerivation(parent: OpenArabDictParen
                     soundPlurals.push(generated);
                 }
 
-                //TODO: fix this
-                /*return [
+                return [
                     ...soundPlurals,
-                    ...conjugator.DeriveFromNoun(ParseVocalizedText(parentLexeme.text), TargetNounBasedDerivationPatterns.PluralPatterns)
-                ];*/
+                    ...conjugator.DeriveFromNoun(reconstructed, TargetNounBasedDerivationPatterns.PluralPatterns)
+                ];
             }
     }
 

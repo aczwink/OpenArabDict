@@ -15,33 +15,18 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import crypto from "crypto";
 import fs from "fs";
 import path from "path";
-import { OpenArabDictTranslationDocument, OpenArabDictTranslationEntry } from "@aczwink/openarabdict-domain";
+import { OpenArabDictTranslationDocument } from "@aczwink/openarabdict-domain";
 import { ENV } from "./env";
-import { AzureTranslator_Translate } from "./azure-translator";
-import { AzureOpenAI_Translate } from "./azure-openai";
-import { TargetTranslationLanguage, TranslationError } from "./shared";
 import { Dictionary } from "@aczwink/acts-util-core";
-
-function ComputeLookupTable(targetTranslations: OpenArabDictTranslationDocument)
-{
-    const dict: Dictionary<number> = {};
-    for(let i = 0; i < targetTranslations.entries.length; i++)
-    {
-        const entry = targetTranslations.entries[i];
-        dict[entry.lexicalUnitId] = i;
-    }
-    return dict;
-}
-
-function ComputeMappingHash(translations: OpenArabDictTranslationEntry[])
-{
-    const text = JSON.stringify(translations);
-
-    return crypto.createHash("md5").update(text).digest("hex");
-}
+import { CachedTranslator } from "./translator/CachedTranslator";
+import { TargetTranslationLanguage, Translator } from "./Translator";
+import { AzureTranslator } from "./translator/azure-translator";
+import { AzureOpenAITranslator } from "./translator/azure-openai";
+import { FallbackTranslator } from "./translator/FallbackTranslator";
+import { EmptyTranslationsTranslator } from "./translator/EmptyTranslationsTranslator";
+import { ThrottledTranslator } from "./translator/ThrottledTranslator";
 
 async function LoadFileIfExisting<T>(filePath: string)
 {
@@ -78,21 +63,19 @@ async function LoadTargetDict(targetDictPath: string): Promise<OpenArabDictTrans
     return data;
 }
 
-function ResolveTranslationFunction(): (translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage) => Promise<OpenArabDictTranslationEntry[] | TranslationError>
+function ResolveTranslationFunction(): Translator
 {
     switch(ENV.implementation)
     {
         case "azure-translator":
-            return AzureTranslator_Translate;
+            return new AzureTranslator;
         case "azure-openai":
-            return AzureOpenAI_Translate;
+            return new AzureOpenAITranslator;
         case "azure-openai-azure-translator-fallback":
-            return async (translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage) => {
-                const result = await AzureOpenAI_Translate(translations, targetLanguage);
-                if(Array.isArray(result))
-                    return result;
-                return AzureTranslator_Translate(translations, targetLanguage);
-            };
+            return new FallbackTranslator(
+                new AzureOpenAITranslator,
+                new AzureTranslator
+            );
         //also libretranslate could be an option (https://libretranslate.com)
     }
 }
@@ -115,49 +98,35 @@ export async function TranslateDict(input: TranslateDictInput)
     const targetDictPath = path.join(databasePath, targetLanguage + ".json");
     const mappingDictPath = path.join(databasePath, "mapping_" + sourceLanguage + "2" + targetLanguage + ".json");
 
-    const fetchTranslation = ResolveTranslationFunction();
-
     const english = (await LoadFileIfExisting<OpenArabDictTranslationDocument>(sourceDictPath))!;
-    const targetTranslations = await LoadTargetDict(targetDictPath);
-    const mapping = await LoadMapping(mappingDictPath);
-    const lookupTable = ComputeLookupTable(targetTranslations);
+
+    const throttle = new ThrottledTranslator(
+        ResolveTranslationFunction(),
+        input.maxTranslations
+    );
+    const cache = new CachedTranslator(
+        await LoadMapping(mappingDictPath),
+        await LoadTargetDict(targetDictPath),
+        throttle
+    );
+    const translator = new EmptyTranslationsTranslator(cache);
 
     let i = 0;
-    let translatedCount = 0;
+    const targetTranslations: OpenArabDictTranslationDocument = { entries: [] };
     for (const entry of english.entries)
     {
         i++;
-        if(translatedCount === input.maxTranslations)
-            break;
-        if(entry.translations.IsEmpty())
-            continue;
-
-        const computedHash = ComputeMappingHash(entry.translations);
-
-        const storedHash = mapping[entry.lexicalUnitId];
-        if(computedHash === storedHash)
-            continue;
-
         console.log(i, "/", english.entries.length, entry.lexicalUnitId);
 
-        const translated = await fetchTranslation(entry.translations, targetLanguage);
+        const translated = await translator.Translate(entry.lexicalUnitId, entry.translations, targetLanguage);
         if(Array.isArray(translated))
-        {
-            const index = lookupTable[entry.lexicalUnitId];
-            if(index === undefined)
-                targetTranslations.entries.push({ lexicalUnitId: entry.lexicalUnitId, translations: translated });
-            else
-                targetTranslations.entries[index].translations = translated;
-            mapping[entry.lexicalUnitId] = computedHash;
-        }
+            targetTranslations.entries.push({ lexicalUnitId: entry.lexicalUnitId, translations: translated });
         else
             throw new Error("Translation failed: " + translated);
-
-        translatedCount++;
     }
 
     await fs.promises.writeFile(targetDictPath, JSON.stringify(targetTranslations), "utf-8");
-    await fs.promises.writeFile(mappingDictPath, JSON.stringify(mapping), "utf-8");
+    await fs.promises.writeFile(mappingDictPath, JSON.stringify(cache.targetMapping), "utf-8");
 
-    return translatedCount;
+    return throttle.translatedCount;
 }

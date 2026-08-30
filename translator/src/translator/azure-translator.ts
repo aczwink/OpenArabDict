@@ -18,8 +18,8 @@
 import { AbsURL } from "@aczwink/acts-util-core";
 import { HTTP } from "@aczwink/acts-util-node";
 import { OpenArabDictTranslationEntry } from "@aczwink/openarabdict-domain";
-import { ENV } from "./env";
-import { TargetTranslationLanguage } from "./shared";
+import { ENV } from "../env";
+import { TargetTranslationLanguage, TranslationError, Translator } from "../Translator";
 
 async function CallTranslationService(texts: string[], targetLanguage: TargetTranslationLanguage)
 {
@@ -50,69 +50,72 @@ async function CallTranslationService(texts: string[], targetLanguage: TargetTra
     return parsed.Values().Map(x => (x.translations as any[]).Values()).Flatten().Map(x => x.text as string).ToArray();
 }
 
-export async function AzureTranslator_Translate(translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage)
+export class AzureTranslator implements Translator
 {
-    const texts: string[] = [];
-
-    for (const entry of translations)
+    public async Translate(lexicalUnitId: string, translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage): Promise<OpenArabDictTranslationEntry[] | TranslationError>
     {
-        if(entry.usage !== undefined)
+        const texts: string[] = [];
+
+        for (const entry of translations)
         {
-            for (const subEntry of entry.usage)
+            if(entry.usage !== undefined)
             {
-                for (const trans of subEntry.translation)
-                    texts.push(trans);
-            }
-        }
-
-        texts.push(...entry.text);
-    }
-
-    if(texts.length === 0)
-        return translations;
-
-    const resultTexts = await CallTranslationService(texts, targetLanguage);
-
-    const result: OpenArabDictTranslationEntry[] = [];
-
-    for (const entry of translations)
-    {
-        const resultingEntry: OpenArabDictTranslationEntry = {
-            dialectId: entry.dialectId,
-            complete: entry.complete,
-            url: entry.url,
-            text: [],
-        };
-
-        if(entry.usage !== undefined)
-        {
-            const ctx = [];
-            for (const subEntry of entry.usage)
-            {
-                const translations = [];
-                for (const _ of subEntry.translation)
+                for (const subEntry of entry.usage)
                 {
-                    translations.push(resultTexts[0]);
-                    resultTexts.Remove(0);
+                    for (const trans of subEntry.translation)
+                        texts.push(trans);
                 }
-
-                ctx.push({
-                    text: subEntry.text,
-                    translation: translations,
-                    type: subEntry.type
-                });
             }
-            resultingEntry.usage = ctx;
+
+            texts.push(...entry.text);
         }
 
-        for (const _ of entry.text)
+        if(texts.length === 0)
+            return translations;
+
+        const resultTexts = await CallTranslationService(texts, targetLanguage);
+
+        const result: OpenArabDictTranslationEntry[] = [];
+
+        for (const entry of translations)
         {
-            resultingEntry.text.push(resultTexts[0]);
-            resultTexts.Remove(0);
-        }
+            const resultingEntry: OpenArabDictTranslationEntry = {
+                dialectId: entry.dialectId,
+                complete: entry.complete,
+                url: entry.url,
+                text: [],
+            };
 
-        result.push(resultingEntry);
+            if(entry.usage !== undefined)
+            {
+                const ctx = [];
+                for (const subEntry of entry.usage)
+                {
+                    const translations = [];
+                    for (const _ of subEntry.translation)
+                    {
+                        translations.push(resultTexts[0]);
+                        resultTexts.Remove(0);
+                    }
+
+                    ctx.push({
+                        text: subEntry.text,
+                        translation: translations,
+                        type: subEntry.type
+                    });
+                }
+                resultingEntry.usage = ctx;
+            }
+
+            for (const _ of entry.text)
+            {
+                resultingEntry.text.push(resultTexts[0]);
+                resultTexts.Remove(0);
+            }
+
+            result.push(resultingEntry);
+        }
+        
+        return result;
     }
-    
-    return result;
 }

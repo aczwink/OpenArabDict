@@ -1,6 +1,6 @@
 /**
  * OpenArabDict
- * Copyright (C) 2025-2026 Amir Czwink (amir130@hotmail.de)
+ * Copyright (C) 2026 Amir Czwink (amir130@hotmail.de)
  * 
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU Affero General Public License as published by
@@ -15,10 +15,18 @@
  * You should have received a copy of the GNU Affero General Public License
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  * */
-import { TranslateDict } from "./main";
-import { TargetTranslationLanguage } from "./Translator";
 
-TranslateDict({
-    databasePath: process.argv[2],
-    targetLanguage: process.argv[3] as TargetTranslationLanguage,
-});
+import { OpenArabDictTranslationEntry } from "@aczwink/openarabdict-domain";
+
+export enum TranslationError
+{
+    Filtered,
+    Throttled
+};
+
+export type TargetTranslationLanguage = "de";
+
+export interface Translator
+{
+    Translate(lexicalUnitId: string, translations: OpenArabDictTranslationEntry[], targetLanguage: TargetTranslationLanguage): Promise<OpenArabDictTranslationEntry[] | TranslationError>;
+}

@@ -175,6 +175,7 @@ export class DBBuilder
             throw new Error("Programming error. Lexeme does not exist: " + lexemeId);
         return lexeme;
     }
+
     public GetLexemeFromLexicalUnitId(lexicalUnitId: string)
     {
         return this.lexicalUnitToLexemeMap[lexicalUnitId]!;
@@ -196,6 +197,11 @@ export class DBBuilder
         if(pos.type !== OpenArabDictPOSType.Verb)
             throw new Error("Id error");
         return pos;
+    }
+
+    public GetTranslations(lexicalUnitId: string)
+    {
+        return this.translations.get(lexicalUnitId);
     }
 
     public LookupUserLexemeId(userLexemeId: string)

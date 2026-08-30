@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@aczwink/acts-util-core": "^1.0.1",
-    "@aczwink/acts-util-node": "^1.1.0",
+    "@aczwink/acts-util-node": "^1.1.1",
     "@aczwink/openarabdict-domain": "^2.1.4",
     "@aczwink/openarabdict-openarabicconjugation-bridge": "^1.1.1",
     "@aczwink/openarabicconjugation": "^1.3.11",
