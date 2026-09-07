@@ -31,21 +31,27 @@ root:
         - text: خَطْوَة
           derivation: meaning-related
           type: noun
-          gender: female
           translations:
             - dialect: msa
-              source: hw4-free-text
+              source: hw4
+              source-page: 288
+              text:
+                - step, pace, stride
+
+        - text: خُطْوَة
+          derivation: meaning-related
+          type: noun
+          translations:
+            - dialect: msa
+              source: hw4
+              source-page: 288
               text:
                 - step, pace, stride
           derived:
-            - text: خُطًى
-              derivation: plural
-              type: noun
-              gender: female
             - text: خُطُوَات
               derivation: plural
-              type: noun
-              gender: female
+            - text: خُطًى
+              derivation: plural
 
     - type: verb
       form: 5

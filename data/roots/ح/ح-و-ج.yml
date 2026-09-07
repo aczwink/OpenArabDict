@@ -39,7 +39,7 @@ root:
               text:
                 - thing
           derived:
-            - text: حَاجَات⁩
+            - text: حَاجَات
               derivation: plural
 
     - type: verb

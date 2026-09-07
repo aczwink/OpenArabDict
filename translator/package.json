@@ -1,6 +1,6 @@
 {
   "name": "@aczwink/openarabdict-translator",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "",
   "bin": "dist/cli.js",
   "main": "dist/main.js",

@@ -127,7 +127,7 @@ root:
               text:
                 - controller, control system (techn.)
           derived:
-            - text: مُتَحَكِّمُونَ
+            - text: مُتَحَكِّمُون
               derivation: plural
               type: noun
               gender: male

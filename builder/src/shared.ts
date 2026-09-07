@@ -65,17 +65,18 @@ function GenerateAllPossibleTextsFromDerivationForVerb(parent: OpenArabDictParen
 
 function SupportsModernStandardArabic(lexeme: OpenArabDictLexeme, builder: DBBuilder): boolean
 {
-    if(lexeme.senses.length !== 1)
-        throw new Error("Function not implemented.");
-    if(lexeme.senses[0].units.length !== 1)
-        throw new Error("Function not implemented.");
-    const unitId = lexeme.senses[0].units[0].id;
-    const translations = builder.GetTranslations(unitId);
-    for (const entry of translations!)
+    for (const sense of lexeme.senses)
     {
-        const type = DialectTree.MapIdToType(entry.dialectId)
-        if(type === DialectType.ModernStandardArabic)
-            return true;
+        if(sense.units.length !== 1)
+            throw new Error("Function not implemented. 2: " + lexeme.text);
+        const unitId = sense.units[0].id;
+        const translations = builder.GetTranslations(unitId);
+        for (const entry of translations!)
+        {
+            const type = DialectTree.MapIdToType(entry.dialectId)
+            if(type === DialectType.ModernStandardArabic)
+                return true;
+        }
     }
     return false;
 }

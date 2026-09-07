@@ -100,7 +100,6 @@ root:
             - major (in بِ), specialize (in بِ)
 
     - type: verb
-      dialect: msa
       form: 8
       derived:
         - derivation: verbal-noun
@@ -118,7 +117,4 @@ root:
                   text:
                     - specialist
               derived:
-                - text: اِخْتِصَاصِيُّنَ
-                  derivation: plural
-                  type: noun
-                  gender: male
+                - derivation: plural

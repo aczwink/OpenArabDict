@@ -32,11 +32,9 @@ root:
               text:
                 - hip, haunch, waist
           derived:
-            - text: خُصُور⁩
+            - text: خُصُور
               derivation: plural
-              type: noun
-              gender: male
-              translations: []
+              
     - type: verb
       dialect: msa
       form: 8
